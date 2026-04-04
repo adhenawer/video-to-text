@@ -4,7 +4,7 @@ Transforma vídeos e podcasts do YouTube em artigos de leitura — traduzidos pa
 
 ## Como funciona
 
-O fluxo é inteiramente conversacional via **[Hermes](https://github.com/hermesapp/hermes) + Claude**. Basta mandar a URL de um vídeo do YouTube no chat:
+O fluxo é inteiramente conversacional via **[Hermes](https://github.com/NousResearch/hermes-agent) + Claude**. Basta mandar a URL de um vídeo do YouTube no chat (WhatsApp, Telegram ou terminal):
 
 ```
 https://youtu.be/VIDEO_ID
@@ -15,63 +15,139 @@ O agente cuida de tudo automaticamente:
 ```
 URL do YouTube
     ↓
-fetch_transcript.py       — captura a transcrição via youtube-transcript-api
+scripts/fetch_transcript.py   — captura a transcrição via youtube-transcript-api
     ↓
-Claude (tradução)         — traduz para PT-BR, remove timestamps/ads/ruídos,
-                            organiza em seções temáticas
+Claude (tradução)             — traduz para PT-BR, remove timestamps/ads/ruídos,
+                                organiza em seções temáticas
     ↓
-build_html.py             — gera o HTML com o design system do projeto
+scripts/build_html.py         — gera o HTML com o design system do projeto
     ↓
-index.html                — card adicionado automaticamente ao índice
+index.html                    — card adicionado ao índice com descrição e progresso
     ↓
-Artigo publicado          — acessível localmente ou via GitHub Pages
+Artigo publicado              — acessível localmente ou via GitHub Pages
 ```
+
+---
 
 ## Stack
 
 | Camada | Tecnologia |
 |--------|-----------|
-| Interface | [Hermes](https://github.com/hermesapp/hermes) — agente de IA via WhatsApp/CLI |
-| Modelo | Claude (Anthropic) |
+| Interface | [Hermes](https://github.com/NousResearch/hermes-agent) — agente via WhatsApp/CLI |
+| Modelo | Claude (Anthropic) via Hermes |
 | Transcrição | [youtube-transcript-api](https://github.com/jdepoix/youtube-transcript-api) |
-| Tradução/organização | Claude (processamento de linguagem natural) |
+| Tradução / organização | Claude (LLM) |
 | Build | `scripts/build_html.py` — Python puro, sem dependências externas |
 | Frontend | HTML estático — zero frameworks, zero build steps |
 | Hosting | GitHub Pages ou qualquer servidor estático |
 
-## Leitura
+---
 
-- 3 temas: ☀️ Sépia (padrão, estilo Kindle) · 🌤️ Claro · 🌙 Escuro
-- Progresso de leitura salvo por dispositivo — retoma de onde parou
-- Índice com % lido por artigo
-- Responsivo para mobile
+## Setup completo
 
-## Rodar localmente
+### 1. Instalar o Hermes
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+source ~/.bashrc   # ou: source ~/.zshrc
+hermes             # inicia o agente no terminal
+```
+
+Funciona em Linux, macOS e WSL2. O instalador cuida de Python, Node.js e dependências.
+
+### 2. Configurar modelo e ferramentas
+
+```bash
+hermes model    # escolhe o provider e modelo (ex: anthropic:claude-sonnet-4-6)
+hermes tools    # habilita as ferramentas necessárias
+```
+
+Para usar Claude, você precisa de uma chave da Anthropic em `ANTHROPIC_API_KEY`.
+
+### 3. Conectar ao WhatsApp (opcional, mas recomendado)
+
+O Hermes pode receber mensagens direto do WhatsApp. Para configurar:
+
+```bash
+hermes gateway setup    # configura as plataformas de mensagens
+hermes gateway start    # inicia o gateway
+```
+
+Escaneie o QR code com o WhatsApp. Depois de conectado, você envia URLs direto pelo app e recebe o artigo gerado.
+
+> Também funciona via Telegram, Discord, Slack ou direto no terminal com `hermes`.
+
+### 4. Clonar este repositório
 
 ```bash
 git clone https://github.com/<SEU-USUARIO>/video-to-text
 cd video-to-text
-python3 -m http.server 8080
-# Acesse: http://localhost:8080
+pip install youtube-transcript-api
 ```
 
-## Adicionar um artigo
-
-Ver [CLAUDE.md](CLAUDE.md) para o passo a passo completo.
-
-Resumo:
+### 5. Rodar o servidor local
 
 ```bash
-# 1. Capturar transcrição
-python3 scripts/fetch_transcript.py 'https://youtu.be/ID' \
-  --text-only --timestamps > /tmp/raw.txt
-
-# 2. Traduzir (via Claude)
-
-# 3. Gerar HTML
-python3 scripts/build_html.py ID 'Título' 'Fonte' 'URL' \
-  /tmp/traduzido.txt leituras/slug.html
+python3 -m http.server 8080
+# http://localhost:8080
+# Rede local (celular): http://<SEU-IP-LOCAL>:8080
 ```
+
+---
+
+## Fluxo agêntico detalhado
+
+Este é o fluxo exato que uso no dia a dia via WhatsApp:
+
+**1. Envio a URL no chat**
+```
+https://youtu.be/owmJyKVu5f8
+```
+
+**2. O Hermes captura a transcrição automaticamente**
+```bash
+python3 scripts/fetch_transcript.py 'https://youtu.be/owmJyKVu5f8' \
+  --text-only --timestamps > /tmp/transcript_owmJyKVu5f8.txt
+```
+
+**3. Claude traduz e organiza**
+O agente lê a transcrição e produz um `.txt` limpo em português brasileiro, dividido em seções temáticas, sem timestamps, propagandas ou vícios de linguagem oral.
+
+**4. O HTML é gerado**
+```bash
+python3 scripts/build_html.py \
+  owmJyKVu5f8 \
+  'Título do Artigo' \
+  'Fonte / Canal' \
+  'https://youtu.be/owmJyKVu5f8' \
+  /tmp/owmJyKVu5f8_pt.txt \
+  leituras/slug-do-titulo.html
+```
+
+**5. O card é adicionado ao índice**
+O agente edita `index.html` inserindo o novo card com título, descrição e link.
+
+**6. Commit e push**
+```bash
+git add leituras/slug-do-titulo.html index.html
+git commit -m 'feat: adiciona artigo — Título do Vídeo'
+git push
+```
+
+> Ver [CLAUDE.md](CLAUDE.md) para documentação completa do projeto.
+
+---
+
+## Features de leitura
+
+- **3 temas**: ☀️ Sépia (padrão, estilo Kindle) · 🌤️ Claro · 🌙 Escuro
+- **Progresso por dispositivo** — cada dispositivo salva a posição independentemente
+- **Retomada automática** — banner "continuar de onde parou" ao reabrir
+- **Barra de progresso** e % lido fixos durante a rolagem
+- **Índice clicável** com todas as seções
+- Responsivo para mobile
+
+---
 
 ## Artigos
 
