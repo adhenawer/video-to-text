@@ -9,8 +9,15 @@ video-to-text/
 ├── CLAUDE.md
 ├── README.md
 ├── .gitignore
-├── index.html                  ← índice com todos os artigos
-└── leituras/                   ← artigos individuais
+├── index.html                  ← índice com todos os artigos (usa css/style.css)
+├── css/
+│   └── style.css               ← CSS centralizado (temas, index, artigos)
+├── js/
+│   └── reader.js               ← JS compartilhado de leitura (tema, progresso, resume)
+├── scripts/
+│   ├── fetch_transcript.py     ← captura transcrição do YouTube
+│   └── build_html.py           ← gera HTML referenciando css/ e js/
+└── leituras/                   ← artigos individuais (usam ../css/style.css + ../js/reader.js)
     ├── chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html
     ├── estado-da-ia-2026-ponto-de-inflexao-simon-willison.html
     ├── praticas-de-engenharia-para-agentes-de-codigo-simon-willison.html
@@ -88,12 +95,20 @@ git commit -m 'feat: adiciona artigo — Título do Vídeo'
 
 ## Scripts
 
-Ambos os scripts estão em `scripts/` e são parte do repositório.
-
 | Script | Uso |
 |--------|-----|
 | `scripts/fetch_transcript.py` | Captura transcrição de qualquer URL do YouTube via `youtube-transcript-api` |
-| `scripts/build_html.py` | Converte `.txt` traduzido em HTML com o design system do projeto |
+| `scripts/build_html.py` | Gera HTML referenciando `../css/style.css` e `../js/reader.js` |
+
+## Arquivos compartilhados
+
+| Arquivo | Papel |
+|---------|-------|
+| `css/style.css` | CSS centralizado: temas (sépia/claro/escuro), classes `.page-index` e `.page-article` |
+| `js/reader.js` | JS de leitura: tema, barra de progresso, salvar posição, resume banner. Lê `data-storage-key` do `<body>` |
+
+Artigos usam `<body class="page-article" data-storage-key="reading_VIDEO_ID_">`.
+Index usa `<body class="page-index">`.
 
 Instalar dependência do fetch:
 ```bash

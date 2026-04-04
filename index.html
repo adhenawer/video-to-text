@@ -4,45 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Leituras — Podcasts & Vídeos Traduzidos</title>
-<style>
-  :root {
-    --bg: #FAF4E8; --surface: #F0E9D8; --border: #D4B896;
-    --text: #3D3529; --text-heading: #2C2416; --text-muted: #7A6F5F;
-    --accent: #C17C3E; --link: #8B5E3C;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; }
-  .container { max-width: 700px; margin: 0 auto; padding: 40px 24px 80px; }
-  header { text-align: center; margin-bottom: 40px; padding-bottom: 28px; border-bottom: 1px solid var(--border); }
-  header h1 { font-size: 1.7em; font-weight: 700; color: var(--text-heading); margin-bottom: 6px; }
-  header p { color: var(--text-muted); font-size: 0.92em; }
-  .section-title { font-size: 0.78em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin: 36px 0 14px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
-  .card {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
-    padding: 22px 26px; margin-bottom: 14px; text-decoration: none; display: block;
-    transition: transform 0.15s, box-shadow 0.15s; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  }
-  .card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.09); }
-  .card:active { transform: translateY(0); }
-  .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
-  .card h2 { font-size: 1.08em; font-weight: 600; color: var(--text-heading); line-height: 1.4; }
-  .badge { flex-shrink: 0; display: inline-block; background: var(--accent); color: var(--bg); font-size: 0.68em; font-weight: 700; padding: 3px 9px; border-radius: 8px; letter-spacing: 0.03em; }
-  .card .meta { font-size: 0.82em; color: var(--text-muted); margin-bottom: 8px; display: flex; gap: 10px; flex-wrap: wrap; }
-  .card .desc { font-size: 0.9em; color: var(--text); line-height: 1.6; font-family: Georgia, serif; }
-  .progress-info { margin-top: 10px; font-size: 0.78em; color: var(--accent); font-weight: 500; }
-  @media (max-width: 600px) {
-    .container { padding: 24px 18px 60px; }
-    header h1 { font-size: 1.4em; }
-    .card { padding: 18px 20px; }
-    .card h2 { font-size: 1em; }
-  }
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page-index">
 <div class="container">
   <header>
     <h1>📚 Leituras</h1>
-    <p>Podcasts e vídeos sobre IA traduzidos e organizados em formato artigo</p>
+    <p>Podcasts e vídeos traduzidos e organizados em formato artigo</p>
   </header>
 
   <div class="section-title">Podcasts</div>
@@ -135,18 +103,18 @@ function getDeviceId() {
   return localStorage.getItem('_deviceId') || null;
 }
 function showProgress(prefix, elemId) {
-  const devId = getDeviceId();
+  var devId = getDeviceId();
   if (!devId) return;
   try {
-    const data = JSON.parse(localStorage.getItem(prefix + devId));
+    var data = JSON.parse(localStorage.getItem(prefix + devId));
     if (data && data.scrollPct > 0) {
-      const el = document.getElementById(elemId);
+      var el = document.getElementById(elemId);
       if (!el) return;
       el.textContent = data.scrollPct >= 98
-        ? '✅ Leitura concluída'
-        : '📖 ' + data.scrollPct + '% lido' + (data.sectionTitle ? ' — ' + data.sectionTitle : '');
+        ? '\u2705 Leitura concluída'
+        : '\uD83D\uDCD6 ' + data.scrollPct + '% lido' + (data.sectionTitle ? ' — ' + data.sectionTitle : '');
     }
-  } catch {}
+  } catch (e) {}
 }
 showProgress('reading_boris_',       'p-boris');
 showProgress('reading_',             'p-simon');
