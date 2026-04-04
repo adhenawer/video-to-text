@@ -19,27 +19,44 @@
   var saveTimer = null;
   var resumeTarget = null;
 
+  // --- Scroll percentage (clamped 0-100, handles edge cases) ---
+  function getScrollPct() {
+    var h = document.documentElement;
+    var scrollable = h.scrollHeight - h.clientHeight;
+    if (scrollable <= 0) return 100; // page fits in viewport = fully read
+    var raw = h.scrollTop / scrollable;
+    // Snap to 100 when near the bottom (within 5px tolerance)
+    if (h.scrollHeight - h.scrollTop - h.clientHeight < 5) return 100;
+    return Math.min(100, Math.max(0, Math.round(raw * 100)));
+  }
+
+  // --- Current section detection ---
+  function getCurrentSection() {
+    var current = '';
+    document.querySelectorAll('h2').forEach(function (el) {
+      if (el.getBoundingClientRect().top < 120) current = el.id;
+    });
+    return current;
+  }
+
   // --- Save / Load position ---
   function savePosition() {
-    var h = document.documentElement;
-    var scrollPct = h.scrollTop / (h.scrollHeight - h.clientHeight);
-    var currentSection = '';
-    document.querySelectorAll('h2').forEach(function (el) {
-      if (el.getBoundingClientRect().top < 100) currentSection = el.id;
-    });
-    localStorage.setItem(STORAGE_KEY, JSON.stringify({
+    var pct = getScrollPct();
+    var section = getCurrentSection();
+    var data = {
       scrollY: window.scrollY,
-      scrollPct: Math.round(scrollPct * 100),
-      section: currentSection,
-      sectionTitle: currentSection ? document.getElementById(currentSection)?.textContent : '',
+      scrollPct: pct,
+      section: section,
+      sectionTitle: section ? (document.getElementById(section)?.textContent || '') : '',
       theme: document.documentElement.getAttribute('data-theme') || 'light',
       timestamp: Date.now()
-    }));
+    };
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch (e) {}
   }
 
   function debounceSave() {
     clearTimeout(saveTimer);
-    saveTimer = setTimeout(savePosition, 300);
+    saveTimer = setTimeout(savePosition, 250);
   }
 
   function loadPosition() {
@@ -49,7 +66,20 @@
 
   // --- Resume banner ---
   function resumeReading() {
-    if (resumeTarget) window.scrollTo({ top: resumeTarget.scrollY, behavior: 'smooth' });
+    if (!resumeTarget) return;
+    // Prefer scrolling to section (stable across sessions) over scrollY (fragile)
+    if (resumeTarget.section) {
+      var el = document.getElementById(resumeTarget.section);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.getElementById('resumeBanner').classList.remove('show');
+        return;
+      }
+    }
+    // Fallback to scrollY
+    if (resumeTarget.scrollY > 0) {
+      window.scrollTo({ top: resumeTarget.scrollY, behavior: 'smooth' });
+    }
     document.getElementById('resumeBanner').classList.remove('show');
   }
 
@@ -74,32 +104,41 @@
   var readingPctEl = document.getElementById('readingPct');
 
   window.addEventListener('scroll', function () {
-    var h = document.documentElement;
-    var pct = Math.round((h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100);
+    var pct = getScrollPct();
     progressEl.style.width = pct + '%';
-    backTopEl.classList.toggle('show', h.scrollTop > 400);
+    backTopEl.classList.toggle('show', window.scrollY > 400);
     readingPctEl.textContent = pct + '%';
-    readingPctEl.classList.toggle('show', h.scrollTop > 200);
+    readingPctEl.classList.toggle('show', window.scrollY > 200);
     debounceSave();
   }, { passive: true });
+
+  // --- Persist on page leave (multiple events for cross-browser reliability) ---
+  function saveNow() {
+    clearTimeout(saveTimer);
+    savePosition();
+  }
+
+  window.addEventListener('beforeunload', saveNow);
+  window.addEventListener('pagehide', saveNow);       // reliable on iOS Safari
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) saveNow();
+  });
+  // Periodic save as safety net (every 5s while reading)
+  setInterval(savePosition, 5000);
 
   // --- Init ---
   var savedTheme = localStorage.getItem('_reading_theme') || 'light';
   setTheme(savedTheme);
 
   var saved = loadPosition();
-  if (saved && saved.scrollY > 300) {
+  if (saved && saved.scrollPct > 0 && saved.scrollPct < 100 && (saved.section || saved.scrollY > 300)) {
     resumeTarget = saved;
+    var label = saved.sectionTitle || 'seção anterior';
     document.getElementById('resumeText').textContent =
-      '\uD83D\uDCD6 Continuar: ' + (saved.sectionTitle || 'seção anterior') + ' (' + (saved.scrollPct || 0) + '%)';
+      '\uD83D\uDCD6 Continuar: ' + label + ' (' + saved.scrollPct + '%)';
     setTimeout(function () { document.getElementById('resumeBanner').classList.add('show'); }, 500);
     setTimeout(function () { document.getElementById('resumeBanner').classList.remove('show'); }, 8500);
   }
-
-  window.addEventListener('beforeunload', savePosition);
-  document.addEventListener('visibilitychange', function () {
-    if (document.hidden) savePosition();
-  });
 
   // Expose to onclick handlers in HTML
   window.setTheme = setTheme;

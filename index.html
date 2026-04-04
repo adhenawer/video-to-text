@@ -110,9 +110,12 @@ function showProgress(prefix, elemId) {
     if (data && data.scrollPct > 0) {
       var el = document.getElementById(elemId);
       if (!el) return;
-      el.textContent = data.scrollPct >= 98
-        ? '\u2705 Leitura concluída'
-        : '\uD83D\uDCD6 ' + data.scrollPct + '% lido' + (data.sectionTitle ? ' — ' + data.sectionTitle : '');
+      if (data.scrollPct >= 95) {
+        el.textContent = '\u2705 Leitura concluída';
+      } else {
+        var section = data.sectionTitle ? ' — ' + data.sectionTitle : '';
+        el.textContent = '\uD83D\uDCD6 ' + data.scrollPct + '% lido' + section;
+      }
     }
   } catch (e) {}
 }
