@@ -132,12 +132,14 @@
 
   var saved = loadPosition();
   if (saved && saved.scrollPct > 0 && saved.scrollPct < 100 && (saved.section || saved.scrollY > 300)) {
-    resumeTarget = saved;
-    var label = saved.sectionTitle || 'seção anterior';
-    document.getElementById('resumeText').textContent =
-      '\uD83D\uDCD6 Continuar: ' + label + ' (' + saved.scrollPct + '%)';
-    setTimeout(function () { document.getElementById('resumeBanner').classList.add('show'); }, 500);
-    setTimeout(function () { document.getElementById('resumeBanner').classList.remove('show'); }, 8500);
+    // Auto-scroll to saved position after page renders
+    setTimeout(function () {
+      if (saved.section) {
+        var el = document.getElementById(saved.section);
+        if (el) { el.scrollIntoView({ behavior: 'instant', block: 'start' }); return; }
+      }
+      if (saved.scrollY > 0) window.scrollTo({ top: saved.scrollY, behavior: 'instant' });
+    }, 100);
   }
 
   // Expose to onclick handlers in HTML
