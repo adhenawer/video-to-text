@@ -76,6 +76,7 @@ def make_html(vid_id, title, subtitle, url, txt_path):
 <div class="progress" id="progress"></div>
 <div class="reading-pct" id="readingPct"></div>
 <div class="container">
+  <a href="../index.html" class="back-home">← Voltar ao índice</a>
   <header>
     <h1>{title}</h1>
     <p class="meta">{subtitle}</p>
