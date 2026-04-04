@@ -1,6 +1,6 @@
-# Leituras IA
+# video-to-text
 
-Coleção de podcasts e vídeos sobre IA traduzidos para português e organizados como artigos de leitura.
+Transforma vídeos e podcasts do YouTube em artigos de leitura — traduzidos para português brasileiro e organizados por seções.
 
 ## Artigos
 

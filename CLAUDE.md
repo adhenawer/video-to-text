@@ -1,11 +1,11 @@
-# CLAUDE.md — Projeto leituras-ia
+# CLAUDE.md — Projeto video-to-text
 
 Site estático com artigos de podcasts e vídeos sobre IA traduzidos para português brasileiro. Zero dependências — HTML puro.
 
 ## Estrutura
 
 ```
-leituras-ia/
+video-to-text/
 ├── CLAUDE.md
 ├── README.md
 ├── .gitignore
@@ -27,7 +27,7 @@ leituras-ia/
 ## Rodar localmente
 
 ```bash
-cd ~/code/leituras-ia
+cd ~/code/video-to-text
 python3 -m http.server 8899 --bind 0.0.0.0
 # http://localhost:8899
 # Rede local (celular): http://<SEU-IP-LOCAL>:8899
@@ -139,14 +139,14 @@ outros             → reading_VIDEO_ID_
 ## Subir no GitHub
 
 ```bash
-cd ~/code/leituras-ia
-gh repo create leituras-ia --public --source=. --remote=origin
+cd ~/code/video-to-text
+gh repo create video-to-text --public --source=. --remote=origin
 git push -u origin main
 ```
 
 Ou via HTTPS:
 ```bash
-git remote add origin https://github.com/<SEU-USUARIO>/leituras-ia.git
+git remote add origin https://github.com/<SEU-USUARIO>/video-to-text.git
 git push -u origin main
 ```
 
@@ -154,4 +154,4 @@ Para GitHub Pages (deploy automático):
 ```bash
 gh repo edit --enable-pages --branch main --dir /
 ```
-Site ficará em: `https://<SEU-USUARIO>.github.io/leituras-ia`
+Site ficará em: `https://<SEU-USUARIO>.github.io/video-to-text`
