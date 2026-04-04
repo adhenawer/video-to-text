@@ -1,0 +1,210 @@
+# CLAUDE.md — Projeto leituras-ia
+
+Site estático com artigos de podcasts e vídeos sobre IA traduzidos para português brasileiro. Zero dependências — HTML puro.
+
+## Estrutura
+
+```
+leituras-ia/
+├── CLAUDE.md
+├── README.md
+├── .gitignore
+├── index.html                  ← índice com todos os artigos
+└── leituras/                   ← artigos individuais
+    ├── chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html
+    ├── estado-da-ia-2026-ponto-de-inflexao-simon-willison.html
+    ├── praticas-de-engenharia-para-agentes-de-codigo-simon-willison.html
+    ├── de-ides-para-agentes-de-ia-steve-yegge.html
+    ├── engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia.html
+    ├── um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code.html
+    ├── do-prompt-a-producao-o-que-e-engenharia-agentica.html
+    ├── engenharia-agentica-contexto-guardrails-e-criatividade.html
+    ├── como-construi-sistema-suporte-cliente-ia-nivel-producao.html
+    ├── fluxos-de-trabalho-agenticos-don-syme.html
+    └── roteiro-engenheiro-ia-para-desenvolvedores-de-software.html
+```
+
+## Rodar localmente
+
+```bash
+cd ~/code/leituras-ia
+python3 -m http.server 8899 --bind 0.0.0.0
+# http://localhost:8899
+# Rede local (celular): http://192.168.18.177:8899
+```
+
+## Adicionar novo artigo
+
+### 1. Capturar transcrição
+
+```bash
+python3 ~/.hermes/skills/media/youtube-content/scripts/fetch_transcript.py \
+  'https://youtu.be/VIDEO_ID' --text-only --timestamps \
+  2>/dev/null > /tmp/transcript_VIDEO_ID.txt
+```
+
+### 2. Traduzir e organizar
+
+Pedir ao Claude para ler `/tmp/transcript_VIDEO_ID.txt` e produzir um `.txt` com:
+- Português brasileiro natural
+- Seções no formato:
+
+```
+================================================================================
+NOME DA SEÇÃO EM MAIÚSCULO
+
+Parágrafo do conteúdo...
+```
+
+- Sem timestamps, sem [music], sem propagandas, sem filler words
+- Salvar em `/tmp/VIDEO_ID_pt.txt`
+
+### 3. Gerar HTML com build_html.py
+
+O script `/tmp/build_html.py` é temporário. Se sumir, recriar a partir da seção abaixo.
+
+```bash
+python3 /tmp/build_html.py \
+  VIDEO_ID \
+  'Título do Artigo' \
+  'Subtítulo / Fonte' \
+  'https://youtu.be/VIDEO_ID' \
+  /tmp/VIDEO_ID_pt.txt \
+  ~/code/leituras-ia/leituras/slug-do-titulo.html
+```
+
+### 4. Adicionar card no index.html
+
+Inserir novo `<a class="card">` em `index.html` com:
+- `href="leituras/slug-do-titulo.html"`
+- Título, meta (fonte, autor), descrição resumida
+- `<div class="progress-info" id="p-VIDEOID"></div>`
+- No `<script>` do index.html, adicionar: `showProgress('reading_VIDEO_ID_', 'p-VIDEOID');`
+
+### 5. Commit
+
+```bash
+git add leituras/slug-do-titulo.html index.html
+git commit -m 'feat: adiciona artigo — Título do Vídeo'
+```
+
+## Script build_html.py
+
+Recria o arquivo em `/tmp/build_html.py` com este conteúdo:
+
+```python
+#!/usr/bin/env python3
+import re, sys
+
+def make_html(vid_id, title, subtitle, url, txt_path):
+    with open(txt_path, 'r') as f:
+        raw = f.read()
+    text = re.sub(r'^\s*\d+\|', '', raw, flags=re.MULTILINE)
+    lines = text.strip().split('\n')
+    html_parts, toc_parts, section_id = [], [], 0
+    prev_was_sep = False
+    start = 0
+    for start, line in enumerate(lines):
+        if line.strip().startswith('=' * 10):
+            break
+    prev_was_sep = True
+    PARA_STARTS = ['Lenny ','Boris ','Simon ','Steve ','Don ','Para ','Ele ','Ela ',
+        'Essa ','Uma ','O ','A ','Na ','No ','Em ','Como ','Isso ','Ao ','Os ',
+        'As ','Se ','Com ','Por ','Quando ','Durante ','Após ','Antes ','Nessa ','Nesse ']
+    for line in lines[start+1:]:
+        s = line.strip()
+        if s.startswith('=' * 10):
+            prev_was_sep = True; continue
+        if not s and prev_was_sep: continue
+        if prev_was_sep and s:
+            prev_was_sep = False
+            if len(s) < 100 and not any(s.startswith(p) for p in PARA_STARTS):
+                section_id += 1
+                slug = f's{section_id}'
+                toc_parts.append(f'<li><a href="#{slug}">{s}</a></li>')
+                html_parts.append(f'<h2 id="{slug}">{s}</h2>')
+                continue
+            html_parts.append(f'<p>{re.sub(chr(34)+"([^"+chr(34)+"]+)"+chr(34), r"&ldquo;\1&rdquo;", s)}</p>')
+            continue
+        prev_was_sep = False
+        if not s: continue
+        html_parts.append(f'<p>{re.sub(chr(34)+"([^"+chr(34)+"]+)"+chr(34), r"&ldquo;\1&rdquo;", s)}</p>')
+
+    toc = '\n'.join(toc_parts)
+    body = '\n'.join(html_parts)
+    sk = f'reading_{vid_id}_'
+
+    # Retorna HTML completo — ver template em leituras/chefe-do-claude-code-*.html como referência
+    # O HTML usa as CSS vars do design system descrito abaixo
+    return open('/tmp/_html_template.html').read() \
+        .replace('__TITLE__', title) \
+        .replace('__SUBTITLE__', subtitle) \
+        .replace('__URL__', url) \
+        .replace('__TOC__', toc) \
+        .replace('__BODY__', body) \
+        .replace('__STORAGE_KEY__', sk)
+
+if __name__ == '__main__':
+    vid_id, title, subtitle, url, txt_in, html_out = sys.argv[1:]
+    html = make_html(vid_id, title, subtitle, url, txt_in)
+    open(html_out, 'w').write(html)
+    print(f'OK {html_out}')
+```
+
+> Alternativa mais simples: pedir ao Claude para ler um HTML existente como referência e gerar o novo diretamente, sem usar o build_html.py.
+
+## Design System
+
+### Temas (3 opções via botões)
+
+| Tema | BG | Texto | Accent |
+|------|----|-------|--------|
+| ☀️ Sépia (padrão) | `#FAF4E8` | `#3D3529` | `#C17C3E` |
+| 🌤️ Claro | `#F0F2F5` | `#2D3748` | `#E07850` |
+| 🌙 Escuro | `#1E1E24` | `#D4D0C8` | `#C4956A` |
+
+**Por que sépia?** Branco puro (`#FFF`) causa halation (efeito fantasma) em astigmatismo (~50% da população). Sépia estilo Kindle é o padrão mais confortável para leitura longa. Nunca usar preto puro nem branco puro.
+
+### Tipografia
+- Corpo: Georgia (serif), 1.08em, line-height 1.7
+- UI (nav, botões, meta): -apple-system sans-serif
+- Letter-spacing: 0.01em no body
+
+### Gerenciamento de sessão de leitura
+- `_deviceId` no localStorage identifica o dispositivo
+- Posição salva em `reading_VIDEO_ID_DEVICEID`: scrollY, scrollPct, section, sectionTitle, theme
+- Ao reabrir: banner "Continuar de onde parou" por 8.5s
+- Tema salvo separadamente em `_reading_theme`
+
+### STORAGE_KEY por artigo
+```
+boris_cherny       → reading_boris_
+simon_willison     → reading_
+outros             → reading_VIDEO_ID_
+```
+
+## Convenções
+
+- Slugs: kebab-case PT-BR sem acentos → `como-construi-sistema-suporte-cliente-ia.html`
+- Traduções `.txt`: ficam em `/tmp`, não commitadas (`.gitignore` ignora `*.txt`)
+- Commits: `feat: adiciona artigo — Título` / `fix: ...` / `style: ...` / `docs: ...`
+
+## Subir no GitHub
+
+```bash
+cd ~/code/leituras-ia
+gh repo create leituras-ia --public --source=. --remote=origin
+git push -u origin main
+```
+
+Ou via HTTPS:
+```bash
+git remote add origin https://github.com/adhenawer/leituras-ia.git
+git push -u origin main
+```
+
+Para GitHub Pages (deploy automático):
+```bash
+gh repo edit --enable-pages --branch main --dir /
+```
+Site ficará em: `https://adhenawer.github.io/leituras-ia`
