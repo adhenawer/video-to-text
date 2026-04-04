@@ -30,7 +30,7 @@ leituras-ia/
 cd ~/code/leituras-ia
 python3 -m http.server 8899 --bind 0.0.0.0
 # http://localhost:8899
-# Rede local (celular): http://192.168.18.177:8899
+# Rede local (celular): http://<SEU-IP-LOCAL>:8899
 ```
 
 ## Adicionar novo artigo
@@ -68,7 +68,7 @@ python3 scripts/build_html.py \
   'Subtítulo / Fonte' \
   'https://youtu.be/VIDEO_ID' \
   /tmp/VIDEO_ID_pt.txt \
-  ~/code/leituras-ia/leituras/slug-do-titulo.html
+  leituras/slug-do-titulo.html
 ```
 
 ### 4. Adicionar card no index.html
@@ -146,7 +146,7 @@ git push -u origin main
 
 Ou via HTTPS:
 ```bash
-git remote add origin https://github.com/adhenawer/leituras-ia.git
+git remote add origin https://github.com/<SEU-USUARIO>/leituras-ia.git
 git push -u origin main
 ```
 
@@ -154,4 +154,4 @@ Para GitHub Pages (deploy automático):
 ```bash
 gh repo edit --enable-pages --branch main --dir /
 ```
-Site ficará em: `https://adhenawer.github.io/leituras-ia`
+Site ficará em: `https://<SEU-USUARIO>.github.io/leituras-ia`
