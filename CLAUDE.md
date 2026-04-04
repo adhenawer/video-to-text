@@ -38,7 +38,7 @@ python3 -m http.server 8899 --bind 0.0.0.0
 ### 1. Capturar transcrição
 
 ```bash
-python3 ~/.hermes/skills/media/youtube-content/scripts/fetch_transcript.py \
+python3 scripts/fetch_transcript.py \
   'https://youtu.be/VIDEO_ID' --text-only --timestamps \
   2>/dev/null > /tmp/transcript_VIDEO_ID.txt
 ```
@@ -61,10 +61,8 @@ Parágrafo do conteúdo...
 
 ### 3. Gerar HTML com build_html.py
 
-O script `/tmp/build_html.py` é temporário. Se sumir, recriar a partir da seção abaixo.
-
 ```bash
-python3 /tmp/build_html.py \
+python3 scripts/build_html.py \
   VIDEO_ID \
   'Título do Artigo' \
   'Subtítulo / Fonte' \
@@ -88,70 +86,19 @@ git add leituras/slug-do-titulo.html index.html
 git commit -m 'feat: adiciona artigo — Título do Vídeo'
 ```
 
-## Script build_html.py
+## Scripts
 
-Recria o arquivo em `/tmp/build_html.py` com este conteúdo:
+Ambos os scripts estão em `scripts/` e são parte do repositório.
 
-```python
-#!/usr/bin/env python3
-import re, sys
+| Script | Uso |
+|--------|-----|
+| `scripts/fetch_transcript.py` | Captura transcrição de qualquer URL do YouTube via `youtube-transcript-api` |
+| `scripts/build_html.py` | Converte `.txt` traduzido em HTML com o design system do projeto |
 
-def make_html(vid_id, title, subtitle, url, txt_path):
-    with open(txt_path, 'r') as f:
-        raw = f.read()
-    text = re.sub(r'^\s*\d+\|', '', raw, flags=re.MULTILINE)
-    lines = text.strip().split('\n')
-    html_parts, toc_parts, section_id = [], [], 0
-    prev_was_sep = False
-    start = 0
-    for start, line in enumerate(lines):
-        if line.strip().startswith('=' * 10):
-            break
-    prev_was_sep = True
-    PARA_STARTS = ['Lenny ','Boris ','Simon ','Steve ','Don ','Para ','Ele ','Ela ',
-        'Essa ','Uma ','O ','A ','Na ','No ','Em ','Como ','Isso ','Ao ','Os ',
-        'As ','Se ','Com ','Por ','Quando ','Durante ','Após ','Antes ','Nessa ','Nesse ']
-    for line in lines[start+1:]:
-        s = line.strip()
-        if s.startswith('=' * 10):
-            prev_was_sep = True; continue
-        if not s and prev_was_sep: continue
-        if prev_was_sep and s:
-            prev_was_sep = False
-            if len(s) < 100 and not any(s.startswith(p) for p in PARA_STARTS):
-                section_id += 1
-                slug = f's{section_id}'
-                toc_parts.append(f'<li><a href="#{slug}">{s}</a></li>')
-                html_parts.append(f'<h2 id="{slug}">{s}</h2>')
-                continue
-            html_parts.append(f'<p>{re.sub(chr(34)+"([^"+chr(34)+"]+)"+chr(34), r"&ldquo;\1&rdquo;", s)}</p>')
-            continue
-        prev_was_sep = False
-        if not s: continue
-        html_parts.append(f'<p>{re.sub(chr(34)+"([^"+chr(34)+"]+)"+chr(34), r"&ldquo;\1&rdquo;", s)}</p>')
-
-    toc = '\n'.join(toc_parts)
-    body = '\n'.join(html_parts)
-    sk = f'reading_{vid_id}_'
-
-    # Retorna HTML completo — ver template em leituras/chefe-do-claude-code-*.html como referência
-    # O HTML usa as CSS vars do design system descrito abaixo
-    return open('/tmp/_html_template.html').read() \
-        .replace('__TITLE__', title) \
-        .replace('__SUBTITLE__', subtitle) \
-        .replace('__URL__', url) \
-        .replace('__TOC__', toc) \
-        .replace('__BODY__', body) \
-        .replace('__STORAGE_KEY__', sk)
-
-if __name__ == '__main__':
-    vid_id, title, subtitle, url, txt_in, html_out = sys.argv[1:]
-    html = make_html(vid_id, title, subtitle, url, txt_in)
-    open(html_out, 'w').write(html)
-    print(f'OK {html_out}')
+Instalar dependência do fetch:
+```bash
+pip install youtube-transcript-api
 ```
-
-> Alternativa mais simples: pedir ao Claude para ler um HTML existente como referência e gerar o novo diretamente, sem usar o build_html.py.
 
 ## Design System
 
