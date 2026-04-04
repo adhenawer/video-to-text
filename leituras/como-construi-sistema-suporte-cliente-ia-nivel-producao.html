@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como Construí um Sistema de Suporte ao Cliente com IA de Nível Produção</title>
+<style>
+  :root {
+    --bg:#FAF4E8;--surface:#F0E6D0;--border:#D4B896;--text:#3D3529;
+    --text-heading:#2C2416;--text-muted:#7A6F5F;--accent:#C17C3E;
+    --link:#8B5E3C;--progress-start:#C17C3E;--progress-end:#8B5E3C;
+    --back-top-bg:#C17C3E;--back-top-text:#FAF4E8;--toc-bg:#F0E9D8;
+    --toc-border:#D4B896;--theme-btn-bg:#EDE4D3;--resume-bg:#C17C3E;--resume-text:#FAF4E8;
+  }
+  [data-theme="dark"]{
+    --bg:#1E1E24;--surface:#252530;--border:#4A4A56;--text:#D4D0C8;
+    --text-heading:#E8E4DC;--text-muted:#8A8A94;--accent:#C4956A;
+    --link:#9BB8D4;--progress-start:#C4956A;--progress-end:#9BB8D4;
+    --back-top-bg:#C4956A;--back-top-text:#1E1E24;--toc-bg:#282830;
+    --toc-border:#4A4A56;--theme-btn-bg:#33333C;--resume-bg:#C4956A;--resume-text:#1E1E24;
+  }
+  [data-theme="cool"]{
+    --bg:#F0F2F5;--surface:#E8EBF0;--border:#B8C0CC;--text:#2D3748;
+    --text-heading:#1A2332;--text-muted:#718096;--accent:#E07850;
+    --link:#4A7C9B;--progress-start:#E07850;--progress-end:#4A7C9B;
+    --back-top-bg:#4A7C9B;--back-top-text:#F0F2F5;--toc-bg:#E4E7EC;
+    --toc-border:#B8C0CC;--theme-btn-bg:#D8DBE2;--resume-bg:#4A7C9B;--resume-text:#F0F2F5;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:Georgia,'Times New Roman',serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
+  .container{max-width:680px;margin:0 auto;padding:20px 24px 100px}
+  header{text-align:center;padding:48px 0 32px;border-bottom:1px solid var(--border);margin-bottom:32px}
+  header h1{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:1.65em;font-weight:700;line-height:1.3;color:var(--text-heading);margin-bottom:14px}
+  .meta{color:var(--text-muted);font-size:.9em;margin-bottom:6px;font-family:-apple-system,sans-serif}
+  .meta a{color:var(--link);text-decoration:none}
+  .theme-bar{display:flex;justify-content:center;gap:8px;margin:20px 0 32px}
+  .theme-btn{font-family:-apple-system,sans-serif;font-size:.82em;padding:8px 16px;border:1px solid var(--border);border-radius:20px;background:var(--theme-btn-bg);color:var(--text);cursor:pointer;transition:all .2s}
+  .theme-btn.active{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+  nav{background:var(--toc-bg);border:1px solid var(--toc-border);border-radius:12px;padding:24px 28px;margin-bottom:40px}
+  nav h3{font-family:-apple-system,sans-serif;font-size:1em;margin-bottom:12px;color:var(--accent)}
+  nav ol{padding-left:20px}
+  nav li{margin:6px 0;font-size:.88em;font-family:-apple-system,sans-serif}
+  nav a{color:var(--text-muted);text-decoration:none;transition:color .2s}
+  nav a:hover{color:var(--link)}
+  h2{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:1.25em;font-weight:600;color:var(--accent);margin:48px 0 18px;padding-bottom:8px;border-bottom:1px solid var(--border);scroll-margin-top:20px}
+  p{margin-bottom:20px;font-size:1.08em;letter-spacing:.01em}
+  .progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--progress-start),var(--progress-end));z-index:999;transition:width .15s}
+  .back-top{position:fixed;bottom:24px;right:24px;background:var(--back-top-bg);color:var(--back-top-text);width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3em;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.15);opacity:0;transition:opacity .3s}
+  .back-top.show{opacity:1}
+  .resume-banner{position:fixed;bottom:0;left:0;right:0;background:var(--resume-bg);color:var(--resume-text);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;font-family:-apple-system,sans-serif;font-size:.9em;z-index:1000;box-shadow:0 -2px 10px rgba(0,0,0,.15);transform:translateY(100%);transition:transform .3s ease}
+  .resume-banner.show{transform:translateY(0)}
+  .resume-banner button{background:rgba(255,255,255,.25);border:none;color:inherit;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:.9em;font-weight:600}
+  .resume-banner .dismiss{background:none;padding:8px;font-size:1.1em;opacity:.7}
+  .reading-pct{position:fixed;top:8px;right:12px;font-family:-apple-system,sans-serif;font-size:.75em;color:var(--text-muted);opacity:0;transition:opacity .3s;z-index:998}
+  .reading-pct.show{opacity:1}
+  @media(max-width:600px){
+    .container{padding:16px 20px 100px}
+    header{padding:36px 0 24px}
+    header h1{font-size:1.35em}
+    h2{font-size:1.12em;margin:36px 0 14px}
+    p{font-size:1.02em}
+    .theme-bar{gap:6px}
+    .theme-btn{padding:6px 12px;font-size:.78em}
+  }
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="reading-pct" id="readingPct"></div>
+<div class="container">
+  <header>
+    <h1>Como Construí um Sistema de Suporte ao Cliente com IA de Nível Produção</h1>
+    <p class="meta">Usando Claude Code — Tutorial prático</p>
+    <p class="meta"><a href="https://youtu.be/fzrvx_1-9_o" target="_blank">🎥 Assistir no YouTube</a></p>
+  </header>
+  <div class="theme-bar">
+    <button class="theme-btn active" onclick="setTheme('light')">☀️ Sépia</button>
+    <button class="theme-btn" onclick="setTheme('cool')">🌤️ Claro</button>
+    <button class="theme-btn" onclick="setTheme('dark')">🌙 Escuro</button>
+  </div>
+  <nav>
+    <h3>📑 Índice</h3>
+    <ol>
+<li><a href="#s1">INTRODUÇÃO</a></li>
+<li><a href="#s2">CONFIGURANDO O CLAUDE CODE</a></li>
+<li><a href="#s3">ERROS E DEBUGGING NA PRÁTICA</a></li>
+<li><a href="#s4">RESULTADO FINAL</a></li>
+<li><a href="#s5">LIÇÕES DO PROCESSO</a></li>
+    </ol>
+  </nav>
+<h2 id="s1">INTRODUÇÃO</h2>
+<p>Este tutorial mostra na prática como usar o Claude Code para construir um sistema de suporte ao cliente por e-mail — do zero até uma aplicação funcionando localmente, em tempo real, sem cortes. O instrutor é Sunnonni Savvita, mentor de tecnologia na PwC.</p>
+<p>O projeto escolhido é um agente de e-mail inteligente: recebe mensagens, classifica por tipo e urgência, gera respostas automáticas usando IA e exibe tudo numa interface web com inbox e API docs. Um sistema completo, não um tutorial simplificado.</p>
+<h2 id="s2">CONFIGURANDO O CLAUDE CODE</h2>
+<p>O Claude Code pode ser instalado de quatro formas: via terminal/CLI (comando npm install -g @anthropic-ai/claude-code), via extensão do VS Code, via aplicativo desktop (disponível para Windows, Mac e Linux), ou pela versão web. O tutorial cobre as duas primeiras opções.</p>
+<p>Para Windows, há um requisito importante: o Git precisa estar instalado antes do Claude Code, porque ele usa o Git Bash internamente para executar comandos em background. Sem o Git, o Claude Code não consegue executar os scripts que gera.</p>
+<p>Após a instalação, você roda o comando claude e escolhe o método de autenticação: pelo plano Pro (claude.ai) ou por API Key. O tutorial usa API Key, que dá mais controle sobre custos mas exige configurar o billing no console da Anthropic.</p>
+<p>A ABORDAGEM: MÓDULO A MÓDULO</p>
+<p>A estratégia recomendada para projetos maiores: não pedir ao Claude Code para construir tudo de uma vez. Em vez disso, abrir a pasta do projeto e instruir o agente a inspecionar o projeto e trabalhar módulo a módulo.</p>
+<p>O fluxo típico: abrir a pasta do projeto no terminal, rodar claude, descrever o que quer construir em alto nível, e depois iterar por partes. O agente lê os arquivos existentes antes de escrever código novo — o que garante consistência com o que já existe.</p>
+<p>Para este projeto, o prompt inicial descreve o sistema de suporte ao cliente: classificar e-mails por categoria e urgência, gerar respostas automáticas, criar banco de dados para histórico, interface web com inbox e formulário de teste.</p>
+<p>O QUE O CLAUDE CODE CONSTRUIU</p>
+<p>Em cerca de 1 hora de sessão (consumindo 100% do limite de tokens), o Claude Code criou:</p>
+<p>Estrutura do projeto: diretório src com módulos separados — main.py (rotas Flask), models.py (modelos de dados), workflow.py (orquestração do agente), config.py (configurações), database.py (SQLite), e schema de banco de dados.</p>
+<p>Sistema de classificação: classificador de e-mails que determina categoria (suporte técnico, cobrança, cancelamento, etc.) e prioridade (alta, média, baixa), com análise de keywords críticas.</p>
+<p>Knowledge base: sistema RAG básico com documentos de suporte, usando embeddings para busca semântica. Inicialmente gerou com sentence-transformers (modelo local) mas foi reconfigurado para usar embeddings da OpenAI.</p>
+<p>Interface web: três páginas — formulário para testar e-mails com campos de remetente, assunto e corpo; inbox mostrando todos os e-mails processados com status e metadados; e documentação interativa das APIs (Swagger-style).</p>
+<p>API completa: rotas para submeter e-mail, consultar inbox, verificar status de processamento, e acessar os logs do agente.</p>
+<h2 id="s3">ERROS E DEBUGGING NA PRÁTICA</h2>
+<p>O tutorial não corta os erros — e isso é valioso para entender o que esperar do vibe coding na prática.</p>
+<p>Problema com o arquivo .env: o agente gerou o código referenciando variáveis de ambiente com nomes diferentes dos que o usuário tinha configurado. O agente ficou editando o .env automaticamente (porque o modo &ldquo;auto-accept&rdquo; estava ativado), o que causou confusão — a chave da API sendo sobrescrita repetidamente.</p>
+<p>Problema com o modelo OpenAI: o agente configurou inicialmente com sentence-transformers para embeddings. Quando o usuário pediu para mudar para OpenAI, o agente precisou de algumas iterações para acertar o nome correto do modelo (`gpt-4-turbo-preview` vs variantes).</p>
+<p>A lição explícita do tutorial: quando você dá autonomia total ao agente para editar arquivos, ele vai editar o .env também. Para valores sensíveis como chaves de API, é mais seguro usar o modo &ldquo;ask before edit&rdquo; em vez de &ldquo;auto-accept&rdquo;.</p>
+<h2 id="s4">RESULTADO FINAL</h2>
+<p>Depois de resolver as questões de configuração e API key, o sistema funcionou como esperado:</p>
+<p>- E-mails submetidos pelo formulário são classificados por categoria e urgência</p>
+<p>- O agente gera uma resposta personalizada usando o LLM</p>
+<p>- Toda a conversa fica logada no inbox com detalhes: remetente, assunto, corpo, classificação, keywords identificadas, resposta gerada, status de envio</p>
+<p>- A parte de envio real de e-mail falhou (esperado — precisaria das credenciais da API Gmail), mas o fluxo completo de processamento e geração de resposta funcionou</p>
+<p>O que ficou de fora para o próximo vídeo: deploy na AWS com infraestrutura como código e CI/CD via GitHub Actions.</p>
+<h2 id="s5">LIÇÕES DO PROCESSO</h2>
+<p>Plano sobre execução: antes de aprovar um plano que o Claude Code gera, leia com atenção. Se algo estiver claramente errado, corrija antes de apertar &ldquo;approve&rdquo;. Uma vez que começa a executar, o agente segue o plano — e corrigir no meio custa mais tokens do que ajustar o plano antes.</p>
+<p>Compact mode: quando o contexto fica grande e você está perto do limite de tokens, ativar o &ldquo;compact&rdquo; faz o agente criar um resumo comprimido do trabalho feito, liberando espaço para continuar. Útil para projetos longos.</p>
+<p>Limites de tokens são reais: o agente consumiu 100% do limite numa sessão de 2 horas construindo um sistema moderadamente complexo. Para projetos maiores, considere dividir em múltiplas sessões ou usar planos com limites maiores.</p>
+<p>Vibe coding tem limites: o instructor mostra honestamente que código gerado sem especificação precisa — especialmente para integração com serviços externos como Gmail API ou configurações de variáveis de ambiente — vai precisar de ajuste manual. Quanto mais específico e técnico for o domínio, mais você precisa guiar o agente com detalhes.</p>
+</div>
+<a href="#" class="back-top" id="backTop">↑</a>
+<div class="resume-banner" id="resumeBanner">
+  <span id="resumeText">📖 Continuar de onde parou</span>
+  <div>
+    <button onclick="resumeReading()">Continuar</button>
+    <button class="dismiss" onclick="dismissResume()">✕</button>
+  </div>
+</div>
+<script>
+function getDeviceId(){let id=localStorage.getItem('_deviceId');if(!id){id='dev_'+Math.random().toString(36).substr(2,9)+'_'+Date.now();localStorage.setItem('_deviceId',id);}return id;}
+const STORAGE_KEY='reading_fzrvx_1-9_o_'+getDeviceId();
+let saveTimer=null,resumeTarget=null;
+function savePosition(){const h=document.documentElement;const sp=h.scrollTop/(h.scrollHeight-h.clientHeight);let cs='';document.querySelectorAll('h2').forEach(el=>{if(el.getBoundingClientRect().top<100)cs=el.id;});localStorage.setItem(STORAGE_KEY,JSON.stringify({scrollY:window.scrollY,scrollPct:Math.round(sp*100),section:cs,sectionTitle:cs?document.getElementById(cs)?.textContent:'',theme:document.documentElement.getAttribute('data-theme')||'light',timestamp:Date.now()}));}
+function debounceSave(){clearTimeout(saveTimer);saveTimer=setTimeout(savePosition,300);}
+function loadPosition(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY));}catch{return null;}}
+function resumeReading(){if(resumeTarget)window.scrollTo({top:resumeTarget.scrollY,behavior:'smooth'});document.getElementById('resumeBanner').classList.remove('show');}
+function dismissResume(){document.getElementById('resumeBanner').classList.remove('show');}
+function setTheme(theme){if(theme==='light')document.documentElement.removeAttribute('data-theme');else document.documentElement.setAttribute('data-theme',theme);document.querySelectorAll('.theme-btn').forEach((btn,i)=>{btn.classList.toggle('active',['light','cool','dark'][i]===theme);});localStorage.setItem('_reading_theme',theme);savePosition();}
+const progressEl=document.getElementById('progress'),backTopEl=document.getElementById('backTop'),readingPctEl=document.getElementById('readingPct');
+window.addEventListener('scroll',()=>{const h=document.documentElement;const pct=Math.round((h.scrollTop/(h.scrollHeight-h.clientHeight))*100);progressEl.style.width=pct+'%';backTopEl.classList.toggle('show',h.scrollTop>400);readingPctEl.textContent=pct+'%';readingPctEl.classList.toggle('show',h.scrollTop>200);debounceSave();},{passive:true});
+(function init(){const savedTheme=localStorage.getItem('_reading_theme')||'light';setTheme(savedTheme);const saved=loadPosition();if(saved&&saved.scrollY>300){resumeTarget=saved;document.getElementById('resumeText').textContent='📖 Continuar: '+(saved.sectionTitle||'seção anterior')+' ('+(saved.scrollPct||0)+'%)';setTimeout(()=>document.getElementById('resumeBanner').classList.add('show'),500);setTimeout(()=>document.getElementById('resumeBanner').classList.remove('show'),8500);}window.addEventListener('beforeunload',savePosition);document.addEventListener('visibilitychange',()=>{if(document.hidden)savePosition();});})();
+</script>
+</body>
+</html>

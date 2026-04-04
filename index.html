@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leituras — Podcasts & Vídeos Traduzidos</title>
+<style>
+  :root {
+    --bg: #FAF4E8; --surface: #F0E9D8; --border: #D4B896;
+    --text: #3D3529; --text-heading: #2C2416; --text-muted: #7A6F5F;
+    --accent: #C17C3E; --link: #8B5E3C;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; }
+  .container { max-width: 700px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { text-align: center; margin-bottom: 40px; padding-bottom: 28px; border-bottom: 1px solid var(--border); }
+  header h1 { font-size: 1.7em; font-weight: 700; color: var(--text-heading); margin-bottom: 6px; }
+  header p { color: var(--text-muted); font-size: 0.92em; }
+  .section-title { font-size: 0.78em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin: 36px 0 14px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+    padding: 22px 26px; margin-bottom: 14px; text-decoration: none; display: block;
+    transition: transform 0.15s, box-shadow 0.15s; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.09); }
+  .card:active { transform: translateY(0); }
+  .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+  .card h2 { font-size: 1.08em; font-weight: 600; color: var(--text-heading); line-height: 1.4; }
+  .badge { flex-shrink: 0; display: inline-block; background: var(--accent); color: var(--bg); font-size: 0.68em; font-weight: 700; padding: 3px 9px; border-radius: 8px; letter-spacing: 0.03em; }
+  .card .meta { font-size: 0.82em; color: var(--text-muted); margin-bottom: 8px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .card .desc { font-size: 0.9em; color: var(--text); line-height: 1.6; font-family: Georgia, serif; }
+  .progress-info { margin-top: 10px; font-size: 0.78em; color: var(--accent); font-weight: 500; }
+  @media (max-width: 600px) {
+    .container { padding: 24px 18px 60px; }
+    header h1 { font-size: 1.4em; }
+    .card { padding: 18px 20px; }
+    .card h2 { font-size: 1em; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>📚 Leituras</h1>
+    <p>Podcasts e vídeos sobre IA traduzidos e organizados em formato artigo</p>
+  </header>
+
+  <div class="section-title">Podcasts</div>
+
+  <a class="card" href="leituras/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html">
+    <div class="card-top">
+      <h2>Chefe do Claude Code: O Que Acontece Depois Que a Programação For Resolvida</h2>
+      <span class="badge">NOVO</span>
+    </div>
+    <div class="meta"><span>🎙️ Lenny's Podcast</span><span>👤 Boris Cherny (Anthropic)</span><span>📑 30 seções</span></div>
+    <div class="desc">Boris Cherny revela que 100% do seu código é escrito por IA, discute o futuro das carreiras em tech, produtividade 200% maior e o que vem depois que a programação for resolvida.</div>
+    <div class="progress-info" id="p-boris"></div>
+  </a>
+
+  <a class="card" href="leituras/estado-da-ia-2026-ponto-de-inflexao-simon-willison.html">
+    <div class="card-top"><h2>O Estado da Arte da IA em 2026: Passamos o Ponto de Inflexão</h2></div>
+    <div class="meta"><span>🎙️ Lenny's Podcast</span><span>👤 Simon Willison</span><span>📑 15 seções</span></div>
+    <div class="desc">Simon Willison analisa o ponto de inflexão de novembro, fábricas escuras, vibe coding vs engenharia agêntica, paradoxo da produtividade e a trifecta letal da injeção de prompt.</div>
+    <div class="progress-info" id="p-simon"></div>
+  </a>
+
+  <div class="section-title">Vídeos & Palestras</div>
+
+  <a class="card" href="leituras/praticas-de-engenharia-para-agentes-de-codigo-simon-willison.html">
+    <div class="card-top"><h2>Práticas de Engenharia que Fazem os Agentes de Código Funcionar</h2></div>
+    <div class="meta"><span>🎤 The Pragmatic Engineer</span><span>👤 Simon Willison</span></div>
+    <div class="desc">As práticas concretas que Simon Willison usa para extrair resultados profissionais dos agentes de código: TDD, templates, hoarder de conhecimento e engenharia agêntica.</div>
+    <div class="progress-info" id="p-owm"></div>
+  </a>
+
+  <a class="card" href="leituras/de-ides-para-agentes-de-ia-steve-yegge.html">
+    <div class="card-top"><h2>De IDEs para Agentes de IA</h2></div>
+    <div class="meta"><span>🎤 Sourcegraph Podcast</span><span>👤 Steve Yegge</span></div>
+    <div class="desc">Steve Yegge, veterano do Google e Amazon, explica como a transição de IDEs para agentes autônomos está transformando o desenvolvimento de software e o papel do engenheiro.</div>
+    <div class="progress-info" id="p-afs"></div>
+  </a>
+
+  <a class="card" href="leituras/engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia.html">
+    <div class="card-top"><h2>Engenheiro Sênior Demonstra Fluxo de Desenvolvimento com Especificações de IA</h2></div>
+    <div class="meta"><span>🔴 Live</span><span>👤 Staff Engineer</span></div>
+    <div class="desc">Demonstração prática ao vivo de como um engenheiro sênior usa especificações dirigidas por IA para construir software com agentes — o workflow completo do spec ao deploy.</div>
+    <div class="progress-info" id="p-edn"></div>
+  </a>
+
+  <a class="card" href="leituras/um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code.html">
+    <div class="card-top"><h2>Um Agente Não É Suficiente: Programação Agêntica Além do Claude Code</h2></div>
+    <div class="meta"><span>📹 Vídeo técnico</span><span>🤖 Multi-agent Coding</span></div>
+    <div class="desc">Por que um único agente tem limitações e como arquiteturas multi-agente resolvem problemas complexos de software que vão além das capacidades de ferramentas como o Claude Code.</div>
+    <div class="progress-info" id="p-m30"></div>
+  </a>
+
+  <a class="card" href="leituras/do-prompt-a-producao-o-que-e-engenharia-agentica.html">
+    <div class="card-top"><h2>Do Prompt à Produção: O Que É Engenharia Agêntica?</h2></div>
+    <div class="meta"><span>🔴 Live</span><span>🏗️ Engenharia Agêntica</span></div>
+    <div class="desc">Definição prática de engenharia agêntica, como sair de prompts simples para sistemas em produção robustos, e quais princípios guiam a construção de software com agentes de IA.</div>
+    <div class="progress-info" id="p-eya"></div>
+  </a>
+
+  <a class="card" href="leituras/engenharia-agentica-contexto-guardrails-e-criatividade.html">
+    <div class="card-top"><h2>Engenharia Agêntica: Contexto, Guardrails e Criatividade</h2></div>
+    <div class="meta"><span>🎤 Palestra técnica</span><span>🛡️ Guardrails & Context</span></div>
+    <div class="desc">Como fornecer o contexto certo para agentes, implementar guardrails eficazes de segurança e comportamento, e deixar espaço para que os agentes sejam criativos dentro de limites definidos.</div>
+    <div class="progress-info" id="p-l5z"></div>
+  </a>
+
+  <a class="card" href="leituras/como-construi-sistema-suporte-cliente-ia-nivel-producao.html">
+    <div class="card-top"><h2>Como Construí um Sistema de Suporte ao Cliente com IA de Nível Produção</h2></div>
+    <div class="meta"><span>🛠️ Tutorial prático</span><span>🤖 Claude Code</span></div>
+    <div class="desc">Walkthrough completo de como construir um sistema de suporte ao cliente com IA em nível de produção usando Claude Code — arquitetura, desafios e decisões de design.</div>
+    <div class="progress-info" id="p-fzr"></div>
+  </a>
+
+  <a class="card" href="leituras/fluxos-de-trabalho-agenticos-don-syme.html">
+    <div class="card-top"><h2>Fluxos de Trabalho Agênticos com Don Syme</h2></div>
+    <div class="meta"><span>🎤 Entrevista</span><span>👤 Don Syme (criador do F#)</span></div>
+    <div class="desc">Don Syme, criador da linguagem F# na Microsoft, discute como os fluxos de trabalho agênticos estão mudando a engenharia de software e o papel das linguagens funcionais nesse novo paradigma.</div>
+    <div class="progress-info" id="p-647"></div>
+  </a>
+
+  <a class="card" href="leituras/roteiro-engenheiro-ia-para-desenvolvedores-de-software.html">
+    <div class="card-top"><h2>Roteiro do Engenheiro de IA para Desenvolvedores de Software</h2></div>
+    <div class="meta"><span>🗺️ Guia de carreira</span><span>🎯 AI Engineering Roadmap</span></div>
+    <div class="desc">Um roteiro prático para desenvolvedores de software que querem se tornar engenheiros de IA — quais habilidades priorizar, por onde começar e como navegar a transição de carreira.</div>
+    <div class="progress-info" id="p-kma"></div>
+  </a>
+
+</div>
+<script>
+function getDeviceId() {
+  return localStorage.getItem('_deviceId') || null;
+}
+function showProgress(prefix, elemId) {
+  const devId = getDeviceId();
+  if (!devId) return;
+  try {
+    const data = JSON.parse(localStorage.getItem(prefix + devId));
+    if (data && data.scrollPct > 0) {
+      const el = document.getElementById(elemId);
+      if (!el) return;
+      el.textContent = data.scrollPct >= 98
+        ? '✅ Leitura concluída'
+        : '📖 ' + data.scrollPct + '% lido' + (data.sectionTitle ? ' — ' + data.sectionTitle : '');
+    }
+  } catch {}
+}
+showProgress('reading_boris_',       'p-boris');
+showProgress('reading_',             'p-simon');
+showProgress('reading_owmJyKVu5f8_', 'p-owm');
+showProgress('reading_aFsAOu2bgFk_', 'p-afs');
+showProgress('reading_Ednpn1mjKiY_', 'p-edn');
+showProgress('reading_M30gp1315Y4_', 'p-m30');
+showProgress('reading_eYqt8vqeSBw_', 'p-eya');
+showProgress('reading_l5zgfjXs6gQ_', 'p-l5z');
+showProgress('reading_fzrvx_1-9_o_', 'p-fzr');
+showProgress('reading_647pVgfV2yU_', 'p-647');
+showProgress('reading__kMaPZE05Yc_', 'p-kma');
+</script>
+</body>
+</html>

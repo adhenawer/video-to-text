@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engenheiro Sênior Demonstra Fluxo de Desenvolvimento com Especificações de IA</title>
+<style>
+  :root {
+    --bg:#FAF4E8;--surface:#F0E6D0;--border:#D4B896;--text:#3D3529;
+    --text-heading:#2C2416;--text-muted:#7A6F5F;--accent:#C17C3E;
+    --link:#8B5E3C;--progress-start:#C17C3E;--progress-end:#8B5E3C;
+    --back-top-bg:#C17C3E;--back-top-text:#FAF4E8;--toc-bg:#F0E9D8;
+    --toc-border:#D4B896;--theme-btn-bg:#EDE4D3;--resume-bg:#C17C3E;--resume-text:#FAF4E8;
+  }
+  [data-theme="dark"]{
+    --bg:#1E1E24;--surface:#252530;--border:#4A4A56;--text:#D4D0C8;
+    --text-heading:#E8E4DC;--text-muted:#8A8A94;--accent:#C4956A;
+    --link:#9BB8D4;--progress-start:#C4956A;--progress-end:#9BB8D4;
+    --back-top-bg:#C4956A;--back-top-text:#1E1E24;--toc-bg:#282830;
+    --toc-border:#4A4A56;--theme-btn-bg:#33333C;--resume-bg:#C4956A;--resume-text:#1E1E24;
+  }
+  [data-theme="cool"]{
+    --bg:#F0F2F5;--surface:#E8EBF0;--border:#B8C0CC;--text:#2D3748;
+    --text-heading:#1A2332;--text-muted:#718096;--accent:#E07850;
+    --link:#4A7C9B;--progress-start:#E07850;--progress-end:#4A7C9B;
+    --back-top-bg:#4A7C9B;--back-top-text:#F0F2F5;--toc-bg:#E4E7EC;
+    --toc-border:#B8C0CC;--theme-btn-bg:#D8DBE2;--resume-bg:#4A7C9B;--resume-text:#F0F2F5;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:Georgia,'Times New Roman',serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
+  .container{max-width:680px;margin:0 auto;padding:20px 24px 100px}
+  header{text-align:center;padding:48px 0 32px;border-bottom:1px solid var(--border);margin-bottom:32px}
+  header h1{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:1.65em;font-weight:700;line-height:1.3;color:var(--text-heading);margin-bottom:14px}
+  .meta{color:var(--text-muted);font-size:.9em;margin-bottom:6px;font-family:-apple-system,sans-serif}
+  .meta a{color:var(--link);text-decoration:none}
+  .theme-bar{display:flex;justify-content:center;gap:8px;margin:20px 0 32px}
+  .theme-btn{font-family:-apple-system,sans-serif;font-size:.82em;padding:8px 16px;border:1px solid var(--border);border-radius:20px;background:var(--theme-btn-bg);color:var(--text);cursor:pointer;transition:all .2s}
+  .theme-btn.active{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+  nav{background:var(--toc-bg);border:1px solid var(--toc-border);border-radius:12px;padding:24px 28px;margin-bottom:40px}
+  nav h3{font-family:-apple-system,sans-serif;font-size:1em;margin-bottom:12px;color:var(--accent)}
+  nav ol{padding-left:20px}
+  nav li{margin:6px 0;font-size:.88em;font-family:-apple-system,sans-serif}
+  nav a{color:var(--text-muted);text-decoration:none;transition:color .2s}
+  nav a:hover{color:var(--link)}
+  h2{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:1.25em;font-weight:600;color:var(--accent);margin:48px 0 18px;padding-bottom:8px;border-bottom:1px solid var(--border);scroll-margin-top:20px}
+  p{margin-bottom:20px;font-size:1.08em;letter-spacing:.01em}
+  .progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--progress-start),var(--progress-end));z-index:999;transition:width .15s}
+  .back-top{position:fixed;bottom:24px;right:24px;background:var(--back-top-bg);color:var(--back-top-text);width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3em;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.15);opacity:0;transition:opacity .3s}
+  .back-top.show{opacity:1}
+  .resume-banner{position:fixed;bottom:0;left:0;right:0;background:var(--resume-bg);color:var(--resume-text);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;font-family:-apple-system,sans-serif;font-size:.9em;z-index:1000;box-shadow:0 -2px 10px rgba(0,0,0,.15);transform:translateY(100%);transition:transform .3s ease}
+  .resume-banner.show{transform:translateY(0)}
+  .resume-banner button{background:rgba(255,255,255,.25);border:none;color:inherit;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:.9em;font-weight:600}
+  .resume-banner .dismiss{background:none;padding:8px;font-size:1.1em;opacity:.7}
+  .reading-pct{position:fixed;top:8px;right:12px;font-family:-apple-system,sans-serif;font-size:.75em;color:var(--text-muted);opacity:0;transition:opacity .3s;z-index:998}
+  .reading-pct.show{opacity:1}
+  @media(max-width:600px){
+    .container{padding:16px 20px 100px}
+    header{padding:36px 0 24px}
+    header h1{font-size:1.35em}
+    h2{font-size:1.12em;margin:36px 0 14px}
+    p{font-size:1.02em}
+    .theme-bar{gap:6px}
+    .theme-btn{padding:6px 12px;font-size:.78em}
+  }
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="reading-pct" id="readingPct"></div>
+<div class="container">
+  <header>
+    <h1>Engenheiro Sênior Demonstra Fluxo de Desenvolvimento com Especificações de IA</h1>
+    <p class="meta">Live — Desenvolvimento Guiado por Especificação com IA</p>
+    <p class="meta"><a href="https://www.youtube.com/live/Ednpn1mjKiY" target="_blank">🎥 Assistir no YouTube</a></p>
+  </header>
+  <div class="theme-bar">
+    <button class="theme-btn active" onclick="setTheme('light')">☀️ Sépia</button>
+    <button class="theme-btn" onclick="setTheme('cool')">🌤️ Claro</button>
+    <button class="theme-btn" onclick="setTheme('dark')">🌙 Escuro</button>
+  </div>
+  <nav>
+    <h3>📑 Índice</h3>
+    <ol>
+<li><a href="#s1">INTRODUÇÃO</a></li>
+<li><a href="#s2">INTEGRAÇÃO FIGMA MCP NA PRÁTICA</a></li>
+<li><a href="#s3">ARQUITETURA DO TIME DE AGENTES</a></li>
+<li><a href="#s4">WORK TREES: O MODELO MENTAL CERTO</a></li>
+<li><a href="#s5">VERIFICAÇÃO E QUALIDADE DO CÓDIGO</a></li>
+<li><a href="#s6">MÚLTIPLAS JANELAS E FLUXO DE TRABALHO</a></li>
+<li><a href="#s7">SUPORTE A MONOREPOS E CUSTOMIZAÇÃO CORPORATIVA</a></li>
+    </ol>
+  </nav>
+<h2 id="s1">INTRODUÇÃO</h2>
+<p>Sam Breed é ex-engenheiro staff sênior no Credit Karma e atualmente sócio na Sutter Hill Ventures. Ele é um dos engenheiros principais construindo o app Intent e participou do início da Augment quando ela ainda se chamava Eigor. Nesta live com AJ, lead de conteúdo técnico da Augment, Sam demonstra ao vivo como um engenheiro sênior realmente trabalha com IA em 2025 — construindo um site completo a partir de um design Figma usando o Intent e o MCP do Figma.</p>
+<p>O PROJETO: DE FIGMA PARA SITE EM TEMPO REAL</p>
+<p>O exercício proposto é um speedrun real: pegar um arquivo Figma totalmente especificado com cerca de 10 páginas, sistema de design, tipografia customizada, componentes reutilizáveis e grade — e construir um site funcional a partir disso usando o Intent com integração MCP do Figma.</p>
+<p>Sam já fez esse processo alguns dias antes e chegou a 95% de fidelidade ao design em aproximadamente 45 minutos. Um trabalho que ele estima que levaria um a dois dias de codificação manual intensa de um desenvolvedor experiente. O designer do projeto nunca tinha usado Git antes — e agora usa o Intent para iterar sozinho nos últimos 5%.</p>
+<p>A FILOSOFIA DAS PRIMEIRAS JOGADAS</p>
+<p>Uma prática central de Sam é fazer as &ldquo;primeiras jogadas&rdquo; do projeto manualmente: inicializar os frameworks que quer usar (neste caso, Astro e Tailwind CSS) antes de passar o controle ao agente.</p>
+<p>O motivo é prático: o training data dos modelos pode ter meses de defasagem. Para garantir que você está usando as versões mais recentes de frameworks sem escolhas enterradas no modelo há seis meses, vale a pena rodar os init commands você mesmo. Isso também &ldquo;planta&rdquo; as preferências do desenvolvedor no projeto — o agente vai então seguir os padrões que você estabeleceu, não os defaults genéricos que ele escolheria sozinho.</p>
+<h2 id="s2">INTEGRAÇÃO FIGMA MCP NA PRÁTICA</h2>
+<p>A integração do Figma com o Intent via MCP funciona através de um servidor local na porta 3845. O fluxo atual exige um pouco de trabalho manual: você precisa ir ao Figma, usar o modo desenvolvedor (Shift+D), clicar com o botão direito nos frames e copiar os links diretos para os artboards que quer incluir no contexto.</p>
+<p>Com esses links, o Intent consegue ler diretamente o design system, extrair cores customizadas, tokens de tipografia, espaçamentos, gradientes e estrutura das páginas. O agente reconhece automaticamente a versão do Tailwind (v4 vs v3) e gera os arquivos de configuração corretos.</p>
+<p>A sugestão é não exagerar na quantidade de servidores MCP ativos simultaneamente. Cada servidor adiciona definições de ferramentas ao system prompt, consumindo contexto. Dois ou três servidores bem escolhidos funcionam muito melhor do que uma &ldquo;árvore de Natal&rdquo; com onze ao mesmo tempo.</p>
+<h2 id="s3">ARQUITETURA DO TIME DE AGENTES</h2>
+<p>O Intent opera com uma equipe de agentes especializados:</p>
+<p>O Coordenador é o ponto de partida padrão e o modo de uso mais recomendado. Você dá a ele um objetivo de alto nível — mesmo algo vago como &ldquo;olha esse problema e arruma&rdquo; — e ele escreve um spec detalhado com sub-tarefas. Você pode revisar o plano antes de aprovar ou simplesmente mandar executar.</p>
+<p>O Implementador recebe as tarefas delegadas pelo Coordenador e executa o trabalho de codificação em paralelo. Múltiplos implementadores podem rodar ao mesmo tempo para partes independentes do projeto.</p>
+<p>O Verificador faz um passo de revisão ao final, checando o que foi feito contra os requisitos — no caso do Figma, literalmente comparando o site gerado com os artboards originais.</p>
+<p>O Desenvolvedor é um agente híbrido que combina planejamento e execução em thread única — mais adequado para tarefas simples e diretas que não precisam de paralelismo.</p>
+<p>Você também pode criar especialistas customizados. O UI Designer specialist, por exemplo, foi criado para fazer um passo específico de extração de design tokens — porque os agentes genéricos têm tendência a usar valores inline de Tailwind (pixels hardcoded) em vez dos tokens do sistema de design, especialmente se encontrarem esse padrão em algum lugar do código existente.</p>
+<h2 id="s4">WORK TREES: O MODELO MENTAL CERTO</h2>
+<p>Git work trees existem desde 2015, mas a maioria dos desenvolvedores não sabia que eram uma coisa até recentemente. Sam só descobriu no ano passado — mesmo usando Git desde 2008.</p>
+<p>A ideia é simples: work trees permitem ter múltiplos branches do mesmo repositório em disco ao mesmo tempo, em diretórios separados. O Intent usa isso para criar workspaces isolados para cada tarefa, onde o agente pode trabalhar sem interferir no seu código principal.</p>
+<p>O mental model correto é tratar work trees como objetos temporários. Eles nascem, ficam vivos enquanto a tarefa está em progresso, e somem quando você faz o merge. Se um work tree vive por dias ou semanas, você provavelmente vai precisar fazer merge do main de volta nele periodicamente pelo terminal. Você não pode fazer checkout do mesmo branch que está aberto num work tree — se quiser ver o código em outra branch, precisa fazer merge.</p>
+<p>O Intent facilita isso colocando o terminal como cidadão de primeira classe na interface e tornando o caminho dos work trees facilmente acessível. Você pode trabalhar diretamente num branch sem work tree ativando a opção &ldquo;Work directly on this branch&rdquo; na tela inicial.</p>
+<h2 id="s5">VERIFICAÇÃO E QUALIDADE DO CÓDIGO</h2>
+<p>Para verificar o trabalho gerado sem executar testes formais, Sam usa uma abordagem baseada em vibes para tarefas de webdev mais leves: o servidor de desenvolvimento está rodando, ele olha o resultado visualmente, passa linting e formatação, e confia na etapa de verificação do agente para pegar o resto.</p>
+<p>Para duplicação de código — um problema real com agentes — a solução mais eficaz que ele encontrou é criar um workspace dedicado com a instrução de &ldquo;encontrar código duplicado no repo, verificar utilitários, garantir que as abstrações estão certas&rdquo;. A maioria dos codebases grandes vai ter alguma duplicação e uma pesquisa ativa geralmente encontra algo.</p>
+<p>O Sentry é um dos fluxos favoritos de Sam para tarefas cotidianas. Conectar o Sentry ao Intent permite dizer &ldquo;big dog, corrije esse erro&rdquo; com link para o issue — e o agente vai resolver. O modo &ldquo;rapid fire&rdquo; cria um workspace em background e você pode checar o progresso quando quiser.</p>
+<h2 id="s6">MÚLTIPLAS JANELAS E FLUXO DE TRABALHO</h2>
+<p>Uma dica importante que Sam não conseguiu demonstrar na live por limitações de screen sharing: ele normalmente tem quatro ou cinco janelas do Intent abertas ao mesmo tempo, cada uma com um workspace ou work tree diferente.</p>
+<p>O atalho Command+Shift+N para abrir nova janela está &ldquo;tatuado no cérebro&rdquo; dele. Isso permite monitorar múltiplos agentes trabalhando em paralelo em diferentes partes do projeto.</p>
+<p>O Intent não substitui a IDE — Sam ainda abre o VS Code para revisar código, especialmente quando vai escrever código manualmente. A CLI do Augment também é muito usada para perguntas rápidas sobre o codebase e tarefas diretas e bem definidas. O Intent adiciona a camada de orquestração, planejamento e paralelismo que a CLI não tem.</p>
+<h2 id="s7">SUPORTE A MONOREPOS E CUSTOMIZAÇÃO CORPORATIVA</h2>
+<p>Para empresas que querem customizar o comportamento dos agentes com frameworks internos, padrões de código e conhecimento de domínio específico: o padrão é usar arquivos de regras (tipo AGENTS.md ou equivalentes). Esses arquivos são sempre incluídos no contexto do agente.</p>
+<p>Monorepos funcionam muito bem com o Augment — o motor de contexto foi construído para lidar com repositórios grandes e complexos com múltiplos projetos e documentação interna. Se o monorepo tem padrões de codificação e documentação, os agentes vão usá-los.</p>
+<p>Os prompts dos agentes são visíveis e editáveis dentro do próprio Intent. Não há system prompt secreto — você pode ver exatamente como cada especialista está configurado, modificar o comportamento, e resetar para os defaults se quiser.</p>
+</div>
+<a href="#" class="back-top" id="backTop">↑</a>
+<div class="resume-banner" id="resumeBanner">
+  <span id="resumeText">📖 Continuar de onde parou</span>
+  <div>
+    <button onclick="resumeReading()">Continuar</button>
+    <button class="dismiss" onclick="dismissResume()">✕</button>
+  </div>
+</div>
+<script>
+function getDeviceId(){let id=localStorage.getItem('_deviceId');if(!id){id='dev_'+Math.random().toString(36).substr(2,9)+'_'+Date.now();localStorage.setItem('_deviceId',id);}return id;}
+const STORAGE_KEY='reading_Ednpn1mjKiY_'+getDeviceId();
+let saveTimer=null,resumeTarget=null;
+function savePosition(){const h=document.documentElement;const sp=h.scrollTop/(h.scrollHeight-h.clientHeight);let cs='';document.querySelectorAll('h2').forEach(el=>{if(el.getBoundingClientRect().top<100)cs=el.id;});localStorage.setItem(STORAGE_KEY,JSON.stringify({scrollY:window.scrollY,scrollPct:Math.round(sp*100),section:cs,sectionTitle:cs?document.getElementById(cs)?.textContent:'',theme:document.documentElement.getAttribute('data-theme')||'light',timestamp:Date.now()}));}
+function debounceSave(){clearTimeout(saveTimer);saveTimer=setTimeout(savePosition,300);}
+function loadPosition(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY));}catch{return null;}}
+function resumeReading(){if(resumeTarget)window.scrollTo({top:resumeTarget.scrollY,behavior:'smooth'});document.getElementById('resumeBanner').classList.remove('show');}
+function dismissResume(){document.getElementById('resumeBanner').classList.remove('show');}
+function setTheme(theme){if(theme==='light')document.documentElement.removeAttribute('data-theme');else document.documentElement.setAttribute('data-theme',theme);document.querySelectorAll('.theme-btn').forEach((btn,i)=>{btn.classList.toggle('active',['light','cool','dark'][i]===theme);});localStorage.setItem('_reading_theme',theme);savePosition();}
+const progressEl=document.getElementById('progress'),backTopEl=document.getElementById('backTop'),readingPctEl=document.getElementById('readingPct');
+window.addEventListener('scroll',()=>{const h=document.documentElement;const pct=Math.round((h.scrollTop/(h.scrollHeight-h.clientHeight))*100);progressEl.style.width=pct+'%';backTopEl.classList.toggle('show',h.scrollTop>400);readingPctEl.textContent=pct+'%';readingPctEl.classList.toggle('show',h.scrollTop>200);debounceSave();},{passive:true});
+(function init(){const savedTheme=localStorage.getItem('_reading_theme')||'light';setTheme(savedTheme);const saved=loadPosition();if(saved&&saved.scrollY>300){resumeTarget=saved;document.getElementById('resumeText').textContent='📖 Continuar: '+(saved.sectionTitle||'seção anterior')+' ('+(saved.scrollPct||0)+'%)';setTimeout(()=>document.getElementById('resumeBanner').classList.add('show'),500);setTimeout(()=>document.getElementById('resumeBanner').classList.remove('show'),8500);}window.addEventListener('beforeunload',savePosition);document.addEventListener('visibilitychange',()=>{if(document.hidden)savePosition();});})();
+</script>
+</body>
+</html>

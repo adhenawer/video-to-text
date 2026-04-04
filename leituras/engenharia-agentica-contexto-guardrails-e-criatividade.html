@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engenharia Agêntica: Contexto, Guardrails e Criatividade</title>
+<style>
+  :root {
+    --bg:#FAF4E8;--surface:#F0E6D0;--border:#D4B896;--text:#3D3529;
+    --text-heading:#2C2416;--text-muted:#7A6F5F;--accent:#C17C3E;
+    --link:#8B5E3C;--progress-start:#C17C3E;--progress-end:#8B5E3C;
+    --back-top-bg:#C17C3E;--back-top-text:#FAF4E8;--toc-bg:#F0E9D8;
+    --toc-border:#D4B896;--theme-btn-bg:#EDE4D3;--resume-bg:#C17C3E;--resume-text:#FAF4E8;
+  }
+  [data-theme="dark"]{
+    --bg:#1E1E24;--surface:#252530;--border:#4A4A56;--text:#D4D0C8;
+    --text-heading:#E8E4DC;--text-muted:#8A8A94;--accent:#C4956A;
+    --link:#9BB8D4;--progress-start:#C4956A;--progress-end:#9BB8D4;
+    --back-top-bg:#C4956A;--back-top-text:#1E1E24;--toc-bg:#282830;
+    --toc-border:#4A4A56;--theme-btn-bg:#33333C;--resume-bg:#C4956A;--resume-text:#1E1E24;
+  }
+  [data-theme="cool"]{
+    --bg:#F0F2F5;--surface:#E8EBF0;--border:#B8C0CC;--text:#2D3748;
+    --text-heading:#1A2332;--text-muted:#718096;--accent:#E07850;
+    --link:#4A7C9B;--progress-start:#E07850;--progress-end:#4A7C9B;
+    --back-top-bg:#4A7C9B;--back-top-text:#F0F2F5;--toc-bg:#E4E7EC;
+    --toc-border:#B8C0CC;--theme-btn-bg:#D8DBE2;--resume-bg:#4A7C9B;--resume-text:#F0F2F5;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:Georgia,'Times New Roman',serif;background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
+  .container{max-width:680px;margin:0 auto;padding:20px 24px 100px}
+  header{text-align:center;padding:48px 0 32px;border-bottom:1px solid var(--border);margin-bottom:32px}
+  header h1{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:1.65em;font-weight:700;line-height:1.3;color:var(--text-heading);margin-bottom:14px}
+  .meta{color:var(--text-muted);font-size:.9em;margin-bottom:6px;font-family:-apple-system,sans-serif}
+  .meta a{color:var(--link);text-decoration:none}
+  .theme-bar{display:flex;justify-content:center;gap:8px;margin:20px 0 32px}
+  .theme-btn{font-family:-apple-system,sans-serif;font-size:.82em;padding:8px 16px;border:1px solid var(--border);border-radius:20px;background:var(--theme-btn-bg);color:var(--text);cursor:pointer;transition:all .2s}
+  .theme-btn.active{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+  nav{background:var(--toc-bg);border:1px solid var(--toc-border);border-radius:12px;padding:24px 28px;margin-bottom:40px}
+  nav h3{font-family:-apple-system,sans-serif;font-size:1em;margin-bottom:12px;color:var(--accent)}
+  nav ol{padding-left:20px}
+  nav li{margin:6px 0;font-size:.88em;font-family:-apple-system,sans-serif}
+  nav a{color:var(--text-muted);text-decoration:none;transition:color .2s}
+  nav a:hover{color:var(--link)}
+  h2{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:1.25em;font-weight:600;color:var(--accent);margin:48px 0 18px;padding-bottom:8px;border-bottom:1px solid var(--border);scroll-margin-top:20px}
+  p{margin-bottom:20px;font-size:1.08em;letter-spacing:.01em}
+  .progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--progress-start),var(--progress-end));z-index:999;transition:width .15s}
+  .back-top{position:fixed;bottom:24px;right:24px;background:var(--back-top-bg);color:var(--back-top-text);width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3em;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,.15);opacity:0;transition:opacity .3s}
+  .back-top.show{opacity:1}
+  .resume-banner{position:fixed;bottom:0;left:0;right:0;background:var(--resume-bg);color:var(--resume-text);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;font-family:-apple-system,sans-serif;font-size:.9em;z-index:1000;box-shadow:0 -2px 10px rgba(0,0,0,.15);transform:translateY(100%);transition:transform .3s ease}
+  .resume-banner.show{transform:translateY(0)}
+  .resume-banner button{background:rgba(255,255,255,.25);border:none;color:inherit;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:.9em;font-weight:600}
+  .resume-banner .dismiss{background:none;padding:8px;font-size:1.1em;opacity:.7}
+  .reading-pct{position:fixed;top:8px;right:12px;font-family:-apple-system,sans-serif;font-size:.75em;color:var(--text-muted);opacity:0;transition:opacity .3s;z-index:998}
+  .reading-pct.show{opacity:1}
+  @media(max-width:600px){
+    .container{padding:16px 20px 100px}
+    header{padding:36px 0 24px}
+    header h1{font-size:1.35em}
+    h2{font-size:1.12em;margin:36px 0 14px}
+    p{font-size:1.02em}
+    .theme-bar{gap:6px}
+    .theme-btn{padding:6px 12px;font-size:.78em}
+  }
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="reading-pct" id="readingPct"></div>
+<div class="container">
+  <header>
+    <h1>Engenharia Agêntica: Contexto, Guardrails e Criatividade</h1>
+    <p class="meta">Palestra técnica sobre Engenharia Agêntica</p>
+    <p class="meta"><a href="https://youtu.be/l5zgfjXs6gQ" target="_blank">🎥 Assistir no YouTube</a></p>
+  </header>
+  <div class="theme-bar">
+    <button class="theme-btn active" onclick="setTheme('light')">☀️ Sépia</button>
+    <button class="theme-btn" onclick="setTheme('cool')">🌤️ Claro</button>
+    <button class="theme-btn" onclick="setTheme('dark')">🌙 Escuro</button>
+  </div>
+  <nav>
+    <h3>📑 Índice</h3>
+    <ol>
+<li><a href="#s1">INTRODUÇÃO</a></li>
+<li><a href="#s2">CONTEXTO: O QUE É E POR QUE É FUNDAMENTAL</a></li>
+<li><a href="#s3">WORKFLOW 1: RESOLUÇÃO AUTÔNOMA DE TICKETS</a></li>
+<li><a href="#s4">WORKFLOW 2: RESOLUÇÃO DE INCIDENTES COM SELF-HEALING</a></li>
+<li><a href="#s5">GUARDRAILS E CONTROLE</a></li>
+<li><a href="#s6">MEDINDO O ROI</a></li>
+<li><a href="#s7">REUTILIZAÇÃO DE AGENTES E SKILLS REGISTRY</a></li>
+    </ol>
+  </nav>
+<h2 id="s1">INTRODUÇÃO</h2>
+<p>Este webinar da Port reúne Tomas (product solutions lead, background em DevSecOps e GitLab) e Zach (solution engineer para APJ, background em DevOps) para falar sobre engenharia agêntica na prática: como dar contexto adequado aos agentes, implementar guardrails que previnem ações destrutivas, e medir o ROI dessas iniciativas.</p>
+<p>A pergunta inicial feita ao público — &ldquo;quando um agente de IA toma uma ação no seu workflow de engenharia, qual é sua maior preocupação?&rdquo; — teve dois grandes vencedores: &ldquo;não há guardrails suficientes para prevenir ações destrutivas&rdquo; e &ldquo;ainda não temos agentes de IA no nosso workflow.&rdquo;</p>
+<p>O CAOS DOS AGENTES E POR QUE ACONTECE</p>
+<p>Nos últimos 10-15 anos, a indústria passou por DevOps, depois Platform Engineering — todas tentativas de simplificar e padronizar. Agora, com a adição de agentes de IA por cima dessa complexidade já existente, o caos cresce ainda mais rápido.</p>
+<p>Os quatro problemas centrais identificados pelas equipes ao tentar colocar agentes em produção: falta de visibilidade sobre o que os agentes estão fazendo, ausência de controle e supervisão humana, duplicação de trabalho entre engenheiros e agentes, e falta de guardrails reais.</p>
+<p>O problema adicional com o caos de agentes em organizações maiores é a fragmentação: cada time cria seus próprios agentes, cada um funciona de forma diferente, e não há um lugar centralizado onde você possa ver tudo. Um agente de triage construído por um time não pode ser reutilizado pelo próximo time — todo mundo reinventa a roda.</p>
+<h2 id="s2">CONTEXTO: O QUE É E POR QUE É FUNDAMENTAL</h2>
+<p>Quando você pede para um agente de IA fazer algo, ele parte com contexto zero. Ele não sabe qual é o seu stack de tecnologia, qual linguagem de programação você usa, quais ferramentas estão integradas, quem é o dono de cada serviço, quando foi o último deploy. Um prompt como &ldquo;implemente X&rdquo; sem contexto vai produzir um resultado genérico que pode ou não funcionar no seu ambiente.</p>
+<p>Contexto, nesse sentido, é tudo que um engenheiro experiente na sua empresa já saberia: a estrutura dos seus serviços, onde estão os repositórios, como os pull requests se relacionam com os serviços, quais são as convenções da organização, a topologia do sistema. Com contexto rico e preciso, você obtém respostas muito melhores dos agentes.</p>
+<p>A plataforma Port funciona como um &ldquo;plano de controle&rdquo; que agrega esse contexto de múltiplas fontes — Jira, GitHub, ferramentas de monitoramento, documentação — num &ldquo;context graph&rdquo; que os agentes podem consultar.</p>
+<h2 id="s3">WORKFLOW 1: RESOLUÇÃO AUTÔNOMA DE TICKETS</h2>
+<p>O primeiro caso de uso demonstrado é levar um item de trabalho da criação até a produção com automação agêntica. O processo inclui:</p>
+<p>Enriquecimento de contexto: quando um ticket chega, o sistema automaticamente busca todos os serviços relacionados, repositórios, pull requests históricos e pipelines relevantes. O item de trabalho não existe em isolamento — ele pertence a um serviço, que tem uma stack específica, um time responsável, um histórico de deploys.</p>
+<p>Geração de PRD: um agente usa esse contexto enriquecido para gerar um Product Requirements Document estruturado.</p>
+<p>Geração de spec técnica: outro agente transforma o PRD numa especificação técnica de implementação.</p>
+<p>Execução via coding agent: a spec técnica é passada para um agente de código (Claude Code ou similar) para implementação.</p>
+<p>Review e deploy: o código gerado passa por revisão e segue para deploy.</p>
+<p>O trigger pode ser manual ou automático — assim que um ticket entra, o workflow começa.</p>
+<h2 id="s4">WORKFLOW 2: RESOLUÇÃO DE INCIDENTES COM SELF-HEALING</h2>
+<p>O segundo caso de uso é a gestão de incidentes — da emissão do alerta até a análise de causa raiz e postmortem. Tomas descreveu um incidente real onde um cluster Kubernetes afetou 20 microserviços com 20 donos diferentes. A pergunta crítica era: como reunir as pessoas certas rapidamente?</p>
+<p>Com o workflow de self-healing:</p>
+<p>Triage automática: ao receber um alerta, o agente busca contexto sobre o incidente — serviços impactados, último deploy, upstream/downstream dependencies, business impact.</p>
+<p>Investigação: o agente usa skills específicas (da skills registry) para investigar o incidente da forma que a organização padronizou. Pode consultar servidores MCP externos (DataDog, CloudWatch, etc.) para dados de logs e traces.</p>
+<p>Roteamento: o agente determina se precisa escalar para um humano ou se consegue resolver autonomamente.</p>
+<p>Remediação: o agente pode executar ações como rollback de deployment ou sincronização via Argo CD.</p>
+<p>Postmortem automático: ao final, um agente de postmortem compila todos os dados do incidente, o triage, o que foi feito na remediação, e gera um documento de análise de causa raiz — economizando horas de trabalho chato, especialmente às 2 da manhã.</p>
+<p>Um insight importante: se 90 incidentes entre 100 têm a mesma causa raiz, os RCAs acumulados no Port permitem que o agente identifique isso e sugira melhorias sistêmicas, não apenas correções pontuais.</p>
+<h2 id="s5">GUARDRAILS E CONTROLE</h2>
+<p>A resposta para o medo de &ldquo;agentes fazendo ações destrutivas&rdquo; está em três camadas:</p>
+<p>Controle de contexto: ao controlar precisamente quais dados o agente pode acessar, você limita o espaço de ações possíveis. Um agente que só vê o ambiente de desenvolvimento não pode afetar produção.</p>
+<p>RBAC (controle de acesso baseado em papéis): a plataforma implementa permissões específicas para cada agente — este agente pode fazer deploy para dev, aquele pode fazer deploy para produção, nenhum pode acessar dados de clientes.</p>
+<p>Scorecards e compliance: é possível definir critérios obrigatórios para que certas ações sejam executadas. Um pull request só pode seguir para produção se passar por code scan, ter cobertura de código acima de 85%, e ter os unit tests passando. Os agentes operam dentro dessas restrições.</p>
+<p>Humano no loop: o workflow pode ser configurado para pausar e esperar aprovação humana em pontos críticos. Não é uma caixa preta — você consegue ver como o agente chegou a cada decisão.</p>
+<h2 id="s6">MEDINDO O ROI</h2>
+<p>A primeira recomendação é estabelecer uma baseline antes de implementar agentes. Meça agora: qual é o lead time médio de um ticket do Jira até produção? Quantas horas leva a resolução de incidentes? Quando você introduzir os agentes, a diferença entre o antes e o depois é o ROI demonstrável.</p>
+<p>Métricas de impacto para liderança: percentual de tickets resolvidos autonomamente (no exemplo do webinar, 64%), horas economizadas pelo workflow de ticket autônomo (17.000 horas no exemplo), número de incidentes resolvidos pelo agente de self-healing, redução do backlog de tickets de baixa prioridade (dívida técnica).</p>
+<p>Uma métrica mais sutil mas importante: se o número de incidentes resolvidos está caindo conforme o uso do self-healing aumenta, isso indica que o sistema está aprendendo e prevenindo problemas recorrentes, não apenas remediando.</p>
+<p>Para acessar os dados do Port de fora da plataforma (dashboards, relatórios para liderança), o Port oferece um servidor MCP que permite queries via Claude ou outros agentes usando linguagem natural — o que facilita criar relatórios sob demanda sem precisar de SQL ou APIs customizadas.</p>
+<h2 id="s7">REUTILIZAÇÃO DE AGENTES E SKILLS REGISTRY</h2>
+<p>Um dos problemas centrais do &ldquo;agent chaos&rdquo; é cada time reinventar agentes similares. A solução é uma skills registry centralizada — um repositório de agentes, prompts reutilizáveis e workflows padronizados que qualquer time pode consumir.</p>
+<p>É análogo a um Docker Registry para agentes: você registra o agente de triage, documenta o que ele faz, quais ferramentas ele usa, qual prompt base é utilizado. Outro time que precisa de triage não precisa construir do zero — consome o que já foi validado.</p>
+<p>A mesma lógica se aplica a workflows mais complexos: o workflow de segurança, o workflow de resolução de incidentes, o workflow de code review — todos podem ser versionados, compartilhados e refinados colaborativamente, garantindo que as boas práticas da organização sejam aplicadas consistentemente.</p>
+</div>
+<a href="#" class="back-top" id="backTop">↑</a>
+<div class="resume-banner" id="resumeBanner">
+  <span id="resumeText">📖 Continuar de onde parou</span>
+  <div>
+    <button onclick="resumeReading()">Continuar</button>
+    <button class="dismiss" onclick="dismissResume()">✕</button>
+  </div>
+</div>
+<script>
+function getDeviceId(){let id=localStorage.getItem('_deviceId');if(!id){id='dev_'+Math.random().toString(36).substr(2,9)+'_'+Date.now();localStorage.setItem('_deviceId',id);}return id;}
+const STORAGE_KEY='reading_l5zgfjXs6gQ_'+getDeviceId();
+let saveTimer=null,resumeTarget=null;
+function savePosition(){const h=document.documentElement;const sp=h.scrollTop/(h.scrollHeight-h.clientHeight);let cs='';document.querySelectorAll('h2').forEach(el=>{if(el.getBoundingClientRect().top<100)cs=el.id;});localStorage.setItem(STORAGE_KEY,JSON.stringify({scrollY:window.scrollY,scrollPct:Math.round(sp*100),section:cs,sectionTitle:cs?document.getElementById(cs)?.textContent:'',theme:document.documentElement.getAttribute('data-theme')||'light',timestamp:Date.now()}));}
+function debounceSave(){clearTimeout(saveTimer);saveTimer=setTimeout(savePosition,300);}
+function loadPosition(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY));}catch{return null;}}
+function resumeReading(){if(resumeTarget)window.scrollTo({top:resumeTarget.scrollY,behavior:'smooth'});document.getElementById('resumeBanner').classList.remove('show');}
+function dismissResume(){document.getElementById('resumeBanner').classList.remove('show');}
+function setTheme(theme){if(theme==='light')document.documentElement.removeAttribute('data-theme');else document.documentElement.setAttribute('data-theme',theme);document.querySelectorAll('.theme-btn').forEach((btn,i)=>{btn.classList.toggle('active',['light','cool','dark'][i]===theme);});localStorage.setItem('_reading_theme',theme);savePosition();}
+const progressEl=document.getElementById('progress'),backTopEl=document.getElementById('backTop'),readingPctEl=document.getElementById('readingPct');
+window.addEventListener('scroll',()=>{const h=document.documentElement;const pct=Math.round((h.scrollTop/(h.scrollHeight-h.clientHeight))*100);progressEl.style.width=pct+'%';backTopEl.classList.toggle('show',h.scrollTop>400);readingPctEl.textContent=pct+'%';readingPctEl.classList.toggle('show',h.scrollTop>200);debounceSave();},{passive:true});
+(function init(){const savedTheme=localStorage.getItem('_reading_theme')||'light';setTheme(savedTheme);const saved=loadPosition();if(saved&&saved.scrollY>300){resumeTarget=saved;document.getElementById('resumeText').textContent='📖 Continuar: '+(saved.sectionTitle||'seção anterior')+' ('+(saved.scrollPct||0)+'%)';setTimeout(()=>document.getElementById('resumeBanner').classList.add('show'),500);setTimeout(()=>document.getElementById('resumeBanner').classList.remove('show'),8500);}window.addEventListener('beforeunload',savePosition);document.addEventListener('visibilitychange',()=>{if(document.hidden)savePosition();});})();
+</script>
+</body>
+</html>
