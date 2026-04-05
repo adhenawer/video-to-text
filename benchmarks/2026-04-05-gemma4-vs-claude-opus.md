@@ -58,13 +58,34 @@
 4. **Repetição entre chunks** — Mesmo tema abordado em chunks diferentes resulta em conteúdo duplicado (efeito vampiro, captura de valor, inovação em grandes empresas)
 5. **Construções robotizadas** — Parágrafos consecutivos começando com "Ele observou que...", "Ele argumentou que...", "Ele concluiu que..."
 
+## Evidências de hardware
+
+O Gemma 4 E4B 8bit operou no limite absoluto do hardware durante a inferência:
+
+![Memory Pressure — Mac M1 Pro 16GB durante inferência do Gemma 4 E4B](assets/memory-pressure-gemma4-e4b.png)
+
+| Métrica | Valor |
+|---------|-------|
+| Physical Memory | 16,00 GB |
+| Memory Used | 15,55 GB (97%) |
+| Cached Files | 403,5 MB |
+| Swap Used | 22,66 GB |
+| App Memory | 676,2 MB |
+| Wired Memory | 12,65 GB |
+| Compressed | 1,63 GB |
+
+O sistema usou **22,66 GB de swap** para compensar a falta de RAM — o modelo de ~8GB somado ao KV cache da inferência ultrapassa os 16GB físicos. O Memory Pressure ficou na zona vermelha. A máquina permaneceu estável mas com performance degradada (swap em SSD do M1 Pro é rápido, mas não substitui RAM).
+
 ## Conclusão
 
 O Claude Opus 4.6 produz artigos de qualidade editorial — texto natural, zero erros factuais em nomes, organização limpa, sem repetição. Lê como um artigo escrito por jornalista.
 
 O Gemma 4 E4B 8bit produz conteúdo utilizável mas com problemas claros que exigiriam revisão humana ou pós-processamento para atingir o padrão dos artigos existentes. Para uso pessoal com revisão rápida é aceitável; para publicação direta, o Claude é significativamente superior.
 
+Do ponto de vista de hardware, o modelo E4B 8bit é o limite prático para um Mac M1 Pro 16GB — funciona, mas com swap pesado. Modelos maiores (26B, 31B) dão OOM fatal no Metal GPU.
+
 ## Arquivos de referência
 
 - Claude Opus 4.6: `leituras/de-ides-para-agentes-de-ia-steve-yegge.html`
 - Gemma 4 E4B: `leituras/teste-gemma4-pipeline.html`
+- Screenshot Memory Pressure: `benchmarks/assets/memory-pressure-gemma4-e4b.png`
