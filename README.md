@@ -2,15 +2,13 @@
 
 Transforma vídeos e podcasts do YouTube em artigos de leitura — traduzidos para português brasileiro, organizados por seções e publicados como HTML estático.
 
-## Por que este projeto existe
+## Por que criei o projeto 
 
-Eu prefiro ler. Quando quero aprender algo, um artigo de 10 minutos me entrega mais do que um vídeo de 1h. Leio no meu ritmo, pulo o que não interessa, volto no que precisa de mais atenção.
+Eu prefiro ler um post do que assistir um vídeo longo. Leio no meu ritmo, pulo o que não interessa, volto no que precisa de mais atenção.
 
-Estou estudando IA e o volume de conteúdo relevante em podcasts e vídeos é enorme. Não tenho tempo de assistir tudo, mas não quero perder nada. A solução foi automatizar: mando o link de um vídeo pelo WhatsApp para o [Hermes](https://github.com/NousResearch/hermes-agent) e ele devolve o artigo pronto, traduzido e organizado em seções.
+O que me motivou foi acompanhar as tendências de IA, o volume de conteúdo em podcasts e vídeos é enorme. Não tenho tempo de assistir, a solução foi automatizar: mando o link de um vídeo pelo WhatsApp para o [Hermes](https://github.com/NousResearch/hermes-agent) e ele devolve o artigo pronto, traduzido e organizado em seções.
 
 A ideia é consumir o conteúdo pelo celular, então o formato importa. Cada artigo é um post limpo, dividido em seções com índice clicável, progresso salvo e retomada automática. As cores seguem a paleta sépia de e-readers como o Kindle — conforto para leitura longa, sem cansar a vista.
-
-No fim, este projeto resolve um problema pessoal: consumir mais conteúdo em menos tempo, no formato que funciona melhor pra mim.
 
 ---
 
