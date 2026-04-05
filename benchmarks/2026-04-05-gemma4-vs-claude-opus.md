@@ -60,6 +60,14 @@
 
 ## Evidências de hardware
 
+### Tentativa com Gemma 4 26B-A4B (OOM)
+
+A primeira tentativa com o modelo `gemma-4-26b-a4b-it-4bit` (~15GB) carregou em 28s mas falhou com OOM no Metal GPU ao iniciar a inferência. O warning do mlx confirma: modelo requer 14.885 MB, máximo recomendado 12.124 MB.
+
+![Terminal — Gemma 4 26B-A4B OOM no M1 Pro 16GB](assets/terminal-gemma4-26b-oom.png)
+
+### Gemma 4 E4B 8bit (no limite)
+
 O Gemma 4 E4B 8bit operou no limite absoluto do hardware durante a inferência:
 
 ![Memory Pressure — Mac M1 Pro 16GB durante inferência do Gemma 4 E4B](assets/memory-pressure-gemma4-e4b.png)
