@@ -14,8 +14,8 @@ import re
 import sys
 import time
 
-DEFAULT_MODEL = "mlx-community/gemma-3-12b-it-4bit"
-FALLBACK_MODEL = "mlx-community/gemma-3-4b-it-4bit"
+DEFAULT_MODEL = "mlx-community/gemma-4-e4b-it-8bit"
+FALLBACK_MODEL = "mlx-community/gemma-4-e4b-it-4bit"
 SEPARATOR = "=" * 80
 
 SYSTEM_PROMPT = """\
@@ -111,26 +111,33 @@ def load_model(model_id):
     except Exception:
         pass
 
+    # Try mlx-vlm first (supports Gemma 4), fallback to mlx-lm
     try:
-        from mlx_lm import load
-        print(f"Carregando modelo: {model_id}", file=sys.stderr)
+        from mlx_vlm import load
+        print(f"Carregando modelo (mlx-vlm): {model_id}", file=sys.stderr)
         t0 = time.time()
-        model, tokenizer = load(model_id)
+        model, processor = load(model_id)
         print(f"Modelo carregado em {time.time() - t0:.1f}s", file=sys.stderr)
-        return model, tokenizer
-    except Exception as e:
-        if 'memory' in str(e).lower() or 'oom' in str(e).lower() or 'alloc' in str(e).lower():
-            print(f"\nERRO: Memória insuficiente para {model_id}.", file=sys.stderr)
-            print(f"Tente com modelo menor: --model {FALLBACK_MODEL}", file=sys.stderr)
-            sys.exit(1)
-        raise
+        return model, processor, "vlm"
+    except Exception as e_vlm:
+        try:
+            from mlx_lm import load
+            print(f"Carregando modelo (mlx-lm): {model_id}", file=sys.stderr)
+            t0 = time.time()
+            model, tokenizer = load(model_id)
+            print(f"Modelo carregado em {time.time() - t0:.1f}s", file=sys.stderr)
+            return model, tokenizer, "lm"
+        except Exception as e_lm:
+            for e in [e_vlm, e_lm]:
+                if any(k in str(e).lower() for k in ['memory', 'oom', 'alloc']):
+                    print(f"\nERRO: Memória insuficiente para {model_id}.", file=sys.stderr)
+                    print(f"Tente com modelo menor: --model {FALLBACK_MODEL}", file=sys.stderr)
+                    sys.exit(1)
+            raise e_lm
 
 
-def generate_translation(model, tokenizer, transcript, strict=False):
+def generate_translation(model, processor, backend, transcript, strict=False):
     """Generate translation using the local model."""
-    from mlx_lm import generate
-    from mlx_lm.sample_utils import make_sampler
-
     prompt = SYSTEM_PROMPT
     if strict:
         prompt += STRICT_SUFFIX
@@ -141,26 +148,42 @@ def generate_translation(model, tokenizer, transcript, strict=False):
     ]
 
     # Apply chat template
-    if hasattr(tokenizer, 'apply_chat_template'):
-        formatted = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    if hasattr(processor, 'apply_chat_template'):
+        formatted = processor.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     else:
         formatted = f"{prompt}\n\nTRANSCRIÇÃO:\n{transcript}"
 
     print("Gerando tradução...", file=sys.stderr)
     t0 = time.time()
 
-    result = generate(
-        model,
-        tokenizer,
-        prompt=formatted,
-        max_tokens=8192,
-        sampler=make_sampler(temp=0.3, top_p=0.9),
-        verbose=False,
-    )
+    if backend == "vlm":
+        from mlx_vlm import generate
+        result = generate(
+            model,
+            processor,
+            prompt=formatted,
+            max_tokens=8192,
+            temperature=0.3,
+            repetition_penalty=1.1,
+            verbose=False,
+        )
+        # mlx-vlm returns GenerationResult object
+        text = result.text if hasattr(result, 'text') else str(result)
+    else:
+        from mlx_lm import generate
+        from mlx_lm.sample_utils import make_sampler
+        text = generate(
+            model,
+            processor,
+            prompt=formatted,
+            max_tokens=8192,
+            sampler=make_sampler(temp=0.3, top_p=0.9),
+            verbose=False,
+        )
 
     elapsed = time.time() - t0
-    print(f"Geração concluída em {elapsed:.1f}s ({len(result.split())} palavras)", file=sys.stderr)
-    return result
+    print(f"Geração concluída em {elapsed:.1f}s ({len(text.split())} palavras)", file=sys.stderr)
+    return text
 
 
 def main():
@@ -180,7 +203,7 @@ def main():
     print(f"Transcrição: {word_count} palavras", file=sys.stderr)
 
     # Load model
-    model, tokenizer = load_model(args.model)
+    model, processor, backend = load_model(args.model)
 
     # Split into chunks if needed
     chunks = split_chunks(transcript, max_words=args.max_words_per_chunk)
@@ -193,12 +216,12 @@ def main():
         if len(chunks) > 1:
             print(f"\n--- Chunk {i + 1}/{len(chunks)} ---", file=sys.stderr)
 
-        result = generate_translation(model, tokenizer, chunk)
+        result = generate_translation(model, processor, backend, chunk)
 
         # Validate and retry once with stricter prompt if needed
         if not validate_output(result):
             print("Output sem formato correto, retentando com prompt mais restritivo...", file=sys.stderr)
-            result = generate_translation(model, tokenizer, chunk, strict=True)
+            result = generate_translation(model, processor, backend, chunk, strict=True)
             if not validate_output(result):
                 print("AVISO: output pode não estar no formato esperado pelo build_html.py", file=sys.stderr)
 
