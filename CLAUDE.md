@@ -45,7 +45,7 @@ python3 -m http.server 8899 --bind 0.0.0.0
 
 ## Adicionar novo artigo
 
-### Pipeline completo (um comando)
+### Pipeline (default — Claude traduz)
 
 ```bash
 python3 scripts/pipeline.py \
@@ -55,7 +55,22 @@ python3 scripts/pipeline.py \
   --slug 'slug-do-titulo'
 ```
 
-O pipeline faz: captura transcrição → traduz via Gemma 4 local → gera HTML.
+O pipeline captura a transcrição, aguarda a tradução via Claude/Hermes, e gera o HTML.
+O Claude lê `/tmp/transcript_VIDEO_ID.txt` e salva a tradução em `/tmp/VIDEO_ID_pt.txt`.
+
+### Pipeline (local — modelo open source)
+
+```bash
+python3 scripts/pipeline.py \
+  'https://youtu.be/VIDEO_ID' \
+  --title 'Título do Artigo' \
+  --subtitle 'Fonte / Canal' \
+  --slug 'slug-do-titulo' \
+  --local
+```
+
+Com `--local`, a tradução é feita por um LLM local via mlx-vlm (default: Gemma 4 E4B 8bit).
+Para usar outro modelo: `--local --model mlx-community/outro-modelo`.
 
 ### Ou passo a passo
 
@@ -67,23 +82,17 @@ python3 scripts/fetch_transcript.py \
   2>/dev/null > /tmp/transcript_VIDEO_ID.txt
 ```
 
-#### 2. Traduzir localmente (Gemma 4)
+#### 2. Traduzir
 
-```bash
-python3 scripts/translate_local.py \
-  /tmp/transcript_VIDEO_ID.txt \
-  /tmp/VIDEO_ID_pt.txt
-```
+**Via Claude (default):** Pedir ao Claude para ler `/tmp/transcript_VIDEO_ID.txt` e produzir um `.txt` com:
+- Português brasileiro natural
+- Seções no formato abaixo
+- Sem timestamps, sem [music], sem propagandas, sem filler words
+- Salvar em `/tmp/VIDEO_ID_pt.txt`
 
-Para usar modelo menor (se memória for insuficiente):
-```bash
-python3 scripts/translate_local.py \
-  /tmp/transcript_VIDEO_ID.txt \
-  /tmp/VIDEO_ID_pt.txt \
-  --model mlx-community/gemma-3-12b-it-4bit
-```
+**Via modelo local:** `python3 scripts/translate_local.py /tmp/transcript_VIDEO_ID.txt /tmp/VIDEO_ID_pt.txt`
 
-O output é um `.txt` com seções no formato:
+O output (de ambos) é um `.txt` com seções no formato:
 ```
 ================================================================================
 NOME DA SEÇÃO EM MAIÚSCULO
@@ -122,9 +131,9 @@ git commit -m 'feat: adiciona artigo — Título do Vídeo'
 
 | Script | Uso |
 |--------|-----|
-| `scripts/pipeline.py` | Orquestrador: URL → HTML num comando só (usa os 3 scripts abaixo) |
+| `scripts/pipeline.py` | Orquestrador: URL → HTML. Default: Claude traduz. `--local`: LLM local traduz |
 | `scripts/fetch_transcript.py` | Captura transcrição de qualquer URL do YouTube via `youtube-transcript-api` |
-| `scripts/translate_local.py` | Traduz transcrição para PT-BR via Gemma 4 local (`mlx-lm`) |
+| `scripts/translate_local.py` | Traduz transcrição para PT-BR via LLM local (`mlx-vlm`). Usado com `--local` |
 | `scripts/build_html.py` | Gera HTML referenciando `../css/style.css` e `../js/reader.js` |
 
 ## Arquivos compartilhados
@@ -140,14 +149,15 @@ Index usa `<body class="page-index">`.
 ### Setup (uma vez)
 
 ```bash
-pip3 install -r requirements.txt
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
-Isso instala: `mlx`, `mlx-lm` (Gemma 4 local) e `youtube-transcript-api`.
+Isso instala: `mlx`, `mlx-lm`, `mlx-vlm` e `youtube-transcript-api`.
 
-O modelo (~13GB) é baixado automaticamente na primeira execução do `translate_local.py`.
-Modelo default: `mlx-community/gemma-3-27b-it-qat-4bit` (Gemma 4 26B Q4).
-Fallback para 16GB RAM: `mlx-community/gemma-3-12b-it-4bit` (~7GB).
+Para usar `--local`, o modelo é baixado automaticamente na primeira execução.
+Default local: `mlx-community/gemma-4-e4b-it-8bit` (~8GB, M1 Pro 16GB no limite).
+Ver `benchmarks/` para comparativo de qualidade entre modelos.
 
 ## Design System
 

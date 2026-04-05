@@ -2,11 +2,22 @@
 """
 Full pipeline: YouTube URL → translated PT-BR HTML article.
 
+Default: Claude (via Hermes) handles translation.
+With --local: uses local LLM (Gemma 4) for translation.
+
 Usage:
+    # Default (Claude traduz)
     python3 scripts/pipeline.py 'https://youtu.be/VIDEO_ID' \
-      --title 'Título do Artigo' \
-      --subtitle 'Fonte / Canal' \
-      --slug 'slug-do-titulo'
+      --title 'Título' --subtitle 'Fonte' --slug 'slug-do-titulo'
+
+    # Local (Gemma 4 traduz)
+    python3 scripts/pipeline.py 'https://youtu.be/VIDEO_ID' \
+      --title 'Título' --subtitle 'Fonte' --slug 'slug-do-titulo' --local
+
+    # Local com modelo específico
+    python3 scripts/pipeline.py 'https://youtu.be/VIDEO_ID' \
+      --title 'Título' --subtitle 'Fonte' --slug 'slug-do-titulo' \
+      --local --model mlx-community/gemma-4-e4b-it-4bit
 """
 
 import argparse
@@ -62,7 +73,10 @@ def main():
     parser.add_argument("--title", "-t", required=True, help="Article title")
     parser.add_argument("--subtitle", "-s", required=True, help="Subtitle (source/author)")
     parser.add_argument("--slug", required=True, help="URL slug for the HTML file (e.g. 'meu-artigo')")
-    parser.add_argument("--model", "-m", default=None, help="MLX model ID (overrides translate_local.py default)")
+    parser.add_argument("--local", action="store_true",
+                        help="Use local LLM (Gemma 4) instead of Claude for translation")
+    parser.add_argument("--model", "-m", default=None,
+                        help="MLX model ID for --local mode (overrides translate_local.py default)")
     args = parser.parse_args()
 
     video_id = extract_video_id(args.url)
@@ -70,11 +84,13 @@ def main():
     translated_path = f"/tmp/{video_id}_pt.txt"
     html_path = os.path.join(PROJECT_DIR, "leituras", f"{args.slug}.html")
 
+    engine = "local (LLM)" if args.local else "Claude (default)"
     total_t0 = time.time()
     print(f"Pipeline: {args.url}")
     print(f"  Video ID:  {video_id}")
     print(f"  Título:    {args.title}")
     print(f"  Slug:      {args.slug}")
+    print(f"  Engine:    {engine}")
     print(f"  Output:    {html_path}")
 
     # Step 1: Fetch transcript
@@ -95,15 +111,45 @@ def main():
     print(f"  Salvo em {transcript_path} ({len(fetch_result.stdout.split())} palavras)")
     print(f"  Concluído em {time.time() - t0:.1f}s")
 
-    # Step 2: Translate locally via Gemma
-    translate_cmd = [
-        sys.executable, os.path.join(SCRIPTS_DIR, "translate_local.py"),
-        transcript_path, translated_path,
-    ]
-    if args.model:
-        translate_cmd.extend(["--model", args.model])
+    # Step 2: Translate
+    if args.local:
+        # Local LLM translation
+        translate_cmd = [
+            sys.executable, os.path.join(SCRIPTS_DIR, "translate_local.py"),
+            transcript_path, translated_path,
+        ]
+        if args.model:
+            translate_cmd.extend(["--model", args.model])
+        run_step("2/3  Traduzindo via modelo local", translate_cmd, timeout=600)
+    else:
+        # Claude translation — pause for user/Hermes to translate
+        print(f"\n{'=' * 60}")
+        print(f"  2/3  Tradução via Claude")
+        print(f"{'=' * 60}")
+        print(f"  Transcrição salva em: {transcript_path}")
+        print(f"  Traduza com Claude e salve em: {translated_path}")
+        print()
+        print(f"  Formato esperado:")
+        print(f"  ========================================")
+        print(f"  NOME DA SEÇÃO EM MAIÚSCULO")
+        print()
+        print(f"  Parágrafo do conteúdo...")
+        print(f"  ========================================")
+        print()
 
-    run_step("2/3  Traduzindo via modelo local", translate_cmd, timeout=600)
+        # Check if translated file already exists
+        if os.path.exists(translated_path):
+            print(f"  Arquivo {translated_path} já existe, usando existente.")
+        else:
+            print(f"  Aguardando {translated_path}...")
+            print(f"  (Ctrl+C para cancelar)")
+            try:
+                while not os.path.exists(translated_path):
+                    time.sleep(2)
+            except KeyboardInterrupt:
+                print("\nCancelado.")
+                sys.exit(0)
+            print(f"  Arquivo detectado!")
 
     # Step 3: Build HTML
     run_step(
@@ -115,7 +161,8 @@ def main():
     total_elapsed = time.time() - total_t0
     print(f"\n{'=' * 60}")
     print(f"  Pipeline concluído em {total_elapsed:.1f}s")
-    print(f"  HTML: {html_path}")
+    print(f"  Engine:  {engine}")
+    print(f"  HTML:    {html_path}")
     print(f"{'=' * 60}")
     print(f"\nPróximos passos:")
     print(f"  1. Adicionar card no index.html")
