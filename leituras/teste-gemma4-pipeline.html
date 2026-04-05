@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>De IDEs para Agentes de IA</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="page-article" data-storage-key="reading_aFsAOu2bgFk_">
+<div class="progress" id="progress"></div>
+<div class="reading-pct" id="readingPct"></div>
+<div class="container">
+  <a href="../index.html" class="back-home">← Voltar ao índice</a>
+  <header>
+    <h1>De IDEs para Agentes de IA</h1>
+    <p class="meta">Steve Yegge — Sourcegraph Podcast (Gemma 4 E4B)</p>
+    <p class="meta"><a href="https://youtu.be/aFsAOu2bgFk" target="_blank">🎥 Assistir no YouTube</a></p>
+  </header>
+  <div class="theme-bar">
+    <button class="theme-btn active" onclick="setTheme('light')">☀️ Sépia</button>
+    <button class="theme-btn" onclick="setTheme('cool')">🌤️ Claro</button>
+    <button class="theme-btn" onclick="setTheme('dark')">🌙 Escuro</button>
+  </div>
+  <nav>
+    <h3>📑 Índice</h3>
+    <ol>
+<li><a href="#s1">OSITO DA ADOÇÃO DE IA PARA ENGENHEIROS</a></li>
+<li><a href="#s2">OS NÍVEIS DE ADOÇÃO E A ARQUITETURA DOS AGENTES</a></li>
+<li><a href="#s3">GAS TOWN: UM ORQUESTRADOR DE AGENTES</a></li>
+<li><a href="#s4">MITOS E CASOS DE USO PRÁTICOS DO GASTOWN</a></li>
+<li><a href="#s5">INOVAÇÃO, PLATAFORMAS E O FUTURO DO CÓDIGO</a></li>
+<li><a href="#s6">DESAFIOS TÉCNICOS E O CONCEITO DE "HERESIA"</a></li>
+<li><a href="#s7">SUPERANDO A RESISTÊNCIA À MUDANÇA</a></li>
+<li><a href="#s8">PREDIÇÕES E O FUTURO DA CRIAÇÃO</a></li>
+<li><a href="#s9">REDEFININDO O PAPEL DO ENGENHEIRO</a></li>
+    </ol>
+  </nav>
+<h2 id="s1">OSITO DA ADOÇÃO DE IA PARA ENGENHEIROS</h2>
+<p>Steve Yagi, engenheiro de software com 40 anos de experiência em empresas como Amazon e Google, descreveu oito níveis de adoção de Inteligência Artificial para engenheiros. Esses níveis vão desde a ausência total de IA até a execução de múltiplos agentes em paralelo.</p>
+<p>Ele observou que 70% dos engenheiros ainda estão presos nos níveis mais baixos. Além disso, Yagi alertou para um &ldquo;efeito vampiro&rdquo; da IA: embora a produtividade possa aumentar cem vezes, os desenvolvedores acabam trabalhando apenas três horas de qualidade por dia.</p>
+<p>A EVOLUÇÃO DO CONHECIMENTO EM ENGENHARIA DE SOFTWARE</p>
+<p>Yagi compartilhou como as exigências da engenharia de software mudaram drasticamente ao longo das décadas. Antigamente, era necessário dominar linguagens de montagem e manipulação de bits. No entanto, ele percebeu que essas habilidades se tornaram menos relevantes à medida que os compiladores melhoraram ou quando o foco mudou para camadas de abstração mais altas.</p>
+<p>Ele citou a indústria gráfica como um exemplo dessa mudança exponencial, comparando o aprendizado em 1992 — onde era preciso codificar algoritmos para determinar a posição de cada pixel — com o cenário atual, onde se trabalha com motores de jogos e física.</p>
+<p>Ele concluiu que a indústria passa por saltos maciços de maturidade, desde pixels brutos até sistemas em nuvem.</p>
+<p>O ESTADO ATUAL DA INOVAÇÃO E O IMPACTO DAS GRANDE EMPRESAS</p>
+<p>Yagi tem a visão de que a inovação em grandes corporações pode ter estagnado. Ele acredita que equipes pequenas, compostas por 2 a 20 pessoas, podem rivalizar com a produção das grandes empresas.</p>
+<p>Ele também fez uma previsão sombria sobre o futuro do mercado de trabalho: a IA está forçando as grandes empresas a fazer cortes drásticos. Ele argumenta que, para maximizar a produtividade dos engenheiros restantes com o auxílio da IA, muitas empresas terão que reduzir drasticamente seu quadro de funcionários.</p>
+<p>Ele observou que a tendência é que as empresas se tornem menores e mais ágeis, seguindo o exemplo de outras gigantes da tecnologia.</p>
+<p>A CURVA EXPONENCIAL DA IA E O FUTURO DO CÓDIGO</p>
+<p>Yagi descreveu a adoção da IA como uma curva exponencial. Ele notou que, enquanto muitos esperavam um platô após o lançamento do GPT-3.5, os modelos subsequentes (como 4o) demonstraram um avanço contínuo e acelerado.</p>
+<p>Ele ressaltou que a velocidade de lançamento dos modelos está aumentando; o tempo entre as atualizações caiu de cerca de quatro meses para dois meses.</p>
+<p>Ele fez uma previsão ousada: &ldquo;Até o final deste ano, a maioria das pessoas estará programando conversando com um rosto.&rdquo; Ou seja, uma interface visual onde o agente de IA atua como um &ldquo;maior&rdquo; conversando com o desenvolvedor.</p>
+<p>Ele enfatizou que a IA não é uma função de substituição, mas sim de &ldquo;aumento&rdquo; (augmentation), destinada a tornar o profissional melhor em seu trabalho.</p>
+<h2 id="s2">OS NÍVEIS DE ADOÇÃO E A ARQUITETURA DOS AGENTES</h2>
+<p>Para ilustrar o processo de adoção, Yagi apresentou seu espectro de oito níveis:</p>
+<p>*   **Nível 1:** Sem IA.</p>
+<p>*   **Nível 2:** Perguntas de sim ou não (&ldquo;Posso fazer isso no meu IDE?&rdquo;).</p>
+<p>*   **Nível 3:** A abordagem &ldquo;YOLO&rdquo; (faça o que for).</p>
+<p>*   **Nível 4:** Começar a extrair código do agente, focando mais na conversa do que nas diferenças de código (diffs).</p>
+<p>*   **Nível 5:** Desejar apenas o resultado do agente e revisar o código no IDE depois, sem codar diretamente com ele.</p>
+<p>*   **Nível 6:** Ficar entediado porque o agente está ocupado, levando a iniciar outro agente e se tornar viciado no ciclo de espera.</p>
+<p>*   **Nível 7:** O caos, onde múltiplos agentes entram em conflito e é necessário coordená-los.</p>
+<p>Ele detalhou que o conceito de &ldquo;orchestrator&rdquo; (orquestrador) surge quando se coloca agentes em um loop, ou seja, &ldquo;agentes rodando agentes&rdquo;.</p>
+<h2 id="s3">GAS TOWN: UM ORQUESTRADOR DE AGENTES</h2>
+<p>Gas Town é um orquestrador de agentes, que representa a evolução do conceito de &ldquo;completions&rdquo; (preenchimento automático) para &ldquo;agents in a loop&rdquo;.</p>
+<p>Yagi descreveu que o sistema funciona com um &ldquo;maior&rdquo; (mayor) principal, com quem se interage, e este dispara diversos &ldquo;trabalhadores&rdquo; (workers) para executar tarefas.</p>
+<p>Ele diferenciou dois fluxos de trabalho fundamentais:</p>
+<p>1.  **Small Concept (Tarefa Pequena):** Para tarefas bem especificadas e divididas em subtarefas, o trabalhador executa de forma autônoma.</p>
+<p>2.  **Crew (Design Difícil):** Para problemas complexos, é necessário um ciclo de conversação para maximizar o contexto.</p>
+<p>Ele observou que Gas Town, em sua forma atual, é um experimento complexo e que a tendência natural é simplificar-se para papéis minimax (tarefas pequenas e tarefas de contexto máximo).</p>
+<p>A NECESSIDADE DE EXPERIMENTAR E O RISCO DA INCOMPREENSÃO</p>
+<p>Yagi alertou que o maior problema é a relutância em experimentar. Ele comparou usar uma ferramenta de IA sem saber como ela funciona a tentar &ldquo;digar com uma pá&rdquo; em vez de usar o instrumento corretamente.</p>
+<p>Ele fez um comentário contundente sobre a capacidade de leitura, sugerindo que muitos desenvolvedores não conseguem processar grandes volumes de texto gerado pela IA. Por isso, ele previu a necessidade de &ldquo;resumo recursivo&rdquo; e interfaces visuais para facilitar o consumo desse conteúdo.</p>
+<p>Ele reforçou que a métrica mais importante em uma empresa hoje é o &ldquo;token burn&rdquo; (consumo de tokens), pois ele indica se os engenheiros ou não-engenheiros estão tentando aprender e resolver gargalos.</p>
+<p>A TRANSIÇÃO DE FERRAMENTAS: IDE VS. CO-WORK</p>
+<p>Sobre o futuro do ambiente de desenvolvimento, Yagi discutiu a tensão entre o IDE tradicional e os modelos de &ldquo;cloud co-work&rdquo; (colaboração em nuvem).</p>
+<p>Ele argumentou que o IDE não deve ser visto como obsoleto, mas sim que a função da IA é trazer ferramentas juntas para criar um &ldquo;grande instrumento&rdquo;. Ele acredita que o formato de *cloud co-work* pode ser mais adequado para o desenvolvedor médio do que o modelo puramente baseado em linha de comando.</p>
+<p>Ele sugeriu que, enquanto a IA está evoluindo, os desenvolvedores devem experimentar ativamente diferentes ferramentas e abordagens.</p>
+<p>A EVOLUÇÃO DA ORQUESTRAÇÃO E OS LIMITES DOS MODELOS DE IA</p>
+<p>O GasTown foi concebido como um experimento deliberadamente complexo, projetado para testar os limites dos modelos de IA. O objetivo era forçar o sistema a operar em um nível que ultrapassava as capacidades atuais, mesmo de modelos avançados como o Opus 4.5.</p>
+<p>Essa complexidade revelou que os modelos não foram treinados para atuar como &ldquo;trabalhadores de fábrica&rdquo;. Consequentemente, grande parte da complexidade e dos papéis de monitoramento do GasTown tenderão a desaparecer. A tendência natural é que o sistema se simplifique e se torne mais plano, convergindo para papéis de minimax: uma equipe para maximizar e &ldquo;polecats&rdquo; (ou agentes menores) para minimizar.</p>
+<p>O GasTown oferece uma experiência de interação muito mais &ldquo;mão na massa&rdquo; em comparação com agentes subjacentes. Enquanto os subagentes podem ser opacos — onde você delega uma tarefa e só é notificado ao final —, no GasTown, o usuário pode inspecionar ativamente os agentes e intervir (&ldquo;dar um toque&rdquo;) se notar que algo não está funcionando corretamente.</p>
+<p>O IMPACTO DA IA NO MERCADO E A MUDANÇA DE CONVERSAÇÃO</p>
+<p>Ao lançar o GasTown, a intenção era mover a &ldquo;janela de Overton&rdquo; do debate sobre IA. Anteriormente, quando se falava em orquestração ou enxames de agentes, a reação era de ceticismo (&ldquo;agentes não existem&rdquo;, &ldquo;não há enxames&rdquo;). Agora, a conversa mudou drasticamente do reino da impossibilidade para o da possibilidade.</p>
+<p>O experimento foi uma forma de estressar os modelos e descobrir &ldquo;o que vem a seguir&rdquo;. Os próximos passos incluem encadear 100 instâncias do GasTown, utilizando plataformas como Moltbook para que a comunidade possa contribuir com tokens de inferência. Isso visa aprender sobre mecânicas de federação, algo comparável aos passos do Ethereum.</p>
+<h2 id="s4">MITOS E CASOS DE USO PRÁTICOS DO GASTOWN</h2>
+<p>É crucial entender que o GasTown é, atualmente, um conceito de prova de conceito e não deve ser usado em produção.</p>
+<p>No entanto, alguns profissionais têm identificado nichos onde o GasTown poderia ser aplicado em grandes corporações. Um exemplo citado é a automação de processos complexos, como configurar data centers sob medida em diferentes regiões — algo que envolve inúmeros cliques manuais e critérios de aceitação claros. O GasTown poderia orquestrar esse processo, convergindo para um data center funcional e economizando o esforço humano.</p>
+<p>Outra área de interesse é a análise de incidentes de produção. Em sistemas que já estão em um estado &ldquo;indeterminado e quebrado&rdquo; quando caem, a IA poderia acelerar o modo de investigação. Há também classes de problemas emergentes onde não se exige um resultado perfeito, mas sim o trabalho cumulativo dos agentes.</p>
+<p>O DESAFIO DA ESCALABILIDADE E O MODELO MONOLÍTICO</p>
+<p>No que diz respeito à geração de código, o teto do que a IA pode construir produtivamente está aumentando. Atualmente, estima-se um volume entre meio milhão e cinco milhões de linhas de código em projetos como o GasTown. Com os próximos modelos, esse número pode saltar para alguns milhões de linhas.</p>
+<p>Contudo, o desafio reside na arquitetura corporativa. Se uma empresa opera como um monólito — um sistema grande e único com microsserviços —, ela está em desvantagem. Embora o teto de capacidade da IA esteja subindo, ele nunca conseguirá se encaixar no contexto de um monólito inteiro. Para aproveitar a IA ou reescrever o *stack* do zero, é necessário quebrar esses monólitos.</p>
+<p>O EFEITO VAMPÍRICO DA IA E A NECESSIDADE DE RENEGOCIAÇÃO</p>
+<p>A produtividade extrema impulsionada pela IA gera um &ldquo;efeito vampírico&rdquo;. A empolgação leva a jornadas de trabalho intensas, onde tanto os desenvolvedores quanto as startups relatam exaustão e irritabilidade.</p>
+<p>Historicamente, empresas operam sob a premissa de que darão mais trabalho até que o funcionário &ldquo;quebre&rdquo;. Com a IA, onde um engenheiro pode ser 100 vezes mais produtivo, surge uma questão de justiça: quem captura esse valor? Se a empresa absorve toda essa produtividade sem compensação adequada, isso não é um &ldquo;acordo justo de troca&rdquo;.</p>
+<p>É imperativo que os profissionais aprendam a dizer &ldquo;não&rdquo; e a começar a capturar o valor gerado por essa hiperprodutividade. O novo equilíbrio entre vida pessoal e trabalho é definir quanto desse valor será retido pelo indivíduo versus o que será cedido ao empregador.</p>
+<h2 id="s5">INOVAÇÃO, PLATAFORMAS E O FUTURO DO CÓDIGO</h2>
+<p>A inovação em grandes corporações pode estar estagnada. O dilema do inovador sugere que, quando uma nova tecnologia habilitadora surge (como a IA), a inovação floresce nas &ldquo;franjas&rdquo; — em empresas menores e ágeis. Grandes corporações podem ter engenheiros hiperprodutivos, mas não conseguem absorver esse trabalho devido a gargalos internos.</p>
+<p>No cenário de software, o modelo tradicional de &ldquo;protótipo descartável&rdquo; está mudando. Com a IA, é possível criar um número infinito de protótipos rapidamente. O foco passa a ser iterar até encontrar o melhor, em vez de descartar e recomeçar.</p>
+<p>No ecossistema de software, há uma tendência crescente ao &ldquo;remixing&rdquo; em vez do *fork* tradicional. Projetos de código aberto estão sendo adaptados e modificados por meio de comandos de IA, tornando o ato de criar derivativos muito mais acessível.</p>
+<h2 id="s6">DESAFIOS TÉCNICOS E O CONCEITO DE "HERESIA"</h2>
+<p>Ao trabalhar com agentes, surgem problemas sutis e difíceis de detectar. Um conceito chamado &ldquo;heresia&rdquo; descreve uma ideia incorreta que se enraíza no código dos agentes. Essa heresia, muitas vezes invisível, causa falhas nos limites do sistema (por exemplo, um agente escolhendo aleatoriamente entre dois bancos de dados operacionais).</p>
+<p>Para combater isso, é necessário documentar explicitamente essas falhas no *prompt* inicial, instruindo os agentes sobre o que não fazer. Outro problema é a tendência dos agentes de assumirem papéis de mantenedores, tentando fazer *pull requests* (PRs) sem a devida contribuição de um humano.</p>
+<p>A LIÇÃO AMARGA E O CAMINHO PARA A INTELIGÊNCIA</p>
+<p>Richard Sutton definiu a &ldquo;lição amarga&rdquo;: não tente ser mais inteligente que a IA. O que se descobriu é que &ldquo;maior é sempre mais&rdquo;.</p>
+<p>A inteligência dos modelos está sendo impulsionada pelo aumento massivo de dados e pela escala dos centros de treinamento. Essa tendência sugere que haverá pelo menos mais dois ciclos de avanço, levando a modelos exponencialmente mais inteligentes e à submissão de todo o trabalho de conhecimento.</p>
+<p>O FUTURO DO SOFTWARE PESSOAL E O PAPEL HUMANO</p>
+<p>Com a democratização da capacidade de construir software, o futuro aponta para que todos possam ter suas próprias ferramentas rodando localmente ou através de agentes.</p>
+<p>Em relação ao papel do engenheiro, a analogia é que trabalhar com 80 agentes não difere muito de trabalhar com uma equipe de 80 engenheiros: qualquer um pode errar. A lição amarga, portanto, é &ldquo;não tente ser inteligente, apenas tente ser grande&rdquo;.</p>
+<p>A DEMOCRATIZAÇÃO DO SOFTWARE E O FUTURO DA INDÚSTRIA</p>
+<p>O futuro aponta para um cenário onde qualquer pessoa poderá construir seu próprio software, seja para uso pessoal ou empresarial. A ideia é que os usuários não precisarão rodar tudo em seus próprios dispositivos, mas poderão recorrer a agentes inteligentes para realizar as tarefas.</p>
+<p>Essa democratização promete transformar tanto o software pessoal quanto a indústria de software como um todo. Historicamente, o desenvolvimento de software era privilégio dos engenheiros que construíam suas próprias ferramentas. Embora o código aberto e as empresas bilionárias tenham surgido disso, a nova realidade sugere uma mudança profunda.</p>
+<p>A EVOLUÇÃO DO CÓDIGO ABERTO E O &ldquo;FORK&rdquo;</p>
+<p>Observa-se um fenômeno de &ldquo;remixing&rdquo; crescente no código aberto. Em vez de dependerem estritamente de solicitações de contribuição, muitos projetos estão sendo reeditados por usuários que utilizam a IA para implementar mudanças e republicar o resultado como código aberto.</p>
+<p>O conceito de &ldquo;fork&rdquo; está se tornando algo cotidiano, diferentemente do passado, onde um fork era visto quase como uma &ldquo;declaração de guerra&rdquo; contra o projeto original. Hoje, com a redução do esforço e tempo necessários para manter um fork, essa prática se tornará uma consequência natural de todos estarem escrevendo código.</p>
+<p>A MENTALIDADE DO ENGENHEIRO E O POTENCIAL DE SOFTWARE</p>
+<p>Uma crença fundamental é que a sede por novos softwares nunca diminuirá, apenas crescerá. O estado atual do software é considerado &ldquo;lixo&rdquo;, especialmente o OBS (Open-Source Software), e espera-se um novo mundo nos próximos dez anos onde o software será comum e de alta qualidade.</p>
+<p>As pessoas terão a liberdade de escolher entre soluções excelentes, em vez de se contentarem com opções ruins. O desejo por software personalizado e sob medida é grande, e esse desejo será atendido.</p>
+<p>Para quem desenvolve software que os agentes preferem, a oportunidade é enorme. À medida que todos se tornarão dependentes de agentes, aqueles que souberem como comercializar e fazer com que os agentes reconheçam seu trabalho terão um grande sucesso.</p>
+<p>O FUTURO DO TRABALHO: TRANSPARÊNCIA E PROVA DE TRABALHO</p>
+<p>No novo cenário, a transparência será crucial. Tudo o que se faz terá que ser totalmente transparente ou estará sendo escondido por um motivo. Se você quer que as pessoas vejam seu trabalho, deve exibi-lo instantaneamente; caso contrário, o momento passará.</p>
+<p>A inovação não virá apenas das grandes corporações; ela emergirá de indivíduos e startups pequenas. Essas empresas estão mudando sua abordagem: em vez de seguir a antiga sabedoria de &ldquo;construir algo incrível e depois lançar&rdquo;, elas buscam o *product-market fit* em segredo, lançam e depois ajustam.</p>
+<p>O conceito de propriedade intelectual está sendo ameaçado pela facilidade de clonar e fazer forks. O que servirá como &ldquo;fosso&rdquo; (moat) no futuro serão as conexões humanas. À medida que a automação avança, as pessoas desejarão intervenção humana para curar e realizar tarefas.</p>
+<p>O PAPEL DA IA E A EVOLUÇÃO DAS FERRAMENTAS</p>
+<p>A integração de agentes mudará drasticamente ferramentas como depuradores. Embora alguns agentes ainda usem métodos simples, há a possibilidade de que eles evoluam rapidamente para utilizar ferramentas mais sofisticadas.</p>
+<p>No que tange ao ambiente de trabalho do desenvolvedor, a tendência aponta para o uso de servidores e dispositivos móveis em vez de laptops tradicionais. O código em nuvem, apoiado por conexões de alta velocidade e agentes ilimitados (limitados apenas pelo orçamento), tornará o trabalho remoto mais viável.</p>
+<p>Quanto à linguagem de programação, embora existam linguagens que funcionam melhor devido aos seus dados de treinamento atuais, no futuro, todas as linguagens funcionarão igualmente bem. No entanto, para otimizações de eficiência, a busca por novas linguagens pode persistir.</p>
+<h2 id="s7">SUPERANDO A RESISTÊNCIA À MUDANÇA</h2>
+<p>A mudança é inerente à vida, assim como foi na evolução da indústria gráfica. Assim como os desenvolvedores tiveram que se adaptar de escrever drivers para construir mundos de jogos, a engenharia de software está passando por um salto de abstração ainda mais rápido.</p>
+<p>É natural sentir-se triste ou desorientado com essas mudanças, como se o mundo ficasse &ldquo;monocromático&rdquo;. No entanto, a chave é reconhecer que os agentes são ajudantes nesse processo. Em vez de lamentar, o conselho é &ldquo;sair e fazer&rdquo;.</p>
+<p>A produtividade aumentada pela IA levanta questões sobre a captura de valor. Se um engenheiro se torna 100 vezes mais produtivo, quem se beneficia? A sustentabilidade exige encontrar um novo equilíbrio entre o esforço e a recompensa.</p>
+<h2 id="s8">PREDIÇÕES E O FUTURO DA CRIAÇÃO</h2>
+<p>O futuro da programação será para todos. A capacidade de criar *mashups* sofisticados entre diferentes elementos é onde a inovação realmente acontece.</p>
+<p>Para quem deseja se destacar, o caminho é focar em agentes que entendam e naveguem no novo mundo de conteúdo. Assim como houve a necessidade de mecanismos de busca quando a web se popularizou, haverá uma demanda por agregadores e organizadores de conteúdo gerado por IA.</p>
+<p>A mensagem final é acreditar nas curvas tecnológicas: identificar um ponto na curva de avanço e mirar nele, garantindo que se estará à frente quando as IAs estiverem prontas para o trabalho.</p>
+<p>A VELOCIDADE DA EVOLUÇÃO TECNOLÓGICA</p>
+<p>Os engenheiros já estão prontos para utilizar as ferramentas de Inteligência Artificial (IA) e podem construí-las com grande eficiência no momento.</p>
+<p>Há uma percepção de que o setor está à frente do resto do mundo neste cenário atual, indicando um período de mudanças muito empolgantes.</p>
+<p>A PARALELO ENTRE GRÁFICOS E ENGENHARIA DE SOFTWARE</p>
+<p>Steve fez um paralelo entre o que está acontecendo na indústria gráfica e no desenvolvimento de software. Em 1992, ele estava aprendendo a calcular a posição de pixels individuais em uma linha. Dois anos depois, o mesmo curso já ensinava animação.</p>
+<p>O trabalho em gráficos evoluiu de escrever *device drivers* para construir mundos de jogos e motores de física, movendo-se progressivamente para camadas de abstração mais altas.</p>
+<p>Steve argumenta que a engenharia de software está passando exatamente por essa mesma transformação, mas em um ritmo muito mais acelerado.</p>
+<h2 id="s9">REDEFININDO O PAPEL DO ENGENHEIRO</h2>
+<p>Em vez de questionar se os engenheiros ainda terão empregos, uma pergunta mais pertinente seria: “Como serão os novos tipos de trabalho que faremos como engenheiros de software?”.</p>
+<p>Steve compartilhou a experiência pessoal do impacto dessa mudança. Ele dedicou 40 anos construindo sua identidade em torno de compiladores, *debuggers* e código elegante. Um dia, ao listar o que o tornava especial, percebeu que esses elementos não eram mais relevantes. Ele descreveu como seu mundo se tornou “monocromático”.</p>
+<p>No entanto, em cerca de uma semana, ele superou essa fase e percebeu que estava escrevendo dez vezes mais código e se divertindo mais com o processo. Ele acredita que muitos engenheiros estão passando por algo semelhante, embora esse processo de digestão possa levar mais tempo do que uma semana.</p>
+<p>O DESAFIO DA CAPTURA DE VALOR COM IA</p>
+<p>Steve levantou um ponto crucial sobre a captura de valor. Se você se tornar cem vezes mais produtivo com IA, quem se beneficia?</p>
+<p>Se um profissional trabalhar oito horas e produzir cem vezes mais resultado, a empresa captura todo esse ganho. Contudo, se o profissional trabalhar apenas dez minutos por dia e produzir o mesmo valor de antes, tecnicamente ele capturou tudo, e a empresa não capturou nada.</p>
+<p>Steve aponta que nenhum desses extremos é sustentável, e a nova equação de equilíbrio entre vida profissional e pessoal precisa ser definida. Ele ressalta que ainda não temos as normas culturais para lidar com essa situação, e o processo será complexo enquanto for estabelecido.</p>
+<p>A PRÓXIMA ETAPA</p>
+<p>É importante refletir sobre a transição do que “tem sido” para o que “pode ser”, um ponto considerado muito esclarecedor na conversa.</p>
+</div>
+<a href="#" class="back-top" id="backTop">↑</a>
+<div class="resume-banner" id="resumeBanner">
+  <span id="resumeText">📖 Continuar de onde parou</span>
+  <div>
+    <button onclick="resumeReading()">Continuar</button>
+    <button class="dismiss" onclick="dismissResume()">✕</button>
+  </div>
+</div>
+<script src="../js/reader.js"></script>
+</body>
+</html>
