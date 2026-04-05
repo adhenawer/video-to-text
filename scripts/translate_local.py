@@ -14,8 +14,8 @@ import re
 import sys
 import time
 
-DEFAULT_MODEL = "mlx-community/gemma-3-27b-it-qat-4bit"
-FALLBACK_MODEL = "mlx-community/gemma-3-12b-it-4bit"
+DEFAULT_MODEL = "mlx-community/gemma-3-12b-it-4bit"
+FALLBACK_MODEL = "mlx-community/gemma-3-4b-it-4bit"
 SEPARATOR = "=" * 80
 
 SYSTEM_PROMPT = """\
@@ -77,7 +77,9 @@ def split_chunks(text, max_words=8000, overlap=500):
                 end = start + len(chunk_text.split())
 
         chunks.append(chunk_text)
-        start = max(start + 1, end - overlap)
+        # Advance by chunk size minus overlap, minimum advance = max_words // 2
+        advance = max(max_words // 2, end - start - overlap)
+        start = start + advance
 
     return chunks
 
@@ -127,6 +129,7 @@ def load_model(model_id):
 def generate_translation(model, tokenizer, transcript, strict=False):
     """Generate translation using the local model."""
     from mlx_lm import generate
+    from mlx_lm.sample_utils import make_sampler
 
     prompt = SYSTEM_PROMPT
     if strict:
@@ -151,8 +154,7 @@ def generate_translation(model, tokenizer, transcript, strict=False):
         tokenizer,
         prompt=formatted,
         max_tokens=8192,
-        temp=0.3,
-        repetition_penalty=1.1,
+        sampler=make_sampler(temp=0.3, top_p=0.9),
         verbose=False,
     )
 
