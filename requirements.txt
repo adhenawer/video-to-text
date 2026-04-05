@@ -1,0 +1,3 @@
+mlx>=0.22
+mlx-lm>=0.22
+youtube-transcript-api>=1.0

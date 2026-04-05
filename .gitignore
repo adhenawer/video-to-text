@@ -1,2 +1,5 @@
 .DS_Store
 *.txt
+!requirements.txt
+__pycache__/
+*.pyc

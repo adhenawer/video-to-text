@@ -14,9 +14,12 @@ video-to-text/
 │   └── style.css               ← CSS centralizado (temas, index, artigos)
 ├── js/
 │   └── reader.js               ← JS compartilhado de leitura (tema, progresso, resume)
+├── requirements.txt            ← dependências Python (mlx, mlx-lm, youtube-transcript-api)
 ├── scripts/
 │   ├── fetch_transcript.py     ← captura transcrição do YouTube
-│   └── build_html.py           ← gera HTML referenciando css/ e js/
+│   ├── translate_local.py      ← traduz via Gemma 4 local (mlx-lm)
+│   ├── build_html.py           ← gera HTML referenciando css/ e js/
+│   └── pipeline.py             ← orquestrador: URL → HTML num comando só
 └── leituras/                   ← artigos individuais (usam ../css/style.css + ../js/reader.js)
     ├── chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html
     ├── estado-da-ia-2026-ponto-de-inflexao-simon-willison.html
@@ -42,7 +45,21 @@ python3 -m http.server 8899 --bind 0.0.0.0
 
 ## Adicionar novo artigo
 
-### 1. Capturar transcrição
+### Pipeline completo (um comando)
+
+```bash
+python3 scripts/pipeline.py \
+  'https://youtu.be/VIDEO_ID' \
+  --title 'Título do Artigo' \
+  --subtitle 'Fonte / Canal' \
+  --slug 'slug-do-titulo'
+```
+
+O pipeline faz: captura transcrição → traduz via Gemma 4 local → gera HTML.
+
+### Ou passo a passo
+
+#### 1. Capturar transcrição
 
 ```bash
 python3 scripts/fetch_transcript.py \
@@ -50,12 +67,23 @@ python3 scripts/fetch_transcript.py \
   2>/dev/null > /tmp/transcript_VIDEO_ID.txt
 ```
 
-### 2. Traduzir e organizar
+#### 2. Traduzir localmente (Gemma 4)
 
-Pedir ao Claude para ler `/tmp/transcript_VIDEO_ID.txt` e produzir um `.txt` com:
-- Português brasileiro natural
-- Seções no formato:
+```bash
+python3 scripts/translate_local.py \
+  /tmp/transcript_VIDEO_ID.txt \
+  /tmp/VIDEO_ID_pt.txt
+```
 
+Para usar modelo menor (se memória for insuficiente):
+```bash
+python3 scripts/translate_local.py \
+  /tmp/transcript_VIDEO_ID.txt \
+  /tmp/VIDEO_ID_pt.txt \
+  --model mlx-community/gemma-3-12b-it-4bit
+```
+
+O output é um `.txt` com seções no formato:
 ```
 ================================================================================
 NOME DA SEÇÃO EM MAIÚSCULO
@@ -63,10 +91,7 @@ NOME DA SEÇÃO EM MAIÚSCULO
 Parágrafo do conteúdo...
 ```
 
-- Sem timestamps, sem [music], sem propagandas, sem filler words
-- Salvar em `/tmp/VIDEO_ID_pt.txt`
-
-### 3. Gerar HTML com build_html.py
+#### 3. Gerar HTML
 
 ```bash
 python3 scripts/build_html.py \
@@ -97,7 +122,9 @@ git commit -m 'feat: adiciona artigo — Título do Vídeo'
 
 | Script | Uso |
 |--------|-----|
+| `scripts/pipeline.py` | Orquestrador: URL → HTML num comando só (usa os 3 scripts abaixo) |
 | `scripts/fetch_transcript.py` | Captura transcrição de qualquer URL do YouTube via `youtube-transcript-api` |
+| `scripts/translate_local.py` | Traduz transcrição para PT-BR via Gemma 4 local (`mlx-lm`) |
 | `scripts/build_html.py` | Gera HTML referenciando `../css/style.css` e `../js/reader.js` |
 
 ## Arquivos compartilhados
@@ -110,10 +137,17 @@ git commit -m 'feat: adiciona artigo — Título do Vídeo'
 Artigos usam `<body class="page-article" data-storage-key="reading_VIDEO_ID_">`.
 Index usa `<body class="page-index">`.
 
-Instalar dependência do fetch:
+### Setup (uma vez)
+
 ```bash
-pip install youtube-transcript-api
+pip3 install -r requirements.txt
 ```
+
+Isso instala: `mlx`, `mlx-lm` (Gemma 4 local) e `youtube-transcript-api`.
+
+O modelo (~13GB) é baixado automaticamente na primeira execução do `translate_local.py`.
+Modelo default: `mlx-community/gemma-3-27b-it-qat-4bit` (Gemma 4 26B Q4).
+Fallback para 16GB RAM: `mlx-community/gemma-3-12b-it-4bit` (~7GB).
 
 ## Design System
 
