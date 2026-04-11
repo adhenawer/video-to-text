@@ -67,6 +67,10 @@ def main():
                         help="Use local LLM (Gemma 4) instead of Claude for translation")
     parser.add_argument("--model", "-m", default=None,
                         help="MLX model ID for --local mode (overrides translate_local.py default)")
+    parser.add_argument("--slides", action="store_true",
+                        help="Extract presentation slides from video (Twitter/X)")
+    parser.add_argument("--scene-threshold", type=float, default=0.985,
+                        help="Similarity threshold for slide detection (default: 0.985)")
     args = parser.parse_args()
 
     # Detect provider from URL
@@ -81,6 +85,14 @@ def main():
     translated_path = f"/tmp/{video_id}_pt.txt"
     html_path = os.path.join(PROJECT_DIR, "leituras", f"{args.slug}.html")
 
+    # Slides setup
+    slides_dir = None
+    slides_json = None
+    if args.slides:
+        slides_dir = os.path.join(PROJECT_DIR, "img", args.slug)
+        os.makedirs(slides_dir, exist_ok=True)
+        slides_json = f"/tmp/{video_id}_slides.json"
+
     engine = "local (LLM)" if args.local else "Claude (default)"
     total_t0 = time.time()
     print(f"Pipeline: {args.url}")
@@ -89,6 +101,8 @@ def main():
     print(f"  Título:    {args.title}")
     print(f"  Slug:      {args.slug}")
     print(f"  Engine:    {engine}")
+    if args.slides:
+        print(f"  Slides:    {slides_dir}")
     print(f"  Output:    {html_path}")
 
     # Step 1: Fetch transcript via provider
@@ -97,7 +111,10 @@ def main():
     print(f"{'=' * 60}")
     t0 = time.time()
     try:
-        transcript_text = provider.fetch_transcript(args.url, timestamps=True)
+        fetch_kwargs = {"timestamps": True}
+        if args.slides:
+            fetch_kwargs.update(slides=True, slides_dir=slides_dir, slug=args.slug)
+        transcript_text = provider.fetch_transcript(args.url, **fetch_kwargs)
     except RuntimeError as e:
         print(f"ERRO ao capturar transcrição: {e}", file=sys.stderr)
         sys.exit(1)
@@ -149,6 +166,8 @@ def main():
         video_id, args.title, args.subtitle, args.url, translated_path, html_path,
         provider.link_text,
     ]
+    if args.slides and slides_json and os.path.exists(slides_json):
+        build_cmd.append(slides_json)
     run_step("3/3  Gerando HTML", build_cmd)
 
     total_elapsed = time.time() - total_t0
@@ -160,7 +179,10 @@ def main():
     print(f"{'=' * 60}")
     print(f"\nPróximos passos:")
     print(f"  1. Adicionar card no index.html")
-    print(f"  2. git add leituras/{args.slug}.html index.html")
+    if args.slides:
+        print(f"  2. git add leituras/{args.slug}.html img/{args.slug}/ index.html")
+    else:
+        print(f"  2. git add leituras/{args.slug}.html index.html")
     print(f"  3. git commit -m 'feat: adiciona artigo — {args.title}'")
 
 

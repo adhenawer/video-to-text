@@ -188,6 +188,21 @@ header h1 {
 }
 .resume-banner .dismiss { background: none; padding: 8px; font-size: 1.1em; opacity: 0.7; }
 
+/* --- Slide Figures --- */
+.slide-figure { margin: 28px 0; text-align: center; }
+.slide-img {
+  max-width: 100%; height: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.slide-caption {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.82em; color: var(--text-muted);
+  margin-top: 8px; font-style: italic;
+}
+[data-theme="dark"] .slide-img { box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */
@@ -207,4 +222,8 @@ header h1 {
   .page-article header { padding: 36px 0 24px; }
   .page-article h2 { font-size: 1.12em; margin: 36px 0 14px; }
   .page-article p { font-size: 1.02em; }
+
+  /* Slides mobile */
+  .slide-figure { margin: 20px -10px; }
+  .slide-img { border-radius: 4px; }
 }
