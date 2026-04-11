@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dario Amodei — Scaling, RL, AGI e o Futuro da Anthropic</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="page-article" data-storage-key="reading_2042251236536422575_">
+<div class="progress" id="progress"></div>
+<div class="reading-pct" id="readingPct"></div>
+<div class="container">
+  <a href="../index.html" class="back-home">← Voltar ao índice</a>
+  <header>
+    <h1>Dario Amodei — Scaling, RL, AGI e o Futuro da Anthropic</h1>
+    <p class="meta">Dario Amodei (CEO, Anthropic) · Dwarkesh Patel</p>
+    <p class="meta"><a href="https://x.com/HeyAmit_/status/2042251236536422575" target="_blank">🐦 Ver no Twitter/X</a></p>
+  </header>
+  <div class="theme-bar">
+    <button class="theme-btn active" onclick="setTheme('light')">☀️ Sépia</button>
+    <button class="theme-btn" onclick="setTheme('cool')">🌤️ Claro</button>
+    <button class="theme-btn" onclick="setTheme('dark')">🌙 Escuro</button>
+  </div>
+  <nav>
+    <h3>📑 Índice</h3>
+    <ol>
+<li><a href="#s1">INTRODUÇÃO — O QUE MUDOU EM TRÊS ANOS</a></li>
+<li><a href="#s2">PREVISÕES CONCRETAS — O "PAÍS DE GÊNIOS NO DATA CENTER"</a></li>
+<li><a href="#s3">DIFUSÃO E ADOÇÃO EMPRESARIAL</a></li>
+<li><a href="#s4">ESTRUTURA DO MERCADO — OLIGOPÓLIO, NÃO MONOPÓLIO</a></li>
+<li><a href="#s5">SEGURANÇA, INTERPRETABILIDADE E RISCO EXISTENCIAL</a></li>
+<li><a href="#s6">CLAUDE CODE E PRODUTOS DA ANTHROPIC</a></li>
+<li><a href="#s7">CONSELHO FINAL</a></li>
+    </ol>
+  </nav>
+<h2 id="s1">INTRODUÇÃO — O QUE MUDOU EM TRÊS ANOS</h2>
+<p>Dwarkesh Patel entrevista Dario Amodei, CEO da Anthropic, pela segunda vez — três anos após a primeira conversa. A pergunta de abertura: o que mudou? Dario responde que a tecnologia subjacente evoluiu aproximadamente como esperava — a exponencial continuou. Os modelos foram de &ldquo;estudante inteligente do ensino médio&rdquo; para &ldquo;estudante universitário&rdquo; e agora para &ldquo;início de trabalho de PhD e profissional&rdquo;, especialmente em código.</p>
+<p>Mas o mais surpreendente para Dario não foi o progresso técnico: foi a falta de reconhecimento público de quão perto estamos do fim da exponencial. Para ele, é absolutamente surpreendente que as pessoas discutam os mesmos velhos temas políticos enquanto estamos próximos de uma das maiores transformações da história.</p>
+<p>A HIPÓTESE DO GRANDE BLOB DE COMPUTAÇÃO</p>
+<p>Em 2017, Dario escreveu um documento interno chamado &ldquo;Big Blob of Compute Hypothesis.&rdquo; A hipótese diz que toda a inteligência, todas as técnicas, todo o &ldquo;precisamos de um novo método&rdquo; não importa muito. Apenas algumas coisas importam: quantidade bruta de computação, quantidade de dados, qualidade e distribuição dos dados, tempo de treinamento, e uma função objetivo que escale infinitamente.</p>
+<p>Para pré-treinamento, a função objetivo é predição do próximo token. Para RL, é alcançar objetivos — com recompensas objetivas (como em matemática e código) ou mais subjetivas (como RLHF). Os últimos itens são normalização e estabilidade numérica para que o &ldquo;blob&rdquo; de computação flua de forma laminar.</p>
+<p>Dario ainda mantém essa hipótese. O pré-treinamento continua dando ganhos. E agora estão vendo a mesma coisa para RL — escala log-linear entre tempo de treinamento e performance em uma ampla variedade de tarefas.</p>
+<h2 id="s2">PREVISÕES CONCRETAS — O "PAÍS DE GÊNIOS NO DATA CENTER"</h2>
+<p>Três anos atrás, Dario previu sistemas que, em uma hora de conversa, seriam difíceis de distinguir de um humano bem-educado. Ele acertou. Mas Dwarkesh observa que isso não resultou na automação esperada do trabalho de escritório.</p>
+<p>Dario é claro: não estamos no AGI. &ldquo;Se tivéssemos o país de gênios no data center, saberíamos. Todos nesta sala saberiam. Todos em Washington saberiam.&rdquo; Mas estamos chegando lá.</p>
+<p>Sobre quando os modelos poderão fazer o trabalho de um editor de vídeo que aprende preferências ao longo de meses: depende de mestria em uso de computador (computer use). O benchmark OS World subiu de ~15% para 65-70%, mas precisa chegar a 95%+ para ser verdadeiramente útil. A previsão de Dario: dentro de 1-2 anos.</p>
+<h2 id="s3">DIFUSÃO E ADOÇÃO EMPRESARIAL</h2>
+<p>O Claude Code é extremamente fácil de configurar e não há razão para desenvolvedores em grandes empresas não adotarem rapidamente. Mas na prática, grandes empresas precisam passar por jurídico, compliance, segurança, aprovação de liderança, rollout para milhares de desenvolvedores.</p>
+<p>A Anthropic está fazendo tudo possível para crescer 20-30x ao ano em vez de 10x. Muitas empresas estão encurtando processos de procurement porque o produto é tão compelling. Mas não é infinitamente compelling. Mesmo AGI não gerará adoção infinitamente rápida.</p>
+<p>A receita da Anthropic está no caminho para bilhões, mas o gap entre capacidade dos modelos e adoção real é significativo. Dario compara com automóveis: o carro foi inventado em ~1890, mas levou décadas para substituir cavalos completamente.</p>
+<h2 id="s4">ESTRUTURA DO MERCADO — OLIGOPÓLIO, NÃO MONOPÓLIO</h2>
+<p>Dario não acha que IA será um monopólio. Será como cloud: 3-4 players. A razão são os altíssimos custos de entrada — é preciso centenas de bilhões de dólares e expertise extrema.</p>
+<p>Os modelos são mais diferenciados que cloud. Claude é bom em coisas diferentes de GPT, que é bom em coisas diferentes de Gemini. E não é só &ldquo;Claude é bom em código, GPT é bom em matemática&rdquo; — é mais sutil que isso. Modelos têm estilos diferentes, são bons em tipos diferentes de codificação.</p>
+<p>O modelo de negócio de API vai sempre existir porque sempre haverá mil pessoas experimentando com o modelo de maneiras diferentes, cem delas se tornam startups, dez se tornam grandes, e duas ou três acabam sendo a forma como as pessoas realmente usam o modelo de uma dada geração.</p>
+<p>O PAPEL DO RL E APRENDIZADO NO MUNDO REAL</p>
+<p>A objeção de Rich Sutton (o &ldquo;bitter lesson&rdquo;) na versão anti-LLM: algo que possui o verdadeiro núcleo do aprendizado humano não deveria precisar de bilhões de dólares em dados e computação e ambientes bespoke para aprender a usar Excel ou navegar na web. O fato de precisarmos construir essas skills via ambientes de RL sugere que falta o algoritmo central de aprendizado humano.</p>
+<p>Dario discorda parcialmente: o RL está escalando da mesma forma que o pré-treinamento. A questão não é se funciona, mas quão eficiente é. E a eficiência está melhorando exponencialmente.</p>
+<h2 id="s5">SEGURANÇA, INTERPRETABILIDADE E RISCO EXISTENCIAL</h2>
+<p>Dario tem uma visão matizada sobre segurança de IA. A Anthropic foi fundada especificamente para trabalhar na interseção de capacidades e segurança. Ele acredita que os modelos atuais não são perigosos de forma existencial, mas que modelos futuros podem ser — e que precisamos desenvolver as ferramentas de segurança antes que os modelos se tornem perigosos.</p>
+<p>A interpretabilidade é um pilar central: entender o que acontece dentro dos modelos, não apenas observar inputs e outputs. A Anthropic fez progressos significativos nessa área.</p>
+<p>Sobre regulação: Dario defende testes obrigatórios para capacidades perigosas (bio, cyber, armas nucleares) mas é contra regulação que sufoque a inovação ou crie barreiras de entrada. A abordagem da Anthropic é testar internamente primeiro e publicar os resultados.</p>
+<p>A CORRIDA COM A CHINA</p>
+<p>Dario vê a competição com a China como real mas não como uma corrida armamentista direta. Os modelos chineses (como DeepSeek) são impressionantes, mas tipicamente estão 6-18 meses atrás da fronteira. A vantagem americana está no ecossistema: acesso a GPUs de ponta (NVIDIA), capital abundante, e massa crítica de talento.</p>
+<p>A preocupação não é que a China &ldquo;ganhe&rdquo; em modelos, mas que modelos poderosos fiquem disponíveis globalmente sem as devidas proteções de segurança. Open-source amplifica esse risco.</p>
+<h2 id="s6">CLAUDE CODE E PRODUTOS DA ANTHROPIC</h2>
+<p>Dario fala com entusiasmo sobre o Claude Code como um dos produtos mais impactantes. É um agente de coding que funciona no terminal e pode resolver problemas complexos de engenharia de software de forma autônoma.</p>
+<p>A filosofia da Anthropic para produtos: construir coisas que os modelos conseguem fazer bem agora, não especular sobre capacidades futuras. O Claude Code é um exemplo perfeito — os modelos são excepcionalmente bons em código, então construíram um produto que aproveita isso ao máximo.</p>
+<p>A ECONOMIA DA IA — VALORIZAÇÃO E RETORNOS</p>
+<p>Sobre as avaliações altas das empresas de IA: Dario argumenta que se IA realmente funcionar como ele espera, as avaliações atuais são justificadas ou até baixas. Se a Anthropic pode alcançar receita na casa de centenas de bilhões em 5-7 anos, uma avaliação de dezenas de bilhões hoje faz sentido.</p>
+<p>Mas reconhece o risco: se a exponencial parar ou desacelerar significativamente, muitas dessas avaliações não se justificam. É uma aposta direcional no progresso contínuo.</p>
+<p>O FUTURO DO TRABALHO E DA SOCIEDADE</p>
+<p>Dario é cautelosamente otimista. Acredita que IA vai criar muito mais valor do que destruir empregos, mas reconhece que haverá transições dolorosas. A analogia com a Revolução Industrial é imperfeita — aquela transição levou décadas, mas a IA pode comprimir isso em anos.</p>
+<p>Sobre o impacto na ciência: é onde Dario vê o maior potencial. Modelos que podem acelerar pesquisa em biologia, medicina, ciência de materiais — isso pode resolver problemas que são genuinamente difíceis para humanos, como cura de doenças e mudanças climáticas.</p>
+<h2 id="s7">CONSELHO FINAL</h2>
+<p>Dario destaca que estamos em um momento sem precedentes na história. A exponencial da IA é real e está se acelerando. Para quem está construindo: aproveitem as capacidades atuais dos modelos, não esperem pelo futuro perfeito. Os modelos de hoje já são extraordinariamente poderosos se usados corretamente.</p>
+<p>Para quem se preocupa com segurança: a preocupação é legítima, e é possível trabalhar em segurança e capacidades ao mesmo tempo — na verdade, é necessário. Não se pode construir ferramentas de segurança sem entender as capacidades que se está tentando tornar seguras.</p>
+</div>
+<a href="#" class="back-top" id="backTop">↑</a>
+<div class="resume-banner" id="resumeBanner">
+  <span id="resumeText">📖 Continuar de onde parou</span>
+  <div>
+    <button onclick="resumeReading()">Continuar</button>
+    <button class="dismiss" onclick="dismissResume()">✕</button>
+  </div>
+</div>
+<script src="../js/reader.js"></script>
+</body>
+</html>
