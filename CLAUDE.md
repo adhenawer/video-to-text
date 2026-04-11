@@ -69,6 +69,21 @@ python3 scripts/pipeline.py \
   --slug 'slug-do-titulo'
 ```
 
+### Pipeline — Twitter/X com extração de slides
+
+```bash
+python3 scripts/pipeline.py \
+  'https://x.com/user/status/TWEET_ID' \
+  --title 'Título do Artigo' \
+  --subtitle 'Fonte / Canal' \
+  --slug 'slug-do-titulo' \
+  --slides
+```
+
+Com `--slides`, o pipeline baixa o vídeo completo, extrai screenshots de cada slide distinto
+(via ffmpeg + OpenCV), correlaciona com o texto por timestamp, e gera HTML com `<figure>` intercalados.
+Imagens salvas em `img/{slug}/slide-NNNN.jpg`. Use `--scene-threshold 0.99` para mais slides.
+
 O pipeline detecta automaticamente o provider pela URL.
 - **YouTube**: captura legendas via `youtube-transcript-api`
 - **Twitter/X**: baixa áudio via `yt-dlp`, transcreve via `mlx-whisper` (local, Apple Silicon)
@@ -151,6 +166,7 @@ git commit -m 'feat: adiciona artigo — Título do Vídeo'
 |--------|-----|
 | `scripts/pipeline.py` | Orquestrador: URL → HTML. Detecta provider automaticamente (YouTube, Twitter/X) |
 | `scripts/providers/` | Abstração multi-provider. Cada provider implementa `detect()`, `extract_id()`, `fetch_transcript()` |
+| `scripts/extract_slides.py` | Extrai slides de vídeos via ffmpeg (amostragem) + OpenCV (detecção de mudanças) |
 | `scripts/fetch_transcript.py` | CLI standalone: captura transcrição do YouTube via `youtube-transcript-api` |
 | `scripts/translate_local.py` | Traduz transcrição para PT-BR via LLM local (`mlx-vlm`). Usado com `--local` |
 | `scripts/build_html.py` | Gera HTML referenciando `../css/style.css` e `../js/reader.js` |
