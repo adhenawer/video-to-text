@@ -1,51 +1,41 @@
 #!/usr/bin/env python3
 """
-Full pipeline: YouTube URL → translated PT-BR HTML article.
+Full pipeline: Video URL → translated PT-BR HTML article.
+
+Supports: YouTube, Twitter/X.
 
 Default: Claude (via Hermes) handles translation.
 With --local: uses local LLM (Gemma 4) for translation.
 
 Usage:
-    # Default (Claude traduz)
+    # YouTube (Claude traduz)
     python3 scripts/pipeline.py 'https://youtu.be/VIDEO_ID' \
+      --title 'Título' --subtitle 'Fonte' --slug 'slug-do-titulo'
+
+    # Twitter/X (Claude traduz)
+    python3 scripts/pipeline.py 'https://x.com/user/status/12345' \
       --title 'Título' --subtitle 'Fonte' --slug 'slug-do-titulo'
 
     # Local (Gemma 4 traduz)
     python3 scripts/pipeline.py 'https://youtu.be/VIDEO_ID' \
       --title 'Título' --subtitle 'Fonte' --slug 'slug-do-titulo' --local
-
-    # Local com modelo específico
-    python3 scripts/pipeline.py 'https://youtu.be/VIDEO_ID' \
-      --title 'Título' --subtitle 'Fonte' --slug 'slug-do-titulo' \
-      --local --model mlx-community/gemma-4-e4b-it-4bit
 """
 
 import argparse
 import os
-import re
-import subprocess
 import sys
 import time
 
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SCRIPTS_DIR)
 
-
-def extract_video_id(url_or_id):
-    """Extract 11-char video ID from YouTube URL."""
-    url_or_id = url_or_id.strip()
-    for pattern in [
-        r'(?:v=|youtu\.be/|shorts/|embed/|live/)([a-zA-Z0-9_-]{11})',
-        r'^([a-zA-Z0-9_-]{11})$',
-    ]:
-        match = re.search(pattern, url_or_id)
-        if match:
-            return match.group(1)
-    return url_or_id
+sys.path.insert(0, SCRIPTS_DIR)
+from providers import detect_provider
 
 
 def run_step(label, cmd, timeout=600):
     """Run a subprocess step, printing status and timing."""
+    import subprocess
     print(f"\n{'=' * 60}")
     print(f"  {label}")
     print(f"{'=' * 60}")
@@ -68,8 +58,8 @@ def run_step(label, cmd, timeout=600):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Pipeline: YouTube URL → HTML article")
-    parser.add_argument("url", help="YouTube URL or video ID")
+    parser = argparse.ArgumentParser(description="Pipeline: Video URL → HTML article")
+    parser.add_argument("url", help="Video URL (YouTube, Twitter/X)")
     parser.add_argument("--title", "-t", required=True, help="Article title")
     parser.add_argument("--subtitle", "-s", required=True, help="Subtitle (source/author)")
     parser.add_argument("--slug", required=True, help="URL slug for the HTML file (e.g. 'meu-artigo')")
@@ -79,7 +69,14 @@ def main():
                         help="MLX model ID for --local mode (overrides translate_local.py default)")
     args = parser.parse_args()
 
-    video_id = extract_video_id(args.url)
+    # Detect provider from URL
+    provider = detect_provider(args.url)
+    if provider is None:
+        print(f"ERRO: URL não reconhecida: {args.url}", file=sys.stderr)
+        print("URLs suportadas: YouTube, Twitter/X", file=sys.stderr)
+        sys.exit(1)
+
+    video_id = provider.extract_id(args.url)
     transcript_path = f"/tmp/transcript_{video_id}.txt"
     translated_path = f"/tmp/{video_id}_pt.txt"
     html_path = os.path.join(PROJECT_DIR, "leituras", f"{args.slug}.html")
@@ -87,33 +84,30 @@ def main():
     engine = "local (LLM)" if args.local else "Claude (default)"
     total_t0 = time.time()
     print(f"Pipeline: {args.url}")
+    print(f"  Provider:  {provider.display_name}")
     print(f"  Video ID:  {video_id}")
     print(f"  Título:    {args.title}")
     print(f"  Slug:      {args.slug}")
     print(f"  Engine:    {engine}")
     print(f"  Output:    {html_path}")
 
-    # Step 1: Fetch transcript
+    # Step 1: Fetch transcript via provider
     print(f"\n{'=' * 60}")
-    print(f"  1/3  Capturando transcrição")
+    print(f"  1/3  Capturando transcrição ({provider.display_name})")
     print(f"{'=' * 60}")
     t0 = time.time()
-    fetch_result = subprocess.run(
-        [sys.executable, os.path.join(SCRIPTS_DIR, "fetch_transcript.py"),
-         args.url, "--text-only", "--timestamps"],
-        capture_output=True, text=True, timeout=60,
-    )
-    if fetch_result.returncode != 0:
-        print(f"ERRO ao capturar transcrição: {fetch_result.stderr}", file=sys.stderr)
+    try:
+        transcript_text = provider.fetch_transcript(args.url, timestamps=True)
+    except RuntimeError as e:
+        print(f"ERRO ao capturar transcrição: {e}", file=sys.stderr)
         sys.exit(1)
     with open(transcript_path, 'w') as f:
-        f.write(fetch_result.stdout)
-    print(f"  Salvo em {transcript_path} ({len(fetch_result.stdout.split())} palavras)")
+        f.write(transcript_text)
+    print(f"  Salvo em {transcript_path} ({len(transcript_text.split())} palavras)")
     print(f"  Concluído em {time.time() - t0:.1f}s")
 
     # Step 2: Translate
     if args.local:
-        # Local LLM translation
         translate_cmd = [
             sys.executable, os.path.join(SCRIPTS_DIR, "translate_local.py"),
             transcript_path, translated_path,
@@ -122,7 +116,6 @@ def main():
             translate_cmd.extend(["--model", args.model])
         run_step("2/3  Traduzindo via modelo local", translate_cmd, timeout=600)
     else:
-        # Claude translation — pause for user/Hermes to translate
         print(f"\n{'=' * 60}")
         print(f"  2/3  Tradução via Claude")
         print(f"{'=' * 60}")
@@ -137,7 +130,6 @@ def main():
         print(f"  ========================================")
         print()
 
-        # Check if translated file already exists
         if os.path.exists(translated_path):
             print(f"  Arquivo {translated_path} já existe, usando existente.")
         else:
@@ -152,17 +144,19 @@ def main():
             print(f"  Arquivo detectado!")
 
     # Step 3: Build HTML
-    run_step(
-        "3/3  Gerando HTML",
-        [sys.executable, os.path.join(SCRIPTS_DIR, "build_html.py"),
-         video_id, args.title, args.subtitle, args.url, translated_path, html_path],
-    )
+    build_cmd = [
+        sys.executable, os.path.join(SCRIPTS_DIR, "build_html.py"),
+        video_id, args.title, args.subtitle, args.url, translated_path, html_path,
+        provider.link_text,
+    ]
+    run_step("3/3  Gerando HTML", build_cmd)
 
     total_elapsed = time.time() - total_t0
     print(f"\n{'=' * 60}")
     print(f"  Pipeline concluído em {total_elapsed:.1f}s")
-    print(f"  Engine:  {engine}")
-    print(f"  HTML:    {html_path}")
+    print(f"  Provider: {provider.display_name}")
+    print(f"  Engine:   {engine}")
+    print(f"  HTML:     {html_path}")
     print(f"{'=' * 60}")
     print(f"\nPróximos passos:")
     print(f"  1. Adicionar card no index.html")

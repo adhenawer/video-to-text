@@ -14,12 +14,16 @@ video-to-text/
 │   └── style.css               ← CSS centralizado (temas, index, artigos)
 ├── js/
 │   └── reader.js               ← JS compartilhado de leitura (tema, progresso, resume)
-├── requirements.txt            ← dependências Python (mlx, mlx-lm, youtube-transcript-api)
+├── requirements.txt            ← dependências Python (mlx, mlx-lm, yt-dlp, mlx-whisper, ...)
 ├── scripts/
-│   ├── fetch_transcript.py     ← captura transcrição do YouTube
+│   ├── providers/              ← abstração multi-provider (YouTube, Twitter/X, ...)
+│   │   ├── __init__.py         ← registry: detect_provider(url)
+│   │   ├── youtube.py          ← YouTube: youtube-transcript-api
+│   │   └── twitter.py          ← Twitter/X: yt-dlp + mlx-whisper
+│   ├── fetch_transcript.py     ← CLI standalone: captura transcrição do YouTube
 │   ├── translate_local.py      ← traduz via Gemma 4 local (mlx-lm)
 │   ├── build_html.py           ← gera HTML referenciando css/ e js/
-│   └── pipeline.py             ← orquestrador: URL → HTML num comando só
+│   └── pipeline.py             ← orquestrador: URL → HTML (detecta provider automaticamente)
 └── leituras/                   ← artigos individuais (usam ../css/style.css + ../js/reader.js)
     ├── chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html
     ├── estado-da-ia-2026-ponto-de-inflexao-simon-willison.html
@@ -45,7 +49,7 @@ python3 -m http.server 8899 --bind 0.0.0.0
 
 ## Adicionar novo artigo
 
-### Pipeline (default — Claude traduz)
+### Pipeline — YouTube (Claude traduz)
 
 ```bash
 python3 scripts/pipeline.py \
@@ -55,14 +59,28 @@ python3 scripts/pipeline.py \
   --slug 'slug-do-titulo'
 ```
 
-O pipeline captura a transcrição, aguarda a tradução via Claude/Hermes, e gera o HTML.
-O Claude lê `/tmp/transcript_VIDEO_ID.txt` e salva a tradução em `/tmp/VIDEO_ID_pt.txt`.
+### Pipeline — Twitter/X (Claude traduz)
+
+```bash
+python3 scripts/pipeline.py \
+  'https://x.com/user/status/TWEET_ID' \
+  --title 'Título do Artigo' \
+  --subtitle 'Fonte / Canal' \
+  --slug 'slug-do-titulo'
+```
+
+O pipeline detecta automaticamente o provider pela URL.
+- **YouTube**: captura legendas via `youtube-transcript-api`
+- **Twitter/X**: baixa áudio via `yt-dlp`, transcreve via `mlx-whisper` (local, Apple Silicon)
+
+Aguarda a tradução via Claude/Hermes e gera o HTML.
+O Claude lê `/tmp/transcript_ID.txt` e salva a tradução em `/tmp/ID_pt.txt`.
 
 ### Pipeline (local — modelo open source)
 
 ```bash
 python3 scripts/pipeline.py \
-  'https://youtu.be/VIDEO_ID' \
+  'URL_DO_VIDEO' \
   --title 'Título do Artigo' \
   --subtitle 'Fonte / Canal' \
   --slug 'slug-do-titulo' \
@@ -131,8 +149,9 @@ git commit -m 'feat: adiciona artigo — Título do Vídeo'
 
 | Script | Uso |
 |--------|-----|
-| `scripts/pipeline.py` | Orquestrador: URL → HTML. Default: Claude traduz. `--local`: LLM local traduz |
-| `scripts/fetch_transcript.py` | Captura transcrição de qualquer URL do YouTube via `youtube-transcript-api` |
+| `scripts/pipeline.py` | Orquestrador: URL → HTML. Detecta provider automaticamente (YouTube, Twitter/X) |
+| `scripts/providers/` | Abstração multi-provider. Cada provider implementa `detect()`, `extract_id()`, `fetch_transcript()` |
+| `scripts/fetch_transcript.py` | CLI standalone: captura transcrição do YouTube via `youtube-transcript-api` |
 | `scripts/translate_local.py` | Traduz transcrição para PT-BR via LLM local (`mlx-vlm`). Usado com `--local` |
 | `scripts/build_html.py` | Gera HTML referenciando `../css/style.css` e `../js/reader.js` |
 
@@ -153,11 +172,13 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Isso instala: `mlx`, `mlx-lm`, `mlx-vlm` e `youtube-transcript-api`.
+Isso instala: `mlx`, `mlx-lm`, `mlx-vlm`, `youtube-transcript-api`, `yt-dlp` e `mlx-whisper`.
 
-Para usar `--local`, o modelo é baixado automaticamente na primeira execução.
+Para usar `--local`, o modelo de tradução é baixado automaticamente na primeira execução.
 Default local: `mlx-community/gemma-4-e4b-it-8bit` (~8GB, M1 Pro 16GB no limite).
 Ver `benchmarks/` para comparativo de qualidade entre modelos.
+
+Para Twitter/X, o modelo Whisper (`mlx-community/whisper-large-v3-turbo`, ~1.5GB) é baixado na primeira execução.
 
 ## Design System
 

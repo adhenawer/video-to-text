@@ -2,3 +2,5 @@ mlx>=0.22
 mlx-lm>=0.22
 mlx-vlm>=0.4
 youtube-transcript-api>=1.0
+yt-dlp>=2024.0
+mlx-whisper>=0.4

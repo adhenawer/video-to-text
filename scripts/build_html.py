@@ -7,7 +7,7 @@ CSS and JS are loaded from ../css/style.css and ../js/reader.js.
 import re, os, sys
 
 
-def make_html(vid_id, title, subtitle, url, txt_path):
+def make_html(vid_id, title, subtitle, url, txt_path, link_text="🎥 Assistir no YouTube"):
     """Read translated txt, parse sections, return full HTML string."""
     with open(txt_path, 'r') as f:
         raw = f.read()
@@ -80,7 +80,7 @@ def make_html(vid_id, title, subtitle, url, txt_path):
   <header>
     <h1>{title}</h1>
     <p class="meta">{subtitle}</p>
-    <p class="meta"><a href="{url}" target="_blank">🎥 Assistir no YouTube</a></p>
+    <p class="meta"><a href="{url}" target="_blank">{link_text}</a></p>
   </header>
   <div class="theme-bar">
     <button class="theme-btn active" onclick="setTheme('light')">☀️ Sépia</button>
@@ -115,7 +115,8 @@ if __name__ == '__main__':
     url     = sys.argv[4]
     txt_in  = sys.argv[5]
     html_out= sys.argv[6]
-    html = make_html(vid_id, title, subtitle, url, txt_in)
+    link_text = sys.argv[7] if len(sys.argv) > 7 else "🎥 Assistir no YouTube"
+    html = make_html(vid_id, title, subtitle, url, txt_in, link_text)
     with open(html_out, 'w') as f:
         f.write(html)
     print(f"OK {html_out} ({len(html):,} bytes)")
