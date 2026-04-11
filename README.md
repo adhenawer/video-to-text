@@ -1,5 +1,11 @@
 # video-to-text
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub release](https://img.shields.io/github/v/release/adhenawer/video-to-text)](https://github.com/adhenawer/video-to-text/releases)
+[![GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-blue)](https://adhenawer.github.io/video-to-text/)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
+[![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-MLX-black)](https://github.com/ml-explore/mlx)
+
 Transforma vídeos e podcasts do YouTube e Twitter/X em artigos de leitura — traduzidos para português brasileiro, organizados por seções e publicados como HTML estático.
 
 ## Por que criei o projeto 
