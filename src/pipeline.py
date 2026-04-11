@@ -9,15 +9,15 @@ With --local: uses local LLM (Gemma 4) for translation.
 
 Usage:
     # YouTube (Claude traduz)
-    python3 scripts/pipeline.py 'https://youtu.be/VIDEO_ID' \
+    python3 src/pipeline.py 'https://youtu.be/VIDEO_ID' \
       --title 'Título' --subtitle 'Fonte' --slug 'slug-do-titulo'
 
     # Twitter/X (Claude traduz)
-    python3 scripts/pipeline.py 'https://x.com/user/status/12345' \
+    python3 src/pipeline.py 'https://x.com/user/status/12345' \
       --title 'Título' --subtitle 'Fonte' --slug 'slug-do-titulo'
 
     # Local (Gemma 4 traduz)
-    python3 scripts/pipeline.py 'https://youtu.be/VIDEO_ID' \
+    python3 src/pipeline.py 'https://youtu.be/VIDEO_ID' \
       --title 'Título' --subtitle 'Fonte' --slug 'slug-do-titulo' --local
 """
 
@@ -26,10 +26,10 @@ import os
 import sys
 import time
 
-SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_DIR = os.path.dirname(SCRIPTS_DIR)
+SRC_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(SRC_DIR)
 
-sys.path.insert(0, SCRIPTS_DIR)
+sys.path.insert(0, SRC_DIR)
 from providers import detect_provider
 
 
@@ -126,7 +126,7 @@ def main():
     # Step 2: Translate
     if args.local:
         translate_cmd = [
-            sys.executable, os.path.join(SCRIPTS_DIR, "translate_local.py"),
+            sys.executable, os.path.join(SRC_DIR, "translate_local.py"),
             transcript_path, translated_path,
         ]
         if args.model:
@@ -162,7 +162,7 @@ def main():
 
     # Step 3: Build HTML
     build_cmd = [
-        sys.executable, os.path.join(SCRIPTS_DIR, "build_html.py"),
+        sys.executable, os.path.join(SRC_DIR, "build_html.py"),
         video_id, args.title, args.subtitle, args.url, translated_path, html_path,
         provider.link_text,
     ]

@@ -57,7 +57,10 @@ class TwitterProvider:
 
             # Extract slides if requested
             if slides and slides_dir and slug:
-                from extract_slides import extract_slides, build_slides_json
+                try:
+                    from ..extract_slides import extract_slides, build_slides_json
+                except ImportError:
+                    from extract_slides import extract_slides, build_slides_json
                 print(f"  Extraindo slides do vídeo (threshold padrão)...")
                 slide_list = extract_slides(video_path, slides_dir)
                 print(f"  {len(slide_list)} slides extraídos")

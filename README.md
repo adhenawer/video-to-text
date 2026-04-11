@@ -25,14 +25,14 @@ O pipeline detecta automaticamente o provider pela URL e usa a estratégia corre
 ```
 URL do vídeo (YouTube, Twitter/X)
     ↓
-scripts/providers/               — detecta provider, captura transcrição
+src/providers/               — detecta provider, captura transcrição
   ├── youtube.py                 — legendas via youtube-transcript-api
   └── twitter.py                 — áudio via yt-dlp → transcrição via mlx-whisper
     ↓
 Claude (tradução)                — traduz para PT-BR, remove timestamps/ads/ruídos,
                                    organiza em seções temáticas
     ↓
-scripts/build_html.py            — gera o HTML com o design system do projeto
+src/build_html.py            — gera o HTML com o design system do projeto
     ↓
 index.html                       — card adicionado ao índice com descrição e progresso
     ↓
@@ -43,7 +43,7 @@ Artigo publicado                 — acessível localmente ou via GitHub Pages
 
 ## Arquitetura multi-provider
 
-O sistema usa uma abstração de providers em `scripts/providers/` que permite suportar diferentes fontes de vídeo. Cada provider implementa:
+O sistema usa uma abstração de providers em `src/providers/` que permite suportar diferentes fontes de vídeo. Cada provider implementa:
 
 | Método | Descrição |
 |--------|-----------|
@@ -58,7 +58,7 @@ O sistema usa uma abstração de providers em `scripts/providers/` que permite s
 | **YouTube** | `youtube.com`, `youtu.be` | Legendas via `youtube-transcript-api` |
 | **Twitter/X** | `x.com`, `twitter.com` | Download de áudio via `yt-dlp` + transcrição local via `mlx-whisper` (Apple Silicon) |
 
-Para adicionar um novo provider (ex: Vimeo), basta criar um novo módulo em `scripts/providers/` e registrá-lo em `__init__.py`.
+Para adicionar um novo provider (ex: Vimeo), basta criar um novo módulo em `src/providers/` e registrá-lo em `__init__.py`.
 
 ---
 
@@ -71,7 +71,7 @@ Para adicionar um novo provider (ex: Vimeo), basta criar um novo módulo em `scr
 | Transcrição (YouTube) | [youtube-transcript-api](https://github.com/jdepoix/youtube-transcript-api) |
 | Transcrição (Twitter/X) | [yt-dlp](https://github.com/yt-dlp/yt-dlp) + [mlx-whisper](https://github.com/ml-explore/mlx-examples) |
 | Tradução / organização | Claude (LLM) ou Gemma 4 local (mlx-lm) |
-| Build | `scripts/build_html.py` — Python puro, sem dependências externas |
+| Build | `src/build_html.py` — Python puro, sem dependências externas |
 | Frontend | HTML estático — zero frameworks, zero build steps |
 | Hosting | GitHub Pages ou qualquer servidor estático |
 
@@ -82,7 +82,7 @@ Para adicionar um novo provider (ex: Vimeo), basta criar um novo módulo em `scr
 ### 1. Instalar o Hermes
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/src/install.sh | bash
 source ~/.bashrc   # ou: source ~/.zshrc
 hermes             # inicia o agente no terminal
 ```
@@ -135,7 +135,7 @@ python3 -m http.server 8080
 ### YouTube (Claude traduz)
 
 ```bash
-python3 scripts/pipeline.py \
+python3 src/pipeline.py \
   'https://youtu.be/VIDEO_ID' \
   --title 'Título do Artigo' \
   --subtitle 'Fonte / Canal' \
@@ -145,7 +145,7 @@ python3 scripts/pipeline.py \
 ### Twitter/X (Claude traduz)
 
 ```bash
-python3 scripts/pipeline.py \
+python3 src/pipeline.py \
   'https://x.com/user/status/TWEET_ID' \
   --title 'Título do Artigo' \
   --subtitle 'Fonte / Canal' \
@@ -155,7 +155,7 @@ python3 scripts/pipeline.py \
 ### Tradução local (Gemma 4)
 
 ```bash
-python3 scripts/pipeline.py \
+python3 src/pipeline.py \
   'URL_DO_VIDEO' \
   --title 'Título' --subtitle 'Fonte' --slug 'slug' \
   --local
@@ -176,7 +176,7 @@ https://youtu.be/owmJyKVu5f8
 
 **2. O Hermes captura a transcrição automaticamente**
 ```bash
-python3 scripts/fetch_transcript.py 'https://youtu.be/owmJyKVu5f8' \
+python3 src/fetch_transcript.py 'https://youtu.be/owmJyKVu5f8' \
   --text-only --timestamps > /tmp/transcript_owmJyKVu5f8.txt
 ```
 
@@ -187,7 +187,7 @@ O agente lê a transcrição e produz um `.txt` limpo em português brasileiro, 
 
 **4. O HTML é gerado**
 ```bash
-python3 scripts/build_html.py \
+python3 src/build_html.py \
   owmJyKVu5f8 \
   'Título do Artigo' \
   'Fonte / Canal' \

@@ -18,15 +18,18 @@ video-to-text/
 ├── sitemap.xml                 ← URLs para Google (atualizar ao adicionar artigo)
 ├── llms.txt                    ← índice para crawlers de LLMs (atualizar ao adicionar artigo)
 ├── requirements.txt            ← dependências Python (mlx, mlx-lm, yt-dlp, mlx-whisper, ...)
-├── scripts/
-│   ├── providers/              ← abstração multi-provider (YouTube, Twitter/X, ...)
-│   │   ├── __init__.py         ← registry: detect_provider(url)
-│   │   ├── youtube.py          ← YouTube: youtube-transcript-api
-│   │   └── twitter.py          ← Twitter/X: yt-dlp + mlx-whisper
+├── src/                        ← pacote Python principal
+│   ├── __init__.py             ← marca como pacote
+│   ├── __main__.py             ← entry point: python3 -m src
+│   ├── pipeline.py             ← orquestrador: URL → HTML (detecta provider automaticamente)
+│   ├── build_html.py           ← gera HTML com SEO, JSON-LD e HTML semântico
+│   ├── extract_slides.py       ← extrai slides de vídeos via ffmpeg + OpenCV
 │   ├── fetch_transcript.py     ← CLI standalone: captura transcrição do YouTube
 │   ├── translate_local.py      ← traduz via Gemma 4 local (mlx-lm)
-│   ├── build_html.py           ← gera HTML referenciando css/ e js/
-│   └── pipeline.py             ← orquestrador: URL → HTML (detecta provider automaticamente)
+│   └── providers/              ← abstração multi-provider (YouTube, Twitter/X, ...)
+│       ├── __init__.py         ← registry: detect_provider(url)
+│       ├── youtube.py          ← YouTube: youtube-transcript-api
+│       └── twitter.py          ← Twitter/X: yt-dlp + mlx-whisper
 └── leituras/                   ← artigos individuais (usam ../css/style.css + ../js/reader.js)
     ├── chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html
     ├── estado-da-ia-2026-ponto-de-inflexao-simon-willison.html
@@ -55,7 +58,7 @@ python3 -m http.server 8899 --bind 0.0.0.0
 ### Pipeline — YouTube (Claude traduz)
 
 ```bash
-python3 scripts/pipeline.py \
+python3 src/pipeline.py \
   'https://youtu.be/VIDEO_ID' \
   --title 'Título do Artigo' \
   --subtitle 'Fonte / Canal' \
@@ -65,7 +68,7 @@ python3 scripts/pipeline.py \
 ### Pipeline — Twitter/X (Claude traduz)
 
 ```bash
-python3 scripts/pipeline.py \
+python3 src/pipeline.py \
   'https://x.com/user/status/TWEET_ID' \
   --title 'Título do Artigo' \
   --subtitle 'Fonte / Canal' \
@@ -75,7 +78,7 @@ python3 scripts/pipeline.py \
 ### Pipeline — Twitter/X com extração de slides
 
 ```bash
-python3 scripts/pipeline.py \
+python3 src/pipeline.py \
   'https://x.com/user/status/TWEET_ID' \
   --title 'Título do Artigo' \
   --subtitle 'Fonte / Canal' \
@@ -97,7 +100,7 @@ O Claude lê `/tmp/transcript_ID.txt` e salva a tradução em `/tmp/ID_pt.txt`.
 ### Pipeline (local — modelo open source)
 
 ```bash
-python3 scripts/pipeline.py \
+python3 src/pipeline.py \
   'URL_DO_VIDEO' \
   --title 'Título do Artigo' \
   --subtitle 'Fonte / Canal' \
@@ -113,7 +116,7 @@ Para usar outro modelo: `--local --model mlx-community/outro-modelo`.
 #### 1. Capturar transcrição
 
 ```bash
-python3 scripts/fetch_transcript.py \
+python3 src/fetch_transcript.py \
   'https://youtu.be/VIDEO_ID' --text-only --timestamps \
   2>/dev/null > /tmp/transcript_VIDEO_ID.txt
 ```
@@ -126,7 +129,7 @@ python3 scripts/fetch_transcript.py \
 - Sem timestamps, sem [music], sem propagandas, sem filler words
 - Salvar em `/tmp/VIDEO_ID_pt.txt`
 
-**Via modelo local:** `python3 scripts/translate_local.py /tmp/transcript_VIDEO_ID.txt /tmp/VIDEO_ID_pt.txt`
+**Via modelo local:** `python3 src/translate_local.py /tmp/transcript_VIDEO_ID.txt /tmp/VIDEO_ID_pt.txt`
 
 O output (de ambos) é um `.txt` com seções no formato:
 ```
@@ -139,7 +142,7 @@ Parágrafo do conteúdo...
 #### 3. Gerar HTML
 
 ```bash
-python3 scripts/build_html.py \
+python3 src/build_html.py \
   VIDEO_ID \
   'Título do Artigo' \
   'Subtítulo / Fonte' \
@@ -167,12 +170,12 @@ git commit -m 'feat: adiciona artigo — Título do Vídeo'
 
 | Script | Uso |
 |--------|-----|
-| `scripts/pipeline.py` | Orquestrador: URL → HTML. Detecta provider automaticamente (YouTube, Twitter/X) |
-| `scripts/providers/` | Abstração multi-provider. Cada provider implementa `detect()`, `extract_id()`, `fetch_transcript()` |
-| `scripts/extract_slides.py` | Extrai slides de vídeos via ffmpeg (amostragem) + OpenCV (detecção de mudanças) |
-| `scripts/fetch_transcript.py` | CLI standalone: captura transcrição do YouTube via `youtube-transcript-api` |
-| `scripts/translate_local.py` | Traduz transcrição para PT-BR via LLM local (`mlx-vlm`). Usado com `--local` |
-| `scripts/build_html.py` | Gera HTML referenciando `../css/style.css` e `../js/reader.js` |
+| `src/pipeline.py` | Orquestrador: URL → HTML. Detecta provider automaticamente (YouTube, Twitter/X) |
+| `src/providers/` | Abstração multi-provider. Cada provider implementa `detect()`, `extract_id()`, `fetch_transcript()` |
+| `src/extract_slides.py` | Extrai slides de vídeos via ffmpeg (amostragem) + OpenCV (detecção de mudanças) |
+| `src/fetch_transcript.py` | CLI standalone: captura transcrição do YouTube via `youtube-transcript-api` |
+| `src/translate_local.py` | Traduz transcrição para PT-BR via LLM local (`mlx-vlm`). Usado com `--local` |
+| `src/build_html.py` | Gera HTML referenciando `../css/style.css` e `../js/reader.js` |
 
 ## Arquivos compartilhados
 

@@ -8,11 +8,11 @@ Abra uma [issue](https://github.com/adhenawer/video-to-text/issues/new?template=
 
 ## Adicionar novo provider
 
-O projeto usa uma arquitetura de providers em `scripts/providers/`. Para adicionar suporte a uma nova plataforma (Vimeo, Instagram, etc.):
+O projeto usa uma arquitetura de providers em `src/providers/`. Para adicionar suporte a uma nova plataforma (Vimeo, Instagram, etc.):
 
-1. Crie `scripts/providers/novo_provider.py` implementando `detect()`, `extract_id()`, `fetch_transcript()`
-2. Registre em `scripts/providers/__init__.py`
-3. Teste com `python3 scripts/pipeline.py 'URL' --title 'Test' --subtitle 'Test' --slug 'test'`
+1. Crie `src/providers/novo_provider.py` implementando `detect()`, `extract_id()`, `fetch_transcript()`
+2. Registre em `src/providers/__init__.py`
+3. Teste com `python3 src/pipeline.py 'URL' --title 'Test' --subtitle 'Test' --slug 'test'`
 
 ## Melhorar traduções
 
