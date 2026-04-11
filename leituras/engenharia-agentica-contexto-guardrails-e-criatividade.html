@@ -14,24 +14,27 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Engenharia Agêntica: Contexto, Guardrails e Criatividade">
 <meta name="twitter:description" content="Este webinar da Port reúne Tomas (product solutions lead, background em DevSecOps e GitLab) e Zach (solution engineer para APJ, background em DevOps) para falar sobre engenharia agêntica na prática:...">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Engenharia Agêntica: Contexto, Guardrails e Criatividade", "description": "Este webinar da Port reúne Tomas (product solutions lead, background em DevSecOps e GitLab) e Zach (solution engineer para APJ, background em DevOps) para falar sobre engenharia agêntica na prática:...", "author": {"@type": "Person", "name": "Palestra técnica sobre Engenharia Agêntica"}, "publisher": {"@type": "Organization", "name": "Leituras — Podcasts & Vídeos Traduzidos"}, "inLanguage": "pt-BR", "isAccessibleForFree": true, "url": "https://youtu.be/l5zgfjXs6gQ", "articleSection": ["INTRODUÇÃO", "CONTEXTO: O QUE É E POR QUE É FUNDAMENTAL", "WORKFLOW 1: RESOLUÇÃO AUTÔNOMA DE TICKETS", "WORKFLOW 2: RESOLUÇÃO DE INCIDENTES COM SELF-HEALING", "GUARDRAILS E CONTROLE", "MEDINDO O ROI", "REUTILIZAÇÃO DE AGENTES E SKILLS REGISTRY"]}
+</script>
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="page-article" data-storage-key="reading_l5zgfjXs6gQ_">
 <div class="progress" id="progress"></div>
 <div class="reading-pct" id="readingPct"></div>
-<div class="container">
+<article class="container">
   <a href="../index.html" class="back-home">← Voltar ao índice</a>
   <header>
     <h1>Engenharia Agêntica: Contexto, Guardrails e Criatividade</h1>
-    <p class="meta">Palestra técnica sobre Engenharia Agêntica</p>
-    <p class="meta"><a href="https://youtu.be/l5zgfjXs6gQ" target="_blank">🎥 Assistir no YouTube</a></p>
+    <p class="meta"><cite>Palestra técnica sobre Engenharia Agêntica</cite></p>
+    <p class="meta"><a href="https://youtu.be/l5zgfjXs6gQ" target="_blank" rel="noopener">🎥 Assistir no YouTube</a></p>
   </header>
   <div class="theme-bar">
     <button class="theme-btn active" onclick="setTheme('light')">☀️ Sépia</button>
     <button class="theme-btn" onclick="setTheme('cool')">🌤️ Claro</button>
     <button class="theme-btn" onclick="setTheme('dark')">🌙 Escuro</button>
   </div>
-  <nav>
+  <nav aria-label="Índice do artigo">
 
     <h3>📑 Índice</h3>
     <ol>
@@ -45,6 +48,7 @@
     </ol>
   
   </nav>
+<section>
 <h2 id="s1">INTRODUÇÃO</h2>
 <p>Este webinar da Port reúne Tomas (product solutions lead, background em DevSecOps e GitLab) e Zach (solution engineer para APJ, background em DevOps) para falar sobre engenharia agêntica na prática: como dar contexto adequado aos agentes, implementar guardrails que previnem ações destrutivas, e medir o ROI dessas iniciativas.</p>
 <p>A pergunta inicial feita ao público — &ldquo;quando um agente de IA toma uma ação no seu workflow de engenharia, qual é sua maior preocupação?&rdquo; — teve dois grandes vencedores: &ldquo;não há guardrails suficientes para prevenir ações destrutivas&rdquo; e &ldquo;ainda não temos agentes de IA no nosso workflow.&rdquo;</p>
@@ -52,10 +56,14 @@
 <p>Nos últimos 10-15 anos, a indústria passou por DevOps, depois Platform Engineering — todas tentativas de simplificar e padronizar. Agora, com a adição de agentes de IA por cima dessa complexidade já existente, o caos cresce ainda mais rápido.</p>
 <p>Os quatro problemas centrais identificados pelas equipes ao tentar colocar agentes em produção: falta de visibilidade sobre o que os agentes estão fazendo, ausência de controle e supervisão humana, duplicação de trabalho entre engenheiros e agentes, e falta de guardrails reais.</p>
 <p>O problema adicional com o caos de agentes em organizações maiores é a fragmentação: cada time cria seus próprios agentes, cada um funciona de forma diferente, e não há um lugar centralizado onde você possa ver tudo. Um agente de triage construído por um time não pode ser reutilizado pelo próximo time — todo mundo reinventa a roda.</p>
+</section>
+<section>
 <h2 id="s2">CONTEXTO: O QUE É E POR QUE É FUNDAMENTAL</h2>
 <p>Quando você pede para um agente de IA fazer algo, ele parte com contexto zero. Ele não sabe qual é o seu stack de tecnologia, qual linguagem de programação você usa, quais ferramentas estão integradas, quem é o dono de cada serviço, quando foi o último deploy. Um prompt como &ldquo;implemente X&rdquo; sem contexto vai produzir um resultado genérico que pode ou não funcionar no seu ambiente.</p>
 <p>Contexto, nesse sentido, é tudo que um engenheiro experiente na sua empresa já saberia: a estrutura dos seus serviços, onde estão os repositórios, como os pull requests se relacionam com os serviços, quais são as convenções da organização, a topologia do sistema. Com contexto rico e preciso, você obtém respostas muito melhores dos agentes.</p>
 <p>A plataforma Port funciona como um &ldquo;plano de controle&rdquo; que agrega esse contexto de múltiplas fontes — Jira, GitHub, ferramentas de monitoramento, documentação — num &ldquo;context graph&rdquo; que os agentes podem consultar.</p>
+</section>
+<section>
 <h2 id="s3">WORKFLOW 1: RESOLUÇÃO AUTÔNOMA DE TICKETS</h2>
 <p>O primeiro caso de uso demonstrado é levar um item de trabalho da criação até a produção com automação agêntica. O processo inclui:</p>
 <p>Enriquecimento de contexto: quando um ticket chega, o sistema automaticamente busca todos os serviços relacionados, repositórios, pull requests históricos e pipelines relevantes. O item de trabalho não existe em isolamento — ele pertence a um serviço, que tem uma stack específica, um time responsável, um histórico de deploys.</p>
@@ -64,6 +72,8 @@
 <p>Execução via coding agent: a spec técnica é passada para um agente de código (Claude Code ou similar) para implementação.</p>
 <p>Review e deploy: o código gerado passa por revisão e segue para deploy.</p>
 <p>O trigger pode ser manual ou automático — assim que um ticket entra, o workflow começa.</p>
+</section>
+<section>
 <h2 id="s4">WORKFLOW 2: RESOLUÇÃO DE INCIDENTES COM SELF-HEALING</h2>
 <p>O segundo caso de uso é a gestão de incidentes — da emissão do alerta até a análise de causa raiz e postmortem. Tomas descreveu um incidente real onde um cluster Kubernetes afetou 20 microserviços com 20 donos diferentes. A pergunta crítica era: como reunir as pessoas certas rapidamente?</p>
 <p>Com o workflow de self-healing:</p>
@@ -73,22 +83,29 @@
 <p>Remediação: o agente pode executar ações como rollback de deployment ou sincronização via Argo CD.</p>
 <p>Postmortem automático: ao final, um agente de postmortem compila todos os dados do incidente, o triage, o que foi feito na remediação, e gera um documento de análise de causa raiz — economizando horas de trabalho chato, especialmente às 2 da manhã.</p>
 <p>Um insight importante: se 90 incidentes entre 100 têm a mesma causa raiz, os RCAs acumulados no Port permitem que o agente identifique isso e sugira melhorias sistêmicas, não apenas correções pontuais.</p>
+</section>
+<section>
 <h2 id="s5">GUARDRAILS E CONTROLE</h2>
 <p>A resposta para o medo de &ldquo;agentes fazendo ações destrutivas&rdquo; está em três camadas:</p>
 <p>Controle de contexto: ao controlar precisamente quais dados o agente pode acessar, você limita o espaço de ações possíveis. Um agente que só vê o ambiente de desenvolvimento não pode afetar produção.</p>
 <p>RBAC (controle de acesso baseado em papéis): a plataforma implementa permissões específicas para cada agente — este agente pode fazer deploy para dev, aquele pode fazer deploy para produção, nenhum pode acessar dados de clientes.</p>
 <p>Scorecards e compliance: é possível definir critérios obrigatórios para que certas ações sejam executadas. Um pull request só pode seguir para produção se passar por code scan, ter cobertura de código acima de 85%, e ter os unit tests passando. Os agentes operam dentro dessas restrições.</p>
 <p>Humano no loop: o workflow pode ser configurado para pausar e esperar aprovação humana em pontos críticos. Não é uma caixa preta — você consegue ver como o agente chegou a cada decisão.</p>
+</section>
+<section>
 <h2 id="s6">MEDINDO O ROI</h2>
 <p>A primeira recomendação é estabelecer uma baseline antes de implementar agentes. Meça agora: qual é o lead time médio de um ticket do Jira até produção? Quantas horas leva a resolução de incidentes? Quando você introduzir os agentes, a diferença entre o antes e o depois é o ROI demonstrável.</p>
 <p>Métricas de impacto para liderança: percentual de tickets resolvidos autonomamente (no exemplo do webinar, 64%), horas economizadas pelo workflow de ticket autônomo (17.000 horas no exemplo), número de incidentes resolvidos pelo agente de self-healing, redução do backlog de tickets de baixa prioridade (dívida técnica).</p>
 <p>Uma métrica mais sutil mas importante: se o número de incidentes resolvidos está caindo conforme o uso do self-healing aumenta, isso indica que o sistema está aprendendo e prevenindo problemas recorrentes, não apenas remediando.</p>
 <p>Para acessar os dados do Port de fora da plataforma (dashboards, relatórios para liderança), o Port oferece um servidor MCP que permite queries via Claude ou outros agentes usando linguagem natural — o que facilita criar relatórios sob demanda sem precisar de SQL ou APIs customizadas.</p>
+</section>
+<section>
 <h2 id="s7">REUTILIZAÇÃO DE AGENTES E SKILLS REGISTRY</h2>
 <p>Um dos problemas centrais do &ldquo;agent chaos&rdquo; é cada time reinventar agentes similares. A solução é uma skills registry centralizada — um repositório de agentes, prompts reutilizáveis e workflows padronizados que qualquer time pode consumir.</p>
 <p>É análogo a um Docker Registry para agentes: você registra o agente de triage, documenta o que ele faz, quais ferramentas ele usa, qual prompt base é utilizado. Outro time que precisa de triage não precisa construir do zero — consome o que já foi validado.</p>
 <p>A mesma lógica se aplica a workflows mais complexos: o workflow de segurança, o workflow de resolução de incidentes, o workflow de code review — todos podem ser versionados, compartilhados e refinados colaborativamente, garantindo que as boas práticas da organização sejam aplicadas consistentemente.</p>
-</div>
+</section>
+</article>
 <a href="#" class="back-top" id="backTop">↑</a>
 <div class="resume-banner" id="resumeBanner">
   <span id="resumeText">📖 Continuar de onde parou</span>

@@ -14,6 +14,9 @@ video-to-text/
 │   └── style.css               ← CSS centralizado (temas, index, artigos)
 ├── js/
 │   └── reader.js               ← JS compartilhado de leitura (tema, progresso, resume)
+├── robots.txt                  ← permite crawling, aponta para sitemap
+├── sitemap.xml                 ← URLs para Google (atualizar ao adicionar artigo)
+├── llms.txt                    ← índice para crawlers de LLMs (atualizar ao adicionar artigo)
 ├── requirements.txt            ← dependências Python (mlx, mlx-lm, yt-dlp, mlx-whisper, ...)
 ├── scripts/
 │   ├── providers/              ← abstração multi-provider (YouTube, Twitter/X, ...)
@@ -240,6 +243,18 @@ Gerados automaticamente pelo `build_html.py` a partir do conteúdo traduzido.
 Arquivos de SEO no root:
 - `robots.txt` — permite crawling, aponta para sitemap
 - `sitemap.xml` — lista todas as URLs de artigos (atualizar ao adicionar novo artigo)
+
+### LLMO (Otimização para LLMs)
+
+O `build_html.py` gera automaticamente:
+- **JSON-LD** (schema.org `Article`) — headline, description, author, sections, inLanguage
+- **HTML semântico** — `<article>`, `<section>`, `<nav aria-label>`, `<cite>`, `<figure>`
+- **Parágrafos auto-contidos** — cada parágrafo faz sentido sozinho (citável por LLMs)
+- **`rel="noopener"`** em links externos
+
+Arquivo `llms.txt` no root — convenção para crawlers de LLMs (similar a robots.txt):
+- Lista todos os artigos com título, fonte, seções e resumo
+- Atualizar ao adicionar novo artigo
 
 ### Atualizar sitemap ao adicionar artigo
 

@@ -2,6 +2,7 @@
 *.txt
 !requirements.txt
 !robots.txt
+!llms.txt
 __pycache__/
 *.pyc
 .venv/

@@ -14,24 +14,27 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Como Construí um Sistema de Suporte ao Cliente com IA de Nível Produção">
 <meta name="twitter:description" content="Este tutorial mostra na prática como usar o Claude Code para construir um sistema de suporte ao cliente por e-mail — do zero até uma aplicação funcionando localmente, em tempo real, sem cortes. O...">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Como Construí um Sistema de Suporte ao Cliente com IA de Nível Produção", "description": "Este tutorial mostra na prática como usar o Claude Code para construir um sistema de suporte ao cliente por e-mail — do zero até uma aplicação funcionando localmente, em tempo real, sem cortes. O...", "author": {"@type": "Person", "name": "Usando Claude Code — Tutorial prático"}, "publisher": {"@type": "Organization", "name": "Leituras — Podcasts & Vídeos Traduzidos"}, "inLanguage": "pt-BR", "isAccessibleForFree": true, "url": "https://youtu.be/fzrvx_1-9_o", "articleSection": ["INTRODUÇÃO", "CONFIGURANDO O CLAUDE CODE", "ERROS E DEBUGGING NA PRÁTICA", "RESULTADO FINAL", "LIÇÕES DO PROCESSO"]}
+</script>
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="page-article" data-storage-key="reading_fzrvx_1-9_o_">
 <div class="progress" id="progress"></div>
 <div class="reading-pct" id="readingPct"></div>
-<div class="container">
+<article class="container">
   <a href="../index.html" class="back-home">← Voltar ao índice</a>
   <header>
     <h1>Como Construí um Sistema de Suporte ao Cliente com IA de Nível Produção</h1>
-    <p class="meta">Usando Claude Code — Tutorial prático</p>
-    <p class="meta"><a href="https://youtu.be/fzrvx_1-9_o" target="_blank">🎥 Assistir no YouTube</a></p>
+    <p class="meta"><cite>Usando Claude Code — Tutorial prático</cite></p>
+    <p class="meta"><a href="https://youtu.be/fzrvx_1-9_o" target="_blank" rel="noopener">🎥 Assistir no YouTube</a></p>
   </header>
   <div class="theme-bar">
     <button class="theme-btn active" onclick="setTheme('light')">☀️ Sépia</button>
     <button class="theme-btn" onclick="setTheme('cool')">🌤️ Claro</button>
     <button class="theme-btn" onclick="setTheme('dark')">🌙 Escuro</button>
   </div>
-  <nav>
+  <nav aria-label="Índice do artigo">
 
     <h3>📑 Índice</h3>
     <ol>
@@ -43,9 +46,12 @@
     </ol>
   
   </nav>
+<section>
 <h2 id="s1">INTRODUÇÃO</h2>
 <p>Este tutorial mostra na prática como usar o Claude Code para construir um sistema de suporte ao cliente por e-mail — do zero até uma aplicação funcionando localmente, em tempo real, sem cortes. O instrutor é Sunnonni Savvita, mentor de tecnologia na PwC.</p>
 <p>O projeto escolhido é um agente de e-mail inteligente: recebe mensagens, classifica por tipo e urgência, gera respostas automáticas usando IA e exibe tudo numa interface web com inbox e API docs. Um sistema completo, não um tutorial simplificado.</p>
+</section>
+<section>
 <h2 id="s2">CONFIGURANDO O CLAUDE CODE</h2>
 <p>O Claude Code pode ser instalado de quatro formas: via terminal/CLI (comando npm install -g @anthropic-ai/claude-code), via extensão do VS Code, via aplicativo desktop (disponível para Windows, Mac e Linux), ou pela versão web. O tutorial cobre as duas primeiras opções.</p>
 <p>Para Windows, há um requisito importante: o Git precisa estar instalado antes do Claude Code, porque ele usa o Git Bash internamente para executar comandos em background. Sem o Git, o Claude Code não consegue executar os scripts que gera.</p>
@@ -61,11 +67,15 @@
 <p>Knowledge base: sistema RAG básico com documentos de suporte, usando embeddings para busca semântica. Inicialmente gerou com sentence-transformers (modelo local) mas foi reconfigurado para usar embeddings da OpenAI.</p>
 <p>Interface web: três páginas — formulário para testar e-mails com campos de remetente, assunto e corpo; inbox mostrando todos os e-mails processados com status e metadados; e documentação interativa das APIs (Swagger-style).</p>
 <p>API completa: rotas para submeter e-mail, consultar inbox, verificar status de processamento, e acessar os logs do agente.</p>
+</section>
+<section>
 <h2 id="s3">ERROS E DEBUGGING NA PRÁTICA</h2>
 <p>O tutorial não corta os erros — e isso é valioso para entender o que esperar do vibe coding na prática.</p>
 <p>Problema com o arquivo .env: o agente gerou o código referenciando variáveis de ambiente com nomes diferentes dos que o usuário tinha configurado. O agente ficou editando o .env automaticamente (porque o modo &ldquo;auto-accept&rdquo; estava ativado), o que causou confusão — a chave da API sendo sobrescrita repetidamente.</p>
 <p>Problema com o modelo OpenAI: o agente configurou inicialmente com sentence-transformers para embeddings. Quando o usuário pediu para mudar para OpenAI, o agente precisou de algumas iterações para acertar o nome correto do modelo (`gpt-4-turbo-preview` vs variantes).</p>
 <p>A lição explícita do tutorial: quando você dá autonomia total ao agente para editar arquivos, ele vai editar o .env também. Para valores sensíveis como chaves de API, é mais seguro usar o modo &ldquo;ask before edit&rdquo; em vez de &ldquo;auto-accept&rdquo;.</p>
+</section>
+<section>
 <h2 id="s4">RESULTADO FINAL</h2>
 <p>Depois de resolver as questões de configuração e API key, o sistema funcionou como esperado:</p>
 <p>- E-mails submetidos pelo formulário são classificados por categoria e urgência</p>
@@ -73,12 +83,15 @@
 <p>- Toda a conversa fica logada no inbox com detalhes: remetente, assunto, corpo, classificação, keywords identificadas, resposta gerada, status de envio</p>
 <p>- A parte de envio real de e-mail falhou (esperado — precisaria das credenciais da API Gmail), mas o fluxo completo de processamento e geração de resposta funcionou</p>
 <p>O que ficou de fora para o próximo vídeo: deploy na AWS com infraestrutura como código e CI/CD via GitHub Actions.</p>
+</section>
+<section>
 <h2 id="s5">LIÇÕES DO PROCESSO</h2>
 <p>Plano sobre execução: antes de aprovar um plano que o Claude Code gera, leia com atenção. Se algo estiver claramente errado, corrija antes de apertar &ldquo;approve&rdquo;. Uma vez que começa a executar, o agente segue o plano — e corrigir no meio custa mais tokens do que ajustar o plano antes.</p>
 <p>Compact mode: quando o contexto fica grande e você está perto do limite de tokens, ativar o &ldquo;compact&rdquo; faz o agente criar um resumo comprimido do trabalho feito, liberando espaço para continuar. Útil para projetos longos.</p>
 <p>Limites de tokens são reais: o agente consumiu 100% do limite numa sessão de 2 horas construindo um sistema moderadamente complexo. Para projetos maiores, considere dividir em múltiplas sessões ou usar planos com limites maiores.</p>
 <p>Vibe coding tem limites: o instructor mostra honestamente que código gerado sem especificação precisa — especialmente para integração com serviços externos como Gmail API ou configurações de variáveis de ambiente — vai precisar de ajuste manual. Quanto mais específico e técnico for o domínio, mais você precisa guiar o agente com detalhes.</p>
-</div>
+</section>
+</article>
 <a href="#" class="back-top" id="backTop">↑</a>
 <div class="resume-banner" id="resumeBanner">
   <span id="resumeText">📖 Continuar de onde parou</span>

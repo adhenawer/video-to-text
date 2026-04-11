@@ -124,7 +124,7 @@ def make_html(vid_id, title, subtitle, url, txt_path,
     body_html = '\n'.join(html_parts)
     storage_key = f'reading_{vid_id}_'
 
-    # Extract first paragraph as description for SEO
+    # Extract first paragraph as description for SEO/LLMO
     first_para = ""
     for part in html_parts:
         if part.startswith('<p>'):
@@ -132,9 +132,42 @@ def make_html(vid_id, title, subtitle, url, txt_path,
             first_para = first_para[:200].rsplit(' ', 1)[0] + "..." if len(first_para) > 200 else first_para
             break
 
-    # Determine canonical URL
-    slug_name = ""
-    # Will be set by caller or inferred from output path
+    # Collect section titles for JSON-LD
+    section_titles = [re.sub(r'<[^>]+>', '', t) for t in toc_parts]
+
+    # Escape quotes for JSON
+    desc_json = first_para.replace('"', '\\"')
+    title_json = title.replace('"', '\\"')
+    subtitle_json = subtitle.replace('"', '\\"')
+
+    # JSON-LD structured data (Article schema)
+    jsonld = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": title,
+        "description": first_para,
+        "author": {"@type": "Person", "name": subtitle.split("·")[0].strip() if "·" in subtitle else subtitle},
+        "publisher": {"@type": "Organization", "name": "Leituras — Podcasts & Vídeos Traduzidos"},
+        "inLanguage": "pt-BR",
+        "isAccessibleForFree": True,
+        "url": url,
+        "articleSection": section_titles,
+    }, ensure_ascii=False)
+
+    # Wrap body content in semantic <article> with <section> tags
+    semantic_parts = []
+    in_section = False
+    for part in html_parts:
+        if part.startswith('<h2 '):
+            if in_section:
+                semantic_parts.append('</section>')
+            semantic_parts.append('<section>')
+            in_section = True
+        semantic_parts.append(part)
+    if in_section:
+        semantic_parts.append('</section>')
+
+    body_html = '\n'.join(semantic_parts)
 
     return f'''<!DOCTYPE html>
 <html lang="pt-BR">
@@ -152,31 +185,34 @@ def make_html(vid_id, title, subtitle, url, txt_path,
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{first_para}">
+<script type="application/ld+json">
+{jsonld}
+</script>
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="page-article" data-storage-key="{storage_key}">
 <div class="progress" id="progress"></div>
 <div class="reading-pct" id="readingPct"></div>
-<div class="container">
+<article class="container">
   <a href="../index.html" class="back-home">← Voltar ao índice</a>
   <header>
     <h1>{title}</h1>
-    <p class="meta">{subtitle}</p>
-    <p class="meta"><a href="{url}" target="_blank">{link_text}</a></p>
+    <p class="meta"><cite>{subtitle}</cite></p>
+    <p class="meta"><a href="{url}" target="_blank" rel="noopener">{link_text}</a></p>
   </header>
   <div class="theme-bar">
     <button class="theme-btn active" onclick="setTheme('light')">☀️ Sépia</button>
     <button class="theme-btn" onclick="setTheme('cool')">🌤️ Claro</button>
     <button class="theme-btn" onclick="setTheme('dark')">🌙 Escuro</button>
   </div>
-  <nav>
+  <nav aria-label="Índice do artigo">
     <h3>📑 Índice</h3>
     <ol>
 {toc_html}
     </ol>
   </nav>
 {body_html}
-</div>
+</article>
 <a href="#" class="back-top" id="backTop">↑</a>
 <div class="resume-banner" id="resumeBanner">
   <span id="resumeText">📖 Continuar de onde parou</span>

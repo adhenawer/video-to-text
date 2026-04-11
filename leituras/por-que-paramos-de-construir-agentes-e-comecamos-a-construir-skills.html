@@ -14,24 +14,27 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Por Que Paramos de Construir Agentes e Começamos a Construir Skills">
 <meta name="twitter:description" content="Eu sou Barry, e este é Mahesh. Nós criamos o Agent Skills. Nesta palestra, vamos mostrar por que paramos de construir agentes e começamos a construir skills.">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Por Que Paramos de Construir Agentes e Começamos a Construir Skills", "description": "Eu sou Barry, e este é Mahesh. Nós criamos o Agent Skills. Nesta palestra, vamos mostrar por que paramos de construir agentes e começamos a construir skills.", "author": {"@type": "Person", "name": "Barry Zhang & Mahesh Sathiamoorthy"}, "publisher": {"@type": "Organization", "name": "Leituras — Podcasts & Vídeos Traduzidos"}, "inLanguage": "pt-BR", "isAccessibleForFree": true, "url": "https://x.com/Av1dlive/status/2042172428127002906", "articleSection": ["INTRODUÇÃO", "DIVULGAÇÃO PROGRESSIVA", "TENDÊNCIAS EMERGENTES", "COMPARTILHAMENTO E DISTRIBUIÇÃO", "APRENDIZADO CONTÍNUO", "ANALOGIA COM SISTEMAS OPERACIONAIS", "CONCLUSÃO"]}
+</script>
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="page-article" data-storage-key="reading_2042172428127002906_">
 <div class="progress" id="progress"></div>
 <div class="reading-pct" id="readingPct"></div>
-<div class="container">
+<article class="container">
   <a href="../index.html" class="back-home">← Voltar ao índice</a>
   <header>
     <h1>Por Que Paramos de Construir Agentes e Começamos a Construir Skills</h1>
-    <p class="meta">Barry Zhang & Mahesh Sathiamoorthy · Anthropic</p>
-    <p class="meta"><a href="https://x.com/Av1dlive/status/2042172428127002906" target="_blank">🐦 Ver no Twitter/X</a></p>
+    <p class="meta"><cite>Barry Zhang & Mahesh Sathiamoorthy · Anthropic</cite></p>
+    <p class="meta"><a href="https://x.com/Av1dlive/status/2042172428127002906" target="_blank" rel="noopener">🐦 Ver no Twitter/X</a></p>
   </header>
   <div class="theme-bar">
     <button class="theme-btn active" onclick="setTheme('light')">☀️ Sépia</button>
     <button class="theme-btn" onclick="setTheme('cool')">🌤️ Claro</button>
     <button class="theme-btn" onclick="setTheme('dark')">🌙 Escuro</button>
   </div>
-  <nav>
+  <nav aria-label="Índice do artigo">
     <h3>📑 Índice</h3>
     <ol>
 <li><a href="#s1">INTRODUÇÃO</a></li>
@@ -43,6 +46,7 @@
 <li><a href="#s7">CONCLUSÃO</a></li>
     </ol>
   </nav>
+<section>
 <h2 id="s1">INTRODUÇÃO</h2>
 <p>Eu sou Barry, e este é Mahesh. Nós criamos o Agent Skills. Nesta palestra, vamos mostrar por que paramos de construir agentes e começamos a construir skills.</p>
 <p>Muita coisa mudou desde a nossa última palestra. O MCP se tornou o padrão para conectividade de agentes. O Claude Code, nosso primeiro agente de código, foi lançado e conquistou o mundo. E nosso Claude Agent SDK agora oferece um agente pronto para produção direto da caixa.</p>
@@ -61,6 +65,8 @@
 <p>Elas também funcionam com o que você já tem. Você pode versioná-las no Git, jogar no Google Drive e compactá-las para compartilhar com seu time. Usamos arquivos como primitivo por décadas, e gostamos deles. Então por que mudar agora?</p>
 <p>Skills também podem incluir scripts como ferramentas. Ferramentas tradicionais têm problemas óbvios: algumas têm instruções mal escritas e ambíguas, e quando o modelo está com dificuldade, não consegue realmente fazer uma mudança na ferramenta. E elas sempre vivem na janela de contexto.</p>
 <p>Código resolve alguns desses problemas. É auto-documentado, é modificável, e pode viver no sistema de arquivos até ser realmente necessário. Aqui está um exemplo: continuávamos vendo o Claude escrever o mesmo script Python repetidamente para aplicar estilos em slides. Então pedimos ao Claude para salvá-lo dentro da skill como uma ferramenta para seu eu futuro. Agora podemos simplesmente executar o script, o que torna tudo mais consistente e eficiente.</p>
+</section>
+<section>
 <h2 id="s2">DIVULGAÇÃO PROGRESSIVA</h2>
 <p>Neste ponto, skills podem conter muita informação. E queremos proteger a janela de contexto para que possamos encaixar centenas de skills e torná-las verdadeiramente componíveis. Por isso, skills são progressivamente divulgadas.</p>
 <p>Em tempo de execução, apenas os metadados são mostrados ao modelo, apenas para indicar que ele tem a skill. Quando um agente precisa usar uma skill, pode ler o resto do skill.md, que contém a instrução central e o diretório para o resto da pasta. Todo o resto é apenas organizado para facilitar o acesso.</p>
@@ -70,6 +76,8 @@
 <p>**Skills Fundamentais** são aquelas que dão aos agentes novas capacidades gerais ou específicas de domínio que não tinham antes. Nós mesmos construímos skills de documentos que dão ao Claude a capacidade de criar e editar documentos Office de qualidade profissional. Também estamos empolgados em ver empresas como a Cadence construir skills de pesquisa científica que dão ao Claude novas capacidades como análise de dados de prontuários eletrônicos e uso de bibliotecas Python de bioinformática.</p>
 <p>**Skills de Terceiros** são construídas por parceiros no ecossistema. O BrowserBase construiu uma skill para sua ferramenta open source de automação de browser, StageHand. Agora o Claude equipado com essa skill pode navegar na web e usar um browser mais efetivamente. E a Notion lançou várias skills que ajudam o Claude a entender melhor seu workspace e fazer pesquisa profunda sobre todo o seu workspace.</p>
 <p>**Skills Empresariais** são específicas de empresa e time. Temos conversado com empresas Fortune 100 que usam skills como forma de ensinar agentes sobre suas melhores práticas organizacionais e os jeitos peculiares e únicos que usam software interno sob medida. Também conversamos com times muito grandes de produtividade de desenvolvedores, atendendo milhares ou dezenas de milhares de desenvolvedores, que usam skills para implantar agentes como Claude Code e ensiná-los sobre práticas de estilo de código e outras formas que querem que seus desenvolvedores trabalhem internamente.</p>
+</section>
+<section>
 <h2 id="s3">TENDÊNCIAS EMERGENTES</h2>
 <p>Conforme esse ecossistema cresceu, começamos a observar tendências interessantes.</p>
 <p>Primeiro, skills estão ficando mais complexas. A skill mais básica hoje ainda pode ser um arquivo skill.md com alguns prompts e instruções básicas. Mas estamos vendo skills que empacotam software, executáveis, binários, arquivos, código, scripts, assets e muito mais. Muitas skills sendo construídas hoje podem levar minutos ou horas para criar. Mas acreditamos que, cada vez mais, assim como muito do software que usamos hoje, essas skills podem levar semanas ou meses para construir e manter.</p>
@@ -85,25 +93,34 @@
 <p>**Testes e avaliação.** Conforme ficam mais complexas, queremos realmente apoiar desenvolvedores e empresas tratando skills como tratamos software. Isso significa explorar melhor ferramentas para garantir que agentes estão carregando e acionando skills no momento certo e para a tarefa certa, e ferramentas para medir a qualidade de saída de um agente equipado com uma skill.</p>
 <p>**Versionamento.** Conforme uma skill evolui e o comportamento resultante do agente evolui, queremos que isso seja claramente rastreado e tenha uma linhagem clara ao longo do tempo.</p>
 <p>**Dependências.** Também gostaríamos de explorar skills que possam explicitamente depender de e referenciar outras skills, servidores MCP e dependências dentro do ambiente do agente. Acreditamos que isso vai tornar agentes muito mais previsíveis em diferentes ambientes de execução, e a composabilidade de múltiplas skills juntas vai ajudar agentes como Claude a extrair comportamentos ainda mais complexos e relevantes.</p>
+</section>
+<section>
 <h2 id="s4">COMPARTILHAMENTO E DISTRIBUIÇÃO</h2>
 <p>Uma parte enorme do valor das skills virá do compartilhamento e distribuição. A visão que mais nos empolga é a de uma base de conhecimento coletiva e em evolução de capacidades, curada por pessoas e agentes dentro de uma organização.</p>
 <p>Skills fornecem o conhecimento procedimental para seus agentes fazerem coisas úteis. Conforme você interage com um agente e dá feedback e mais conhecimento institucional, ele começa a melhorar. E todos os agentes dentro do seu time e da sua organização melhoram também.</p>
 <p>Quando alguém entra no seu time e começa a usar o Claude pela primeira vez, ele já sabe com o que seu time se importa. Sabe sobre o seu dia a dia e sabe como ser mais eficaz para o trabalho que você está fazendo.</p>
 <p>Conforme esse ecossistema se desenvolve ainda mais, esse valor composto vai se estender para além da sua organização e para a comunidade mais ampla. Assim como quando alguém do outro lado do mundo constrói um servidor MCP que torna seu agente mais útil, uma skill construída por outra pessoa na comunidade vai ajudar a tornar seus próprios agentes mais capazes, confiáveis e úteis.</p>
+</section>
+<section>
 <h2 id="s5">APRENDIZADO CONTÍNUO</h2>
 <p>Essa visão de uma base de conhecimento em evolução fica ainda mais poderosa quando o Claude começa a criar essas skills por conta própria. Projetamos skills especificamente como passos concretos em direção ao aprendizado contínuo.</p>
 <p>Quando você começa a usar o Claude, esse formato padronizado dá uma garantia muito importante: qualquer coisa que o Claude escreve pode ser usada eficientemente por uma versão futura de si mesmo. Isso torna o aprendizado realmente transferível.</p>
 <p>Conforme você constrói o contexto, skills tornam o conceito de memória mais tangível. Elas não capturam tudo — apenas conhecimento procedimental que o Claude pode usar em tarefas específicas. A flexibilidade das skills importa ainda mais: o Claude pode adquirir novas capacidades instantaneamente, evoluí-las conforme necessário e descartar as que se tornam obsoletas. O poder do aprendizado em contexto torna isso muito mais custo-efetivo para informações que mudam diariamente.</p>
 <p>Nosso objetivo é que o Claude no dia 30 trabalhando com você seja muito melhor que o Claude no dia um. O Claude já pode criar skills para você hoje usando nossa skill criadora de skills, e vamos continuar avançando nessa direção.</p>
+</section>
+<section>
 <h2 id="s6">ANALOGIA COM SISTEMAS OPERACIONAIS</h2>
 <p>A transição que vemos é similar ao que aconteceu com processadores de computador. Processadores por si só eram úteis, mas quando começamos a construir sistemas operacionais, o SO tornou os processadores muito mais valiosos ao orquestrar processos, recursos e dados ao redor do processador.</p>
 <p>Em IA, acreditamos que o runtime do agente está começando a desempenhar esse papel. Todos estamos tentando construir as abstrações mais limpas, eficientes e escaláveis para colocar os tokens certos dentro e fora do modelo.</p>
 <p>Mas uma vez que temos uma plataforma, o valor real vem das aplicações. Poucas empresas constroem processadores e sistemas operacionais, mas milhões de desenvolvedores como nós construíram softwares que codificam expertise de domínio e nossos pontos de vista únicos. Esperamos que skills possam nos ajudar a abrir essa camada para todos.</p>
 <p>É aqui que ficamos criativos e resolvemos problemas concretos para nós mesmos, uns para os outros e para o mundo, simplesmente colocando coisas em uma pasta.</p>
+</section>
+<section>
 <h2 id="s7">CONCLUSÃO</h2>
 <p>Skills são apenas o ponto de partida. Acreditamos que estamos convergindo para essa arquitetura geral para agentes gerais. Criamos skills como um novo paradigma para distribuir e compartilhar novas capacidades.</p>
 <p>Então achamos que é hora de parar de reconstruir agentes e começar a construir skills. Se você está empolgado com isso, venha trabalhar conosco e comece a construir algumas skills hoje.</p>
-</div>
+</section>
+</article>
 <a href="#" class="back-top" id="backTop">↑</a>
 <div class="resume-banner" id="resumeBanner">
   <span id="resumeText">📖 Continuar de onde parou</span>

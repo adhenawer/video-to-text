@@ -14,24 +14,27 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Engenheiro Sênior Demonstra Fluxo de Desenvolvimento com Especificações de IA">
 <meta name="twitter:description" content="Sam Breed é ex-engenheiro staff sênior no Credit Karma e atualmente sócio na Sutter Hill Ventures. Ele é um dos engenheiros principais construindo o app Intent e participou do início da Augment...">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Engenheiro Sênior Demonstra Fluxo de Desenvolvimento com Especificações de IA", "description": "Sam Breed é ex-engenheiro staff sênior no Credit Karma e atualmente sócio na Sutter Hill Ventures. Ele é um dos engenheiros principais construindo o app Intent e participou do início da Augment...", "author": {"@type": "Person", "name": "Live — Desenvolvimento Guiado por Especificação com IA"}, "publisher": {"@type": "Organization", "name": "Leituras — Podcasts & Vídeos Traduzidos"}, "inLanguage": "pt-BR", "isAccessibleForFree": true, "url": "https://www.youtube.com/live/Ednpn1mjKiY", "articleSection": ["INTRODUÇÃO", "INTEGRAÇÃO FIGMA MCP NA PRÁTICA", "ARQUITETURA DO TIME DE AGENTES", "WORK TREES: O MODELO MENTAL CERTO", "VERIFICAÇÃO E QUALIDADE DO CÓDIGO", "MÚLTIPLAS JANELAS E FLUXO DE TRABALHO", "SUPORTE A MONOREPOS E CUSTOMIZAÇÃO CORPORATIVA"]}
+</script>
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="page-article" data-storage-key="reading_Ednpn1mjKiY_">
 <div class="progress" id="progress"></div>
 <div class="reading-pct" id="readingPct"></div>
-<div class="container">
+<article class="container">
   <a href="../index.html" class="back-home">← Voltar ao índice</a>
   <header>
     <h1>Engenheiro Sênior Demonstra Fluxo de Desenvolvimento com Especificações de IA</h1>
-    <p class="meta">Live — Desenvolvimento Guiado por Especificação com IA</p>
-    <p class="meta"><a href="https://www.youtube.com/live/Ednpn1mjKiY" target="_blank">🎥 Assistir no YouTube</a></p>
+    <p class="meta"><cite>Live — Desenvolvimento Guiado por Especificação com IA</cite></p>
+    <p class="meta"><a href="https://www.youtube.com/live/Ednpn1mjKiY" target="_blank" rel="noopener">🎥 Assistir no YouTube</a></p>
   </header>
   <div class="theme-bar">
     <button class="theme-btn active" onclick="setTheme('light')">☀️ Sépia</button>
     <button class="theme-btn" onclick="setTheme('cool')">🌤️ Claro</button>
     <button class="theme-btn" onclick="setTheme('dark')">🌙 Escuro</button>
   </div>
-  <nav>
+  <nav aria-label="Índice do artigo">
 
     <h3>📑 Índice</h3>
     <ol>
@@ -45,6 +48,7 @@
     </ol>
   
   </nav>
+<section>
 <h2 id="s1">INTRODUÇÃO</h2>
 <p>Sam Breed é ex-engenheiro staff sênior no Credit Karma e atualmente sócio na Sutter Hill Ventures. Ele é um dos engenheiros principais construindo o app Intent e participou do início da Augment quando ela ainda se chamava Eigor. Nesta live com AJ, lead de conteúdo técnico da Augment, Sam demonstra ao vivo como um engenheiro sênior realmente trabalha com IA em 2025 — construindo um site completo a partir de um design Figma usando o Intent e o MCP do Figma.</p>
 <p>O PROJETO: DE FIGMA PARA SITE EM TEMPO REAL</p>
@@ -53,10 +57,14 @@
 <p>A FILOSOFIA DAS PRIMEIRAS JOGADAS</p>
 <p>Uma prática central de Sam é fazer as &ldquo;primeiras jogadas&rdquo; do projeto manualmente: inicializar os frameworks que quer usar (neste caso, Astro e Tailwind CSS) antes de passar o controle ao agente.</p>
 <p>O motivo é prático: o training data dos modelos pode ter meses de defasagem. Para garantir que você está usando as versões mais recentes de frameworks sem escolhas enterradas no modelo há seis meses, vale a pena rodar os init commands você mesmo. Isso também &ldquo;planta&rdquo; as preferências do desenvolvedor no projeto — o agente vai então seguir os padrões que você estabeleceu, não os defaults genéricos que ele escolheria sozinho.</p>
+</section>
+<section>
 <h2 id="s2">INTEGRAÇÃO FIGMA MCP NA PRÁTICA</h2>
 <p>A integração do Figma com o Intent via MCP funciona através de um servidor local na porta 3845. O fluxo atual exige um pouco de trabalho manual: você precisa ir ao Figma, usar o modo desenvolvedor (Shift+D), clicar com o botão direito nos frames e copiar os links diretos para os artboards que quer incluir no contexto.</p>
 <p>Com esses links, o Intent consegue ler diretamente o design system, extrair cores customizadas, tokens de tipografia, espaçamentos, gradientes e estrutura das páginas. O agente reconhece automaticamente a versão do Tailwind (v4 vs v3) e gera os arquivos de configuração corretos.</p>
 <p>A sugestão é não exagerar na quantidade de servidores MCP ativos simultaneamente. Cada servidor adiciona definições de ferramentas ao system prompt, consumindo contexto. Dois ou três servidores bem escolhidos funcionam muito melhor do que uma &ldquo;árvore de Natal&rdquo; com onze ao mesmo tempo.</p>
+</section>
+<section>
 <h2 id="s3">ARQUITETURA DO TIME DE AGENTES</h2>
 <p>O Intent opera com uma equipe de agentes especializados:</p>
 <p>O Coordenador é o ponto de partida padrão e o modo de uso mais recomendado. Você dá a ele um objetivo de alto nível — mesmo algo vago como &ldquo;olha esse problema e arruma&rdquo; — e ele escreve um spec detalhado com sub-tarefas. Você pode revisar o plano antes de aprovar ou simplesmente mandar executar.</p>
@@ -64,24 +72,33 @@
 <p>O Verificador faz um passo de revisão ao final, checando o que foi feito contra os requisitos — no caso do Figma, literalmente comparando o site gerado com os artboards originais.</p>
 <p>O Desenvolvedor é um agente híbrido que combina planejamento e execução em thread única — mais adequado para tarefas simples e diretas que não precisam de paralelismo.</p>
 <p>Você também pode criar especialistas customizados. O UI Designer specialist, por exemplo, foi criado para fazer um passo específico de extração de design tokens — porque os agentes genéricos têm tendência a usar valores inline de Tailwind (pixels hardcoded) em vez dos tokens do sistema de design, especialmente se encontrarem esse padrão em algum lugar do código existente.</p>
+</section>
+<section>
 <h2 id="s4">WORK TREES: O MODELO MENTAL CERTO</h2>
 <p>Git work trees existem desde 2015, mas a maioria dos desenvolvedores não sabia que eram uma coisa até recentemente. Sam só descobriu no ano passado — mesmo usando Git desde 2008.</p>
 <p>A ideia é simples: work trees permitem ter múltiplos branches do mesmo repositório em disco ao mesmo tempo, em diretórios separados. O Intent usa isso para criar workspaces isolados para cada tarefa, onde o agente pode trabalhar sem interferir no seu código principal.</p>
 <p>O mental model correto é tratar work trees como objetos temporários. Eles nascem, ficam vivos enquanto a tarefa está em progresso, e somem quando você faz o merge. Se um work tree vive por dias ou semanas, você provavelmente vai precisar fazer merge do main de volta nele periodicamente pelo terminal. Você não pode fazer checkout do mesmo branch que está aberto num work tree — se quiser ver o código em outra branch, precisa fazer merge.</p>
 <p>O Intent facilita isso colocando o terminal como cidadão de primeira classe na interface e tornando o caminho dos work trees facilmente acessível. Você pode trabalhar diretamente num branch sem work tree ativando a opção &ldquo;Work directly on this branch&rdquo; na tela inicial.</p>
+</section>
+<section>
 <h2 id="s5">VERIFICAÇÃO E QUALIDADE DO CÓDIGO</h2>
 <p>Para verificar o trabalho gerado sem executar testes formais, Sam usa uma abordagem baseada em vibes para tarefas de webdev mais leves: o servidor de desenvolvimento está rodando, ele olha o resultado visualmente, passa linting e formatação, e confia na etapa de verificação do agente para pegar o resto.</p>
 <p>Para duplicação de código — um problema real com agentes — a solução mais eficaz que ele encontrou é criar um workspace dedicado com a instrução de &ldquo;encontrar código duplicado no repo, verificar utilitários, garantir que as abstrações estão certas&rdquo;. A maioria dos codebases grandes vai ter alguma duplicação e uma pesquisa ativa geralmente encontra algo.</p>
 <p>O Sentry é um dos fluxos favoritos de Sam para tarefas cotidianas. Conectar o Sentry ao Intent permite dizer &ldquo;big dog, corrije esse erro&rdquo; com link para o issue — e o agente vai resolver. O modo &ldquo;rapid fire&rdquo; cria um workspace em background e você pode checar o progresso quando quiser.</p>
+</section>
+<section>
 <h2 id="s6">MÚLTIPLAS JANELAS E FLUXO DE TRABALHO</h2>
 <p>Uma dica importante que Sam não conseguiu demonstrar na live por limitações de screen sharing: ele normalmente tem quatro ou cinco janelas do Intent abertas ao mesmo tempo, cada uma com um workspace ou work tree diferente.</p>
 <p>O atalho Command+Shift+N para abrir nova janela está &ldquo;tatuado no cérebro&rdquo; dele. Isso permite monitorar múltiplos agentes trabalhando em paralelo em diferentes partes do projeto.</p>
 <p>O Intent não substitui a IDE — Sam ainda abre o VS Code para revisar código, especialmente quando vai escrever código manualmente. A CLI do Augment também é muito usada para perguntas rápidas sobre o codebase e tarefas diretas e bem definidas. O Intent adiciona a camada de orquestração, planejamento e paralelismo que a CLI não tem.</p>
+</section>
+<section>
 <h2 id="s7">SUPORTE A MONOREPOS E CUSTOMIZAÇÃO CORPORATIVA</h2>
 <p>Para empresas que querem customizar o comportamento dos agentes com frameworks internos, padrões de código e conhecimento de domínio específico: o padrão é usar arquivos de regras (tipo AGENTS.md ou equivalentes). Esses arquivos são sempre incluídos no contexto do agente.</p>
 <p>Monorepos funcionam muito bem com o Augment — o motor de contexto foi construído para lidar com repositórios grandes e complexos com múltiplos projetos e documentação interna. Se o monorepo tem padrões de codificação e documentação, os agentes vão usá-los.</p>
 <p>Os prompts dos agentes são visíveis e editáveis dentro do próprio Intent. Não há system prompt secreto — você pode ver exatamente como cada especialista está configurado, modificar o comportamento, e resetar para os defaults se quiser.</p>
-</div>
+</section>
+</article>
 <a href="#" class="back-top" id="backTop">↑</a>
 <div class="resume-banner" id="resumeBanner">
   <span id="resumeText">📖 Continuar de onde parou</span>
