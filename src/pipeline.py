@@ -83,13 +83,13 @@ def main():
     video_id = provider.extract_id(args.url)
     transcript_path = f"/tmp/transcript_{video_id}.txt"
     translated_path = f"/tmp/{video_id}_pt.txt"
-    html_path = os.path.join(PROJECT_DIR, "leituras", f"{args.slug}.html")
+    html_path = os.path.join(PROJECT_DIR, "docs", "leituras", f"{args.slug}.html")
 
     # Slides setup
     slides_dir = None
     slides_json = None
     if args.slides:
-        slides_dir = os.path.join(PROJECT_DIR, "img", args.slug)
+        slides_dir = os.path.join(PROJECT_DIR, "docs", "img", args.slug)
         os.makedirs(slides_dir, exist_ok=True)
         slides_json = f"/tmp/{video_id}_slides.json"
 
@@ -178,11 +178,11 @@ def main():
     print(f"  HTML:     {html_path}")
     print(f"{'=' * 60}")
     print(f"\nPróximos passos:")
-    print(f"  1. Adicionar card no index.html")
+    print(f"  1. Adicionar card no docs/index.html")
     if args.slides:
-        print(f"  2. git add leituras/{args.slug}.html img/{args.slug}/ index.html")
+        print(f"  2. git add docs/leituras/{args.slug}.html docs/img/{args.slug}/ docs/index.html")
     else:
-        print(f"  2. git add leituras/{args.slug}.html index.html")
+        print(f"  2. git add docs/leituras/{args.slug}.html docs/index.html")
     print(f"  3. git commit -m 'feat: adiciona artigo — {args.title}'")
 
 

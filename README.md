@@ -193,15 +193,15 @@ python3 src/build_html.py \
   'Fonte / Canal' \
   'https://youtu.be/owmJyKVu5f8' \
   /tmp/owmJyKVu5f8_pt.txt \
-  leituras/slug-do-titulo.html
+  docs/leituras/slug-do-titulo.html
 ```
 
 **5. O card é adicionado ao índice**
-O agente edita `index.html` inserindo o novo card com título, descrição e link.
+O agente edita `docs/index.html` inserindo o novo card com título, descrição e link.
 
 **6. Commit e push**
 ```bash
-git add leituras/slug-do-titulo.html index.html
+git add docs/docs/leituras/slug-do-titulo.html index.html
 git commit -m 'feat: adiciona artigo — Título do Vídeo'
 git push
 ```

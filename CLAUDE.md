@@ -9,14 +9,17 @@ video-to-text/
 ├── CLAUDE.md
 ├── README.md
 ├── .gitignore
-├── index.html                  ← índice com todos os artigos (usa css/style.css)
-├── css/
-│   └── style.css               ← CSS centralizado (temas, index, artigos)
-├── js/
-│   └── reader.js               ← JS compartilhado de leitura (tema, progresso, resume)
-├── robots.txt                  ← permite crawling, aponta para sitemap
-├── sitemap.xml                 ← URLs para Google (atualizar ao adicionar artigo)
-├── llms.txt                    ← índice para crawlers de LLMs (atualizar ao adicionar artigo)
+├── docs/                     ← frontend estático (GitHub Pages serve daqui)
+│   ├── index.html              ← índice com todos os artigos
+│   ├── css/
+│   │   └── style.css           ← CSS centralizado (temas, index, artigos)
+│   ├── js/
+│   │   └── reader.js           ← JS de leitura (tema, progresso, resume)
+│   ├── img/                    ← slides extraídos de apresentações
+│   ├── leituras/               ← artigos HTML individuais
+│   ├── robots.txt              ← permite crawling, aponta para sitemap
+│   ├── sitemap.xml             ← URLs para Google
+│   └── llms.txt                ← índice para crawlers de LLMs
 ├── tests/                      ← testes unitários (pytest, TDD obrigatório)
 ├── requirements.txt            ← dependências Python (mlx, mlx-lm, yt-dlp, mlx-whisper, ...)
 ├── src/                        ← pacote Python principal
@@ -31,18 +34,6 @@ video-to-text/
 │       ├── __init__.py         ← registry: detect_provider(url)
 │       ├── youtube.py          ← YouTube: youtube-transcript-api
 │       └── twitter.py          ← Twitter/X: yt-dlp + mlx-whisper
-└── leituras/                   ← artigos individuais (usam ../css/style.css + ../js/reader.js)
-    ├── chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html
-    ├── estado-da-ia-2026-ponto-de-inflexao-simon-willison.html
-    ├── praticas-de-engenharia-para-agentes-de-codigo-simon-willison.html
-    ├── de-ides-para-agentes-de-ia-steve-yegge.html
-    ├── engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia.html
-    ├── um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code.html
-    ├── do-prompt-a-producao-o-que-e-engenharia-agentica.html
-    ├── engenharia-agentica-contexto-guardrails-e-criatividade.html
-    ├── como-construi-sistema-suporte-cliente-ia-nivel-producao.html
-    ├── fluxos-de-trabalho-agenticos-don-syme.html
-    └── roteiro-engenheiro-ia-para-desenvolvedores-de-software.html
 ```
 
 ## Rodar localmente
@@ -149,12 +140,12 @@ python3 src/build_html.py \
   'Subtítulo / Fonte' \
   'https://youtu.be/VIDEO_ID' \
   /tmp/VIDEO_ID_pt.txt \
-  leituras/slug-do-titulo.html
+  docs/leituras/slug-do-titulo.html
 ```
 
-### 4. Adicionar card no index.html
+### 4. Adicionar card no docs/index.html
 
-Inserir novo `<a class="card">` em `index.html` com:
+Inserir novo `<a class="card">` em `docs/index.html` com:
 - `href="leituras/slug-do-titulo.html"`
 - Título, meta (fonte, autor), descrição resumida
 - `<div class="progress-info" id="p-VIDEOID"></div>`
@@ -163,7 +154,7 @@ Inserir novo `<a class="card">` em `index.html` com:
 ### 5. Commit
 
 ```bash
-git add leituras/slug-do-titulo.html index.html
+git add docs/leituras/slug-do-titulo.html docs/index.html
 git commit -m 'feat: adiciona artigo — Título do Vídeo'
 ```
 

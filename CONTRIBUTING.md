@@ -16,7 +16,7 @@ O projeto usa uma arquitetura de providers em `src/providers/`. Para adicionar s
 
 ## Melhorar traduções
 
-Se encontrar erros de tradução nos artigos, abra um PR corrigindo diretamente o HTML em `leituras/`.
+Se encontrar erros de tradução nos artigos, abra um PR corrigindo diretamente o HTML em `docs/leituras/`.
 
 ## Desenvolvimento local
 
