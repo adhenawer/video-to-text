@@ -59,7 +59,7 @@ class TwitterProvider:
             "-o", output_path,
             url,
         ]
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
         if result.returncode != 0:
             raise RuntimeError(f"yt-dlp falhou: {result.stderr.strip()}")
 
