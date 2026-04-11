@@ -17,6 +17,7 @@ video-to-text/
 ├── robots.txt                  ← permite crawling, aponta para sitemap
 ├── sitemap.xml                 ← URLs para Google (atualizar ao adicionar artigo)
 ├── llms.txt                    ← índice para crawlers de LLMs (atualizar ao adicionar artigo)
+├── tests/                      ← testes unitários (pytest, TDD obrigatório)
 ├── requirements.txt            ← dependências Python (mlx, mlx-lm, yt-dlp, mlx-whisper, ...)
 ├── src/                        ← pacote Python principal
 │   ├── __init__.py             ← marca como pacote
@@ -270,6 +271,44 @@ Após adicionar um novo artigo, atualizar `sitemap.xml` adicionando:
   <priority>0.8</priority>
 </url>
 ```
+
+## Testes (TDD obrigatório)
+
+Toda nova implementação DEVE seguir TDD:
+
+1. **RED** — escreva o teste primeiro, rode `pytest`, veja falhar
+2. **GREEN** — implemente o mínimo para o teste passar
+3. **REFACTOR** — limpe o código mantendo testes verdes
+
+```bash
+# Rodar todos os testes
+python3 -m pytest tests/ -v
+
+# Rodar um módulo específico
+python3 -m pytest tests/test_providers.py -v
+
+# Rodar um teste específico
+python3 -m pytest tests/test_build_html.py::TestJsonLd::test_jsonld_headline -v
+```
+
+### Estrutura de testes
+
+```
+tests/
+├── __init__.py
+├── conftest.py              ← fixtures compartilhadas (tmp_dir, sample_translated_txt, etc.)
+├── test_providers.py        ← providers: detect, extract_id, timestamps, registry
+├── test_build_html.py       ← HTML: estrutura, SEO, JSON-LD, semântica, slides, TOC
+├── test_extract_slides.py   ← slides: timestamps, JSON, matching
+└── test_pipeline.py         ← pipeline: detecção de provider, interface
+```
+
+### Regras
+
+- Novos providers DEVEM ter testes de `detect()` e `extract_id()` com URLs válidas e inválidas
+- Novas features no `build_html.py` DEVEM ter teste verificando o HTML gerado
+- Funções utilitárias (formatação, parsing) DEVEM ter testes de edge cases
+- Usar fixtures do `conftest.py` para dados de teste (não criar arquivos manualmente)
 
 ## Convenções
 
