@@ -1,6 +1,6 @@
 # video-to-text
 
-Transforma vídeos e podcasts do YouTube em artigos de leitura — traduzidos para português brasileiro, organizados por seções e publicados como HTML estático.
+Transforma vídeos e podcasts do YouTube e Twitter/X em artigos de leitura — traduzidos para português brasileiro, organizados por seções e publicados como HTML estático.
 
 ## Por que criei o projeto 
 
@@ -14,28 +14,45 @@ A ideia é consumir o conteúdo pelo celular, então o formato importa. Cada art
 
 ## Como funciona
 
-O fluxo é inteiramente conversacional via **[Hermes](https://github.com/NousResearch/hermes-agent) + Claude**. Basta mandar a URL de um vídeo do YouTube no chat (WhatsApp, Telegram ou terminal):
+O pipeline detecta automaticamente o provider pela URL e usa a estratégia correta para obter a transcrição:
 
 ```
-https://youtu.be/VIDEO_ID
+URL do vídeo (YouTube, Twitter/X)
+    ↓
+scripts/providers/               — detecta provider, captura transcrição
+  ├── youtube.py                 — legendas via youtube-transcript-api
+  └── twitter.py                 — áudio via yt-dlp → transcrição via mlx-whisper
+    ↓
+Claude (tradução)                — traduz para PT-BR, remove timestamps/ads/ruídos,
+                                   organiza em seções temáticas
+    ↓
+scripts/build_html.py            — gera o HTML com o design system do projeto
+    ↓
+index.html                       — card adicionado ao índice com descrição e progresso
+    ↓
+Artigo publicado                 — acessível localmente ou via GitHub Pages
 ```
 
-O agente cuida de tudo automaticamente:
+---
 
-```
-URL do YouTube
-    ↓
-scripts/fetch_transcript.py   — captura a transcrição via youtube-transcript-api
-    ↓
-Claude (tradução)             — traduz para PT-BR, remove timestamps/ads/ruídos,
-                                organiza em seções temáticas
-    ↓
-scripts/build_html.py         — gera o HTML com o design system do projeto
-    ↓
-index.html                    — card adicionado ao índice com descrição e progresso
-    ↓
-Artigo publicado              — acessível localmente ou via GitHub Pages
-```
+## Arquitetura multi-provider
+
+O sistema usa uma abstração de providers em `scripts/providers/` que permite suportar diferentes fontes de vídeo. Cada provider implementa:
+
+| Método | Descrição |
+|--------|-----------|
+| `detect(url)` | Retorna `True` se o provider reconhece a URL |
+| `extract_id(url)` | Extrai o ID único do vídeo/tweet |
+| `fetch_transcript(url)` | Retorna texto com timestamps no formato padrão |
+
+### Providers disponíveis
+
+| Provider | Fonte | Estratégia |
+|----------|-------|------------|
+| **YouTube** | `youtube.com`, `youtu.be` | Legendas via `youtube-transcript-api` |
+| **Twitter/X** | `x.com`, `twitter.com` | Download de áudio via `yt-dlp` + transcrição local via `mlx-whisper` (Apple Silicon) |
+
+Para adicionar um novo provider (ex: Vimeo), basta criar um novo módulo em `scripts/providers/` e registrá-lo em `__init__.py`.
 
 ---
 
@@ -45,8 +62,9 @@ Artigo publicado              — acessível localmente ou via GitHub Pages
 |--------|-----------|
 | Interface | [Hermes](https://github.com/NousResearch/hermes-agent) — agente via WhatsApp/CLI |
 | Modelo | Claude (Anthropic) via Hermes |
-| Transcrição | [youtube-transcript-api](https://github.com/jdepoix/youtube-transcript-api) |
-| Tradução / organização | Claude (LLM) |
+| Transcrição (YouTube) | [youtube-transcript-api](https://github.com/jdepoix/youtube-transcript-api) |
+| Transcrição (Twitter/X) | [yt-dlp](https://github.com/yt-dlp/yt-dlp) + [mlx-whisper](https://github.com/ml-explore/mlx-examples) |
+| Tradução / organização | Claude (LLM) ou Gemma 4 local (mlx-lm) |
 | Build | `scripts/build_html.py` — Python puro, sem dependências externas |
 | Frontend | HTML estático — zero frameworks, zero build steps |
 | Hosting | GitHub Pages ou qualquer servidor estático |
@@ -92,7 +110,8 @@ Escaneie o QR code com o WhatsApp. Depois de conectado, você envia URLs direto 
 ```bash
 git clone https://github.com/<SEU-USUARIO>/video-to-text
 cd video-to-text
-pip install youtube-transcript-api
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
 ### 5. Rodar o servidor local
@@ -102,6 +121,41 @@ python3 -m http.server 8080
 # http://localhost:8080
 # Rede local (celular): http://<SEU-IP-LOCAL>:8080
 ```
+
+---
+
+## Uso via pipeline
+
+### YouTube (Claude traduz)
+
+```bash
+python3 scripts/pipeline.py \
+  'https://youtu.be/VIDEO_ID' \
+  --title 'Título do Artigo' \
+  --subtitle 'Fonte / Canal' \
+  --slug 'slug-do-titulo'
+```
+
+### Twitter/X (Claude traduz)
+
+```bash
+python3 scripts/pipeline.py \
+  'https://x.com/user/status/TWEET_ID' \
+  --title 'Título do Artigo' \
+  --subtitle 'Fonte / Canal' \
+  --slug 'slug-do-titulo'
+```
+
+### Tradução local (Gemma 4)
+
+```bash
+python3 scripts/pipeline.py \
+  'URL_DO_VIDEO' \
+  --title 'Título' --subtitle 'Fonte' --slug 'slug' \
+  --local
+```
+
+O pipeline detecta o provider automaticamente pela URL.
 
 ---
 
@@ -119,6 +173,8 @@ https://youtu.be/owmJyKVu5f8
 python3 scripts/fetch_transcript.py 'https://youtu.be/owmJyKVu5f8' \
   --text-only --timestamps > /tmp/transcript_owmJyKVu5f8.txt
 ```
+
+Para Twitter/X, o pipeline usa `yt-dlp` para baixar o áudio e `mlx-whisper` para transcrever localmente no Apple Silicon.
 
 **3. Claude traduz e organiza**
 O agente lê a transcrição e produz um `.txt` limpo em português brasileiro, dividido em seções temáticas, sem timestamps, propagandas ou vícios de linguagem oral.
@@ -172,3 +228,5 @@ git push
 9. [Como construí um sistema de suporte ao cliente com IA de nível produção](https://adhenawer.github.io/video-to-text/leituras/como-construi-sistema-suporte-cliente-ia-nivel-producao.html)
 10. [Fluxos de trabalho agênticos — Don Syme](https://adhenawer.github.io/video-to-text/leituras/fluxos-de-trabalho-agenticos-don-syme.html)
 11. [Roteiro: engenheiro de IA para desenvolvedores de software](https://adhenawer.github.io/video-to-text/leituras/roteiro-engenheiro-ia-para-desenvolvedores-de-software.html)
+12. [Política corporativa em tech — Ethan Evans (ex-VP Amazon)](https://adhenawer.github.io/video-to-text/leituras/politica-corporativa-tech-tudo-que-ninguem-te-conta.html)
+13. [Por que paramos de construir agentes e começamos a construir skills — Anthropic](https://adhenawer.github.io/video-to-text/leituras/por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills.html) *(via Twitter/X)*
