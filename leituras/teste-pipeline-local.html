@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>De IDEs para Agentes de IA — Teste Local</title>
+<meta name="description" content="Steve Yagi, um renomado engenheiro de software com 40 anos de experiência na Amazon e Google, compartilha suas observações sobre a evolução da indústria, a ascensão da IA e o futuro do trabalho em...">
+<meta name="author" content="Steve Yegge — Sourcegraph (Gemma 12B)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="De IDEs para Agentes de IA — Teste Local">
+<meta property="og:description" content="Steve Yagi, um renomado engenheiro de software com 40 anos de experiência na Amazon e Google, compartilha suas observações sobre a evolução da indústria, a ascensão da IA e o futuro do trabalho em...">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Leituras  Podcasts &amp; Vdeos Traduzidos">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="De IDEs para Agentes de IA — Teste Local">
+<meta name="twitter:description" content="Steve Yagi, um renomado engenheiro de software com 40 anos de experiência na Amazon e Google, compartilha suas observações sobre a evolução da indústria, a ascensão da IA e o futuro do trabalho em...">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="page-article" data-storage-key="reading_aFsAOu2bgFk_">
+<div class="progress" id="progress"></div>
+<div class="reading-pct" id="readingPct"></div>
+<div class="container">
+  <a href="../index.html" class="back-home">← Voltar ao índice</a>
+  <header>
+    <h1>De IDEs para Agentes de IA — Teste Local</h1>
+    <p class="meta">Steve Yegge — Sourcegraph (Gemma 12B)</p>
+    <p class="meta"><a href="https://youtu.be/aFsAOu2bgFk" target="_blank">🎥 Assistir no YouTube</a></p>
+  </header>
+  <div class="theme-bar">
+    <button class="theme-btn active" onclick="setTheme('light')">☀️ Sépia</button>
+    <button class="theme-btn" onclick="setTheme('cool')">🌤️ Claro</button>
+    <button class="theme-btn" onclick="setTheme('dark')">🌙 Escuro</button>
+  </div>
+  <nav>
+    <h3>📑 Índice</h3>
+    <ol>
+<li><a href="#s1">SOFTWARE ENGINEERING NO FUTURO: A PERSPECTIVA DE STEVE YAGI</a></li>
+<li><a href="#s2">OS OITO NÍVEIS DE ADOÇÃO DE IA PARA ENGENHEIROS</a></li>
+<li><a href="#s3">GAS TOWN: UM ORQUESTRADOR DE AGENTES DE IA</a></li>
+<li><a href="#s4">SUB-AGENTES VERSUS GAS TOWN</a></li>
+<li><a href="#s5">ESTRUTURAS DE CODIGO: MONOLITOS VERSUS GAS TOWN</a></li>
+<li><a href="#s6">APLICAÇÕES PRÁTICAS DE GAS TOWN</a></li>
+<li><a href="#s7">MISCONCEPTIONS SOBRE GAS TOWN</a></li>
+<li><a href="#s8">PREDIÇÕES PARA 2027</a></li>
+    </ol>
+  </nav>
+<h2 id="s1">SOFTWARE ENGINEERING NO FUTURO: A PERSPECTIVA DE STEVE YAGI</h2>
+<p>Steve Yagi, um renomado engenheiro de software com 40 anos de experiência na Amazon e Google, compartilha suas observações sobre a evolução da indústria, a ascensão da IA e o futuro do trabalho em software. Ele apresenta um modelo de oito níveis de adoção de IA para engenheiros, desde a ausência de IA até a execução de múltiplos agentes em paralelo, e discute a necessidade de adaptação em um cenário de rápidas mudanças.</p>
+<h2 id="s2">OS OITO NÍVEIS DE ADOÇÃO DE IA PARA ENGENHEIROS</h2>
+<p>Yagi descreve um modelo de oito níveis para a adoção de IA por engenheiros, ilustrando como a maioria ainda está nos níveis iniciais.</p>
+<p>*   **Nível 1:** Sem IA.</p>
+<p>*   **Nível 2:** Uso de &ldquo;sim&rdquo; ou &ldquo;não&rdquo; para interações com IA.</p>
+<p>*   **Nível 3:** Experimentação com a IA em IDEs.</p>
+<p>*   **Nível 4:** O engenheiro se sente entediado enquanto o agente de IA está ocupado.</p>
+<p>*   **Nível 5:** O engenheiro está usando a IA, mas ainda revisa o código manualmente em seu IDE.</p>
+<p>*   **Nível 6:** O engenheiro está sobrecarregado, gerenciando múltiplos agentes simultaneamente.</p>
+<p>*   **Nível 7:** O engenheiro lida com o caos e os erros resultantes da coordenação de agentes.</p>
+<p>*   **Nível 8:** O engenheiro está otimizando o desempenho e a eficiência dos agentes.</p>
+<p>Yagi observa que a maioria dos engenheiros está presa nos níveis mais baixos e que a transição para níveis mais avançados requer uma mudança de mentalidade e a adoção de novas ferramentas e processos.</p>
+<p>O EFEITO VAMPIRO DA IA E O DECLÍNIO DA PRODUTIVIDADE</p>
+<p>Yagi alerta para o &ldquo;efeito vampiro&rdquo; da IA, onde a empolgação inicial com as novas tecnologias leva a um esforço excessivo e, eventualmente, ao esgotamento. Ele relata que muitos engenheiros e líderes de startups estão experimentando fadiga e uma diminuição na produtividade real, apesar do hype em torno da IA.</p>
+<p>A MORTE DA INOVAÇÃO EM GRANDES EMPRESAS E A ASCENSÃO DE EQUIPES PEQUENAS</p>
+<p>Yagi prevê que a inovação em grandes empresas de tecnologia está morrendo, argumentando que equipes pequenas de 2 a 20 pessoas serão capazes de superar a produção das grandes empresas. Ele acredita que a agilidade e a capacidade de adaptação de equipes menores permitirão que elas inovem mais rapidamente e se adaptem às mudanças do mercado.</p>
+<p>A IMPORTÂNCIA DE ENTENDER COMO OS COMPILADORES FUNCIONAM</p>
+<p>Yagi enfatiza a importância de entender como os compiladores funcionam, argumentando que essa compreensão é fundamental para se tornar um engenheiro de software eficiente. Ele cita um caso em que um estudante que leu seu artigo sobre &ldquo;Rich Programmer Food&rdquo; se tornou um especialista em compiladores e fundou uma startup de sucesso.</p>
+<p>A EVOLUÇÃO DAS HABILIDADES NECESSÁRIAS PARA ENGENHEIROS</p>
+<p>Yagi discute como as habilidades necessárias para engenheiros de software evoluíram ao longo do tempo. Ele destaca como o conhecimento de assembly era essencial no passado, mas hoje em dia, a capacidade de manipular bits é menos relevante. Ele argumenta que os engenheiros devem estar preparados para se adaptar a novas tecnologias e paradigmas, pois as habilidades necessárias estão em constante mudança.</p>
+<h2 id="s3">GAS TOWN: UM ORQUESTRADOR DE AGENTES DE IA</h2>
+<p>Yagi descreve Gas Town como um orquestrador de agentes de IA, onde os agentes executam agentes. Ele compara a situação a um &ldquo;efeito vampírico&rdquo;, onde os agentes estão constantemente esperando por você.</p>
+<p>A NECESSIDADE DE UMA INTERFACE DE USUÁRIO (UI) MELHOR</p>
+<p>Yagi acredita que a próxima grande evolução na IA será o desenvolvimento de interfaces de usuário (UIs) mais intuitivas e fáceis de usar. Ele prevê que, no futuro, as pessoas interagirão com a IA por meio de &ldquo;rosto&rdquo;, como um &ldquo;prefeito&rdquo; de uma cidade, que coordenará os agentes e fornecerá informações.</p>
+<p>A IMPORTÂNCIA DE EXPERIMENTAR COM A IA</p>
+<p>Yagi encoraja os engenheiros a experimentar com a IA e a não terem medo de falhar. Ele acredita que a chave para o sucesso é estar disposto a tentar coisas novas e a aprender com os erros.</p>
+<p>O FUTURO DA PROGRAMAÇÃO: A MORTE DO IDE?</p>
+<p>Yagi questiona a relevância contínua das IDEs tradicionais, sugerindo que elas podem se tornar obsoletas à medida que a IA assume um papel maior na escrita de código. Ele prevê um futuro onde a programação será feita principalmente por meio de conversas com agentes de IA.</p>
+<p>A EXPERIÊNCIA COM GAS TOWN</p>
+<p>O palestrante descreve Gas Town como um &ldquo;grande experimento&rdquo;, um ambiente onde ele construiu algo deliberadamente que não funcionava bem, buscando testar os limites dos modelos de linguagem. Ele relata que Gas Town expôs as limitações dos modelos, como Opus 4.5, e revelou a necessidade de &ldquo;workarounds&rdquo; para lidar com bugs. A experiência demonstrou que os modelos não foram treinados para serem &ldquo;trabalhadores de fábrica&rdquo; e que a complexidade e os papéis de monitoramento em Gas Town provavelmente se simplificarão, convergindo para papéis mais básicos de &ldquo;crew&rdquo; (tripulação) e &ldquo;pole cats&rdquo; (gatos polegar).</p>
+<h2 id="s4">SUB-AGENTES VERSUS GAS TOWN</h2>
+<p>O palestrante diferencia os sub-agentes dos agentes em Gas Town. Enquanto os sub-agentes são opacos e funcionam de forma independente, Gas Town permite que os usuários observem e interajam com os agentes individualmente, como &ldquo;pole cats&rdquo; (gatos polegar), ajustando seu desempenho através de &ldquo;skill vectors&rdquo; (vetores de habilidade). Essa abordagem &ldquo;hands-on&rdquo; (na mão) oferece um nível de controle e direcionamento que os sub-agentes não proporcionam.</p>
+<p>O IMPACTO DE GAS TOWN NA CONVERSA SOBRE ORQUESTRAÇÃO</p>
+<p>O palestrante destaca o impacto de Gas Town em mudar a percepção sobre a &ldquo;orquestração&rdquo; de agentes de IA. Inicialmente, a ideia era vista como inviável, mas Gas Town ajudou a mudar a conversa, levando as pessoas a reconhecerem a possibilidade de &ldquo;swarms&rdquo; (enxames) e orquestração. Embora ainda haja ceticismo sobre a capacidade de &ldquo;swarms&rdquo; para realizar tarefas específicas, a conversa evoluiu de um cenário de impossibilidade para um de possibilidade.</p>
+<h2 id="s5">ESTRUTURAS DE CODIGO: MONOLITOS VERSUS GAS TOWN</h2>
+<p>O palestrante argumenta que a adoção de IA será mais desafiadora para empresas que operam com &ldquo;monolitos&rdquo; (estruturas de código grandes e complexas). Ele sugere que, para aproveitar ao máximo a IA, as empresas precisam quebrar seus monolitos ou reescrevê-los do zero.</p>
+<h2 id="s6">APLICAÇÕES PRÁTICAS DE GAS TOWN</h2>
+<p>O palestrante menciona uma conversa com uma empresa que constrói data centers sob medida. A empresa identificou que Gas Town poderia ser usado para automatizar e otimizar o processo de instalação de software, que atualmente exige &ldquo;três meses de botões pressionados miseravelmente&rdquo;. Além disso, uma outra empresa notou que seus sistemas já estão em um estado &ldquo;indeterminado e quebrado&rdquo; durante as interrupções, sugerindo que a IA poderia potencialmente acelerar a resolução de problemas.</p>
+<p>O FUTURO: 100 GAS TOWNS E FEDERAÇÃO</p>
+<p>O palestrante planeja conectar 100 instâncias de Gas Town para construir algo em conjunto com uma comunidade no Discord, usando tokens para financiar a inferência dos agentes. Ele acredita que isso levará a uma compreensão da &ldquo;federação&rdquo; e resultará em algo &ldquo;remarcável&rdquo;, comparável à versão &ldquo;povo&rdquo; do MoltHub.</p>
+<h2 id="s7">MISCONCEPTIONS SOBRE GAS TOWN</h2>
+<p>O palestrante adverte que as pessoas devem ter cuidado ao usar Gas Town, reservando-o para fins de pesquisa ou para aqueles que realmente entendem que se trata apenas de um &ldquo;proof of concept&rdquo; (prova de conceito).</p>
+<p>O TRABALHO DE CODIFICAÇÃO: A ABORDAGEM DO PALESTRANTE</p>
+<p>O palestrante descreve sua abordagem de codificação com Gas Town como algo diferente de sua carreira anterior, onde ele se preocupava com a &ldquo;elegância&rdquo; do código. Agora, ele permite que os agentes escrevam o código, buscando descobrir os limites do que esses modelos podem construir de forma produtiva.</p>
+<p>A MUDANÇA DE PARADIGMA NA CONSTRUÇÃO DE SOFTWARE</p>
+<p>O palestrante discute como a capacidade de criar protótipos rapidamente com a ajuda da IA está mudando a forma como os softwares são construídos. O modelo tradicional de &ldquo;lean startup&rdquo; (startup enxuta), que envolvia a criação de um protótipo e seu descarte, está sendo substituído por uma abordagem em que os protótipos são construídos e lançados diretamente.</p>
+<p>O IMPACTO NA CULTURA DE TRABALHO: O &ldquo;VAMPIRISMO&rdquo; DA IA</p>
+<p>O palestrante alerta para um efeito &ldquo;vampírico&rdquo; da IA, onde ela pode levar as pessoas a trabalhar excessivamente e se sentirem esgotadas. Ele sugere que as empresas precisam encontrar maneiras de garantir que os funcionários capturem parte do valor que criam com a IA, em vez de simplesmente serem explorados.</p>
+<p>A MORTE DA INOVAÇÃO EM GRANDES EMPRESAS</p>
+<p>O palestrante acredita que a inovação está morrendo em grandes empresas, que se tornaram &ldquo;monolíticas&rdquo; e territorialistas. Ele sugere que a inovação está ocorrendo nas &ldquo;frentes&rdquo;, em startups menores e em projetos como Gas Town.</p>
+<p>A IMPORTÂNCIA DE SABER DIZER NÃO</p>
+<p>Diante do aumento da produtividade proporcionado pela IA, o palestrante enfatiza a importância de aprender a dizer &ldquo;não&rdquo; e de estabelecer limites para evitar o esgotamento.</p>
+<p>A NOVA REALIDADE: A NECESSIDADE DE REESCREVER STACKS DE CODIGO</p>
+<p>O palestrante argumenta que, para aproveitar ao máximo a IA, as empresas precisam estar dispostas a reescrever seus &ldquo;stacks&rdquo; (pilhas) de código do zero.</p>
+<p>A ERA DOS &ldquo;HERESIES&rdquo; (HEREGES)</p>
+<p>O palestrante introduz o conceito de &ldquo;heresias&rdquo; em sistemas de IA, que são ideias ou abordagens que, embora incorretas, podem se enraizar e se espalhar em um sistema. Ele sugere que é importante documentar essas &ldquo;heresias&rdquo; e evitar que elas se propaguem.</p>
+<p>A UTILE DE AGENTES DE IA</p>
+<p>O palestrante discute a importância de ter agentes de IA que possam realizar tarefas de forma independente e eficiente. Ele acredita que a capacidade de automatizar tarefas repetitivas e demoradas liberará os engenheiros para se concentrarem em tarefas mais estratégicas.</p>
+<p>A ABANDONO DE PREMISSAS TRADICIONAIS</p>
+<p>O palestrante fala sobre como a IA está desafiando premissas tradicionais sobre a engenharia de software. Ele questiona a necessidade de seguir um processo de desenvolvimento rigoroso e sugere que a capacidade de experimentar e iterar rapidamente com a IA está mudando a forma como o software é construído.</p>
+<p>O FUTURO DO OPEN SOURCE</p>
+<p>O palestrante prevê que o open source se tornará mais fragmentado, com as pessoas remixando e modificando projetos existentes em vez de criar projetos do zero. Ele também espera que o &ldquo;fork&rdquo; (bifurcação) se torne um evento comum, à medida que as pessoas experimentam e adaptam projetos existentes.</p>
+<p>A IMPORTÂNCIA DA INOVAÇÃO NAS FRONTEIRAS</p>
+<p>O palestrante enfatiza que a inovação está ocorrendo nas &ldquo;frentes&rdquo;, em startups menores e em projetos como Gas Town. Ele acredita que as grandes empresas estão lutando para se adaptar à nova realidade da IA.</p>
+<p>A DEMOCRATIZAÇÃO DO SOFTWARE</p>
+<p>Steve Krouse discorreu sobre a democratização do software, comparando a situação atual com a história da indústria de software, onde inicialmente era um privilégio de engenheiros. Ele acredita que a capacidade de todos criarem seu próprio software, seja para uso pessoal ou comercial, está mudando a dinâmica da indústria.</p>
+<p>Krouse mencionou a possibilidade de cada pessoa ter um &ldquo;agente&rdquo; pessoal, como o Open Claw ou Gas Town, rodando em seus dispositivos, eliminando a necessidade de depender de soluções corporativas tradicionais. Ele previu um futuro onde o software será comum e de alta qualidade, com uma variedade de opções disponíveis.</p>
+<p>O FUTURO DO OPEN SOURCE</p>
+<p>Krouse observou que o open source está passando por uma transformação, com um aumento no remixing e na utilização de IA para fazer alterações em projetos existentes. Ele mencionou que muitas pessoas estão simplesmente pegando projetos de código aberto, pedindo à IA para fazer alterações e, em seguida, publicando-os como código aberto.</p>
+<p>Ele comparou essa tendência à prática de &ldquo;fork&rdquo; no desenvolvimento de software, que antes era um ato de desafio. Agora, Krouse acredita que o &ldquo;fork&rdquo; se tornará um evento comum, facilitado pela redução do esforço necessário para manter um fork e integrá-lo de volta ao projeto original.</p>
+<p>A REINVENÇÃO DO DESENVOLVIMENTO DE SOFTWARE</p>
+<p>Krouse acredita que a indústria de software está passando por uma mudança de paradigma semelhante à revolução da fotografia, onde antes era necessário conhecimento especializado para tirar uma foto, mas agora qualquer pessoa pode fazer isso. Ele prevê que a seleção de software hoje em dia é terrível, com soluções SAS e aplicativos de companhias aéreas sendo particularmente ruins.</p>
+<p>Ele citou o exemplo de um desenvolvedor que criou um aplicativo de check-in de companhias aéreas para o Android e o colocou na fila da Google, apenas para ser desativado pela Southwest Airlines. Krouse acredita que as pessoas querem software personalizado e sob medida, e que essa demanda será atendida.</p>
+<p>O LEGADO DO &ldquo;ENGINEER&rdquo;</p>
+<p>Krouse questionou a crença de que engenheiros são especiais, argumentando que eles simplesmente aprenderam a fazer algo que os computadores agora podem fazer. No entanto, ele acredita que a busca incessante por novos softwares nunca diminuirá e que o software atual é &ldquo;lixo&rdquo;.</p>
+<p>Ele previu que veremos um mundo onde o software será comum e de alta qualidade, com uma variedade de opções disponíveis.</p>
+<p>A ERA DOS AGENTES</p>
+<p>Krouse acredita que as pessoas que escrevem software que os agentes gostam, preferem e escolhem vão prosperar. Ele previu que todos serão dependentes de agentes e que a capacidade de lidar com software ruim será delegada a eles.</p>
+<p>Ele mencionou a importância de criar software que os agentes possam usar e que seja fácil de encontrar e integrar.</p>
+<p>O QUE NÃO PODE SER CLONADO</p>
+<p>Ao discutir o futuro da indústria de software em um mundo onde qualquer software pode ser clonado trivialmente, Krouse argumentou que as conexões humanas serão a principal &ldquo;moat&rdquo; (vantagem competitiva). Ele acredita que as pessoas continuarão a querer interação humana, mesmo que o software se torne mais automatizado.</p>
+<p>Ele também mencionou a história do &ldquo;mechanical turk&rdquo; como um exemplo de como a automação pode levar a novas profissões.</p>
+<p>O FUTURO DO DEBUGGING E DO DESENVOLVIMENTO</p>
+<p>Krouse previu que a escrita de software se tornará mais transparente e que as pessoas precisarão ser &ldquo;extremamente barulhentas e transparentes&rdquo; sobre o que estão fazendo. Ele acredita que os startups precisarão lançar seus produtos rapidamente e obter feedback do público.</p>
+<p>Ele também mencionou a importância de ter um &ldquo;token burn&rdquo; (um processo de teste e iteração) para encontrar o &ldquo;product-market fit&rdquo; (adequação do produto ao mercado).</p>
+<p>O QUE ACONTECE COM OS STAFF ENGINEERS?</p>
+<p>Krouse aconselhou os &ldquo;staff engineers&rdquo; a se livrarem de ferramentas como o Copilot e a começarem a experimentar com novas tecnologias. Ele acredita que eles estão prestes a serem deixados para trás e que precisam se manter atualizados.</p>
+<p>Ele enfatizou a importância de ser transparente sobre o que você está fazendo e de ser capaz de mostrar seu trabalho.</p>
+<p>O QUE ACONTECE SE A IA NÃO DECOLAR?</p>
+<p>Mesmo que a IA não atinja o potencial máximo, Krouse acredita que os engenheiros que se dedicam a aprender e experimentar novas tecnologias não serão desperdiçados. Ele argumentou que a capacidade de encontrar soluções para problemas complexos é um valor inerente e que a busca por melhores algoritmos e linguagens de programação continuará a ser importante.</p>
+<p>O FUTURO DA LINGUAGEM DE PROGRAMAÇÃO</p>
+<p>Krouse acredita que as linguagens de programação podem não importar tanto no futuro, especialmente se a IA continuar a avançar. Ele previu que todas as linguagens acabarão por funcionar igualmente bem, graças ao treinamento de IA.</p>
+<h2 id="s8">PREDIÇÕES PARA 2027</h2>
+<p>Krouse fez algumas previsões para 2027:</p>
+<p>*   Sua esposa contribuirá para um jogo de vídeo.</p>
+<p>*   O software será comum e de alta qualidade, com uma variedade de opções disponíveis.</p>
+<p>*   As pessoas usarão agentes para encontrar e integrar software.</p>
+<p>*   A capacidade de encontrar e integrar software será uma oportunidade de negócio.</p>
+<p>O LEGADO DE STEVE</p>
+<p>Steve encorajou os engenheiros a abraçarem a mudança e a se concentrarem em criar valor para os usuários. Ele acredita que a indústria de software está passando por uma transformação rápida e que aqueles que se adaptarem e inovarem serão os que prosperarão. Ele enfatizou a importância de se livrar de velhos paradigmas e abraçar o futuro.</p>
+<p>A EVOLUÇÃO DA ENGENHARIA DE SOFTWARE E A INTELIGÊNCIA ARTIFICIAL</p>
+<p>Steve argumenta que a engenharia de software está passando por uma transformação semelhante à que a indústria de gráficos experimentou. Em 1992, ele estava aprendendo a calcular a posição de pixels em uma linha, e dois anos depois, o mesmo curso ensinava animação. A transição na área de gráficos envolveu a mudança de escrita de drivers de dispositivo para a construção de mundos de jogos e motores de física, tudo movido para um nível de abstração mais elevado.</p>
+<p>Ele acredita que a engenharia de software está vivenciando um deslocamento similar, mas em um ritmo ainda mais acelerado. Em vez de se preocupar se os engenheiros terão empregos, a questão mais relevante seria como serão os novos trabalhos que os engenheiros de software desempenharão.</p>
+<p>O PROCESSO DE ADAPTAÇÃO À MUDANÇA</p>
+<p>Steve compartilhou sua experiência pessoal de adaptação à mudança, tendo dedicado 40 anos à construção de sua identidade em torno de compiladores, depuradores e código elegante. De repente, ele percebeu que muitas das habilidades que antes considerava especiais já não eram relevantes. Ele descreveu essa fase como um período em que seu mundo se tornou monocromático.</p>
+<p>Após algumas semanas, ele emergiu dessa fase e percebeu que estava escrevendo dez vezes mais código e se divertindo mais. Ele reconhece que muitos engenheiros estão passando por um processo semelhante, embora possa levar mais tempo para processar todas as mudanças.</p>
+<p>A CAPTURA DE VALOR E O EQUILÍBRIO ENTRE TRABALHO E VIDA</p>
+<p>Steve levanta uma questão importante sobre a captura de valor. Se a produtividade de um engenheiro aumenta em 100 vezes com o uso de IA, quem se beneficia desse aumento? Se alguém trabalha 8 horas e produz 100 vezes mais, a empresa tende a capturar todo esse ganho. Por outro lado, se alguém trabalha apenas 10 minutos por dia e produz a mesma quantidade de valor, ele tecnicamente captura todo o valor, e a empresa não captura nada.</p>
+<p>Ele enfatiza que nenhum dos extremos é sustentável e que a busca por um novo equilíbrio entre trabalho e vida é um desafio que a sociedade precisará enfrentar. A ausência de normas culturais para lidar com essa nova realidade tornará o processo &ldquo;confuso&rdquo; à medida que se tenta encontrar um equilíbrio.</p>
+</div>
+<a href="#" class="back-top" id="backTop">↑</a>
+<div class="resume-banner" id="resumeBanner">
+  <span id="resumeText">📖 Continuar de onde parou</span>
+  <div>
+    <button onclick="resumeReading()">Continuar</button>
+    <button class="dismiss" onclick="dismissResume()">✕</button>
+  </div>
+</div>
+<script src="../js/reader.js"></script>
+</body>
+</html>

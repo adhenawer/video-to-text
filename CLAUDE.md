@@ -226,6 +226,33 @@ simon_willison     → reading_
 outros             → reading_VIDEO_ID_
 ```
 
+## SEO
+
+Cada artigo HTML inclui meta tags para indexação e compartilhamento:
+
+- `<meta name="description">` — primeiro parágrafo do artigo (até 200 chars)
+- `<meta property="og:title/description/locale/site_name">` — Open Graph (WhatsApp, LinkedIn, Facebook)
+- `<meta name="twitter:card/title/description">` — Twitter Card
+- `<meta name="author">` — subtitle do artigo
+
+Gerados automaticamente pelo `build_html.py` a partir do conteúdo traduzido.
+
+Arquivos de SEO no root:
+- `robots.txt` — permite crawling, aponta para sitemap
+- `sitemap.xml` — lista todas as URLs de artigos (atualizar ao adicionar novo artigo)
+
+### Atualizar sitemap ao adicionar artigo
+
+Após adicionar um novo artigo, atualizar `sitemap.xml` adicionando:
+```xml
+<url>
+  <loc>https://adhenawer.github.io/video-to-text/leituras/SLUG.html</loc>
+  <lastmod>YYYY-MM-DD</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+```
+
 ## Convenções
 
 - Slugs: kebab-case PT-BR sem acentos → `como-construi-sistema-suporte-cliente-ia.html`

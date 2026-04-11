@@ -124,12 +124,34 @@ def make_html(vid_id, title, subtitle, url, txt_path,
     body_html = '\n'.join(html_parts)
     storage_key = f'reading_{vid_id}_'
 
+    # Extract first paragraph as description for SEO
+    first_para = ""
+    for part in html_parts:
+        if part.startswith('<p>'):
+            first_para = re.sub(r'<[^>]+>', '', part)
+            first_para = first_para[:200].rsplit(' ', 1)[0] + "..." if len(first_para) > 200 else first_para
+            break
+
+    # Determine canonical URL
+    slug_name = ""
+    # Will be set by caller or inferred from output path
+
     return f'''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}</title>
+<meta name="description" content="{first_para}">
+<meta name="author" content="{subtitle}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{first_para}">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Leituras — Podcasts &amp; Vídeos Traduzidos">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{title}">
+<meta name="twitter:description" content="{first_para}">
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="page-article" data-storage-key="{storage_key}">

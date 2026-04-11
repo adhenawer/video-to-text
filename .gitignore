@@ -1,6 +1,7 @@
 .DS_Store
 *.txt
 !requirements.txt
+!robots.txt
 __pycache__/
 *.pyc
 .venv/
