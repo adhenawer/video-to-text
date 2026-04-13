@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://adhenawer.github.io/video-to-text/sitemap.xml
+Sitemap: https://adhenawer.net/sitemap.xml
