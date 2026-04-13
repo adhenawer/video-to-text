@@ -23,6 +23,7 @@ Usage:
 
 import argparse
 import os
+import shutil
 import sys
 import time
 
@@ -170,6 +171,15 @@ def main():
         build_cmd.append(slides_json)
     run_step("3/3  Gerando HTML", build_cmd)
 
+    # Save transcripts to repo for future reuse
+    transcripts_dir = os.path.join(PROJECT_DIR, "transcripts")
+    os.makedirs(transcripts_dir, exist_ok=True)
+    repo_transcript = os.path.join(transcripts_dir, f"{video_id}.txt")
+    repo_translated = os.path.join(transcripts_dir, f"{video_id}_pt.txt")
+    shutil.copy2(transcript_path, repo_transcript)
+    shutil.copy2(translated_path, repo_translated)
+    print(f"\n  Transcrições salvas em transcripts/")
+
     total_elapsed = time.time() - total_t0
     print(f"\n{'=' * 60}")
     print(f"  Pipeline concluído em {total_elapsed:.1f}s")
@@ -180,9 +190,9 @@ def main():
     print(f"\nPróximos passos:")
     print(f"  1. Adicionar card no docs/index.html")
     if args.slides:
-        print(f"  2. git add docs/leituras/{args.slug}.html docs/img/{args.slug}/ docs/index.html")
+        print(f"  2. git add docs/leituras/{args.slug}.html docs/img/{args.slug}/ docs/index.html transcripts/")
     else:
-        print(f"  2. git add docs/leituras/{args.slug}.html docs/index.html")
+        print(f"  2. git add docs/leituras/{args.slug}.html docs/index.html transcripts/")
     print(f"  3. git commit -m 'feat: adiciona artigo — {args.title}'")
 
 
