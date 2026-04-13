@@ -22,16 +22,38 @@ Usage:
 """
 
 import argparse
+import json
 import os
 import shutil
 import sys
 import time
+from datetime import date
 
 SRC_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SRC_DIR)
 
 sys.path.insert(0, SRC_DIR)
 from providers import detect_provider
+
+
+def update_transcript_index(index_path, entry):
+    """Add or update an entry in transcripts/index.json."""
+    if os.path.exists(index_path):
+        with open(index_path, 'r') as f:
+            index = json.load(f)
+    else:
+        index = []
+
+    # Update existing entry or append new one
+    for i, existing in enumerate(index):
+        if existing["video_id"] == entry["video_id"]:
+            index[i] = entry
+            break
+    else:
+        index.append(entry)
+
+    with open(index_path, 'w') as f:
+        json.dump(index, f, ensure_ascii=False, indent=2)
 
 
 def run_step(label, cmd, timeout=600):
@@ -178,7 +200,19 @@ def main():
     repo_translated = os.path.join(transcripts_dir, f"{video_id}_pt.txt")
     shutil.copy2(transcript_path, repo_transcript)
     shutil.copy2(translated_path, repo_translated)
-    print(f"\n  Transcrições salvas em transcripts/")
+
+    # Update transcripts/index.json manifest
+    index_path = os.path.join(PROJECT_DIR, "transcripts", "index.json")
+    update_transcript_index(index_path, {
+        "video_id": video_id,
+        "provider": provider.name,
+        "title": args.title,
+        "subtitle": args.subtitle,
+        "url": args.url,
+        "slug": args.slug,
+        "date": str(date.today()),
+    })
+    print(f"\n  Transcrições salvas em transcripts/{provider.name}/")
 
     total_elapsed = time.time() - total_t0
     print(f"\n{'=' * 60}")
