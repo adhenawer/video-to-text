@@ -259,7 +259,7 @@ Arquivo `llms.txt` no root — convenção para crawlers de LLMs (similar a robo
 Após adicionar um novo artigo, atualizar `sitemap.xml` adicionando:
 ```xml
 <url>
-  <loc>https://adhenawer.github.io/video-to-text/leituras/SLUG.html</loc>
+  <loc>https://adhenawer.net/leituras/SLUG.html</loc>
   <lastmod>YYYY-MM-DD</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>

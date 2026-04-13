@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub release](https://img.shields.io/github/v/release/adhenawer/video-to-text)](https://github.com/adhenawer/video-to-text/releases)
-[![GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-blue)](https://adhenawer.github.io/video-to-text/)
+[![GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-blue)](https://adhenawer.net/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-MLX-black)](https://github.com/ml-explore/mlx)
 
@@ -223,16 +223,16 @@ git push
 
 ## Artigos
 
-1. [Chefe do Claude Code: o que acontece depois que a programação for resolvida](https://adhenawer.github.io/video-to-text/leituras/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html)
-2. [Estado da IA em 2026: ponto de inflexão — Simon Willison](https://adhenawer.github.io/video-to-text/leituras/estado-da-ia-2026-ponto-de-inflexao-simon-willison.html)
-3. [Práticas de engenharia para agentes de código — Simon Willison](https://adhenawer.github.io/video-to-text/leituras/praticas-de-engenharia-para-agentes-de-codigo-simon-willison.html)
-4. [De IDEs para Agentes de IA — Steve Yegge](https://adhenawer.github.io/video-to-text/leituras/de-ides-para-agentes-de-ia-steve-yegge.html)
-5. [Engenheiro sênior: fluxo de desenvolvimento com especificações e IA](https://adhenawer.github.io/video-to-text/leituras/engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia.html)
-6. [Um agente não é suficiente: programação agêntica além do Claude Code](https://adhenawer.github.io/video-to-text/leituras/um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code.html)
-7. [Do prompt à produção: o que é engenharia agêntica](https://adhenawer.github.io/video-to-text/leituras/do-prompt-a-producao-o-que-e-engenharia-agentica.html)
-8. [Engenharia agêntica: contexto, guardrails e criatividade](https://adhenawer.github.io/video-to-text/leituras/engenharia-agentica-contexto-guardrails-e-criatividade.html)
-9. [Como construí um sistema de suporte ao cliente com IA de nível produção](https://adhenawer.github.io/video-to-text/leituras/como-construi-sistema-suporte-cliente-ia-nivel-producao.html)
-10. [Fluxos de trabalho agênticos — Don Syme](https://adhenawer.github.io/video-to-text/leituras/fluxos-de-trabalho-agenticos-don-syme.html)
-11. [Roteiro: engenheiro de IA para desenvolvedores de software](https://adhenawer.github.io/video-to-text/leituras/roteiro-engenheiro-ia-para-desenvolvedores-de-software.html)
-12. [Política corporativa em tech — Ethan Evans (ex-VP Amazon)](https://adhenawer.github.io/video-to-text/leituras/politica-corporativa-tech-tudo-que-ninguem-te-conta.html)
-13. [Por que paramos de construir agentes e começamos a construir skills — Anthropic](https://adhenawer.github.io/video-to-text/leituras/por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills.html) *(via Twitter/X)*
+1. [Chefe do Claude Code: o que acontece depois que a programação for resolvida](https://adhenawer.net/leituras/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html)
+2. [Estado da IA em 2026: ponto de inflexão — Simon Willison](https://adhenawer.net/leituras/estado-da-ia-2026-ponto-de-inflexao-simon-willison.html)
+3. [Práticas de engenharia para agentes de código — Simon Willison](https://adhenawer.net/leituras/praticas-de-engenharia-para-agentes-de-codigo-simon-willison.html)
+4. [De IDEs para Agentes de IA — Steve Yegge](https://adhenawer.net/leituras/de-ides-para-agentes-de-ia-steve-yegge.html)
+5. [Engenheiro sênior: fluxo de desenvolvimento com especificações e IA](https://adhenawer.net/leituras/engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia.html)
+6. [Um agente não é suficiente: programação agêntica além do Claude Code](https://adhenawer.net/leituras/um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code.html)
+7. [Do prompt à produção: o que é engenharia agêntica](https://adhenawer.net/leituras/do-prompt-a-producao-o-que-e-engenharia-agentica.html)
+8. [Engenharia agêntica: contexto, guardrails e criatividade](https://adhenawer.net/leituras/engenharia-agentica-contexto-guardrails-e-criatividade.html)
+9. [Como construí um sistema de suporte ao cliente com IA de nível produção](https://adhenawer.net/leituras/como-construi-sistema-suporte-cliente-ia-nivel-producao.html)
+10. [Fluxos de trabalho agênticos — Don Syme](https://adhenawer.net/leituras/fluxos-de-trabalho-agenticos-don-syme.html)
+11. [Roteiro: engenheiro de IA para desenvolvedores de software](https://adhenawer.net/leituras/roteiro-engenheiro-ia-para-desenvolvedores-de-software.html)
+12. [Política corporativa em tech — Ethan Evans (ex-VP Amazon)](https://adhenawer.net/leituras/politica-corporativa-tech-tudo-que-ninguem-te-conta.html)
+13. [Por que paramos de construir agentes e começamos a construir skills — Anthropic](https://adhenawer.net/leituras/por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills.html) *(via Twitter/X)*
