@@ -16,5 +16,176 @@
     "url": "https://x.com/51bodila/status/2042206218752610343",
     "slug": "guia-completo-claude-iniciante-sistema-operacional-ia",
     "date": "2026-04-13"
+  },
+  {
+    "video_id": "w7CWS4bmN2A",
+    "provider": "youtube",
+    "title": "Claude Code Leak: What We've Learned So Far",
+    "subtitle": "Goju Tech Talk",
+    "url": "https://www.youtube.com/watch?v=w7CWS4bmN2A",
+    "slug": "claude-code-leak-what-weve-learned-so-far",
+    "date": "2026-04-13"
+  },
+  {
+    "video_id": "fzrvx_1-9_o",
+    "provider": "youtube",
+    "title": "Como Construí um Sistema de Suporte ao Cliente com IA de Nível Produção",
+    "subtitle": "Usando Claude Code — Tutorial prático",
+    "url": "https://youtu.be/fzrvx_1-9_o",
+    "slug": "como-construi-sistema-suporte-cliente-ia-nivel-producao",
+    "date": "2026-04-13"
+  },
+  {
+    "video_id": "aFsAOu2bgFk",
+    "provider": "youtube",
+    "title": "De IDEs para Agentes de IA",
+    "subtitle": "Steve Yegge — Sourcegraph Podcast",
+    "url": "https://youtu.be/aFsAOu2bgFk",
+    "slug": "de-ides-para-agentes-de-ia-steve-yegge",
+    "date": "2026-04-13"
+  },
+  {
+    "video_id": "eYqt8vqeSBw",
+    "provider": "youtube",
+    "title": "Do Prompt à Produção: O Que É Engenharia Agêntica?",
+    "subtitle": "Live — Engenharia Agêntica na Prática",
+    "url": "https://www.youtube.com/live/eYqt8vqeSBw",
+    "slug": "do-prompt-a-producao-o-que-e-engenharia-agentica",
+    "date": "2026-04-13"
+  },
+  {
+    "video_id": "l5zgfjXs6gQ",
+    "provider": "youtube",
+    "title": "Engenharia Agêntica: Contexto, Guardrails e Criatividade",
+    "subtitle": "Palestra técnica sobre Engenharia Agêntica",
+    "url": "https://youtu.be/l5zgfjXs6gQ",
+    "slug": "engenharia-agentica-contexto-guardrails-e-criatividade",
+    "date": "2026-04-13"
+  },
+  {
+    "video_id": "Ednpn1mjKiY",
+    "provider": "youtube",
+    "title": "Engenheiro Sênior Demonstra Fluxo de Desenvolvimento com Especificações de IA",
+    "subtitle": "Live — Desenvolvimento Guiado por Especificação com IA",
+    "url": "https://www.youtube.com/live/Ednpn1mjKiY",
+    "slug": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia",
+    "date": "2026-04-13"
+  },
+  {
+    "video_id": "wc8FBhQtdsA",
+    "provider": "youtube",
+    "title": "O Estado da Arte da IA em 2026",
+    "subtitle": "Passamos o Ponto de Inflexão e as &ldquo;Fábricas Escuras&rdquo; Estão Chegando",
+    "url": "https://www.youtube.com/watch?v=wc8FBhQtdsA",
+    "slug": "estado-da-ia-2026-ponto-de-inflexao-simon-willison",
+    "date": "2026-04-13"
+  },
+  {
+    "video_id": "647pVgfV2yU",
+    "provider": "youtube",
+    "title": "Fluxos de Trabalho Agênticos com Don Syme",
+    "subtitle": "Don Syme — Criador do F# sobre Agentes de IA",
+    "url": "https://youtu.be/647pVgfV2yU",
+    "slug": "fluxos-de-trabalho-agenticos-don-syme",
+    "date": "2026-04-13"
+  },
+  {
+    "video_id": "6WaeGfLnRvc",
+    "provider": "youtube",
+    "title": "Política Corporativa em Tech — Tudo Que Ninguém Te Conta",
+    "subtitle": "Ethan Evans (ex-VP Amazon) · Ryan Peterman",
+    "url": "https://www.youtube.com/watch?v=6WaeGfLnRvc",
+    "slug": "politica-corporativa-tech-tudo-que-ninguem-te-conta",
+    "date": "2026-04-13"
+  },
+  {
+    "video_id": "owmJyKVu5f8",
+    "provider": "youtube",
+    "title": "Práticas de Engenharia que Fazem os Agentes de Código Funcionar",
+    "subtitle": "Simon Willison — The Pragmatic Engineer Podcast",
+    "url": "https://youtu.be/owmJyKVu5f8",
+    "slug": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
+    "date": "2026-04-13"
+  },
+  {
+    "video_id": "_kMaPZE05Yc",
+    "provider": "youtube",
+    "title": "Roteiro do Engenheiro de IA para Desenvolvedores de Software",
+    "subtitle": "Guia de carreira — AI Engineering Roadmap",
+    "url": "https://youtu.be/_kMaPZE05Yc",
+    "slug": "roteiro-engenheiro-ia-para-desenvolvedores-de-software",
+    "date": "2026-04-13"
+  },
+  {
+    "video_id": "M30gp1315Y4",
+    "provider": "youtube",
+    "title": "Um Agente Não É Suficiente: Programação Agêntica Além do Claude Code",
+    "subtitle": "Vídeo técnico — Multi-agent Coding",
+    "url": "https://youtu.be/M30gp1315Y4",
+    "slug": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
+    "date": "2026-04-13"
+  },
+  {
+    "video_id": "2042960939969102251",
+    "provider": "twitter",
+    "title": "Amit - Insights Técnicos",
+    "subtitle": "@heyamit_",
+    "url": "https://x.com/heyamit_/status/2042960939969102251",
+    "slug": "amit-insights-tecnicos",
+    "date": "2026-04-13"
+  },
+  {
+    "video_id": "2042024135568629797",
+    "provider": "twitter",
+    "title": "Conselhos de Carreira em IA — Andrew Ng e Lawrence Moroney na Stanford",
+    "subtitle": "Andrew Ng & Lawrence Moroney · Stanford CS230",
+    "url": "https://x.com/carverfomo/status/2042024135568629797",
+    "slug": "conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford",
+    "date": "2026-04-13"
+  },
+  {
+    "video_id": "2042489154966339811",
+    "provider": "twitter",
+    "title": "Entendendo Rony Coder",
+    "subtitle": "@ronycoder",
+    "url": "https://x.com/ronycoder/status/2042489154966339811",
+    "slug": "entendendo-rony-coder",
+    "date": "2026-04-13"
+  },
+  {
+    "video_id": "2042725242741588208",
+    "provider": "twitter",
+    "title": "Finanças Comportamentais — Robert Shiller na Yale",
+    "subtitle": "Robert Shiller · Yale Open Courses",
+    "url": "https://x.com/noisyb0y1/status/2042725242741588208",
+    "slug": "financas-comportamentais-robert-shiller-yale",
+    "date": "2026-04-13"
+  },
+  {
+    "video_id": "2041884593087803841",
+    "provider": "twitter",
+    "title": "IA Agêntica: Progressão do Uso de Modelos de Linguagem",
+    "subtitle": "Inseo Bong · Stanford Online",
+    "url": "https://x.com/noisyb0y1/status/2041884593087803841",
+    "slug": "ia-agentica-progressao-uso-modelos-linguagem-stanford",
+    "date": "2026-04-13"
+  },
+  {
+    "video_id": "2042172428127002906",
+    "provider": "twitter",
+    "title": "Por Que Paramos de Construir Agentes e Começamos a Construir Skills",
+    "subtitle": "Barry Zhang & Mahesh Sathiamoorthy · Anthropic",
+    "url": "https://x.com/Av1dlive/status/2042172428127002906",
+    "slug": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills",
+    "date": "2026-04-13"
+  },
+  {
+    "video_id": "2042624568880197650",
+    "provider": "twitter",
+    "title": "Trading com Order Flow — Do Mercado Global ao Chinês",
+    "subtitle": "Trader Chinês · Twitter/X",
+    "url": "https://x.com/carverfomo/status/2042624568880197650",
+    "slug": "trading-com-order-flow-mercado-global-ao-chines",
+    "date": "2026-04-13"
   }
 ]

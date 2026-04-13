@@ -1,0 +1,2833 @@
+0:00 Hello all, my name is Krishna and
+0:02 welcome to my YouTube channel. So guys,
+0:05 uh specifically in this AI era, it is
+0:07 necessary that you start using AI a lot
+0:10 with respect to any kind of task you do
+0:12 in your company from project
+0:14 development, from learning new things,
+0:16 from asking questions to AI like how you
+0:18 can improve anything that you are
+0:20 currently doing and that is specifically
+0:23 required. Many people when I used to
+0:26 teach from last two 3 years right many
+0:29 people used to say AI is just a hype
+0:31 right and for all those people who still
+0:34 think AI is a hype god bless you okay so
+0:37 in this specific video we are going to
+0:40 show you how you can go ahead and
+0:41 develop some amazing projects right and
+0:44 we'll consider a specific use case and
+0:47 we will be using cloud code and we will
+0:50 do some amount of wipe coding in order
+0:52 to complete this specific project Okay.
+0:54 Uh this project has been recorded by uh
+0:57 Sunonni Savvita who is an amazing mentor
+0:59 who's working in a uh company uh called
+1:01 as PWC and uh right now he will also
+1:04 talk about like what are the industry
+1:06 trends that is currently being followed
+1:08 and how you can also go ahead and use
+1:10 cloud code for doing most of the task
+1:12 that we specifically do in development.
+1:15 Now before I go ahead and start this
+1:17 specific video, I really want to make a
+1:19 quick announcement [clears throat] about
+1:21 our new boot camp that is called as
+1:23 modern route full stack generative and
+1:25 agenti boot camp. And this is basically
+1:28 starting from March 15th, 2026. And the
+1:31 classes will be on every Saturday and
+1:33 Sunday from 8:00 p.m. to 11:00 p.m. IST.
+1:36 Now this particular course is suitable
+1:38 for anyone who really wants to get into
+1:40 generative AI, agentic AI, who wants to
+1:42 quickly get started, how to probably go
+1:45 ahead and learn things, how to make sure
+1:47 that you're industry ready to work in
+1:49 any kind of generative AI and agentic AI
+1:51 projects. Okay. So here you can see it's
+1:53 a very detailed syllabus. Here we'll be
+1:55 talking about LLM foundation, LLM
+1:57 ecosystem model selection, LLM's
+1:59 finetuning, production rag, advanced
+2:02 rag, agentic AI, uh, langraph
+2:04 orchestration. Along with that, we'll
+2:06 also be using evaluations and guardrail
+2:08 techniques along with cloud deployments.
+2:10 All this information will be given in
+2:11 this particular description of this
+2:12 particular video. Uh, please make sure
+2:14 that you watch this entire video. This
+2:16 is an amazing project to get started
+2:18 with. So let's go ahead and enjoy this
+2:19 video. What if guys if you could build a
+2:23 entire system or entire project just by
+2:27 giving some instruction to AI? Uh so
+2:31 yeah this thing is possible and inside
+2:35 this video I'm going to show you how you
+2:38 can build a realtime project using cloud
+2:42 code in a faster and in a smarter way.
+2:46 So hello everyone, my name is Sunonni
+2:48 Savvita and I am back with another
+2:51 exciting and important video. So inside
+2:55 this video guys, I will show you how you
+2:58 can use the cloud code for building any
+3:01 application. Uh I will give you the step
+3:04 step-by-step guide how you can set up uh
+3:06 this cloud code inside your local
+3:09 system. how you can utilize that and
+3:12 even I will show you how you can
+3:14 configure it inside your VS code. You
+3:17 can configure it in any uh ID whether
+3:20 it's a cursor, anti-gravity or pycharm
+3:24 but uh I will show you with the VS code.
+3:27 Okay. So uh guys uh this is a this is
+3:31 the website of the cloud cloud.com where
+3:34 you can find out a different different
+3:36 services uh related to the cloud. If you
+3:39 don't know guys, so this cloud is a uh
+3:42 product of the anthropic. So once you
+3:44 will search this anthropic.com, you will
+3:47 lend to this homepage of the anthropic.
+3:49 Uh this is the name of the company and
+3:52 the cloud is a product of this company
+3:55 only. So just uh read out this entire
+3:57 page and understand uh about their
+3:59 vision and all everything. Now how you
+4:01 will uh come to the cloud A. So here you
+4:04 can see they are giving the option to
+4:06 try out the cloud a and once you will
+4:08 click on click on this drop-down once
+4:10 you will hover your mouse over here you
+4:12 will get a different different product
+4:14 uh related to the anthropic okay and
+4:16 apart from that you can explore the
+4:18 various model so let's uh check out the
+4:20 cloud a guys so once you will click on
+4:22 this cloud a so uh it will redirect you
+4:25 to this particular page where you can
+4:27 click on this try cloud a so once you
+4:30 will click on this try cloud A you will
+4:32 get the similar page page uh like you
+4:34 you were uh seeing over the chat GPT uh
+4:37 now uh they are giving the similar kind
+4:39 of interface where you can do the
+4:41 chatting and all everything uh and it is
+4:43 a journal purpose chatbot. So they are
+4:46 offering a different different model. So
+4:47 if you will drop down over here if you
+4:50 will click over here.
+4:53 So you will get a different different
+4:54 models over here like opus, sonet, haiku
+4:58 right uh uh and uh guys these model this
+5:01 opus model is a advanced model this
+5:03 sonet model is a mediocre model and this
+5:05 haiku model is a uh basically it's a
+5:08 cheapest model right so they are also
+5:10 offering a different different category
+5:12 of the model similar to the openi only
+5:15 and apart from uh that guys they are
+5:18 offering a various surveys so you can
+5:20 navigate to each and every service from
+5:22 this uh homepage page itself. Now let me
+5:24 show you couple of more product. So
+5:26 cloud a as I shown you this cloud a
+5:28 right now apart from this one they are
+5:30 offering two main product. One is a
+5:32 cloud a code which we are going to learn
+5:34 in today's uh video and the second is
+5:36 the cloud a cowwork. So what is a cloud
+5:39 code guys? So the cloud code is a
+5:41 product with that actually we can
+5:43 develop a application. uh this code uh
+5:46 basically is mainly created for the
+5:48 developers who can uh directly configure
+5:50 this cloud code inside their system and
+5:53 they can do their development work.
+5:55 Okay. And today I will show you how you
+5:57 can configure it and how you can develop
+5:59 a project using this cloud code. The
+6:02 second uh product and the very important
+6:04 and the like the recent product is a
+6:07 cloud co-work. Now this cloud co-work
+6:10 basically it's a AI collaborator. So
+6:12 whether you are a developer or you are a
+6:14 non-developer anyone can collaborate
+6:17 with this uh AI with this cloud co-work
+6:20 uh you can configure this cloud co-work
+6:22 in your system you can give a access of
+6:24 your file and folder and uh it will work
+6:27 in a similar way like any human is
+6:29 working and in a more efficient way
+6:31 basically so this is a way where you can
+6:33 collaborate with the AI and you can work
+6:36 along with the AI so uh cloud co-work I
+6:39 will show you in some other video today
+6:41 we'll discuss about the cloud a code.
+6:43 Now they are offering you different
+6:44 different other feature. You can
+6:46 configure this cloud a in a different
+6:48 browser in a different services and they
+6:50 are offering you the different model as
+6:52 I told you the advanced model is a cloud
+6:55 opus the mediocre model is a cloud sonet
+6:57 and the cheapest model is a kaiku okay
+7:00 so you can explore the different
+7:01 different model and you can understand
+7:03 their capability now uh platform wise
+7:06 guys so they are giving you the
+7:07 different different platform where you
+7:09 can check out the pricing you can check
+7:10 out the documentation and all everything
+7:12 so if I will click on this developer
+7:14 docs guys so you to get a documentation.
+7:17 Now this is the complete documentation
+7:18 of the cloud API. Uh it is similar to
+7:21 the openi API uh like we are using uh
+7:25 open API right uh and the different uh
+7:28 services around to that. So in the same
+7:30 way they have given you the cloud API
+7:32 and you can configure it in a various
+7:34 way. Okay. And you can use the different
+7:37 different services uh just by reading
+7:39 this particular documentation. Now apart
+7:42 from this one guys you can check out the
+7:44 pricing and all everything. So they are
+7:46 mentioning the pricing of their model
+7:47 and all. Now solution wise you can check
+7:50 out the different different use cases.
+7:51 They are giving you the several use
+7:53 cases which is belonging to the
+7:55 different different industry means they
+7:57 are saying how they are helping to a
+8:00 different industry and uh just uh by
+8:02 navigating to this use case you can
+8:04 understand about their work. Now pricing
+8:07 wise again they have given you one like
+8:08 one more page you can check out over
+8:10 here. Resources wise they are providing
+8:12 you the various uh platform from there
+8:15 you can learn about the cloud a you can
+8:17 understand about the cloud a you can
+8:18 explore about the cloud they are
+8:20 providing their own blog website they
+8:22 are providing some uh uh like recorded
+8:25 courses okay some tools connect uh
+8:28 plugins and all everything they are
+8:29 providing you over here even the
+8:31 community is also there you can directly
+8:33 connect with their community. So this is
+8:35 the homepage guys of the cloud a if you
+8:37 want to really understand this cloud a
+8:39 product then please [clears throat] uh
+8:40 go and check out with this homepage now
+8:42 guys one more thing we are talking about
+8:44 the anthropic if we talking about the
+8:46 cloud a right so they are mainly
+8:48 focusing to the developer community so
+8:51 they are coming up with a product where
+8:53 they can help as much as to the
+8:55 developer community and cloud code is
+8:58 one of the product which a developer can
+9:00 directly use. If you will look into this
+9:02 cloud a chatbot also uh there also if
+9:05 you are going to be asked a general
+9:07 purpose question maybe it is not not
+9:09 very good in terms of reasoning like
+9:12 chat GPT chat GPT actually it's a
+9:14 general purpose uh platform but guys it
+9:17 is very good uh in terms of coding and
+9:19 the development if you will ask uh this
+9:22 to develop anything right uh to create
+9:24 any application it will create in a very
+9:27 professional way it will uh give you the
+9:29 very uh like a good code right and uh
+9:32 even basically you can do a certain
+9:35 level modification. So their model are
+9:38 the uh developer focus and it is like
+9:40 very good in terms of development and
+9:42 all. Uh maybe it is not good uh in terms
+9:45 of the general knowledge but yeah they
+9:46 are helping a lot to the developer
+9:48 community. Uh now guys I hope you got
+9:51 the clearcut understanding of this
+9:53 entire platform. Now if I will uh show
+9:55 you this cloud a code. So just click on
+9:57 this cloud a code and uh after clicking
+9:59 on this cloud code guys you will get the
+10:01 complete detail about them. So who is
+10:04 using the cloud code what is the purpose
+10:05 of it how you can configure that right
+10:08 and uh you will get everything over this
+10:10 page itself. Now uh if you want to go
+10:14 step by step one by one right if you
+10:16 want to explore everything about this
+10:17 cloud a code then just click out on this
+10:20 documentation. Now once you will open
+10:22 this documentation guys. Now over here
+10:24 uh itself you will get the complete
+10:26 detail about the cloud code. So this
+10:28 specific documentation they have created
+10:30 for the cloud code only. Now how to
+10:33 configure the cloud code, how to run
+10:35 this cloud code and how to use this
+10:37 cloud code. Everything they are uh
+10:40 telling you over here right. So just
+10:42 navigate to this documentation and you
+10:43 will understand everything about the
+10:45 cloud code. uh even uh they are talking
+10:48 about the uh different ID right where at
+10:51 what all places you can configure this
+10:52 cloud code. Uh even they are talking
+10:55 about the GitHub action right how you
+10:57 can utilize it in a CI/CD pipeline. Uh
+11:00 apart from that they are helping us in
+11:02 uh in a GitLab also. So various uh
+11:05 integration they have provided to us.
+11:07 Okay. So, GitLab is there, GitHub is
+11:10 there, uh, and the integration with the
+11:12 various ID is there, you can directly
+11:14 configure it over any uh, uh, over any
+11:17 like operating system, whether it's a
+11:19 Windows or Mac operating system, Linux
+11:22 operating system, anywhere you can
+11:24 configure it. Now, I hope guys you
+11:26 understood everything about the cloud A
+11:28 and the cloud A code. Now, guys, uh, to
+11:30 read out this documentation, it's like a
+11:32 bit challenging in a starting if someone
+11:34 is a fresher or developer, right? So uh
+11:37 maybe uh they might confuse by after
+11:40 reading this documentation and all. So
+11:42 for the beginner guys what I have done I
+11:44 have created a summary of this entire
+11:45 documentation. So this is the entire
+11:47 summary guys uh which I will show you
+11:49 which I will uh uh like which which I
+11:53 will use to configure this cloud a code
+11:55 inside my system. Okay. So I written at
+11:57 least five to 10 steps over here and
+12:00 each and every step we are going to
+12:01 follow one by one in the step by step.
+12:04 So first let me show you in uh how many
+12:06 ways actually you can configure this
+12:08 cloud code inside your system. So now
+12:11 now once guys you will go ahead with
+12:12 this cloud code documentation and here
+12:15 uh if you will uh click on this overview
+12:17 right uh so after that guys you will get
+12:19 you will get this page. Now just uh
+12:22 check out with this page uh here only
+12:24 you will get the complete uh detail
+12:25 about the configuration. So you can
+12:28 configure it via terminal, you can
+12:30 configure it via VS code,
+12:33 you can uh configure it via desktop
+12:35 application, uh you can configure it as
+12:37 a web web, right? And the Jet Brands
+12:39 also JetBrans actually it's a company
+12:42 which is providing us a PyCharm ID,
+12:44 right? Uh it is a owner of the PyCharm
+12:46 ID. Uh now guys uh inside this video I
+12:49 will show you how you can configure it
+12:51 via terminal uh via CLI and I will show
+12:54 you how you can uh configure it even
+12:56 inside the VS code. Okay. So I will show
+12:58 you this both way uh even you can
+13:00 install the desktop application. So they
+13:02 are providing you for all the operating
+13:04 system like Mac OS, Windows, Windows ARM
+13:07 64 for various uh for various operating
+13:10 system for the different operating
+13:11 system they are providing their ready to
+13:13 go installation. So directly you can
+13:16 utilize this as well and you can
+13:18 configure the cloud a inside your
+13:20 system. Okay just for the development.
+13:23 Now uh here guys I will show you the
+13:24 easiest way where you can uh use this uh
+13:27 uh simple command and using the simple
+13:29 command you can configure the uh you can
+13:32 configure the uh cloud inside your
+13:34 system. Okay. Uh now apart from this one
+13:37 guys if you are using any other system
+13:39 like I am using Windows system so I'm
+13:41 going to use the Windows command. If you
+13:43 are using other system like Mac OS,
+13:45 Linux, so for that also they have given
+13:47 the specific command right. So whatever
+13:49 system you are using, whatever operating
+13:51 system you are using, uh doesn't matter
+13:54 throughout the operating system,
+13:55 throughout the different operating
+13:56 system, they are supporting to us. Got
+13:59 it? Now let's do one thing guys. Let's
+14:01 try to read out this uh do let's try to
+14:04 read out this step one by one and uh
+14:07 let's try to set up this cloudy code
+14:08 inside our uh inside our system.
+14:13 So guys uh first and the foremost thing
+14:15 you should have a g inside your windows
+14:18 system. Uh if you are running this thing
+14:21 inside your windows system then g is
+14:24 mandatory. Now why it is mandatory?
+14:26 Because in a back end it is using git
+14:29 bash to execute a command. So uh if you
+14:33 will ask to generate anything to cloud a
+14:35 code it will generate but where it will
+14:38 execute that it's not going to be used
+14:40 the terminal directly instead of that in
+14:42 a background process it's going to be
+14:45 use your g bash so g is a important one
+14:49 even in the documentation also they have
+14:51 mentioned the same thing if you are
+14:53 working with the windows system then
+14:55 install the git the second is the cloud
+14:58 code install the cloud code after that
+15:01 uh you just have to run this command run
+15:03 cloud A then uh choose the login method
+15:06 there is a various login method uh
+15:09 mainly they are providing you three
+15:10 login method so I will show you all the
+15:13 three login method and then we are
+15:14 selecting any one method uh then uh
+15:17 setup billing so pro API whatever right
+15:20 so pro with the pro plan you can go with
+15:22 the API you can go so I will go with the
+15:24 API uh right now okay and even I will
+15:28 show you the pro plan if you are willing
+15:30 to go with the Pro plan you can go with
+15:31 that. Uh open a project folder ask cloud
+15:35 to inspect the project work module by
+15:38 module verify the verify and generate
+15:40 the code. Okay. And then run it and test
+15:42 it. So this is all the command this is
+15:44 all the steps we are going to follow
+15:47 throughout this video. So uh in step one
+15:50 guys we'll install the git and we'll
+15:53 verify whether we have git or not. So
+15:55 how you can install the git? So for
+15:58 installing a git guys you just need to
+16:00 go through with this git scmm.com. Now
+16:03 once you will go through with this git
+16:05 scmm.com here they have given you the
+16:07 various uh option to install the git.
+16:10 You can install the git for uh window
+16:12 for the Mac, Linux and for any platform.
+16:16 So every sort of a way you will get over
+16:18 here to install the git and yes uh you
+16:21 just need to search this gitcm.com over
+16:23 the browser you will get this page. uh
+16:25 even if you're working with the Mac OS
+16:27 and Linux but guys uh please keep out
+16:30 keep this git inside your system
+16:31 configure this git inside your system it
+16:34 is very easy uh now what is the next one
+16:37 so after that guys uh here you can see
+16:40 so the next is going to be install cloud
+16:42 code so we'll install the cloud code
+16:44 here is a command for installing the
+16:45 cloud code so we are going to be install
+16:48 this cloud code using what using the cmd
+16:51 or powershell I'm working in a windows I
+16:53 can download it from here or else what I
+16:55 can do I can directly install the
+16:57 desktop version of the cloud a code and
+16:59 with that also I can configure it inside
+17:01 my system. Uh now after the installation
+17:04 guys you will have to start the cloud
+17:06 code then just write the cloud a okay or
+17:08 after the installation itself they will
+17:10 give you the couple of command to set up
+17:11 the uh set up the subscription and all
+17:14 you just need to follow those specific
+17:16 command. Uh now after writing a cloud
+17:18 guys uh you will your cloud will be
+17:20 started. Now you have to choose the
+17:22 login method. So after writing a cloud
+17:24 you will get this login method option or
+17:27 else while you are installing at that
+17:29 time only after the installation you
+17:30 will get this login method okay I'm
+17:33 telling about the first time if you are
+17:35 running it inside the first time you
+17:36 will get in a two uh you will get uh
+17:39 alongside this installation okay uh or
+17:42 else what you can do if the installation
+17:43 is completed if you're not getting the
+17:45 login method then once you will write
+17:46 the cloud it will give you the login
+17:48 method uh then guys what you have to do
+17:50 you have to decide the uh method uh with
+17:52 which method you are going whether you
+17:54 are going with the API one or you are
+17:56 going with the subscription okay then uh
+17:59 you can choose out the different
+18:00 different method they are giving you
+18:01 this two method okay cloud subscription
+18:03 and the second is what uh the second is
+18:05 the API key now apart from that they are
+18:07 giving you the third method also you can
+18:10 uh set up the cloud code using the uh
+18:13 AWS or the Azure credential so if you
+18:16 have access of the Azure bedrock if you
+18:18 have access of the Azure openai in that
+18:20 way also you can uh configure this cloud
+18:22 A because uh anyways you are going to be
+18:25 read a model right uh whether it's a pro
+18:27 plan or API key you are just going to be
+18:29 read a model so uh you can read a model
+18:31 from the Azure from the Azure co-oundary
+18:33 uh cloud foundry and from the AWS
+18:36 bedrock okay so that option also they
+18:38 are providing you over here uh then
+18:40 after configuration guys you just need
+18:42 to check out from the terminal itself
+18:43 you can write a prompt you can uh check
+18:45 out uh you you can write a prompt guys
+18:48 you can check whether it is working or
+18:49 not and uh here you can use it in a
+18:52 various way. So you can understand the
+18:54 codebase, you can generate a new
+18:56 project, you can fixes the work, you can
+18:57 refactor the code, you can write the
+18:59 test cases, anything regarding the
+19:01 development you can do using this cloudy
+19:03 code. It's going to be a very good tool.
+19:05 Okay. Now uh guys uh here is a way right
+19:09 to set up inside the window. Either you
+19:11 can open the PowerShell or the cmd. So
+19:13 let me show you the step-by-step
+19:14 process. Uh actually I already installed
+19:16 it inside my system. So what I can do I
+19:19 can uh simply open the cmd and after
+19:21 that guys I can uh write over here this
+19:25 cloud A. Okay. So once I'll write a
+19:27 cloud A. So this is my cmd either you
+19:30 can open the power cell. Now guys
+19:32 spelling should be correct otherwise it
+19:34 will give you the error. So once you
+19:35 will write cloud A guys see my cloud A
+19:37 is already in uh my cloud A is already
+19:41 installed. Okay. So uh here it is asking
+19:44 to me uh do you trust to this folder
+19:46 means uh can I uh take access of this
+19:49 folder if I will say yes then it will
+19:52 take. If I will say no it will not take.
+19:54 So I'm just hitting the enter. Okay
+19:56 after keeping the arrow over here. So if
+19:58 I will hit enter see the cloud code is
+20:00 activate over here. Now uh here what I
+20:02 can do guys I can log out first. Right.
+20:04 So let me log out first and let me show
+20:06 you how it's going to be work. How you
+20:08 are going to be logged in. Okay. So for
+20:11 log out guys what I will do? So I will
+20:12 simply write slash and then here I will
+20:14 write log out. So once I'll write this
+20:17 log out see I will be logging out from
+20:20 the system. So my cloud a is going to be
+20:24 log out right. So let it log out. Yeah.
+20:27 So it is log out now. So if I'm going to
+20:29 be routed now so it will ask me sign in
+20:33 again. Sign in again. So here I written
+20:35 a cloud. Now see it is asking to me on
+20:37 which mode you want to to keep. So dark
+20:40 mode, light mode, right? It is asking
+20:42 for this particular terminal. So if I
+20:43 will click on the dark mode, it will
+20:44 keep on the dark mode. Now this is very
+20:46 important thing and this is what I was
+20:48 talking about. So it is giving you three
+20:50 way to access the cloud a guys to cloud
+20:52 a model. The one is the subscription
+20:54 waste. Uh you are uh you can access the
+20:57 pro subscription, Mac subscription,
+20:59 teams or enterprise. You can uh keep the
+21:01 money inside your API account or else
+21:04 you can use the third party uh platform
+21:06 also. Okay,
+21:08 you can use the third party platform
+21:10 also. Now, let me uh show you guys uh if
+21:13 uh we are talking about this pro
+21:14 subscription. So, how you will get that?
+21:16 So, once you will open this cloud,
+21:19 right? Where is a cloud? Here's a cloud
+21:21 guide. Now, here you can see right now
+21:22 I'm I am over the free plan. So, if I
+21:25 will upgrade my plan, right, it it is
+21:27 similar to the chat GPT. You can access
+21:30 the pro of the chat GPT with some $20,
+21:34 right? With some $100. So in a similar
+21:36 way they are also offering you the pro
+21:38 version. So you can uh uh you can access
+21:42 it with this $70 of amount you can uh
+21:45 use this $100 dollar of account as well
+21:47 right uh you $100 of plan as well you
+21:50 can where you can uh like use the
+21:52 maximum capacity of the cloud. So this
+21:54 is the one way if you have a pro access
+21:56 or the or the max access you can uh
+21:59 utilize this cloud code. Now the another
+22:01 way via the API. Okay. So let me show
+22:04 you the way of uh how basically we can
+22:06 access it via API. So for that what you
+22:09 have to do this is cloud code document.
+22:12 Now let me go through the API. So guys
+22:14 see uh how I can navigate to the API.
+22:18 Just a second they are giving you the
+22:20 option over here itself or simply I can
+22:25 write over here cloud a API. Okay cloud
+22:29 api key.
+22:32 So once I'll write this cloud API see
+22:34 they are giving you the uh
+22:37 platform where I can generate the API
+22:39 key. So it is similar to the open API
+22:42 key right. So see they are giving the uh
+22:44 cloud console. Yeah. So I think once you
+22:47 will click on the cloud console now
+22:48 console login this one. Uh yeah so once
+22:52 you will click on this cloud console
+22:53 correctly. So from there also we can
+22:55 navigate. So once you will click on the
+22:57 cloud console you will be able to get a
+22:58 option to this API key. So you can
+23:01 generate this API key. But again guys,
+23:03 here the free uh means uh you will have
+23:05 to put some money inside your API
+23:07 account. So let me show you the my let
+23:09 me show you my account. So if you will
+23:11 check my account, I already I already
+23:14 kept at least $5. Okay, at least you
+23:16 need to keep $5. See uh on 6th of March,
+23:19 I kept $5. It completely gone. Okay, I
+23:22 build a pro project. It completely took
+23:25 my money. Uh then again uh today I kept
+23:28 $7 and maybe after this video this money
+23:31 is going to be vanish. So it takes money
+23:35 guys it is money oriented. Uh don't
+23:37 think you can uh use it freely. No it is
+23:40 not like that. Uh crowded code will take
+23:44 your money and uh even in an enterprise
+23:46 also it will it will it will be taking a
+23:49 very huge amount of money. If the entire
+23:52 team team is using then uh maybe5 to 10
+23:54 lakh of budget just for the cloud code
+23:57 you will have to keep. So uh cloud here
+24:00 I just kept5 to $6 guys just to
+24:02 demonstrate you the thing. uh you can
+24:04 void some credit at least $5 500 to 600
+24:07 rupees only and then you can practice
+24:09 with the cloud code if you just want to
+24:12 practice otherwise you can ask to your
+24:14 uh project manager or your uh like the
+24:18 this manager right director to give me
+24:20 the cloud code access I can try out the
+24:22 project with the cloud code so they will
+24:24 provide you the enterprise account okay
+24:27 I hope this thing is clear now guys why
+24:30 this cloud code is important the cloud
+24:32 code is important because it is being
+24:34 used inside the enterprises. Even in my
+24:37 company also we are using it. So
+24:39 recently we have configured this cloud
+24:41 code and the result of the cloud code
+24:43 was very amazing. Uh definitely it's
+24:46 going to be take your money but again uh
+24:48 the result of it the result out of this
+24:50 cloud code is going to be very amazing.
+24:52 So we have uh we already have
+24:55 GitHub copilot we have ID like cursor
+24:58 and the integraity where also we can
+25:00 utilize this co-pilot. Okay. instead of
+25:02 this cloud code but again if you're
+25:04 going to be use this cloud e code or
+25:06 openai GP codeex guys right open also
+25:10 release the same similar kind of
+25:11 platform which is a codeex so yeah the
+25:13 result is going to be little different
+25:15 but uh I did a coding with a github
+25:17 copilot also that is also pretty amazing
+25:19 and uh even I tried the cloud codeex it
+25:21 is a money oriented but it is also
+25:23 amazing right is still I'm exploring a
+25:26 depth of it right now uh uh I hope this
+25:29 thing is clear now coming to the next
+25:31 card. So, uh I hope guys you understood
+25:34 how to set up the cloud accord and all.
+25:36 Let me again give you the walk through.
+25:37 So, which cloud I am, which uh account
+25:40 I'm going to be choose over here. So,
+25:42 I'm going to be choose this Anthropic
+25:44 console account. So, I will uh go down
+25:48 and then I will hit enter. Now, once I
+25:51 will hit enter, so it will redirecting
+25:52 to me to the different uh page. Okay,
+25:55 this is the page. Now, once I'll click
+25:56 over here authorize, so yeah, I am
+25:59 authorized to use. If you don't have
+26:01 money over here then it won't allow to
+26:03 you. So please keep some money inside
+26:05 your account otherwise you will not be
+26:07 able to access that. Now see login is
+26:09 successful. Now if I will hit enter now
+26:11 see uh I can access the I can access the
+26:14 cloud. Okay. So see guys I'm able to
+26:17 access the cloud A and it is configured
+26:20 inside my system. It is very easy right?
+26:23 Nothing is there. Now it is having
+26:24 several command many commands even you
+26:26 can give the simple prompt also. So
+26:28 let's try out inside any folder. Okay.
+26:31 Then I'll show you how you can configure
+26:33 it inside the VS code and then we'll
+26:35 talk about the project. So uh first let
+26:38 me exit from here and let me go inside
+26:41 any project. So once I'll write the
+26:43 diir. See I have a various project over
+26:45 here inside this uh directory. So I'm uh
+26:48 going inside one of the project. Let's
+26:50 say this is my project. I'm just going
+26:52 inside this project. I'll write cd and
+26:54 then I'll give the project name. So what
+26:57 I can do guys? I can copy the project
+26:59 folder name or I can simply write that I
+27:01 think fishing website. So this is the
+27:04 project which I created uh using the uh
+27:06 AI only and u today I'm not going to
+27:10 show you this project. I will show you
+27:11 something else. So for that also guys I
+27:14 kept the entire node. See this is the
+27:16 entire nodes and definitely we are going
+27:18 to discuss this entire thing. Okay. Now
+27:21 uh here what I'm doing so uh I'm uh just
+27:25 initializing the cloud now. So once I'll
+27:28 write cloud a now see uh it is asking me
+27:31 uh access right of this folder I am
+27:34 saying yes you can uh I trust this
+27:36 folder so yeah now it is having access
+27:39 of this folder now here I can ask
+27:41 anything uh hi can you explain
+27:46 explain this project can you explain
+27:50 this project now see it is uh initialize
+27:53 so it is it is trying to read the entire
+27:55 file and all everything So yeah after
+27:57 that I it will give me the complete
+27:58 explanation of this entire code uh just
+28:01 by giving some prompt and guys see it is
+28:03 reading the entire code. It is reading
+28:05 the entire code, right? And uh see what
+28:09 it does. A machine learning system that
+28:11 detects what whether a URL is a fishing
+28:13 website or is a legitimate.
+28:16 This is the architecture here is a key
+28:18 component. Right? Uh this is a tech ST.
+28:22 Very good. Then flow summary. Uh okay,
+28:26 it did not uh tell me the flow summary.
+28:28 Maybe it told or not. No. Yeah, here is
+28:31 a flow summary. Right. If I will like
+28:35 press the down arrow then I'll get that.
+28:37 So guys it is able to explain me the
+28:39 entire project and even I can ask
+28:41 anything to this and it is going to be
+28:43 work in the next level. Uh definitely I
+28:45 can show you that but not here I will
+28:47 configure it in properly in a VS code
+28:49 and there only we'll discuss about the
+28:51 project. Now which project we are going
+28:54 to develop. Uh that is very important
+28:56 thing. So project wise guys I kept the
+28:59 entire uh uh I kept this entire use case
+29:02 over the blackboard itself. Uh now uh
+29:04 step by step uh one by one let's uh
+29:07 discuss this entire use case and let's
+29:10 try to develop that. So guys uh here I
+29:13 return a very important line. Now before
+29:16 starting the project uh let's uh read it
+29:19 out. So I written over here anyone can
+29:21 generate a code with AI today but a real
+29:24 engineer understand the architecture
+29:26 behind the system. So uh the meaning of
+29:30 this line is uh don't become a bio coder
+29:33 become a real engineer guys. uh what I
+29:36 have seen nowadays everyone is
+29:38 generating a code everyone is uh
+29:40 creating a project or everyone is uh
+29:43 developing their product but most of the
+29:46 people they don't even know the
+29:48 architecture or the fundamental behind
+29:52 that code. So guys until and unless you
+29:55 don't know the real fundamental right
+29:57 until and unless you don't know the
+29:59 exact meaning of that application where
+30:02 it's going to be used what should be the
+30:04 correct architecture of it it's not
+30:07 going to work in a production at all so
+30:10 what I would suggest you I would suggest
+30:11 you generate a code but before that uh
+30:16 clear your fundamentals until and unless
+30:18 you don't know the real meaning of the
+30:20 programming you don't understand the
+30:22 python you don't understand the
+30:23 fundamental of AI that application may
+30:27 be it might be a disaster. Okay, because
+30:30 see as a individual learner right as a
+30:33 individual learner or as a individual
+30:35 builder you can develop anything right
+30:38 but whenever you are working for any
+30:41 company whenever you are working for a
+30:43 real enterprises there the product the
+30:47 application which you are going to build
+30:49 it is having some meaning. Now before
+30:52 starting of any project you will have to
+30:54 understand the problem statement of it.
+30:57 Okay. So the second line is same you
+31:00 will have to understand the real world
+31:02 problem statement before starting any
+31:04 use case and that is a requirement of
+31:06 the industry. Then you will have to
+31:08 understand the user flow right. So how
+31:11 the data is flowing in how the input and
+31:13 output is flowing what will be the input
+31:15 what will be the output how the user is
+31:17 going to be use that then uh you will
+31:20 have to understand the complete backend
+31:22 flow then you will design the UI right
+31:25 then you will design the DB and the
+31:28 knowledgebased flow right so if you are
+31:30 going in this specific order if you're
+31:32 going in this specific order then only
+31:34 your application is going to be
+31:36 successful if you are randomly doing any
+31:38 W coding or anything guys In that case
+31:41 your application might be a disaster or
+31:45 it might fail okay in a real time in the
+31:47 production. So please be careful. First
+31:50 clear your fundamental then only start
+31:52 writing a code. Uh now uh guys uh here I
+31:56 mentioned some of the more point. Let's
+31:58 understand uh what I have written over
+32:00 here. So these lines also very
+32:02 important. So do not do this mistake
+32:04 while using copilots. The first uh let's
+32:07 say we are going to create a project.
+32:09 Okay. Okay. So in today's video guys, I
+32:11 will show you how you can create this
+32:13 customer support email system and this
+32:16 we are doing with the help of AI agent.
+32:19 So guys, if you're going to be create
+32:20 any system, if you're going to be create
+32:22 any application using the copilots, then
+32:25 don't directly give this kind of a
+32:26 statement, create an AI agent that can
+32:29 handle customer support email
+32:31 automatically or build a full production
+32:33 grade multi-agent customer support uh
+32:35 system or build an AI email assistant,
+32:38 right? That reads incoming mail,
+32:39 understand intent and generate
+32:41 appropriate response, right? So if
+32:43 you're giving these kind of a statement
+32:44 to any co-pilot okay so it might fail
+32:49 right where it it might fail. So these
+32:51 are the point which I highlighted. Now
+32:53 let's try to read it out. So if you're
+32:55 directly asking to the cloud echo to
+32:57 build everything right in that case what
+33:00 will happen you know uh the design of
+33:02 the system is going to be inconsistent.
+33:05 Okay, files may be generated randomly.
+33:08 Whatever files you wanted to generate,
+33:10 it might generate here and there and
+33:12 because of that the imports may break.
+33:15 Okay, the architecture may become weak
+33:18 and the production readiness may be
+33:20 slow. Yeah. So guys, if you are giving a
+33:23 single prompt, right, if you are giving
+33:25 these kind of prompt or direct prompt to
+33:27 the co-pilot system, in that case your
+33:29 co-pilot system might be a pro might it
+33:33 might create a problem. Okay. And these
+33:35 all are the problem which I have
+33:37 highlighted over here. Now how to use a
+33:39 co-pilot? So here I written couple of
+33:41 points. Let's try to read it out this
+33:43 point. So if you are using a co-pilot
+33:45 then use it in a smart way. Now what
+33:47 could be that smart way? Do not generate
+33:49 the entire project at once. Use work
+33:52 module by module. Okay. Use an exact
+33:55 prompt for each module. Verify the
+33:57 generated code. Perform testing and then
+34:00 only do the integration. Understood
+34:02 guys? So we have to go step by step. If
+34:05 you are not going step by step, if
+34:08 you're not deciding what will be your
+34:10 backend flow, what will be your UI, what
+34:12 is going to be a data flow, in that case
+34:14 your system might fail. So that's why
+34:17 I'm that's what I'm saying guys. Uh
+34:19 whoever don't know the programming that
+34:21 person also is going to be generate the
+34:24 application that is fine. This is good
+34:27 for the individual learning. But guys if
+34:29 you are working on an enterprise level
+34:31 then guys your fundamentals should be
+34:33 clear right and in future you will see
+34:37 people companies are hiring those people
+34:40 only who knows the fundamental okay the
+34:43 system uh their uh system architecture
+34:46 concept is very much clear. If your
+34:49 architectural concept is clear, if you
+34:52 know the fundamental, if you have worked
+34:54 on some project, right? If you worked on
+34:56 some project, then you can easily do the
+34:59 W coding. And then in that case, W
+35:01 coding is going to be your uh then in
+35:04 that case guys, W coding is going to be
+35:06 a very uh efficient productive tool.
+35:09 Okay, you can achieve a highest
+35:11 productivity using the co-pilots and
+35:13 all. And even I felt the same when I was
+35:16 working on some projects. So I hope guys
+35:18 this fundamental thing is clear. Now
+35:20 coming to the next part. So what we are
+35:23 going to develop inside this video. So
+35:25 guys inside this video we are going to
+35:27 develop AI powered customer support
+35:29 email agent. Okay. Now you know guys
+35:32 email communication is a very important
+35:34 part of almost all the industry right.
+35:37 Uh this agentic application can be used
+35:40 across many industry. In every industry
+35:42 we are going to be use the email
+35:44 communication right. Uh without email
+35:47 communication none of the industry is
+35:49 going to be work right. So we can use
+35:52 this particular system across the
+35:54 industry and how how it will look like
+35:56 we'll see at the end. But first of all
+35:58 let me tell you the complete flow of it.
+36:00 Okay. How this entire thing is going to
+36:02 be work. Now what is the goal of it?
+36:04 What is the goal of this uh system? So
+36:06 goal basically it will generate a faster
+36:08 response than human. Right? Human is
+36:10 thinking then he's typing. Now here uh
+36:14 it is going to be generate a bit faster
+36:17 than human then lower support cost. Yes.
+36:19 Uh like if you're going to be hire 10 to
+36:21 15 people right for this customer
+36:24 support there the single system is going
+36:27 to fulfill your requirement. So here it
+36:29 will lower your support support cost.
+36:32 Okay. Scalable support operation. Let's
+36:35 say guys you wanted to reply for uh you
+36:38 wanted to reply for uh thousand mails
+36:41 right 1,000 to 2,000 mail. Now in that
+36:44 case uh how many more people will hire
+36:46 or let's say your mail flow is very uh
+36:51 very huge in your organization in your
+36:52 company you you are going to be uh you
+36:56 are going to be generate like let's say
+36:58 lakhs to two lakhs mail okay per uh
+37:00 months or maybe per quarter and you have
+37:03 to handle that by a customer support.
+37:05 how you will do that? Okay. So, how many
+37:07 people how many like teams you are going
+37:09 to be build for that? So, it's going to
+37:11 be a difficult for you. And now here
+37:13 this system basically it is for the
+37:15 scalable support which can help you even
+37:18 for the uh lacks of lacks of email. Uh
+37:22 now I hope guys the goal and the uh idea
+37:25 of the project is pretty much clear over
+37:27 here. Now coming to the next part. So uh
+37:30 what is going to be a input and what is
+37:32 going to be output of this application.
+37:34 So input wise uh you will get any sort
+37:36 of a input. Let's say here is the
+37:38 example of the input. Uh in my email I'm
+37:40 getting I am I was not I was charged
+37:43 twice for my subscription. Okay. Now
+37:45 here customer uh support will help this
+37:48 people this like person. Okay. Uh they
+37:51 will tell to this guy how much you
+37:54 charge. Okay. when you paid and all this
+37:57 thing they are going to be asked right
+37:59 now but instead of the uh the real human
+38:02 now this uh thing we are going to do
+38:04 with the help of AI agent okay so we
+38:06 have a so we are getting a mail once
+38:09 we'll get a mail okay my agentic flow is
+38:11 going to be triggered so first it will
+38:13 understand the uh incoming mail it will
+38:16 read the incoming mail it will classify
+38:18 that so uh I might get a mail regarding
+38:21 the different different like uh query so
+38:24 The query with respect to the product,
+38:26 the query with respect to the bug
+38:28 report, right? The query with respect to
+38:29 the billing issue. So this particular
+38:31 query, the example query basically it's
+38:33 going to be a blinking related query.
+38:35 Then feature related request complex
+38:37 issue. Okay, we have a complex issue.
+38:39 Then we are going to redirect that to
+38:41 the human. Okay, then what we are doing
+38:43 guys, we are going to be search or we
+38:44 are going to be search over the
+38:47 knowledge base. If any sort of a
+38:48 information is going to be over the
+38:50 knowledge base over the uh documentation
+38:53 or uh in any sort of a SOP right so we
+38:56 can pick that information from there
+38:58 okay we can pick the information from
+39:00 that specific documentation now
+39:02 according to that we can draft the
+39:03 responses okay for the customer if any
+39:06 complex issue is there if any urgent
+39:09 case is there right if it is not going
+39:11 to be solved by the AI then human can
+39:13 intervention over there okay and then it
+39:16 can send the final reply to the customer
+39:18 and even it can maintain the foundation
+39:21 for scheduling the follow-ups. Getting
+39:24 my point? So this is the work this is
+39:26 going to be a complete flow of this
+39:28 entire application which we are going to
+39:30 build using the cloud code. Okay. And
+39:32 I'm not going to be write a single line
+39:34 of code. Uh the all the thing will be
+39:36 done by the cloud code itself. I hope
+39:38 guys this thing is clear. Now the com
+39:41 next thing is the design flow. So uh
+39:43 this is going to be a complete
+39:44 technology ST guys. So here we are going
+39:47 to use Python, Langraph, Langchain,
+39:50 Langchain, OpenAI, fast API, pyic or
+39:53 vector database. So this is going to be
+39:55 a complete technology stack okay for
+39:58 this entire workflow and uh the same
+40:00 thing will provide to the cloud A and
+40:02 behalf on this technology stack my cloud
+40:04 A is going to be generate the code.
+40:06 Okay. Uh then guys uh here you can see
+40:10 this is my folder structure. Now again
+40:12 guys uh this is just a normal folder
+40:14 structure which I kept whenever we are
+40:16 working in the industry right so there
+40:18 is no predefined folder structure okay
+40:21 uh if we are going to build a micros
+40:23 service right if we are going to be
+40:24 deploy our application in the form of
+40:26 microservices then the uh folder
+40:29 structure could be different uh if we
+40:31 are going to be like deploy our
+40:34 application in the monolithic right so
+40:36 the folder structure could be different
+40:38 uh there could be server worker service
+40:40 right then API then UI layer right so
+40:42 the multiple layer could be so here I
+40:44 created one uh generic folder structure
+40:47 but guys more and less the folder
+40:48 structure will be like this whether you
+40:50 are using the microservices or whether
+40:52 you are creating a monolithic
+40:54 application right in all the situation
+40:56 uh the core technical files and folder
+41:00 right it will be arranged like this now
+41:02 apart from this you can create as many
+41:05 as file and folder according to your
+41:07 requirement now what whatever you wanted
+41:09 to keep whatever uh middleware, whatever
+41:12 workflow or whatever like configuration,
+41:14 notification you wanted to keep, you can
+41:16 create a files and folder accordingly.
+41:18 But guys, more or less the core
+41:20 architecture, okay, the core code uh you
+41:22 can keep it inside this file and folder.
+41:25 So this file uh and folder this
+41:27 basically complete folder structure I
+41:29 just created just to show you how my
+41:31 application may look like. Okay. And
+41:33 even the same kind of instruction we can
+41:35 provide to the cloud A also because as I
+41:38 told you if you are going to generate
+41:39 anything using the cloud A right uh in
+41:42 that case cloud A may generate anything
+41:44 any uh uncertain thing right so if you
+41:47 wanted to certain if you want to take a
+41:50 uh like the complete control of the
+41:52 project in your hand in that case you
+41:54 have to define everything guys and
+41:56 that's what I'm saying from the starting
+41:58 of this video okay even if you're a B
+42:00 coder but guys if your fundamental
+42:02 system architecture knowledge is clear
+42:04 then your application is going to be
+42:07 very robust and it's not going to be
+42:08 break inside the production. Okay. So I
+42:11 hope this is also clear. So same kind of
+42:14 architecture maybe we can utilize for
+42:16 this application also and more or less
+42:18 it might be different. Okay. Now over
+42:20 here guys uh one more thing I have
+42:22 written over here. See whenever we
+42:24 talking about the back end right. So in
+42:26 back end what we design. So in back end
+42:28 guys we uh will be having the detail of
+42:31 all the module we are going to be decide
+42:34 the connectivity between the module okay
+42:36 connectivity between the module then
+42:38 guys we are going to be discuss the API
+42:40 design then we'll be having the API
+42:42 layer then in the back end only we'll be
+42:44 having the data database architects
+42:46 knowledge based architect uh knowledge
+42:48 based architecture then a logging design
+42:51 exception design okay and the low-level
+42:53 class design which class pattern you are
+42:55 going to be use okay So according to
+42:57 that only we are going to be decide the
+42:59 class design. So these all the things
+43:02 actually comes under the backend design.
+43:04 Okay. The low-level code where we are
+43:06 going to be write for the main
+43:07 functionality for the main business
+43:10 logic. So this entire thing actually is
+43:12 going to be recite over here. Module is
+43:15 nothing uh so the python file we we are
+43:17 talking about the module. So python file
+43:19 itself is called the module. So if I'm
+43:22 saying P module in a Python code in a
+43:24 Python project that doesn't mean it is a
+43:26 Python file only. Right? Now over here
+43:28 guys we're talking about the UI. So
+43:30 again UI is a very subjective thing. It
+43:32 might vary according to the requirement.
+43:34 So here also we'll build one UI and here
+43:37 I return one uh uh basically uh
+43:40 statement. Okay for that and yes
+43:42 according to this only we are going to
+43:44 build a UI. Now if we're talking about
+43:46 the deployment guys so yes I will come
+43:48 to the deployment that how we can handle
+43:50 the deployment using this kind of
+43:52 project means if we are going to build a
+43:54 project using the cloud code right so
+43:56 how we can handle the deployment now see
+43:58 guys a deployment side means cloud a
+44:01 cannot log my AWS console it cannot
+44:05 create a service like EC2 ECS lambda
+44:08 okay from the console itself but it can
+44:10 do via cloud formation it can do using
+44:13 the terraform it can do using the CDK.
+44:17 Okay. So guys, uh cloud A cannot
+44:20 directly log to my AWS console but it
+44:24 can handle thing at certain level using
+44:27 the script. Getting my point? So the
+44:30 same kind of thing basically I have
+44:31 written over here. Just try to read it
+44:33 out your uh all the doubts related to
+44:35 the deployment is going to be clarified.
+44:37 So uh here you can see cloud does not
+44:40 automatically create or configure AWS
+44:43 services by itself. Means uh it can not
+44:46 open your browser okay over the browser
+44:49 it's not going to be search over the AWS
+44:52 then it's not going to be uh write your
+44:54 email id over there or it's not going to
+44:56 be write your password there okay then
+44:59 uh it's not going to be configure the
+45:00 service like EC2 ECS okay so all this
+45:04 thing all this thing matters a lot while
+45:06 we are doing a deployment but manually
+45:08 this thing is not going to be happen and
+45:10 even in the industry we don't do such
+45:12 thing manually right So how this thing
+45:14 is going to be done? So cloud a code
+45:16 cannot directly configure AWS services
+45:18 by itself but it can generate the
+45:20 infrastructure as a code and this is
+45:22 what we are following in the industry.
+45:24 But again guys it needs to be followed
+45:26 under the supervision of the DevOps
+45:29 engineer. If it is not going to be
+45:31 followed under the supervision of the
+45:32 DevOps engineer in that case it might be
+45:35 a very big disaster for the company
+45:37 because it might generate anything.
+45:40 Okay. And we even don't know like what's
+45:42 going to be generate and what kind of
+45:44 service is going to be create in a back
+45:45 end right means whatever services we are
+45:48 going to be write maybe it might
+45:49 multiply that because just like AI right
+45:51 so it's not a guarantee that it's going
+45:53 to be follow a similar kind of
+45:54 instruction which we are giving there's
+45:56 90.9999% chance it's going to be follow
+45:58 the same but there could be mistake 0.1%
+46:01 could be a mistake so we have to do this
+46:03 thing under the supervision of the
+46:05 DevOps engineer right so cloud basically
+46:07 it is capable to write a config
+46:09 configuration it can perform
+46:10 infrastructure as a code when the code
+46:13 runs through the CI/CD pipeline that
+46:15 requires AWS are automatically created
+46:17 and configured. So we just need to
+46:19 configure the AWS credential inside the
+46:23 uh uh GitHub if we are using GitHub
+46:25 action genkins uh if we are using a
+46:27 genkins pipeline. Okay. And how we can
+46:29 do that? So uh we we can do that
+46:31 manually configuration of the credential
+46:33 and all and then we can write a script
+46:35 in the terraform cloud formation AWS CDK
+46:38 right this is all going to be a
+46:40 deployment script right uh
+46:41 infrastructure as a code means we are
+46:43 going to be build a infrastructure using
+46:45 the code now we can create these many
+46:47 services even any services using that
+46:50 configuration okay so here I I have
+46:52 written one very important line just try
+46:53 to read it out it does not directly log
+46:55 into the AWS console but it generate
+46:57 infrastructure as a code that instruct
+46:59 AWS to create them. I hope guys you
+47:02 understood. Now let me tell you the
+47:04 final capability of the cloud A. So with
+47:06 that guys your understanding is going to
+47:08 be very clear. So cloud A can write
+47:13 a code. Okay. Cloud A can push it to the
+47:20 GitHub. Okay. Cloud A can trigger the
+47:26 GitHub action
+47:30 pipeline.
+47:32 Okay. Cloud A can help us to write
+47:35 infrastructure
+47:37 as a code and using this infrastructure
+47:40 as a code using this configuration
+47:43 right infrastructure infrastructure as a
+47:45 code configuration right we can create a
+47:50 infrastructure we can configure the
+47:52 services over the AWS
+47:58 right I hope you are getting my point so
+48:00 using the configuration ally using the
+48:03 infrastructure the service only right
+48:06 which we can do using the terraform or
+48:08 using the GitHub action configuration
+48:11 right uh we can uh basically create a
+48:14 infrastructure over the cloud and there
+48:16 this cloud code can help us I hope you
+48:19 understood it now inside this project
+48:21 how much we are going to do so guys we
+48:23 are doing a development level of work
+48:26 right inside this particular project and
+48:29 in uh rest other video maybe in some
+48:32 other video we're going to see the
+48:35 deployment as well. Okay, because as of
+48:37 now it might be little advanced and it
+48:38 might be the expensive as we are already
+48:41 paying to the cloud code. So the
+48:42 deployment side we can look uh in the
+48:45 another video. Okay so yeah I hope guys
+48:48 you understood the entire thing. Now
+48:50 let's uh start with the cloud code.
+48:52 Let's start with the uh building of this
+48:55 project. Now first guys uh open your cmd
+48:59 and create a directory at any location.
+49:02 You can directly create a directory or
+49:05 folder from the file of explorer also.
+49:08 Okay just go inside any drive and create
+49:11 a folder there. Now here I'm going to
+49:13 create a folder at this location c user
+49:15 sunny. It could be anywhere inside your
+49:18 system. So what is a command for
+49:20 creating our directory? The command is
+49:23 mkdir.
+49:25 And then I'll write a folder name. My
+49:27 folder name is customer
+49:33 support
+49:35 email
+49:36 agent. Then I what I'll do guys I will
+49:39 uh write a cd then I will provide a name
+49:44 of my folder customer support email
+49:48 agent. And now here at those location I
+49:51 will open the uh VS code. So how to open
+49:56 the VS code guys? At this location so I
+49:58 will simply write code
+50:02 dot
+50:04 Got it. Now see I open the VS code and
+50:07 uh I open the VS code at at the same
+50:11 location. You can verify it. You can
+50:13 open the terminal. See here is my
+50:15 terminal and you can clearly see I am at
+50:18 this location. Okay. And this is the
+50:20 this is my workspace and now here only
+50:22 I'm going to code my entire project. Now
+50:25 guys how I will code my entire project.
+50:27 I'll code my entire project with the
+50:29 help of cloud A. So first of all what
+50:31 you have to do you have to configure the
+50:33 cloud A inside your VS code. So you can
+50:35 do one thing you can uh initi initialize
+50:38 the cloud A over here. Once you will
+50:39 write the cloud A now see the cloud A is
+50:42 here. Okay, you can uh give any sort of
+50:44 a command to the cloud here. Let's say
+50:46 you can write you can say uh create a
+50:49 requirement txt file.
+50:52 requirement
+50:55 dot txt file
+50:58 with all the necessary
+51:02 requirement
+51:04 okay for the agentic
+51:08 project.
+51:11 So once you will give this uh command to
+51:13 the uh cloud a then see what it will do
+51:17 guys it will create the require.txt with
+51:19 all the requirements. So it will take
+51:22 some time it is thinking and uh the file
+51:24 will be created over here.
+51:30 Okay. Now see guys it has created a
+51:33 file. It is asking to me whether you
+51:35 would like to proceed with that or you
+51:38 would like to uh see here it is giving
+51:40 three option. One is yes. Second yes
+51:43 allow all the edits during this session
+51:45 and then no. So what is the meaning of
+51:47 it? It is asking to me to confirm this
+51:50 file. Okay. The meaning of yes is the
+51:53 same. So it has generated a file. I just
+51:56 need to confirm that. The second
+51:58 basically I need to confirm it. But
+52:00 yeah, I am giving access to edit the
+52:03 other file also and even add it to this
+52:06 file also during this entire session.
+52:08 Right? Not only for this command for the
+52:10 upcoming command also it will
+52:12 automatically edit the file. Third is
+52:15 no. Okay. Simply I'm denying this thing.
+52:17 So if I will say yes. Now see my file is
+52:20 created over here.
+52:24 That much easy guys. That much easy.
+52:26 See.
+52:28 Okay. Now if you if you want to install
+52:31 this fi file recon txt uh let me
+52:35 increase the size just a second size of
+52:38 my uh I think now it is visible
+52:40 perfectly so guys how easy and how
+52:43 simple it is just just think about it
+52:47 right now see I'm working through the
+52:49 terminal now if I want to work with the
+52:51 cloud copilot how I can do that so for
+52:55 that guys uh see I I configure the cloud
+52:58 over the terminal right now and I'm able
+53:00 to work. Okay, but for the cloud a uh
+53:03 copilot I will have to install the
+53:05 extension. So just go and search the
+53:08 cloud a over here.
+53:11 Cloud A. Okay. Now once you will search
+53:13 the cloud A. Now here guys see this is
+53:16 the cloud A. Open this cloud A and
+53:18 install this cloud A. It is already
+53:21 there in my system. I already installed
+53:23 this uh particular plug-in inside this
+53:25 VS code. Now how you will confirm that
+53:29 you have this uh cloud extension or not.
+53:31 Now right hand side guys just open any
+53:34 file. Okay let's say this file. Now
+53:36 right hand side you will get this this
+53:38 symbol. Okay. I hope it is visible. It's
+53:41 not going to be hide. Uh I think so but
+53:44 yeah it is visible right. So you will
+53:46 find out this icon. Okay. Now just click
+53:48 on this icon. Now once you will click on
+53:50 this icon see here is a cloud a code.
+53:52 You can chat with the cloud A. You can
+53:55 do anything whatever you want to do.
+53:57 Right? So I'm uh pressing Ctrl C. I'm
+54:00 not going to handle this cloud a code
+54:01 using the terminal right now. Instead of
+54:04 that what I'll do guys I will use
+54:06 instead of that guys what I'll do I'll
+54:08 use this particular chat window. Okay.
+54:10 From here itself I'm going to write any
+54:12 sort of a command and I'm going to build
+54:14 a application. So uh let me delete this
+54:18 kind of txt. I will I will uh create it
+54:21 later on. So I I'm going to be delete
+54:25 that. Okay. Now what I will do guys?
+54:28 Just a second. Where is a cloud code?
+54:30 This is the code right
+54:32 and here is a cloud code. This is the
+54:35 GitHub copilot. The by default GitHub
+54:37 copilot. If you will click over here now
+54:40 you will get the by default GitHub
+54:41 copilot. Here is a cloud code. Okay. Now
+54:44 over the cloud code also
+54:47 uh
+54:49 over the cloud code also guys what you
+54:51 will see you will see a different
+54:52 different option okay over this chat
+54:54 window I hope it is visible let me keep
+54:56 my webcam left hand side for just for
+55:00 right now sorry just for a couple of
+55:03 second uh yeah so now see guys this is
+55:06 the entire screen of the cloud record so
+55:08 here you can see the past uh here you
+55:10 can see what here you can see the past
+55:12 basically
+55:14 uh conversation right so this is the
+55:16 past chat which I initiated now apart
+55:19 from this one you can see uh the
+55:21 different option ask before edit then
+55:23 edit automatically then here plan mode
+55:25 okay now here guys you will select your
+55:28 file in whichever file you want it to
+55:30 work right you will select that file so
+55:33 that cloud code can take a context of it
+55:35 then uh here is one of the option you
+55:37 can select a file and folder means you
+55:39 can add that file and folder as a
+55:41 context so here uh guys That file and
+55:44 folder will be visible and cloud will be
+55:46 using as a context. Then uh here guys
+55:49 you can see so the different uh option
+55:51 you can attach a file same one file and
+55:53 folder then mention file from this
+55:55 project you can mention the direct file
+55:57 from this project you can clear the
+55:58 conversation you can switch the model
+56:01 you can think okay account and uses you
+56:04 can check everything from here itself
+56:06 toggle fast out mode opus 4.6 six only
+56:09 then output a style agent hopes memory
+56:12 permission everything you can control
+56:13 from here and then here you can see some
+56:15 commands as well. So using this uh
+56:18 commands guys you can check out the loop
+56:21 inside init headup debug cost right
+56:24 everything you can check out from these
+56:26 particular command. So they are giving
+56:29 you every sort of a option to this chat
+56:31 window. So instead of uh like uh instead
+56:35 of managing everything from the terminal
+56:37 you can take a help of this cloud code
+56:39 window okay in a VS code the same is
+56:42 available in the cursor and in a other
+56:44 ID also and it is a much more easier
+56:47 right it is similar to the GitHub
+56:49 copilot now what I will do guys so I
+56:52 will develop my application so I have
+56:54 selected the haiku model it is a cheaper
+56:56 compared to the other model I don't want
+56:58 to waste much money right now just to
+57:00 showcase you this uh example. Okay. Uh
+57:04 otherwise I could have used the other
+57:06 model also. Let me show you the other
+57:07 model. If I want to switch then you can
+57:09 check over here. Sonet is there. Opus is
+57:11 there. Oppus 1 million context is there.
+57:14 Hiko is there. Okay. So these all are
+57:16 model we have. If I'm going to select
+57:18 the sonet or opus. So I'm going to like
+57:21 spend my token in a much faster way and
+57:23 it will charge me very high cost. Okay.
+57:26 The uh cred credits is going to be
+57:29 reduced very fast. the five or $10 of
+57:32 credit right so for the practice guys
+57:34 you can uh use this ha only uh now
+57:37 everything is set so I will provide some
+57:40 prompt to this cloud a and let's see
+57:42 what's going to be generate so I return
+57:44 uh couple of prompt already uh let me
+57:47 keep it over here so this is going to be
+57:50 a prompt guys this is going to be a
+57:53 prompt this my first prompt okay so I
+57:55 return it before the session itself and
+57:57 I'm just going to be paste it over here
+57:59 so what is my prompt guys. So I want to
+58:01 build a langraph based customer support
+58:04 email agent in Python. Okay. Create only
+58:07 an initial project uh create only the
+58:09 initial project is scaffold. Uh what is
+58:12 the meaning of this is scaffold? Is
+58:13 scaffold means the project architecture
+58:16 not the full implementation yet. Okay. I
+58:18 don't want to create a full
+58:19 implementation right now. I just wanted
+58:22 to create a uh folder structure.
+58:26 Okay. Then this is the requirement guys.
+58:30 So Python 3.11 plus fast API lang graph
+58:33 lang chain and lang chain openi. Now
+58:36 here guys I will give the specific
+58:37 requirement. Uh I don't want to use uh
+58:41 python 3.11. Okay or uh the latest
+58:44 version 3.14. I want I just wanted to
+58:47 use python 3.12 for this project. So I
+58:49 will write over here python 3.12. Okay.
+58:53 Use specifically
+58:56 use
+58:57 specifically
+58:59 specifically
+59:02 Python 3.12 past API langraph lang lang
+59:05 openi pyntic okay also generate
+59:07 require.txt txt.nb
+59:09 readme. Now this is going to be a folder
+59:11 structure. So I can uh say over here uh
+59:15 you can take a reference
+59:20 of the above
+59:22 folder structure
+59:25 but feel free
+59:27 feel free
+59:29 to add any other
+59:33 files and folder according to the
+59:36 requirement.
+59:38 Okay, according to the requirement. So
+59:41 this is what guy this is my prompt. Now
+59:43 here see uh I given the clearcut
+59:46 instruction. So I return do not heavy
+59:48 code yet. First show me the plan then
+59:50 create the file. Okay I can remove this
+59:52 one. This is fine. Now after that guys
+59:54 what I will do? I will install the
+59:55 require.txt. First let this thing is let
+59:58 this thing be create. Now guys just see
+1:00:00 the magic of the cloud. Okay. Now here
+1:00:04 uh basically I have selected a option
+1:00:07 where uh cloud is asking me about every
+1:00:11 step. Okay, it will not do anything
+1:00:13 without my permission. Why? Why it will
+1:00:16 not do anything without my permission?
+1:00:18 Because I selected that option. Okay, if
+1:00:20 you will I don't know you have seen or
+1:00:23 not but uh below there was a option ask
+1:00:26 before edit right or automatically edit
+1:00:30 or plan the thing right. So I kept the I
+1:00:33 I I opt the first option. So it is
+1:00:36 asking me for every sort of a it is
+1:00:38 asking me for every sort of what every
+1:00:41 sort of a action. Now here guys you will
+1:00:43 see that it is going to be used the
+1:00:45 batch terminal in a background process.
+1:00:47 Okay. So here it's in the inside this
+1:00:50 workspace it's going to be create all
+1:00:51 the file folder and all everything. But
+1:00:53 guys how it is going to be create that
+1:00:55 how it is interacting with my system for
+1:00:57 creating this file and folder. So guys
+1:01:00 here it is going to be interact with my
+1:01:02 system for every file and folder using
+1:01:05 the bash terminal. Uh you will not see
+1:01:07 anything over here over this terminal.
+1:01:10 Okay it's going to be use the best
+1:01:12 terminal in a back end. So yes it is
+1:01:14 asking to me do I need to create all
+1:01:15 this file and fold or something. I will
+1:01:17 say yes create that. So I said yes. Uh
+1:01:20 now guys see data is there. Now src is
+1:01:22 there. Now here is a test. Okay. Now it
+1:01:25 is again asking to me sunny uh can we
+1:01:28 write a requ.t txt can we create that uh
+1:01:31 according to this 3.2 two. So I would
+1:01:33 say yes. Okay. Now see it is going to be
+1:01:38 create. Okay. So this is all the
+1:01:40 require.txt
+1:01:42 uh which I can see over here. Even it
+1:01:44 will show you right what is being
+1:01:46 generated. You can simply check that
+1:01:48 what is being generated. See this is the
+1:01:50 file. Uh this is the file guys. Uh just
+1:01:54 a second what it is.
+1:01:57 Okay. It's av file right? It is av file
+1:02:00 and open AI key, open AI model
+1:02:02 everything I can keep over here right.
+1:02:04 So yes uh we can generate as of now it
+1:02:07 has created the environment.xt is
+1:02:09 already there. So it is asking to me
+1:02:11 should I generate that? I would say yes
+1:02:12 it will create that. I will say yes
+1:02:15 allow all this session allow edit all
+1:02:17 the session. So it will not ask me again
+1:02:19 and again until this chat is going on
+1:02:21 now. It will not ask me again and again.
+1:02:23 It will be creating all the file. So
+1:02:26 here I will I would say yes. So see this
+1:02:28 file is created. Env is also created.
+1:02:30 Okay. Then it is thinking and it is uh
+1:02:33 creating some other file. Let's see what
+1:02:35 is going to be create next. Now guys I'm
+1:02:37 not doing anything. I'm just sitting.
+1:02:39 Okay. My AI is working for me. Now see
+1:02:41 it has created the readme file also. So
+1:02:43 if I'm going to push this entire thing
+1:02:45 over the the GitHub then uh it is going
+1:02:47 to be a very good representation of the
+1:02:50 project via this readme file. So if I
+1:02:52 will say yes now see the readmi file is
+1:02:54 also there. Redmi file is also created.
+1:02:56 Okay. And uh after that guys see what is
+1:03:00 going to be happen. Let's see. So here
+1:03:03 it is creating a toml file also. Okay.
+1:03:05 Create the toml file. This is also
+1:03:08 perfect. And now what it is doing guys?
+1:03:11 It's going to be create the main py.
+1:03:13 Okay. Let's uh let it be create. Ben py
+1:03:16 is also going to be create. Okay. Now
+1:03:19 after that guys here it's going to be
+1:03:21 create the config. py. Okay. So this is
+1:03:24 also fine guys. It's going to be create
+1:03:26 a config. py great and it will create
+1:03:30 guys it will create every sort of file.
+1:03:32 I'm not doing anything. See it has
+1:03:34 created a logger for me. Okay go ahead
+1:03:36 for that. So I can see I can uh verify
+1:03:40 that means it it is giving me option to
+1:03:42 verify all the file and all first then
+1:03:44 only it will proceed further otherwise
+1:03:46 it will not proceed. Okay. If I have to
+1:03:49 do any any man manual changes inside
+1:03:51 this particular file I can do that.
+1:03:52 Right? But here guys I'm not putting my
+1:03:54 mind right now. I am just sitting okay
+1:03:56 holding with my coffee or with my iced
+1:04:00 tea or with my beer whatever right so
+1:04:03 yeah I am going to be create a file so
+1:04:05 here is app py is also created now let's
+1:04:08 see what all other file is being created
+1:04:11 so email py so it is saying sunny we can
+1:04:14 create this also email py as of now just
+1:04:16 it it is just creating a folder
+1:04:18 structure and it's just doing some
+1:04:19 highle coding and all not the complete
+1:04:21 in-depth okay so it is creating the
+1:04:24 graph py Y also. So yes, this is also
+1:04:27 created. Later on we'll give the proper
+1:04:29 use case to it and then it will go
+1:04:31 accordingly. Okay, it will make a
+1:04:32 changes accordingly. So init. py is also
+1:04:35 created. This is there. Now after that
+1:04:38 guys, what is going to happen? So it is
+1:04:41 checking everything. Allow this command.
+1:04:44 Okay, this is fine. So this is also
+1:04:47 perfect.
+1:04:49 Okay, perfect. I think it is uh just
+1:04:53 cross-checking right that all the file
+1:04:56 is created correctly or not. It is
+1:04:57 running everything in a bash terminal in
+1:04:59 back end. See the bash terminal is going
+1:05:01 on. Sorry the all the command is being
+1:05:03 executed over the bash terminal. Okay.
+1:05:05 So allow this command. What is this
+1:05:07 command guys? Okay is checking this uh
+1:05:11 pent classes.
+1:05:13 Okay. So this is in it. Perfect. Now
+1:05:17 here is my complete folder structure. So
+1:05:21 it is created a template py also this is
+1:05:25 great prompt is created I don't know
+1:05:28 guys what kind of okay so guys it has
+1:05:31 detected the flow also how it is doing
+1:05:34 that with the simple like uh prompt only
+1:05:38 I think it is taking uh because I built
+1:05:42 uh earlier actually uh two days back
+1:05:44 just to practice so maybe it's taking
+1:05:47 context from there but yeah we'll we'll
+1:05:49 modify that Okay, it's not stopping
+1:05:52 guys. It's not stopping. Uh let it
+1:05:54 create. We'll do the changes later on.
+1:05:57 Okay, so for the health also it has
+1:05:59 created a file and folder guys.
+1:06:01 literally this much of coding basically
+1:06:03 I would have taken around uh maybe one
+1:06:05 or two week just to write this much of
+1:06:07 code and project but uh it has created I
+1:06:11 think within a 5 to 10 minute only and
+1:06:13 that's the power of the AI right now and
+1:06:16 I have used the simplest model actually
+1:06:19 see this is uh so customer support
+1:06:21 development MD okay one more MD file it
+1:06:23 has created that's great now what will
+1:06:27 happen okay this is what guys envam
+1:06:31 example. Great guys. So one more file is
+1:06:33 there. This is the example which I can
+1:06:34 share with anyone so that someone can
+1:06:36 refer that. Great. Helper py inside the
+1:06:39 util there is a helper. py. Okay. Then
+1:06:44 envamp example. Okay. This is fine. Now
+1:06:48 it is testing that display directory
+1:06:51 structure. Great. Output customer. Okay.
+1:06:54 It is checking whether everything is
+1:06:56 fine or not. The complete structure and
+1:06:58 all. This is the project directory
+1:07:00 structure. Great. Oh, wow. Uh key file
+1:07:04 generated file config txt. Oh, now it is
+1:07:08 [laughter]
+1:07:09 guys. Uh it's really amazing. Really
+1:07:12 really amazing guys. So it has done I
+1:07:14 think most of the thing and uh yeah this
+1:07:17 is like really awesome. Great. So what I
+1:07:21 can do guys now I can create one UV
+1:07:23 environment over here. Even though I can
+1:07:25 give a command to this to create a UV
+1:07:26 environment but I think it's not going
+1:07:28 to be interact with this terminal. Uh
+1:07:30 GitHub copilot can do the interaction
+1:07:32 with this terminal but uh cloud code I
+1:07:34 don't know I tested but it was not able
+1:07:36 to do uh instead of that in a back end
+1:07:38 it was using the batch terminal. Okay.
+1:07:40 So let's do one thing guys. Let's create
+1:07:43 one environment over here. It is giving
+1:07:45 me a command for creating an
+1:07:46 environment. I can create a UV
+1:07:47 environment or normal Python
+1:07:48 environment. Both is fine. Then I can uh
+1:07:51 activate this environment. Okay. So the
+1:07:55 environment is created. I can activate
+1:07:56 this environment.
+1:07:58 Source is not applicable for this. Okay.
+1:08:02 So live
+1:08:04 script
+1:08:06 and this is my environment. So copy the
+1:08:08 path
+1:08:11 and paste it over here. Okay. Now it is
+1:08:13 done. Now pip install.txt.
+1:08:16 So this is the file which I have to
+1:08:18 install. Great guys. So it has
+1:08:21 installed. It is saying Python imp is
+1:08:24 not there. So if I will give this error
+1:08:28 to this cloud only it will
+1:08:33 fix that.
+1:08:35 Uh let me check the Python version. Oh
+1:08:38 guys it is 3.14.
+1:08:41 So it's taking a latest Python version.
+1:08:43 Because of that only it is giving me
+1:08:45 this particular issue. So what I'll do
+1:08:47 guys? Uh I will create a virtual
+1:08:49 environment. Let me delete this virtual
+1:08:52 environment. So here I will delete it
+1:08:55 first. Okay. Now here I will give ask to
+1:08:58 the cloud only. Uh give me a command.
+1:09:03 Give me a command
+1:09:06 to create
+1:09:09 using
+1:09:11 UV. Okay.
+1:09:14 and give me a command to create a
+1:09:16 virtual environment
+1:09:20 virtual
+1:09:21 environment using UV and
+1:09:26 with Python 3.12 only.
+1:09:32 So let's see what it is going to be
+1:09:33 generate. Maybe it will give me a
+1:09:35 command so that I can run it over here.
+1:09:38 Otherwise I can ask to this only uh to
+1:09:41 create a basically environment in a back
+1:09:43 end. it will run the back end process.
+1:09:45 It it will create it through the batch
+1:09:46 only. So, ubnv python dot okay this is
+1:09:50 the command I don't think so it is
+1:09:53 correct
+1:09:54 uh you know python let me check it out
+1:09:58 so first guys maybe
+1:10:02 okay so this is the command let me check
+1:10:04 it out that it has created great now I
+1:10:08 can
+1:10:09 use that okay great so guys my
+1:10:13 environment has activated now this is
+1:10:15 the environment customer support agent
+1:10:18 Now what I'll do I'll clear it and then
+1:10:21 here I will write the command ub pip
+1:10:25 install
+1:10:27 - r requirement dot txt. Okay. So it is
+1:10:32 saying langra depend the langent core.
+1:10:36 So just a second I can again ask to it.
+1:10:40 Ah now it is correct. The python
+1:10:42 environment is correct. Okay. Now I can
+1:10:45 give this error to this cloud only.
+1:10:47 Let's see what's going to be generate.
+1:10:51 Uh okay. So it has detected it. Let's
+1:10:55 see. H it has ver verified.
+1:10:58 And uh yeah it's doing that guys. It's
+1:11:01 doing that. Pi projectl. It has updated
+1:11:04 this file also. Great. Even we can
+1:11:06 verify. Okay. So don't like do it uh uh
+1:11:10 right after the uh generation. Okay.
+1:11:12 false verify properly and then only do
+1:11:14 it. Now let's run this command. UB
+1:11:20 uh okay this is again saying something.
+1:11:22 Let's see what it is saying.
+1:11:34 This dependency issue comes uh with a
+1:11:37 specific Python environment.
+1:11:40 So let it be how it's going to resolve
+1:11:42 that. I'm not searching anything guys. I
+1:11:45 left everything over the AI itself.
+1:11:48 Great. Now let's see what is going to
+1:11:50 happen.
+1:11:52 Uh again guys, it is not going to be
+1:11:54 solved
+1:11:57 here. Maybe the AI is going to be fail
+1:11:59 or let's see.
+1:12:02 Okay, this is perfect.
+1:12:06 Uh uh this is fine. First, let me clear
+1:12:10 the screen and let's see.
+1:12:14 Okay,
+1:12:18 guys. We're stuck. It's stuck. It's
+1:12:20 stuck.
+1:12:28 It's trying very hard [snorts]
+1:12:34 otherwise I will have to change the
+1:12:36 model basically.
+1:12:38 Uh let's see now first of all let me
+1:12:43 delete this one. I'm going to open a new
+1:12:46 terminal
+1:12:48 and then I'm writing uvp pip install
+1:12:53 - r requirement txt.
+1:12:57 Okay guys, so now it has done. Uh, okay.
+1:13:00 It is up install.
+1:13:03 No sh resolve dependency because only
+1:13:05 version of pyic are available.
+1:13:08 I think some issue with the pyic. Now
+1:13:11 let me check it out what they are giving
+1:13:13 to me. Pyic setting. Okay, no worries
+1:13:18 guys. I'll copy and paste this.
+1:13:20 Otherwise I will ask to cloud only to
+1:13:21 resolve it in a back end. Okay, means it
+1:13:24 will create an environment in a back
+1:13:25 end. It will do that. So let it be
+1:13:29 uh okay take this is fine now.
+1:13:40 Okay now it is saying do it.
+1:13:44 No sorry founder of python imp.
+1:13:48 Oh very blunder guys. I think uh this
+1:13:51 model haiku is not uh like up to the
+1:13:54 mark.
+1:13:55 >> [laughter]
+1:13:56 >> It's taking many iterations.
+1:13:58 I think my entire token is going to be
+1:14:00 empty over here itself. I think the best
+1:14:02 way is to ask uh this cloud only to
+1:14:05 check in a back end. See guys, I'm not
+1:14:06 cutting the video and all. Uh I will
+1:14:08 show you everything whatever challenges
+1:14:10 and all I'm facing. Okay. Uh maybe now
+1:14:14 it is done. So it has solved that issue
+1:14:17 [laughter]
+1:14:18 how does so many iterations. So even I
+1:14:21 see guys if you're getting stuck now at
+1:14:23 this kind of situation and all. So one
+1:14:24 thing is keep trying right AI will give
+1:14:26 you the answer at the end or else the
+1:14:29 second thing what you can do you can ask
+1:14:30 the this cloud copilot itself to create
+1:14:33 the environment first to install the
+1:14:36 requirement if it's going to be suffice
+1:14:38 right if it's going to be fulfilled if
+1:14:39 it's not generating any sort of error
+1:14:41 then give me the yes and go ahead with
+1:14:44 the final version of the with the final
+1:14:48 version of the requiretxt. So this is
+1:14:50 the idle way of doing it. So yeah fine I
+1:14:53 think my environment is ready. My
+1:14:54 environment is set up. Now it's time to
+1:14:56 give the uh another instruction to my
+1:14:59 co-pilot. Now how I can do that guys. So
+1:15:01 here I return the complete flow of my
+1:15:03 application. So this is the complete
+1:15:06 flow guys. Uh see uh first uh let me
+1:15:10 give the instruction. So this is a
+1:15:13 complete flow
+1:15:17 of my
+1:15:20 application.
+1:15:22 Okay,
+1:15:24 read it
+1:15:27 carefully
+1:15:28 and build accordingly.
+1:15:34 Okay,
+1:15:35 build accordingly. Right now here uh see
+1:15:38 what is the flow. So read the incoming
+1:15:40 customer email. Classify the intent.
+1:15:42 Search into from required document if it
+1:15:45 is required. Draft an appropriate
+1:15:46 response. Human review is required if
+1:15:49 needed. Then send reply. Okay. So let's
+1:15:53 see how it's going to be code. You can
+1:15:55 write much more uh like effective
+1:15:57 prompt. Okay. You can give like so many
+1:15:59 with so many condition. It will be able
+1:16:01 to take a very huge prompt as well. But
+1:16:03 as of now I'm just uh uh I'm just giving
+1:16:06 a basic prompt and the stepbystep uh
+1:16:09 prompt right but you can give a very
+1:16:11 huge and the uh very technical prompt as
+1:16:14 well it will be able to understand right
+1:16:16 it is just a dummy project and how to
+1:16:17 use the cloud code how to build a
+1:16:19 product project it is just about that so
+1:16:21 I'm like just showing you on that level
+1:16:24 right now so yeah I given this prompt
+1:16:26 let's see how it is going to be deal now
+1:16:28 I am just sitting okay [laughter]
+1:16:32 let's see guys how it's going to be
+1:16:33 built now. So yeah,
+1:16:38 how much time? I think it is uh it will
+1:16:41 take some time guys. Let it be.
+1:16:47 Okay,
+1:16:50 it has added more packages something in
+1:16:52 a readme file.
+1:16:55 I hope so guys it will be able to do
+1:16:57 that. I'm not pausing a video. I'm not
+1:17:00 doing anything guys. Uh, let it be.
+1:17:05 I'm just sitting in front of you
+1:17:10 checking my phone in between. Let my AI
+1:17:13 work.
+1:17:26 Yeah, my AI is working. So, what they
+1:17:29 are doing right now? Let me check that.
+1:17:31 So here guys, it's going to be added.
+1:17:36 See guys, it will give you the uh see
+1:17:39 here it is giving you the option where
+1:17:41 you can accept that you can revert that.
+1:17:44 Okay. And here you can eval that in a uh
+1:17:48 with the current uh workflow and all so
+1:17:51 many options they're giving you over
+1:17:52 here. And even you can run it you can
+1:17:54 run that you can run it run it in a
+1:17:56 debug mode. Many more thing you can do.
+1:17:58 Okay. So if I'll say yes so it's going
+1:18:00 to be proceed.
+1:18:01 Got it. So now I think it came in a
+1:18:04 different file. So it is working with
+1:18:07 this database py. Okay. So see if I'll
+1:18:09 click on yes. So yeah this is accepted.
+1:18:12 Okay. So here also you can click this
+1:18:14 one. This this bar you are getting now
+1:18:17 right. This bar you are getting. So just
+1:18:19 uh work with this also or else uh here
+1:18:22 also it will provide the option. Now see
+1:18:23 ask before edit. So it is asking me
+1:18:25 before editing anything. It is asking me
+1:18:28 to before editing sorry it is asking me
+1:18:31 editing uh before anything. Now see
+1:18:34 again yes and uh model py is there but
+1:18:37 guys see for uh like uh the enterprise
+1:18:41 code for the realtime project you will
+1:18:43 have to understand this entire code by
+1:18:45 yourself what is happening inside. Okay.
+1:18:48 Now again, yes, as of now, I'm not doing
+1:18:50 it. As of now, I'm just building. If I'm
+1:18:52 going to be verified line by line, it
+1:18:54 will be challenging. But again, guys,
+1:18:55 you have to do it, right? You no need to
+1:18:58 approve it without verifying the code.
+1:19:00 You should have the highlevel
+1:19:02 understanding of this entire code. Okay.
+1:19:10 So, you can do the come to the previous
+1:19:12 changes, next changes. Great. I think so
+1:19:15 many things. uh ser LM service py. Now
+1:19:19 one more thing I required the openi key.
+1:19:23 So I kept in one of the file let me take
+1:19:25 from there and I will paste it guys
+1:19:27 before running before running now before
+1:19:30 running this application I'll keep my
+1:19:31 open a key and the open a model name
+1:19:33 which model I'm going to use. So DB
+1:19:36 service is also created
+1:19:38 and with whatever architecture you are
+1:19:40 going to be work guys just give that
+1:19:42 exact flow exact name exact file name
+1:19:45 exact class architecture whatever you
+1:19:48 will give according to that is going to
+1:19:50 be build that okay if you don't know
+1:19:52 anything if you just know the
+1:19:53 fundamental still you want to do still
+1:19:55 you wanted to build the application then
+1:19:58 give anything [laughter] okay let it be
+1:20:00 on AI itself see this is the complete
+1:20:03 code it has created this review service
+1:20:05 and something like that. Okay, great.
+1:20:07 Now, let me click on yes.
+1:20:10 It's going to be create a complete
+1:20:11 workflow guys. Don't worry. As of now, I
+1:20:13 think it is working on the service side.
+1:20:16 So, it is following this architecture,
+1:20:18 this uh worker server and the service
+1:20:20 one. So, schedule service is fine.
+1:20:24 Great. And guys, as of now, I'm not
+1:20:27 going to be integrate my Gmail. What I
+1:20:29 will do, I will test it with a dummy
+1:20:30 email. Okay? I'll show you how you can
+1:20:32 test that. So I'll keep some dummy email
+1:20:34 over the UI itself. We'll keep it and
+1:20:36 from there only we are going to test it.
+1:20:41 So llm template py is going to be added.
+1:20:45 Okay,
+1:20:48 it failed now. Yes. Okay, this template
+1:20:51 is also changed.
+1:20:56 I hope guys everything is visible on my
+1:20:58 screen. Let me
+1:21:02 keep me in a small one.
+1:21:05 Yeah, this is fine, I think.
+1:21:10 Yes,
+1:21:19 even you can uh like uh allow to this uh
+1:21:22 cloud a to edit everything in a single
+1:21:25 go, right? Just click on this edit allow
+1:21:27 all edits in this session. Right? So if
+1:21:29 I'm going to click on this now see it
+1:21:30 won't ask me again and again
+1:21:34 it's going to do every sort of edit by
+1:21:36 itself. But this might be harmful.
+1:21:39 Right?
+1:21:42 See here is a uses 55% uses of my credit
+1:21:46 limit. [laughter]
+1:21:48 I hope so guys within like this 50% uh I
+1:21:51 think two to two to like uh $2.5 maybe
+1:21:55 within that I'm going to be complete
+1:21:57 this application [laughter]
+1:22:00 otherwise I will have to add more money
+1:22:04 oh it is using log guru great log guru
+1:22:06 is a good package for generating a logs
+1:22:09 structure log even struct log is a good
+1:22:11 one 57%
+1:22:15 okay I hope so guys it won't be reach up
+1:22:18 to 100%.
+1:22:20 Uh, too much code. Too much code.
+1:22:25 Followup scheduuling. Great.
+1:22:30 Yeah. See guys how it has created the
+1:22:32 state the completed state. This is
+1:22:34 workflow. py. See this is my langra
+1:22:37 workflow. Great guys. Great. Very good.
+1:22:39 Email retrieval classification context
+1:22:41 analysis review check and all
+1:22:42 everything. Everything is being done. Oh
+1:22:44 that's great guys.
+1:22:47 60% users limit. See here you can see
+1:22:50 this one
+1:22:52 40 remaining until auto compact. Okay.
+1:22:58 Click to compact now.
+1:23:01 Okay. It is using the autoco compact
+1:23:03 feature I think. So yeah we'll have to
+1:23:06 deep dive more to optimize this one
+1:23:09 actually.
+1:23:13 Now it is not asking me to edit
+1:23:15 anything. I kept it on a auto auto
+1:23:17 copilot mode and it's doing that. It's
+1:23:19 every if anything is going to be like uh
+1:23:22 break it will like uh check by itself.
+1:23:25 [laughter]
+1:23:29 Okay.
+1:23:34 Memory is also created memory MD. Why it
+1:23:38 has created a memory MD? You can check
+1:23:41 with this thinking. Perfect. Now I've
+1:23:42 created a complete mean memory. Oh, it
+1:23:46 has created by itself guys for for
+1:23:49 himself right see here see file document
+1:23:51 all the you you can check like what it
+1:23:53 is thinking let me read and file get
+1:23:56 thinking completed implementary summary
+1:23:59 DB layer I think guys service layer is
+1:24:01 done database layer is done langra
+1:24:03 workflow is done email will come
+1:24:05 response generation review routing human
+1:24:08 review response great guys it has
+1:24:10 created it has created okay great great
+1:24:14 see this is a complete folder structure
+1:24:15 it has generated in a very amazing way
+1:24:18 that's really good guys now what I'm
+1:24:19 doing database model service okay API
+1:24:22 routes is not completed it needs to be
+1:24:24 done it needs to be done okay great guys
+1:24:28 so what I'll do I'll give the next
+1:24:29 prompt to it so what is going to be a
+1:24:31 next prompt
+1:24:33 uh can you implement files right so I
+1:24:37 will keep every data and all everything
+1:24:38 in a file itself and yeah I'm giving you
+1:24:42 that I'm giving the same prompt now Can
+1:24:44 you implement files as a knowledge base?
+1:24:49 create
+1:24:51 some dummy
+1:24:54 document
+1:25:00 store it in a file
+1:25:04 so that I can retrieve
+1:25:07 the information
+1:25:09 info from there and can utilize it
+1:25:17 in my workflow. Okay. So guys uh see
+1:25:22 this document this data could be
+1:25:24 anything in a real time as of now I'm
+1:25:26 asking to cloud a only to create some
+1:25:28 document to keep some information over
+1:25:30 there and out of that document create a
+1:25:33 file index but in a real time this
+1:25:36 document could be anything getting my
+1:25:38 point this document basically it could
+1:25:40 be a real data real data right from the
+1:25:43 variety of the uh task. Okay. So I'm
+1:25:47 giving this prompt. Let's see how it's
+1:25:48 going to be deal with this particular
+1:25:49 prompt and whether it's going to be keep
+1:25:51 the data or not. And it's going to be
+1:25:54 get a files on top of it or not. Let's
+1:25:56 see. So first it's going to be addit uh
+1:25:59 the
+1:26:02 require.txt.
+1:26:04 So edit automatically. I I selected this
+1:26:07 now. See it is taking workflow. This let
+1:26:10 me hide this one. See here you can
+1:26:12 select this file as a context or you can
+1:26:15 not select okay just uh deselect this
+1:26:17 file as a context means uh if if you're
+1:26:20 going to be select this file now cloud a
+1:26:22 code is taking a context out of this
+1:26:23 file as of now now we as of now we are
+1:26:26 not giving a context from any specific
+1:26:27 file so I just deselect it over here see
+1:26:30 this is the deselect one if I will click
+1:26:32 on it again it will be selected as a
+1:26:34 context okay
+1:26:37 so recxe let me check uh it has added
+1:26:40 the files is uh related.
+1:26:43 Yeah, it has added. Okay, great. This is
+1:26:46 great, guys. Now, what it is doing, it's
+1:26:49 like very good. See, even though I'm
+1:26:52 using the Haiku model, if I'm going to
+1:26:53 use Opus now, guys, it's going to be a
+1:26:55 blaster.
+1:27:00 But guys, it will uh suck your money for
+1:27:03 sure. Uh I spend uh just like 1,200
+1:27:07 rupees to show you this de
+1:27:09 demonstration. Okay. [laughter]
+1:27:12 Buth if you are going to be like uh do
+1:27:14 it in a real time then it's going to be
+1:27:16 suck your money that's for sure.
+1:27:20 So AI is not affordable right now. The
+1:27:23 premium AI I'm saying
+1:27:47 74% used.
+1:27:50 I believe guys I'm not going to be lose
+1:27:53 my all the money
+1:27:59 and before that only I will be able to
+1:28:01 build this application.
+1:28:03 76% used.
+1:28:07 Okay. HighQ is there.
+1:28:11 Thinking mode is there. Target. I think
+1:28:14 if I'm going to be like stop this
+1:28:16 thinking mode, maybe it might not be
+1:28:19 used this much of tokens.
+1:28:23 77%.
+1:28:25 Great.
+1:28:35 Okay guys, so it is creating five minute
+1:28:39 step. Okay, this is fine. Let me check
+1:28:42 where it kept the data. DB is here.
+1:28:45 Database.py
+1:28:49 uh
+1:28:50 src script is there.
+1:28:57 service service API
+1:29:00 graph schema
+1:29:03 service. Okay, I think still it is doing
+1:29:06 that.
+1:29:10 Oh. Oh, this is a like
+1:29:18 this is a command it is asking to me run
+1:29:21 that.
+1:29:22 Okay,
+1:29:25 what where is the data? App. py is
+1:29:27 there. Compu db is there. Database.py
+1:29:30 graph
+1:29:31 nodes template and it has created the
+1:29:35 complete one in a blank graph itself.
+1:29:39 Okay, this is fine. And every time guys,
+1:29:42 it will not create a same code. Okay,
+1:29:44 see guys, this is the uh okay, F
+1:29:47 implementation, F knowledge base. Great.
+1:29:50 This 2 MD it has created. But I don't
+1:29:52 know which data we are going to be
+1:29:54 retrieve the information.
+1:29:56 Uh maybe I will have to give some
+1:29:58 specific prompt for that.
+1:30:01 It's going to be keep the data
+1:30:07 DB models schema nodes.
+1:30:11 Yeah, this is fine. Let let's wait guys.
+1:30:14 Okay, let it be complete.
+1:30:22 Perfect. Now let me create a final
+1:30:23 summary showing you everything was
+1:30:24 implemented.
+1:30:26 Great.
+1:30:28 Now guys after that we'll create a UI as
+1:30:30 well. Okay. So API and UI is the next uh
+1:30:34 target. It has used 85% of my limit.
+1:30:38 Let's see how much is going to be expand
+1:30:40 now.
+1:30:43 Okay. Five is not completed. Customers
+1:30:46 of final vector similarity. What you
+1:30:48 have now five similarity search semantic
+1:30:50 uh 20 sample support document product
+1:30:53 information
+1:30:55 uh where it has created this product
+1:30:57 information
+1:31:00 uh setup helper is there this is fine
+1:31:03 compressive document of five minute
+1:31:04 guide this is fine
+1:31:08 create file index of 20 document I think
+1:31:12 it has created inside only maybe let me
+1:31:14 check a script
+1:31:16 so where is a script script.
+1:31:20 This is the API API DB
+1:31:23 uh schema. Here is a script. Inside the
+1:31:27 script, what we have guys? Just a
+1:31:29 second. Inside the script, populate
+1:31:33 knowledgebase. py. Yeah. So, see guys,
+1:31:36 this is a sample document. I think uh
+1:31:40 see it it it haven't created any MD file
+1:31:43 or something to create the uh index.
+1:31:46 Okay. So it has created this dummy data
+1:31:48 and it is using that
+1:31:50 fine. So this is clear. Now let's do one
+1:31:53 thing. So let's say yes and I think this
+1:31:56 is done. But guys I can give the
+1:31:59 specific instruction where it can keep
+1:32:00 the data right where it can keep the
+1:32:03 data inside the uh data folder
+1:32:06 specifically and then on top of it it
+1:32:07 can build a index. Okay. So your
+1:32:09 fundamental of the rag the agent should
+1:32:10 be clear here. Now I'm giving the final
+1:32:13 uh command. So and final prompt uh I
+1:32:16 kept over here.
+1:32:19 So here is my final prompt guys. This
+1:32:22 one. So can you also create a UI API
+1:32:29 and UI where we can test the system
+1:32:32 using the mock mail and also please
+1:32:34 create another page where we can view
+1:32:35 all the email inbox email along with
+1:32:38 their email details and the
+1:32:40 corresponding agent output. Okay, let's
+1:32:42 see guys how it's going to be behave on
+1:32:43 this particular uh basically prompt. Now
+1:32:47 compact now what is this? Uh okay so
+1:32:50 compacting let's see I think it will
+1:32:53 optimize it maybe
+1:32:59 uh great so let me ask now what it is
+1:33:03 going to be generated let's see
+1:33:09 [snorts]
+1:33:11 but guys it's like really uh amazing see
+1:33:14 how much line of code it just created
+1:33:16 within like 10 to 20 minutes
+1:33:20 and even we are able to do the same
+1:33:22 thing using the copilot as well but yeah
+1:33:24 cloud aim it might be much more
+1:33:26 efficient as I told you their models are
+1:33:29 more focused towards the coding and the
+1:33:31 development so if you are doing an
+1:33:32 enterprise level of coding then this
+1:33:35 would be useful right
+1:33:40 okay guys so it is going to be generate
+1:33:50 Compact compact chat manual uh token
+1:33:54 freed
+1:33:57 okay compact thinking the user is asking
+1:33:59 the API info there great this is done
+1:34:02 this is being done okay guys it is
+1:34:04 working on that main py then models py
+1:34:08 it's working on the workflow py
+1:34:11 okay as of now it is reading that
+1:34:12 according to that maybe it's going to be
+1:34:14 create the API and all everything.
+1:34:17 So yes, it is working
+1:34:33 models workflow email. Guys, don't leave
+1:34:35 this video, okay? Just to check what is
+1:34:38 going to be generated by the end. Wait,
+1:34:41 [laughter]
+1:34:43 we'll test the entire application with
+1:34:44 the UI itself.
+1:34:47 Now after this one, what I'll do, I'll
+1:34:49 keep my open AI key and all everything.
+1:34:50 Then only we are we going to test that.
+1:34:52 Okay, APA route is created. Now it is
+1:34:57 thinking about that first. It has read
+1:34:58 all the files and folder. Great.
+1:35:11 SRC
+1:35:18 in the SRC static it has created static
+1:35:21 or not so far.
+1:35:26 Okay, here you are full content. Can I
+1:35:29 read the specific file
+1:35:31 existing schemas and models? Great.
+1:35:37 As of now, it has not created a stat
+1:35:39 static and the other one. You can create
+1:35:41 UI in any other services also in
+1:35:43 whatever services you want.
+1:35:52 Guys, I'm not going to be stop it. I'm
+1:35:54 not going to be cut this part. Let it be
+1:35:55 generated. Okay. See how AI is working.
+1:36:07 Okay. Summary of what to build. Great.
+1:36:10 It is thinking that
+1:36:21 I think it is working in a compact mode
+1:36:23 that's why it is taking this much of
+1:36:24 time to think and the process.
+1:36:27 Oh, it is in a plan mode. Oh,
+1:36:36 okay. It is showing me a complete plan
+1:36:37 right now. Maybe when I switch to the
+1:36:39 compact now first it is planning with
+1:36:42 the best and possible summary then only
+1:36:44 it will do the editing.
+1:36:46 Oh now it is saying it I have
+1:36:48 everything. Now let me write the
+1:36:49 implementation plan. Right
+1:37:05 thinking mastering I don't know where
+1:37:08 when it is going to be generated next
+1:37:10 one
+1:37:16 okay maybe
+1:37:19 except this cloud Oh yes and auto
+1:37:22 accept. Yes and manually approve edits.
+1:37:24 No keep planning. Yes and auto accept.
+1:37:27 Great. So I accepted all the thing. Now
+1:37:31 maybe
+1:37:33 it is starting the implementation.
+1:37:36 Okay guys. Great. So it has created a
+1:37:38 complete checklist and it's going to be
+1:37:40 build that one by one.
+1:37:45 Mhm.
+1:37:47 So this is a complete checklist. I think
+1:37:50 by end of this uh session it's going to
+1:37:51 be complete all this one. So guys be
+1:37:54 careful read everything whatever is
+1:37:56 going to be generate and according to
+1:37:58 that you need to take your decision.
+1:38:00 Okay.
+1:38:12 Great. So I got my first file. This is
+1:38:14 base.html.
+1:38:16 Yeah, it is having a code. Alloy open
+1:38:19 JDK.
+1:38:20 Okay, it is asking me some permission.
+1:38:29 Okay, test email. HTML is also there.
+1:38:44 Okay, I think it will take time.
+1:39:21 Allow this command. Fine. App loaded
+1:39:24 successfully.
+1:39:25 Great guys. I think it is about to done
+1:39:29 you. Okay. It is checking in a back end
+1:39:31 whether everything is working fine or
+1:39:33 not.
+1:39:35 Okay.
+1:39:36 So I am just giving a access. Okay.
+1:39:39 Okay. So guys, see it is creating an
+1:39:40 environment just for checking the entire
+1:39:42 application in a back end. Read it. I
+1:39:45 need to think. Oh, files was not
+1:39:47 working. It is updating that. Now it
+1:39:51 went to the edit automatically. So fine
+1:39:54 guys, click to compact now. 45. Great.
+1:39:58 Great. Great.
+1:40:06 So when I did the compact now guys in
+1:40:09 that case it was optimizing everything
+1:40:11 means it was generate a planning in a
+1:40:13 summarized form. Okay. So I think you
+1:40:15 should try over here when you have a
+1:40:18 like lower limit then
+1:40:20 uh compact right your generation and all
+1:40:24 everything and then uh basically see how
+1:40:26 this copilot is behaving right
+1:40:29 so it is asking for one more command
+1:40:31 maybe it is checking in a back end
+1:40:33 everything is working fine or not
+1:40:37 okay but guys I will test it manually
+1:40:39 over here otherwise it will uh
+1:40:43 okay this is fine print successfully
+1:40:48 from src import loaded successfully. It
+1:40:51 is checking everything. If uh something
+1:40:53 is going to be like a break then maybe
+1:40:55 it will uh look into that code that
+1:40:58 part.
+1:41:00 So
+1:41:03 test app loading and build UV run
+1:41:21 import uploaded successfully.
+1:41:30 Okay, I think it is trying to check in a
+1:41:33 back end what is happening. Everything
+1:41:35 is working fine or not. Maybe UV and
+1:41:37 Python main. py. Now it is checking with
+1:41:41 all the routes in main. py I think we
+1:41:43 have all the routes. Oh, it has created
+1:41:44 the customer support DB also.
+1:41:48 Main. py. This is my all the routes
+1:41:52 inside the route only. Yeah, this is the
+1:41:54 routes guys. See email routes, UI
+1:41:56 routes, everything is there. You see it
+1:41:58 has created different different uh
+1:42:00 routes over here. We can verify the
+1:42:03 entire code at the end but yeah let it
+1:42:05 be complete right now.
+1:42:08 So customer support DB equal database
+1:42:11 file deleted.
+1:42:13 Okay.
+1:42:17 GRP test
+1:42:21 the code has become very huge now guys
+1:42:24 and uh
+1:42:27 to check manually everything over here.
+1:42:29 It will take a lot of effort.
+1:42:33 Okay great human review is there. This
+1:42:36 is fine
+1:42:39 after fixing indexes.
+1:42:48 It's running everything over the
+1:42:49 terminal and it's checking each and
+1:42:51 every module. See, you can read over
+1:42:52 here what it is doing.
+1:42:55 Dabase initialize. It has created
+1:42:57 everything. Okay, this is done, done,
+1:42:59 done, done, done. Uh, then open. Great.
+1:43:02 It has given me the command also, guys.
+1:43:03 See even I can test that now but for
+1:43:07 that I required the open AI key maybe
+1:43:09 let's read what the what it is saying it
+1:43:11 is saying quick start install this all
+1:43:14 the dependency then this run this one u
+1:43:18 run python main py then open local host
+1:43:22 in your browser great test with the UI
+1:43:25 okay fine guys so it has it has done
+1:43:28 everything okay now let me do one thing
+1:43:30 let me basically add the open a key
+1:43:35 inside my env. So just a second I'm
+1:43:38 doing that
+1:43:40 so that I can generate the response okay
+1:43:42 if it is required.
+1:43:45 So this would be my openi key and I will
+1:43:48 have to keep my openi model also over
+1:43:51 here. So I kept the key in my notepad.
+1:43:54 I'm just going to be copy from there. So
+1:43:57 let me copy that. Just a second guys. So
+1:44:01 here is the model name as well as the
+1:44:07 open AI key. Okay guys, so I kept the
+1:44:09 both. Now
+1:44:12 I can execute the command to check
+1:44:13 whether everything is working fine or
+1:44:15 not. So I already installed all the
+1:44:18 thing. Now if I'm going to be run this
+1:44:20 main py
+1:44:22 uh it is saying validation error. Okay,
+1:44:24 let me provide this error to this
+1:44:28 cloud only. Let's see what it is saying.
+1:44:32 So here I am providing. Now see guys, I
+1:44:35 kept this edit automatically. That's why
+1:44:37 I'm editing. That's why it is editing
+1:44:39 automatically everything. Okay.
+1:44:42 Open a model. Uh great. Open a model.
+1:44:47 Open a API key.
+1:44:54 Why it is changing that? Uh
+1:44:59 model name line number nine. Uh but the
+1:45:02 config open model. Okay. Model. Great.
+1:45:06 Got it. Got it guys. I think the name
+1:45:08 was different basically.
+1:45:10 Uh oh great. I think I just have to
+1:45:13 write the model. I just have to keep the
+1:45:15 value of that maybe. So that is a issue.
+1:45:26 Let it complete then I will keep that.
+1:45:28 Okay.
+1:45:32 Excellent. The config fix the file app
+1:45:35 is running. What I can correct? Uh okay.
+1:45:40 Now it has done that. So what I can do
+1:45:42 guys I can keep the model only the model
+1:45:44 name. I'm not going to be remove
+1:45:49 now. I will keep my open API key. I'm
+1:45:51 not going to be write the different uh
+1:45:54 key name. Okay, I'm just uh editing the
+1:45:56 value. Now here I will keep my key.
+1:45:59 That's it. Uh let's see whether it's
+1:46:01 going to be work or not. So here guys,
+1:46:04 what I'll do? I will run this command
+1:46:08 again. Okay, now it is running. My
+1:46:11 application is running. Let's see
+1:46:15 how it is looking like. Okay. So, let me
+1:46:18 run it over the local host 127.
+1:46:22 Yeah, guys. So, this is the application.
+1:46:24 Great. [laughter]
+1:46:27 Uh test email inbox is here. Total
+1:46:30 pending processing respond failed. Great
+1:46:32 guys. It has like really created a great
+1:46:34 application. Oh, this is my all the API.
+1:46:37 I can test over here. I can check my all
+1:46:39 the routes and all everything. That's
+1:46:41 really amazing. That's that's really
+1:46:42 amazing guys. This is a test email. Even
+1:46:44 I can tell the different category
+1:46:45 regarding the testing and all. So this
+1:46:48 is really amazing. If I'm going to be
+1:46:50 test this now submit test email. Let's
+1:46:53 see what is happening over the oh so
+1:46:55 this is generating now.
+1:46:59 Ah great. So what is happening? Oh it is
+1:47:02 loading a model.
+1:47:04 Which model it is loading? I think it
+1:47:06 has done something else in a back end.
+1:47:09 uh embedding
+1:47:13 H let me check what is the status file
+1:47:18 category low confidence zero great guys
+1:47:20 so it is giving me a thing now now let
+1:47:22 me fix that I think I have to generate
+1:47:24 everything from the open itself so
+1:47:29 okay let me give the command can you
+1:47:32 config the open AI model and open AI
+1:47:38 embedding ing OpenAI embedding only I
+1:47:41 think it has configured something else
+1:47:42 some different model
+1:47:48 please correct that in the code okay so
+1:47:52 let it be let it create let's see what
+1:47:55 is happening now
+1:48:01 okay it's doing that maybe
+1:48:05 ah it has it was using sentence
+1:48:07 transformer that's what I'm thing now
+1:48:08 see what is happening I don't know in
+1:48:09 the back end I think something was
+1:48:11 fishing it was using a different model
+1:48:17 now it is doing something config py is
+1:48:19 getting changed
+1:48:21 great let's see now what will happen
+1:48:34 guys uh I hope you like this video if
+1:48:36 you liked it then Please hit the like
+1:48:38 button and even you can check my YouTube
+1:48:40 channel also there I am uploading this
+1:48:42 kind of videos and all everything. So
+1:48:45 yeah this is going to be run again. Auto
+1:48:48 startup completed. This is fixed I
+1:48:51 think. So it should be
+1:48:53 let it be guys completely. I think much
+1:48:56 more enhancement are there. Reading
+1:48:58 reading reading sentence transformer is
+1:49:01 going to be removed. That's great.
+1:49:02 Thinking
+1:49:04 perfect. Now clean all the files.
+1:49:07 Oh, the file index is going to be
+1:49:08 delete.
+1:49:10 It is having access of your terminal now
+1:49:12 because of that it is able to do like
+1:49:14 everything right it has configured the
+1:49:16 best terminal in the back end that's why
+1:49:19 see this much of code guys within hour
+1:49:21 within hour this much of code and the
+1:49:23 complete working application test email
+1:49:27 this is just a mock email this is an
+1:49:29 inbox and here is the API docs now guys
+1:49:32 see what we can do we can connect it
+1:49:34 with a real email okay with the real
+1:49:36 system and yeah I can check like How
+1:49:39 many email is being replied? How many is
+1:49:41 not being replied? Everything we can do
+1:49:43 over here. Everything we can check. So
+1:49:45 let it complete. Maybe it is done.
+1:49:47 Everything is configured. Again I'm
+1:49:49 going to be check my email. So this is
+1:49:52 the sender email. The subject and submit
+1:49:54 test. Let's see guys what is going to
+1:49:56 happen.
+1:49:58 Uh it is saying something.
+1:50:04 Let me give this error to this cloud A.
+1:50:08 Cloud do something now.
+1:50:11 Maybe it's going to be break somewhere.
+1:50:18 Okay. I think it the key is not going to
+1:50:20 be load.
+1:50:22 Uh in ENB they have uh just a second
+1:50:26 open AI key. Again they have edited this
+1:50:28 again they have edited this. Uh that's a
+1:50:32 problem. Now guys if we are giving a
+1:50:33 full autonomy to the system this is the
+1:50:36 issue.
+1:50:37 This is the issue guys. This is the
+1:50:39 issue.
+1:50:42 Here is my key. Now what I'll do guys,
+1:50:45 this is my
+1:50:47 model. I wanted to use GPT4 model. So
+1:50:50 I'm giving a model over here. Oh guys,
+1:50:54 I'm just crossing my finger and let's
+1:50:56 see whether it's going to be work or
+1:50:59 not. Now okay, again I will run it.
+1:51:07 Okay, great. So, my host is running. If
+1:51:11 I can reload it or I just have to turn
+1:51:15 27.
+1:51:17 Okay, now guys, I'm just crossing my
+1:51:19 finger and running it. Let's see.
+1:51:23 It has failed. Now, why it is failed?
+1:51:25 Let's see.
+1:51:30 No, no response. This time I think I
+1:51:33 given the key.
+1:51:35 What is the issue?
+1:51:38 Email classification failed.
+1:51:45 Okay, let's see guys. Again I'm giving
+1:51:47 this particular thing to the cloud A.
+1:51:49 Let's see now
+1:51:57 the config accept turbo and not
+1:52:02 I noticed.
+1:52:10 Okay. GP4 Turbo preview the it is saying
+1:52:14 the model name should be this.
+1:52:18 Okay
+1:52:20 guys, it is editing this key again and
+1:52:22 again. Uh
+1:52:33 okay, you should render it immediately.
+1:52:36 Formatted the quit around value might
+1:52:38 cause parsing issue.
+1:52:41 Okay, it has fixed the thing. Now guys,
+1:52:43 this time I'm not going to be change
+1:52:44 anything except the open key. Okay, I
+1:52:46 think we'll have to give the specific uh
+1:52:49 like the uh instruction to use the GPD4
+1:52:52 model. I think they are using a
+1:52:53 different model GP4 turbo preview. Let's
+1:52:56 see. Let's execute now. And guys, again
+1:52:58 I'm crossing my finger. Let's see.
+1:53:01 Everything is going to work. I think the
+1:53:02 application is fine. Maybe the key and
+1:53:04 all everything is giving giving a issue.
+1:53:07 So this time it should work. Failed or
+1:53:10 what? So failed. Why? Oh loop tight it's
+1:53:14 not able to classify
+1:53:19 uh
+1:53:24 cloud why what you are doing uh
+1:53:29 again let's see
+1:53:37 I think the system the NV file is still
+1:53:39 the API the export Same one from there's
+1:53:42 a major security issue that needs to be
+1:53:44 okay. It is saying there needs to be
+1:53:47 addition looking at the logs. The app is
+1:53:49 running fine. Open a embedding is
+1:53:51 successfully but the classification
+1:53:52 failing because objective the API key
+1:53:54 seems to be causing issue even though it
+1:53:57 is in the env. The problem with the is
+1:54:00 the old expose key. I need to redirect
+1:54:03 it immediately before the user see. But
+1:54:06 more importantly notice the log show the
+1:54:07 API key is still not working properly.
+1:54:10 Uh key is not working properly. I don't
+1:54:13 think so. Critical security issue APK
+1:54:15 expert again. Okay, let me run it
+1:54:18 without this API key. I think so. It has
+1:54:20 kept some mock replies and all. We'll
+1:54:23 have to check that part guys. Okay, key
+1:54:26 part. Maybe my key got exposed and
+1:54:29 because of that it is not allowing or
+1:54:31 maybe I will have to keep the key again.
+1:54:32 So, submit email. Uh it has failed guys.
+1:54:36 Why it is failed?
+1:54:39 because key is not there. Okay.
+1:54:45 Uh
+1:54:46 let me ask to it.
+1:55:03 You
+1:55:29 Okay. So guys, I written this prompt.
+1:55:31 Let's see how it is going to be deal
+1:55:32 with it. The user is asking a very valid
+1:55:36 question. They're confused because I
+1:55:37 keep saying APK and redirect
+1:55:39 redirecting. But the need real AP is the
+1:55:41 system that you have under APK use AP
+1:55:43 service. Sorry, they need a get a real
+1:55:46 API from the open AI. The need to keep
+1:55:48 it safely not in a g report, not shared,
+1:55:50 not in a lock. They should a file for
+1:55:52 the local developer. There should never
+1:55:54 be committed to the version control. You
+1:55:56 need the API key, open APK without it.
+1:55:59 Open a call. This is normal.
+1:56:02 Keep in normal. Okay, your key is here.
+1:56:06 This correct perfect. Okay. Get env
+1:56:11 commit it don't push it when I keep
+1:56:13 warning about exposure then issue is in
+1:56:15 a chat history or accidentally past the
+1:56:17 actual key this is expo for testing only
+1:56:20 just a new one if public github you are
+1:56:22 safe it was user production
+1:56:25 okay great
+1:56:27 I'm writing over here I am using it for
+1:56:31 the testing only and it is in my local
+1:56:38 so Please accept
+1:56:41 my key
+1:56:43 and I will not keep it on a edit mode
+1:56:47 and I'll keep it in this
+1:56:49 uh
+1:56:52 I will keep it over the ask before edit
+1:56:56 mode. So open a API key. Now let me keep
+1:56:58 this thing over here. system is ready
+1:57:02 and let's see now guys if I am going to
+1:57:05 be run it
+1:57:09 okay my workflow is initialized
+1:57:13 my application should be ready and if
+1:57:16 I'm going to submit
+1:57:22 it has failed again
+1:57:27 no response spend for 6 No response
+1:57:31 available.
+1:57:36 Oh, something is happening in between.
+1:57:38 Maybe it is a issue of the LLM only.
+1:57:46 Uh
+1:57:47 looking like the logs I can see. So
+1:57:50 clearly email is successful.
+1:57:51 Classification attempt what fail because
+1:57:54 the email defaults to category other
+1:57:56 category. this together. Review checks
+1:57:57 uncertain category. No response was
+1:58:00 generated. Edit. Uh,
+1:58:04 okay.
+1:58:05 It is saying use this one.
+1:58:09 Uh, yes.
+1:58:12 I think I am using it with a double
+1:58:14 code. That could be the issue. Oh my
+1:58:17 god. Uh,
+1:58:19 [laughter]
+1:58:21 okay. Key taken away. Now, let's see.
+1:58:24 Okay, guys. Finger cross again I'm going
+1:58:27 to run it and submit the email
+1:58:35 it again failed. Okay,
+1:58:40 97% used
+1:58:44 and guys this is the issue. So this is
+1:58:46 the priority low low status fair means
+1:58:49 AI is not able to generate it is
+1:58:51 capturing each and every log over here
+1:58:53 but the system is not running. Let me
+1:58:56 check again guys even I will not leave
+1:58:59 to cloud A until my limit is not going
+1:59:01 to be exposed.
+1:59:04 Uh
+1:59:05 I can see from the log the email has not
+1:59:07 been classified
+1:59:11 email prompt but I don't see okay
+1:59:14 something else some issue some different
+1:59:16 issue guys prompt format format email
+1:59:19 classific prompt
+1:59:25 okay great so this is now subject
+1:59:30 is this
+1:59:33 let's See guys, let's go ahead one more
+1:59:35 time. And yes, my startup is there.
+1:59:40 My application, sorry, my again I'm
+1:59:43 going to restart my application. Oh,
+1:59:45 let's see what is going to happen. So
+1:59:47 let me test it again
+1:59:50 until it's not going to be generated via
+1:59:52 AI. I will keep trying. Okay,
+1:59:57 again failed and my limit has also got
+2:00:00 completed. I think guys you understood
+2:00:01 the complete class. Maybe it is a issue
+2:00:04 of the code and it is trying to
+2:00:08 handle that. Let's take one more try
+2:00:10 here.
+2:00:12 Looking at the log, I can see dedicated
+2:00:16 response send. Okay, response is a
+2:00:17 issue. Response is having issue now
+2:00:20 again it's going to be check that guys.
+2:00:22 I even like didn't stop this video for a
+2:00:25 single minute. Okay, it's running
+2:00:27 continuously.
+2:00:28 So
+2:00:30 let's see what's going to be happen. And
+2:00:32 it has completed again. 100% used
+2:00:37 this time. Okay. Now let's see. Uh
+2:00:43 I hope so guys this time it's going to
+2:00:45 be run.
+2:00:48 AI is going to be generate the response.
+2:00:51 Oh failed.
+2:00:53 Okay. Means uh
+2:00:56 failed to create a review task. Net not
+2:00:58 subscribe. I think code issue. Code
+2:01:00 issue guys. Code issue. It might fix
+2:01:02 that code issue. Use a different model
+2:01:03 if IQ model is not going to work up to
+2:01:05 the mark. Okay. So now see let it
+2:01:10 complete what it is doing. Let's see now
+2:01:17 subject. Okay this is fine.
+2:01:23 But guys like this the wipe coding is
+2:01:24 going to be disaster. Okay. So it has
+2:01:27 done. It is done guys. Now let's see
+2:01:29 again get submit test
+2:01:38 this time. I hope so my AI is going to
+2:01:41 be generate a reply.
+2:01:47 Oh my god it is f. Why it is f even I
+2:01:52 don't know this time [laughter]
+2:01:56 again. Cloudy, please go ahead
+2:01:59 [laughter]
+2:02:01 guys. It's like really fun and uh even I
+2:02:04 hope you are also enjoying the same.
+2:02:07 [laughter]
+2:02:08 This is a wipe coding
+2:02:11 error details. I think even we'll have
+2:02:13 to check it manually
+2:02:17 for fail to send email.
+2:02:24 Oh, it's trying to call. EO
+2:02:28 when to say it is asking me uh email and
+2:02:30 password I think so that's why uh I it
+2:02:34 is able to do all oh guys it is gen it
+2:02:38 has generated a response see this is the
+2:02:40 response I think it is failed why it is
+2:02:43 showing failed because is not able to
+2:02:45 send the email because of my API key and
+2:02:48 all something like that it is asking
+2:02:50 maybe the API key so let's see email is
+2:02:54 saying there is I am interval in Cloud
+2:02:56 service I was charged last month twice
+2:02:58 and AI is generated a response. Thank
+2:03:00 you for the cloud A without a specific I
+2:03:02 can't okay refer to move forward can you
+2:03:05 please great great great guys so I am
+2:03:07 able to get my response from the AI this
+2:03:10 is the testing mail and why I'm getting
+2:03:12 error maybe my Google cloud API is not
+2:03:15 connected if I will check with the inbox
+2:03:18 so here it is logging the entire mail
+2:03:20 and all everything that that's really
+2:03:22 awesome guys that's really awesome and
+2:03:24 it is saying what it is saying now it is
+2:03:27 saying looking at the contact the usern
+2:03:29 NV file that is a plan to cooperate in
+2:03:32 future. Uh so guys this is a feature
+2:03:34 this is the feature means in future
+2:03:36 basically what I can do I can uh connect
+2:03:39 with my real system. Okay let's try out
+2:03:41 with the different mail. So here what
+2:03:42 I'm doing guys I'm going to be test
+2:03:44 email. So right now I'm going to be
+2:03:46 write my email sunonny.thegmail.com.
+2:03:51 Okay. Now here I'm writing sub help with
+2:03:55 the
+2:03:58 help with the
+2:04:01 subscription. Okay, subscription
+2:04:05 now. Hi there I am Sunny just just I'm
+2:04:08 editing a little bit. Let's see what's
+2:04:10 going to be generate. Okay, now what I'm
+2:04:12 doing guys I'm going to be submit the
+2:04:15 test mail. Let's see what's response is
+2:04:17 going to be generated. See it is going
+2:04:18 to be fail. My system is working. The
+2:04:20 system is working. AI system is working
+2:04:22 but it's going to be failed where it's
+2:04:23 going to be means at at at point where
+2:04:27 it's going to be send a mail to someone
+2:04:29 it's required the Google credential okay
+2:04:32 it has failed but yeah it is able to
+2:04:34 generate the response hi sunny this this
+2:04:37 that that's awesome guys that's awesome
+2:04:39 and if I'm checking with the inbox now
+2:04:42 so yeah it is able to capture all the
+2:04:44 log and all everything and see guys how
+2:04:47 like how it has created the uh this UI
+2:04:50 and All from Sunny Savvita subject is
+2:04:52 this one classifying this one. Email
+2:04:54 body is this. Review is this critical
+2:04:56 keywords approved. Okay. And fine failed
+2:05:00 to send email to sunisitagmail.com.
+2:05:03 Failed to send email to sunny
+2:05:05 savvitagmail.com. Why? Because it is not
+2:05:07 connected with my Gmail API. That's
+2:05:10 great guys. So I created this end to end
+2:05:12 system and now I can deploy it. So guys
+2:05:14 within a within 1 hour itself with all
+2:05:17 the grinding and all we have created
+2:05:19 this system.
+2:05:22 Okay fine. So yeah this is it for this
+2:05:24 particular video. I hope you enjoyed
+2:05:26 this uh end to end development right uh
+2:05:29 of this customer support email agent.
+2:05:31 You can try out something else here. I
+2:05:34 have spent my entire limit. I hope so
+2:05:36 guys you are also going to be at some
+2:05:37 credit and you are going to make a fun
+2:05:39 with this cloud code. So yeah this is it
+2:05:41 for this particular video. In the next
+2:05:42 video guys or maybe in the upcoming
+2:05:44 video I will discuss about the
+2:05:46 deployment. Okay, I'll write a complete
+2:05:48 infrastructure as a code. I will put it
+2:05:50 over the GitHub. Then we'll run GitHub
+2:05:52 CI/CD, GitHub action CI/CD and we are
+2:05:55 going to deploy our application over the
+2:05:57 AWS. So until Thank you. Bye-bye. Take
+2:05:59 care guys. Have a great day ahead. Thank
+2:06:01 you.

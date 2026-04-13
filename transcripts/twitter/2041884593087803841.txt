@@ -1,0 +1,456 @@
+0:00 INSEO BONGIJEEVANI- My name is Inseo.
+0:11 So today, I'd like to go over agentic AI, agentic language
+0:17 model as a progression of language model usage.
+0:21 So here is the outline of today's talk.
+0:24 We'll go over the overview of language model
+0:28 and how we use, and then the common limitations,
+0:31 and then some of the method that improves
+0:35 towards this common limitation.
+0:37 And then we'll transition into what
+0:39 is the agentic language model and its design patterns.
+0:46 So language model is a machine learning model
+0:50 that predicts the next coming word given the input text.
+0:54 As in this example, if the input is the students open there,
+0:59 then language model can predict what's the most likely word
+1:05 coming next as a next word.
+1:08 So if the language model is trained with large corpus,
+1:13 it is predicting, it is generating the probability
+1:16 of next coming word.
+1:18 In this example, as you could see, books and laptops
+1:23 have a higher probability than other words in the vocabulary.
+1:28 So the completion of this whole sentence could be,
+1:33 the students open their books.
+1:35 And then if you want to keep generating the what's coming next,
+1:38 then we can turn them in as an input,
+1:41 and then put it into the language model,
+1:45 and then language model continuously
+1:46 generating the next coming word.
+1:50 Then how these language models are trained,
+1:54 largely two parts, pre-training part and then post-training part.
+2:00 And then first, pre-training portion is the one that language models
+2:06 are trained with large corpus.
+2:09 Texts are collected from internet or books or different type of text,
+2:15 publicly available text, and then trained with the next token
+2:19 or next word prediction objectives.
+2:22 So once the models is finished in this pre-training stage,
+2:26 models are fairly good at predicting any words coming next as a word,
+2:33 given the inputs.
+2:35 However, these type of pre-trained model itself is not easy to use.
+2:43 So the hands, the post-training steps are coming.
+2:47 And then these post-training stage would
+2:51 include instruction following training,
+2:53 as well as the reinforcement learning with human feedback.
+2:57 And what this training stage means is we could prepare a data set
+3:05 such a way that specific instruction or question,
+3:08 and then the answers or the generated output that
+3:12 that is what the user would expect or more related to the questions and answers.
+3:21 So that's how the models are trained, so that it's easier to use.
+3:26 And then also, it'll respond to specific styles.
+3:30 And then once this is done, and then additional training method is
+3:38 aligning to human preference by using reinforcement learning with human feedback,
+3:43 which is using human preference to align the model by using rewards schemes.
+3:53 And then let's take a quick look, really quick look, on the instruction data set.
+3:59 This is the template that we would use to train the model in instruction following training phase.
+4:07 As you can see, there is a specific instructions will be substituted in,
+4:11 and then expected output will be substituted in.
+4:14 And then this is fed to the model, and the model is only trained on the response part that is generating the output based on the given instructions.
+4:28 All right, so language model that is trained on pre-training stage as well as post-training stage is quite capable of generating text given instruction.
+4:43 Essentially, it has a lot of world knowledge that could be easily generating the outputs.
+4:49 So these are rapidly developing, and then these models are used in various application domains that we use day-to-day work,
+5:03 such as AI coding assistance or domain-specific AI co-pilots, or most widely known chat-gpt and related conversational interfaces.
+5:13 So these are the models that we're using to use in our model.
+5:21 So these are the models that we're using in our model.
+5:26 And then in order to use these type of models, as for your applications or specific tools,
+5:28 you could use the cloud-based API calls towards the model provider or the model servers.
+5:36 Or some other ways that you could also host the models on your local machines or even mobile machines for the models that are small enough to host on this compute constraint environment.
+5:55 So what does it mean by using API calls?
+5:59 So we step back, the language model is taking the input, natural language input text, and then generating the output.
+6:09 So that means we need to prepare a certain form of free-form text, natural language text as an instruction or a question,
+6:19 and then put them in a specific format that you could make an API call towards the model provider.
+6:27 And then the model provider takes that, usually on a cloud environment, and then generate the output,
+6:33 and then respond to your API calls with the generated output.
+6:39 Then your software around that software that based on this model will parse the output, and then use it as is.
+6:48 So the input to the model is, again, free-form text.
+6:55 So how you prepare your input, also known as a prompting, is critical.
+7:01 So there are well-known best practices strategies, how you prepare your prompt, and here are some of them.
+7:19 And such as write a clear and very descriptive and detailed instructions that'll help the model to generate the output that you want.
+7:34 And you could include a couple of examples, the form that you want to see, as in the style or form.
+7:40 And also you could provide the references or context, such a way that model rely on that context that you provide.
+7:55 And instead of just asking the model to answer right away, you could ask model to give model to time to think about it,
+8:05 such as reasoning, enable reasoning, or using chain of thought or COT method.
+8:14 And the next one is, instead of asking model really complex tasks, you could break them down,
+8:23 and then ask them in sequence.
+8:26 Also chain the complex prompts.
+8:30 And the last one is something that, as a good engineering practice, have a good way of systemic trace and logging,
+8:40 will help you.
+8:41 And also automated evaluation is always helpful to develop your, essential to develop your progress on your application.
+8:50 So let's take a quick look at, on each items, what that means to get more familiar with.
+8:58 So write clear and descriptive instruction.
+9:03 As an example, on the left, instead of asking short request, you could describe in detail,
+9:11 so that model knows what you are asking, because model doesn't understand.
+9:17 Model cannot read your mind.
+9:19 So that means you need to describe what the model, what you want the model to generate the output for you.
+9:27 So this is always useful for using language model in general.
+9:34 And include few examples, meaning that give model the example input and output that you would expect.
+9:46 As in this case, you ask some type of consistent style output.
+9:51 Then what is the consistent style?
+9:54 You provide an input as example input and example output that you would ask.
+10:00 And then you can finally ask your original questions.
+10:05 Then it's going to be, the model will generate the output based on your input.
+10:10 So few-shot examples is always helpful to generate the output that you want to, you would want to generate.
+10:20 So provide relevant context and references.
+10:24 This is really helpful for many of the cases that are related to generating text based on some factual information.
+10:35 So LLM can generate, easily generate some incorrect output, also known as a hallucination.
+10:42 For those topics that it doesn't know or is not too confident about.
+10:50 So for those type of cases, providing context or references would always be helpful.
+10:56 So here is the example prompt template that you would want to use in cases such as retrieval of genetic generation.
+11:06 So that's a question that we'll look at in the following slides.
+11:10 Saying that only answer based on the input, based on the article that you provide.
+11:17 You could substitute your related reference and then only answer based on these references.
+11:25 If the model cannot find the answer, you could just say that cannot find the answer.
+11:31 Then model will likely generate the answer based on your references.
+11:40 So this is important part that give models time to think.
+11:46 In other words, instead of ask a direct question, you ask model to think through it or come up with its own solution.
+11:55 And then finally compare and generate the output.
+12:01 So this is also known as a chain of thought.
+12:04 So here is one example that might not work in some medium sized model.
+12:15 You could ask model saying that evaluate the student's solution is correct or not.
+12:22 And then provide the solution description.
+12:25 And then finally give student solution.
+12:28 And since the system prompt or your original request is saying that just answer it is correct or wrong, model might not get it right.
+12:41 However, for the same model that might not get the right answer for this, if you prepare your prompt in a way that you could ask first, work out your own solution to the problem first, and then compare your solution to the student solution.
+12:57 And then by doing this model will generate its own solution.
+13:02 And then as it does, it'll have an opportunity to provide good attention to all these inputs that it's from the original input as well as the output that it generated and then turn towards the right answers.
+13:19 So reasoning chain of thought is always helpful to generate the output that you want to see.
+13:32 So here's an interesting one, probably easy to implement for your application.
+13:37 So instead of asking your request, that includes a multiple test in one request, you could prepare your prompt in small, simple stages.
+13:50 So how you do is prepare a simple prompt and then generate the output and then prepend the output to the next stage two prompt and then generate the output.
+14:05 And then again, prepend the output from the previous stage and then generate the output.
+14:11 You know, third stage like here and then finally generate the output that you'd want to see.
+14:17 So by doing this, you may need to do it manually or this can be done by LLM as we'll see in the following slides.
+14:28 But having a simple, clear test per each request would be a good way to do it.
+14:36 Okay, so this may not be obvious, but because many type of, as in, as with many engineering application or development, having a good way of keeping, tracing, logging, will definitely helpful, helpful for your development, for debugging, as well as auditing.
+15:04 So same principle applies to language model based development.
+15:09 So keep track of the log is always good.
+15:12 And so that also relates to, relates to having a automated evaluation from the early stage of your development will definitely help you.
+15:25 So, in other words, you need to prepare a question and answer pair, ground truth answer pair, so that you could compare that against generated output.
+15:38 And you could use a human to evaluate that, but that's usually costly and then time consuming.
+15:46 So you may use to use, you may use a language model as a judge, meaning that you could ask language model to evaluate model generated output, as well with ground truth output.
+16:02 So that model can score the generated outputs quality, so that you can use that against your currently developed, your own applications.
+16:13 This will help.
+16:14 This will be very important because the language models are continuously and rapidly improving, as well as the methodology and then tools that you are using for developing language model is also rapidly developing.
+16:31 In other words, without clear evaluation, it is hard to make forward progress or even hard to change the model, change the different type of models.
+16:43 Because the models are rapidly developing also means that some models are rapidly deprecated, which means you may need to force to change your language model that you are using in your application.
+16:59 So having a good evaluation methodology upfront from the beginning will definitely help.
+17:06 All right.
+17:08 So this is a simple idea, but will be helpful for many applications.
+17:17 So instead of taking your input prompt as is and then process it, you may have some software or some model that you could detect the input prompt as is.
+17:28 You could detect the intention and then send it to a different prompt handlers.
+17:33 So or this is also known as the prompt router.
+17:37 So based on the input query type, you may need to use simple prompt together with simple language model.
+17:46 And then this will both help in terms of operation costs as well as generate more appropriate output together with more relevant prompt with the language model that is more capable of that type of query.
+18:11 All right.
+18:12 So maybe Petra, if there, this may be a good moment that we could take question if there's any, if you could see.
+18:24 Yeah.
+18:25 Thank you so much, InSOP and such an inspirational talk already.
+18:28 Thank you so much.
+18:29 We will get to like more details about agent tech, uh, um, AI just shortly.
+18:34 We did want to kind of provide you with some sort of a background and kind of the progression of like what has been going on in the field.
+18:40 Uh, but I think maybe let's ask, uh, one question, uh, that came up.
+18:46 It's a little bit specific, but it might be what more people are wondering about.
+18:50 And is there any optimal amount of data to perform a good training or like anything that you could advise people around kind of the data, um, uh, data available or like data being used.
+19:03 Okay.
+19:04 Um, maybe I'll, I'll be, uh, short on this.
+19:07 Um, so in, I assume the training here is meaning that, uh, fine tuning, uh, the LLMS part of an additional, um, training on top of open source language model.
+19:19 Um, if, um, yeah, depends on your, uh, task.
+19:25 It, it would definitely, uh, varying cause it's hard to say one or the other, but, um, if you, uh, uh, if you have your, uh, you know, uh, data set.
+19:36 Or, or text that you would want to see, then you may come up with a simple question and answer pair or instruction following data set, uh, format.
+19:45 And then you could also, you make use of language model to further generate more.
+19:50 Um, so if you need it more, but, uh, I would think, uh, you would start with, uh, say tens or, uh, tens of, uh, data samples of data set first, and then see whether that makes the model behave.
+20:04 What do you actually see it to be behave?
+20:08 And then, uh, and then you could add, uh, based on the result or signals from the initial quick test, then you could, uh, additionally add more data set, data set samples.
+20:19 Uh, possibly, uh, uh, use the language model to augment it or synthetic data that you could create.
+20:25 Great question.
+20:26 Thank you so much.
+20:28 I see like questions starting coming in, which is wonderful.
+20:31 Uh, I think we will pause the question for now and we will try to get to as many as we can at the end, but please keep them coming.
+20:38 Definitely makes the session kind of more engaging.
+20:40 And also let us know what you are interested in.
+20:42 Thank you.
+20:43 Thank you, Petra.
+20:44 All right.
+20:45 So, uh, so far we've been, uh, looked at, uh, overview of language model.
+20:50 Um, great, uh, uh, very powerful models that are out there, many models out there and then how we use, um, however, um, even, um, there are still, um, limitations for, um, models that are available, um, that are listed here, such as hallucination is, uh, well-known issue that, uh, models, uh, uh, a model can, um, sometimes, oftentimes, uh,
+21:18 uh, generate, uh, incorrect or incorrect information, particularly if it's related to, um, some computation or some other specific, uh, area.
+21:29 So this is also, uh, uh, this is a problem that is, uh, uh, that we want to, uh, avoid in your, uh, application domain.
+21:38 And other thing is, uh, there's always a knowledge cut up in dataset preparation.
+21:44 So model provider, model creator, repair dataset.
+21:48 However, they need to, uh, at some point, cut up the data, cut up, uh, their dataset collection and then use it.
+21:55 So model may not know, may, may have not seen the recent, uh, recent information or news as part of their, uh, pre-training dataset.
+22:05 Um, lack of attribution.
+22:08 So model can answer a lot of, uh, world knowledge questions and, and, uh, can answer those type of general questions.
+22:16 However, it may not tell, it, it's not going to tell you where they drew this, um, the, uh, answer from particular specific, um, uh, data source.
+22:27 Um, data privacy is, uh, one fact that, uh, model, model creator, you generate, uh, prepare the dataset using public data.
+22:37 Um, data source.
+22:38 Um, that means, uh, model, um, have not seen your prop proprietary dataset from, uh, your organization or particular, um, domain.
+22:50 And, uh, limited context length, um, although it's, uh, uh, rapidly increasing, um, um, however, um, it always, uh, um, um, it's, uh, um, fine balance, uh, because, um, providing, uh, long-term data.
+23:04 Um, because, um, providing, uh, longer context will give more information, context information to the model.
+23:11 However, however, it comes with operational, um, cost as well as the speed, uh, the latest latency of generate latency in, uh, uh, text generations.
+23:23 So, um, in order to, uh, uh, address these, uh, common, uh, limitations, um, retrieval augmented generation is, uh, one way to handle this.
+23:36 Such as, it, it, it could reduce the hallucination by using the actual, uh, related, uh, relevant reference.
+23:43 Um, it, uh, also, um, addressed, uh, actual citation because, uh, it knows where this, uh, reference is coming from.
+23:53 And then, uh, um, this, uh, this will allow you as a, uh, application developer or, um, or a system developer to prepare systems so that you could,
+24:04 you could use your own proprietary dataset or the text.
+24:08 Um, and then, uh, it could use the, um, um, good use of, uh, small number of, uh, context links, um, because it only, uh, select, um, relevant dataset.
+24:19 So how it works is you could pre, uh, index your, uh, your own, uh, dataset or your own text, uh, by turn them into, uh, turn them into, uh, turn them into smaller chunk, chunk of text,
+24:36 and then, uh, and then convert them into embedding space, uh, using embed embedding model, and then, uh, stage them as part of your database or vector database.
+24:47 And then, uh, when the in request or query came, you could all, you could turn this query into embedding space so that you could do, uh, nearest neighboring search,
+24:58 and then select K, uh, top K, uh, uh, relevant information, relevant chunk, text chunk, and then, uh, place them as part of your prompt.
+25:08 Um, some of the slide that we see previously as, uh, you put the reference as part of the prompt and then use that as, uh, as the model only, only make use of this reference.
+25:21 So this is, uh, one good way to make use of your own proprietary data.
+25:27 And then similar method is, um, uh, can be used in the actual, um, AI search or, um, um, so that instead of using, uh, index dataset,
+25:39 you could also rely on web search or different type of search so that you could provide information as part of the index.
+25:46 And, uh, one of the thing also, uh, mentioned here is, uh, uh, there are many methods or, uh, ideas for retrieval oriented generation.
+25:59 Uh, more, um, commonly used method is something that, uh, we've just mentioned.
+26:05 We've just talked about meaning that turn them, turn the text chunk into embedding space and then do a nearest neighboring search.
+26:12 However, there are many methods and then you could also, um, uh, use knowledge graph base.
+26:19 So if you could, uh, uh, generate a knowledge graph graph from your text source,
+26:24 and then that could also help to, uh, extract the more relevant, uh, information.
+26:30 Um, also known as, uh, graph rack is all one part of it.
+26:34 However, there's a many method and then you may need to look into the right method or, um, uh, if, uh, right method,
+26:41 uh, make use of those.
+26:47 All right.
+26:48 Tool usage.
+26:49 So language model being, uh, most widely used form is a text in and text output, um, which means that it could answer many, uh, many, uh, type of queries.
+27:01 However, it's not, it, uh, it's not gonna execute or extract, uh, information from the external.
+27:08 So that's where these tool usage, uh, came to rescue or also known as a function calling.
+27:15 So with this method, you could, uh, get, uh, real time information, or you could, uh, uh, actually do a computation by generating, uh, software, uh, or computer code.
+27:29 So what does it mean is, uh, let's look at, uh, uh, an example here.
+27:34 So, um, if you, uh, uh, if you have a, uh, chatbot that if you ask, what is the weather in, uh, say San Francisco, then model will not know it, uh, in itself.
+27:47 So, however, if you tell model model previously, um, as part of the prompt saying that if you're asked, uh, whether related question generated output, you know, form that, um, the software that the parse, the output can make an API call.
+28:06 So as in this example model will generate the output, um, in a way that, uh, Hey, this is the, this is the case for tool usage.
+28:18 So it generates an output, um, as in the form, as in the form here, get weather, and then input argument to this API call or function call is, uh, the place that we asked.
+28:30 So then software receives this text output from the model and then parse, and then, uh, actually make an API call towards the weather provider, and then get the weather, um, information.
+28:44 And then again, provide back to length, back to the language model, and then language model will generate more, uh, human friendly or helpful output based on this, um, API based result.
+28:59 So, um, and, um, for some cases, uh, model can also generate a software out, uh, uh, code that, uh, can be executed as part of the sandbox outside of the language model by the software that is coordinating all these activities.
+29:18 All right.
+29:21 So, um, agentic language model.
+29:25 So, uh, uh, uh, uh, uh, uh, uh, uh, use simple language model usage as you seen here, text input and text output.
+29:46 Agentic met agentic language model usage could be language model, uh, could do something with environment by, uh, generating tool usage or retrieval request.
+30:01 And then the, from the environment, anything outside of, uh, language model could, uh, uh, generate, uh, could provide an output, could provide an information that can be fed in, fed back to language model as an observation.
+30:18 And then the whole thing, uh, uh, the agentic language model, uh, which includes language model, um, at its core with the software around it will, uh, process, process it.
+30:30 And then also put them in a memory.
+30:32 And, uh, uh, uh, uh, as with any, uh, as we, uh, it's conversational history, which can be taken as a memory.
+30:40 Um, so this is, uh, one way of definition of agentic language model.
+30:47 The other way to look at it is this, um, uh, language, uh, agentic, uh, language model usage can be, uh, can be, uh, defined as it could reason as well as it could action.
+31:01 It could do an action.
+31:02 So also called react reason and action.
+31:06 So reasoning part is, uh, something that you could, uh, encourage model to reason about by, uh, methods such as, by using a method such as chain of thoughts.
+31:16 And then, uh, doing an action, uh, using, uh, method that we had seen previous slides as in retrieval or search engine, or actually using calculator by making an API call or different type of API calls such as weather API that we have seen.
+31:35 And, um, uh, also, uh, generating a Python code so that, uh, you could run as part of your, uh, sandbox sandboxes.
+31:43 So by combining this reasoning and action model can do a lot more complex task than, uh, simple, uh, input and output type of interaction.
+31:54 So here is, uh, let's, uh, look at, uh, a little more detail on this.
+32:02 Um, what does he mean by, uh, reasoning and action?
+32:05 Reasoning and action.
+32:06 So reasoning part, um, instead of, uh, doing the, uh, doing the task that is asked, uh, you could prepare your prompt such a way that, uh, ask model to break down the task and then make a plan.
+32:22 So instead of chaining, instead of breaking down the task by yourself, as we've seen in the previous, uh, chaining, uh, chaining the prompt slide, you could ask model to, uh, break down and then, uh, prepare your task.
+32:37 So, you know, in other words, plan to plan the, uh, actions and then based on that breaking down model can generate different actions, uh, by, um, by, uh, making an API calls or, or tool usage so that it could, it could extract.
+32:55 Or, uh, collect, um, additional information from the external world.
+32:59 And then by combining all these, put them in a memory so that it knows, uh, model knows what's, what's been happening.
+33:08 And then based on that, finally draw an answer for you.
+33:12 So let's look at the, uh, concrete example here.
+33:17 So if you have, uh, um, customers port AI agent, then how it might look, how it might look, how it might look.
+33:24 So, uh, as a customer, uh, um, ask, can I, can I get a refund for product full?
+33:33 Then, um, agentic system will break down this task, break down this request test into the following four different type of actions.
+33:44 Um, check the refund policy, check the customer information, and then check the products.
+33:50 Um, and then finally, um, collect, and then, uh, decide what to do.
+33:55 In each step, um, language model will speed out the API calls so that it could, uh, collect the information.
+34:04 Um, for example, check the refund policy.
+34:07 Um, um, language model could ask a retrieval system, um, uh, against the pre-indexed, uh, company policy, refund policy.
+34:17 And from there, it could be tracked the information and then put them in its own context.
+34:22 And then using that also, uh, request a customer order information.
+34:27 It could either, uh, ask customer back to, in a chat format, uh, collect more information, or you could, uh, uh, look it up, uh, in the system.
+34:36 Because, uh, uh, uh, depends on how this, uh, chat system is, uh, prepared.
+34:41 Um, the same thing for the product, uh, uh, so that it could collect more information.
+34:46 And then finally draw the, uh, conclusion based on the policy and then product information, as well as the customer, uh, order information.
+34:55 And then, uh, um, send the request, uh, to the follow-up system, uh, as a make API call, as well as, uh, uh, send, prepare, uh, say, uh, response draft.
+35:08 And then, uh, that's gonna be handled by final, um, approver.
+35:12 All right.
+35:13 So, um, workflow is generally like this.
+35:18 So, uh, in a sense, uh, agentic language model system is generally, um, LLM is making, uh, language model is making iterative, uh, calls by, uh, reviewing the document of test and then making an external tool calls.
+35:37 Um, things that, uh, um, an example, um, if you want to do some research, uh, of certain, uh, matters, you could, uh,
+35:48 prepare your agent to do a research, uh, web search or different type of search, and then keep, uh, summarize them and then, um, iteratively and then finally prepare the report to you or to, to your system.
+36:01 Um, another example could be, uh, software, uh, assistant agent that, uh, you could, uh, ask, uh, the software agent, software, uh, um, agent or three agent that, um, asked the issues, uh, certain,
+36:18 certain type of software bug or issues.
+36:20 Then this agent will look it up, uh, review this issue and then, uh, collect the relevant, um, piece of code or files and then review them and then propose the output.
+36:33 Uh, you could also, um, execute in its, uh, sandbox environment and then, uh, test the correct, test the fix and then, uh, get the output and then iteratively try to find the fix.
+36:46 And then finally, uh, propose the pull request or the, um, um, um, changes to, uh, to, uh, users or developers.
+36:55 Um, these are the, uh, ways that we can use language model in, uh, agent format and, uh, by, uh, by doing, uh, iterative, uh, language model calls.
+37:07 Um, so the difference, um, main, um, reasons and, reasons and difference, uh, why these, uh, agentic language model usage is, uh, getting more widely used.
+37:24 Um, given that if you have the same model, if you could, if you ask just, um, direct request to the model, model may not be able to handle it.
+37:36 Um, um, um, however, if you put your, uh, task in this type of agentic format or patterns, then model will do, uh, more complex tasks, um, even using a model that may not be able to do it.
+37:52 If you don't do this, uh, way.
+37:55 So that's one of the reason that agentic language model is, uh, uh, pushing the boundary so that the things that we can do with, uh, AI agent is more complex or, or different domains that, uh, we can rely on.
+38:11 All right.
+38:14 So, um, here are the real world applications, um, software development, um, code generation or bug fixing or, um, type of, uh, this type of, um, development, uh, is widely investigated or being researched by different organizations as well as there are companies that trying to provide these services as decision on the right side.
+38:39 on the right side and, uh, research and analysis that, um, gather information, synthesize it, and then provide a summary for, uh, for the users.
+38:48 And then task automation is one, uh, one of the area that agentic method could be, uh, uh, could be, uh, used.
+38:57 All right.
+38:58 So, uh, to, uh, to, uh, to, uh, to, uh, to make it more clear, here are some of the, uh, design patterns that you could use, uh, uh, use, uh, agentic language model.
+39:12 So, um, planning is critical because, uh, by asking, uh, uh, a model to breaking down, break down the task to make it simpler task or clear, uh, test so that the language model later can make an API calls.
+39:30 So, uh, uh, uh, or, uh, or use the tool usage.
+39:32 So planning is critical.
+39:34 And then reflection is something that, uh, model can generate in itself.
+39:39 And then, uh, um, the next, um, next, uh, model call can, uh, can criticize, uh, the output that, uh, actually came from the same model.
+39:52 So by doing this, uh, the output could be improved.
+39:56 And then a tool usage is, uh, is something that anything, uh, uh, something that outside of the language model that you need a real-time information or different type of, uh, information, then you can use this.
+40:09 And then, uh, multi-agent collaboration is one way to handle this.
+40:15 Reflection, uh, is, uh, a pattern that quick to implement and then, uh, uh, leads to a good use.
+40:21 Uh, leads to a good performance.
+40:23 And let's, uh, use a concrete example here.
+40:26 So if you want to refactor a, uh, programming code, um, instead of ask model to improve it right away, if you do this pattern, um, as in this example, saying that you ask, uh, you ask a model saying that here's the code and then check the code and provide, uh, constructive feedback.
+40:46 And then, um, take the feedback to the second prompt as in this, uh, example.
+40:53 You could, uh, also prepare prompt saying that here's the code and the feedback which came from the model itself.
+41:00 And then, uh, ask the model to, uh, be factor it.
+41:03 And then this, uh, this way of reflection will likely generate better output or better, uh, fix for the source for the code that you are asking to the model.
+41:16 Tool usage is something that we've seen it before, um, ask model to, uh, generate the API patterns so that you can use this API, uh, function prototype to make an actual code.
+41:30 Um, or if, uh, if, uh, if the task is related to, uh, actual computation or some different form, um, you could also ask model to generate a program as an output.
+41:42 And then you can run that on, uh, safe sandbox environment that, that, uh, that your software, uh, or software scaffolding around the language model can execute and then provide an input, uh, provide, uh, the execution output back to the code.
+41:59 So that model can synthesize it.
+42:00 All right.
+42:01 So multi-agent is, um, is an interesting way to implement, uh, or, uh, accomplish your, uh, complex task.
+42:13 So, um, you could split up the task, uh, uh, or you could split up your task and then assign those tasks in a different agent that are dedicated for specific tasks.
+42:26 Um, and then this agent is, uh, in this case, uh, in this, uh, context could be just, just as a different prompt or different persona.
+42:38 So you could, uh, the prompt you usually consists of, you are a helpful, uh, AI agent.
+42:45 You could change that into a different persona to a different agent.
+42:49 And also you may or may not use the same model or the different models, uh, based on the test.
+42:56 So let's use a concrete example here.
+42:59 So if you build a, uh, multi-agent system for home, smart home automation, you could create a different agent, a climate, uh, control agent, a lighting, like lightning, con- lighting control agent, and so on.
+43:13 And then these, uh, the software piece that includes a different prompt with a persona, as well as a handling external triggers.
+43:22 And then those are the ones that, uh, work internally.
+43:26 And then, um, that coordinate these agents, uh, essentially a model prompt together with, uh, software scaffolding around it, coordinate the whole activity.
+43:37 All right.
+43:38 So that brings us up to, uh, our summary.
+43:43 So, um, the, uh, the, uh, agentic language model usage is a progression or extension to a existing language model usage method.
+43:56 So for those, for the best practice that you have used in language model, um, simple, for simple cases, uh, uh, uh, most of them are, uh,
+44:07 applicable.
+44:08 Um, however, you could use different, uh, additional methods such as more, uh, retrieval search tool usage, and then, uh, prepare different type of prompts.
+44:18 And then, uh, workflow so that you could use language model as it's, in its core as a reasoning or smart in turn.
+44:27 And then you could use a, uh, uh, tool usage or other, other, other retrieval method to interact with the external world.
+44:37 And then, uh, combine these results and then, uh, such a way that you could, you could achieve a complex task, um, uh, instead of simple, um, um, input and output type of language model usage.
+44:52 And that said, Petra.
+44:56 Thank you so much.
+44:57 And so this has been really great.
+44:59 So, so much information.
+45:01 Hopefully this is useful for everybody.
+45:03 We keep collecting the questions.
+45:05 We got so many, we will try to get as many as we can, but yeah, please feel free to keep them coming.
+45:11 Um, maybe the first question for you in so up and let's focus on the agentic AI, um, is about the evaluation.
+45:19 And do you have, uh, some recommendations for a good strategy for evaluating agents beyond just using an LLM as a judge?
+45:28 It seems it should be a little bit more complicated to do the evaluation on agents.
+45:32 At least that's kind of the general notion, the questions and people are wondering how that could be done.
+45:37 Right.
+45:38 Um, I think this is a great question.
+45:41 Um, so, um, just to, uh, uh, uh, make a quick context.
+45:45 LLM as a judge is commonly used method that you actually use LLM to evaluate the model generated output against the, um, ground truth answer or some type of reference information, which was great.
+46:00 And then why do we use?
+46:01 And, uh, also I, uh, we use that as well for the, um, I think one thing that I, uh, we, I recently tried is, um, agentic, uh,
+46:14 uh, judging method, meaning that I use, uh, uh, reflection type of, uh, reflection type of pattern that we have, uh, seen previously.
+46:25 Um, uh, instead of just ask one question right away to LLM as a judge, I ask, um, first LLM is, uh, provide initial reference, uh, and then feedback.
+46:39 And then I also ask again, uh, another, um, LLM call or different prompt saying that, Hey, um, this is a feedback from other, other, um, your junior engineer.
+46:51 Um, if you are senior engineer, how would you compare the junior engineers evaluation, um, against the, um, the output that you are evaluating.
+47:00 So I find that this reflection pattern was helpful to get the better evaluation instead of just one shot, um, LLM as a judge output.
+47:11 Um, however, I think there can be a more creative way to improve your evaluation stage using, uh, agent patterns.
+47:21 Um, because the evaluation, it is really, really important.
+47:26 I can't emphasize, uh, uh, uh, more because, um, that will help you to, uh, advance fast or change models and different type of, um, um, changing the prompt and so on and so forth.
+47:39 So I think that was a great question.
+47:41 Thank you so much.
+47:43 InSOP.
+47:44 Uh, we got a few questions about kind of augmenting the AI agents for specific uses and making sure that kind of they, they get shaped and they, they get shaped and they're not.
+47:55 They get shaped in a way you need for your application.
+47:57 Like on the technological side, like what is there to do?
+48:01 What is there to use?
+48:02 We got many questions kind of like going to this idea.
+48:05 So if you have some, some kind of information, it would be helpful.
+48:08 Right.
+48:09 Um, again, I think this is a great question.
+48:13 Um, I would.
+48:16 So fun.
+48:18 Uh, one thing, uh, first thing came up to my mind is if you have a task.
+48:23 Uh, which is simple already, uh, which is simple, then you just use a language model, simple use cases.
+48:31 However, if you see a little more involved or complex test, you could, um, experiment with a simple agentic test.
+48:39 Even if it's, uh, agentic, agentic language model usage could be, uh, many, could be, uh, you can define agentic language model in many, many different ways.
+48:51 Uh, but if you, uh, uh, have a little more involved tasks, you could, uh, do, uh, um, iterative, uh, language model call.
+48:58 Even that could improve your output.
+49:01 So, um, I think it, um, it all depends on your test case, uh, uh, test, um, actual application domain.
+49:10 But, uh, instead of trying to apply, trying to look for the test that you could apply language model, turn that into, turn that around that, um, how this test cannot be solved with the simple, uh, cases.
+49:24 So simple language model usage.
+49:28 So try to apply simple, uh, okay, simple, uh, usage first, and then try to improve it, uh, using different, uh, um, patterns.
+49:37 Um, same for, um, I think, uh, slightly, uh, tangential, but, um, fine tuning cases also, if you could, uh, have a test, uh, if you have a test that in, uh, you wanna, uh, solve, um, try to use the user.
+49:53 So try to use the user model first and whether it makes sense or not.
+49:57 And then, uh, from there you could decide, uh, how to do it.
+50:01 Then you could, uh, uh, prepare small, uh, data samples and then try it and then, uh, make a progress.
+50:07 And then a really quick iteration instead of trying to invest, um, upfront, uh, too much.
+50:13 Thank you.
+50:14 And so, uh, few questions came in, um, and I will kind of like, this is like a kind of giant question on its own.
+50:24 So I will kind of let you choose how you want to respond to that.
+50:27 But a lot of questions about kind of ethical considerations, how to avoid hallucinations, like how to avoid kind of like using data that might be, um, like, like an ethical or like there might be something kind of behind them.
+50:40 Um, what would be your recommendation again?
+50:42 Like this question is so big, but maybe like looking for something that you would say about this.
+50:47 Right.
+50:48 Yeah.
+50:49 Um, another great question.
+50:50 Um, yes, due to, um, it's, uh, probabilistic, uh, generation, uh, in nature, uh, hallucination is always there.
+51:04 Uh, although a lot of people are working on it.
+51:07 So it's a problem, uh, as well as the, um, um, the contents, um, uh, contents output, uh, has a concern, could be a concern.
+51:16 So I think a model provider themselves is checking, um, the generated output in terms of different categories, um, as well as your application, uh, provide application builder yourself, uh, also add some, uh, guardrails, guardrails being, um, checking the output, uh, using small, small, small language model so that you could quickly check the output or some type of, uh,
+51:46 uh, I guess, uh, I guess, uh, criteria using classifier or some type of thing so that you could actually, uh, filter them out to see, um, I, it could be either on the final generation stage, or it could be in, um, taking, uh, in the input stage that, uh, the query comes in so that you could, uh, actually avoid it.
+52:06 This can be, uh, uh, can backfire, but I, I think, uh, uh, as, uh, uh, enterprise or business, you may be on the safer side.
+52:16 So they're making sure generated input, generated output, as well as the, uh, inputs, queries that being requested, uh, could be more, um, safe or, um, reasonable, uh, cases.
+52:30 So this is evolving, but I think, uh, fundamentally it is something that, uh, check the output using type of classifier or, or even decoder type model to, uh, check it.
+52:43 Thank you so much.
+52:45 And a little plug in, we do have generative AI program that also covers a lot of kind of the ethical aspects of kind of LLMs.
+52:53 It's not a technical program, but like, I'm kind of reaching to people who are asking about this sort of very important questions.
+53:00 Uh, maybe the last question ends up for you.
+53:04 Um, and you know, we are not going to be endorsing, of course, like at Stanford, but like a question is like, how to get started?
+53:11 Are there any open source models to recommend?
+53:13 Is there anything kind of people can do to kind of start testing this out, like start playing with this?
+53:19 Great question.
+53:22 Uh, I, I, I, so one thing, um, that, uh, uh, uh, as a take home message here is, uh, start simple and then, uh, experimented and then, uh, iterate it.
+53:35 So that's, and also, uh, agentic language model is sounds complex, fancy, but it is an progression and extension of language model usage.
+53:45 So, um, to start, um, I think, um, you could, uh, there are many questions.
+53:52 language model usage framework and also agentic framework that you could use.
+53:59 However, to start I would suggest to use a playground type of environment. Say a
+54:08 model provider generally have their playground that you could type your
+54:14 prompt or input so that you can see the output right away so that you can
+54:19 experiment it really quickly and then once you get familiar with it and then use
+54:24 the API to make a call from your program and then see what's going on.
+54:31 In that way you gain insights as well as best practices for prompt preparing.
+54:41 So once you have that you could intelligently decide whether it makes sense for you to
+54:48 actually continue your own code base or make use of widely available libraries.
+54:54 So in short start simple work on a playground first and then make a simple API calls and
+55:01 then decide whether you want to use more extended libraries or just continue on me.
+55:06 So this applies for language model usage as well as agentic language model usage as well because
+55:15 there's also many agentic language model framework out there.
+55:21 Thank you so much.
+55:23 And to close us out like in this session in the last minute in SOAP you know the field is progressing so
+55:31 fast there is so much happening basically every week we see news about something new coming up in
+55:36 any of these fields.
+55:38 Are there any resources you study you follow anything you would recommend people to kind of keep track of
+55:45 to stay up to date in LLM's agentic AI in this field?
+55:49 Difficult question but great question.
+55:56 I think it's a little hard but I picked some experts who are known this field.
+56:09 I follow them either in formally Twitter or YouTube channel and then from there I get more updated
+56:19 information and then do my own diggings.
+56:23 But I think find out the good starting point is good thing.
+56:28 And then I think reference here you can screenshot it then this can be a good starting point because it
+56:37 includes some agentic usage courses as well as a good type of courses either from Stanford as well as
+56:46 different places.
+56:49 So yeah.
+56:52 Thank you so much INSA.
+56:53 This has been really great.
+56:54 So much helpful information and you know you're absolutely the best person to hear this
+56:58 from.
+56:59 Thank you so much for taking the time.
+57:01 Thank you also everyone who joined us live.
+57:04 Thank you for your time.

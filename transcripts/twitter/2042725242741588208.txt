@@ -1,0 +1,1030 @@
+0:00 I want to talk today about behavioral finance, or about
+0:05 psychology in finance.
+0:08 This is a long-standing interest of mine.
+0:12 I've been involved with it for over 20 years.
+0:17 It's not really emphasized in your textbook.
+0:21 Fabozzi and his co-authors talk about a lot of things in the
+0:25 financial world, but they're not really
+0:29 about the underlying human behavior.
+0:32 Behavioral finance, or behavioral economics more
+0:37 broadly, is a kind of revolution that has occurred in finance and
+0:43 economics over the last 20 or 30 years.
+0:49 And it remains somewhat controversial.
+0:53 I don't quite fully understand why it is that people polarize as
+0:57 much as they do, but some people don't like this.
+1:01 Other people, I think, we're coming along to be the majority, I think.
+1:06 People are now regarding behavioral finance as an
+1:09 important element of finance.
+1:12 And so, the real problem is that people are complex.
+1:16 And our financial institutions, as I've emphasized, are designed for real people.
+1:27 And their functioning depends on the behavior of real people.
+1:33 And it's not as simple.
+1:37 You know, another revolution that's occurring parallel, of bigger significance, is a
+1:44 revolution in neuroscience about the human brain.
+1:49 And the human brain is a very complicated organ.
+1:55 And it's simple.
+1:59 Economists have liked to invoke the principle of rationality as an underlying
+2:05 component of their theory.
+2:07 And that has been useful.
+2:09 And it's not a very complicated argument, but it's of limited use, because people aren't rational.
+2:15 They're often rational.
+2:16 They're not completely rational.
+2:18 And very often, people behave stupidly.
+2:22 I'll put it that way.
+2:24 That includes everyone, including me.
+2:28 Because we're human, and we have limits.
+2:31 And that encourages one thing about the human species, is that we are aware of other people's
+2:41 weaknesses, and have an impulse to exploit them.
+2:46 So, when you see other people behaving stupidly, sometimes you think, maybe I can turn this
+2:52 to my advantage.
+2:55 And that becomes a problem.
+3:01 The history of humankind is a history of exploitation, of one person by another.
+3:09 Not entirely, but I'm saying it has that as an important element.
+3:13 So, I'm going to talk about these human failings.
+3:16 It's not to say that people are stupid.
+3:18 I'm just saying they're people, right?
+3:20 And we're all imperfect.
+3:22 We're smart in some dimensions.
+3:23 And we can be very smart, but we can also make important mistakes.
+3:30 But before I start, I wanted to try to put this into a perspective.
+3:38 Maybe I'll return to this at the end of the lecture.
+3:40 But I wanted to start on an upbeat note.
+3:45 I'm going to talk about all kinds of human errors.
+3:48 But I wanted to start on an upbeat note that the business world generally doesn't exploit people terribly, I believe.
+4:02 And I want to start on an upbeat note that very characteristically successful businesses in finance and
+4:11 elsewhere consider their long-term advantage and the reputation they have.
+4:19 So, doing something that is blatantly exploitative of human weaknesses will work against their long-term advantage.
+4:32 And so, we don't see, you'll see a lot of human failings, but we don't see people cashing in on them as often as you'd think.
+4:41 And beyond that, I want to emphasize also that another aspect of human behavior is morality.
+4:50 Evolutionary biologists think that this evolved along with our other traits, that we have an impulse to be moral.
+4:59 And so, in the long run, you might not really gain so much satisfaction from exploiting other people's mistakes.
+5:07 And so, you don't necessarily do that.
+5:14 So, that's why we'll have a lot of weaknesses outlined.
+5:17 And we won't see significant or serious exploitation of them as characteristic.
+5:24 Now, as you know, I have chapters from my forthcoming book assigned for this course.
+5:31 And I look back on what I put up for you to read.
+5:35 And I keep thinking, gee, this really wasn't ready.
+5:38 So, I had a chapter for this section of the reading list about behavioral finance.
+5:45 And I thought, I didn't really get it right.
+5:48 I know what I was trying to say.
+5:50 But maybe I should, what I start out in that chapter is talking about Adam Smith, OK?
+5:56 And his book, The Theory of Moral Sentiments.
+6:01 Now, just to remind you, Adam Smith was a professor in Scotland that, in 1759, he was a professor of moral philosophy,
+6:16 because there were no professors of economics in those days.
+6:20 And he wrote in 1759.
+6:23 Maybe I should write some of this on the board.
+6:26 So, he's probably the most important figure in the history of economic thought.
+6:40 So, in 1759, he wrote his Theory of Moral Sentiments.
+6:47 And in 1776, he wrote the more famous book, Wealth of Nations.
+6:59 So, this is the Theory of Moral Sentiments.
+7:04 The Wealth of Nations is considered the first real treatise on economics.
+7:13 And it's a wonderful book.
+7:15 And it's still very readable today.
+7:19 His Theory of Moral Sentiments is not so widely read.
+7:23 But it's not really economics.
+7:25 It's a book about psychology and morality.
+7:30 And I find it very good, even 250 years later.
+7:36 He went through many editions on this book, because maybe he thought it was his most important work.
+7:42 But the book starts out about selfishness and altruism.
+7:46 And the real question, which he thinks defines economics, is, are people really completely selfish?
+7:54 Sometimes it seems that way, that their presumed benevolence is just an artifice for their own benefit.
+8:05 But he wonders, how does an economy work if everyone is totally selfish?
+8:09 And he ends up concluding that they're not.
+8:12 I thought it was very interesting, the way he put it.
+8:15 And what I emphasize right at the beginning of the book is that people inherently love praise.
+8:22 All right?
+8:23 We crave the approval of other people.
+8:27 And so, praise is a fundamental human desire.
+8:33 But then he reflected on it, and he said, do people really want praise itself, or is it something else that they want?
+8:41 And he said, well, think of it this way.
+8:43 And he said, well, suppose people made a big mistake, and thought that you had accomplished something.
+8:50 But there was a mix-up.
+8:51 You know, it was really somebody else who did it, not you.
+8:53 And it's just a complete mistake.
+8:55 You had nothing to do with it.
+8:57 But you find lots of people praising you.
+9:00 Would that really be pleasurable?
+9:02 And suppose you even know that they'll never find out that I didn't do it.
+9:07 Well, Smith said, it probably isn't, right?
+9:09 I mean, think about it.
+9:10 You internally are thinking, I'm getting all this praise, but I know I don't deserve it.
+9:16 So, I don't enjoy it.
+9:18 And then he went on to say that, especially among people who are more mature, he says, more mature people, not everyone makes this step.
+9:27 But he says, adults, normal, mature adults, make a transition from a desire for praise to a desire for praiseworthiness.
+9:38 I want to know that I am the kind of person who will be praised, and I don't need to get the praise.
+9:47 And he said, it's that tendency, ultimately, which makes an economy work, that people don't care just about praise.
+9:56 And he gives an example of mathematicians.
+9:59 And he said he's known many mathematicians in his life.
+10:02 And he finds that they're almost all obscure.
+10:05 The public doesn't know about mathematicians.
+10:08 They couldn't explain to the public what they do.
+10:11 And they don't seem to care at all, because they know the public doesn't appreciate mathematics.
+10:18 And so, there's a few mathematician friends who understand what they do and may praise them.
+10:25 But ultimately, a mathematician can sometimes do the work completely unknown, you know, writing.
+10:32 And it's the praiseworthiness that drives these people.
+10:39 So, I think that, you may think that I'm being too idealistic when I say this.
+10:43 But I think that the finance profession, and this is what I was trying to say in that chapter, that the finance profession, like other mature professions, is really dominated.
+10:57 Although there's a lot of funny things that happened, that is really dominated by people who have reached this desire for praiseworthiness.
+11:06 And so, you're not going to exploit people extravagantly, just because, why would I do that?
+11:11 It's just not a good thing.
+11:12 I wouldn't feel good about it.
+11:14 Though some people will.
+11:17 Now, I wanted to also mention, not everyone reaches this mature state that Adam Smith describes.
+11:28 And that's one of the complexities of human society.
+11:30 And I think that the finance profession has a problem with other kinds of people.
+11:36 Now, there's a whole branch of psychology called personality psychology that categorizes people by their personality.
+11:43 And we're not all the same.
+11:47 And in our society, we have many different kinds of personalities.
+11:54 A successful society promotes people up who have the praiseworthiness desire.
+12:02 We try to recognize them, and we try to put people of character into important positions, with not complete success.
+12:10 And so, I want to just briefly talk about, this is a lecture on psychology.
+12:15 And I wanted to talk about other personality types that are, and I was going to use a book called, The Diagnostic and Statistical Manual, Edition 4, published by the American Psychiatric Association.
+12:32 They're coming out with a fifth edition in 2014.
+12:36 And so, DSM-IV is kind of a household word around my house, because my wife is a psychologist.
+12:43 DSM-IV is actually controversial among psychiatrists, because it's too cut and dry for some of them.
+12:51 What it tries to do is identify mental illnesses and personality types in a quantifiable, reproducible way.
+13:01 And so, we can define who has this mental illness, or who has this personality type.
+13:08 And so, it gives you checklists.
+13:10 And it says, the patient must have exhibited at least three of the following five behaviors.
+13:18 And then, there'll be another checklist.
+13:20 And so, you keep scoring.
+13:22 You can actually diagnose personality disorder.
+13:27 I'm just going to mention, one of them have many personality disorders.
+13:31 One of them is called APD, called Anti-Social Personality Disorder.
+13:39 And so, they have checklists.
+13:40 But just to give you a sense.
+13:41 Oh, and the anti-social personality disorder is called psychopathy.
+13:50 Or one kind of APD is psychopathy.
+13:54 Another one is called sociopathy.
+13:56 And I don't know, there's a huge literature on these.
+14:00 But according to DSM-IV, 3% of the male population in the world is APD.
+14:12 And 1% of the female population.
+14:17 A simple definition for APD is a jerk.
+14:25 There are more male jerks than female jerks, apparently.
+14:30 According to their, this is all quantifiable and done.
+14:34 But what is an anti-social personality disorder?
+14:39 It has the following characteristics.
+14:41 Lack of remorse.
+14:43 Frequent lying.
+14:45 Lack of empathy.
+14:47 Superficial charm.
+14:50 Shallowed emotions.
+14:52 Distorted sense of self.
+14:54 Constant search for new sensations.
+14:56 Have you met someone like that?
+14:58 You probably have, because that's 3% of the population.
+15:04 I'm not anti-male when I point out there are three times as many jerks among males as females.
+15:10 Females have characteristically different personality disorders.
+15:14 And you can look down the list.
+15:16 So, it's much more than 3% of the population that would be diagnosed with one or the other.
+15:22 So, you know what an APD person is?
+15:24 It's manipulative.
+15:25 It feigns affectionate or warm feelings, but doesn't feel them.
+15:30 And is trying to deceive you.
+15:34 I encountered, once a student came to my office and asked to sign up as my research assistant.
+15:41 And I was talking to him.
+15:42 I thought, well, maybe.
+15:43 I said, come back and talk to him.
+15:44 Later on, I read about him in the Yale Daily News.
+15:47 He was an imposter student.
+15:49 He was not a Yale student.
+15:51 And he had been around to other university campuses.
+15:54 He was an imposter at like three different campuses.
+15:57 So, there's something wrong with this person, right?
+15:59 Kind of made me feel, and then he came later and asked me for a recommendation letter.
+16:04 I couldn't believe it.
+16:05 After I read about him in the Yale Daily News.
+16:09 But this is extreme, right?
+16:14 And so, incidentally, someone did a study of APD by going to a prison and categorizing the inmates, using DSM-IV standards.
+16:27 And they found that 40% of the prisoners had APD.
+16:32 Also, neuroscience people have found that there are differences in the prefrontal cortex that are correlated with APD.
+16:40 So, it seems to be, it's a problem we have in our society that some people have a brain structure that's a little different.
+16:47 And it may make it difficult for them to behave in a good way.
+16:52 So, we're learning more and more about neuroscience.
+16:59 And it's interesting to me that Adam Smith's book still rings true, though, after.
+17:06 There's some basic common sense that we all learn.
+17:08 You have to judge people, and you have to learn their character.
+17:11 And you have to be a person of character, for in the long run, that's what you want.
+17:17 It gives you what you want in life.
+17:21 So, I'm going to talk about, I'm going to turn now to, another thing I want to say at the beginning, is that people are manipulable.
+17:38 Unfortunately, true.
+17:40 And unfortunately, we live in a world where it's hard to avoid manipulating people at all.
+17:50 Because, we have a free enterprise system that encourages competition.
+17:57 And if the competition is manipulating people, how do you completely stay clear of that?
+18:04 And I think this is one of the contradictions of our society.
+18:07 And a very simple and obvious manipulation is, they'll put a price on some item they're selling, like $9.99.
+18:17 So, you ask, well, why didn't they just say $10, right?
+18:20 Well, you know why they didn't.
+18:21 It's called pricing points in marketing.
+18:24 Because $9.99 sounds a lot less psychologically than $10.
+18:30 So, everyone does it.
+18:32 Almost everyone does it.
+18:33 But is that bad?
+18:38 Well, it's bad in a way.
+18:39 It's manipulative, isn't it?
+18:41 I mean, I'm annoyed by it.
+18:43 Maybe you are, too.
+18:44 But if you were in business, would you do that, too?
+18:49 You might feel that you have to.
+18:51 And it's a harmless sort of manipulation.
+18:54 It's not hurting anyone, really.
+18:56 They may be buying a little bit more than they want.
+18:59 But you see, that's the kind of thing that comes in.
+19:04 So, in looking at financial institutions, they're often
+19:09 manipulative in that sense.
+19:11 But I don't think that, it's similar to a politician.
+19:15 If you want to be a member of Congress or whatever, you can't
+19:20 say what you really believe, right?
+19:23 Because you won't get elected.
+19:26 You've got to kind of doctor your opinions to the public opinion.
+19:36 But you might have a moral purpose underlying it all, because you
+19:39 want to get elected so you can do good things.
+19:43 And so, you do end up saying things.
+19:48 So, it's hard to judge people, good or bad.
+19:51 It's an overall sense you get of someone's character, that
+19:54 people are doing things that appear somewhat manipulative and
+19:57 somewhat bad.
+19:59 But you get an overall sense of the person through time.
+20:02 And ultimately, our society, within limits, rewards people
+20:07 that show character through all the confusing details.
+20:13 Now, I wanted to move.
+20:14 That was my introduction.
+20:15 I wanted to move now to discussing some particular aspects
+20:19 of behavioral finance, or more broadly, behavioral economics.
+20:23 And about human failings that are exploitable by somebody, and are
+20:35 somewhat exploited.
+20:36 But remain as a.
+20:41 I wanted to start out with what's probably the most famous
+20:44 element of behavioral economics.
+20:47 It's prospect theory.
+20:48 And it was invented by two psychologists, Daniel Kahneman and
+21:03 Amos Tversky.
+21:04 And in the late 20th century.
+21:13 They called it prospect theory, because it was a theory of how
+21:17 people form decisions about prospects.
+21:21 And a prospect is a gamble.
+21:23 It's about people's decisions under uncertainty.
+21:25 And in very simple terms, the prospect theory says, now there's a
+21:32 huge literature on this, so I'm trying to give you a very quick
+21:38 description of it.
+21:43 There's something called a value function, which represents how
+21:48 people value things.
+21:52 And there's a weighting function.
+21:56 That's the two parts.
+21:58 And I'll just show you a picture of the value function, and the weighting
+22:14 function.
+22:15 And this will be very quick, and you'd have to read more.
+22:19 But the way people value gains or losses.
+22:26 Let me see, how do I?
+22:28 Better draw the line in the middle.
+22:36 OK.
+22:37 And these, we're talking about financial gains.
+22:39 So, these are gains.
+22:42 And this is zero.
+22:44 And this is losses.
+22:45 Well, negative.
+22:46 What I have on the horizontal axis is wealth or money or something
+22:50 like that.
+22:51 Zero in the middle.
+22:53 OK.
+22:54 And then, we have on this axis, value, which is something like
+22:58 utility.
+23:02 I'll erase my zero.
+23:03 It doesn't get in the way.
+23:07 And what they find is that people's value has a funny shape.
+23:12 We don't weigh gains and losses linearly.
+23:19 In a positive quadrant, when we have positive gains, there's
+23:23 diminishing value like that.
+23:27 It doesn't ever slope down.
+23:29 It's concave down.
+23:32 Like diminishing marginal utility in economic theory.
+23:35 But for losses, it looks something like this.
+23:40 It's concave up.
+23:42 I'm exaggerating a little bit.
+23:44 But this is a diagram that Kahneman and Tversky wrote in
+23:49 their famous Econometrica article 30 years ago.
+23:54 So, there's diminishing marginal utility for gains.
+23:57 But there's the opposite.
+24:01 Well, we have concave up.
+24:06 And there's a kink.
+24:07 You note that the value function has a kink at the
+24:12 origin.
+24:17 So, what does this mean?
+24:19 It means, OK, first of all, this origin is a kink.
+24:23 So, this origin is a, from what point do I estimate gains and
+24:30 losses?
+24:31 That's called the reference point.
+24:33 And it's psychological.
+24:36 And it's subject to manipulation.
+24:38 The reference point is the zero from which I measure things.
+24:45 So, first of all, the reference point is probably today's
+24:50 wealth.
+24:51 But it can be something else if people are manipulated by the
+24:56 way something is presented to them.
+24:59 Framing, according to Kahneman and Tversky, is presentation.
+25:05 So, I can give the same prospect to people, but word it in different
+25:12 ways that suggests a different reference point.
+25:15 And that will change people's behavior.
+25:18 So, you can manipulate people by describing something in
+25:22 different terms, by suggesting a different reference point.
+25:26 But typically, the reference point is today's wealth.
+25:29 The kink means that people are very conscious of little changes in
+25:35 their wealth.
+25:36 And they're spooked by them.
+25:38 I'm really afraid, because my value drops very rapidly, even for
+25:42 a small loss.
+25:43 So, if you were to say, lose $5 this morning, all right, you had it in
+25:49 your pocket and you lost it on the way to this lecture, you would
+25:53 feel exaggeratedly bad about that.
+25:56 You should really regard $5 as just nothing, because the present
+26:00 value of your lifetime income is in the millions, so what's $5?
+26:04 But you don't think that way.
+26:06 And so, you're spooked and deterred by small losses, and less
+26:12 encouraged by small gains.
+26:16 So, this kind of thing allows business people to exploit people,
+26:22 if they want to.
+26:24 If people are so focused on these little changes, then you are
+26:29 encouraged in business to try to pick things out that people are
+26:34 paying attention to, like small things, and sell insurance
+26:38 policies on just those things.
+26:42 And so, insurance should be concentrated on the really big
+26:47 things, like life insurance.
+26:50 You know, the fact that one of your parents could die, and the
+26:53 children's family would be out of money for the rest of their lives.
+26:57 That's a big thing.
+26:58 But it may not work to sell that kind of insurance.
+27:02 You can do something that is more focused on what people are watching, and
+27:09 make it something little, so that it doesn't require them to spend so
+27:13 much money.
+27:14 The classic example of that is funeral insurance.
+27:18 OK?
+27:22 You go around telling people, if for some reason this sales pitch works,
+27:26 and it's worked for thousands of years.
+27:28 They sold this in ancient Rome.
+27:30 You tell people, you know, if someone in your family dies, you could have an
+27:33 expense of getting a proper burial for this person.
+27:36 It costs money.
+27:39 And so, they would insure that one thing.
+27:42 OK?
+27:43 And it was a little thing.
+27:45 But it works to sell that.
+27:49 Another example of that is airline flight insurance.
+27:53 OK?
+27:54 You are insured for this flight on the airplane.
+27:57 OK?
+27:58 I heard an ad for funeral insurance recently.
+28:00 They're still doing this after 2,000 years, because it still works.
+28:04 And it's manipulative.
+28:06 That's not what you should do for people.
+28:08 You should not pick out some little thing.
+28:11 Or they also have diamond ring insurance.
+28:13 After an engagement, some women will want to buy an insurance policy on the
+28:17 diamond, because it can actually fall out of your ring and lose it.
+28:21 But that's like, what is it, $5,000?
+28:23 It's not big.
+28:25 It's not essential.
+28:26 And if you're insuring that and not other things, you're making a mistake.
+28:31 But fortunately, the insurance industry has come around to do things that are more.
+28:39 They are doing things that matter and are big.
+28:41 And that's because this Kahneman-Tversky value function, it represents an error that people are prone to be making.
+28:51 But it's not total and not complete.
+28:54 And so, ultimately, people don't go to insurance companies that manipulate them.
+29:01 It gets around.
+29:02 And eventually, people come around wanting something better.
+29:06 And so, while there is some manipulation, it's limited.
+29:12 And so, it's limited.
+29:13 The other aspect of Kahneman-Tversky is the weighting function.
+29:17 OK?
+29:18 And I'm going to draw, again, a picture of it.
+29:25 And it's this time.
+29:28 It's how people psychologically think about probabilities.
+29:32 And this, again, is Kahneman and Tversky.
+29:35 A probability is a number between 0 and 1, or 0 and 100%.
+29:42 I'll put 0 here and 1 here.
+29:46 We can tell someone the probability of something, but they can't accept it psychologically.
+29:52 The errors that people make are described by the weighting function.
+29:57 What's a weighting function is the psychological impact.
+30:01 You are behaving as if you don't understand the probability.
+30:06 So, what Kahneman and Tversky say is that for very low probabilities, people may round them to 0.
+30:16 And for very high probabilities, they may round them to 1.
+30:20 But if they decide not to round them to 0 or 1, they exaggerate the difference between 0 and 1.
+30:27 You just can't think in terms of a continuum of probabilities.
+30:31 So, this is what the weighting function, this is the weight as a function of the probability.
+30:36 For low probabilities, it's 0.
+30:39 I'm going to maybe exaggerate it here.
+30:41 Then it jumps up, and it's something like this.
+30:45 And as it gets close to 1, it jumps up to 1 again.
+30:50 So, you see, it's like a broken line segment.
+30:53 And there's been various versions of this theory, but this is the simplest version of it.
+30:58 So, that means, if you're getting on an airplane, you think, well, what's the probability of this airplane crashing?
+31:07 Well, you know, it's probably something like 1 in 10 million, or even less than that.
+31:12 So, most of us in our mind just say, it's 0, and I'm done.
+31:16 I'm not going to think about it, I'm not going to worry about it.
+31:20 And so, we're down here.
+31:21 We've rounded it to 0.
+31:23 But some people don't round it to 0, okay?
+31:26 And for them, they just blow it out of all proportion in their minds, and it becomes exaggerated.
+31:31 So, I have it here, so it looks like it's a half.
+31:34 So, this would be 1 here.
+31:37 And this is about 0.4.
+31:41 And then, ultimately, if the probability gets really high, then I'm not even going to think about it.
+31:46 It's 1, okay?
+31:47 So, you know, it's a little bit like people, in some of the most primitive languages in the world,
+31:53 there's only a couple of numbers.
+31:56 There's 0, there's 1, maybe there's 2 or 3, and then there's no more numbers.
+32:01 Well, our minds are still very primitive in dealing with probabilities.
+32:06 So, it's like there's only three probabilities.
+32:09 Can't happen, maybe, and will happen, okay?
+32:14 So, I think airline flight insurance is an example of trying to manipulate this personality characteristic.
+32:22 So, it means that they'll capture all the people who exaggerate it, right?
+32:30 They used to have vending machines outside of airlines.
+32:33 The vending machines would encourage you to buy just for this flight.
+32:40 They put it right there when you're getting on the flight.
+32:43 And so, that's when you're most nervous, if you're one of these people who's up here.
+32:47 And of course, most people don't buy, but they don't have to sell it to everybody.
+32:50 They just sell it to these people, and they charge an outrageous price.
+32:53 But I haven't seen these vending machines anymore.
+32:55 This is interesting.
+32:58 The economists wrote about them 30 or 40 years ago, and they used to be everywhere.
+33:02 And they just kind of disappeared.
+33:03 Do you ever see one of these?
+33:05 I think they're gone.
+33:06 Why is that?
+33:07 Well, somehow we get past things like that.
+33:10 And so, it's not like Kahneman and Tversky are immutable, representing immutable errors.
+33:17 These are errors that naturally happen, but you can get past it.
+33:27 And you end up wanting to deal with people you trust.
+33:30 So, you see some vending machine at the airport, and you think, well, my insurance agent isn't recommending I get this.
+33:36 I've got some kind of insurance.
+33:37 So, you walk past it.
+33:39 There's a professor in Germany at the Max Planck Institute in Berlin, Gerhard Gigerwenser, who has been taking on Kahneman and Tversky, and saying that they're right that people show these tendencies for errors, but I can train people out of them with no problem.
+34:05 Those errors, I just tell them, there's an error, teach them then, and they don't do it anymore.
+34:25 Gary Gorton just did a seminar here on errors that people make in financial, no, no, Nick Barbaras here on SOM.
+34:34 And he was using Caltech students and tested their ability to prevent certain kind of errors like this.
+34:46 And he found that even the Caltech students made these errors just horribly.
+34:51 We were wondering, aren't they supposed to be bright?
+34:54 Those are young math geniuses.
+34:56 But about a third of them got everything right.
+34:59 So, I'm thinking, you know, they're only undergraduates, right?
+35:01 By the time they get along, they'll eventually be trained out of these errors.
+35:06 But right now, they're behaving just like behavioral finance says it will.
+35:12 So, anyway, I think that you will find that prospect theory explains a lot of things that go on in finance.
+35:23 But it doesn't explain everything.
+35:25 And let me move on.
+35:29 So, I want to talk about, let me see.
+35:38 Let me see.
+35:39 What do I?
+35:41 Well, I have so many things to tell you about here.
+35:51 And I'm thinking about my time.
+35:53 It's a huge field, behavioral finance.
+35:55 Let me mention a few other things.
+35:57 Regret theory is a theory that is kind of related to Kahneman and Tversky.
+36:04 It says that people fear the pain of regret.
+36:08 There's an old expression, I was kicking myself because I made some bad decision.
+36:13 Well, that's a painful experience, when you did something wrong.
+36:18 This is represented somewhat in the kink in the prospect theory value function.
+36:24 But regret theory says that there's actually a painful emotion that you're wired not to like to have made a mistake.
+36:31 And so, then you end up designing your life around that and trying to avoid doing anything that you might regret later.
+36:38 And it can create problems.
+36:41 You may make bad decisions because you're overly worried about regret.
+36:48 Gambling behavior.
+36:52 Anthropologists have reported that gambling occurs in every human society.
+37:00 And so, it's one of the human universals.
+37:03 Not that everyone does it, but in every society, you'll find people that do it.
+37:10 And so, in a 1974 study, I found that 61% of U.S. adults actually gambled at least once for money in that year.
+37:23 I bet it has gone up.
+37:24 There's more opportunities for gambling, and it's gone up.
+37:28 1.1% of men are compulsive gamblers, and 0.5% of women.
+37:35 This is another male trait.
+37:38 And somehow, men are more vulnerable to compulsive gambling than women.
+37:42 But it's only a factor of two to one.
+37:45 But it's an addiction that happens that distorts people's thinking.
+37:50 And it's such an addiction that we have an organization called Gamblers Anonymous that helps people with this.
+37:57 It ruins people's lives.
+37:59 People end up getting a divorce, because you can't stay married to someone who is squandering the family money.
+38:06 They end up sneaking around to gamble, like drinkers sneak around for the next drink.
+38:11 Gambling behavior, it seems to be associated psychologically with a self-image.
+38:20 A sense of who I am and why I'm an important and good person.
+38:25 A sense of competence.
+38:26 Most gamblers do things that they think are revealing of their competence.
+38:32 And they tend to pick a certain form of gambling that they become psychologically identified with.
+38:39 And they avoid any other form of gambling.
+38:45 Gambling behavior is part of what goes on in the stock market.
+38:49 Certain people who have a personality which makes them particularly interested in gambling, find that a life in finance can give them the kind of stimulation.
+39:02 Gambling behavior, by the way, is almost like a drug addiction, in a sense.
+39:09 That people who are depressed may go to a gambling casino as a way of getting themselves out of the depression.
+39:19 And they say that when they walk into the casino, suddenly my troubles are gone.
+39:24 I feel invigorated and alive.
+39:27 And they say that when they walk into the casino, it's almost like it creates a hormonal difference in them that they seek.
+39:33 And it's almost like injecting yourself with something.
+39:36 So, it's a very hard thing to conquer.
+39:38 I mentioned before how when the New York State in 1811 created the first corporate law that produced a lot of questionable companies.
+39:47 People then said, this is just gambling.
+39:49 It's bad.
+39:50 But the other side of it is that the same gambling behavior, it's not usually a pathology.
+39:56 It's an aspect of human sensation seeking, of various aspects of our psychology that drive us.
+40:03 What the stock market is, in some sense, is a way of channeling this kind of behavior into something productive, instead of just a game.
+40:13 And so, they make it very clear in the stock markets of the world, this is about business, and this is productive.
+40:21 The same emotions, emotional patterns that created gambling behavior as a human universal underlie some – this is not abnormal, it's most people – underlie traits that work out well.
+40:38 So, the next major thing I wanted to talk about is overconfidence.
+40:45 And psychologists have found that there's a human tendency to overestimate one's own abilities.
+40:53 OK?
+40:54 We all think – not all of us – most of us think we're above average.
+40:59 Some of us think we're way above average.
+41:02 And this tendency has been revealed in a number of experiments.
+41:07 I thought I would try one on you.
+41:09 I don't know if it will work.
+41:10 I'll try it on this class.
+41:12 If you will participate in this experiment by a show of hands.
+41:18 I'm going to ask you – I have three questions here.
+41:21 And I want to ask you to write down a 90% confidence interval.
+41:39 OK, you have a pencil to write this down.
+41:42 And then afterwards, I'm going to tell you the answer and see if it fell in your confidence interval.
+41:48 OK.
+41:49 So, this is what it is.
+41:50 What is a 90% confidence interval?
+41:52 It's a range of values so that you are 90% sure that the true value lies in this range.
+41:59 OK?
+42:00 So, if I asked you for what is the population of New Haven, you might say 90% confidence interval.
+42:10 That's between 50,000 and 150,000.
+42:13 That means you're 90% sure that the population falls in that range.
+42:18 And so, you should be right 90% of the time.
+42:21 If I ask you to give 90% confidence intervals, you should be right.
+42:27 Nine times out of 10.
+42:29 If I ask for a 99% confidence interval, you have to widen the interval.
+42:33 Then you should be right 99 times out of 100.
+42:36 So, what I'm going to ask you to do, if you will cooperate with me, is give 90% confidence intervals.
+42:43 I have three questions I'm going to give you.
+42:46 But I have to ask you to be honest.
+42:48 Otherwise, this thing won't work.
+42:50 You could game me by just giving excessively wide confidence intervals, right?
+42:55 And then, from zero to infinity.
+42:59 Then you'll always be right.
+43:01 But you're not playing honestly.
+43:03 So, I have to appeal to your character to do this honestly.
+43:06 OK?
+43:07 So, I have three questions here.
+43:10 I just changed the questions.
+43:13 The first is, what you have to write down on your note paper somewhere, is your honest estimate of a 90% confidence interval.
+43:22 And so, the first question is, the world population.
+43:29 How many people are alive in the world?
+43:34 All right.
+43:35 As of, I think it was 8 AM this morning.
+43:40 The U.S. Census has something called the World Population Clock.
+43:45 And just go, don't cheat.
+43:48 Some of you have laptops.
+43:49 Don't do it.
+43:50 But after this, you can search Google on World Population Clock.
+43:54 And it shows you minute by minute how many people there are in the world.
+43:58 Every birth and death.
+43:59 They're not actually recording them.
+44:00 It's a fake.
+44:01 But I mean, it's supposed to be an estimate.
+44:03 So, I got the world population.
+44:05 So, what I want you to do, can you write down a lower bound and an upper bound for the world population.
+44:10 this morning, as measured by the U.S. Census.
+44:15 OK.
+44:16 Can you write that down?
+44:17 But I don't want you to make it too wide.
+44:20 Remember, I only want you to be 90% sure.
+44:23 And I don't want you to make it too narrow, because then you're more likely to fail.
+44:28 So, you've written that down, the world population.
+44:30 OK.
+44:31 My next question is to the world.
+44:38 What does it weigh?
+44:41 Well, actually, it's the mass in kilograms of the world.
+44:44 Can you write that down?
+44:45 This is astronomy.
+44:48 OK.
+44:50 Let me say, I'm asking for it in kilograms.
+44:52 But you can do it in metric.
+44:54 So, you can do it in metric.
+44:56 And you can do it in metric.
+44:58 That just knocks off three zeros.
+45:00 A metric ton is 1,000 kilograms.
+45:05 OK.
+45:06 And just so you'll know for sure, that's not the same thing as a long ton, which is UK.
+45:13 The United Kingdom uses the long ton, which is 2,240 pounds.
+45:18 I just looked this up.
+45:19 And it's 1.1 metric ton.
+45:22 And it's not exactly the same as a short ton, which we use in the United States, which is 2,000 pounds, which is 0.98 metric tons.
+45:37 All right.
+45:38 Just tell me how many tons.
+45:39 That's not going to affect your 90% confidence interval, right?
+45:41 Just tell me how many tons does the Earth weigh.
+45:45 OK.
+45:46 All right.
+45:47 And then, that's the third, second.
+45:48 I have one more question.
+45:50 How many languages are there in the world?
+45:58 OK.
+45:59 Now, I know, because you might complain, this is a matter of definition, because sometimes two dialects might be considered a separate language.
+46:10 Well, I'm asking you to give me the number.
+46:15 The World Authority on Languages is an organization that has a website called ethnolog.com.
+46:30 And if you go to that website, they're always discovering new languages.
+46:35 They keep track of it.
+46:36 New languages keep getting discovered, because some guy is hiking out in Siberia, and they go to this little village and say, hey, these people are speaking a language that would never have been documented before.
+46:48 So, it's this process of learning languages.
+46:51 They also keep dying out, because there are just elderly people in this village, and when they die, you know this language is going to die with them.
+46:59 So, anyway, the question is, I want your 90% confidence interval for the number of languages, as defined by ethnolog.com.
+47:09 OK.
+47:10 You have to guess how they define a language.
+47:14 But you have an idea, more or less, what a language is, right?
+47:17 It's more than a dialect, because they can still understand each other if they speak different dialects.
+47:22 We're talking about really different languages.
+47:25 OK.
+47:26 Have you written down three confidence intervals?
+47:28 OK.
+47:29 So, I'm going to write down the answers, and I hope this works.
+47:32 I'm trusting to your honesty in getting these things, because you could game me and make this not work.
+47:38 But give me your honest confidence.
+47:40 So, I'm going to write down the correct answer.
+47:42 So, the world population, as of 8 AM this morning, was 6,901,330,581.
+48:01 OK.
+48:03 Now, can I get a show of hands?
+48:05 How many people's confidence interval includes that number?
+48:12 OK.
+48:13 Does someone tell me what percent that is?
+48:15 That is not 90%.
+48:16 You're doing pretty well, though.
+48:18 What do you think, Oliver?
+48:20 I think it's 80?
+48:22 See him up again.
+48:24 Maybe it is 80.
+48:26 All right.
+48:27 You're doing really well.
+48:28 Some honest people here didn't put their hands up.
+48:32 Good.
+48:33 All right.
+48:34 Well, that's one.
+48:35 So, we did 80 instead of 90.
+48:37 What about the weight of the Earth?
+48:39 OK.
+48:40 In kilograms.
+48:42 Well, it's 5.974 times 10 to the 24th power.
+48:52 And I'll give you that in tons, in more familiar.
+48:57 It's 5,974 billion billion tons.
+49:03 OK.
+49:04 You got that?
+49:06 We might have to do some calculation.
+49:08 That would be 5.9734 times 10 to the 18th power.
+49:13 OK.
+49:14 Can we do a show up?
+49:15 How many people had a number in, how many people are in the confidence interval there?
+49:20 All right.
+49:21 Oliver, what do you think?
+49:23 What's the fraction?
+49:24 5% or 80%.
+49:25 OK.
+49:26 So, this one, you did really well on world population.
+49:30 80, 10.
+49:32 The last one.
+49:33 How many languages are in the world?
+49:36 Well, according to ethnolog.com, there are 6,909 languages this morning.
+49:43 OK.
+49:44 How many people got that within their confidence interval?
+49:48 OK.
+49:49 What do you think, Oliver?
+49:50 10%.
+49:52 OK.
+49:53 Why did you do so much better on world population?
+49:58 Well, thank you for being honest with me.
+50:00 I think it worked once again.
+50:02 That the overconfident.
+50:06 So, why is it that people are overconfident like this?
+50:09 And psychologists have tried to describe what it is that goes on in people's minds that produces answers like this.
+50:21 One of them is that people seem to have a sense that they understand the world more than they really do.
+50:28 It's an illusion.
+50:29 Actually, the world is just infinitely complicated, and there are so many surprises.
+50:35 And so, you have a, when you think about a question like this, there's many different perspectives that you can take.
+50:42 And if you thought more about it, your imagination might help you to widen your confidence interval.
+50:50 But you can't think of all the perspectives at once.
+50:52 And so, you tend to gravitate to the first one that comes to mind, and it gives you an underestimate of the confidence, of the confidence.
+51:04 And so, that is overconfidence.
+51:09 By the way, I think it's a little bit higher in males than females.
+51:13 I didn't do a separate male-female count.
+51:16 But females are definitely overconfident.
+51:19 That's a so-called macho personality that's supremely overconfident.
+51:23 That's not in DSM-IV, but I don't think it is.
+51:27 But it is more common among males.
+51:29 But it's really everyone is overconfident.
+51:32 So, it's not, there's no important sex difference here.
+51:36 Incidentally, I think that overconfidence, and this is an important phenomenon, it goes beyond yourself.
+51:44 It extends to your friends.
+51:46 And you exaggerate.
+51:51 There's a tendency for people to think that I have very smart friends.
+51:55 OK?
+51:56 I was reflecting the other day, when I was an undergraduate at University of Michigan.
+52:01 I was in the honors program, and we thought we were pretty smart.
+52:05 And I had a number of young people that I just imagined were heading toward careers, really great careers.
+52:14 There was one student that we called young Jack Kennedy.
+52:19 You know, this was some years ago.
+52:21 Jack Kennedy was President of the United States.
+52:23 We thought he was a genius.
+52:24 That was probably wrong, too, right?
+52:26 None of these people are geniuses.
+52:29 I was thinking that most of my friends ended up in very, you know, good careers, but nothing that you would think was spectacular.
+52:39 I had one friend as an undergrad, who I thought was a genius.
+52:44 And his name was Bruce Wasserstein.
+52:47 Anyone ever heard of him?
+52:49 Maybe not.
+52:50 Well, see, that's it.
+52:51 But he founded his own investment bank called Wasserstein Perella, became really rich.
+52:57 And then he bought interest in Lazard Frere, the French investment bank.
+53:04 And he was a real big shot on Wall Street.
+53:07 And I met him again about 10 years ago.
+53:10 And then he died.
+53:11 God.
+53:12 He had a heart attack and died.
+53:15 So, I know his whole life.
+53:16 I saw him when he was 18.
+53:18 And I've watched his whole life, and it's now history.
+53:20 It's kind of scary.
+53:21 But I remember thinking he was a genius as an undergrad.
+53:25 But I was wondering, what was wrong with my judgment?
+53:28 Why did I see so many other geniuses?
+53:30 And he maybe, I thought he, now that I think back on it, he had a sort of real world common sense that amazed me.
+53:45 And he knew things, it wasn't fake knowledge.
+53:48 He seemed to know how things worked.
+53:50 So, I guess I was right about one of them.
+53:52 But not enough that you, none of you have heard of him, right?
+53:55 Anyway, he has an investment bank named after him, right?
+53:58 You should have heard of him, but maybe not.
+54:01 But anyway, this thing affects people's thinking, too.
+54:04 I think that we tend to think that the head of state who's running, the head of our central bank is a genius.
+54:11 And this really clouds our thinking.
+54:13 It's not just confidence.
+54:14 It's like our ego extends to the other people that we associate with ourselves.
+54:20 Now, the head of a central bank in another country, we have no respect for.
+54:24 It's only in our own country.
+54:25 Because it's part of our ego involvement that produces this overconfidence.
+54:30 So, this tendency for overconfidence produces a lot of anomalies and opportunities for manipulation.
+54:40 So, for example, Rakesh Khurana, who is a professor at the Harvard Business School, has written a book called Search for the Charismatic CEO.
+54:56 And he claims that there's a tendency for people to think that CEOs are geniuses, or at least the one that we found is a genius.
+55:09 And companies then seek out a genius CEO to put in charge of the company as a kind of manipulation of the stock market.
+55:18 And they think, if we get some guy who's run other companies successfully in the past, he must be a genius.
+55:30 Put him in our company, our stock price will go up.
+55:33 Then we can sell our executive, we can exercise our options and make a lot of money by putting in this fake genius.
+55:41 And so, Kharana says, well, there are some people who are maybe geniuses at management, but most of the time they're just lucky.
+55:50 And we tend to develop overconfidence.
+55:53 And then what happens, according to Kharana, is you put in some guy who turned around some company spectacularly, supposedly.
+56:01 You bring him in to run a new company.
+56:03 And he doesn't know anything about this new company, right?
+56:06 But he has to justify himself.
+56:08 So, he lays off a lot of people and shuffles things around and just destroys everything in the company and ruins things.
+56:17 This is related to another author that I recommend.
+56:22 I mentioned him before, I think.
+56:26 I think he's a good writer.
+56:27 Nassim Taleb wrote a book called Fooled by Randomness.
+56:33 He's Lebanese, but now in the US.
+56:42 Nassim Taleb, Fooled by Randomness, that says that most of the things that happen in life are just chance.
+56:53 And so, we tend to ascribe them.
+56:56 If they happen to us, we conclude, we're very quick to conclude that it's a sign of our own genius.
+57:03 And if it happens to someone that is a friend of us, then you think, well, I have genius friends.
+57:08 Isn't that nice?
+57:10 And so, it leads to mistakes.
+57:14 OK.
+57:16 Let me go to another, how much time do I have?
+57:20 Cognitive dissonance.
+57:22 This is another psychological principle.
+57:28 The term was coined by sociologist Leon Festinger in the 1950s, I believe.
+57:40 I actually met this guy.
+57:41 The nice thing about being in academia, you meet all these great names.
+57:45 If you're in long enough, eventually.
+57:48 And so, I would be biased.
+57:51 The good thing about cognitive dissonance is that people tend to make, because they don't want to admit they're wrong.
+57:58 Maybe I'm oversimplifying this.
+58:00 It's painful to think that I believed something and it was wrong.
+58:06 People tend to think that people will cling to old beliefs and try to find evidence that supports their belief.
+58:12 Because they have an ego involvement with the belief.
+58:15 And so, I will be biased.
+58:17 The famous experiment indicating cognitive dissonance, done by some psychologists, had the following form.
+58:24 They got a list of people who had just bought a car.
+58:27 And they knew what make of a car.
+58:29 They got the list from car dealers, so they knew exactly what car they had just bought.
+58:33 And they called these people up and asked them to participate in a psych experiment.
+58:38 Or I think they said a marketing experiment.
+58:40 But they didn't let them know that they knew what car they had just bought.
+58:43 And then the experiment was the following.
+58:46 Let's go through a number of, what magazines do you read?
+58:49 And they said, let's get these out.
+58:50 They got all the magazines that were on the newsstand.
+58:53 And they said, let's look through page by page and tell us which ads you remember reading.
+58:58 And what they found is that people read the ads for the car they just bought.
+59:04 And they avoided, especially, the car that they thought they might buy, but decided not to buy.
+59:12 So, after you buy a car, you want to confirm your belief in it.
+59:17 So, you selectively get information that confirms your belief.
+59:22 And so, this cognitive dissonance is another factor.
+59:27 It's been demonstrated.
+59:28 It's an error that people make.
+59:30 It doesn't mean that people, again, none of these errors is inviolable.
+59:34 People will make the error, and then they'll learn from their mistakes, and they'll correct it.
+59:39 They're not totally cognitive dissonant, but it's just a kind of error that keeps coming up.
+59:46 So, I'll give you a couple of examples of cognitive dissonance and its effects on finance.
+59:52 So, Will Getzman is a professor here at the Yale School of Management.
+59:58 And a couple of his co-authors found that mutual fund investors, when a mutual fund does very badly in its investment performance, many or most investors sell the stock and get out of it.
+1:00:14 But some of them hang on.
+1:00:17 And they thought that that was due, perhaps, to cognitive dissonance.
+1:00:21 Because I bought this fund.
+1:00:23 I don't want to sell, because I was right.
+1:00:32 So, what they did is they interviewed these people, and they found out that these people didn't even know how badly the fund has done.
+1:00:40 They had blocked it out, and they had an exaggerated impression of the success, which is characteristic of cognitive dissonance.
+1:00:53 You just forget the evidence that's contrary to your theory, and you keep assembling evidence that supports your theory.
+1:01:01 And this is a very interesting theory.
+1:01:02 I have another example of cognitive dissonance.
+1:01:08 And this one was produced by a professor, Sandil Mullenathan, at the Harvard Economics Department.
+1:01:18 And Mullenathan looked at financial advisors, and his co-authors.
+1:01:26 And what they did to study, that's a whole big profession.
+1:01:31 I remember at the beginning, I pointed out how many hundreds of thousands of financial advisors there are.
+1:01:36 What they did, it's an interesting experiment.
+1:01:38 They hired actors to go to financial advisors, and ask for their help.
+1:01:44 And the experiment was the following.
+1:01:47 They would say the same thing to each financial advisor.
+1:01:51 And they would say, I have a portfolio of investments, and I'm almost entirely in money market funds.
+1:02:10 That's all.
+1:02:11 You just say that, and you wouldn't express any opinion at all.
+1:02:14 I've got all of my portfolio in tech stocks.
+1:02:17 Right?
+1:02:18 Or I've got all of my portfolio in options.
+1:02:21 Now, what should advisors tell people?
+1:02:24 Well, if they were acting really professionally, they should question the assumptions that made the actor, supposedly, put all of their money in one kind of investment.
+1:02:36 And many of the financial advisors did, but usually, they didn't question the actor.
+1:02:47 They assumed that the actor, who had put, supposedly, all of the investments in money market funds, was someone who was very risk-averse, or thought that was the right thing to do.
+1:03:02 And they didn't want to challenge them.
+1:03:04 So, they would walk out of there with maybe a slightly different mix of money market funds.
+1:03:09 And somebody else, who was in a very risky portfolio, they didn't challenge them.
+1:03:15 And they even sent actors in, with almost all of their portfolio in their own company's stock.
+1:03:22 All right?
+1:03:23 Now, if you work for Ford Motor Company, I know this is my uncle.
+1:03:27 I had conversations with him about this, who worked for Ford Motor Company, and put all of his life savings in Ford Motor Company.
+1:03:34 And I said, Uncle Ralph, you shouldn't do that.
+1:03:38 Because it's your job, and all of your life savings.
+1:03:41 What if something happened to Ford Motor Company?
+1:03:43 Fortunately, he didn't work for GM, which became worthless recently.
+1:03:48 But it can happen.
+1:03:49 You know, Ford could be completely wiped out.
+1:03:51 That's your life savings.
+1:03:53 And you know what he said to me?
+1:03:55 He said, you know, I've worked at Ford all my life.
+1:03:58 They treat me well.
+1:04:00 I believe in them.
+1:04:01 I'm not going to sell.
+1:04:02 And so, there's lots of people like that.
+1:04:05 So, when they show up at a financial advisor, the first thing that they should do, the financial advisor should tell them, get out of your Ford stock.
+1:04:14 You're a Ford stock.
+1:04:15 That's just too risky.
+1:04:17 But only 40% of the financial advisors did that.
+1:04:22 The 60% left them, mostly, in their own company stock.
+1:04:27 Why did they do that?
+1:04:28 Well, Mull and Nathan thought, it's because the advisors know there's cognitive dissonance.
+1:04:33 And they're afraid to drive away a new client.
+1:04:36 Maybe they'll gradually do it over a while.
+1:04:38 But you just don't challenge their deep beliefs.
+1:04:41 Whatever they say is true.
+1:04:44 And so, they're kind of yes men.
+1:04:46 Not all of them.
+1:04:47 And maybe they'll come around.
+1:04:49 It relates then, again, to a moral dilemma.
+1:04:52 If you are a financial advisor working in private practice, what do you do with people who come to you, if you know from experience that challenging their deep-seated beliefs will drive them away.
+1:05:06 So, in the real world, this is again, I'm not sure that these financial advisors are doing the wrong thing.
+1:05:13 If they would eventually tilt them toward a more responsible portfolio, they can't drive them away.
+1:05:21 So, let me list some of the others and move on.
+1:05:35 What else should I talk about?
+1:05:37 Anchoring.
+1:05:38 Anchoring is a principle that people, anchoring refers to a tendency to anchor your opinions on something that captures your attention.
+1:05:59 And so, the famous anchoring experiment by, it was again, Kahneman and Tversky.
+1:06:06 They asked, I could almost do this experiment here in class with you if I had a wheel of fortune.
+1:06:11 A wheel of fortune is like on a game show.
+1:06:14 You spin the wheel, and it comes up with a number between zero and 100 in this particular wheel of fortune.
+1:06:21 So, this is the experiment.
+1:06:22 And so, they asked their subjects, how many people, it had to be something that had an answer from zero to 100.
+1:06:29 One of their questions was, how many nations in the world belong to the United Nations?
+1:06:37 So, they asked the question, don't answer me just yet.
+1:06:40 Think about that question.
+1:06:41 What percent of nations in the world belong to the United Nations?
+1:06:45 Then they spun the wheel, and it came up and it showed a random number.
+1:06:50 And then they asked people for the answer.
+1:06:52 Well, it turns out that people tended to give an answer close to the number that just came up on the wheel.
+1:06:57 This is totally irrational, right?
+1:07:00 That wheel has nothing to do with the answer, and yet people were influenced by it.
+1:07:04 So, then they would follow up and ask them, yeah, that number you gave is the same as the way it just came up on the wheel, or it's close to it.
+1:07:11 Why did you do that?
+1:07:12 The guy would say, just coincidence, I wasn't influenced by the wheel.
+1:07:16 Of course not.
+1:07:17 But you know they were, because statistically, they proved that they were.
+1:07:21 So, anchoring means that people are affected by subconscious things.
+1:07:34 I shouldn't say subconscious.
+1:07:35 They didn't make a logical connection.
+1:07:37 When you face real ambiguity, and you don't know the answer, you've got to come up with a decision.
+1:07:42 You are swayed by the most silly and random things.
+1:07:46 There's the representativeness heuristic.
+1:07:55 This is also Kahneman and Tversky.
+1:07:57 And that is that people overemphasize certain patterns that they think are representative of what they've seen before.
+1:08:07 So, for example, certain patterns in the stock market that may be very rare and unusual.
+1:08:14 If they remember it, if it somehow attracted their attention, they begin to look for that pattern again and again.
+1:08:21 And they see it too often.
+1:08:24 So, for example, head and shoulders.
+1:08:27 We talked about that.
+1:08:28 That McGee, the technical analyst, he saw the head and shoulders pattern in the stock market.
+1:08:35 And he saw that it crashed after that.
+1:08:37 But actually, it's pretty hard to find those.
+1:08:39 They're kind of rare.
+1:08:40 And it's not the right way to process data, to be looking for patterns that are representative.
+1:08:45 And it invites manipulation.
+1:08:47 So, I'll give you some other bad behavior.
+1:08:49 If people believe in the head and shoulders, if they believe that the head and shoulders pattern of stock price movements predicts a decline, here's what I can do.
+1:08:59 I'll take some thinly traded stock.
+1:09:02 I'll get a friend.
+1:09:03 We'll trade back and forth.
+1:09:04 And we'll influence the price to create, we'll deliberately create a head and shoulders pattern.
+1:09:09 OK?
+1:09:10 And then, we'll short the stock massively, right at the time when the head and shoulders pattern would give a
+1:09:16 a cell signal.
+1:09:17 We can make tons of money doing that.
+1:09:19 So, why don't we do that?
+1:09:21 Well, we don't, because it's a manipulation.
+1:09:23 Is this thing off?
+1:09:25 The battery just died.
+1:09:29 I'll talk loud.
+1:09:30 I'm coming to the end.
+1:09:31 Can you hear me through louder talking?
+1:09:35 I wanted to then just conclude with social contagion, because it's so important.
+1:09:44 This is my last.
+1:09:46 And this is really social psychology.
+1:09:51 I'm running out of room here.
+1:09:56 That's social contagion.
+1:09:58 Social psychology reflects on the fact that people are interdependent, and what I think is affected by what other think.
+1:10:07 There's something called herd behavior.
+1:10:14 That's a popular term.
+1:10:16 It refers to the tendency for people to move with the herd.
+1:10:22 Not consciously.
+1:10:23 They don't think that they're moving with the herd.
+1:10:26 I might bring up a little sociology here, and I'll use a term.
+1:10:30 Everything has been psychology, but the great sociologist, one of the founders of the discipline of sociology, was the French scholar Emile Durkheim, at the late 19th, early 20th century.
+1:10:50 He used the word collective consciousness.
+1:11:00 And that is that our opinions about what's happening are formed by a collective understanding of what's going on.
+1:11:10 We think of ourselves, we have a tendency to think of ourselves as rational, and all of our views come from common sense processing of facts.
+1:11:25 And I have a sense of belief about what goes on in the world.
+1:11:28 But I underappreciate the extent to which my views are a little bit arbitrary and shared by millions of other people.
+1:11:38 You live at a certain point in time in history, and there are certain kinds of facts and ideas and anecdotes that are circulating.
+1:11:48 And there's another term that is, there's a zeitgeist.
+1:11:53 That's German, but it's now English.
+1:11:56 That means spirit of the times.
+1:11:59 So, what Durkheim and other sociologists allowed us to understand is that the zeitgeist is determined by a collective memory, a collective set of facts that we operate on.
+1:12:12 And this herd behavior creates big swings in the stock market and other things.
+1:12:19 So, it has huge financial impact.
+1:12:22 But anyway, I've listed a number of behavioral finance principles that really come from psychology.
+1:12:29 And I've talked about some tests or examples of their proof of their importance in psychology, in finance.
+1:12:38 But what do we conclude from this?
+1:12:41 Well, my conclusion is that we are evolving toward better and better financial institutions.
+1:12:54 There is a lot of manipulation and exploitation.
+1:12:58 But we, as a society, have outlawed a lot of things.
+1:13:01 For example, I mentioned that doing a stock market manipulation trick to create a head and shoulders pattern, that is an offense.
+1:13:10 And I'm going to talk about this in the next lecture.
+1:13:11 And I'm going to talk about this in the next lecture about regulation.
+1:13:13 But it's also people's moral judgments that the people who evolve to become important in finance are people who have an internal compass, a desire for praiseworthiness that eliminates this.
+1:13:35 So, I'm going to give you some examples of some recent articles about this.
+1:13:42 In the current issue of the Harvard Business Review that I assume is still on newsstands.
+1:13:52 This is Harvard Business Review.
+1:13:55 There's an article by Michael Porter and co-author Mark Kramer.
+1:14:03 Porter is a well-known professor at Harvard, in which he argues that we're coming to realize more and more about a principle called, he calls it, shared value.
+1:14:17 And that is that the manager of a company is not going to be, shouldn't be underestimating the importance of shared value creation with society, with other people.
+1:14:42 And that is, we're all in this together.
+1:14:49 And if we're mature, we recognize, for example, that I don't want to be exploitative.
+1:14:52 I don't want to make the local people in my town upset with our company.
+1:14:57 I don't want our labor force to become disenchanted.
+1:15:01 Now, what he's saying is not really about morals exactly.
+1:15:05 It's more about long-term value.
+1:15:07 But I guess morals somehow creeps into the same judgment, that mature business people see shared value.
+1:15:16 And that there was maybe less and not enough emphasis on it.
+1:15:20 There was too much financial theory was leading us too much toward thinking that a manager should be selfishly pursuing a narrow focus, like management.
+1:15:30 And that's a little bit of a narrow focus, like maximizing the short-run value of their shares.
+1:15:37 Anyway, the other example I have, which is also recent, not quite as recent as that, is a book that came out last year by Anna Bernicek, who is actually a journalist, not an academic.
+1:15:55 And I'm going to read the book, which is the economics of integrity.
+1:16:02 Is that the title exactly?
+1:16:04 Yes, but economics of integrity.
+1:16:10 And that means, her point in that book is that a sense of personal integrity has dominated what people do in the business world much more than we thought recently.
+1:16:25 There has been too much disregard of the fact that people do things because they're right.
+1:16:33 And that's the point in that book, which is the point in that book, where she gives an example in the book.
+1:16:38 And I'll close with this concept.
+1:16:40 She said, let's consider milk.
+1:16:42 OK?
+1:16:43 Now, you drink milk regularly, I hope.
+1:16:45 It's good for you.
+1:16:46 But it could poison you.
+1:16:49 People used to get sick from drinking contaminated milk.
+1:16:53 And you don't ever hear of anyone getting sick.
+1:16:55 So, she says, why is that?
+1:16:56 Well, we have government regulation of milk production.
+1:16:59 And there are laws about purity of milk.
+1:17:04 But when she looked into it and found that, actually, she didn't think it was mostly the regulation.
+1:17:10 She thought that you are safe drinking milk because of the integrity of our people, mostly.
+1:17:18 That if you go to some milk company and talk to the employees, they may not generally even know about the regulations.
+1:17:26 But if you ask them, they'll tell you, I mean, are you careful to keep this milk clean?
+1:17:31 They'll tell you, well, someone's going to drink this, so obviously it's common sense.
+1:17:35 I'll keep it clean.
+1:17:37 And what she says, it's not primarily the regulation.
+1:17:40 It's the integrity of the people that makes the economic system work as well as it has.
+1:17:46 So, anyway, I've emphasized both sides.
+1:17:48 I've talked about human failings and about people exploiting these failings, about people with antisocial personalities.
+1:17:55 But we have a system that somehow eliminates this from being the major factor in our markets.

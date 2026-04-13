@@ -1,0 +1,1027 @@
+0:00 If you've been building with agents and
+0:02 pushing what you can do with your agent
+0:04 coding tool, you've realized something
+0:06 critical. One agent is not enough.
+0:10 Imagine this. It's the end of 2026 and
+0:13 you've evolved your engineering from a
+0:15 single agent to multiple agents to agent
+0:18 teams. They've been building and
+0:20 learning just like you because you
+0:22 stopped using agents that forget and you
+0:25 started using agent experts. Each agent
+0:29 team you have contains agents that have
+0:31 their own skills, expertise, and domain
+0:35 knowledge, supercharging them so that
+0:37 they outperform any other agent. In
+0:40 fact, you have a few agent teams that
+0:42 are outperforming your co-workers.
+0:44 Engineers, one agent is not enough.
+0:48 Multi- aent orchestration and tools like
+0:50 Clawude Code are the current frontier.
+0:53 But today, I want to show you a system
+0:55 that pushes beyond cloud code. This is
+0:58 multi-team agentic coding. Here we use
+1:02 specialized teams of agents to
+1:05 outperform the normal distribution of
+1:07 results. Now, if you're a cost minmaxer
+1:09 and you care about saving money over
+1:11 getting results, this video is not for
+1:13 you. But if you're an engineer working
+1:15 on mid to large size production code
+1:18 bases, stick around and let's take a
+1:20 peek at the performance gains you can
+1:22 get from multi-team aenta coding. Here
+1:29 we have a customized PI coding agent.
+1:33 We've re-engineered the entire
+1:35 experience so that we're inside of a
+1:37 chat room with our teams of agents.
+1:40 Let's start out simple and then expose
+1:42 the valuable properties this system has.
+1:44 We'll start with my favorite ping. We're
+1:46 talking to our orchestrator. It's given
+1:48 us a classic pingpong response. Let's
+1:51 talk to our team leads. Ping each team
+1:54 lead. Now our orchestrator is going to
+1:57 call every team lead and you can see
+1:59 there our team leads are now responding.
+2:02 Notice here we have a twolayer
+2:04 architecture where we have an
+2:06 orchestrator talking to our team leads.
+2:08 All of our team leads responded and now
+2:10 our orchestrator is composing the
+2:12 results and giving us the final
+2:14 response. Of course in the footer you
+2:15 can see all of our details. We have our
+2:17 orchestrator leads context and total
+2:20 cost summed together. So the
+2:21 orchestrator cost here is the cost of
+2:23 the entire multi-team system. But this
+2:26 goes even deeper. As you saw here in the
+2:29 beginning, these are multiple teams of
+2:32 agents. Let me show you exactly what I
+2:34 mean. Have engineering and present tree
+2:36 structure of the most important files.
+2:38 And so we're delegating directly to our
+2:40 engineering team. So our engineering
+2:42 lead is going to take over. We're at
+2:43 mentioning them. And now engineering is
+2:45 going to do something incredible. It's
+2:47 going to delegate to front-end
+2:49 developer. Our engineering lead tried to
+2:51 access files that it doesn't have
+2:53 permission to. It stepped out of its
+2:55 domain and so it realized this and it
+2:57 delegated to his team members who have
+2:59 the right tools. So this might seem like
+3:01 an annoyance or like a waste of tokens,
+3:04 but this is actually very valuable. The
+3:05 engineering lead prompted the back-end
+3:08 developer and it also prompted the
+3:10 front-end developer for an answer. And
+3:11 so you can see both these agents getting
+3:13 work done here in a chatlike interface.
+3:16 And so what we have here is three tiers
+3:19 of agents. We have our orchestrator, we
+3:21 have our leads, and we have our workers.
+3:24 They both responded to the lead. And now
+3:26 the lead is going to respond to the
+3:28 orchestrator. This is a very, very
+3:30 powerful multi-team orchestration tool.
+3:33 There it is. Engineering nailed it.
+3:34 Here's the rundown. And now our
+3:35 orchestrator is giving us a full
+3:37 breakdown of what's going on. This
+3:39 multi-team tool has advantages already
+3:43 over the normal prompting back and forth
+3:45 experience. If we hit / toggle workers,
+3:49 we can see our actual full team
+3:51 breakdown. We've been conversing with
+3:53 our engineering team and engineering
+3:55 team has looked up files. It's read its
+3:57 context and it's done something
+3:59 incredible as well. If you realize here
+4:01 that out of the box for a simple command
+4:03 like that, the context is actually quite
+4:05 high. You've noticed something really
+4:06 important about this system. Our agents
+4:08 are loading memory files. They're
+4:10 loading their agent expertise. More on
+4:13 that in a moment. If you can see how
+4:14 powerful this system can be, definitely
+4:16 like, subscribe so you let the algorithm
+4:18 know that you're interested in
+4:19 multi-agent orchestration like this.
+4:21 Let's keep pushing this system further.
+4:23 We're operating in a prompt routing
+4:25 codebase. And I can pull up the codebase
+4:27 here. This is a common problem a lot of
+4:28 LLM based applications have. You don't
+4:30 want to pay for intelligence that you
+4:32 don't need. Specifically, when you have
+4:34 thousands and thousands of users running
+4:36 your application that hits agents or
+4:37 hits some LLM at some point, your simple
+4:40 prompts don't need to hit expensive
+4:41 models. For example, you don't want Opus
+4:43 4.6 to run with high reasoning when you
+4:46 can just have Claude IQ respond or
+4:48 Sonnet respond. There's a great
+4:49 breakdown of a highly intelligent model,
+4:52 a medium intelligent model, and a not so
+4:54 intelligent but very cheap model. And we
+4:56 can go even cheaper than this. Of
+4:58 course, there are cheaper, frankly
+4:59 better models than Haiku, but just as an
+5:01 example, this is a common problem you're
+5:03 going to want to solve when building
+5:05 with LLMs. You don't want to pay for
+5:07 intelligence that you don't need. So,
+5:09 what we have here is a prompt complexity
+5:11 classifier. It's very simple and we can
+5:13 run it right now. So, you know, if we
+5:15 open up a terminal inside this codebase
+5:16 and we type J for just, we're of course
+5:18 using just file for quick commands and J
+5:21 is an alias for just to be super clear.
+5:23 We can do just predict summarize this
+5:26 codebase. And now our system should
+5:28 predict that only a medium or a low tier
+5:31 model is needed to satisfy this prompt.
+5:34 If we hit enter here, you can see our
+5:35 classifier running. And you can see our
+5:37 label is medium. There's all the
+5:39 confidences out of 100 or 100%. This
+5:42 type of prompt would route to claude
+5:44 sonnet 4.6 or whatever your medium tier
+5:46 model is set to. So that's the problem
+5:48 and that's what this code base is. But
+5:50 of course, we're not building this. We
+5:52 are having our agents and we're teaching
+5:53 our agents how to build it. And in this
+5:55 case, we actually have an entire agent
+5:57 team that knows how to run this codebase
+5:59 better than anyone. At a previous job, I
+6:01 was a lead data scientist. And I would
+6:03 spend a lot of time building out these
+6:05 classifier models by hand. Now, we can
+6:07 just have agents do it for us. So, I
+6:10 want to showcase one of the advantages
+6:11 of having teams that you work with
+6:13 instead of just individual agents,
+6:15 especially individual one-off agents.
+6:17 So, let's go ahead and ask our teams a
+6:19 question. What we're going to get here
+6:21 is a multi-perspective answer. So I'll
+6:24 say ask all teams what are two
+6:26 additional scikitlearn classifiers. We
+6:28 can test our current classifier against
+6:31 and so once again we're entering that
+6:33 chat pattern always only talking to our
+6:35 orchestrator and then our orchestrator
+6:37 decides who it needs to delegate the
+6:39 work to. I asked a question it thought
+6:41 it's delegating work out to its
+6:43 individual team. So you can see there it
+6:44 wrote the exact same prompt to every
+6:46 single team. It's very important. It's
+6:48 very consistent and we'll showcase how
+6:50 it's able to do that in a moment. The
+6:52 individual team leads have taken over.
+6:54 So we have our planner, we have our
+6:55 engineer, and we have our validator.
+6:56 It's completely up to them whether they
+6:58 decide to delegate additional work. It
+7:00 looks like the engineering lead is
+7:02 delegating work to the backend dev. Our
+7:04 validation lead here has delegated to
+7:06 the security reviewer. QA engineer is
+7:08 there. You can see all the tools that's
+7:10 running. Planning lead is running. So on
+7:12 and so forth. And so these are all going
+7:13 to run and put together all the results.
+7:15 And you can see all the work that each
+7:16 team is doing. You can see the costs and
+7:18 whatnot ticking up. And now they're
+7:20 going to start to compose back their
+7:21 results. So the flow here is
+7:23 orchestrator talks to the leads, leads
+7:25 talk to the workers, and then we get one
+7:27 unified response. We are conversing with
+7:30 our orchestrator and no one else. So
+7:32 this is super super important. Let me
+7:33 point something out here. All three
+7:34 teams weighed in. There's strong
+7:36 consensus. This is what you want to see.
+7:38 Linear SBC calibrated classifier CV
+7:40 unanimous pick across all teams. Digging
+7:43 in further, split recommendation. They
+7:45 both favor compliment NB. engineering
+7:47 prefers SGD classifier and then everyone
+7:50 agreed to skip certain things. This is a
+7:52 chat experience and so one of the key
+7:55 elements of that is that every agent can
+7:57 see the conversation. Not to get too
+7:59 ahead of things here, but if I come to
+8:01 the session ID and I just search for
+8:03 this and I go to the conversation, you
+8:05 can see the entire conversation that's
+8:07 happened so far in a JSON L file, you
+8:09 can see all of the leads and you can see
+8:10 the devs. I point this out just to say
+8:12 that every agent is aware of the
+8:15 conversation happening. And then our
+8:16 orchestrator starting to guide the
+8:18 experience. Want me to have engineering
+8:20 draft and implementation for the
+8:21 benchmark. So let's go ahead and have
+8:22 our team build this out. And I want to
+8:24 utilize the team structure that we've
+8:26 built here to get better results. So how
+8:29 can we do that? Let's do this. I'll say
+8:30 plan engineer and then validate. Make
+8:32 sure to add just commands to test both
+8:36 models. And we'll call it, you know,
+8:37 just prompt both. All right. And then
+8:39 we'll fire that off. So plan engineer
+8:42 and then validate. Our orchestrator
+8:43 agent is going to write out a great
+8:45 detailed plan and then our lead is going
+8:48 to dive into things. So you'll notice
+8:49 here really interesting thing that my
+8:51 plan lead does. It first always gets all
+8:54 the context. We are not afraid to spend
+8:57 to win here. We're not afraid to give
+8:59 our agents all the relevant context they
+9:01 need. And this is something critical we
+9:02 talked about in our previous week's
+9:03 video, the CEO agents. We talked about
+9:06 that key idea of giving your agents more
+9:08 context. use that powerful 1 million
+9:11 context window model inside of your Opus
+9:13 and your Sonnet models so that they have
+9:15 all the information they need to
+9:17 succeed. This is a massive advantage you
+9:19 can be building into now as long as
+9:20 you're not afraid to spend to get the
+9:22 advantage. Something else important here
+9:24 to mention is why am I building and
+9:26 sharing a system like this with you? You
+9:28 always want to be thinking about where
+9:29 the ball is going, not where it is. We
+9:32 have a couple converging trends that are
+9:34 super super important that this
+9:35 application embodies, right? We have
+9:37 incredible intelligence with increasing
+9:40 context windows. Right? We have the new
+9:41 1 million context window here from
+9:43 Claude. This is very very powerful and
+9:45 it unlocks a new frontier of what is
+9:47 possible. And then as you'll see here in
+9:49 a moment, we can specialize our agents
+9:51 even further by making them agent
+9:53 experts. And then we've scaled that idea
+9:55 thanks to a customizable agent coding
+9:58 tool. We are using the PI agent harness
+10:00 to customize this entire experience. So
+10:03 we have powerful contacts windows. We
+10:05 have agents that learn. Let me be super
+10:08 clear about this. As you'll see, every
+10:09 one of these agents, they have a working
+10:11 mental model about how things work. And
+10:13 this grows over time. Every time you run
+10:16 your team, they're all taking notes.
+10:18 They're all building up their mental
+10:19 model. And then they're loading it at
+10:21 the beginning. As you can see here, a
+10:22 lot of read tools happen in the
+10:24 beginning. The the book here represents
+10:25 the read tool calls. And that's because
+10:27 they're always loading the conversation
+10:29 and their own specialized mental model.
+10:32 So we have large context windows coming
+10:34 in at cheaper costs. You're going to
+10:36 have so many tokens available to you.
+10:37 The question is are you using them? Then
+10:39 we have agent expertise. Thanks to the
+10:41 context window, you can really load up
+10:43 the specialization and the memory of
+10:46 every single specialized agent. And then
+10:48 of course we have the pie coding agent,
+10:50 the agent harness. You can build
+10:51 customized agentic experiences. Not just
+10:54 agents, not just teams of agents, but
+10:56 the entire agent harness can be
+10:57 customized when you're using a tool like
+11:00 PI. So, I hope you can see when you
+11:02 stack these things together, we're
+11:03 getting far away from the normal
+11:05 distribution of results.
+11:11 It all starts with the py file. Unlike
+11:14 Claude where you have agents, prompts,
+11:17 skills, so on and so forth. When you're
+11:19 customizing the agent harness, as we
+11:20 mentioned in last week's video, CEO
+11:22 agents, I'll link that in the
+11:23 description for you. You can customize
+11:25 the experience down to the folders, down
+11:27 to the individual files. Everything is
+11:29 customizable here. With that, we've
+11:31 customized the experience to look like
+11:32 this. We have a multi-team config. I
+11:35 really like this configurationbased
+11:37 approach because it means at any point
+11:38 in time, we can just copy our config,
+11:40 change up the teams, and specialize how
+11:42 we need. We have our orchestrator. We're
+11:44 passing in a path to the system prompt
+11:47 of the orchestrator. We'll break that
+11:48 down in a moment. And we have individual
+11:50 teams. If we jump into planning, we have
+11:52 our lead specified. It's just a system
+11:54 prompt and a name. All right. Then we
+11:56 have a couple additional properties.
+11:57 just the team color and then we have the
+11:59 members and we're repeating the pattern.
+12:01 We're giving the path to the system
+12:02 prompt of the agent and this pattern is
+12:04 going to repeat for engineering. You can
+12:06 see there's the engineering team front
+12:08 end backend that I've just copied the
+12:10 kind of default template. Um we don't
+12:12 need a front-end dev for prompt routing.
+12:14 This is a data science backend focused
+12:16 type of codebase but nonetheless we have
+12:18 a front end dev there. We can get rid of
+12:19 that. We can change that whenever we
+12:20 want. Three key nodes of building
+12:22 software planning engineering and
+12:25 validation. So the pattern repeats nice
+12:27 and simple. The whole idea here is I'm
+12:29 setting up reusable, customizable
+12:31 systems that are easy to change and
+12:33 update. That's the configuration file
+12:34 that puts all the teams together. And
+12:36 you can see here we have a couple of key
+12:37 paths where the agents are, where the
+12:39 sessions are, and where some of the logs
+12:41 are. Let's go and open up that
+12:42 orchestrator, right? What does our
+12:43 orchestrator look like inside this
+12:45 system? We have our name, our model. Of
+12:48 course, for the orchestrator, we want to
+12:49 use the best intelligence available so
+12:51 that it coordinates everything properly.
+12:53 And then here we start deviating from
+12:55 the normal out of the box agentic coding
+12:57 experience you're probably used to. We
+12:59 have expertise. Our orchestrator has a
+13:02 mental model of everything that's
+13:04 happened. It has complete control over
+13:05 it. So it's updatable. And we have max
+13:07 lines. We don't want this to grow too
+13:08 big. Frankly, with a million contexts
+13:10 available, this could be much larger,
+13:12 but 10,000 lines is still a ton of
+13:14 context. Here we have skills. You're
+13:16 likely used to this. The interesting
+13:18 thing here is that let's say we open up
+13:19 our engineering lead. Our engineering
+13:22 lead also has zero micromanagement. So
+13:24 you can see the zero micromanagement
+13:26 skill is shared between the orchestrator
+13:28 and all the leads. The whole idea is
+13:30 don't micromanage. Delegate the right
+13:32 work at the right time to the workers.
+13:34 And for the orchestrator, delegate the
+13:36 right work to the individual teams.
+13:38 Okay. So this is very powerful. We are
+13:40 sharing skills when necessary. You can
+13:42 see here we also have a conversational
+13:44 response skill and this is shared
+13:45 between every other agent. If we open up
+13:48 our backend agent here, it does not have
+13:51 that conversational response skill
+13:52 because we want our back-end dev, we
+13:54 want our developers, we want our
+13:55 builders to be very very verbose and
+13:58 very detail oriented. But when we get to
+14:00 our leads and our orchestrator, we don't
+14:02 really need that. We have the tools
+14:03 block here. And you can see the special
+14:05 skill that our orchestrator has is the
+14:07 delegate. And our lead also has delegate
+14:10 because remember this is a three tier
+14:12 architecture. We have an orchestrator,
+14:13 leads, and workers. And then here comes
+14:16 something really powerful. We have
+14:17 domain. So this specifies what the
+14:19 agents can and cannot do and where they
+14:21 can and cannot go. And if you're working
+14:23 in a large codebase, this is very very
+14:26 powerful. Let's look at our planning
+14:27 lead. They have read access to
+14:29 everything. Here's that path. Read
+14:31 update access to the.py directory where
+14:33 they can, you know, look at and write
+14:35 their expertise. They also have full
+14:37 read access to the specs directory,
+14:39 right? Where plans are actually written.
+14:42 But they can't update it. they must
+14:44 delegate that work. As you can see here,
+14:46 zero micromanagement always use this.
+14:48 You're a leader. Delegate, never
+14:50 execute. So the leaders aren't actually
+14:53 doing any raw file changing related work
+14:56 unless it's related to their mental
+14:58 model which is stored in the expertise
+15:00 directory. So this is powerful. Think
+15:02 about what you can do with this. If
+15:03 you're operating a large large codebase,
+15:05 we're talking thousands of files. You
+15:07 can build specific agents that operate
+15:10 specific parts of the codebase. This is
+15:12 a simple example, but my planners, they
+15:15 can read the entire codebase, but they
+15:16 can't change anything. I don't want them
+15:18 to change anything. I want them to
+15:19 create plans. And so, we have this in
+15:21 force. You can imagine this dials right
+15:23 into the Pi hooks system. If you're
+15:25 building out something like this with
+15:26 Claude, although you'll be a lot more
+15:28 limited in what you can do. You could
+15:30 also plug into the Cloud Code hooks
+15:31 capability. Pi has the exact same
+15:33 system. You have a bunch of hooks you
+15:34 can tap into. We detailed this in our Pi
+15:37 versus Cloud Code video. Link in the
+15:39 description, of course. A very
+15:40 specialized experience. This front
+15:42 matter is customuilt. We're building
+15:44 teams and we're building agents that do
+15:46 a couple things, right? So, it has
+15:48 expertise. These agents remember every
+15:50 time this agent boots up, it's going to
+15:52 load from its expertise file. And so, if
+15:55 we hop back to our system, let's see
+15:57 what's going on here. QA engineer is
+15:59 running. Our validation lead is looking
+16:00 at some stuff and the validation is
+16:03 kicking off security reviewer. Security
+16:05 reviewer says, "Ship it no issues." But
+16:06 we can see here our QA engineer has
+16:08 found a couple things. And so super
+16:10 important, we have multiple agents
+16:12 working on these teams and they're going
+16:14 to find different things. They all have
+16:16 different context windows, different
+16:17 perspectives, and if we wanted to, they
+16:19 could all be running different models.
+16:20 So it looks like the keyway engineer has
+16:22 some information that the security
+16:24 validator doesn't. And if we scroll down
+16:25 here, the full life cycle is complete.
+16:28 And the orchestrator has put together
+16:30 the results of the system and
+16:32 communicated to us. To be super clear
+16:34 here, it is running all of these skills
+16:36 that it has, right? The orchestrator
+16:38 knows not to just give me a giant block
+16:40 of text back because it has the
+16:42 conversational response skill. Always
+16:44 use when writing responses. And so our
+16:46 agent gave us a nice, you know,
+16:47 relatively concise summary here. And now
+16:49 we have a next step of course. But we
+16:51 had a whole team run through this
+16:52 workflow planning, engineering, and
+16:54 validating. And so very, very powerful
+16:56 stuff, right? 18 minutes so far, lots of
+16:58 work done. And now we can run train
+17:00 both, we can run prompt both. So we can
+17:02 see how our classifiers are working. Now
+17:08 new terminal window here J you can see
+17:11 we have those new methods that are
+17:13 multi-team agent coding tool built
+17:15 summarize this codebase predict both
+17:17 there you go and you can see the kind of
+17:18 difference between them they both are
+17:19 routing to mid which is good they agree
+17:21 on this and then we can see some
+17:23 individual stats from our individual
+17:25 scikitle learn models right so very
+17:27 powerful stuff we can go ahead and test
+17:28 another prompt to see how they both
+17:29 perform and what we really want is to
+17:31 probably run this eval do you want to
+17:33 run head-to-head email on the hold out
+17:35 data set. So, let's just go ahead and do
+17:36 that. Run head-to-head. Again, we're
+17:39 going to see the power of locking the
+17:41 domain. Our orchestrator can't actually
+17:43 do this work. It knows that. So, it's
+17:45 delegating to engineering. And so, the
+17:46 lead again, lead cannot do work. It is a
+17:49 thinker. It's a planner. It's a
+17:52 coordinator. And so, the lead pass has
+17:54 that to backend. It's going to read what
+17:55 we have and then it's going to run them
+17:56 headtohead. We'll go ahead and let that
+17:58 run and come back to the results in a
+17:59 moment. And the way that you're building
+18:01 your agent decoding system is the edge
+18:03 now. And as I talk about all the time on
+18:05 the channel, we want to increase the
+18:06 trust we have in our agents. And in
+18:07 order to do that, we need specialized
+18:09 experiences and and we want to dial
+18:11 things down to the agent harness. How
+18:13 can you build customized specialized
+18:15 systems that outperform, you know,
+18:17 normal distribution of results everyone
+18:18 else is getting? A great way to do that
+18:20 is to really know how to control the
+18:23 core for context model prompt tools and
+18:25 then orchestrate, right? Scale it. Below
+18:28 here is just a mostly standard system
+18:31 prompt with a couple of key differences.
+18:33 This is the orchestrator system prompt.
+18:35 I am injecting some variables at runtime
+18:37 before the agent loads a system prompt.
+18:40 Right? We have the session directory. We
+18:41 have the conversation log. And then we
+18:43 have the teams. So the teams is coming
+18:45 dynamically in from our YAML file. We
+18:47 have its individual tools. And then I'm
+18:49 also giving the file paths, right? I'm
+18:51 actually loading in the expertise and
+18:53 skills block, right? I'm taking it out
+18:54 of the front matter and I'm placing it
+18:56 inside the system prompt for the agent.
+18:58 Our orchestrator is acutely aware of all
+19:00 the skills it has. You know, it knows
+19:02 how to write mental models. You can see
+19:03 I have a mental model skill for tracking
+19:06 and keeping its mental model updated as
+19:09 well as other things, right? For
+19:10 instance, I have an active listener
+19:12 skill. This is something that you just
+19:13 might not want. You might not want your
+19:14 agent to always read the conversation
+19:17 log before every response. But this is
+19:18 something that I do want in my
+19:20 orchestrator. And in fact, if you just
+19:22 search this, you can see that I have
+19:23 this inside of every team member. Every
+19:25 single team member is, and let me just
+19:27 dial this into this one path here,
+19:29 multi- teamam and agents. You can see we
+19:31 have our 10 agents, all specialized, and
+19:34 they're all active listeners read the
+19:36 conversation log before every response.
+19:38 And so by composing skills like this,
+19:40 we're able to control and quickly modify
+19:42 the capabilities of every single agent
+19:45 because oftent times there's shared
+19:46 capability you want. There could be an
+19:48 agent somewhere that we don't want to
+19:50 always active listen. We want it to be
+19:52 independent and not rely on the current
+19:54 conversation. Easily changeable,
+19:56 modifiable from this multi- teamam agent
+19:58 decoding tool. This is how the system is
+20:01 kind of composed. Of course, we have a
+20:03 skills directory. Nothing really new
+20:05 here. Every one of these skills is
+20:06 modifiable. You can see everything we
+20:08 have there. Some are shared, some are
+20:10 not. We can jump into this is a classic
+20:12 prompt architecture. Nothing really huge
+20:14 to note here. But you can see here this
+20:16 is how agents are keeping track of their
+20:18 mental models instructions personal
+20:20 expertise file when to read when to
+20:22 update how to structure you know an
+20:24 improvement that can be made a
+20:25 customization a specialization you can
+20:28 make to your agents is teaching them
+20:30 exactly how you want them to write their
+20:32 mental models and to keep track of this.
+20:34 You want to be kind of careful here
+20:35 though when you're building agent
+20:36 experts. You don't want to be over rigid
+20:38 about this. Our agents are storing and
+20:40 maintaining their own mental models.
+20:42 They're storing what they think is most
+20:44 relevant to their success and it's going
+20:46 to grow over each session. Again, when
+20:49 we talk about advantages over other
+20:50 systems, every time I boot this up, my
+20:53 agent teams down to the individual
+20:55 workers is going to have a stacking
+20:58 compounding set of memory that's
+21:00 allowing them to specialize further and
+21:02 further and further over and over and
+21:04 over. And so if you're building
+21:05 legitimate production software, this
+21:08 becomes very important to always go
+21:10 through your team because your team is
+21:12 the one accumulating knowledge. This is
+21:14 where domain specifying becomes really
+21:17 really important. For example, like
+21:19 front-end dev, you might have something
+21:20 like this. And of course, your front-end
+21:22 dev can do whatever they need to here.
+21:24 So you might have this and you will
+21:26 probably also want them to be able to
+21:28 read the back end, but never touch it.
+21:30 They can't actually touch this ever. One
+21:32 example there. And of course, we might
+21:33 want the exact opposite thing inside of
+21:36 our backend dev. So, we could paste
+21:38 this. And then we go back and we fix
+21:40 this. And now our backend engineer and
+21:43 our front-end engineer sit next to each
+21:45 other. We can look at these side by side
+21:46 here. And this means that our agents can
+21:49 both read any file that they need to,
+21:51 but our front end can only update and
+21:53 write to the front-end directory,
+21:55 whereas our backend can only write and
+21:57 update and delete from our backend
+21:59 directory. Over time, the specialization
+22:01 becomes more and more important as each
+22:03 member is building up their own mental
+22:05 model of the system. And thanks to the
+22:07 powerful new Claude 1 million true
+22:10 context windows, having expertise like
+22:12 this is more viable than ever. If we hop
+22:14 into the mental model for our back-end
+22:17 developer, it's actually got information
+22:20 stored about its previous codebase that
+22:22 I had it operating in. So, it's
+22:24 remembering all this. I actually need to
+22:26 get rid of this and tune the mental
+22:27 model. Uh there's an application that
+22:28 it's tracking in its mental model. Its
+22:30 mental model is 5,000 tokens and this is
+22:32 very powerful. Last explorer there's a
+22:34 session and it's just keeping track of
+22:36 not detailed specific information just
+22:39 highle information about what's going
+22:40 on. It's referencing the specs missing
+22:42 infrastructure key risks backend
+22:44 patterns it noticed security stuff
+22:46 testing so on and so forth. And so it's
+22:48 just maintaining this on its own. I
+22:50 don't do anything with this. I don't
+22:51 touch this. And that's uh one of the key
+22:54 ideas with the mental model. You can't
+22:56 have your fingers on everything. And
+22:57 this is, you know, the journey that
+22:59 every engineer needs to make as they
+23:01 move toward becoming an agentic
+23:02 engineer. You have to let go. You have
+23:04 to teach your agents to operate as you
+23:06 would. The mental model is one of the
+23:08 greatest examples of this. You can give
+23:10 guidelines on how they should be
+23:12 building great mental models. We have
+23:14 that in our mental model skill, but
+23:16 we're not going much further than that.
+23:18 Right? This skill is only 77 lines long.
+23:20 And we're letting them maintain and
+23:22 update this on their own. That's
+23:24 expertise. That's our specialized
+23:26 agents. This is the system prompt that's
+23:28 loading into every single agent. We have
+23:30 skills. We have our configuration file.
+23:32 And we also have session. So, this is a
+23:34 really important idea. Let's go ahead
+23:35 and pull the session ID from this agent
+23:37 and just pull up the conversation log
+23:39 like we had before. You can see here
+23:41 we're also storing all of the tool calls
+23:43 for every single team. We're also
+23:45 storing the starting system prompt just
+23:47 so it's super super clear. We can jump
+23:49 into our backend dev here and we can see
+23:52 exactly what a system prompt looks like
+23:54 with everything templated in full
+23:56 control. You can see super super simple,
+23:58 super concise. By placing this
+23:59 information in the system prompt, it is
+24:01 strongly adhering to this information.
+24:04 We are really detailing and controlling
+24:06 the core 4 down to the system prompt
+24:08 level. This is complete customization.
+24:10 If we hop back to our results here, our
+24:12 backend dev did the work. It
+24:14 communicated back to the lead and here
+24:16 it's handing the results back to the
+24:17 orchestrator. We can see the results for
+24:19 our V1, our LR, and our new classifier
+24:22 here. All the results were written into
+24:24 the session. This session directory is
+24:25 really important so that there's just a
+24:27 shared space for agents to operate on
+24:30 whatever work they're doing. We should
+24:31 be able to find head-to-head. There's
+24:32 the results and we can see the work that
+24:34 our multi- aent teams put together for
+24:36 us. You can see here we're running our
+24:38 original LR model against compliment and
+24:40 B and we have our accuracy across. The
+24:43 most important part about this
+24:44 classifier system, you know, jumping
+24:45 into the individual problem itself is
+24:47 that whenever we need a high
+24:49 intelligence model, we want our
+24:50 classifier to be more biased toward
+24:52 that. It's a much worse problem if you
+24:54 predicted a medium or low intelligence
+24:57 model when you really need it high,
+24:58 right? That's just a bad user
+25:00 experience. It's a bad customer
+25:01 experience. So, we've fine-tuned the
+25:04 experience to make sure that things are
+25:06 pushed to high as a safe default. So,
+25:09 we're always pushing to our high, more
+25:11 expensive model for the customer
+25:13 experience. Based on the financials of
+25:14 your business, you might change that a
+25:16 little bit to veer toward mid, hopefully
+25:18 not low. That's kind of the details of
+25:19 how I would build out a prompt routing
+25:21 system and how I have built out some
+25:23 prompt writing systems in the past. As
+25:25 you've seen here, there are many things,
+25:27 there are many dimensions you can
+25:28 specialize on. Not only are we
+25:30 specializing individual agents, anyone
+25:32 can do this with cloud code via sub
+25:33 aents, we've actually built specialized
+25:35 teams. Every team has this domain and
+25:38 then we're having a single interface
+25:40 orchestrator so that our cognitive input
+25:42 into the system right your effort it
+25:45 doesn't need to increase as you increase
+25:47 the total number of specialized agents
+25:49 there's a huge problem of customization
+25:51 unless you build it right and I think
+25:52 this chatlike interface is the right way
+25:55 to build it because here we have
+25:56 delegation pattern where it all starts
+25:58 with the orchestrator right you are just
+26:00 talking to the orchestrator and then the
+26:01 orchestrator delegates to the teams and
+26:03 the teams delegate to their workers by
+26:06 Doing this, every team focuses on their
+26:08 specialty and every team is
+26:10 fine-tunable. Of course, you can see
+26:12 here I have all of my leads as a more
+26:15 powerful opus model and the workers are
+26:17 sonnet models. You could play with this,
+26:19 you could tune this however you like,
+26:20 but you can see the pattern very
+26:21 clearly, right? You want your thinkers,
+26:23 your orchestrator level, and your lead
+26:25 agents to be as smart as they possibly
+26:27 can. And then your workers, you can dial
+26:29 down. They just need to follow
+26:30 instructions and execute. Of course, if
+26:32 you're going all out, you'll make
+26:34 everything the top best possible model.
+26:36 I think a really important piece of this
+26:37 is the 1 million context window model.
+26:39 My backend dev's doing a lot of work did
+26:40 get past 100k tokens spent and this will
+26:43 just continue as knowledge and domain
+26:45 expertise stacks up in the code base.
+26:48 Nice part here is you know whenever you
+26:50 want to you can just prune a team or a
+26:53 member or you can add a team. It really
+26:55 is as simple as updating the
+26:57 configuration file. Let me just quickly
+26:58 showcase that. we can just very quickly
+27:01 kill this team, hop back into the
+27:02 terminal, fire up the app teams, and now
+27:05 it's just planning and engineering. No
+27:06 validation. Super powerful trend here on
+27:08 the channel. I really like to focus on
+27:10 the idea of moving where the ball is
+27:12 going, not where it is. We have a lot of
+27:15 very powerful tailwind wins available,
+27:17 but they're not accessible if you're
+27:19 doing what everyone else is doing. Let
+27:21 me share a few next generation ideas and
+27:24 ways that I will be and already am
+27:26 pushing multi- aent teams like this.
+27:28 Once you build an opinionated structure
+27:30 like this, the next thing to do is build
+27:32 a meta agent or meta team that helps you
+27:34 quickly fine-tune and improve the team.
+27:37 With the system, you can build out
+27:39 powerful things like teambased
+27:41 custom/comands aka skills. It's also
+27:43 called skills. There's so many names for
+27:45 just prompt, it's annoying. You can
+27:46 build out these prompts, these workflows
+27:49 with your teams in mind. You know, a
+27:51 classic one is like plan, build,
+27:53 validate. Like one of the oldest
+27:55 workflows known to agentic engineers.
+27:56 You have a plan, you build and you
+27:58 validate just like how we wrote except
+27:59 as a reusable prompt. You can start
+28:01 really really stacking this up and
+28:03 getting massive advantages with a system
+28:04 like this. Another idea here is a lot of
+28:07 the value of the system comes from your
+28:09 agents stacking up knowledge over time.
+28:11 So our engineering lead for instance has
+28:13 its own mental model and so really
+28:16 fine-tuning the mental model and the
+28:18 mental model skill to properly track
+28:21 results in your system is going to be
+28:23 really important. You may have noticed
+28:24 here expertise is a list. So we can also
+28:28 do something like this. If you have
+28:29 highly opinionated knowledge you need to
+28:31 add to your database migration agent or
+28:34 your billing agent. It's a really really
+28:37 important thing to have specialized.
+28:38 There's specific context. You don't want
+28:40 anyone to mess it up. So you can build
+28:42 out additional expertise that's not
+28:44 updatable. Talking about that billing
+28:45 use case, billing workflow blah blah
+28:48 blah. All this context is specializable.
+28:50 This would create a read only memory
+28:53 file of expertise that only your billing
+28:56 agent would have. This is one example.
+28:58 But again, expertise super super
+29:00 important. Billing, migrations, DevOps,
+29:03 deploying. These are all great examples
+29:05 of specialized engineering. You don't
+29:07 want a generic agent doing this stuff.
+29:09 You want an agent that has experience,
+29:11 that has expertise doing this over and
+29:13 over and over, just like you would trust
+29:15 someone, an engineer on your team who
+29:16 you know has done it, right? It's the
+29:19 same concept. Really locking in the
+29:20 expertise is going to be a massive
+29:22 advantage for engineers that are able to
+29:24 unlock it and for engineers that
+29:26 understand why agent experts will always
+29:29 outperform a generic agent. Skills very
+29:32 very clear why this is important. It's
+29:34 not a secret to anyone. Specialized
+29:36 tools obviously very important. You can
+29:38 see how much power we've added to the
+29:40 system with just one tool. Delegate. And
+29:43 then of course domain locking. You might
+29:45 have a configuration file agent or again
+29:47 probably better example DevOps agent. No
+29:49 one should be touching the DevOps files
+29:52 and folders except the DevOps agent.
+29:54 This is like the holy grail of operating
+29:57 mid to largeiz code bases with these
+29:59 powerful agents that are continuing to
+30:01 get smarter, more intelligent while the
+30:04 token cost is coming down. I know a lot
+30:06 of engineers are going to watch this and
+30:08 it always annoys me, frankly. They're
+30:09 going to watch this and they're going to
+30:11 see, "Oh my god, $8 for this agent team.
+30:14 You're wasting time in tokens
+30:16 communicating between these agents.
+30:17 You're thinking about right now. You're
+30:19 not thinking far enough into the future.
+30:22 Models will improve. Costs are going
+30:24 down. Tokens are going to be available
+30:26 to you at insane volumes. I think about
+30:29 this all the time. I'm not spending
+30:31 enough tokens. You are not spending
+30:32 enough tokens. And you are wasting time
+30:34 doing things the old way. And now the
+30:36 old way is one aent decoding tool in the
+30:40 terminal prompting back and forth. I
+30:42 really really highly recommend you push
+30:43 yourself to spend more tokens to do more
+30:46 work with agents. This is the greatest
+30:48 opportunity that has ever existed for us
+30:51 engineers. And now the only question is
+30:54 can you agentic code? Can you agentic
+30:57 engineer? Can you build systems that
+31:00 build systems on your behalf? This is
+31:02 yet another powerful agentic opportunity
+31:05 available to you if you want to tap into
+31:07 it. This is not a public codebase. I am
+31:10 sharing this exclusively with tactical
+31:12 agentic coding and agentic horizon
+31:14 members. This is the second of three
+31:17 next generation multi- aent applications
+31:19 and code bases I'll be sharing with
+31:21 Agentic Horizon members. So let me just
+31:23 quick break this down as I did last
+31:25 week. Tactical agenda coding is my take
+31:27 on how to scale far beyond AI coding and
+31:29 vibe coding with Agentic Engineering so
+31:32 powerful your codebase runs itself. I
+31:34 don't receive any sponsorships. I've
+31:36 been given plenty of opportunity to do
+31:38 so. All I sell on this channel is
+31:40 handcrafted courses I built, which
+31:43 frankly these take uh years to build to
+31:45 like have the knowledge and the
+31:46 presentation abilities to even
+31:48 communicate these ideas. I take them all
+31:49 and I give them to you in these
+31:51 individual courses. So that's all I sell
+31:53 on this channel. If you want to support,
+31:55 if you like the ideas, take this course
+31:57 and get ahead of the pack. A lot of what
+31:59 you're seeing in the industry, we have
+32:00 covered already in this course. And
+32:02 there's information and patterns in this
+32:04 course that has not been covered in the
+32:06 industry at all yet. This is for
+32:08 engineers that ship. AI coding is not
+32:10 enough. You want to be building systems
+32:12 that build systems for you. This is the
+32:14 true gift of agentic coding. All right?
+32:17 You can compound your advantage by
+32:19 building agentic systems that then build
+32:21 your application, test your application,
+32:23 validate your application, plan on your
+32:25 application, so on and so forth. Right?
+32:26 If you're using agents on a daily basis,
+32:28 this course was made for you. We talk
+32:30 about templating or engineering and
+32:32 scaling the core forward to their
+32:33 absolute maximum. Let me be super clear
+32:35 about this. There are two courses in
+32:37 this if you want to gain access to the
+32:39 multi-team agent coding tool and last
+32:41 week's CEO agents multi- aent codebase
+32:45 where we use many agents and lots of
+32:47 compute to help us make strategic
+32:48 decisions. These are available for
+32:50 agentic horizon members. So you need
+32:52 both courses to gain access but I
+32:54 guarantee you it's going to be worth it.
+32:55 There's a lot of valuable powerful ideas
+32:57 we talk about. We go through eight
+32:58 tactics of agent coding. We build a
+33:00 system that builds a system. No AGI, no
+33:03 ASI BS. It's just boots on the ground
+33:05 engineering with agents. All right.
+33:06 Inside of Agentic Horizon, we push all
+33:08 the ideas further. The most important
+33:10 one is building agentic layers. And as
+33:13 mentioned today, agent experts for
+33:16 anyone who's hesitant or not sure or
+33:18 maybe this is the first time you're
+33:18 watching one of my videos. I only want
+33:21 you in this course if it's for you. For
+33:23 that reason, I have a no questions asked
+33:25 30-day refund before you start lesson 4.
+33:28 So, hop in here, get your edge. I'm
+33:30 going to have these code bases available
+33:32 for Agentic Horizon members. Phase three
+33:35 is coming soon. So, make sure you
+33:36 understand everything that's available
+33:38 to you right now in phase 2 in the age
+33:41 of agents. Many, many lessons in here
+33:44 breaking down lots of ideas you've
+33:45 already seen in the industry. That's
+33:47 enough for now on this. Again, link will
+33:49 be in the description for you if you're
+33:51 interested. The name of the game in 2026
+33:55 is trust and scale. What can you do with
+33:57 your agentic coding tools and your
+34:00 agentic systems to increase the trust
+34:02 you have in your agents to such a high
+34:04 level that you know they will ship the
+34:06 result when you hit enter on the prompt.
+34:08 After you do that, you scale it. How big
+34:11 can you go? How surgical can your agents
+34:14 be? Agents with specialized expertise
+34:16 that builds over time will play a
+34:18 critical role here. This isn't just claw
+34:21 capturing memory with everything you've
+34:23 ever said to it over years. That's not
+34:25 going to go well. What is going to go
+34:26 well is specialized agents that have
+34:29 specific purposes and growing context
+34:31 windows and increasing intelligence that
+34:33 you have learned to specialize in your
+34:35 agent harness. More tools like this will
+34:37 emerge but the ideas will be there and
+34:40 then the question becomes do you know
+34:42 how to build agent experts and then can
+34:45 you build teams of experts that operate
+34:48 autonomously on your behalf? No matter
+34:51 what, stay focused and keep building.

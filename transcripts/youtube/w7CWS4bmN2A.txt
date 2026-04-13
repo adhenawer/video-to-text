@@ -1,0 +1,905 @@
+0:00 This is, at least to the best of my
+0:03 knowledge, arguably
+0:06 the biggest,
+0:08 potentially most costly
+0:12 source code leak that I'm aware of
+0:18 ever. It's that big. This isn't you
+0:22 accidentally leaked a couple source
+0:24 files. This isn't that you accidentally
+0:26 leaked a couple passwords.
+0:29 You leaked the entire source code of
+0:35 arguably a multibillion dollar product.
+0:43 Okay, so first what actually
+0:47 was leaked? To the best of our
+0:50 knowledge, it's this Claude code web
+0:52 source. And in particular,
+0:57 the reason why I'm drawing a clear
+0:59 distinction here on
+1:02 the web source is it's entirely possible
+1:04 that there's a large body of source code
+1:08 that is not related to their TypeScript,
+1:12 JavaScript that was not potentially in
+1:16 what was leaked, that is still
+1:20 uh completely under anthropics control
+1:24 and it wasn't part of this. One of the
+1:27 first questions that people are asking
+1:28 about this is if it was intentional
+1:33 and I think it's sort of a reasonable
+1:36 question given that there's a lot of
+1:39 hype happening in the AI space right now
+1:44 and it's unclear whether or not people
+1:46 are doing sort of publicity stunts.
+1:49 Could this be a p publicity stunt and
+1:52 Anthropic is sort of just farming all of
+1:55 us? My take on this is it's absolutely
+2:00 not a publicity stunt. It absolutely was
+2:03 not intentional
+2:04 and there are some very specific reasons
+2:07 for this. A big reason is that this leak
+2:11 is actually hurting Anthropic in a
+2:15 variety of ways. Some of the details
+2:17 that are emerging are not things that I
+2:21 think work to anthropics advantage.
+2:25 To the best of our knowledge, it appears
+2:27 to be a
+2:30 npm registry mistake in a single line.
+2:34 The crux of the problem is it appears
+2:37 that they
+2:40 left a flag on which is quite useful for
+2:44 debugging in tracking down and
+2:47 connecting all the various source code
+2:51 but they did that for production. And
+2:54 what this essentially allows people to
+2:55 do is very easily map the source code
+3:00 that's through their web client to the
+3:03 actual original source code files and
+3:06 reassemble
+3:08 the project which many people have done.
+3:11 Now the next question that people appear
+3:14 to have is is this leak going to hurt
+3:17 Anthropic? Uh yes. It's my strong
+3:21 suspicion that this is going to hurt
+3:23 Anthropic quite a bit. On top of that,
+3:26 because the source code has been
+3:27 released uh at Merly, one of the things
+3:30 that we've done is we've already done a
+3:34 deep analysis of the source code. And
+3:37 you can see here, this is what mentor is
+3:41 reporting on in terms of the quality of
+3:45 the source code for
+3:47 cloud code. absolutely dark. And that's
+3:50 actually maybe the the closing point
+3:53 that I want to add on the damage that's
+3:56 being done
+3:58 for a normal company that's an AI
+4:00 company doing coding. I'm not sure that
+4:04 the damage would be too tremendous. I
+4:06 think it's probably still somewhat
+4:08 catastrophic whoever does this. But in
+4:11 particular, Anthropic has been
+4:12 positioning themselves as a company
+4:14 that's very security-minded.
+4:18 They are trying to level up to be the
+4:22 enterprise customer AI solution. And one
+4:29 of the things that tends to be very
+4:30 important for enterprise customers is
+4:34 security. It's a top concern.
+4:38 accidentally leaking the entire source
+4:41 code for one of your premier
+4:44 billion-dollar products is probably not
+4:47 instilling confidence in any enterprise
+4:50 customer. Moreover, if it was a
+4:53 publicity stunt, most of the enterprise
+4:57 customers that I'm aware of wouldn't
+5:02 play a game like this. They're far too
+5:05 serious about ensuring their reputation
+5:08 is strong and people don't see them as
+5:13 sort of lz fair and these are companies
+5:17 like Google and Microsoft and Amazon,
+5:22 Oracle.
+5:24 just go through the list of maybe the
+5:26 Fortune 100 companies and
+5:30 they're
+5:32 generally at least to my knowledge not
+5:34 pulling publicity stunts of this
+5:37 magnitude I if it were and again it's my
+5:41 strong conviction at this point that
+5:42 it's not for many of the reasons that
+5:46 we're going to get into. So the first
+5:48 reason is we're going to take a quick
+5:51 look at some of the things that people
+5:52 have learned about the source code and
+5:54 some of that is pretty damning for
+5:58 anthropic. The second is because we have
+6:00 their source code out we did a quick
+6:04 analysis of it with mentor and you can
+6:06 see that the quality of the source code
+6:08 is
+6:10 uh it can be improved quite a bit. This
+6:12 is
+6:14 not the type of quality you would expect
+6:18 from like a world-class institution
+6:22 with uh nearly 17,000 issues in a source
+6:27 that's less than half a million lines of
+6:30 code. Yes, it it's actually their source
+6:33 code.
+6:34 Uh
+6:36 yeah, you can. So we can click into this
+6:40 and you can just start going through
+6:43 here. Let's just sort this by lines of
+6:45 code. So these are the actual source
+6:49 files.
+6:52 So it's we're not just talking about
+6:54 prompts, we're talking about actual code
+6:59 that is driving their system. to the
+7:03 best of our knowledge is
+7:06 uh essentially the entire source for
+7:10 their web system
+7:13 again the cloud code web source and that
+7:17 doesn't mean necessarily all the cloud
+7:19 code it also doesn't mean the models and
+7:22 that's very important so I don't think
+7:24 that part was actually leaked and then
+7:27 the last piece as dark is mentioning the
+7:31 reputational damage that
+7:35 for all intended purposes this is a
+7:39 sophomoric mistake. This is a very
+7:43 this is something that most buttoned up
+7:47 engineering
+7:48 enterprises
+7:50 just wouldn't do because they have sort
+7:54 of rigorous processes that they go
+7:56 through. There's very clear divides
+7:58 between their debugging environment,
+8:00 their staging environment, their
+8:02 deployment environment. Even we have
+8:04 these things at Merly and we're a super
+8:07 tiny company. So the fact that this type
+8:10 of thing could happen for Anthropic, I
+8:13 think sends a really interesting signal
+8:16 on the AIS are doing all of their code.
+8:19 That could be the case. And I would
+8:21 consider the node package manager
+8:25 registry file to be related to source
+8:28 code and therefore this could very well
+8:31 be that their AI itself forgot to manage
+8:34 this properly. Now, that part we don't
+8:36 know. But what we do know is that
+8:39 Anthropic has been leaning in heavily to
+8:41 how AIs are going to essentially be
+8:45 writing all the code and they kind of
+8:47 are moving into this autonomous state
+8:49 where they don't need human supervision
+8:52 and I think this is a very strong
+8:54 argument against that. I'm all for the
+8:57 use of coding assistance. In fact,
+9:00 that's principally what Merly is about.
+9:03 Merly is an AI
+9:06 company that's building systems that can
+9:09 help accelerate human productivity. But
+9:13 I'm not for a future where the AIs are
+9:18 doing all of the work for us. And at
+9:22 least not today. Uh maybe
+9:26 in a few years we might get to that
+9:28 point, but it seems pretty clear to me
+9:31 based on the data I have right in front
+9:34 of me that we haven't reached that point
+9:37 today. Otherwise, this leak doesn't
+9:40 happen. One of the things about GTT is
+9:43 we try not to be sensational. We try to
+9:45 be very measured.
+9:47 And so I'm trying my best to do that.
+9:49 There's a lot of people that are taking
+9:51 to the social media and making a
+9:56 spectacle about this or overhyping this.
+10:00 I'm going to try my best to not do this,
+10:02 but I do want to share with you that
+10:05 this is at least to the best of my
+10:08 knowledge, arguably
+10:11 the biggest
+10:13 potentially most costly
+10:17 source code leak
+10:19 that I'm aware of
+10:23 ever.
+10:27 It's that big. This isn't you
+10:30 accidentally leaked a couple source
+10:33 files. This isn't that you accidentally
+10:35 leaked a couple passwords.
+10:38 You leaked the entire source code of
+10:42 well the web source code of
+10:47 arguably a multibillion dollar product
+10:51 which Anthropic I think was leaning in
+10:54 on as the premier product for their
+10:57 company.
+11:00 So, the severity of this can't really be
+11:06 overstated.
+11:08 It It can't be because it's so big. No.
+11:12 So, exactly. And let's let's actually
+11:15 get into that. Uh Po,
+11:18 this will this will actually be a really
+11:20 good segue for us to get into why this
+11:22 is such a big deal and why it's not just
+11:26 leaking the front-end UI, which in some
+11:30 cases, you know, in some sense what PO
+11:33 is pointing out is really not that big
+11:35 of a deal, right? If if it's just the
+11:38 JavaScript or the TypeScript,
+11:41 what's the big deal? because you can
+11:43 just go to the website, rightclick on
+11:45 it, and you can get the source and then
+11:47 with some amount of work, you could
+11:49 probably assemble all of this. And
+11:50 that's that's absolutely true. But
+11:52 there's some very important things that
+11:55 I want us to look at that will hopefully
+11:58 paint a very different picture for you.
+12:02 Now before I get into this, I want to
+12:04 again say that many of the observations
+12:08 or the claims have not been fully
+12:10 verified.
+12:13 We need to understand that a lot of this
+12:15 is in that alleged space and I
+12:18 personally haven't verified all of the
+12:21 facts yet because there's just too much
+12:23 to go through. But I have been able to
+12:26 piece together the highle story. And one
+12:29 of maybe the most interesting pieces
+12:31 that I found is this ex article that I'm
+12:37 going to drop in the chat that you can
+12:40 bring up. And I recommend that you you
+12:43 bring it up, you save it, and
+12:49 you
+12:51 deeply read what this individual has to
+12:55 say. So let's quickly go through this to
+12:58 try to get at the heart of Po's
+13:00 question, which I think is an
+13:01 outstanding question on why is this such
+13:04 a big deal if it's just the front-end
+13:06 UI. The first is because you have the
+13:10 node package manager registry
+13:13 leaked, you can reassemble the project
+13:16 which allows you to very quickly put all
+13:19 the pieces together. So then you can
+13:21 start to logically reason about them as
+13:23 a system. Whereas as they are if they're
+13:27 separated
+13:29 as they tend to be just on viewing the
+13:31 source, it can be really hard to uh put
+13:34 all the pieces together. It's not to say
+13:36 that it can't be done. It can be, but
+13:39 it's potentially just a lot of work. And
+13:41 that piece is basically done for us. The
+13:44 other thing that makes this pretty
+13:46 incredible is it's done for us without
+13:48 any speculation.
+13:50 There's absolutely no speculation on if
+13:53 this all pieces together the right way.
+13:55 Now, this individual basically went
+13:57 through the entire uh leaked source
+14:02 against his billions of tokens in his
+14:04 agent logs using claude code to make a
+14:08 bunch of very important observations.
+14:11 Some of these I think are particularly
+14:15 damning. There is an employeeonly
+14:18 verification gate. He says this is this
+14:21 one's going to make a lot of people
+14:22 angry. You ask the agent to get edit
+14:24 three files. It does. It says done with
+14:26 enthusiasm blah blah blah. And then when
+14:28 you open that with your project, it has
+14:30 40 errors. Why? So he says, well, the
+14:34 reason why is in this file and you can
+14:36 go into this file and look at this given
+14:38 now that we have the full assembly of
+14:40 all of this. And we see that the agent
+14:43 success metric for a file write is
+14:46 exactly one thing. Did it complete the
+14:48 write?
+14:50 That's it.
+14:53 Not is the code correct, does the code
+14:56 compile, did I introduce any errors, all
+14:58 it is is a verification that a right
+15:01 operation to the disk happened.
+15:10 Uh,
+15:12 that's not super wonderful.
+15:15 But now it gets even more interesting is
+15:18 that in the source code allegedly there
+15:21 are explicit instructions telling the
+15:24 agent to verify the work as long as the
+15:28 user type is ant.
+15:33 Ant is short for anthropic employee.
+15:40 This means that anthropic employees get
+15:44 a postedit verification that normal
+15:48 users, you and me, don't get. On top of
+15:52 that, their own internal comment
+15:55 document
+15:57 mentions that there is a 29 to 30% false
+16:01 claims rate on the current model.
+16:04 basically saying that they know the code
+16:08 that it's going to provide is likely
+16:11 going to have a 30% error rate, meaning
+16:17 three out of every 10 code suggestions
+16:21 are going to be flawed. And they have
+16:23 the potential to fix these things, but
+16:27 they stop the model short of it if you
+16:30 are not of user type anthropic.
+16:35 The good news is
+16:37 because we're aware of this now, our
+16:39 friend here made some edits and now we
+16:42 can all benefit from this because we can
+16:45 start using this new
+16:48 uh readme file, this new MD file that's
+16:51 going to bypass many of these things
+16:55 that he found. And this actually gets
+16:57 into one of the things we're going to
+16:59 talk about later on, which I think many
+17:01 of you that have decided to join the
+17:03 stream are going to absolutely love,
+17:05 which is are there any good outcomes of
+17:08 this? Yes, there are. Because now that
+17:12 we understand how we've been rate
+17:14 limited and we've been uh regulated, we
+17:19 can remove those rate limits and it's
+17:22 done with this guy's post. And I do use
+17:25 cloud code and I intend to try them out
+17:28 immediately. I'll probably look at them
+17:31 later tonight or tomorrow. So, but many
+17:35 people have already commented on X that
+17:37 they've used his updated file to address
+17:41 many of the things that he's found and
+17:42 the results supposedly are pretty
+17:44 staggering in a very positive way. So,
+17:48 while this may seem like this is all a
+17:51 bad thing and also this is just a bunch
+17:54 of hype, there's actually some really
+17:56 really good things that are happening,
+17:58 not necessarily for anthropic, but for
+18:01 claw code users like me. And that's
+18:05 that's fantastic. Now, keep in mind this
+18:08 is part of the reason why I'm pretty
+18:10 sure that Anthropic did not mean to
+18:12 intentionally leak this because this
+18:15 information right here
+18:18 that the effort that they're making to
+18:21 conclude that a task is done
+18:24 specifically related to code is
+18:27 gone only as far as a write operation to
+18:30 disk.
+18:32 That is literally the least amount of
+18:35 verification that you can probably do.
+18:38 And again, what's frustrating about this
+18:41 is they know that it has errors. They
+18:46 can do the additional leveling up. It's
+18:48 in the code to do this,
+18:52 but they're just limiting it to their
+18:55 anthropic employees. And this is their
+18:57 own code. So, this isn't pretend. This
+18:59 isn't like we're inventing this uh
+19:04 conspiracy theory. It's from anthropic.
+19:08 By the way, this is also like super
+19:10 lazy. I mean, your enumeration for user
+19:13 types is a string, not an actual enume.
+19:16 This is if this is a sign of the things
+19:20 to come. I'm not trying to be a jerk
+19:23 here, but the undergrads that I teach
+19:26 know how to code better than this.
+19:29 Okay, so there's our first issue.
+19:34 The second issue is as
+19:37 cloud code is working, it gets into this
+19:41 context death spiral and it starts to
+19:45 essentially
+19:47 degrade in quality the more that
+19:52 uh the system moves forward.
+19:55 And in particular, it's not just that it
+19:58 degrades in quality. There are some very
+20:01 specific hard limits that are embedded
+20:05 in the code. it's designed to cap itself
+20:10 out. That it's not necessarily a cap out
+20:14 in the sense that it's a technological
+20:17 limitation, but rather an intentional
+20:22 reduction of context awareness,
+20:26 making these hardline decisions and
+20:28 essentially discarding a lot of things.
+20:32 Again, not because it has to, but
+20:35 because it's deciding that there's some
+20:39 context that's reached that it decides
+20:41 that this is
+20:45 going to be too much work and we are
+20:48 going to
+20:51 take the shortcut.
+20:53 So, let's read a little bit more the
+20:55 tricky part. Dirty, sloppy, vivecodated
+20:57 base accelerates this. And this is true
+21:00 that the more
+21:03 Just to be clear, when we're talking
+21:05 about vibe coding and coding assistance,
+21:08 in my mind, I see them as two totally
+21:09 different things. Vibe coding in my mind
+21:12 is you are you're one of those people
+21:15 that's doing 10,000 lines of code a day.
+21:17 You have kind of no idea what actually
+21:19 exists in your system. You probably
+21:22 don't even care. But the problem with
+21:25 that is this is a growing body of logic
+21:29 and
+21:31 spaghetti that something has to reason
+21:34 about and so you should care. One of the
+21:38 goals in writing production quality code
+21:40 is reduction of size. You want to keep
+21:43 your code base as small as possible. You
+21:47 want to minimize it. So you have a
+21:50 smaller surface area of vulnerability.
+21:52 you have more modularity. You don't want
+21:55 to have uh copy pasted code. This these
+21:57 are just sort of like CS 101 things.
+22:00 This isn't I'm not saying anything
+22:02 earthshattering here. But if you go down
+22:05 that sloppy path of just vibe coding
+22:08 hell where you're writing 10,000 lines
+22:11 of code a day and somehow that's like a
+22:13 good thing because you're bragging about
+22:15 it on X. What you're likely doing is
+22:19 you're ex you're expediting this context
+22:22 death spiral for clawed code and you're
+22:25 ultimately actually just hurting
+22:27 yourself.
+22:28 you're making your life suck more
+22:31 because
+22:33 these systems are going to have more to
+22:35 reason about and they're likely going to
+22:37 hit these context limits and then the
+22:39 quality the subsequent quality of the
+22:42 code that it's writing is going to
+22:45 progressively get worse
+22:48 obviously.
+22:50 So more of an argument to not vibe code
+22:54 yourself into this death spiral. I want
+22:58 to be super clear. What I'm saying here
+23:00 is use coding assistance
+23:03 like crazy, but
+23:06 maintain the code, understand the code,
+23:09 reason about it, do mitigation steps to
+23:12 reduce the size of the code, make sure
+23:15 that the code is correct. you know, like
+23:17 go out of your way to ensure
+23:21 verification and quality
+23:25 because ultimately what will happen if
+23:27 you want to make this project production
+23:29 quality, the quality will likely become
+23:32 the limiter. It's not going to be the
+23:34 speed of any particular day as the
+23:37 limiter. It's going to be the quality
+23:39 that doesn't exist in your code. And now
+23:42 on top of that, you have the AI systems
+23:45 that can't reason about it because
+23:46 there's so much garbage. In some sense,
+23:48 it's like not even their fault.
+23:52 It's sort of our fault for not having
+23:56 these things under our control. So this
+23:59 is this is actually quite brilliant.
+24:02 Step zero of any refactor is deletion.
+24:05 Yes.
+24:08 Yes. If the if it is dead code, delete
+24:11 it. You can just go back into history
+24:14 and pull it back up, but get it out of
+24:16 there. So, there is zero code that's
+24:19 dead. And that's going to be zero code
+24:23 that the AIS have to reason about. And
+24:26 you're not going to have to deal
+24:27 necessarily with this type of threshold
+24:30 kicking in that's going to regulate you
+24:34 because you're regulating yourself. And
+24:36 this is something that humans can do
+24:38 very easily, right? It's very easy for
+24:40 us to look at this and say, "Oh, that's
+24:41 right. We're not using this anymore.
+24:43 This module is actually completely
+24:45 outdated. We can delete all five of
+24:46 these files, but then people don't do
+24:48 that and they do things like if zero
+24:50 them or they just don't call into them,
+24:51 but they remain in the project and our
+24:54 AI systems don't necessarily know that
+24:56 it's not part of the system. They're not
+24:58 running like a full execution trace and
+25:03 walking the call stack in perpetuity to
+25:06 see that the code is not being executed.
+25:09 But generally we as the code
+25:11 maintainers, we know that, oh, we're not
+25:14 using XML anymore. We're using the JSON
+25:15 parsers now. So why is the XML parser in
+25:18 there? It shouldn't be. Just get it
+25:20 gone. As far as the false advertising,
+25:24 um Oh, yeah. I mean,
+25:28 Dark I,
+25:31 like I said, I
+25:34 I think that
+25:38 will this hurt anthropic? Yes.
+25:42 A lot.
+25:45 A lot
+25:48 for Yeah. No, I I I fully understand
+25:52 what you're saying is that it sounds a
+25:54 lot to me like false advertising.
+25:58 Now, you're saying that it has uh a
+26:01 million token context window except
+26:04 somehow you're cutting the limit to
+26:07 approximately
+26:08 16.7%
+26:10 of the context window that you're
+26:11 claiming. That doesn't sound too good to
+26:13 me. Hardcoded, too.
+26:18 Ouch.
+26:20 This is going to be a doozy.
+26:23 So now in the brevity mandate, this one
+26:25 really gets my goat. Follow these
+26:27 mandates first, which is simplest
+26:29 approach, no refactors
+26:33 beyond what was specifically asked and
+26:37 no premature abstraction.
+26:41 So what that means is if it can just
+26:45 inject spaghetti code to solve the
+26:48 problem, it's going to which is going to
+26:51 lead to more spaghetti code. It's going
+26:54 to give you the appearance of
+26:59 solving these problems in a reasonable
+27:01 way. But then under the hood, you're
+27:03 going to get code that is basically
+27:06 completely unmaintainable.
+27:08 It's just code that is bordering on
+27:11 worthless in the sense that it works,
+27:15 but that's all it does.
+27:17 And for anyone that's been doing any
+27:19 reasonable amount of software
+27:20 engineering, you probably know that
+27:23 it's very easy to write code that works.
+27:25 It's very hard to write code that is
+27:27 maintainable.
+27:29 That's kind of the core challenge or at
+27:31 least that's the core challenge from my
+27:33 perspective. writing systems that are
+27:36 highly modular,
+27:38 that are loosely coupled, highly
+27:40 cohesive, all of these things, easy to
+27:43 understand,
+27:45 minimal code footprint. That's what
+27:48 makes this
+27:50 a really challenging field. Not the act
+27:54 of memorizing a syntax for a language
+27:58 and being able to replicate that syntax.
+28:00 That that's that's junior high stuff.
+28:05 Now you can override this and he's going
+28:08 to explain I think in or he captures it
+28:11 in his markdown file and basically you
+28:14 have to override these things. So then
+28:17 it will stop doing this. So on top of
+28:20 that, it will I I guess it does some
+28:24 swarming things
+28:26 and
+28:29 u it just sort of continues to go on on
+28:31 these things that he's found. This one I
+28:34 think this one in particular I thought
+28:37 was
+28:39 really interesting. This 2,000line blind
+28:42 spot. So, the agent reads a 3000line
+28:46 file, then makes edits that reference
+28:48 the code from line 2400. It clearly
+28:53 never processed.
+28:55 And he's referencing the source file
+28:57 where they're going to have these hard
+29:00 limits.
+29:02 Each file read is hardcapped
+29:07 at 2,000 lines. Chew on that one for a
+29:10 second.
+29:14 So, it doesn't matter if the source code
+29:17 has more than 2,000 lines. And generally
+29:20 speaking, I think just as a software
+29:23 engineering practice, it's probably good
+29:25 to limit your source files to small
+29:29 source files. But sometimes this gets
+29:31 away from us and sometimes people don't
+29:35 do these things.
+29:37 But to know that the system is going to
+29:41 automatically hard cap it at 2,000 lines
+29:43 and then hallucinate the rest.
+29:50 That's not super great. So at this point
+29:52 we are getting into a whole world of
+29:56 problems. You can probably understand
+29:58 now why Anthropic reached out
+30:01 immediately when a number of people
+30:03 posted this code online that they sent
+30:06 them like these cease cease and desist
+30:08 letters.
+30:12 People assembling
+30:14 what's going on in the larger project.
+30:17 There's a lot of things in here that are
+30:21 not painting anthropic in a very good
+30:23 light.
+30:27 Another thing that I
+30:31 quite I I was quite interested in just
+30:34 out of my own investigation and
+30:37 exploration doing things like diff and
+30:40 semantic reasoning is number seven. So
+30:43 they're saying GP is not an abstract
+30:45 syntax tree in A and in some sense AS
+30:48 are still not even that great but AS
+30:50 still kind of associate some kind of
+30:53 meaning to the syntax. GP is just a
+30:58 advanced regular expression uh pattern
+31:01 matching.
+31:03 So in particular, what what's going on
+31:07 here is that
+31:11 they're using GP for these regular
+31:14 expression matches for find and replace.
+31:18 And part of that is cloud code has no
+31:22 semantic understanding of things. I I I
+31:25 do think that there are
+31:28 components in cloud code that probably
+31:30 do, but as we've discussed many times on
+31:33 GTT, neural networks don't have logical
+31:36 reasoners in them. There's no semantic
+31:39 understanding. It's just a bunch of
+31:40 wires and neurons that are pretty good
+31:43 at pattern matching. So you would need
+31:45 something like diff or a semantic
+31:48 reasoner, symbolic reasoner to be able
+31:50 to associate words, letters with their
+31:54 meaning. So then you could understand
+31:57 the impact potentially of these things
+32:00 across uh source files, especially as
+32:03 they're translated from one variable
+32:06 name to another or people map function
+32:08 names to other function names.
+32:11 And in particular, I think what he's
+32:13 talking about here is that there's a use
+32:18 of uh GP and that's going to
+32:24 not help you in many cases when you need
+32:26 to make changes that can escape the
+32:30 scope of GP.
+32:33 So here he's saying you rename a
+32:34 function. The agent GPS for callers,
+32:36 updates eight files, misses four that
+32:38 use dynamic imports, exports, write or
+32:40 string references, the code compiles,
+32:42 and in the files that it touched cuz it
+32:45 fixed those. But of course, all the
+32:47 other files that it didn't touch are
+32:49 totally broken.
+32:51 Exactly. And it doesn't have a semantic
+32:53 understanding.
+32:55 This is just raw uh pattern matching.
+32:58 And
+33:00 you you need more. And in particular,
+33:03 he's saying the override on any rename
+33:06 or signature change force separate
+33:07 searches for direct calls, type
+33:09 references, string literal, and
+33:12 eventually you'll have strong semantic
+33:14 reasoners in this, but you're going to
+33:17 have to do some kind of like
+33:21 manual verification
+33:24 or you're likely going to really hose
+33:25 yourself. And in particular, what makes
+33:29 this even worse is in many of these
+33:33 instances,
+33:34 the systems themselves are interpreted
+33:38 languages. They're not compiled
+33:40 languages.
+33:42 So you literally will only see the files
+33:45 that are changed.
+33:47 you're not using languages like C, C++,
+33:51 Java, C that would actually find the
+33:55 remaining mistakes that claude code had
+33:57 missed.
+34:00 And now he's going to talk essentially
+34:02 about how he's come up with this new
+34:05 markdown file for you that's going to
+34:08 help address uh many of these things,
+34:12 which is phenomenal, which is super
+34:14 great. And this actually ends up being a
+34:17 win for lots of people. That's why I'm
+34:20 including the reference to his
+34:24 uh ex article. I dropped it in the chat.
+34:27 I'll drop it in the description when I
+34:29 do the VOD for this. I have not yet
+34:32 looked and or used his markdown cloud
+34:35 file, just to be clear. So, I can't
+34:38 personally verify that this is good and
+34:42 it's doing all the right stuff. So
+34:44 basically use it at your own risk.
+34:47 However, there are other people on X
+34:49 that are saying that they are using it
+34:52 and they're seeing immediate improved
+34:55 results,
+34:56 which
+34:58 is fantastic. That's that's great.
+35:00 That's great to hear. Once I take a
+35:03 closer look at it, I'll do another VOD
+35:05 or I'll hop online and I'll let all of
+35:08 you know what my findings are. But right
+35:10 now, I haven't had time to look at it.
+35:12 Going back to our questions, does this
+35:14 hurt you? I do think that there is some
+35:17 potential danger for users of CLA code
+35:22 to be hurt. And the sort of
+35:28 not obvious reason is that now that the
+35:31 code is present, you're likely going to
+35:33 have a whole bunch of hackers that are
+35:35 going to deeply scrutinize that code and
+35:37 they're going to find various issues
+35:39 like what this guy has found. but
+35:41 they're going to sit on those and
+35:42 they're going to likely try to use those
+35:44 as surface area attacks to uh hack
+35:49 cloud code users. And I think that's
+35:52 probably a very real thing. And so
+35:54 everyone should be aware that because of
+35:57 this leak, if you use clawed code,
+35:59 especially if you use it in sort of a LZ
+36:02 fair way that's not really uh sandboxed
+36:05 and inside of a VPN or something that's
+36:08 very safeguarded, you might be exposing
+36:10 yourself to hackers now that the source
+36:13 code is out there. So just be careful.
+36:16 What do I think will happen next?
+36:19 I think there's going to be a massive
+36:21 amount of clones
+36:24 in the world and you're going to see a
+36:27 whole bunch of open-source sort of cla
+36:30 code thingies. Now, they don't have the
+36:32 models, but you're likely going to see a
+36:35 variety of other things. You're going to
+36:36 have essentially the infrastructure for
+36:38 cloud code with the use of the open-
+36:41 source models, and it's going to be a
+36:44 clone free-for-all.
+36:46 That's one of the things that I think is
+36:48 going to happen next and in some sense
+36:51 it's going to level the playing field
+36:53 that Claude Code and Anthropic I think
+36:56 had a massive uh lead.
+37:00 They were on fire which again makes this
+37:04 so stunning that more care wasn't taken
+37:07 to avoid this potentially catastrophic
+37:11 uh failure. On top of that, I think
+37:14 there's going to be a huge amount of
+37:15 trust that's lost with anthropic and
+37:19 it's going to be very interesting to see
+37:21 how that plays out. It's unfortunate,
+37:24 but don't use vibe coding for production
+37:28 systems.
+37:30 Don't do it.
+37:32 You can use code assistants, but make
+37:34 sure that you manually verify things and
+37:37 you don't accidentally have these types
+37:39 of issues. This uh npm
+37:44 registry issue is not the only way this
+37:47 could have failed. There's a thousand
+37:49 other ways that this could have failed.
+37:51 That's why you want to use coding
+37:53 assistance but not vibe code your way
+37:56 into whatever. And in some sense, I
+38:00 think anthropic was at least some of the
+38:02 things I was seeing, they were kind of
+38:05 getting a little cocky.
+38:08 you know,
+38:09 their AI wrote their entire compiler.
+38:13 Uh, Opus 4.5
+38:15 wrote all of 4.6. And it sounds like win
+38:19 after win after win.
+38:23 To me, it sounds like Icarus
+38:27 and they're flying a little bit too
+38:28 close to the sun. Got a little bit too
+38:32 confident. Didn't take things seriously
+38:35 enough. And I suspect that they I hope
+38:39 they will moving forward.
+38:43 What can we learn from this? Don't do
+38:46 this.
+38:49 Don't
+38:51 develop production quality software in
+38:54 this fashion. Exactly. I'm not saying
+38:57 don't use cloud code. I use cloud code
+38:59 but in a in a somewhat restricted
+39:01 fashion. I still have controlled access
+39:05 for a lot of things. I will give it read
+39:09 access to a lot of things, but it has
+39:11 very limited right access on purpose,
+39:15 right? And it's a gradual thing like
+39:17 we're learning about it. Just don't give
+39:19 it the keys to the kingdom like this.
+39:21 This is super important. And my hope is
+39:24 that at least the GTTers
+39:26 will learn from this and we won't
+39:30 experience these types of production
+39:32 quality
+39:34 catastrophic mistakes.
+39:37 My hope is other people outside of GTT
+39:39 will not have these types of things.
+39:41 But, you know, we can only do what we
+39:43 can do. As far as the good outcome, yes,
+39:46 I think we just saw it.
+39:49 Some people have asked, can I download
+39:51 the source? Can I post the source? What
+39:54 you do in terms of downloading the
+39:56 source is
+39:59 completely up to you. I'm not going to
+40:01 make any comment about that. But I
+40:04 strongly encourage all of you to not
+40:07 post anything that you download because
+40:12 to the best of my knowledge, one, this
+40:15 could very well be illegal and two,
+40:18 Anthropic is going after people that are
+40:21 posting the source online. That's why
+40:24 for mentor, all we did was basically
+40:26 just run inference on this. We didn't
+40:28 post any of the code ourselves because
+40:32 we don't necessarily want to do anything
+40:34 that's going to get us in trouble,
+40:36 right? So, please protect yourself and
+40:40 don't go too crazy. It is a free-for-all
+40:42 out there right now. Let other people do
+40:45 the super crazy stuff. Don't do it
+40:47 yourself.
+40:50 Uh, what can you do right now?
+40:53 follow kind of the guidance that I'm
+40:56 giving you on how you can level up
+40:58 Claude Code. The other thing you can do
+41:00 is you can download and use Mentor.
+41:02 What's clear to me is
+41:05 even Claude Code could use Mentor. We're
+41:09 probably going to try to talk to
+41:10 Anthropic about this and get them to use
+41:12 Mentor to eliminate these near 17,000
+41:17 issues that Mentor has found. And a
+41:20 mentor now has APIs that will allow you
+41:23 to interface with our diff AI directly.
+41:27 So you can use something like the
+41:30 language models from cloud code uh opus
+41:33 and then feed the output directly into
+41:35 diff and diff will do a verification and
+41:38 you can put it in a closed loop system
+41:40 where until it passes from diff it will
+41:42 just keep sending it back. And some of
+41:44 the things that our friend was talking
+41:47 about to level up the system will just
+41:50 be a natural byproduct of diff's extra
+41:54 level of scrutiny. So this is another
+41:56 thing that you can do and it is free to
+41:59 use for I don't know 30 60 90 days or
+42:02 something. Again, if you're a Jeter,
+42:05 you can use it for free. Just email me
+42:08 gojumerly.ai
+42:10 and we'll extend the license basically
+42:12 indefinitely. And then you can call
+42:16 directly into our APIs, send the cloud
+42:18 code to it, and now you have a closed
+42:21 loop system that's going to just level
+42:23 up your code. You don't even have to use
+42:25 mentor in this way. But as far as what's
+42:28 next, I expect to see some sort of
+42:30 announcement from Anthropic.
+42:33 I expect this once the larger community
+42:36 understands what just happened because I
+42:38 think people outside of technology
+42:40 probably have no idea what's actually
+42:42 going on yet. But once they do, I
+42:46 suspect the general public catches wind
+42:48 of this. This is going to take over
+42:50 legacy media, at least temporarily.
+42:54 There's going to be people that are
+42:56 vying for a position. There's going to
+42:57 be a bunch of startup copycat uh
+43:00 companies. Open AI is probably going to
+43:03 play off of this. I mean, it's going to
+43:05 be I suspect this is going to be pure
+43:08 wild west for at least the next several
+43:11 weeks, maybe the next several months.
+43:14 This is not going to be something that
+43:16 can be swept under the rug and we all
+43:19 forget about it tomorrow. It's going to
+43:21 be
+43:24 something that lingers. Thanks for
+43:26 joining everybody and just be real
+43:29 careful especially if you're using cloud
+43:31 code. Just be real careful and please
+43:34 don't vibe code your way to production.
+43:36 Just say no.

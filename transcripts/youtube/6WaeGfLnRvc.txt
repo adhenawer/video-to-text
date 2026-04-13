@@ -1,0 +1,4231 @@
+0:00 I've seen things, you know, that make me
+0:01 want to close my eyes for sure. You
+0:04 know, you want to talk about the dark
+0:06 side, and that's okay. I hope no one
+0:09 would do this, but I know people do.
+0:12 That's my opening gambit for I want to
+0:14 take it over. After this conversation,
+0:16 I'm a little more cynical. This is Ethan
+0:19 Evans, former Amazon VP, back for a
+0:22 second time because I knew he had a lot
+0:24 to share about corporate politics. We're
+0:27 going to put these people under you for
+0:28 6 months. check the box and give them
+0:30 back to the person we took them from.
+0:32 >> It's almost like this hidden chest going
+0:33 on.
+0:34 >> Absolutely.
+0:35 >> He shared what to do if you have a bad
+0:37 manager. You could consider this as
+0:38 mutiny if you went to them and he said,
+0:40 "Hey, my manager is bad."
+0:42 >> So mutiny. Let's talk about mutiny. And
+0:45 he said he'd be transparent. So I really
+0:47 put him to the test. What are the
+0:49 attacker tactics?
+0:52 >> Wow. Ryan, when you said we would just
+0:54 go deep on transparency, you were not
+0:57 kidding. So the best attack, what is the
+1:00 leverage that an engineer has as they're
+1:02 getting fired that a company would want
+1:04 to pay for? And here I'll give you your
+1:06 last piece of your leverage. I imagine
+1:08 this would be useful even outside of
+1:10 your career. Now there's some people
+1:12 watching this, engineers who are like, I
+1:14 hate you. I hate the politics. Do
+1:16 yourself a favor and get good at this.
+1:19 Here's the full episode.
+1:25 Last time we talked, I think one reason
+1:27 that people really loved the
+1:28 conversation was because of your unusual
+1:32 level of transparency. I've never met
+1:33 anyone who was in such a high level in
+1:37 tech, like in VP at Amazon, that was
+1:40 willing to say everything directly that
+1:43 could help both engineers and also
+1:45 managers know what's going on behind the
+1:47 scenes at those highest levels. And I
+1:49 know that we didn't get to cover
+1:51 everything. So today I'm hoping that we
+1:53 can go over everything in terms of
+1:56 reorgs and all of the other behind
+1:59 the-scenes things that happen in the
+2:01 management of tech. So I'm hoping you
+2:03 can continue to be transparent, maybe
+2:04 even more transparent this time.
+2:07 Absolutely. You know, I'm comfortable
+2:09 with the fact that
+2:12 I'm not a perfect person and sometimes
+2:14 some of the stuff I did I wish I had
+2:16 done differently. So, I can share what I
+2:19 did and what I saw others do because I'm
+2:22 comfortable with that. And frankly, I'm
+2:25 retired. So, I'm immune. There's no boss
+2:27 over me who's going to be like, "You
+2:29 said what? You told Ryan what?" I'm free
+2:32 from that.
+2:34 >> The first topic I want to go over is
+2:37 empire building.
+2:39 uh empire building I think is a bad
+2:42 thing in that as defined it means
+2:45 focusing more on getting raw number of
+2:48 people than on what you're doing or the
+2:49 impact you're having. So why does it
+2:52 exist? Empire building exists because
+2:55 it's rewarded. And it's rewarded
+2:59 because
+3:01 counting people is the easiest thing to
+3:03 do. And so when a leader or a set of
+3:07 leaders are deciding who's ready to
+3:09 promote,
+3:11 how much impact you had is subjective.
+3:13 One person thinks the project was hard.
+3:15 Another thinks, oh, that was pretty
+3:17 easy.
+3:18 But no one can debate, well, Ethan has
+3:21 42 people and Ryan has 17. Ethan is the
+3:26 bigger leader is the conclusion they're
+3:28 making. And that encourages empire
+3:31 building because it's what's visibly
+3:34 measurable. And so what I found is that
+3:40 drives leaders to want more people
+3:43 because that's going to be their tool.
+3:45 And some companies absolutely have
+3:48 written thresholds of to be eligible for
+3:51 this promotion, you have to have this
+3:52 many people. So, of course, if you give
+3:55 high performers a goal, they're going to
+3:58 figure out a way to hit that goal. And
+3:59 if that requires claiming they need
+4:01 people or seeking to take over other
+4:03 groups, they're ambitious.
+4:06 They're going to find a way to
+4:07 rationalize that to to themselves. I
+4:10 need those people. I saw that there's
+4:12 this this desire to change the incentive
+4:15 structure at least at the company that I
+4:17 was at um where managers could be
+4:19 promoted not necessarily just with the
+4:22 directly proportional to how many
+4:24 recursive reports you have. Is that
+4:25 possible to do? Of course it is
+4:28 possible. It takes more effort uh
+4:30 because impact is harder to assess,
+4:33 right? The impact an engineering manager
+4:35 has is somewhat fuzzy. What's most
+4:38 important? Is it operational
+4:40 performance? Is it new features shipped?
+4:43 Is it whether or not those new features
+4:45 resonate in the market and make money?
+4:48 And you end up with difficulties like
+4:51 maybe my product directly generates
+4:54 money. Whatever I'm doing gets directly
+4:56 sold and customers pay for it. And what
+4:58 you're doing is infrastructure. Well,
+5:00 now how do we compare that? Like you're
+5:02 keeping the systems up, but I'm actually
+5:04 the one bringing in all the money. Who
+5:07 has more impact?
+5:09 Again, that's where people get sucked
+5:11 into, well, I have 42 people and you
+5:14 have 17. I must be a bigger manager.
+5:17 That's that's how that happens. It is of
+5:21 course possible to make value judgments,
+5:24 but then they're also harder to defend.
+5:26 I have to look at you and say, "Ryan, we
+5:30 love the work you've done and you're on
+5:32 the right path, but Ethan was more
+5:34 impactful."
+5:36 And that just makes you mad probably
+5:39 unless you happen to agree like, "Oh
+5:41 yeah, that guy's a star."
+5:43 It's it just all these things make
+5:45 assessing impact difficult and dangerous
+5:48 and that's why it doesn't get done as
+5:50 much as it should.
+5:52 You mentioned the written thresholds for
+5:55 uh promotion and since you were VP at
+5:57 Amazon, I know it's been some time, but
+6:00 off the top of your head, do you
+6:01 remember the rough written thresholds
+6:04 for how many reports you would need to
+6:06 be considered for senior management,
+6:09 director, and VP?
+6:10 >> So, interestingly, those thresholds did
+6:12 not exist while I was there, and they
+6:15 existed in whisper numbers, but they
+6:17 were not written down. They came about
+6:20 after I left and people I was coaching
+6:22 still at Amazon or talking to told me
+6:25 very clearly that the number that got
+6:28 established to become a director in some
+6:31 orgs was 80 people and in some was 90.
+6:35 So I became a director in the early days
+6:37 of the company with 22 people because it
+6:40 was different times and the company was
+6:42 smaller. And that crept up and up until
+6:44 when I was at the end of my career, we
+6:47 did have like a sense that the company
+6:50 wanted us to look for people with about
+6:52 75 or 80 people, but it got written down
+6:55 as 90 at least in some organizations.
+6:58 And the thing that's funny about that is
+7:01 one of the Amazon leadership principles
+7:03 says there's no bonus for additional
+7:06 headcount.
+7:08 But now that it's written down that I
+7:09 can't get to this very well-paying level
+7:12 without 90 people, there damn sure is a
+7:15 bonus, right? There's like a several
+7:17 hundred,000 a year bonus quite literally
+7:21 for accumulating 90 people. And I've
+7:25 talked to leaders who their boss trying
+7:28 to get them across the threshold was
+7:30 like, "We're going to put these people
+7:32 under you for six months, check the box,
+7:34 and give them back to the person we took
+7:36 them from." because that's the game they
+7:38 have to play if they want to, you know,
+7:40 reward a person in their team. And of
+7:42 course, that's insanity where we're
+7:45 moving people around and changing their
+7:46 lives just to hit a number.
+7:49 But if you did that, let's say I'm I'm a
+7:52 VP and I have a very loud director or
+7:56 very loud senior manager who wants to
+7:57 become a director. And so I go, okay, to
+8:00 retain them, I'm going to give them some
+8:02 reports from over here. and now they're
+8:03 going to be eligible for director after
+8:06 they get promoted though
+8:08 they need to sustain those reports to
+8:12 sustain that position right like you
+8:13 couldn't just move them back
+8:15 >> I mean you can to again it depends on
+8:17 the company but you can play all sorts
+8:19 of shell games where um for example at
+8:24 Amazon if you drop below the number of
+8:26 reports there's like a grace period 6
+8:29 months nine months where if you can tell
+8:31 a story about how they're going to get
+8:32 back to that level or how future growth,
+8:35 it's okay if they're below it
+8:36 temporarily. The other thing is no
+8:40 company, no company I know of really
+8:42 systematically down levels people. What
+8:45 they would do is they'd say, "Okay, well
+8:47 Ryan, you're a director. Your team is no
+8:49 longer director scope. You're going to
+8:51 have to find a director level role." And
+8:54 so then it's up to me if I can do that
+8:55 in my org or I move you, but I've still
+8:58 achieved the goal for you. And you
+9:01 absolutely see I have seen not just in
+9:04 Amazon but other places when headcount
+9:07 is the main issue. I've seen things
+9:09 moved around and I certainly when people
+9:12 normally come to me it's with the
+9:14 complaint my boss actually told me that
+9:17 he's putting me under my peers so that
+9:19 my peers team will look better. So the
+9:22 reason I'm being reorged under this
+9:24 other person is not for any business
+9:27 reason but because they don't have the
+9:31 scope to get the promotion and so I need
+9:34 to go be their scope.
+9:37 >> That's what I'm being told. When I was
+9:39 an engineer and reorgs were happening, I
+9:42 think you don't know all the behind the
+9:44 scenes of how orgs are managed and so
+9:47 you're told there's a certain reason for
+9:49 the reorg.
+9:50 >> However, and which may be true, but
+9:52 there may be a secondary an ulterior
+9:55 motive of this person also needs to get
+9:58 promoted. Do you ever have a experience
+10:00 like that where you saw a rework
+10:02 happening in other or you didn't know
+10:03 the exact person who needs to get
+10:06 promoted or what? But you could just
+10:08 tell based on how it happened and uh
+10:11 what happened that oh there's something
+10:13 else going on behind the scenes.
+10:16 >> Yeah. And I would say there's always
+10:17 something else going on. Meaning all
+10:20 managers know all leaders know that too
+10:23 many reorgs cost you people and so you
+10:26 don't want to do them too often.
+10:28 What that means though is like you wait
+10:30 as long as you can and then when you
+10:32 need to do one, you're asking yourself,
+10:33 how do we get everything we want? How do
+10:36 we how do we if there's someone we don't
+10:38 like, how do we give them less so
+10:41 they'll move on? If there's someone that
+10:43 we really think is high performance, how
+10:46 do we set them up for success? How do we
+10:48 retain key people? And yes, hopefully
+10:50 the start of the reorg is how do we make
+10:52 the business better? But as soon as we
+10:55 figure out what we think we need to do
+10:57 for the business, then we're trying to
+10:59 figure out how much else, you know, this
+11:01 ship is leaving the dock. How much else
+11:04 can we throw on the deck as it's pulling
+11:05 away that's going to help us? I'm just
+11:08 trying to figure out the exact mechanics
+11:10 like maybe a pastorg that you've done
+11:13 where you tried to cram a bunch of
+11:16 different ulterior things into it. And
+11:18 how does that actually play out?
+11:20 >> Well, um, a couple things happen there.
+11:24 First, there are usually multiple people
+11:26 involved. And so,
+11:29 sometimes
+11:31 you have to either get them on board
+11:33 with your second motive. You know, you
+11:35 have to tell them like, "Yeah, I want to
+11:36 help this person get promoted as a part
+11:38 of this reorg. I want to set them up.
+11:40 Are you supportive of that?" Sometimes
+11:42 you have to tell a story like, "No, I'm
+11:45 not doing that. It's really this
+11:47 reason." And so there is some cleverness
+11:49 to justifying because even for a senior
+11:53 leader usually a reorg is a big enough
+11:55 change that somebody will be auditing it
+11:57 and you've got to be able to explain it
+11:59 to them. So you're coming up with your
+12:02 narrative. You're a storyteller and
+12:04 you're coming up with your narrative
+12:05 about why this is the best possible
+12:07 reorg that rewards the deserving people
+12:11 and accomplishes the business goals. And
+12:14 if anybody is suffering, you've made
+12:16 sure that that's people that aren't the
+12:18 highest performers. So if anybody does
+12:20 leave, it's okay.
+12:22 And when I think about specific reorgs
+12:25 I've done, they're very much about
+12:28 retention. If you're making a change,
+12:30 you're very much thinking people don't
+12:33 like change.
+12:35 Who is it I absolutely need to keep? And
+12:37 who is it if they leave I'll either be
+12:40 okay or even maybe happy. Um, and I
+12:46 can't immediately think of a place where
+12:49 I personally put someone in a role where
+12:52 I'm like, and by putting them there,
+12:54 they'll quit.
+12:55 But I can absolutely think of the
+12:58 reverse where people I really wanted to
+13:00 keep, maybe who I felt I was at risk at
+13:02 losing, I was using the reorg to give
+13:04 them something juicier. So then how does
+13:07 it usually get started? I mean a reorg
+13:10 let's say. Yeah. What's the the
+13:12 triggering condition?
+13:14 >> Well, usually the the triggering
+13:16 condition is a change in the business.
+13:19 So um something about the business has
+13:22 changed and the organization is not set
+13:23 up to address it. So it needs to take on
+13:26 a new market or you've acquired a
+13:27 company and you need to blend them in or
+13:30 you want to start a new project. That's
+13:33 the first reason for a reorg is changed
+13:35 in the business. The second reason for a
+13:38 reorg is somebody else quit or got
+13:40 moved. So often reorgs come due to
+13:43 cascades. And many times, for example,
+13:47 several times in my career, my boss
+13:50 either left or was moved to another job.
+13:54 And so I had to go somewhere else. I
+13:57 could go up if they thought I was ready.
+14:00 I could go under somebody different or
+14:03 they could choose to backfill uh you
+14:05 know just leave that position open. But
+14:08 at least in my personal experience at
+14:09 Amazon,
+14:11 I never really saw the backfill happen.
+14:14 I always was moved under another leader.
+14:17 And several times I'm pretty sure I was
+14:20 put under them to stretch them. Uh when
+14:24 I ran the prime video team,
+14:29 my leader left and I was reorganed from
+14:32 being under an engineering VP to being
+14:34 placed under a business leader. And that
+14:37 business leader who turned out to be one
+14:39 of my best managers ever, some of his
+14:42 first words to me were, "I don't really
+14:44 want your team.
+14:46 Uh I don't want to run engineering. I
+14:49 don't know anything about it." And of
+14:50 course, as an engineer, I'm like, uhoh.
+14:55 Um, but he was a good leader and he
+14:58 said, 'We will figure it out. And we
+15:00 worked together and actually had a great
+15:01 run.
+15:03 But I had that happen a couple times
+15:05 where I was put under people and it was
+15:07 they had never led engineering and I was
+15:09 like, well, let's give him Ethan's team
+15:10 and let them figure out engineering,
+15:12 which could be really demoralizing,
+15:14 right? like, okay, here's the person
+15:16 who's not technical and I'm their guinea
+15:18 pig.
+15:19 >> In conducting a reorg, you mentioned
+15:22 that you're the storyteller and you're
+15:25 building a narrative. And you said in
+15:27 some cases you'd be direct and you'd say
+15:30 we're trying to retain this person, so
+15:32 we're going to move things around. And
+15:34 in other cases, you said you you would
+15:37 tell a story that this is solving a
+15:40 problem for the business. and that that
+15:44 other part would be hidden. It's really
+15:46 interesting to me cuz there's it's
+15:48 almost like this hidden chest going on.
+15:50 >> Absolutely.
+15:50 >> You're aware of there's multiple things
+15:53 and you're aware of the messenger of
+15:56 this is what this person
+15:58 >> wants to hear and here are the things
+16:00 that I'm trying to achieve. What pieces
+16:03 of what I'm trying to do can I sell to
+16:05 them to make the reorg happen? And also
+16:08 you'll get maybe other things as a
+16:10 result. And I think that turns off a lot
+16:13 of people, especially engineers. They
+16:14 go, I don't I don't want to be managing
+16:18 all these things. I just want to say it
+16:19 as it is. Is that just a inevitable
+16:22 thing that you have to deal with if
+16:24 you're in management?
+16:26 >> Well, inevitable. You can certainly work
+16:28 around it. Meaning, you can just do a
+16:30 reorg purely based on business goals and
+16:33 not let any concern for people enter,
+16:36 but probably
+16:39 that's going to cost you people because
+16:44 some people are more ambitious than
+16:46 others or just more demanding. And there
+16:49 is some truth to the old saying, the
+16:51 squeaky wheel gets the grease.
+16:54 This is another harsh truth people don't
+16:56 like. Sometimes, let's say two people
+17:00 perform roughly equally, but one of them
+17:03 has made really clear that they're
+17:05 thinking about leaving.
+17:07 Well, a lot of managers will ask
+17:09 themselves,
+17:12 you know, Ryan's this great guy, always
+17:13 sticks with us. He'll wait another six
+17:17 months, and I can use those six months
+17:19 to save this other guy who's also
+17:21 valuable. And and
+17:24 by being quiet and dutiful, sometimes I
+17:28 can make the decision. It's not that I
+17:30 mean to screw you. It's more I'm focused
+17:35 on saving this other person and I know
+17:36 you'll put up with it. And so you can
+17:40 end up behind just because you're such a
+17:42 nice guy.
+17:44 And uh I often tell people when I'm
+17:46 coaching them, I will often tell my
+17:48 clients, you are a very nice person. And
+17:52 when I tell them that, what they don't
+17:54 know is I'm then going to say, and that
+17:55 is not a compliment in this context,
+17:58 right? That like this is
+18:01 again, I don't think you need to be a
+18:03 jerk, but jerks
+18:06 up to a point pushy people get more.
+18:10 Now, they can push too far and then they
+18:14 get less because they've antagonized.
+18:17 But if you never ask for anything,
+18:18 you'll never get anything. And so, in a
+18:21 reorg, you ask about what's inevitable.
+18:24 Well, what's inevitable is I have some
+18:26 people who have been more vocal about
+18:27 what they want in their career than
+18:29 others. Perhaps I'm arranging the reorg
+18:32 just because I know what some people
+18:34 want and I don't know what others want
+18:36 and so I assume they'll be fine. That's
+18:39 the most benign version. It may be
+18:43 even more that for some people I know
+18:46 they're very pushy and demanding and for
+18:49 some people I know they're not and so
+18:51 I'm serving the pushy people because
+18:53 then I get to keep my whole team.
+18:55 >> So it seems like almost always it's
+18:57 better to be pushy and forthcoming with
+18:59 what you want in your career. But there
+19:02 is an upper bound though where you go
+19:04 too far.
+19:06 >> And so to to empire building for
+19:09 instance as a concrete example I mean
+19:11 have you ever had someone who was a
+19:13 manager underneath you and clearly
+19:15 asking for reports and you could you
+19:17 could see immediately that you don't
+19:19 need these reports. You're pushing
+19:21 because this is going to lead to your
+19:23 eventual promotion. And how do you
+19:25 handle that as a manager or as a senior
+19:27 leader when you can see someone's being
+19:29 too pushy and it's obviously not good
+19:32 for the business and not defendable?
+19:34 >> Yeah. So I think a manager if I'm in the
+19:37 leadership seat first I better have a
+19:40 good trusting relationship with that
+19:42 person if possible where we can have a
+19:44 heart-to-heart and I can get in a room
+19:46 where they don't feel anybody's
+19:47 listening or watching and say look let's
+19:49 talk for a minute why you really want
+19:50 these people. Okay, let's both be honest
+19:53 that you're empire building and I get
+19:56 that you're trying to get to a goal, but
+19:58 this is a bridge too far. Let's talk
+20:01 about how I'm going to get you there or
+20:03 how we're going to get you there by some
+20:06 defendable path or some other path. And
+20:09 so, as opposed to tell them just no, you
+20:11 can't have this, which will be very
+20:13 frustrating and they'll probably argue,
+20:15 I try to bend the conversation to let's
+20:17 problem solve together. What's another
+20:18 way to do this? And um I won't say I'm
+20:23 always successful. Some people want what
+20:25 they want right now and they can't see
+20:26 or they have zero patience to wait. And
+20:30 at that point again that's that fine
+20:32 line. U if I can I'll share a related
+20:34 example that I know people resonate with
+20:37 where one time I wanted to tell my
+20:39 manager that I really expected to be
+20:41 promoted but I wanted to do it in a
+20:44 diplomatic way that couldn't get me in
+20:46 trouble and and wouldn't irritate him.
+20:48 not just couldn't get me in deep trouble
+20:50 but like would bring out his support
+20:52 even though I was threatening a little.
+20:54 And so what I did is with this manager I
+20:57 wanted to be a director at Amazon. I was
+20:59 a senior manager. It's when I had the 22
+21:01 people I referred to earlier.
+21:04 I went to him and his name was Neil and
+21:07 I said, "Neil,
+21:09 I need to understand how important my
+21:13 career is to Amazon
+21:16 because my career is very important to
+21:18 me." And see, that's a statement no one
+21:20 can argue with. No one can argue and
+21:22 say, "Well, your career shouldn't be
+21:23 important to you or it's illogical." So,
+21:26 I said, "My career is very important to
+21:27 me. I need to understand how important
+21:29 it is to Amazon
+21:31 because
+21:33 if it's not as important to Amazon as it
+21:36 is to me, I need to think about that.
+21:40 And you know, I need to think about that
+21:43 isn't a direct threat, but you laughed.
+21:46 Everyone understands that I'm kind of
+21:48 serving notice, but I'm not doing it in
+21:51 a way that is easily easy for him to
+21:53 push back on. See, if I say, "Well, if
+21:56 it's not as important to you," making it
+21:58 personal with them. If it's not
+21:59 important to you as it is to me, then I
+22:01 might quit. That's a threat. And all
+22:04 managers are going to be like, "Hey, you
+22:05 can't extort me, right? That isn't how
+22:08 it works." So, I came up with these
+22:11 words that
+22:14 clearly conveyed the message, but in a
+22:16 way, you can't argue it's important to
+22:19 me. You can't argue really that if if
+22:21 it's not as important to Amazon, I
+22:23 didn't personalize it, you know, that
+22:26 that I have to think about that
+22:30 that, you know, so I was able to put it
+22:32 on the table and, you know, um he
+22:35 promoted me, right? He pushed the
+22:37 promotion through. And
+22:41 I think there's always a way to say
+22:43 things
+22:45 in that middle ground that makes clear
+22:47 what you want and makes clear that
+22:49 you're willing to consider your other
+22:51 options, but without being a threatening
+22:53 jerk about it.
+22:55 That wording is um it's it's kind of imp
+23:00 because when you say the wording I feel
+23:03 I mean if I was I feel the effects of
+23:06 extortion a bit but I couldn't I could
+23:10 not label it extortion. If I went to
+23:12 someone else and I I went to my
+23:14 management, I said, "Hey, Ethan told me
+23:16 this." They would they would probably
+23:19 also immediately get, "Oh, there's a
+23:21 there's a threat here." But I don't
+23:23 think anyone in any room would say,
+23:26 "This guy's being mean with it," or or
+23:29 we need to get rid of him. They'd say,
+23:31 "That's a welldone way to present
+23:35 yourself."
+23:35 >> Right? That's bold. He's clear on what
+23:37 he wants. And that's you know one of the
+23:39 advantages do find a place where you fit
+23:43 meaning Amazon was a relatively sharp
+23:46 elbowed pushy place. It has that
+23:47 reputation today. It was true long ago.
+23:52 You have to tune your message
+23:54 to to the workplace that you're in. that
+23:57 message would be offensive in some
+24:00 workplaces
+24:01 and it was totally not offensive at
+24:04 Amazon because there were people sort of
+24:07 pounding the table of I need to move up
+24:10 now and you know so so part of it just
+24:14 finding the place where you look like a
+24:16 wonderful sweet person in the mix. You
+24:20 mentioned that there's this this uh
+24:23 dichotomy, I guess. There's these people
+24:24 who are um team players, I guess, and
+24:28 then there's these people who are more
+24:30 pushy with what they want and they're
+24:32 they're very forthcoming. And obviously
+24:34 that has benefits for their career. I've
+24:38 heard people tell me that when they want
+24:40 to express to their manager, oh, I want
+24:42 to um get promoted or something like
+24:44 that, they have this feeling that they
+24:47 don't want to be too pushy because it
+24:49 could irk the manager and correct.
+24:51 Imagine you're
+24:52 >> a high performer is it keeps you're high
+24:55 performer, but also you keep demanding
+24:57 things of your manager that could also
+25:00 go wrong depending on the manager. So
+25:02 I'm I'm curious like your perspective as
+25:05 a as a senior leader at Amazon when you
+25:08 had these demanding high performers,
+25:11 is that something that you were were you
+25:14 happy to service their requests or was
+25:16 this did it ever irk you and you said
+25:18 I'm going to actually not give you what
+25:21 you want because you're a little too
+25:22 you're a high performer but you're also
+25:24 too demanding.
+25:25 >> So I want to tell you a couple things
+25:27 about that. Yes. First, the great thing
+25:28 about the really demanding people is if
+25:31 they really are bothering you to the
+25:33 point where you decide they're a net
+25:35 negative. If you just tell them no, they
+25:37 will quit because they they are so
+25:40 driven about getting what they want that
+25:41 if you deny them what they want, your
+25:44 problem will go away shortly. They will
+25:46 even leave for a lesser job just because
+25:49 they believe, well, at this place I'm
+25:51 going to have different results. So
+25:54 yeah, you you can calculate and say okay
+25:57 what there is some calculus that says
+25:59 what answer gets me the result I want
+26:02 and if someone's too pushy and not
+26:04 enough value telling them no you can't
+26:05 have that they will then go away. The
+26:08 second thing though is I tended to try
+26:11 and make a deal. I'm a huge believer in
+26:14 deal making and I made these deals with
+26:16 my own leadership too. And the deal
+26:19 essentially was, okay, you want this
+26:21 thing. I will help you get it, but
+26:25 you're a high performer.
+26:27 You're going to show incredible
+26:29 performance on the things I need and
+26:32 then I will deliver. And uh
+26:36 there are managers of course who make
+26:38 that deal and don't follow through. I
+26:39 can say with uh total pride that I feel
+26:42 I always followed through. There's
+26:44 actually one exception early in my
+26:46 career I've shared where I failed to do
+26:48 that and I still feel bad about it 20 20
+26:50 years later. But
+26:53 um
+26:54 I make a deal where I say, "Okay, you
+26:56 want this. Here's what it's going to
+26:58 take. I need this and this and this."
+27:00 So, as an example, I can give you, my
+27:03 manager gave me a requirement I really
+27:05 didn't like. He was my vice president. I
+27:07 was a director at the time. And he told
+27:09 me your team is too expensive. We need
+27:11 to put a bunch of it offshore in India
+27:13 with cheaper labor. You need to open
+27:16 well he didn't even say India. He said
+27:17 you need to open a lowcost offshore dev
+27:20 center. And of course I didn't want to
+27:22 do any of that. Like that meant
+27:23 traveling around the world and having
+27:24 teams around the world. And I didn't
+27:26 know how to do it and where to do it. He
+27:27 left it completely he made the whole
+27:29 problem mine. He didn't say go to India.
+27:31 He said go somewhere.
+27:33 And so the long and short of this is I
+27:35 found a senior manager I knew who wanted
+27:38 to get to director. He was Indian living
+27:41 in the US and I went and said hey would
+27:44 you go back to India and start this dev
+27:46 center if you can build me a dev center
+27:49 in India I think we can use that as a
+27:51 platform to get you to director. And
+27:54 that's exactly what happened. He moved
+27:56 home to India. He got to take his son
+27:58 home to l learn Hindi and see his
+28:00 grandparents. He moved to India for
+28:02 three years and during that
+28:05 I was then able to use his independent
+28:07 action there and the fact he was doing
+28:09 all this stuff remotely and to the point
+28:11 of narrative I was able to create a
+28:13 story about how this was clearly a
+28:14 director level accomplishment and he was
+28:16 promoted to director but I made that
+28:18 deal years before it happened you go to
+28:20 India I will get you to director
+28:23 >> so
+28:24 that's what I try and do with the the
+28:28 demanding people
+28:30 well I can imagine also though a lot of
+28:33 things could change over the course of a
+28:34 few years. Maybe you're at a different
+28:36 org and you had that guy went to India
+28:39 and then you're in a he's no longer
+28:41 reporting to you two years later and you
+28:43 can't deliver on that.
+28:45 >> But I mean you can't make decisions
+28:47 based off that.
+28:48 >> No, if I had been reorged or fired, you
+28:50 know, it depends, right?
+28:52 >> Right. Like there are things that could
+28:53 have happened where I would have had to
+28:55 say to him, look, I'll do what I can to
+28:58 support you from the new role, but it
+29:00 isn't I didn't do what I was saying. I
+29:03 It's that I no longer have the power to.
+29:06 And I could feel all right about that. I
+29:08 can't immediately think of a
+29:10 circumstance where that happened to me,
+29:12 where I wasn't able to follow through
+29:13 for someone. Uh
+29:17 but
+29:20 I can see where that would happen. The
+29:24 good news is people are most leaders are
+29:27 professionals in that they under they
+29:29 can see the difference between you
+29:31 didn't come through and you know
+29:35 happened. Those are two different
+29:36 categories. Yeah. It's interesting how
+29:38 much back of the envelope I guess deals
+29:42 there can be between managers and
+29:44 reports or I'm sure between managers as
+29:47 well. Like maybe let's say you're trying
+29:49 to get someone promoted in your org and
+29:52 you're working with your manager on
+29:54 making that happen eventually and he
+29:55 says he or she says um okay I have
+30:00 someone who's even more urgent now
+30:02 >> but that one's going to happen in two
+30:05 halves this one we're going to do next
+30:06 half and there's all this uh
+30:09 >> you know back of the envelope stuff
+30:10 inside of the the manager and the leader
+30:13 uh heads
+30:14 >> there's absolutely a line meaning by a
+30:17 line. I mean they line up a queue uh
+30:20 where even HR has a policy in big
+30:24 companies to say what does the
+30:25 forwardlooking slate is what we called
+30:27 it the forward-looking slate of
+30:29 promotions and they would track and say
+30:32 by halves who's in 6 months 12 months 18
+30:35 months maybe as far as 24 and you could
+30:37 list different names and so there was a
+30:40 sense of like whose turn is it we're
+30:43 going to do not that there was in my
+30:45 time a quota
+30:46 I understand for example at Google today
+30:49 uh talking to someone I coach there
+30:52 there's a strict quota like this quarter
+30:55 or this half two people can get from LA
+30:58 to L9 in this or
+31:02 you know the guy I was coaching is like
+31:04 I think I'm number four I'm not going to
+31:05 make it and
+31:09 again that can be toxic a little bit but
+31:11 people understand the idea of there's a
+31:13 line and so absolutely you have those
+31:15 discussions. Now, again,
+31:18 for early in your career, there's
+31:20 usually no quota to go from like entry
+31:23 level college engineer, whatever that's
+31:25 called where you're at, to sort of
+31:28 regular, you know, engineer engineer,
+31:31 maybe even to senior engineer. Things
+31:35 get to have more of this quota system
+31:38 when the positions are rare and
+31:39 expensive. And there is a question, how
+31:42 many staff or principal engineers does
+31:44 this company need? How many
+31:45 distinguished engineers does it need? By
+31:48 the way, those positions cost a million
+31:50 dollars a piece. So, we don't just want
+31:51 to hand them out like popcorn.
+31:54 >> So, you you mentioned when we were
+31:57 talking about um empire building,
+32:00 >> there's this notion that managers career
+32:03 progression is tied to the number of
+32:04 their recursive reports. And so on the
+32:08 one hand there's an incentive for
+32:09 managers to say I want more new
+32:12 headcount but I could also see there
+32:15 being cases where managers want existing
+32:18 headcount. So maybe
+32:20 >> someone underneath you is vying to take
+32:22 reports from someone else and basically
+32:25 steal scope for their own promotion. And
+32:28 as since you were such a senior leader
+32:30 at Amazon, I'm curious how did you
+32:33 handle cases where you noticed somewhere
+32:35 in your org someone is trying to steal
+32:37 scope from someone else in your org.
+32:40 >> So first I would say this has become
+32:42 more common as growth is slowed. In
+32:45 other words, when a company is growing
+32:48 very quickly, as Amazon was through much
+32:50 of my tenure there, you see less of this
+32:52 because it's easier to go get new people
+32:55 than it is to fight with someone. and it
+32:57 causes less bad blood.
+33:00 Uh, not that I never saw that, but now
+33:05 that companies aren't growing, you know,
+33:07 if you look at the Magnificent Seven or
+33:09 however you look at them, most of them
+33:10 are flat headcount, couple exceptions,
+33:13 there's a lot more of this what I would
+33:15 call cannibalism. Since I can't go out
+33:17 and get new, I'm going to have to eat
+33:19 what's here. And that that's very
+33:21 cannibalistic.
+33:23 You see a lot of maneuvering for that.
+33:25 How did I deal with it? You can't allow
+33:29 people on your team to go rogue and be
+33:32 pirates in your own organization, like
+33:35 capture somebody else's ship and, you
+33:37 know, kill the captain, sail away
+33:39 because of what it's going to do to your
+33:41 org. It it you're no longer in charge
+33:44 then. They're in charge, right? They're
+33:45 raiding and pillaging and you seem
+33:47 clueless. So, you can't allow that. But
+33:50 what you then have to do is either find
+33:52 them a path, convince them to wait, or
+33:57 frankly, if they turn too septic, they
+34:00 become your answer, meaning they're
+34:02 going to leave or you get them to leave
+34:04 and you give their team away. So if it
+34:06 really is cannibalistic, what happens is
+34:09 if they don't pull off, you know, it's
+34:10 it's like any coup attempt, I guess, in
+34:13 in like politics. If you attempt a coup
+34:16 and you win, you get to be president or,
+34:19 you know, whatever. And if you fail, you
+34:21 get hung or shot. And so this is a
+34:24 little bit, you know, it's not quite
+34:25 that bloody, but
+34:28 uh one thing that holds back the worst
+34:30 behavior is people do realize if I get
+34:34 caught being too obviously self-serving,
+34:37 it's going to burn me here.
+34:40 And so they usually are pretty careful.
+34:43 Um but do they want it? Sure. People all
+34:46 the time are asking, could I take over
+34:47 this? Could I take over that? What I
+34:49 encourage people to do is I tell them,
+34:51 "Look, you never know when a reorg's
+34:52 coming. You never know when somebody's
+34:54 going to quit or get fired or laid off.
+34:56 So talk to your manager and say, "Hey,
+35:00 if we have an org change and there's an
+35:03 opening, I just want you to know I'm
+35:06 ready to step up. I'm interested
+35:09 and I will stand by you." This is one
+35:11 thing people want to know in reorg is
+35:14 reorg shake the ship. And so some people
+35:16 are like, "Oh, this company's going down
+35:18 or it's not stable. I'm gonna quit if I
+35:20 can." If you tell your manager, what
+35:22 they don't want to do is put someone in
+35:24 a role who's then going to leave. And so
+35:26 you tell them, "Look, I'm actually
+35:28 looking to stay." So when you need a
+35:31 stable leader, think of me. And then
+35:34 when that opening comes up, they're
+35:35 like, "Oh, right. Ryan said he'd stay."
+35:38 Perfect. Ryan Ryan just became most
+35:40 qualified, not because he's best, but
+35:42 because he's most reliable.
+35:44 >> Right. I see.
+35:45 >> And that is best in in my situation.
+35:49 >> So that's what and what you just
+35:50 recommended there to me almost sounds
+35:52 like um a better narrative for asking
+35:56 for scope. Of course.
+35:57 >> Yeah. I mean, rather than saying, "Give
+35:59 me this,"
+36:02 >> you can say, "I I want what's best for
+36:05 the org, and if I need to step up, I'm
+36:08 here." But, uh, without being the
+36:12 pirate, and you might actually get what
+36:14 you want.
+36:14 >> Absolutely. And that other piece of the
+36:17 messaging you stumbled on is really
+36:19 important, which is of course we know
+36:22 you want this so that your org is bigger
+36:24 and so that you have career growth, but
+36:26 you there's a polite fiction that can be
+36:30 true, which is I also want what is best
+36:32 for the org. In other words, I
+36:34 understand that my best path up is to do
+36:37 things that are valuable to you and to
+36:39 the organization.
+36:41 And if I tell you, look, when a reorg
+36:46 happens, doesn't matter what the team
+36:48 is. If you have a need, I'll be there
+36:50 for you.
+36:52 That sounds very selfless and orgentric,
+36:55 even though the underlying message could
+36:56 be phrased as I don't really care which
+36:59 team's available. I just want more
+37:00 scope. I'll take whatever you have. But
+37:02 the way I phrased it sounds so much
+37:04 better because one sounds like the
+37:06 pirate ship and the other one sounds
+37:08 like the selfless servant. But they're
+37:10 both really, hey, whatever is available,
+37:11 I'll take it. That that phrase you said,
+37:14 the the polite fiction, I feel like
+37:16 that's the thing that I could feel as
+37:19 while we're talking about it, too. It's
+37:20 like if it feels weird. It feels
+37:23 uncomfortable. It feels conniving almost
+37:26 cuz it's it's
+37:28 uh you have you secretly you have this
+37:32 and also everyone else knows you have
+37:33 this, but you say this, but you I mean
+37:38 both can be true. That's the thing.
+37:40 That's the key is
+37:42 >> it can be conniving, but it doesn't have
+37:45 to be. They can be honest. I can go to
+37:48 my manager and say, "Look, I want to
+37:50 grow and I will do whatever you need in
+37:53 order to grow. Like, whatever is
+37:54 available, I will take it and do my
+37:57 utter best on it." And that that can be
+37:59 both things. One story when I was a
+38:03 director working my way towards VP
+38:07 I once again had been put under a VP who
+38:09 had no other engineering leaders but
+38:11 then they kept giving him more
+38:12 engineering stuff and I was the first
+38:14 and I built trust with him and he just
+38:17 automatically came to me with everything
+38:19 like well they handed me this can you
+38:20 take it and at one point I was managing
+38:24 I think eight different functions and
+38:27 they were as diverse all over the place.
+38:30 I'll give you three examples.
+38:32 I led the technical team for reverse
+38:36 logistics, meaning when people traded in
+38:39 video game cartridges, we had to grade
+38:41 them and sell them used. I was an
+38:44 adviser to the team that was grading
+38:47 returned video games or or used video
+38:49 games. I was selling new video games
+38:53 like software downloads, video game
+38:55 downloads. And then uh I was um starting
+39:01 to build Amazon's app store. That's
+39:03 three examples. A fourth example is I
+39:06 also owned our B2B business where like
+39:09 Amazon was trying to displace and go
+39:10 into the market of Office Depot and like
+39:13 ship pallets of paper to people. And
+39:16 these all had ended up under my boss. I
+39:18 had this
+39:20 you know, you call it whatever you want,
+39:21 but this random mixture of stuff, but my
+39:24 boss loved it and over time that totaled
+39:27 200 people from all these different
+39:29 functions.
+39:31 Um, and that just came from saying yes
+39:33 to everything. Now, did I really want to
+39:34 work on grading video games or shipping
+39:36 pallets of paper to schools? Not really.
+39:40 So, it was the win-win, though.
+39:44 >> Well, this reminds me of the Offshore
+39:46 India story that you had, which is your
+39:49 manager has work he doesn't want to do
+39:51 and so he will pass it to you because
+39:54 he's identified you as the high
+39:55 performer that'll solve his problem. So
+39:58 it is win-win for you because you wanted
+40:01 the larger org and he's does not want to
+40:04 deal with these problems.
+40:05 >> Exactly. And so someone I really
+40:08 respect, he's now a senior vice
+40:10 president uh at Walmart, he he said he
+40:13 was taught in turn by a senior vice
+40:16 president at Amazon,
+40:19 the simple way to get promoted is quote,
+40:20 "Solve problems for your boss." Like if
+40:23 you just need to get it down to five
+40:25 words, solve problems for your boss.
+40:30 If you're solving their problems, they
+40:32 will value you. And if they value you,
+40:34 if you then express what you would like,
+40:36 they don't want to lose you because not
+40:38 everyone's helping them that way. Most
+40:39 most people are not. They're just
+40:41 punching the clock or fighting to do
+40:43 their own things. And so even a
+40:45 so-called bad boss will often take care
+40:48 of someone who's helping them. Because
+40:50 even if their calculus is, well, imagine
+40:52 I'm evil and I don't really care about
+40:54 anybody but myself, but I've got this
+40:56 team of people and some of them are
+40:57 helping me and some of them aren't. Who
+40:59 do I want to keep? Even if I'm totally
+41:02 selfish, I want to keep the ones that
+41:04 are helping me. So even then it can work
+41:06 out.
+41:08 >> What about the case where because in
+41:10 engineering there are cases where we can
+41:12 create scope where someone goes off they
+41:15 they find a problem that we didn't know
+41:18 existed and they build a new system that
+41:21 changes the industry or does something
+41:23 really impressive and then the impact
+41:27 they had is just incredible. Mhm.
+41:30 >> But they didn't necessarily solve a
+41:31 problem that that boss specifically came
+41:34 to them with.
+41:35 >> Sure.
+41:36 >> Um that could also work though as well.
+41:39 And that manager would push that promo
+41:41 through. Um but I guess that's a
+41:44 different
+41:44 >> well
+41:45 >> path.
+41:46 >> Um and I I recommend both of these. What
+41:49 I mean is ask your manager what you can
+41:51 do, how you can help them, but also be
+41:53 thinking about what can you do on your
+41:55 own or what can you go to your manager
+41:57 and say, "I think we should do this and
+41:59 here's why." So, an example I'll give,
+42:02 uh, Amazon now sells over a billion
+42:05 dollars a year of funny t-shirts, custom
+42:08 printed. You know, you can put your
+42:10 slogan on a t-shirt and put it up on
+42:12 Amazon and buy it yourself or or get
+42:14 other people to do it. I helped start
+42:16 that business and specifically
+42:19 I funded the initial team on it and my
+42:22 manager was saying, "Hey, you run
+42:24 Amazon's app store. Like, what does that
+42:26 have to do with t-shirt printing? This
+42:27 has nothing to do with it. Why are you
+42:29 doing this?" And I said, "Well, I think
+42:30 there's a big business here, but I need
+42:34 10 people and I have 800. So, if you're
+42:40 going to tell me that I can't spend
+42:41 basically 1% of my resources on this
+42:43 thing I believe in, we have another
+42:45 discussion to have because you're
+42:46 micromanaging me. Like, this should be
+42:49 within. And so, he's like, "Fine,
+42:52 I disagree, but go do you're right. It's
+42:54 only a few people. Go do your thing."
+42:56 And then it turned into a big business.
+42:58 Um, and of course, I'm simplifying a ton
+43:01 when I say and then it turned into a big
+43:02 business. There were like years of work
+43:04 in that phrase,
+43:06 >> but
+43:08 I
+43:10 was thinking about what else can I do?
+43:13 What else makes sense that either with
+43:15 my own resources or with lightweight
+43:17 approval I can go work on? And so I
+43:21 think with your manager, of course,
+43:22 you're trying to ask what do they need?
+43:24 And that's what I was doing with 790 out
+43:27 of my 800 team. at 10, I was doing
+43:31 something that he didn't think was a
+43:33 good idea, but I was able to say like,
+43:35 well, let me have my 10. He's like, all
+43:38 right, that, you know, you're a big
+43:40 enough leader if you know, you're now
+43:42 responsible for making these people
+43:44 useful. So, I did. And if I had failed,
+43:47 I started projects that also didn't work
+43:49 out. You've got to shut them down
+43:51 quickly and, you know, have a good
+43:53 enough hit rate. But
+43:56 I think there's multiple paths to the
+43:58 top. I tried them all. Right. Be be the
+44:00 helpful person but also be the inventor.
+44:03 >> We talked about reorggs earlier and
+44:07 you you mentioned that it can be used to
+44:09 manage certain leaders out.
+44:11 >> Sure.
+44:11 >> What is that? What does that look like
+44:13 in practice? Like can you give me
+44:14 example?
+44:16 >> Well, what it looks like in practice is
+44:17 you put them on something they don't
+44:18 want to work on and you claim, well,
+44:20 that was the only seat. That was the
+44:21 seat we needed you in. I mean, it's I
+44:24 I'd like to claim it's more complicated
+44:25 than that, but um I'll tell a story of
+44:29 someone who got reorged and I thought
+44:30 they'd quit uh so much the manager even
+44:34 thought they were going to quit uh and
+44:36 was very upset with us. When I first
+44:39 joined Amazon, we had a few groups and
+44:42 we organized ourselves and I owned what
+44:44 was going to be Prime Video and someone
+44:47 else owned what became Prime Music and a
+44:49 third person owned what became the
+44:50 Kindle, the e-reader. And then there was
+44:53 a guy who had a clear ownership over the
+44:55 ingestion pipeline. So the way to
+44:57 digitize movies, music, etc. It was all
+44:59 a unified pipeline.
+45:01 And then there was one more leader and
+45:05 he got given database maintenance,
+45:09 quality assurance,
+45:11 and like a couple small things. And even
+45:14 he joked, "Well, my group's other. It's
+45:18 it's the garbage can, right?" And our
+45:21 our VP was like, "Don't call it that.
+45:23 You cannot call it that. What about the
+45:25 people in it?" like and I'm sure he was
+45:27 thinking like the leader who's stuck
+45:29 with other isn't going to stick around.
+45:31 Well, as far as I know, that guy is
+45:32 still at Amazon 20 years later because
+45:35 he was one of those very calm, nice guys
+45:38 who was willing to do what was needed.
+45:40 He was the team player who was going to
+45:41 do what was needed.
+45:44 Um, but the point is, if I wanted to get
+45:47 rid of a high performer, not a high
+45:49 performer, why would I want to get rid
+45:50 of a high performer? But if I want to
+45:52 get rid of a pushy, overly ambitious
+45:53 person, just give them other. Like six
+45:57 weeks later, that's a vacancy. I can
+45:58 open the role right now, right? Cuz like
+46:01 I'm a bit of a confrontational person.
+46:04 So when I needed to fire someone, I
+46:06 tended to just go straight at it.
+46:10 But this putting someone in a seat they
+46:12 don't like is classic.
+46:15 And there's even a um this is a widely
+46:18 understood, you know, this isn't an
+46:19 Amazon thing. If you go to Japanese
+46:22 culture, completely other country,
+46:24 there's this concept called a window
+46:26 seat. I don't know if you ever heard of
+46:27 this.
+46:28 >> So, in Japanese culture, which is very
+46:30 collectivist, and I'm not an expert, so
+46:32 maybe someone from Japan will say this
+46:34 isn't true, but I don't think so. Uh,
+46:37 you want to be in the center of the
+46:38 building. Even though window seats are
+46:40 very desirable in American culture, the
+46:42 hot, you want to be in the middle of
+46:44 things there. You want to be close to
+46:45 the CEO and close to the action. So
+46:48 actually being on a window means you're
+46:50 not that important. And so ironically
+46:53 what we would think of as great being
+46:55 given a corner office in Japan is a
+46:58 signal of you've been moved as far from
+47:00 what's happening as possible. You've
+47:03 been you've been exiled to the land of
+47:06 irrelevance where you know you're not
+47:09 you don't even have co-workers on one
+47:10 side. You have glass and that would be a
+47:12 way to signal to somebody like your
+47:14 career here is now over. You're in a
+47:16 window seat. So this idea isn't um
+47:21 you know I don't think it's some people
+47:23 would think oh that's only Amazon
+47:24 because they have a history of being
+47:26 combative. I don't think that's true. I
+47:28 think this idea is well known.
+47:31 >> You mentioned that that one guy who gets
+47:33 other or the garbage can. He's uh the
+47:37 nicest guy or he's he's the team player
+47:40 and this and that. And I I guess I see
+47:41 the incentive structure that makes it
+47:43 that nice guy gets garbage can, but
+47:48 why I don't know, some part of me is
+47:50 wishing the world wasn't that way.
+47:52 >> Sure.
+47:52 >> Is it possible to build an org where if
+47:55 you're you're nice and you wait your
+47:57 turn that the because you're you could
+48:00 choose as like as the VP you say, I'm
+48:02 going to reward the nice people that
+48:05 don't pressure.
+48:08 you can to some degree. Um, first note
+48:12 that the org I described where I had all
+48:13 those random things was also the garbage
+48:15 can. So, I built the garbage can kind of
+48:17 opting into it like I will take all of
+48:19 your junk and that is my role, right?
+48:22 >> He was not doing that in the same way,
+48:24 but there was some of that. Uh, the
+48:27 problem with only rewarding the nice
+48:29 guys is number one,
+48:33 sometimes the nice folks don't actually
+48:36 want more. In other words, ambition
+48:40 tends to come out. And if people are
+48:43 really ambitious, they do usually end
+48:45 up, not always, but they usually end up
+48:47 more vocal.
+48:48 Second though,
+48:51 I have the problem that I do have all
+48:53 these vocal people and
+48:56 what they're going to do usually is not
+49:00 become less vocal just because I have an
+49:02 example of play nice and you'll move up.
+49:04 They're going to look for where can I go
+49:06 that's going to reward me right away.
+49:09 And so,
+49:11 of course, maybe a better leader than I
+49:14 can build this culture where all the
+49:15 nice people are rewarded and all the
+49:17 sort of less nice people see the see the
+49:20 error of their ways and become naturally
+49:22 generous. But I just that isn't human
+49:25 nature.
+49:26 >> And so I think there is some balancing.
+49:30 What I often do, as you heard from my
+49:31 coaching, and I'll be honest, is I tell
+49:33 the nice folks,
+49:36 being that nice isn't helping you. You
+49:38 don't have to be a jerk. You have to do
+49:40 what I did where you say
+49:43 my career is very important to me. It's
+49:46 okay. It's okay to have where people
+49:49 fall down is they come particularly in
+49:52 tech from non- US cultures that are
+49:56 collectivist or have different mores and
+49:59 where asking for what you want or
+50:01 speaking up
+50:03 culturally doesn't fit. I see this a lot
+50:08 particularly with women from Asia,
+50:11 different parts of Asia. At home,
+50:14 they're expected culturally to take one
+50:17 role which is often more family oriented
+50:20 and supporting of parents and
+50:21 grandparents and so on, but then to get
+50:23 ahead in work, they need to be a little
+50:25 bit more outspoken. And it's a big
+50:28 contrast.
+50:30 Um, I would just say it's okay to ask
+50:33 for what you want. That isn't that isn't
+50:36 wrong. And
+50:40 managers,
+50:42 even good managers, they're not in the
+50:44 business of guessing. If you've never
+50:47 told me what you want,
+50:49 sure, in theory, I should ask you, but
+50:51 I'm very busy. And so sometimes I get
+50:53 around to that and sometimes I don't.
+50:55 Meanwhile, this other person, you know,
+50:57 every three days is knocking on my door.
+50:59 I'm super clear on what they want. When
+51:01 it comes to engineers, there's one one
+51:05 layer to think of. And so if someone's
+51:06 low performing, there may be your peer.
+51:09 But if you have a low performing
+51:10 manager,
+51:12 >> there's this there's this vertical
+51:13 stacking that we have.
+51:15 >> You might be reporting to someone who
+51:17 you think is not great at their job. And
+51:20 so the natural thought is go to their
+51:21 manager, which would be your skip,
+51:24 >> which I guess you could consider this as
+51:26 mutiny. If you went to them and you
+51:27 said, "Hey, my manager is bad. I don't
+51:31 want to report to this person. Do you
+51:33 have any examples of of this kind of
+51:36 escalation coming to you where someone
+51:38 in your recursive chain was considered
+51:40 incompetent by their reports?" And they
+51:42 came directly to you and they said,
+51:44 "Please manage this person out or I just
+51:47 don't want to report to this person."
+51:48 >> All the time. All the time. One of the
+51:52 hardest things for people to understand
+51:54 is I've identified a legitimate weakness
+51:56 in my boss. I go to my skip. Why doesn't
+51:59 he do something? Well, if you come to me
+52:02 with a weakness in one of my employees,
+52:06 there is
+52:08 subconsciously this process that goes on
+52:10 that says, I have two choices. I can
+52:13 believe that you're overly sensitive and
+52:14 high maintenance,
+52:16 in which case I don't really have a
+52:18 problem. You're the problem.
+52:21 and you know, you're two levels down for
+52:23 me. So, if you quit, the manager has to
+52:25 do the back fill. And I can tell the
+52:28 manager, you know, Ryan was here. He
+52:29 said this, that, and the other. Maybe
+52:31 you can work with him. And that's
+52:34 exactly what you don't want is me
+52:35 ratting you out. But I can make it my
+52:37 manager's problem. On the other hand, if
+52:40 I agree with you and I'm like, you know
+52:41 what, this this manager I have really
+52:43 isn't that good. Now, I have three
+52:45 problems. This is really bad for me.
+52:48 One, I have to decide what to do with my
+52:50 manager. Maybe I have to manage them
+52:52 out. Two, if I do manage them out, I
+52:55 have to hire and train somebody else.
+52:57 And three, while they're gone, I have to
+52:58 do all their work myself. So, you can
+53:01 see why even if it's subconscious, I
+53:03 have a lot of reasons not to listen or
+53:06 not to believe very easily. So, mutiny,
+53:09 let's talk about mutiny. If you want to
+53:12 see it as a mutiny, we've talked about
+53:13 pirates already.
+53:15 Never mutiny alone.
+53:18 If you want that to work, if you really
+53:20 want to say this manager is bad and we
+53:22 have a problem,
+53:24 take two or three people or send two or
+53:26 three people in sequence. Find some of
+53:28 your co-workers who are willing to speak
+53:30 up because I will give you an example.
+53:33 It really bothers me. I had a leader who
+53:37 was
+53:39 treating the women on his team like
+53:41 crap. Now, he wasn't doing that in front
+53:43 of me,
+53:45 but it turns out it was true. Well, it
+53:49 took a long time
+53:52 for the different rumors to bubble up to
+53:55 me enough to where I'm like, I'm hearing
+53:58 bad things. And then I went and talked
+54:00 to several of the women. I'm like, so in
+54:03 working with this person, I'm hearing.
+54:05 And they're like, oh yeah.
+54:08 Well, then I was like, oh, okay. I've
+54:10 been blind to a problem. I need to act
+54:12 on it.
+54:15 Had any one of them come to me early and
+54:17 said, "This person's a problem. They're
+54:18 doing this, that, and the other." I
+54:20 probably wouldn't have listened.
+54:24 Because it was a lone report. But when
+54:27 several of those reports came up, then
+54:30 I'm like, "Oh I've been missing
+54:32 something." So if you want to hold a
+54:34 mutiny, go together, right? Like even if
+54:36 it's Zelda, like it's it's dangerous to
+54:38 go alone. Take this. take other people.
+54:41 >> I see. Okay. So, if let's say there's a
+54:43 high performing IC,
+54:45 >> yeah,
+54:45 >> who is reporting to a manager and say
+54:48 the fact is that that manager has some
+54:50 shortcomings in in their abilities.
+54:52 >> You would say don't go immediately to
+54:54 the skip first build allies with some of
+54:58 the other people and say, "Hey, are you
+55:00 also seeing this with this person?" And
+55:02 >> if you can, yeah, you want to talk to
+55:04 them and say, "Hey, do you see what I
+55:06 see?" Well, one thing is that's a way to
+55:07 sanity check.
+55:10 I'm really struggling with our boss in
+55:12 this area. Do you are you having that
+55:14 problem? And if they say no, I get along
+55:17 with them great and here's how. Then
+55:18 maybe you can learn and adjust. That's
+55:20 the style thing. Whereas if they're
+55:22 like, oh yeah, then the hardest next
+55:25 hurdle is are they willing to speak up?
+55:28 Because a lot of people aren't. But if
+55:31 they know that you're going to go first
+55:32 and play ring leader, like I will go
+55:35 talk to our skip, but I'm going to tell
+55:37 our skip. They can verify my story by
+55:40 talking to you or and and also to Sally
+55:42 or Fred or Rajie.
+55:46 Most managers, if you go to them and
+55:48 say, "Look, I know that my saying the
+55:51 boss is a weak link is uncomfortable and
+55:54 difficult for you, but these three
+55:57 people are all willing to share similar
+56:00 stories. Would you consider at least
+56:01 talking to them?
+56:05 Most managers will do that. Most, you
+56:08 know, not all. There's no there's no
+56:10 guarantees when you're dealing with
+56:11 people." I mean that's yeah that's the
+56:13 immediate thing I imagine is let's say I
+56:15 was that IC and then I went to other
+56:17 people and we all kind of knew that that
+56:19 person had a shortcoming.
+56:21 It's there's the difference between that
+56:24 that water cooler talk and saying yeah
+56:26 this person is disorganized. Uh yeah, he
+56:28 keeps doing that compared to hey, I'm
+56:31 going to go to his boss now and we're
+56:34 going to we're going to make take this
+56:36 up a notch because also there's this
+56:38 this delicate balance which is all these
+56:41 people still report to that person. So
+56:43 now
+56:44 >> if you were to get caught at any point
+56:46 in this process, you might worry about
+56:48 retribution or something if you're
+56:50 wrong.
+56:51 >> Um what about the path of because that
+56:53 this is a this is a lot. I mean, your
+56:55 man needs to be pretty bad if you do
+56:57 this.
+56:58 >> What about the approach of you say,
+57:00 "Hey, it's just me and him." and you
+57:03 want to go to the skip and say, "Hey,
+57:06 Ethan, um, you know, nothing nothing
+57:09 personal with the person that I'm
+57:10 reporting to, but I see a better
+57:14 business case for me to go to another
+57:16 team or, you know, something like that
+57:18 where you word it and say, I you know,
+57:20 don't don't think poorly of this
+57:22 manager, but I'll be more productive
+57:24 somewhere else for your org." What about
+57:27 that approach rather than the the
+57:29 >> Well, you're blending two approaches. Um
+57:33 the first is which is
+57:35 remember we talked about the story you
+57:38 tell versus the story that may be true.
+57:41 If you can actually make a strong case
+57:43 that you're equally valuable or more
+57:45 valuable somewhere else, a plausible
+57:47 case, don't even bring up the manager.
+57:50 just say, "Hey, I was looking at this
+57:52 other role and I think I could do so
+57:54 much more for you in the or over here
+57:56 because of A, B, and C." And you try
+57:59 that run first. And if that works,
+58:01 you're done. You never have to bring it
+58:02 up. The second thing you can say, you've
+58:06 just you've got to you've got to play
+58:08 chess, not checkers, meaning several
+58:10 moves in advance. You can totally say,
+58:12 "Look, candidly,
+58:15 you keep it blame free.
+58:17 I'm not compatible
+58:20 with
+58:22 our leader. I'm not Maybe it's him,
+58:24 maybe it's me. Of course, I naturally
+58:26 feel that maybe I'm doing good work and
+58:28 and he could improve, but I'm not here
+58:31 to throw your manager under the bus. I'm
+58:33 just here to tell you I need a change.
+58:36 And I did this once with a leader at
+58:39 Amazon where I wanted to make a change.
+58:41 I was doing a good job for him in the
+58:43 role I was in. So, he wanted me to stay
+58:45 there. And what I had to help him
+58:48 understand is I said,
+58:50 "You are seeing this as I take this new
+58:54 role or I stay in this role and you'd
+58:58 prefer I stay in this role because
+59:00 that's good for you." And I get that.
+59:02 But what I'm trying to tell you is
+59:04 either I take this new role in your org
+59:06 that I'm asking for or I'm going
+59:09 somewhere else entirely. So there is no
+59:12 choice. Keep me where I'm at. there's do
+59:14 you want me on your team or on someone
+59:15 else's team. Now, I had both options
+59:18 available. And it was really interesting
+59:21 because after weeks and weeks of
+59:22 resistance, I was in the new role the
+59:24 next morning. Like once he got to
+59:26 clarity of, oh, I thought I had a choice
+59:30 between you stay in the role I want you
+59:32 in and you go to the role I don't really
+59:34 want you in, but the choice I actually
+59:37 have is I keep you in my team or I lose
+59:40 you.
+59:42 It was totally different the next
+59:43 morning.
+59:44 >> But how how did you word that in a way
+59:46 where that person you were reporting to
+59:47 did not feel upset that you kind of
+59:51 subverted their power and
+59:53 >> forced their hand?
+59:55 >> Um that's a good question and so I can
+59:57 exemplify that. I framed it in terms of
+59:59 what they would do. Uh this person was a
+1:00:02 vice president at that point. I was a
+1:00:04 vice president reporting to them. So, I
+1:00:06 was like a smaller vice president,
+1:00:07 whatever, lower in level,
+1:00:10 and I had gotten a job offer from a
+1:00:13 senior vice president in a different
+1:00:14 organization.
+1:00:16 That was my other job. So, I went to him
+1:00:19 and I said, "I have an offer
+1:00:23 from this SVP.
+1:00:26 Now, you know that if I give my word to
+1:00:30 that guy, I have to go." Like, that's
+1:00:32 what you would do. If I give my word,
+1:00:34 it's over.
+1:00:36 You know, I really want this other role.
+1:00:38 I have to give this guy an answer.
+1:00:40 You've told me no on this other role
+1:00:42 several times. What do you want me to
+1:00:44 do?
+1:00:46 Bam. The door. Like, because once he
+1:00:48 understood, he understood
+1:00:50 he would never break his word to an SVP.
+1:00:52 So, he understood that the moment I gave
+1:00:54 my word, it was done. And so,
+1:01:00 that's the same like what would you do?
+1:01:02 If you can tap into the manager feeling
+1:01:05 like, "Okay, I don't like it, but I get
+1:01:07 it."
+1:01:07 >> That's what I was doing is he was like,
+1:01:09 "Oh, I don't like this, but okay, I get
+1:01:11 it."
+1:01:12 >> There were three roles that under
+1:01:14 consideration.
+1:01:14 >> Well, there was the one I was in and the
+1:01:16 one I really wanted and the alternative
+1:01:18 I had gotten on the table.
+1:01:20 >> So, you brought in a a new option that
+1:01:22 was better than your current and you
+1:01:24 said, "My alternative now is I may leave
+1:01:26 you unless you give me what I want." But
+1:01:28 you didn't say that directly, right?
+1:01:29 >> I didn't say that what I want. Instead,
+1:01:31 I said I actually I'm very careful not
+1:01:33 to make it that threatening. I said, you
+1:01:35 know, once I give my word, I'm I can't
+1:01:37 go back on that. Like
+1:01:41 that's
+1:01:43 that the the wording is I as soon as you
+1:01:46 say it, I think I mean if I was that
+1:01:48 manager, I I there's I'm on your side
+1:01:51 even though I see the what was the what
+1:01:55 was the word there? The polite fiction,
+1:01:57 I guess. I see the play fiction
+1:01:59 immediately, but I laugh because it's
+1:02:01 just so and I think this is a skill I
+1:02:05 haven't figured out how to teach people,
+1:02:07 but maybe this talk can help.
+1:02:11 Several times I've given you these
+1:02:13 polite fictions, these careful wordings.
+1:02:16 I think a mistake people make that they
+1:02:19 can do so much better is think through
+1:02:22 your wording before you're in the room.
+1:02:24 Because most of these conversations are
+1:02:26 not spurof the- moment. You either
+1:02:29 they're either on the calendar, this is
+1:02:31 my performance review or whatever, or
+1:02:34 you at least know they're going to come
+1:02:36 up. And so spend the time to have that
+1:02:39 key phrase ready so that you can just
+1:02:42 with true sincerity
+1:02:45 say, "Yeah, you know, once I give my
+1:02:48 word, I can't go back on that."
+1:02:52 And I deliver that I look like I I did
+1:02:57 mean it. In no way was I lying, but at
+1:02:59 the same time I deliver it like I'm an
+1:03:01 angel just fallen from heaven. You know,
+1:03:05 poor innocent victim.
+1:03:07 >> Both are true. And when I put the screws
+1:03:10 to that other boss long ago and said,
+1:03:13 "Well, I'm gonna have to consider if my
+1:03:15 career is not as important to Amazon as
+1:03:17 it is to me. I'm gonna have to think
+1:03:18 about that." Again, I said that with a
+1:03:20 warm smile, like, "Hey,
+1:03:23 of course I'm gonna have to think about
+1:03:24 that." And I just look like the kitten,
+1:03:27 you know, the anime kitten with the
+1:03:28 giant eyes. Well, body language matters
+1:03:32 because if I say that to you, see, I can
+1:03:34 say that differently. I can say, "Well,
+1:03:35 Ryan, you know, if my career is not as
+1:03:38 important to Amazon as is to me, I'm
+1:03:40 going to have to think about that." Then
+1:03:43 you're like, "Well, screw you,
+1:03:44 >> right?" Whereas if I say, "Well, of
+1:03:46 course I'm going to have to think about
+1:03:48 what that means for me."
+1:03:50 Totally different delivery. Same lines,
+1:03:52 same words. Now, there's some people
+1:03:54 watching this, engineers, who are like,
+1:03:55 "I hate you. I hate the politics. I hear
+1:03:58 you, but this is human nature and human
+1:04:00 interaction. You're dealing with other
+1:04:03 humans and their emotions are at play
+1:04:05 and their defensiveness and their own
+1:04:07 stress.
+1:04:09 Do yourself a favor and get good at
+1:04:11 this."
+1:04:12 >> Well, yeah. And to me, that that is
+1:04:14 clearly your superpower. I mean,
+1:04:18 I can imagine so many other people in
+1:04:20 these situations not getting the
+1:04:22 outcomes they want because they word it
+1:04:26 slightly differently and it doesn't come
+1:04:28 off, you know, the the way they say it
+1:04:30 and and kind of the the the the
+1:04:33 interplay about what that person wants
+1:04:35 and the things that you could say. And
+1:04:37 how do you do that? Like if we were to
+1:04:39 try to reverse engineer like coming up
+1:04:41 with those polite fictions so that
+1:04:43 people can get more of what they want
+1:04:45 out of their careers. I I imagine this
+1:04:47 would be useful even outside of your
+1:04:49 >> It's all through your life.
+1:04:50 >> Yeah. All throughout your life.
+1:04:51 >> It's all it's all any any negotiation,
+1:04:55 any deal making.
+1:04:58 Um
+1:05:01 I call it I've tried to reverse engineer
+1:05:04 and we'll do some more right here right
+1:05:05 now. I call it being interpersonally
+1:05:10 warm. So being friendly, smiling, not
+1:05:13 getting agitated while being
+1:05:15 professionally firm, saying what I need
+1:05:18 to about what I really want, but in a
+1:05:21 way where I don't bring anger or you
+1:05:25 versus me into it as much as I can. And
+1:05:28 so um there are some key phrases.
+1:05:33 Uh, a great phrase is help,
+1:05:36 right? How how can you help me? I I want
+1:05:39 to get to the next level. How can you
+1:05:42 help me? Because
+1:05:45 everyone loves to think of themselves as
+1:05:47 helpful. And so if I ask you for help,
+1:05:51 you know that that's just as opposed to
+1:05:53 I ask what are you going to do for me?
+1:05:55 It's that sort of phrasing.
+1:05:58 Um, so part of it is the attitude. I
+1:06:00 read a book I really love. I can share
+1:06:02 the book. It's called Leadership and
+1:06:05 Self-Deception.
+1:06:07 >> Uh, and it's written by some research
+1:06:09 institute called the Arbinger Institute.
+1:06:12 But what makes this book so interesting
+1:06:14 and what it taught me is don't see the
+1:06:17 other person as an obstacle to what you
+1:06:20 want. See them as a human being trying
+1:06:22 to do the best they can in their
+1:06:24 situation who has all kinds of problems.
+1:06:27 And what makes a huge difference here is
+1:06:29 when I start seeing my boss, who I want
+1:06:31 something from, not as, well, this
+1:06:33 person controls my pay or my promotion,
+1:06:35 and I have to yank it out of them.
+1:06:37 That's seeing them as a thing. They're
+1:06:39 an obstacle, like a barrier across the
+1:06:41 road. If I see them as a human trying to
+1:06:43 get by, then I can emote to them and
+1:06:47 say, "Look, here's what I need. What do
+1:06:50 you need so we can make this work? I
+1:06:52 want to help you because I want your
+1:06:54 help." And that's an honest offer most
+1:06:57 people can understand. And so
+1:07:00 it comes from that how do I see them? I
+1:07:04 think this is a huge thing is
+1:07:06 we objectify others. This happens
+1:07:09 anytime you're working with another
+1:07:11 team. As an engineer, you do this all
+1:07:12 the time. I just need them to do this
+1:07:14 thing. How can I? Your thought is how
+1:07:17 can I get them to do this thing?
+1:07:20 That's making them an object. I need to
+1:07:23 give you the right inputs and yank on
+1:07:24 the right levers so that the right thing
+1:07:26 comes out. I'm treating them like an
+1:07:27 API. I make the right call, I get the
+1:07:29 right result.
+1:07:31 What you want to do is treat them like a
+1:07:32 person and say, "Look, I know you have a
+1:07:34 busy road map and I understand you have
+1:07:37 a lot of pressures, but I do need this.
+1:07:40 So, what can we do together? How can I
+1:07:42 help you so that you can make the time
+1:07:44 or let me make this change myself?"
+1:07:47 And the key is
+1:07:50 once people feel like you're caring
+1:07:53 about them as a person, they usually
+1:07:56 respond that way. Now, nothing works
+1:07:59 100% of the time. And I can't instantly
+1:08:03 recall one, but I've probably rolled out
+1:08:06 these polite phrases before and not one.
+1:08:08 Like I um I was debating politics with
+1:08:12 my college roommate and I thought to
+1:08:14 myself, this is very recent.
+1:08:17 I'm going to use all I teach all day
+1:08:20 about how smooth I am and how
+1:08:22 influential I am. I'm going to use all
+1:08:24 my skills and I'm going to convince him
+1:08:26 of this point in modern American
+1:08:28 politics which is very contentious. I
+1:08:31 failed.
+1:08:32 The best I can say is that we left the
+1:08:35 conversation, nobody angry, friendly,
+1:08:39 >> but I I kind of got nowhere because
+1:08:42 sometimes
+1:08:44 sometimes their motives and what's
+1:08:45 important to them just can't be aligned
+1:08:48 with yours. So, I'm not My only point
+1:08:50 here is these techniques will get you
+1:08:53 way more success. I don't want to
+1:08:55 convince anybody
+1:08:58 that like I have some magic recipe
+1:09:00 that's 100% likely to always work out.
+1:09:03 You said a few things and it sounds like
+1:09:06 you had some highlevel
+1:09:09 rules you could you could give, but it's
+1:09:12 hard to reverse engineer it because it's
+1:09:14 it's not a recipe. inevitably it's it's
+1:09:17 two people interacting and every single
+1:09:19 person's different and seems like the
+1:09:22 the unifying thing is to really imagine
+1:09:24 what is that person feeling and when you
+1:09:28 say things to them what do they want and
+1:09:31 how will how you present yourself make
+1:09:33 them feel in the exchange and hopefully
+1:09:37 that goes in the direction you want but
+1:09:39 obviously not always because it's
+1:09:41 subjective and you can miscalculate
+1:09:43 >> so I think an analogy that may work for
+1:09:46 at least people who know chess a little
+1:09:48 bit about chess
+1:09:50 is I think of this a little bit like I'm
+1:09:53 not an expert chess player but I
+1:09:55 understand there's two pieces to playing
+1:09:58 chess well one is of course knowing the
+1:10:02 board and how to move the other is
+1:10:04 called a book opening where you've
+1:10:06 memorized a set of opening moves and I
+1:10:09 think what you can do in a lot of these
+1:10:10 conversations is open with a set of
+1:10:14 pre-plann planned moves where you've
+1:10:16 thought about how am I going to make my
+1:10:18 first ask and you've thought about uh
+1:10:23 when am I going to do it? Like don't
+1:10:25 catch your manager wanting to have a
+1:10:27 deep conversation about career five
+1:10:29 minutes after
+1:10:31 a high severity problem on a Friday.
+1:10:33 Like they're not in the mindset, right?
+1:10:36 If their hair's on fire and they're
+1:10:37 trying to get out the door to pick up
+1:10:38 their kids, this is not when you're
+1:10:40 going to get the best hearing. So
+1:10:44 in the play chess analogy, set up your
+1:10:47 opening moves. But then yes, at some
+1:10:49 point there are some general rules about
+1:10:50 chess. Again, I'm no expert, but like in
+1:10:52 chess, you want to hold the middle of
+1:10:53 the board. Being towards the middle is
+1:10:56 so if you have a chance to move towards
+1:10:57 the middle, move towards the middle.
+1:10:58 Well, with a manager or any leader that
+1:11:01 you want something from,
+1:11:03 try to move towards that common ground
+1:11:05 where we can agree.
+1:11:08 But yeah, it's about learning how to
+1:11:09 play well. Um, and I've spent a career
+1:11:15 learning how to play well in verbal
+1:11:19 conversation.
+1:11:21 And I think the biggest thing I used to
+1:11:23 have quite a temper. I actually got
+1:11:25 fired two separate times, put on layoff
+1:11:28 list because I was volatile and critical
+1:11:30 early in my career.
+1:11:34 I put the temper away and I I learned
+1:11:38 how not to go there and that made a huge
+1:11:42 difference because people don't react
+1:11:44 well to anger or criticism,
+1:11:46 >> right?
+1:11:46 >> Even if you're right.
+1:11:48 >> So I mean obviously you're very adept at
+1:11:50 this interpersonal
+1:11:52 uh way to influence people. when you
+1:11:55 were working in corporate America and
+1:11:57 you met someone else who you identified
+1:12:00 had that skill set. Let's say some
+1:12:03 manager underneath you or maybe managers
+1:12:05 in other orgs or could be an engineer as
+1:12:07 well.
+1:12:07 >> Y
+1:12:08 >> is that something that in your mind
+1:12:11 that's a positive thing or is that
+1:12:13 something where you're thinking I have
+1:12:14 to be careful because that person can
+1:12:16 mold things around them strongly?
+1:12:19 >> Both. What you're trying to do next is
+1:12:22 assess what's their motive. People often
+1:12:25 ask me what's the difference between
+1:12:27 influence and politics like when does
+1:12:30 influence become politics or
+1:12:31 manipulation? And for me the answer is
+1:12:33 the skill sets are the same. They're
+1:12:36 around motive.
+1:12:38 And so one thing I teach executive
+1:12:40 presence and one thing I point out about
+1:12:44 executive presence is Darth Vader had it
+1:12:46 in spades. Like he had tons of executive
+1:12:49 presence and so did Palpatine, right?
+1:12:51 They're these powerful commanding
+1:12:52 figures.
+1:12:54 These skills being influential can be
+1:12:57 used for good or evil. So with the
+1:13:00 example you're talking about, the thing
+1:13:02 I'm now trying to figure out is okay,
+1:13:03 this person is a skilled operator,
+1:13:07 you know, are they US special forces or
+1:13:09 are they Russian special forces, right?
+1:13:11 Like like which side, you know, who am I
+1:13:13 dealing with here, right? Am I am I
+1:13:16 dealing with someone who's going to like
+1:13:18 rescue me and get me out of a hostage
+1:13:20 situation or am I dealing with someone
+1:13:21 who's across the line and is about to
+1:13:23 drop a bomb on me? And so I'm trying to
+1:13:28 figure out motive.
+1:13:29 And um there's kind of three cases even
+1:13:33 there. There's people whose motive is to
+1:13:35 do good, easy to work with, great. We
+1:13:37 both have high social skill. We're going
+1:13:39 to be so effective together.
+1:13:41 There's people who are completely out
+1:13:43 for themselves now. You know, going back
+1:13:47 to Star Wars, it's very much like Sith
+1:13:49 versus Jedi. I've got to get my
+1:13:51 lightsaber up and I'm going to be
+1:13:52 fighting for my life.
+1:13:54 And then there's this middle ground,
+1:13:56 though that's interesting, which is,
+1:14:00 well, this person has motives I can work
+1:14:03 with. They're not altruistic. They're
+1:14:05 not just trying to do well, but in this
+1:14:08 case, they kind of want what I want or I
+1:14:11 can give them enough wins and I can
+1:14:12 negotiate. I can just be like, "Hey, you
+1:14:15 want this? I want that." And that's the
+1:14:16 deal making of of
+1:14:18 >> we're never going to be best friends. I
+1:14:20 don't necessarily think you're the best
+1:14:24 person,
+1:14:25 but in this limited scope,
+1:14:29 we can both make money together or we
+1:14:31 can both ship something together.
+1:14:33 Let's say there's someone who is extreme
+1:14:36 high performer, but you can tell they
+1:14:39 they will only do what will help them.
+1:14:43 And you see a path to aligning what you
+1:14:46 both want. So, it can be good.
+1:14:48 >> But you could tell that if this is ever
+1:14:51 off their path, they will not be on your
+1:14:54 side. Or in fact, if there's something
+1:14:56 that could get them ahead and put you
+1:14:58 behind, they would gladly do it. Would
+1:15:01 you still choose to ally with that
+1:15:02 person or would you kind of separate
+1:15:05 them from you and your org somewhere?
+1:15:07 >> Well, if I could separate, I'd love to,
+1:15:09 but remember at work we don't get to
+1:15:11 choose always the teams we work with.
+1:15:13 Like sometimes we need another team.
+1:15:15 Sometimes we need a team that's run by a
+1:15:18 terrible person. Sometimes we need a
+1:15:20 team that's run by a self-serving
+1:15:22 person.
+1:15:24 I think
+1:15:26 if you want to succeed in your career
+1:15:27 most,
+1:15:29 sure, get away or marginalize or or
+1:15:32 minimize contact with difficult or
+1:15:34 unethical people, but also learn to work
+1:15:39 even with the very unethical
+1:15:42 because sometimes you're going to have
+1:15:44 to. Now, of course, there's a limit. I'm
+1:15:46 not saying break laws or do, you know,
+1:15:49 but
+1:15:50 >> um
+1:15:52 but sometimes you don't get to choose
+1:15:55 who your teammates are or what system
+1:15:57 you need. And so I do think it's worth
+1:16:00 being equipped. How am I going to do the
+1:16:03 best I can? And there are there's yeah,
+1:16:06 we don't have time. There's a lot of
+1:16:07 techniques to protect yourself. There's
+1:16:10 bring allies with you. For example, most
+1:16:13 slippery people,
+1:16:15 they love to be slippery in the dark
+1:16:17 where they're not going to get caught.
+1:16:19 So if you can bring a few allies so it
+1:16:23 looks like, oh, everyone thinks this,
+1:16:27 often suddenly they'll say, I think that
+1:16:28 too. because they, you know, part of
+1:16:31 their power is
+1:16:36 slippery people
+1:16:38 usually can't afford to have everyone
+1:16:41 know that they're unethical because once
+1:16:46 we know once everyone knows someone's
+1:16:47 unethical, they do get shunned and and
+1:16:50 so they have to keep it largely under
+1:16:53 wraps or
+1:16:55 defensible.
+1:16:57 uh what there's a phrase from politics
+1:16:59 called plausibly deniable where they can
+1:17:01 deny that they were really as bad as
+1:17:03 maybe you're saying.
+1:17:06 What you want to do is put them in a
+1:17:07 situation where it's easier to go along
+1:17:09 with you than to fight you. So construct
+1:17:13 a situation where they're like, "Okay,
+1:17:15 this isn't the best for me. Like I'd
+1:17:17 rather stab Ethan in the back, but boy,
+1:17:20 there's a lot of witnesses."
+1:17:22 Right? That's and so you and it's
+1:17:25 unfortunate you know again I know many
+1:17:27 engineers will be frustrated why do I
+1:17:28 have to do all this crap can't I just do
+1:17:30 good work why why sorry humanity going
+1:17:34 back by the way read any you know
+1:17:36 ancient text of philosophy or religion
+1:17:39 humans haven't changed they've been mean
+1:17:41 to each other since the first ape club
+1:17:43 the other ape
+1:17:45 this doesn't change so it's I'm sorry
+1:17:48 that it frustrates you but you're going
+1:17:50 to have to do it so it sounds Like the
+1:17:53 best way to prevent yourself from from
+1:17:56 backstabbing is to have a really strong
+1:17:59 I guess soft power in your org where
+1:18:02 there are people who will defend you or
+1:18:04 just the setup is that you would be too
+1:18:07 powerful for them to come after you.
+1:18:09 >> Not worth it.
+1:18:10 >> Not worth it.
+1:18:10 >> Right. It's it's uh it's like all the
+1:18:12 animals in the animal kingdom, you know,
+1:18:14 like a porcupine,
+1:18:16 right? Plenty of animals can eat a
+1:18:18 porcupine if they're willing to get a
+1:18:19 mouthful of quills, but it's not worth
+1:18:21 it. like you know uh and I'm sure there
+1:18:25 are many other examples but you you you
+1:18:29 want to be not worth it. It's just
+1:18:31 easier because remember this is
+1:18:34 important other than cartoons like a
+1:18:37 Darth Vader.
+1:18:39 People don't wake up in the morning that
+1:18:41 slippery person does not wake up in the
+1:18:43 morning and say I'm an evil jerk and
+1:18:45 that's all I ever want to be. Their
+1:18:48 self-narrative is more like
+1:18:51 I'm doing what I need to. I'm practical.
+1:18:55 Other people are wishy-washy and have
+1:18:57 all these optimistic things. I'm
+1:18:59 practical. And some people get upset
+1:19:02 that I'm so practical. Well, that's not
+1:19:03 my fault. That's what they're telling
+1:19:05 themselves. And so, what you want to do
+1:19:08 is help them with their narrative and
+1:19:10 say, you know what, you're right. You're
+1:19:12 very practical. And in this situation,
+1:19:14 the practical thing is to go ahead and
+1:19:17 help me out because I've got a lot of
+1:19:20 support and you know, I'm a rising star
+1:19:24 and it's you help me out and I'll
+1:19:26 remember and and they're like, "Oh, that
+1:19:29 is very practical." You know, even
+1:19:31 though and that that's just it's
+1:19:35 important to remember that the other
+1:19:36 person's narrative we think of them as
+1:19:38 like that person is so unethical. They
+1:19:42 must wake up in the morning and think
+1:19:44 about how they can rob their
+1:19:46 grandmother. That's not what they say
+1:19:47 about themselves. They say, you know,
+1:19:49 grandma's getting old and I need to
+1:19:51 manage her funds because she's not
+1:19:53 really up to it anymore and she doesn't
+1:19:55 need all that anyway.
+1:19:58 >> But that is what they tell themselves,
+1:20:00 right? Not I'm a thief. What about I
+1:20:02 mean I think a lot of what we talked
+1:20:03 about is kind of implying within your
+1:20:06 org. Mhm.
+1:20:07 >> Have you ever seen cases where other
+1:20:09 orgs were plotting to maybe take scope
+1:20:12 from your org or kind of, you know,
+1:20:14 battling between the org uh orgs?
+1:20:18 Oh jeez.
+1:20:21 I've seen this all the time. And you
+1:20:24 know, again, the narrative people are
+1:20:26 telling themselves is not usually, I'm
+1:20:28 going to pillage scope from that other
+1:20:30 org. It's they know their own org and
+1:20:34 their own mission really well. So they
+1:20:36 have a really clear idea why having your
+1:20:38 scope would help them. Meanwhile, they
+1:20:41 don't know your mission and they don't
+1:20:43 know everything you're really doing. And
+1:20:45 so it's very easy for them to imagine
+1:20:49 that your org is not that important. A
+1:20:52 very smart engineering leader once said,
+1:20:55 "Respect between two engineering teams
+1:20:57 is inversely proportional to their
+1:20:59 distance." So the further apart they
+1:21:02 are, the more they belittle each other
+1:21:03 because they can't see the work. And you
+1:21:06 hear this all the time. Like I think of
+1:21:07 Amazon S3, right? This service that
+1:21:10 stores now hundreds of trillions of
+1:21:13 objects. I've heard it described as
+1:21:16 well, it's just a big disc drive.
+1:21:19 So this is very belittling like like of
+1:21:21 course at some level it is just a big
+1:21:23 storage system. That's true. But the
+1:21:26 boil down ah it's really just a big disc
+1:21:28 drive is so dismissive and you see this
+1:21:32 all the time.
+1:21:34 And the closer you get to home, the more
+1:21:36 you've seen the work or worked with the
+1:21:37 people or seen the complexities and all
+1:21:39 the edge cases, you're like, "Oh,
+1:21:40 actually that is very complicated."
+1:21:42 Well, I see this with orgs. Sure, there
+1:21:45 are some leaders who are just like,
+1:21:46 "Yeah, we should take that or because I
+1:21:48 want it." But a lot of times what
+1:21:50 they're doing is like, "Well, we can do
+1:21:51 so much more with it." Again, that
+1:21:53 internal narrative,
+1:21:55 very few humans wake up and say, "I'm
+1:21:58 going to be evil today." What they do is
+1:22:00 they want something and they construct a
+1:22:02 line of logic which we're very good at
+1:22:04 about why that's actually a great thing
+1:22:06 anyway.
+1:22:08 And and that's where you get the org
+1:22:10 versus org fights.
+1:22:12 >> Let's say I'm an engineering leader.
+1:22:14 >> How do I protect my org from other orgs?
+1:22:18 >> Uh well, first thing is you've got to
+1:22:21 get all um h this is the skunk trick. I
+1:22:24 guess we'll use animals here. The skunk
+1:22:26 trick is make yourself unattractive. So
+1:22:28 trick number one is list all the things
+1:22:31 that they don't know about that you have
+1:22:32 to maintain that are unsexy and they
+1:22:35 don't want and have the customers for
+1:22:36 those show up and say how important they
+1:22:38 are. Oh yeah well we actually run you
+1:22:41 know the Yugoslavian Yugoslavia is not
+1:22:43 even a country anymore but we'll use
+1:22:45 that. We run the Yugoslavian tax engine
+1:22:48 and so boy we get a lot of tickets for
+1:22:50 that and it's going to have to be owned.
+1:22:52 So are you guys ready to take on that?
+1:22:55 That's one thing you could do. The other
+1:22:56 thing is um you want to make yourself
+1:23:00 thorny. Again, there is a little bit uh
+1:23:03 who's the least attractive target. And
+1:23:06 so they're out sort of do they really
+1:23:09 want your org or do they want an org?
+1:23:11 And so one of the ways to be thorny
+1:23:13 honestly is to overreact and attack back
+1:23:18 and just make yourself
+1:23:21 like, oh ouch, they they went public and
+1:23:24 volatile really soon.
+1:23:26 Maybe I'll go for a softer target. Now,
+1:23:28 you have to be careful at how you do
+1:23:30 that because if you
+1:23:33 if you behave in a way that makes it
+1:23:35 easy to discredit you, then you're an
+1:23:37 easier target. Oh, see, Ethan's not a
+1:23:39 very mature leader. We should definitely
+1:23:41 move that under me. I'll I'll make sure
+1:23:43 we don't have this sort of unsemly
+1:23:45 behavior. That's weakening myself. But
+1:23:48 if I can immediately say counterattack
+1:23:51 and say, you know, it's really good that
+1:23:53 you're thinking about merging our orgs.
+1:23:55 your org is gonna be so great as a part
+1:23:57 of our org and I promise I'll take care
+1:23:59 of you. Then they're like, "Oh, maybe
+1:24:02 maybe I, you know, messed with the bull
+1:24:03 and got the horns." So you can So
+1:24:06 there's
+1:24:08 I, you know, I'm uncomfortable talking
+1:24:10 about sort of combative tactics because
+1:24:13 I see when you get to that, it's a
+1:24:14 failure in my opinion. But if someone's
+1:24:19 trying to maneuver and you don't want
+1:24:21 that,
+1:24:22 it's a matter of shining a light on it
+1:24:25 and sort of exposing their motives if
+1:24:27 you can while making a strong case for
+1:24:29 why the work you do is very important.
+1:24:32 Now, where you're vulnerable
+1:24:35 is if your work is behi if if you have
+1:24:37 weaknesses. If your work is behind, if
+1:24:39 it's not making a lot of money, if it's
+1:24:41 performing poorly,
+1:24:43 those are hard cases to make. Whereas if
+1:24:46 you're on a strong platform of high
+1:24:48 performance,
+1:24:50 then you have a lot of arguments
+1:24:52 hopefully about don't distract us.
+1:24:54 Another great one is we know reorgs
+1:24:57 cause a six-month hit in productivity.
+1:25:00 We're killing it on profitability, new
+1:25:03 customers, whatever is valuable.
+1:25:05 We should, you know, we shouldn't even
+1:25:08 talk about this for six months. we need
+1:25:11 to hit these goals and get to year end
+1:25:12 because you know in six months they'll
+1:25:15 have moved on. So one thing that's
+1:25:17 another
+1:25:18 delaying tactic and I hope what you're
+1:25:20 really getting from this answer is how
+1:25:22 quickly I'm coming up with like here's
+1:25:25 three or four different things. You just
+1:25:26 have to look at the situation and say
+1:25:29 how can I put this off, change it,
+1:25:32 scare them off, make myself
+1:25:34 unattractive, whatever I need to do.
+1:25:37 I'm just looking for what's again
+1:25:40 narrative. What's the best story?
+1:25:44 People love to think that facts make
+1:25:46 decisions.
+1:25:48 But what we know from psychology,
+1:25:53 people come to an emotional conclusion
+1:25:55 and then rationalize it. If I am a
+1:25:58 better storyteller,
+1:26:00 I give you that narrative that you're
+1:26:02 like, "Yeah, that sounds right." That
+1:26:04 feels emotionally where you wanted to
+1:26:06 go.
+1:26:07 And then you have a story. I've helped
+1:26:09 you wrap your own story around it. And
+1:26:12 then once it's your story, your internal
+1:26:14 story of how this should be, it's very
+1:26:16 hard for anyone to shake that. So be the
+1:26:18 better storyteller. You mentioned a lot
+1:26:21 of tactics on defense.
+1:26:23 >> Uhhuh.
+1:26:24 >> What about the flip side? Let's say
+1:26:26 you're high performing manager and you
+1:26:28 you see there's a great reason for
+1:26:31 another org nearby to be absorbed into
+1:26:34 your org. What what are the attacker
+1:26:37 tactics?
+1:26:39 Wow, Ryan, when you said we would just
+1:26:41 go deep on transparency, you were not
+1:26:44 kidding. Ah, attacker tactics.
+1:26:48 So, the best attack the, you know, which
+1:26:52 I would argue isn't even necessarily an
+1:26:54 attack, but it has that effect, is a
+1:26:57 real story of how that's going to create
+1:26:59 more value. If you can
+1:27:03 make a point that, you know, whatever
+1:27:06 whatever metric you're using, this group
+1:27:09 puts out one release a year, I can get
+1:27:11 it to two. This group makes $100
+1:27:14 million, I can get it to 200. And here's
+1:27:17 how,
+1:27:19 then that's actually a very good
+1:27:20 argument. If we go to maybe slightly
+1:27:25 less good arguments,
+1:27:27 they usually have to do with seniority,
+1:27:31 efficiency.
+1:27:32 I can save costs. I can by consolidating
+1:27:35 this, we're either going to get more
+1:27:37 done with less, or um we're going to
+1:27:41 have simplicity in our communication, or
+1:27:44 you're going to have fewer direct
+1:27:45 reports, which is going to make your
+1:27:46 life easier.
+1:27:48 They're they're arguments that aren't
+1:27:50 necessarily false,
+1:27:52 but they're less directly about business
+1:27:55 growth and they're more about making
+1:27:58 things smoother for the leader who's
+1:28:00 making the decision or nicer or cheaper.
+1:28:05 They're like second order effects. Um,
+1:28:09 I wouldn't I hope no one would do this,
+1:28:13 but I know people do. The third attack
+1:28:16 tactic is clearly to go highlight flaws
+1:28:20 in the other or right to go show well
+1:28:23 this leader has this problem and this
+1:28:24 team has this problem and they have high
+1:28:26 turnover and they have high cost and
+1:28:27 look at this outage and you're basically
+1:28:31 trying to show well it's a dumpster fire
+1:28:33 and you should let me put that out.
+1:28:35 >> But what if that's true though? Okay. If
+1:28:38 it's true, again, if it's true it's a
+1:28:40 dumpster fire, then
+1:28:43 you're offering to make things better.
+1:28:45 It's where you're kind of highlighting
+1:28:47 things that maybe aren't as bad, you
+1:28:49 know, and just like only pointing at the
+1:28:50 bad.
+1:28:51 >> Yeah. If it's if it's true an or is
+1:28:54 struggling, the truth is you can talk to
+1:28:56 your manager and say, "Look, the way I
+1:28:58 would do that though is not say I should
+1:29:00 take over them. I'll fix them." I would
+1:29:02 say, "Hey," I go to whoever owns it or
+1:29:07 the common boss and I say, "Hey, I can't
+1:29:10 help but notice that you're having a lot
+1:29:12 of trouble here. Is there anything I can
+1:29:13 do to help?" That's my opening gambit
+1:29:16 for I want to take it over because I can
+1:29:20 go in there and start helping and then
+1:29:22 later they're like, "Wow, it's so much
+1:29:23 better under Ethan's leadership." And at
+1:29:25 that point I can casually mention, well,
+1:29:28 you know, if it would really help you,
+1:29:31 you know, we could just consolidate. Now
+1:29:34 that I'm here, I see all these
+1:29:35 efficiencies. That's that's like another
+1:29:37 way to go about the same thing. I feel
+1:29:39 like giving all these answers, people
+1:29:41 are going to think like, "Wow, that
+1:29:42 Ethan is a real sadistic."
+1:29:46 >> I am telling the truth.
+1:29:47 >> Well, this is what actually happens
+1:29:48 though, I think, like what you're
+1:29:50 saying. So, it's kind of um I don't
+1:29:52 know.
+1:29:53 >> I've seen it all. I've seen things, you
+1:29:55 know, that make me want to close my eyes
+1:29:57 for sure.
+1:29:57 >> I kind of want to talk a little bit
+1:29:59 about like I don't know some of that
+1:30:00 interpersonal stuff or maybe, you know,
+1:30:02 the backstabbing and the some of the
+1:30:04 politics.
+1:30:05 >> If there is someone within your org that
+1:30:07 is a people problem, they're
+1:30:10 >> doing something actually. I I don't
+1:30:11 know.
+1:30:12 >> You you can just immediately get them
+1:30:14 fired because they're in your recursive
+1:30:16 reports. Talk to their manager or
+1:30:18 whoever and kind of figure it out
+1:30:21 >> if you have the evidence for sure. But
+1:30:23 yeah, you could absolutely you can move
+1:30:25 very quickly if it's clear.
+1:30:26 >> But what if it's someone in another org?
+1:30:29 So another org, there's a person who is
+1:30:32 wellliked within their org. That is a
+1:30:34 major problem for your org.
+1:30:37 >> But then what do you do?
+1:30:39 >> So
+1:30:41 um one of my managers had this problem
+1:30:44 and he uh he literally put someone in a
+1:30:48 position he called a meat shield. what
+1:30:53 where it's like this person is a huge
+1:30:55 pain for our org or this org. Your job
+1:30:59 is to keep them off of us and honestly
+1:31:02 it's going to be a terrible job but I'll
+1:31:04 reward you later. So you need to like go
+1:31:06 be a meat shield till this project's
+1:31:08 over. And so
+1:31:10 >> the imagery is just
+1:31:11 >> Yeah, I know. It was like it was you
+1:31:12 know like put your back into it and let
+1:31:14 them beat you.
+1:31:16 >> Oh my god. And of course he had to he
+1:31:18 was very honest with them of like that's
+1:31:21 your role and I know it's a terrible
+1:31:23 role but I'll make it up to you know get
+1:31:26 us through this project like go take one
+1:31:28 for the team and I'll pay you back.
+1:31:30 >> Um
+1:31:32 but what else can you do when someone's
+1:31:35 in another org? The first thing the most
+1:31:38 important thing if you want to try and
+1:31:40 make a change is understand why they're
+1:31:42 valuable to their org. Because the
+1:31:45 reason they're
+1:31:47 that other org. What they're not doing
+1:31:49 is saying, "I know we have this evil
+1:31:52 person and as long as they're pointed at
+1:31:55 other orgs, we're okay with them being
+1:31:57 evil." That's probably not what they're
+1:31:58 saying. What they they either aren't
+1:32:01 seeing it or more likely that person
+1:32:04 what they're telling themselves is,
+1:32:05 "Well, they have a little bit of sharp
+1:32:06 elbows, but they get so much done that's
+1:32:08 valuable. It's okay." And if people's
+1:32:11 feelings are hurt, well, they're soft.
+1:32:13 It's kind of how they're So you have to
+1:32:16 understand where are they being seen as
+1:32:17 valuable
+1:32:19 and then what you have to do is go to
+1:32:22 that leadership
+1:32:24 and have one of a few discussions. Look,
+1:32:27 we're willing to give you this value
+1:32:29 without all this pain. Is there a better
+1:32:31 way? That's one way you can go about it.
+1:32:33 The other way you can go about it is,
+1:32:35 look,
+1:32:37 your guy is driving us nuts or is
+1:32:40 mistreating us.
+1:32:43 So, that's going to change.
+1:32:45 Either
+1:32:47 you're going to give us a new interface,
+1:32:49 you're going to you I I can't say you're
+1:32:51 going to fire them, but you're going to
+1:32:53 move them away from bothering us at
+1:32:55 least,
+1:32:56 >> or we're going to stop cooperating,
+1:33:00 right? Like, if if you're going to
+1:33:01 inflict pain on us, we're going to
+1:33:02 return the pain. Everything will be
+1:33:04 late. Everything will be your fault.
+1:33:06 Everything will be escalated. Everything
+1:33:07 will require six document reviews. we'll
+1:33:09 put in place I'll spend the rest of the
+1:33:11 day asking chat GBT what is the most
+1:33:13 policy checkpoints I could put on our
+1:33:15 next release right like this you can
+1:33:18 express this
+1:33:19 >> how do you message that with the right
+1:33:20 narrative without you know pissing off
+1:33:22 >> well I mean if okay so that's that's my
+1:33:26 internal narrative I guess that's my
+1:33:27 like all right screw with me I'll screw
+1:33:29 with you back
+1:33:30 >> my external narrative would go something
+1:33:32 like dear peer of mine this person is
+1:33:36 really making things difficult you know
+1:33:38 you have this person in your team.
+1:33:41 I know they're a valuable member to you
+1:33:43 and your team, but unfortunately our
+1:33:45 team is really struggling with them and
+1:33:48 I'd like to make a change.
+1:33:50 Option one, you can find a new interface
+1:33:54 person for us.
+1:33:57 Option two is we're going to have to
+1:34:01 adjust
+1:34:03 to distance ourselves for the sake of my
+1:34:07 team. And I think unfortunately that
+1:34:11 option is going to create a lot of
+1:34:13 friction between our orgs. That really
+1:34:16 is going to take both of our time. And
+1:34:19 so I don't want to take your time, but I
+1:34:22 have to to protect my people. Some of
+1:34:24 them are ready to leave. what would you
+1:34:26 do if people on your team were ready to
+1:34:28 leave? And so I'm going to have to take
+1:34:30 some steps and that's going to increase
+1:34:32 bureaucracy and take a lot more of your
+1:34:34 time and my time. And I'm sure there's a
+1:34:37 better way.
+1:34:39 >> That's amazing cuz it's the same thing,
+1:34:41 but you didn't
+1:34:43 >> you didn't bluster or threaten all it
+1:34:45 just by circumstance
+1:34:48 if you don't comply your life will be
+1:34:52 harder. But I wish it wasn't, but that's
+1:34:54 just how it is. One thing people
+1:34:55 underestimate is most leaders at a
+1:34:59 certain level,
+1:35:00 they may not have expert social skills,
+1:35:04 but they're pretty they got there for a
+1:35:07 reason.
+1:35:09 They understand what they're being told.
+1:35:13 even if they don't understand it
+1:35:15 consciously, you know, they they get
+1:35:19 they're sensitive to unspoken messages
+1:35:21 and they understand that I'm giving them
+1:35:24 a chance to collaborate,
+1:35:27 but that there's a stick up my sleeve,
+1:35:29 right? That that I didn't come to this
+1:35:31 with no other plan.
+1:35:34 And part of this is also how I project
+1:35:36 how how you
+1:35:40 if you look weak like you're begging.
+1:35:44 I don't really care what you need. But
+1:35:46 you know I'm presenting it as like well
+1:35:47 this is this is really tragic because
+1:35:50 it's going to get hard for both of us.
+1:35:53 And
+1:35:55 what I'm conveying there is look you
+1:35:57 want to trade punches that's okay. I
+1:35:59 play ice hockey and sometimes someone on
+1:36:03 ice will hit me or, you know, be a
+1:36:04 little rough with me and I'll just look
+1:36:06 at them and say, you know, two can do
+1:36:08 this. You, this was your freebie. You
+1:36:10 decide. But I'm like putting him on
+1:36:12 notice like, hey, the next time,
+1:36:16 you know, I have two elbows also,
+1:36:19 right? Well, this conversation makes me
+1:36:21 think that let's say you're an engineer
+1:36:24 or someone who is reporting some you
+1:36:27 want your your leader to to be strong
+1:36:32 for your org cuz I can imagine if
+1:36:34 they're not let's say they're they're
+1:36:37 very nice and you know their org is
+1:36:39 getting I don't know a lot of negative
+1:36:42 things are happening to it
+1:36:43 >> and they just say oh that's okay you
+1:36:45 know we'll deal with it as it comes and
+1:36:47 the everyone else is going to step on
+1:36:49 them and that's going to affect you if
+1:36:52 your manager can't stand up for the org.
+1:36:57 >> Absolutely. And I think remember your
+1:36:59 manager I've tried to showcase that your
+1:37:01 manager doesn't have to be a mean person
+1:37:04 to be firm to be professionally firm to
+1:37:08 have backbone they have to be skilled. A
+1:37:12 lot of people, this is important, a lot
+1:37:14 of people don't know how to be socially
+1:37:17 skilled. And so they can only say hard
+1:37:21 things once they let themselves get
+1:37:22 angry or upset. That's their fuel is if
+1:37:26 I need to give you a hard performance
+1:37:28 message and say, "Ryan, you know, you've
+1:37:30 missed three dates in a row." I can only
+1:37:33 do that once I get internally angry and
+1:37:35 like Ryan's missed three dates. He let
+1:37:37 me down. And so now I'm coming at you.
+1:37:40 I've gotten my ability to speak to you
+1:37:42 and to say the truth
+1:37:45 because see I'm afraid you're going to
+1:37:47 say well I haven't or it was my mom was
+1:37:49 sick or whatever and you're going to
+1:37:51 make it hard for me so I have to be
+1:37:53 ready to fight and some people can't do
+1:37:55 that without first allowing themselves
+1:37:56 to be angry.
+1:37:58 You want a manager ideally
+1:38:02 who can stand their ground because they
+1:38:06 believe in it and because they are
+1:38:08 willing to have confrontation. And I'm
+1:38:10 no master at this, okay? I have plenty
+1:38:11 of friends who will tell me where I've
+1:38:13 been a jerk.
+1:38:16 But I try to figure out
+1:38:19 how can I stick to what I believe
+1:38:23 without ever needing to resort to anger
+1:38:27 as a fuel. I can just stick to belief.
+1:38:30 To your point about what you want from
+1:38:31 managers, there's a graphic image that
+1:38:34 says, "Look, all managers are either an
+1:38:36 umbrella or a funnel. And when the poo
+1:38:39 comes down, they're either shielding
+1:38:42 their team with the umbrella or they're
+1:38:44 a funnel dropping it onto their team."
+1:38:46 And you were discussing the funnel, the
+1:38:49 the one who's just like, "Yeah, we'll
+1:38:51 deal with it." And what what are they
+1:38:53 doing? They're deciding
+1:38:56 that if you're the engineer,
+1:38:59 they have a choice between push back on
+1:39:00 the boss above them, which feels scary
+1:39:03 and dangerous, and push back on you
+1:39:06 being upset that you're being asked to
+1:39:07 do weekend maintenance for the fourth
+1:39:09 weekend. And you're an easier target
+1:39:13 because I have rank, I have position, I
+1:39:15 control your performance review, I
+1:39:17 control your salary to some degree. So
+1:39:20 they're making a choice which is it's
+1:39:22 easier for me, safer for me. And what
+1:39:25 you have to do in that trick in that
+1:39:27 space is
+1:39:31 change that balance of safety. So you
+1:39:34 either have to help them feel safe
+1:39:35 pushing back on their boss or help them
+1:39:39 feel not safe asking for your fourth
+1:39:42 weekend. Those are those are the only
+1:39:45 two choices really is you change the
+1:39:47 balance of safety.
+1:39:49 Well, that first one almost feels
+1:39:53 impossible to me. Like if I was if I was
+1:39:56 reporting to someone and this manager
+1:39:58 just says yes to everything, has no
+1:40:00 backbone. I don't know how I can give
+1:40:03 them a backbone. But I can definitely do
+1:40:05 the second option.
+1:40:07 Well, you give them a backbone exactly
+1:40:09 by the second option. But like this, you
+1:40:13 say, let's say I'm your manager. You
+1:40:15 say, "Hey, Ethan, um, this is there
+1:40:20 seems to be a pattern where we keep
+1:40:21 getting asked to do weekend work.
+1:40:25 I would love to help you push back on
+1:40:28 that about how that's damaging our team,
+1:40:32 distracting our team. I can give you
+1:40:33 some of the data, but I also have to be
+1:40:36 clear with you that
+1:40:40 my family is very important to me and I
+1:40:44 can't keep working weekends. And so what
+1:40:47 I don't want is for you to be in a
+1:40:49 position where you accept work that I'm
+1:40:52 going to have to decline and then you'll
+1:40:55 have the problem that you committed to
+1:40:58 it and it won't happen. And so I don't
+1:41:01 want to see you in that position. How
+1:41:03 can we plan to push back next time?
+1:41:06 That's that's how you line it up
+1:41:11 in advance.
+1:41:12 >> And I' I've heard this exact situation
+1:41:14 from a friend. Their manager was a yes
+1:41:17 man to manage their manager.
+1:41:19 >> Very common.
+1:41:20 >> And so they were doing committing to all
+1:41:23 these unreasonable deadlines and
+1:41:25 >> you know not protected at all. And it
+1:41:28 wasn't a big deal cuz there's turnover,
+1:41:29 but it's fine. Just hire new people and
+1:41:31 just keep saying yes to more and driving
+1:41:34 people as hard as you can. The narrative
+1:41:36 that you said there, it it felt slightly
+1:41:40 more threatening than the the other ones
+1:41:44 because I I can imagine I can imagine
+1:41:46 that that more directly feels like
+1:41:49 you're threatening not to do the work.
+1:41:52 >> So, number one, you're right. that
+1:41:54 wasn't as polished as some of the other
+1:41:56 lines I've given you, but I think with
+1:41:59 five minutes I could create a more
+1:42:01 polished version.
+1:42:03 And one of the keys that you're getting
+1:42:05 at here is the wrong time to start
+1:42:08 setting this up is while the request is
+1:42:10 in hand. what you want to do. Like if
+1:42:13 you're getting asked to work every
+1:42:14 weekend, the right time to have this
+1:42:16 discussion with your boss is like
+1:42:18 Tuesday or Wednesday be after the
+1:42:20 weekend's over and a little time has
+1:42:22 passed and before the next crisis
+1:42:25 arrives.
+1:42:26 And the second piece though is it's then
+1:42:30 how do you make clear that your
+1:42:32 tolerance is limited? And yes, one of
+1:42:35 the costs of that this is important.
+1:42:38 If you're not willing for the manager to
+1:42:42 say, "Well, if you don't like it, quit."
+1:42:45 You can't say anything. You've got to
+1:42:47 have enough confidence in yourself that
+1:42:49 if it does come to that. Like when I
+1:42:51 went to my manager and I said, "Um, I
+1:42:56 need to know how important
+1:42:58 uh my career is to Amazon." I was also
+1:43:00 looking for an outside job.
+1:43:04 um
+1:43:05 like I had decided I'm going to do
+1:43:09 everything I can diplomatically to win
+1:43:11 this over but I'm also okay leaving. I
+1:43:14 think that's the big difference between
+1:43:15 this situation and all the other ones
+1:43:17 which is in all the other situations you
+1:43:20 had leverage the you could leave and
+1:43:24 they will they would feel pain whereas
+1:43:27 in this case if you're the lowly person
+1:43:30 or engineer maybe they don't see your
+1:43:33 value as much if you leave you say okay
+1:43:35 great well
+1:43:36 >> goodbye
+1:43:37 >> um I mean if you really are that
+1:43:38 discardable then you've not created much
+1:43:41 value
+1:43:43 in other words.
+1:43:45 Absolutely
+1:43:47 leverage is required, but good engineers
+1:43:50 are valuable and teams that are total
+1:43:54 turnover factories are not that
+1:43:56 effective. Now, if there's a company
+1:43:58 that totally has a view of bring them
+1:44:00 in, burn them out, move them on,
+1:44:03 you're probably in a wrong place. Like
+1:44:05 that is, you know, if you're at a place
+1:44:07 where you can't create any sort of
+1:44:08 value, the right answer is you will have
+1:44:11 to get out. Um,
+1:44:15 and I think people get trapped believing
+1:44:17 there isn't a better option.
+1:44:21 There's always more jobs. And I'm not
+1:44:23 belittling long searches or the
+1:44:25 difficulty or all all the problems, you
+1:44:28 know, with maybe in engineering today of
+1:44:30 AI making it hard to get on entry level,
+1:44:33 but but there are jobs if you do enough
+1:44:36 work. So, one of the things you have to
+1:44:38 ask yourself is this being at the bottom
+1:44:42 of the funnel of bad work being rained
+1:44:46 down upon you.
+1:44:48 How bad is that compared to say doing
+1:44:50 the extra work to network and find
+1:44:54 something else or start your own thing?
+1:44:58 Uh don't be a victim. You have agency.
+1:45:03 uh if you prefer you know you can look
+1:45:05 at ownership the book extreme ownership
+1:45:07 by Jaco Willink whatever there's many
+1:45:10 ways to look at it but
+1:45:13 in the end you have to be willing to
+1:45:16 take control of your life
+1:45:19 um even if that does mean by the way
+1:45:21 that you weather the bad manager while
+1:45:23 you complete the training program or
+1:45:24 find the job uh what a lot of people
+1:45:27 like to do is complain about how unhappy
+1:45:30 they are but not do anything else. I get
+1:45:34 it because it seems exhausting like,
+1:45:36 "Oh, I just worked all day and now I
+1:45:37 worked all weekend. When am I going to
+1:45:38 look for a job?"
+1:45:41 Um, one of my beliefs is to work less,
+1:45:43 you often have to work more first,
+1:45:46 right? In other words, to get to the
+1:45:48 place where you can coast or have a good
+1:45:50 situation, you have to have to do some
+1:45:52 ugly digging first. And this the
+1:45:54 situation you're setting up is one of
+1:45:56 those. You also hit on another point
+1:45:58 that's really important.
+1:46:01 create leverage. If you create that
+1:46:04 leverage,
+1:46:06 you're always in the winning situation.
+1:46:08 And the thing is, if your stick is long
+1:46:11 enough, if your lever is long enough, it
+1:46:13 doesn't take very much force, which is
+1:46:14 why I'm able to be polite about it. I
+1:46:17 can be very soft in my hints about what
+1:46:20 I like because the lever is so strong.
+1:46:23 People are like, "Oh,
+1:46:25 we want to make this work right away."
+1:46:27 And that's what you're trying to do is
+1:46:28 have a big lever. I guess on another
+1:46:31 topic, there's this skill of back
+1:46:34 channeling, which is
+1:46:36 not in public forums, but one-on-one in
+1:46:40 different places.
+1:46:42 >> Y
+1:46:42 >> driving your message to the right people
+1:46:45 so that you get the right aligned
+1:46:47 outcome. So, how do you effectively back
+1:46:51 channel?
+1:46:53 >> So, I think of back channeling in two
+1:46:55 ways. There's good back channeling and
+1:46:57 manipulative back channeling.
+1:46:59 Manipulative back channeling is where
+1:47:02 I'm
+1:47:04 trying to do something that I wouldn't
+1:47:06 be willing to say in public. So that's
+1:47:09 where you're really undermining or
+1:47:10 painting the other
+1:47:13 other proposal or the other leader in a
+1:47:16 negative light. Um,
+1:47:19 I don't think that's usually necessary.
+1:47:22 And I'd like to say never necessary, but
+1:47:24 you'll lose some because maybe they'll
+1:47:25 do that. Uh,
+1:47:28 what positive back channeling is
+1:47:32 is giving people a chance to ask
+1:47:36 questions and find out what their
+1:47:37 concerns are where they don't have to
+1:47:40 bring them out in public. So maybe for
+1:47:43 example, I'm the CFO or I'm the
+1:47:46 financial person and I'm really
+1:47:47 concerned about the budget, but I don't
+1:47:50 want to just ask a bunch of budget
+1:47:52 questions in the meeting or I don't want
+1:47:54 to put you on the spot
+1:47:57 or maybe I don't realize that you're
+1:47:59 mostly concerned about the budget.
+1:48:02 If we have a back channel conversation,
+1:48:04 I can ask here's my idea. Is there
+1:48:06 anything you don't understand? Do you
+1:48:08 have any concerns? And what I'm doing
+1:48:10 there is I'm giving you a chance to feel
+1:48:13 remember feelings and narrative. I'm
+1:48:16 giving you a chance to feel understood,
+1:48:18 to feel consulted, to feel listened to.
+1:48:23 Back channeling doesn't just work
+1:48:26 because of information exchange. You do
+1:48:28 get data and that is good.
+1:48:32 But it also works because you there's
+1:48:34 all this subconscious I made you feel
+1:48:37 important. I made you feel listened to.
+1:48:40 I made you feel heard. And that
+1:48:43 emotional buy in particularly if the
+1:48:45 other project leader doesn't do that
+1:48:51 gives you a huge leg up because you're
+1:48:52 building trust. You're building trust
+1:48:55 that oh, you take input. Oh, I can work
+1:48:57 with you. And so even if the two
+1:49:00 proposals are equal or even if the other
+1:49:02 one's a little better, remember part of
+1:49:03 my bet if I'm in executive funding
+1:49:06 proposals
+1:49:07 is who can I count on when the chips are
+1:49:10 down? Who can I count on to get this
+1:49:12 across the line? Who can I count on if
+1:49:14 there's a problem?
+1:49:17 This other leader I don't know as well.
+1:49:18 They didn't consult me. Ryan came to me
+1:49:22 and asked me my input and and showed
+1:49:25 understanding for my needs. Totally. I'm
+1:49:28 funding that because even though the
+1:49:30 payoff's a little lower, I'm sure Ryan's
+1:49:32 going to come through or I can work with
+1:49:34 him. And so, just realize we so
+1:49:38 underestimate emotions.
+1:49:40 As an executive making a decision on
+1:49:42 which project to fund, I'm wondering how
+1:49:46 it's going to make me look. I'm
+1:49:47 wondering what happens if it goes wrong.
+1:49:50 I'm wondering what happens if there's
+1:49:52 conflict between you and me later. Are
+1:49:54 you gonna resolve it reasonably? I have
+1:49:56 all these fears and worries and the back
+1:49:58 channel lets me quiet those down as well
+1:50:00 as address factual concerns. And so
+1:50:04 that's why it's so effective.
+1:50:06 >> I I think if you were to negatively back
+1:50:08 channel, other people would see that you
+1:50:11 are a snake and then you would lose some
+1:50:16 rapport. I guess
+1:50:18 >> people do negatively back channel and
+1:50:20 they have to be careful about how they
+1:50:22 get caught, right? Or or don't get
+1:50:24 caught. You know, this is what you would
+1:50:25 call a backroom deal. You know, the
+1:50:28 classic backroom deal is like the
+1:50:29 kickback where you support this and I'll
+1:50:33 make sure you're taken care of. It's
+1:50:35 kind of like, you know, a mafia movie or
+1:50:37 something, right? It's the It's the I'm
+1:50:41 coming to you with a proposal that
+1:50:43 amounts to you should do the wrong thing
+1:50:47 because we're both going to benefit. And
+1:50:49 I just want to make sure we're on the
+1:50:50 same page and you know that even though
+1:50:53 I'm actually a snake, I'm not gonna bite
+1:50:54 you. We're we're snakes together. That's
+1:50:58 the essence of that offer.
+1:50:59 >> Oh no.
+1:51:00 >> And you know, some people are up for
+1:51:02 that. Like because
+1:51:06 some people are selfish and ambition
+1:51:09 runs wild and there are absolutely
+1:51:12 people who look at the world and say
+1:51:18 well
+1:51:20 I had to pay my dues and I got screwed
+1:51:22 over when I was in the weak position and
+1:51:25 so now that I'm in the strong position
+1:51:27 it's my right to take all I didn't get.
+1:51:30 It's not really I'm screwing that. See,
+1:51:32 they always tell themselves a story that
+1:51:33 makes themselves look better. It's not
+1:51:35 really I'm screwing those people. It's
+1:51:37 that I'm getting what I'm owed. Like,
+1:51:39 this is only fair. And that's another
+1:51:43 thing that's really important. It's just
+1:51:45 when you're dealing with someone who
+1:51:47 seems to be vicious
+1:51:51 do at least realize that their story to
+1:51:53 themselves is not that they're evil.
+1:51:56 Their story to themselves is something
+1:51:57 else. And if you can figure out their
+1:52:00 story, you have a better chance to
+1:52:02 redirect that story.
+1:52:04 >> We talked a lot about soft power and
+1:52:07 influence, and it it sounds to me like
+1:52:09 that's not necessarily directly
+1:52:11 proportional to how many recursive
+1:52:13 reports you have. Have you seen examples
+1:52:15 where there was a person within an org
+1:52:19 that had a disproportionate amount of
+1:52:21 influence?
+1:52:22 >> Yeah. Well, the first thing I would say
+1:52:25 is I've seen soft power come from ideas
+1:52:30 a few times. So, Amazon for a while
+1:52:34 built a product, they called it cloud
+1:52:36 drive ultimately, but it was a storage
+1:52:38 system kind of like Box uh or Dropbox,
+1:52:41 either one. Um, and
+1:52:46 that proposal came from an entry-level
+1:52:48 new college graduate engineer. He had an
+1:52:51 idea for it and he did two things to get
+1:52:54 it heard. The first was Amazon had an
+1:52:57 inviteonly engineering conference where
+1:52:59 only a tiny percentage of engineers went
+1:53:01 off site to this conference but you
+1:53:03 could get an invite by making a
+1:53:04 proposal. So he fought his way into this
+1:53:08 conference. Then he knew Jeff Bezos came
+1:53:11 and reviewed a idea poster session. And
+1:53:14 so he emailed Jeff and said I have this
+1:53:17 idea and I'm going to be at the poster
+1:53:19 session. do you think you could stop by
+1:53:21 my poster? Which is a very small ask of
+1:53:24 the CEO?
+1:53:27 Well, then he got an audience with Jeff
+1:53:29 and he pitched his idea and what Jeff
+1:53:32 did was like it and email his triple
+1:53:35 skip. So my boss.
+1:53:39 So there was Jeff, then this VP, then
+1:53:42 me, then a manager,
+1:53:44 then this new engineer. And my VP didn't
+1:53:47 like the answer, the idea at all. But
+1:53:50 Jeff had said look into it and so you
+1:53:53 know and and the project got funded. It
+1:53:56 got built. So outside influence and I
+1:54:01 can I can tell another story about this
+1:54:03 whilst different people have different
+1:54:06 origin stories for it to some degree. I
+1:54:09 worked with a slightly more senior
+1:54:11 person who created the Amazon Fire TV or
+1:54:15 helped put forward the proposal for it
+1:54:19 and he also was not a super senior
+1:54:21 person
+1:54:23 but he did a lot of the leg work and had
+1:54:25 the knowledge and had the connections
+1:54:27 and managed to get that created.
+1:54:29 So,
+1:54:31 um, what
+1:54:34 works here,
+1:54:36 how you get that outsiz influence. I've
+1:54:39 seen it many times.
+1:54:42 You have to have an idea. And again,
+1:54:44 it's that appealing storytelling. You're
+1:54:46 telling a vision. These guys were
+1:54:48 telling visions.
+1:54:50 Wouldn't it be great if we had a cloud
+1:54:51 storage system? Wouldn't it be great if
+1:54:54 we had a lowcost living room device
+1:54:56 where people could watch Prime Video?
+1:54:59 They were telling
+1:55:01 an understandable soundbite story that
+1:55:03 everyone agreed with, at least on the
+1:55:06 surface, because wouldn't it be great if
+1:55:08 we had a cloud storage system? Yeah.
+1:55:09 Wouldn't it be great if we had, you
+1:55:11 know, a living room, a lowcost living
+1:55:13 room device? Yeah, sounds great. Oh,
+1:55:15 well, look, here's here's a way we could
+1:55:17 do it. So, I don't know if you have a
+1:55:19 follow-up question on that, but
+1:55:22 influence can come from anywhere. It
+1:55:25 usually
+1:55:26 begins with a good story based in some
+1:55:30 real fact. It can't be usually total
+1:55:33 nonsense
+1:55:34 and then told with enthusiasm and told
+1:55:38 repeatedly and specifically
+1:55:41 told to people who have the power to do
+1:55:43 it. What about what are the the least
+1:55:47 discussed reasons that people get fired
+1:55:49 that you wouldn't see in in the
+1:55:52 performance notes, but they are there.
+1:55:54 So kind of the that that second thing
+1:55:58 that's actually getting someone fired
+1:56:00 when there's a upfront story told in the
+1:56:03 Perf notes. There's a lot of rules about
+1:56:06 when you can and can't fire someone. And
+1:56:08 so almost always the public story is
+1:56:12 some sort of performance story because
+1:56:14 that's the one thing that's allowed. So
+1:56:18 the hidden reasons are often if they're
+1:56:22 not
+1:56:24 evil or the person isn't just doing
+1:56:27 wrong work, it's usually
+1:56:28 incompatibility.
+1:56:30 So the main reason I see people
+1:56:33 getting let go that isn't discussed is
+1:56:37 their style and the leader style are
+1:56:39 very different.
+1:56:41 And that style can just be
+1:56:46 one person is very detail oriented, one
+1:56:49 person is very high level and this can
+1:56:50 be on either end. That's one type of
+1:56:53 incompatibility. Another one can be uh
+1:56:57 with engineers it's often one person
+1:57:00 wants to be very techoriented and what's
+1:57:03 the best technology and the other person
+1:57:05 wants to be very business outcome
+1:57:07 oriented of look what makes the money. I
+1:57:10 don't care if it's a hack. And
+1:57:13 where the firing occurs is where that
+1:57:16 becomes a religious debate and the two
+1:57:19 are just sort of at each other's
+1:57:20 throats. And remember what starts as a
+1:57:23 small thing often builds up where over
+1:57:27 time these become a label. That person
+1:57:30 is technically clueless. That person's
+1:57:32 only about money. And and they start
+1:57:35 labeling each other and then it becomes
+1:57:38 personal.
+1:57:39 And once it's personal, I've decided
+1:57:42 you're a bad person and I see all these
+1:57:44 things that make you bad. And you've
+1:57:46 decided I'm a bad manager. And once you
+1:57:48 have this lens, you're a bad manager. It
+1:57:52 really doesn't matter what I do, you'll
+1:57:53 see everything I do is bad because so
+1:57:56 many things are ambiguous and open to
+1:57:57 interpretation. That's where people get
+1:58:00 fired. But of course, it's always
+1:58:02 labeled somehow performance. Well, you
+1:58:04 mentioned it could be labels performed,
+1:58:06 but you mentioned that you could get
+1:58:07 fired for performance, but there's also
+1:58:10 those other HR reasons like sexual
+1:58:12 harassment and those types of things,
+1:58:14 right? I've seen one of the most blatant
+1:58:17 cases in my opinion of sexual
+1:58:19 harassment.
+1:58:20 Uh I have to be careful even now what I
+1:58:23 share and that will make the point.
+1:58:25 There was an executive hired, very high
+1:58:27 level position, a chief level position
+1:58:30 who immediately
+1:58:32 started harassing women and he was so
+1:58:36 blatant that it ultimately when we ask
+1:58:39 one of the HR representatives on his
+1:58:42 team about had she gotten any
+1:58:44 complaints, she started crying because
+1:58:47 he had harassed her too. So, this is
+1:58:50 someone with the gall to harass a woman
+1:58:54 in human resources.
+1:58:56 Um, but he disappeared. This the leader
+1:59:02 terminated him right away as soon as
+1:59:04 this came out. But I people ask me, how
+1:59:08 did such a person get in here? Didn't we
+1:59:10 check references? And the thing I want
+1:59:13 people to understand is
+1:59:16 we didn't have legal proof of this
+1:59:17 harassment. We had a lot of people who
+1:59:19 said it happened to them. We believed
+1:59:21 them, but we never took it through a
+1:59:23 court and got a judgment that said, "Oh,
+1:59:26 he's a harasser." So even though that's
+1:59:29 true, if I name this person and say,
+1:59:31 "Don't ever hire Fred Smith,
+1:59:35 you know, he harasses women,
+1:59:38 Fred can sue me because I have no proof
+1:59:40 of that. I have no legal proof. I know
+1:59:43 it's true. He knows it's true. it. So
+1:59:46 that's why companies don't say it. So
+1:59:49 when someone calls up and asks about
+1:59:51 Fred, I refer them to HR and HR says,
+1:59:54 "Oh, Fred was employed here from this
+1:59:55 date to that date."
+1:59:57 And you know, they uh that's how they
+2:00:01 keep getting hired. I will say I've
+2:00:04 looked this person up on LinkedIn since
+2:00:07 then, and the the fact he ever worked at
+2:00:10 Amazon isn't even on his resume.
+2:00:13 We caught it quick enough. He just
+2:00:15 deleted it. No awkward questions there.
+2:00:17 No. Why were you only there a month? He
+2:00:20 just deleted it. Moved on. And that's
+2:00:22 how they survive. So yeah, I've I've
+2:00:24 seen and it's hard to stop that.
+2:00:28 >> Was the next place that that person
+2:00:29 worked more than one month or I guess.
+2:00:32 >> Yeah. May maybe he was more careful. You
+2:00:34 know, maybe because we caught it so
+2:00:36 quick. I don't know. Um, I I don't
+2:00:39 believe that what he did at our
+2:00:41 workplace was a oneoff. I don't believe
+2:00:45 that. Um, but you know, of course, I
+2:00:47 don't know that. Last time we met, you
+2:00:50 mentioned that you as a manager could
+2:00:53 fire any one engineer that you wanted.
+2:00:57 Is there ever a case where you want to
+2:01:00 fire someone or let's say a manager
+2:01:01 wants to fire someone but their skip
+2:01:03 says you can't because the skip sees it
+2:01:06 and goes that's clearly there's an
+2:01:08 ulterior motive here that person's fine
+2:01:11 like has that have you ever seen that
+2:01:12 overruling? I have I've definitely seen
+2:01:15 a case where a manager floats the idea,
+2:01:19 I'm not sure Ryan's the right person for
+2:01:22 us, and the manager
+2:01:25 knows your work and says, why don't I
+2:01:28 move Ryan over here, right? Why don't I
+2:01:32 I think Ryan, And again, if I want to
+2:01:34 make you feel good about it as a
+2:01:36 manager, what I would say is I'd say,
+2:01:38 you know, I see that you're struggling
+2:01:40 with Ryan. I've seen him do well in
+2:01:43 other environments.
+2:01:45 Let me move him to this other place.
+2:01:46 He'll be out of your hair and I think
+2:01:48 he'll be fine there. I don't tell them
+2:01:50 that I think you're going to be great
+2:01:52 there because that's kind of hinting
+2:01:54 that they're bad. I just make it
+2:01:57 socially easy for them to say, "Sure,
+2:01:59 move him away. That's just as good as
+2:02:00 fired from my viewpoint." Um
+2:02:05 this relies on your skip of course
+2:02:07 knowing or having a sense of things and
+2:02:11 again sometimes it is just
+2:02:12 incompatibility your sty I can see that
+2:02:15 you and your manager are cats and dogs
+2:02:18 in a bag. It doesn't mean that you can't
+2:02:20 get along well. It doesn't necessarily
+2:02:22 mean the manager is bad. It does mean
+2:02:25 they lack enough adaptability. So I can
+2:02:28 work on that but I may choose to save
+2:02:31 you in that time. Um because
+2:02:36 what gets forgotten is people have
+2:02:38 personalities and preferences and not
+2:02:41 everyone can work for every other boss.
+2:02:44 I certainly had managers that some
+2:02:47 people at Amazon loved and they drove me
+2:02:52 baddy.
+2:02:53 And I also know that for those managers,
+2:02:57 they knew I was a high performer, but
+2:02:59 they didn't like my way of doing it. And
+2:03:04 that's just style does matter. You know,
+2:03:07 you have music you like more than
+2:03:09 others. Some music you're like, get this
+2:03:11 out of my ears. And some you're like, I
+2:03:13 could listen to this all day. There is
+2:03:15 some of that element in work. I mean,
+2:03:18 the more that we talk about the behind
+2:03:20 the scenes of how managers keep orgs
+2:03:23 together and retain people, feels like
+2:03:25 the orgs are they're like duct taped
+2:03:27 together with a bunch of like uh you
+2:03:30 know, well-worded phrases. Uh this
+2:03:32 person goes here, oh, I'm going to get
+2:03:33 you what you want next half and I'm
+2:03:36 going to move people and it's all kind
+2:03:38 of back of the envelope accounting in
+2:03:41 the leader's mind. Is that an accurate
+2:03:43 assessment?
+2:03:44 Ah, you probably saw me smile when you
+2:03:46 said that. I certainly feel that way.
+2:03:50 What I mean is managers start out like
+2:03:53 you would think. It's just like I would
+2:03:56 compare it to an engineer with an
+2:03:58 architecture. When the project begins,
+2:04:01 you've got your nice little lines and
+2:04:04 lines and arrows and boxes on a page of
+2:04:07 the system you envision. And when it
+2:04:10 ships,
+2:04:12 there is some resemblance to what you
+2:04:14 drew, but there's all these special
+2:04:16 cases you didn't think about and all
+2:04:18 these things you forgot that got like,
+2:04:20 well, what service can we put that in
+2:04:21 because we're out of time. And the the
+2:04:24 thing is shipped bears a resemblance to
+2:04:27 the thing you designed, but it is not
+2:04:30 this sort of pure beautiful ivory tower.
+2:04:34 Well, I think the same is true of orgs
+2:04:36 where managers set out, of course, to
+2:04:38 manage only by performance and to have
+2:04:41 great managers and everyone happy and to
+2:04:44 develop everyone's career and then
+2:04:46 reality hits of schedules and difficult
+2:04:48 people and locations and office changes
+2:04:52 and people out on leave and by the time
+2:04:55 it's all done, you're just really happy
+2:04:59 that it's working mostly.
+2:05:03 And uh you know I I think that's um
+2:05:07 I happen to enjoy military history.
+2:05:09 There's a phrase from military history
+2:05:11 or military strategy that applies here
+2:05:13 that says you know with your battle plan
+2:05:15 the enemy gets a vote. Like it's all
+2:05:18 great you have a plan but then someone
+2:05:20 starts shooting at you. Maybe if you
+2:05:22 heard it another way the boxer Mike
+2:05:24 Tyson said everyone has a plan till they
+2:05:26 get punched in the face. Well, I think
+2:05:28 your manager has a plan for a beautiful
+2:05:30 org, right, until like deadlines and
+2:05:32 outages and whatever, punch them in the
+2:05:34 face, and then that plan starts to
+2:05:37 become whatever gets them through the
+2:05:38 fight. We talked about individual
+2:05:40 firings for for engineers. I think
+2:05:43 there's a common sentiment that it's
+2:05:45 harder to fire a bad manager than it is
+2:05:48 to fire a bad engineer. When you had
+2:05:51 managers reporting to you that, let's
+2:05:52 say they were low performing managers,
+2:05:54 >> how do you manage them out?
+2:05:57 So I think it is harder to fire
+2:06:00 managers. There are three reasons.
+2:06:02 Reason number one is they usually
+2:06:07 are somewhat more experienced. So they
+2:06:09 they don't have the obvious
+2:06:12 bad performance.
+2:06:14 Meaning uh the first time I ever had to
+2:06:17 let someone go, it's because they
+2:06:18 stopped coming to work. Pretty easy.
+2:06:20 Like, well, it's Wednesday and you
+2:06:22 haven't been here yet. I'm calling you
+2:06:24 to let you know. don't bother to come in
+2:06:26 tomorrow. Like pretty cut and dry.
+2:06:28 Managers don't usually make mistakes at
+2:06:30 that level. So they're more subtle. The
+2:06:33 their weaknesses are more subtle because
+2:06:35 they got made a manager for some reason.
+2:06:37 They were technically good. They were
+2:06:38 politically good. They were
+2:06:40 organizationally good. So they have some
+2:06:42 kind of strength that got them there.
+2:06:43 That's reason one. Reason two is a
+2:06:47 manager's work is hard to measure. Uh
+2:06:51 how do I exactly measure a manager's
+2:06:53 work? Well, is it that they hired? Is it
+2:06:56 that they did their performance reviews?
+2:06:57 Is it that the feature shipped on time?
+2:07:00 Is it bug count? The manager's job, it's
+2:07:03 very hard to put a lot of metrics, which
+2:07:05 means when it comes time to fire or to
+2:07:08 consider performance management,
+2:07:11 we're in this he said, she said, opinion
+2:07:14 problem.
+2:07:16 And I think the third reason it's tough
+2:07:20 to fire managers is
+2:07:25 managers are part of the system. And so
+2:07:28 they know what it looks like.
+2:07:31 They know like, "Oh, my boss isn't that
+2:07:34 happy. How do I start positioning myself
+2:07:37 to be hard to get rid of?" Like they
+2:07:40 they have a quicker spidey sense if
+2:07:43 that's what they want. you know, if they
+2:07:44 want to stay, they have a quicker sense
+2:07:46 of how do I how do I make myself
+2:07:50 difficult to pin down? And um, of
+2:07:54 course, it's still possible. Like I I
+2:07:56 terminated
+2:07:58 a large, you know, not a huge number,
+2:08:00 but a large number of managers. It's
+2:08:02 just it's trickier.
+2:08:05 >> Yeah, it sounds fairly hard to terminate
+2:08:06 a man. How do you do it then in in those
+2:08:08 cases? So, my ideal way of doing it,
+2:08:11 which I wasn't always able to do, is to
+2:08:13 talk to them and to uh surface the idea
+2:08:19 socially
+2:08:20 that maybe this isn't working out and
+2:08:25 would they like to collaborate on
+2:08:27 finding a better place? So, I'm phrasing
+2:08:30 it as I notice I I have the impression
+2:08:33 that we're struggling. you, I would say
+2:08:34 something like, uh, I don't think we've
+2:08:38 gotten off to the best start here, and
+2:08:40 I'm wondering how you feel about it.
+2:08:42 Would you like to work on that, or, you
+2:08:46 know, do you also see that problem, and
+2:08:48 you'd like my help finding some other
+2:08:51 option? Very nebulous. Smart managers
+2:08:56 get the message, I'm your boss. I'm not
+2:08:59 happy. I'm offering you a door where I
+2:09:01 give you some time to find a job or
+2:09:03 maybe a severance package. Do you want
+2:09:05 to do this the easy way? Many managers
+2:09:09 will be like, "Yeah, I do."
+2:09:12 Um, you know, and of course they'll
+2:09:13 never say, "Oh, of course you're right.
+2:09:15 I'm failing here. I want a door." What
+2:09:18 they will say if they're equally smooth,
+2:09:20 is they'll say, "I'm so sorry that
+2:09:23 you're not satisfied. Of course, I'm
+2:09:26 doing my utmost." That's me telling you,
+2:09:29 remember,
+2:09:30 I can make this hard for you, so you're
+2:09:32 going to pay well for my exit. That's
+2:09:34 that's the counternegotiation.
+2:09:37 But ultimately, I want you to be happy
+2:09:42 and satisfied with my work. And if
+2:09:45 you're not, of course, I'd like to
+2:09:48 discuss what changes we could make,
+2:09:49 which is my way of saying I'm open. I'm
+2:09:51 open to making it, you know. So,
+2:09:55 I've never used the word fired or
+2:09:57 performance because that creates
+2:10:00 something legally called constructive
+2:10:02 termination where if I've said, you
+2:10:04 know, we might have to fire you. Do you
+2:10:05 want to quit first? That is a legal
+2:10:08 problem called constructive termination
+2:10:10 where I anything I do from that point is
+2:10:14 then seen as I'd already decided to fire
+2:10:16 you and now I'm making up reasons. So, I
+2:10:19 very carefully avoided that. They very
+2:10:21 carefully avoided ever saying
+2:10:24 acknowledging
+2:10:25 that there's an actual problem. What
+2:10:27 they say is, "I'm sorry you feel that
+2:10:28 way." Right? Oh, I'm sorry you feel that
+2:10:31 way. That's your problem. You feel weird
+2:10:33 things, but
+2:10:36 I want you to be happy. So, if you're
+2:10:38 not, of course, I discuss alternatives.
+2:10:40 And that's their way of saying, "Yeah,
+2:10:42 okay. I get that it's not working. What
+2:10:45 are you going to give me?" So that's one
+2:10:48 way you quote unquote fire.
+2:10:51 The other way
+2:10:53 um is classic performance management in
+2:10:57 which case you have to try and write
+2:10:58 down clear goals and objectives. you
+2:11:00 have to start documenting
+2:11:03 um
+2:11:05 you have to give you know there's a
+2:11:07 legal standard
+2:11:09 that well there's a legal standard and
+2:11:11 there's what HR wants but you basically
+2:11:12 have to document a bunch of expectations
+2:11:14 and then document that they didn't hit
+2:11:16 them and then you have a performance
+2:11:18 case almost all managers will quit
+2:11:20 before that what they'll do is once you
+2:11:23 start the process they'll be like oh
+2:11:25 okay this is going to take him 90 days I
+2:11:27 have 90 days to find a new job and they
+2:11:30 go find a new job.
+2:11:31 >> You mentioned that when the manager who
+2:11:34 I guess knows the system is getting
+2:11:37 managed out or this conversation
+2:11:40 starting, they can sometimes switch to
+2:11:43 how can I extract more value for myself?
+2:11:46 And I think a lot of people who are less
+2:11:48 experienced or they don't know how the
+2:11:50 system works too well is when they're
+2:11:53 starting to get fired, they don't
+2:11:57 they feel they have no leverage. And the
+2:12:00 fact that severance exists makes me
+2:12:02 think that they do have some leverage,
+2:12:04 although I don't know if I fully
+2:12:06 understand it. What what is the leverage
+2:12:08 that let's say an engineer has as
+2:12:11 they're getting fired
+2:12:13 that that a company would want to pay
+2:12:15 for because severance
+2:12:17 >> I mean well there's cost
+2:12:19 >> there's the optics of it like it looks
+2:12:21 good of course but I'm after this
+2:12:23 conversation I'm a little more cynical I
+2:12:26 feel like they're paying for something
+2:12:29 for that report so that report must have
+2:12:31 some leverage in that conversation when
+2:12:33 they're getting
+2:12:34 >> well there's several pieces of leverage
+2:12:36 the first is this process if you want to
+2:12:39 go through it is going to take a lot of
+2:12:40 your time and uh you have to document
+2:12:44 things you have to follow process you
+2:12:46 have to file a bunch of paperwork HR is
+2:12:48 going to audit your paperwork if you're
+2:12:50 a low-level manager you know they're
+2:12:52 going to write it um there are things I
+2:12:55 can do to string things out uh as a
+2:12:59 tactic and so the first offer I'm making
+2:13:01 you is hey I'll save you all that time
+2:13:04 if you will give me some money so that I
+2:13:07 have money in my pocket to go look for
+2:13:11 another job. I will save you this time
+2:13:13 and frustration. That's the first level
+2:13:15 of offer. The second level of offer is
+2:13:19 the story I'll tell the team, right? Is
+2:13:23 look, I can either leave talking about
+2:13:26 what a terrible experience this was and
+2:13:29 what a monster you are. I don't say
+2:13:31 those exact words to you, but I I can
+2:13:34 show you how to say that. Um, or I can
+2:13:37 leave saying, you know, this just wasn't
+2:13:39 a fit for me, and I'm so excited to be
+2:13:42 moving on to Acme, Inc., and I can't
+2:13:46 speak highly enough about how Ryan
+2:13:48 treated me through this whole process.
+2:13:50 Ryan's amazing. So, which story do you
+2:13:52 want me telling my co-workers?
+2:13:55 And so, those are a couple of the pieces
+2:13:57 of leverage. And again, it's this um
+2:14:00 what's that phrase of mine you like so
+2:14:02 much? A plausible story or plausible
+2:14:04 fiction. polite fiction.
+2:14:05 >> The polite fiction. If I need to say
+2:14:08 this to you, I say, "Well, you know, uh,
+2:14:11 let's say I'm working for you,
+2:14:14 Ryan,
+2:14:16 so far you've been nothing but
+2:14:18 supportive. And if I were to move on to
+2:14:22 a new job someday, I would of course
+2:14:27 explain how supportive
+2:14:29 you've been.
+2:14:31 But if I if if we're discussing my
+2:14:34 moving on, you know, really, I would
+2:14:38 hope you'd want to support my transition
+2:14:40 financially
+2:14:42 so that I can tell that story. And
+2:14:45 that's how I'd be like, you know,
+2:14:49 and even that wasn't maybe as smooth as
+2:14:53 I would do it if I had to. And by the
+2:14:56 way, let's say you you're starting to
+2:14:57 give me performance feedback and I need
+2:15:00 time to be in the right headsp space to
+2:15:02 have this conversation with you. I would
+2:15:03 just say that I would just say,
+2:15:06 you know, Ryan, um, I appreciate you're
+2:15:10 starting to give me some performance
+2:15:11 feedback. I know we need to have this
+2:15:14 conversation. Honestly, this moment I
+2:15:17 can't have it productively.
+2:15:19 Let's have it tomorrow morning. Or can
+2:15:21 we have it tomorrow morning? Uh, and
+2:15:24 most managers won't be like, "No, I need
+2:15:26 to tell you how rotten you are right
+2:15:28 now." Because they're already on edge a
+2:15:31 little bit. And so if you're putting up
+2:15:33 this flag that says, "I'm about to lose
+2:15:34 my on you, but tomorrow I'll be a
+2:15:37 good child." They'll be like, "Sure,
+2:15:39 come back tomorrow." Because they're
+2:15:41 sort of trained to. And I've put you in
+2:15:44 a really difficult situation. This is
+2:15:46 important. Where if I've asked for space
+2:15:49 and you say, "No, we have to finish this
+2:15:51 right now." Now I have a beef with HR.
+2:15:54 He was so mean to me. I asked for space.
+2:15:56 I asked if we could just talk tomorrow
+2:15:58 morning and he said, 'N no, I've got to
+2:16:00 ridicule you right now. It's very
+2:16:03 empathetic to HR.
+2:16:05 And and now you're the one in the hot
+2:16:07 seat. Why couldn't you give her until
+2:16:09 tomorrow morning? Why couldn't you give
+2:16:10 him until tomorrow afternoon? like
+2:16:13 because it so
+2:16:17 again I hope I would rather coach people
+2:16:20 on how to be in great high performing
+2:16:23 situations where they're having
+2:16:24 different conversations but you know you
+2:16:26 want to talk about the dark side and
+2:16:28 that's okay I get that people want to
+2:16:31 know
+2:16:32 don't be afraid to buy time you do have
+2:16:34 leverage
+2:16:37 and you may not get anything remember if
+2:16:39 your boss is starting to line you up
+2:16:41 determin ate you. You may not get
+2:16:44 anything, but if you don't ask, you
+2:16:45 certainly won't. If you don't open the
+2:16:48 door and say, "Well, you know what? How
+2:16:51 could we make an amicable deal?" And
+2:16:54 here, I'll give you your last piece of
+2:16:56 your leverage.
+2:16:59 Remember, your manager isn't sitting
+2:17:01 across the table wanting to feel bad
+2:17:03 about themselves.
+2:17:05 They want to feel good about themselves.
+2:17:08 And if they have a chance to spend a
+2:17:12 little bit of the company's money, which
+2:17:14 isn't really their money, so that they
+2:17:16 can look in the mirror and say, "Well,
+2:17:17 it didn't work out with Ryan, but I took
+2:17:20 care of him. I gave him a cushion." They
+2:17:23 want to do that. And so,
+2:17:27 there's saving them hassle. There's the
+2:17:30 public story you're going to tell. And
+2:17:33 there's they want to feel good about
+2:17:34 themselves. Most managers don't like
+2:17:37 they hate firing. They avoid it. You
+2:17:40 know, as much as you might think,
+2:17:42 meaning you, the listener, you, someone
+2:17:45 might think managers are just sitting
+2:17:46 around going, "Who can I who can I pitch
+2:17:49 next?" They're not. They actually hate
+2:17:52 it. When this is important, one reason
+2:17:55 people don't survive firings is by the
+2:17:58 time the manager actually decides, I
+2:18:01 just don't I've I've tried to coach
+2:18:03 them. you may not feel this way, but in
+2:18:04 their mind, they're like, I've tried to
+2:18:06 coach them. I've tried to pair them with
+2:18:08 people. I've tried to give them all
+2:18:09 these chances,
+2:18:11 and they're still not getting it. I
+2:18:13 don't have any choice but to fire them.
+2:18:16 Once they've gotten to where they're
+2:18:17 going to act, they've told themselves
+2:18:18 they're out of options, which is why
+2:18:21 people getting back off the brink is
+2:18:22 very unlikely. You know, interestingly,
+2:18:25 right before I came here to talk to you
+2:18:27 today, I had lunch and I met a new
+2:18:30 executive. He owns a company that does
+2:18:32 half a billion dollars of business a
+2:18:34 year. So, it's a big company. He's built
+2:18:37 it over his whole life. And he was
+2:18:39 telling me how he's going to have to
+2:18:42 hold someone in his organization who's
+2:18:44 who isn't performing that he's kept on
+2:18:47 his staff for two years. He's finally at
+2:18:50 the point where he's going to have to
+2:18:51 hold them accountable. And what I'm
+2:18:54 thinking is he's put off that hard
+2:18:56 message. when he finally gets to where
+2:18:58 he's going to give it, he's so decided
+2:19:00 that they don't meet the bar. They can't
+2:19:03 get out of that.
+2:19:05 And it's not because he's evil. It's
+2:19:07 just people delay. And so I coach
+2:19:10 people, people come to me all the time
+2:19:12 because I'm online. They say, "Ethan,
+2:19:15 I've just been put on a performance
+2:19:17 improvement plan. Can you help me
+2:19:20 survive it? Can you help me recover?"
+2:19:22 And I tell them, "Honestly, no. you're
+2:19:25 most likely going to be fired and
+2:19:27 there's nothing I can do for you. But
+2:19:29 here's why. It's by the time someone
+2:19:32 gets around to giving you a formal
+2:19:34 formal performance plan, they've tried
+2:19:37 everything else they could think of. And
+2:19:39 at this point, they just want you gone
+2:19:42 as quietly as possible. And it happens
+2:19:45 again all the time. People write me back
+2:19:46 and they're like, "You don't understand.
+2:19:48 I'm gonna" And three months later, I get
+2:19:50 an email from them that says, "You were
+2:19:52 right. I was fired. Of
+2:19:55 course, there are exceptions to this,
+2:19:58 but it's so common that I see this
+2:20:00 pattern of how can I survive this? I'm
+2:20:02 gonna I'm a hard worker. I'm a good
+2:20:04 person. I'm going to show them three
+2:20:06 months later you were right. I got
+2:20:08 fired.
+2:20:10 Even if people had the awareness,
+2:20:11 because I guess they're going to listen
+2:20:12 to this conversation, I think they still
+2:20:14 lack that a lot of people lack that
+2:20:17 skill of creating the polite fiction.
+2:20:21 you know, how do you and I we talked
+2:20:23 about we don't need to go deeper in it,
+2:20:25 but I I do think that even if I someone
+2:20:28 came to me and they said, "I'm in this
+2:20:29 situation," and I said, "Here's here's
+2:20:32 your leverage. Good luck." I think they
+2:20:34 would have trouble delivering that
+2:20:36 message in a an effective way of saying,
+2:20:39 for instance, especially the team health
+2:20:40 one, because the team health one is more
+2:20:42 of a threat. The saving time one is,
+2:20:44 "Hey, I can do something good for you.
+2:20:46 I'll leave quietly. Just help me get
+2:20:48 some severance." The team health one is
+2:20:51 I can make this hard for you
+2:20:54 unless you get me sufference. I think
+2:20:56 delivering that kind of message as
+2:20:57 you're leaving especially when they have
+2:20:59 such a negative bias on you already
+2:21:01 that's going to take some incredible
+2:21:04 people skills. Yeah. Um like yes you're
+2:21:07 right. Okay. This is part of the message
+2:21:09 which is engineers in particular want to
+2:21:12 believe this is in fact maybe the most
+2:21:14 important message even if it's not the
+2:21:16 most exciting which is as an engineer
+2:21:19 you want to believe it's your technical
+2:21:21 expertise that controls the fate of your
+2:21:23 career and it's not only that it's your
+2:21:27 people's skills it's well known right sa
+2:21:31 has talked about this other leaders have
+2:21:32 talked about IQ without EQ without
+2:21:35 emotional intelligence is a waste of IQ
+2:21:37 Q. And so having strong
+2:21:42 interpersonal skills
+2:21:45 is critical. You know, it's funny.
+2:21:47 There's a famous book you I'm sure you
+2:21:49 know it uh by Cal Newport called So Good
+2:21:53 They Can't Ignore You. And what I find
+2:21:55 ironic about this is it's all this stuff
+2:21:57 about how to be such a good worker you
+2:21:58 can't be ignored. Except this is a guy
+2:22:00 who has the social skills to both teach
+2:22:02 at Princeton and write books. He's not
+2:22:05 without the human skills to present his
+2:22:09 incredible technical accomplishments
+2:22:12 delicately and well. So,
+2:22:16 uh I think it's a huge area of learning.
+2:22:19 Now to exemplify this, how would I if I
+2:22:23 on the spot or here, you know, live had
+2:22:26 to construct a better way to say that? I
+2:22:29 would say something gentler like,
+2:22:34 um, boy,
+2:22:37 this is such a hard message and I have
+2:22:41 so many friends on this team.
+2:22:44 I just I don't want them to think badly
+2:22:46 of me. I don't want them to think this
+2:22:48 is an unfair environment. Can you work
+2:22:50 with me so that this is a graceful exit?
+2:22:55 And
+2:22:56 >> that's good. That works.
+2:22:57 >> You know, I
+2:22:58 >> I don't feel excited at all.
+2:23:00 >> And and you know, later if I need to, I
+2:23:03 say, well, for it to feel good,
+2:23:08 I mean, of course, you know, like I I r
+2:23:10 if it, you know, for it to feel good, I
+2:23:13 need enough security to get to my next
+2:23:15 thing. And I know you want that. I I
+2:23:17 know that you don't want anyone to
+2:23:19 suffer. And I tie into
+2:23:21 >> right the other thing.
+2:23:22 >> Um but it is possible. And that is why I
+2:23:26 I said this is how you get the time to
+2:23:28 go figure out how you're going to
+2:23:29 deliver these messages.
+2:23:31 Something people overrate or I guess
+2:23:34 underrate
+2:23:36 is recognizing that a lot of hard
+2:23:39 messages you don't have to deliver cold.
+2:23:42 I mentioned this before, but you you can
+2:23:44 buy the time or make the time to
+2:23:48 pre-plan.
+2:23:50 Maybe not every word. It isn't
+2:23:52 memorizing a speech. It's more
+2:23:53 memorizing a few phrases
+2:23:56 and and how you're going to, you know,
+2:23:58 say what you need to in a polite way. I
+2:24:02 want to pivot to promos and talking
+2:24:04 about promotions because I know there's
+2:24:06 a lot of stuff going on behind the
+2:24:08 scenes on alignment between managers and
+2:24:11 upper leadership on who's going to get
+2:24:13 promoted. You mentioned the queue
+2:24:14 earlier. Um, and I think a lot of people
+2:24:17 they get they get stuck at this staff
+2:24:20 engineer which is equivalent to the
+2:24:22 frontline manager level of how to get
+2:24:25 the promo to go further into those
+2:24:27 higher levels. Do you have any advice on
+2:24:29 how to break out of that that common
+2:24:32 level that people get stuck at?
+2:24:34 >> Yeah, I mean this is this is my bread
+2:24:37 and butter, what I teach every day and
+2:24:39 kind of if I have a signature expertise,
+2:24:41 it's how to move up further. What
+2:24:44 generally gets people stuck is they're
+2:24:48 they're not learning the new skill of
+2:24:51 the next level. Instead, they're doing
+2:24:53 the current skill harder and harder. And
+2:24:56 so what gets you promoted early in life
+2:24:59 is hard effective work. It is hard work.
+2:25:02 It is delivery. It is shipping a lot or
+2:25:04 building a lot. But as you get further,
+2:25:06 you need different skills. You need to
+2:25:08 be able to delegate. You need to be able
+2:25:10 to communicate. You also need to be able
+2:25:13 to let go of your hard skills because if
+2:25:16 you're trying to micromanage everyone
+2:25:18 and tell them, "Write it this way, write
+2:25:20 it that way, build it this way," you're
+2:25:21 driving your engineers nuts and they
+2:25:23 you're going to drive away your good
+2:25:25 people. And so the way to get to the
+2:25:28 next level is to figure out
+2:25:31 what do I need to let go of, step away
+2:25:34 from, and what new thing do I need to
+2:25:36 master? And uh there's a classic book on
+2:25:39 this. It's by a guy named Marshall
+2:25:42 Goldsmith. It's what got you here won't
+2:25:44 get you there. It's literally shows a
+2:25:46 ladder with a gap in it. Like what got
+2:25:48 you this far isn't going to get you up
+2:25:49 there. Um
+2:25:52 that's kind of the classic book, but if
+2:25:54 you need specific advice to your role,
+2:25:58 it's absolutely talking to people a
+2:25:59 level or two above who've been through
+2:26:01 this and asking them, "What did you have
+2:26:04 to let go of? What did you have to
+2:26:06 learn? How do I do that? What do I need
+2:26:08 to let go of? What do you see holding me
+2:26:11 back? I'm a huge
+2:26:14 proponent of getting advice. Getting
+2:26:18 advice is even better than getting
+2:26:19 feedback. If I ask for feedback, I'm
+2:26:22 basically asking you to do something
+2:26:23 that you may struggle to do, which is
+2:26:26 criticize me. If I ask you for advice,
+2:26:28 everyone has advice to share and they'll
+2:26:30 give you the same information but in a
+2:26:33 more positive way. So to break through
+2:26:37 to that next level, it's identify what's
+2:26:40 different about that level and get good
+2:26:42 at that as opposed to just work harder.
+2:26:45 I see so many people
+2:26:48 working brutally hard but ineffectively.
+2:26:51 When it comes to the most senior
+2:26:53 promotions, I think there's this idea of
+2:26:56 readiness, which I feel like is what you
+2:26:58 just talked about, which is developing
+2:26:59 the skills and being in the position
+2:27:01 where your manager would say, "Yes, this
+2:27:04 person fills out the template, I guess,
+2:27:06 for for their promotion."
+2:27:09 >> But then there's also the case of
+2:27:10 limited number of spots and kind of
+2:27:13 positioning yourself so that you are put
+2:27:15 in one of those spots. And so imagine
+2:27:18 there's a case where I'm a senior leader
+2:27:20 and I'm maybe I'm going for the director
+2:27:22 position or maybe I'm going the the
+2:27:24 principal engineer position and there's
+2:27:26 two of us both going for at the same
+2:27:28 time
+2:27:29 >> but we both report to you.
+2:27:31 >> How would I position myself so that I
+2:27:34 get the promotion first?
+2:27:36 >> Absolutely. Let's assume you're both
+2:27:38 equally qualified for a moment. So
+2:27:39 you're not going to win on skill. It's
+2:27:41 then relationship and within
+2:27:44 relationship trust. So trust trust is
+2:27:49 about do I have to look over my shoulder
+2:27:51 and wonder are you doing things not the
+2:27:53 way I would do them exactly but in a way
+2:27:55 that won't make me look bad that will if
+2:27:58 you prefer make us both successful. Do I
+2:28:01 trust what you're doing or do I because
+2:28:03 as a senior leader I don't have any time
+2:28:05 to micromanage you. I'm so busy myself.
+2:28:08 I need to be able to give you something
+2:28:09 and assume it will get handled. And
+2:28:12 trust, I often tell people,
+2:28:14 interestingly,
+2:28:16 trust is earned more in bad times than
+2:28:18 good times. My favorite analogy for
+2:28:21 this, which is a little bit violent, is
+2:28:24 when two people have been in a war
+2:28:25 together and I had to put my life on the
+2:28:28 line for you or you for me, we now have
+2:28:30 a lot of trust because if I trusted you,
+2:28:34 like if you came through when the
+2:28:36 bullets were flying, I know you'll come
+2:28:38 through the rest of the time. Well,
+2:28:40 what's the closest thing at work? This
+2:28:42 is usually a crisis, a big outage, a big
+2:28:45 embarrassment, a lost account. If you
+2:28:48 jump on that and somehow fix it or show
+2:28:51 all the effort and it hurts you or it
+2:28:53 cost you, you cancel a vacation, not
+2:28:56 that I'm recommending doing that a lot,
+2:28:58 but if you make a decision that shows
+2:29:00 that you're dedicated, I will remember
+2:29:03 when the chips were down, when we lost
+2:29:05 the Acme account,
+2:29:07 Ryan came through. He flew back from
+2:29:10 Hawaii early and made it. And that's
+2:29:13 trust. Second thing is relationship.
+2:29:17 Relationship in this case, I'm honestly
+2:29:19 thinking of do I like you? And the point
+2:29:21 is if I have two relatively equally
+2:29:24 qualified people and I'm going to
+2:29:25 suddenly spend more time working with
+2:29:27 one than the other, why would I not
+2:29:29 choose the person I enjoy?
+2:29:32 And again, I know some engineers are
+2:29:35 just if they were dead, they'd be
+2:29:36 spending in their graves. They hate that
+2:29:38 idea. Look,
+2:29:41 one person's a little bit more difficult
+2:29:42 to work with or even just a little bit
+2:29:45 less fun and the other one's more fun. I
+2:29:49 have to spend eight hours a day with
+2:29:50 this person or six because we're not in
+2:29:52 every meeting the same. I'm going to be
+2:29:55 drawn towards the person that's fun. And
+2:29:58 I know that seems unfair.
+2:30:01 Uh, and it doesn't mean you have to kiss
+2:30:02 up to everyone. It does though mean it's
+2:30:04 a good idea to be friendly and happy,
+2:30:06 right? like be be pleasant, be be
+2:30:10 that helpful smiling person because I'd
+2:30:13 rather spend time with you. Um, I heard
+2:30:15 it expressed this way by Amazon
+2:30:18 leadership, by Bezos, I think, which is
+2:30:23 when you come into the room, do you suck
+2:30:26 all the oxygen out of it? Like, do you
+2:30:28 bring the room down where the room's
+2:30:29 like?
+2:30:31 If you're that person, you're not going
+2:30:33 far. You're not going any further.
+2:30:35 Whereas if when you come in they're like
+2:30:38 right like oh Ryan's here. This just got
+2:30:41 better.
+2:30:43 They gonna want you in that room. And
+2:30:45 you know it's it's a So if you want a
+2:30:47 simple rubric, do people want you in the
+2:30:49 room? If they kind of don't, you're in
+2:30:52 trouble. And if they kind of do, you're
+2:30:54 doing great.
+2:30:55 >> I I do agree. I think a lot of engineers
+2:30:57 are going to this is going to piss them
+2:30:59 off. But
+2:31:00 >> that's okay. See,
+2:31:01 >> it's true. What I would say to the
+2:31:02 engineers I piss off is I am trying to
+2:31:05 help you. I'm not actually here because
+2:31:07 you'll like me. I'm here to get you
+2:31:09 where you want to go. And that requires,
+2:31:12 you know, you asked me could I be
+2:31:14 transparent. Part of the transparency is
+2:31:16 sometimes transparency is telling you
+2:31:18 things that I know you're not going to
+2:31:20 like, but that are holding you back and
+2:31:22 you're letting the fact you don't like
+2:31:23 it let you get your backup and be like,
+2:31:26 I'm never going to do that. Well, okay,
+2:31:28 but then you're never gonna move up. And
+2:31:32 I'm not here to apologize for the way
+2:31:33 the world works. The way the world works
+2:31:35 sucks, but it does work that way. And I
+2:31:38 want people to know that. When I think
+2:31:40 of the most senior level promotions,
+2:31:44 >> baked into the promotion packets is this
+2:31:48 idea that you need uh champions or
+2:31:50 sometimes known as allies, which is
+2:31:52 people at that level or higher that say
+2:31:55 >> that person is doing work that fits my
+2:31:59 my perception of that level. So because
+2:32:02 of that, I've noticed there's this
+2:32:03 artificial mechanism like let's say I'm
+2:32:05 a let's use management as an example.
+2:32:08 Let's say I'm a senior manager. I want
+2:32:10 to become a director. All of a sudden,
+2:32:12 if I want to get promoted, I need to
+2:32:14 make sure that that VP over there knows
+2:32:16 my work and will vouch for me and the
+2:32:19 promo committee and that other VP over
+2:32:21 there. And there there are cases where
+2:32:23 naturally I might need to be visible in
+2:32:25 front of those people. But there are
+2:32:27 also a lot of cases where it's just I I
+2:32:30 need to fill out the promo packet in the
+2:32:32 way um that that we need so that the
+2:32:34 promo will go through. How would you go
+2:32:36 about that? Let's say you are a senior a
+2:32:39 very senior engineer or a very senior
+2:32:41 manager in tech and you're trying to get
+2:32:45 those allies but there's no at least as
+2:32:48 far as you could see there's no natural
+2:32:49 collaboration with those people. How do
+2:32:51 you get them as a as a champion on your
+2:32:54 promo packet?
+2:32:55 >> So I'm going to tell you my favorite way
+2:32:57 and then I'll give you other ways. My
+2:32:59 favorite way is you have your boss on
+2:33:01 your side. you've got that team with
+2:33:03 your manager where your manager wants to
+2:33:06 get you promoted. And what I did in
+2:33:08 those cases is I would email my peers or
+2:33:13 my skips and I would say, you know,
+2:33:16 Ryan's going to be up for promotion in
+2:33:18 six months and because your group is
+2:33:21 adjacent to ours, I'm going to need to
+2:33:24 ask you for feedback. So, I'm letting
+2:33:26 you know that you've got six months to
+2:33:29 watch Ryan because I'm going to be
+2:33:32 coming to you. And number one, me asking
+2:33:38 doesn't feel self-s serving because I'm
+2:33:40 talking about you. And number two, six
+2:33:44 months later when that VP I'm sure wants
+2:33:47 to say, "Well, I only saw Ryan twice.
+2:33:48 I'm not sure if I can write anything."
+2:33:51 I have they know that I'm going to say
+2:33:53 like, "Hey, I told you like I put you on
+2:33:55 notice." Now, sometimes they'll just
+2:33:57 say, "I'm sorry it didn't come together.
+2:33:58 I don't I can't provide feedback." But
+2:34:01 that's that's the best way. And I did
+2:34:04 that when when I got good at getting
+2:34:06 See,
+2:34:08 this is important as a manager. I got
+2:34:10 good at getting my people promoted. And
+2:34:13 that allowed me to attract more talent.
+2:34:15 Because for example, I had a guy who
+2:34:17 didn't get promoted. And I said, "Look,
+2:34:20 you know, I'm good at this. I I will get
+2:34:23 this done in six months, but you've got
+2:34:25 to give me till the next cycle, but you
+2:34:26 know, I come through, so you have to
+2:34:28 trust." And he later told me, he's like,
+2:34:31 "Yeah, that sucks, but I I decided I'd
+2:34:33 give you six months." And we got it
+2:34:35 done. So
+2:34:38 that's the best way. Now, let's assume
+2:34:39 your manager is not that on board or
+2:34:41 they lack that skill or you can't sell
+2:34:43 them on it. By the way, if you have good
+2:34:44 relationship, I'd tell them like, "Would
+2:34:46 you consider putting them on notice that
+2:34:48 you're going to need feedback?"
+2:34:50 If you can't, the next best thing is for
+2:34:53 you to go talk to them and say, "Hey,
+2:34:57 I'm up for promotion.
+2:35:00 I'm pretty sure my manager is going to
+2:35:02 ask you for feedback. You're a logical
+2:35:04 feedback provider.
+2:35:08 what can we do over the next six months
+2:35:10 so that you're in a natural position to
+2:35:12 give me you know to give feedback or you
+2:35:16 know how could I keep you informed of my
+2:35:18 work what would and
+2:35:22 one of the keys here is if you need you
+2:35:24 know whatever four champions you're
+2:35:25 going to have to ask six people or seven
+2:35:29 uh because one of them's going to leave
+2:35:31 the company and one's going to get
+2:35:32 reorged and one's going to say no so you
+2:35:34 have to like oversubscribe it's like you
+2:35:36 know over capacity just like anything
+2:35:38 else you design. Um and it is awkward uh
+2:35:43 you know to go to a like a another group
+2:35:46 skip but the thing is you can frame it
+2:35:48 to them as hey you know this is our
+2:35:50 process like you know I'm sure you get
+2:35:53 requests all the time for feedback and
+2:35:56 you probably get a lot of late last
+2:35:58 minute requests. I'm trying to do it
+2:36:01 right and talk to you six months in
+2:36:03 advance. And so what you're saying there
+2:36:06 behind the lines is see I'm already
+2:36:09 good. I'm like not causing you to get
+2:36:11 hit with no notice. I'm here you know
+2:36:15 setting this up in advance making it
+2:36:17 easy for you. Well my immediate thought
+2:36:20 if I was that VP and someone came to me
+2:36:22 with that selfserving request I wouldn't
+2:36:26 necessarily think that's bad or
+2:36:27 anything. I think okay that's the
+2:36:28 process. But my immediate thought is
+2:36:30 this is not a high pri for me because
+2:36:32 I'm I'm a VP. I got I got billion things
+2:36:35 on my plate and this random person from
+2:36:38 another org is coming to me uh to serve
+2:36:41 themselves which not not necessarily
+2:36:43 something I care about but just shows
+2:36:45 that it's low on my priorities. How do
+2:36:47 you get them to prioritize that?
+2:36:49 >> Well, remember there is some truth it's
+2:36:52 low on their priority list but they have
+2:36:54 people they need to get promoted where
+2:36:56 they need other VPs. See, you have a VP,
+2:36:58 too. And that VP, this the VP you went
+2:37:03 to knows that they're going to need your
+2:37:06 VP's help with some promos. And so, the
+2:37:11 leverage you have without ever bringing
+2:37:12 it up to them is they do know it's a
+2:37:15 system and it's kind of part of their
+2:37:17 job. So, is it a high priority for them?
+2:37:19 No. Um, the only way you can make it a
+2:37:23 high priority is if you're able
+2:37:27 to explain to them
+2:37:30 uh some relevance of your work. You're
+2:37:32 going to have to give them a what's
+2:37:34 called whiff. What's in it for me?
+2:37:37 You're going to have to find some way to
+2:37:39 connect what you're doing to something
+2:37:42 they care about at least a little bit.
+2:37:45 How are you going to make their life
+2:37:46 easier, faster,
+2:37:48 less stressful?
+2:37:50 when these systems work as designed,
+2:37:53 those VPs do work with your area
+2:37:55 somewhat.
+2:37:57 And so they should have you you
+2:38:01 shouldn't be asking someone who like has
+2:38:02 no relation your work whatsoever ever.
+2:38:06 It's just they don't really need your
+2:38:07 level of detail, but you you can try to
+2:38:12 find some way to give them a little bit
+2:38:14 of nugget. Uh, I do think these systems
+2:38:16 work mostly though because
+2:38:19 vice presidents do know that this is how
+2:38:21 the system works and that they kind of
+2:38:23 need to do it. And if vice presidents
+2:38:27 are good at nothing else, they're
+2:38:28 usually good at understanding
+2:38:31 this is the grease that keeps the thing
+2:38:33 flowing. And by the way, I can write
+2:38:36 some mild approving verbiage of you very
+2:38:40 easily.
+2:38:41 It may look maybe because it was like I
+2:38:44 cut and pasted and replaced John with
+2:38:46 Ryan
+2:38:48 but you know and replaced you know
+2:38:50 whatever the ops or with the the you
+2:38:52 know the customer org but I've written a
+2:38:55 million of these and I can do it pretty
+2:38:57 quickly. Well, I think a lot of those
+2:38:58 those champion the champion support
+2:39:02 is a little bit contrived and it's hard
+2:39:04 for me without my manager support to get
+2:39:08 uh a you said what's in it for me like a
+2:39:12 a legitimate case of what's in it for
+2:39:14 that VP because they're so far they're
+2:39:15 so high up. I mean, I know some people
+2:39:17 who they're in this spot. They're very
+2:39:19 senior. I see. Their manager is
+2:39:22 supportive, but they lack maybe that
+2:39:24 proactivity that that you have. And
+2:39:27 obviously the the engineer has the
+2:39:30 proactivity for their own case. So they
+2:39:33 they debate, you know, should they go
+2:39:34 directly to that person? If so, how?
+2:39:36 Because it doesn't they don't have a
+2:39:38 great case.
+2:39:39 >> Yeah. And I think I think that coaching
+2:39:41 your own manager works pretty well in
+2:39:43 this sense. Your manager often knows
+2:39:46 what they need to do or at least is open
+2:39:48 to it and it just hasn't made their
+2:39:49 priority list because
+2:39:52 you obviously care more about your
+2:39:53 career than your manager does usually,
+2:39:55 right? Because it like that's just human
+2:39:57 nature. And so the manager means well
+2:39:59 and wants to help but isn't
+2:40:02 isn't getting around to it. And so if
+2:40:04 you just poke them a little bit, the
+2:40:07 other thing that is a middle ground is
+2:40:10 you can ask your manager, would you send
+2:40:12 a note to that VP? like I know I need to
+2:40:14 go get them to support me, but I don't
+2:40:18 really know them. Can you send them a
+2:40:20 quick intro that says, "Hey, I have a
+2:40:22 guy who's coming up for promotion. Uh,
+2:40:25 he wants to come talk to you. You know,
+2:40:28 would you take a 15minute meeting uh
+2:40:30 because we're going to need your
+2:40:32 feedback."
+2:40:33 It still gives you you still are doing
+2:40:36 most of the work. They're just sending
+2:40:37 an email, but it that's a middle ground.
+2:40:40 Um, you've opened a topic though I
+2:40:42 really want to point out to all the
+2:40:44 engineers.
+2:40:47 You asked me, had I ever seen a case
+2:40:48 where a skip level uh saved an engineer
+2:40:52 from being fired and I said, "Yeah, I've
+2:40:54 seen people moved around."
+2:40:56 What I never really seen is an engineer
+2:40:59 or any other anybody else get promoted
+2:41:01 over their manager's objection. You have
+2:41:03 to have your manager's support because
+2:41:08 I can't if I'm the big boss, I can't
+2:41:11 promote you if the manager doesn't agree
+2:41:14 because I'm just creating a mess. I'm
+2:41:16 telling the manager they're wrong and
+2:41:18 now I'm telling them that they have to
+2:41:20 work with you more senior, you know,
+2:41:22 even though they didn't agree. I'm just
+2:41:24 creating a complete mess. So if the
+2:41:28 manager isn't supportive,
+2:41:30 I think engineers envision like I'm
+2:41:33 going to do such incredible work and I'm
+2:41:35 so technically astute that I will be
+2:41:37 recognized even though this manager is a
+2:41:38 bozo. It's not going to happen. It just
+2:41:42 it can't. And so you either have to get
+2:41:45 your manager on board or get out from
+2:41:46 under them and find somebody who is on
+2:41:48 board. Now a plug for people like me. Go
+2:41:52 find the managers who I made a
+2:41:55 profession of getting people moved up,
+2:41:58 not undeservedly, but fast.
+2:42:01 And hell, that became a huge selling
+2:42:03 point, right? Go to Ethan's org. He'll
+2:42:05 make deals and get you promoted.
+2:42:08 That was my recruiting tool. Come work
+2:42:11 for me and I'll make it happen. Because
+2:42:14 it was known that I would back people
+2:42:16 and get the job done. I could attract
+2:42:19 talent and I could keep talent. I had
+2:42:21 one guy, my my biggest star employee
+2:42:25 uh began as a mid-level engineer, what
+2:42:28 Amazon calls a level five. He went to
+2:42:30 senior engineer, he moved to manager
+2:42:33 from manager at an equal sort of lateral
+2:42:35 promo. He went to senior manager then to
+2:42:38 director and by that point he caught up
+2:42:40 to me. I was a director too. So we were
+2:42:42 out of space and he went to found his
+2:42:44 own company. Now he was a top performer
+2:42:47 but three promotions in eight years. We
+2:42:49 worked together eight years.
+2:42:52 You know, we're still close friends, of
+2:42:53 course, but he powered my career and I
+2:42:55 powered his, but that example also
+2:42:58 brought other people. Like, oh, look at
+2:43:00 look at what happens in this or we've
+2:43:03 been talking about politics for almost
+2:43:06 three hours now. And I can feel
+2:43:10 many at many points people listening are
+2:43:12 probably thinking, I hate every single
+2:43:15 moment of this. I I hate this. I some
+2:43:19 people are probably listening because
+2:43:20 they they feel like they have to, but
+2:43:22 they wish they didn't have to know how
+2:43:25 the system works. And I know it's
+2:43:27 inevitable a little bit that, you know,
+2:43:29 you can't avoid politics completely, but
+2:43:31 let's just say for someone who really
+2:43:33 just despises politics for all it is,
+2:43:36 what could you do to avoid politics if
+2:43:39 you are working at a company?
+2:43:42 >> I think number one, it's about choosing
+2:43:44 your leader. So if you can find a leader
+2:43:47 who shares your disdain of politics
+2:43:49 hopefully that maybe comes from a
+2:43:52 similar tech background and wants to
+2:43:53 reward they believe as much as you do it
+2:43:56 should be all about the work. Find that
+2:43:58 leader. That's one thing you can do. The
+2:44:01 second thing is go work on the hardest
+2:44:02 area you can get into where expertise is
+2:44:05 really going to matter and you can stand
+2:44:07 out the most. In other words, if you're
+2:44:09 doing
+2:44:12 good, solid engineering work, but that
+2:44:14 lots of people can do, it's harder to
+2:44:15 stand out. I remember Andy Jasse, he was
+2:44:19 CEO of AWS at this time, but in the past
+2:44:23 he had been uh I'm sorry, before he was
+2:44:26 CEO of all of Amazon. And he was talking
+2:44:29 about principal engineers. And he said
+2:44:32 principal engineers are normally
+2:44:34 expected to like advise others and
+2:44:36 mentor and do architecture, but these
+2:44:39 guys, these few guys working on AWS,
+2:44:43 we just need them solving the hardest
+2:44:45 problems. And so I absolve them of all
+2:44:47 of that other stuff. Well, for those
+2:44:49 engineers who just wanted to be
+2:44:53 I don't want to review architecture. I
+2:44:54 don't want to give feedback. I don't
+2:44:56 want to give promo feed. I He was the
+2:44:58 perfect boss because he felt they're
+2:45:01 they were working on such hard problems.
+2:45:03 He couldn't spare them
+2:45:06 to invest in the rest of the organ. He
+2:45:08 didn't care. So you're looking for that
+2:45:10 situation where your work is so
+2:45:12 essential.
+2:45:13 Uh because absolutely look you've asked
+2:45:16 about difficult people and I've given
+2:45:17 you all these rules about it's great
+2:45:19 that your boss it's important your boss
+2:45:21 like you if you have a skill that no one
+2:45:24 else has
+2:45:28 and that skill is valuable you will get
+2:45:30 exceptions. I remember
+2:45:34 Andy
+2:45:35 again when he ran AWS. I remember him
+2:45:38 talking about a highlevel employee who a
+2:45:44 couple people criticized him and said
+2:45:45 that guy's not working that hard. You
+2:45:48 know, he's not really working at an
+2:45:49 Amazon level. And Andy said, "Yeah, I
+2:45:53 think you're right, but
+2:45:56 he's in a role where we need him, and I
+2:45:59 think he knows we need him, and so we're
+2:46:01 just going to kind of have to live with
+2:46:02 it." Like, he does the one thing we
+2:46:04 really need. And you could kind of tell
+2:46:06 Andy was like, Andy's one of the hardest
+2:46:09 managers I ever worked for, just very
+2:46:11 demanding.
+2:46:13 But in this case, he's like, "Yeah, he's
+2:46:15 got the leverage.
+2:46:17 Is what it is, you know?" and he was
+2:46:18 very like
+2:46:21 good on him was kind of his, you know,
+2:46:24 like he's kind of got us. We're just
+2:46:25 going to have to live with it.
+2:46:27 Uh that's what you have to do if you
+2:46:29 don't want politics is you've got to be
+2:46:32 you've got to have that essential skill.
+2:46:35 Um again, you have to have some kind of
+2:46:37 leverage. So
+2:46:40 you have to literally live up to Cal
+2:46:41 Newport and so good they can't ignore
+2:46:43 you. Earlier in our conversation, you
+2:46:45 talked about how when everything's
+2:46:48 growing, it's positive sum. When
+2:46:50 everything is kind of stagnant in an
+2:46:52 organization, it's a little more zero
+2:46:54 sum where people are y
+2:46:55 >> battling. So, I can also imagine a
+2:46:57 growing company is much less likely or
+2:47:00 we'll have less politics. I think some
+2:47:02 amount is unavoidable.
+2:47:04 >> Yeah. Um I like to give people an
+2:47:06 extreme to think about. Uh and my
+2:47:09 extreme I often point out is the post
+2:47:11 office. like what's going on good at the
+2:47:13 post office and the only kind of roles
+2:47:15 are carry the mail or be the postmaster
+2:47:17 and there's one postmaster
+2:47:20 and that until that person leaves or
+2:47:21 dies
+2:47:23 you don't get that job and so it just
+2:47:26 feels like growth changes so much of
+2:47:29 that because it's not 25 people wanting
+2:47:32 one promotion it's you know
+2:47:37 lots of opportunity and I point out
+2:47:42 during the 15 years I was at Amazon
+2:47:45 the staff size of the company I joined
+2:47:48 it was 14,000 people I left it was 1.4 4
+2:47:51 million. So it grew a hundfold which is
+2:47:54 insane. As a result I was able my first
+2:47:57 team there was six people and nine years
+2:47:59 later I had 800. That kind of growth
+2:48:05 opens up doors that in a more normal
+2:48:08 company that's maybe growing 5% a year
+2:48:10 or 10% a year. It's just never going to
+2:48:12 happen. So I strongly believe find high
+2:48:14 growth. Last question is if you could go
+2:48:16 back to yourself at the beginning of
+2:48:18 your career and give yourself some
+2:48:20 advice specifically focused on this I
+2:48:23 guess navigating corporate politics. Is
+2:48:26 there something that that stands out to
+2:48:28 you that you'd say?
+2:48:30 >> Yeah, I God I wish I could go back to
+2:48:32 early me and share the idea that uh it's
+2:48:38 not just being right.
+2:48:40 It's it's
+2:48:43 not just being right. It's not just
+2:48:44 being technically astute. There's all
+2:48:46 this other stuff going on and wake up to
+2:48:49 it. I think I was blind or deprioritized
+2:48:53 it and thought well that's
+2:48:56 that's management stuff and even as an
+2:48:59 individual contributor understanding
+2:49:00 well management stuff does control the
+2:49:02 world. I wish I had been more aware. So,
+2:49:04 I guess the advice to get it down to a
+2:49:06 single sentence is take it seriously
+2:49:11 that your relationships are what
+2:49:13 actually control your progress.
+2:49:15 >> Awesome. All right. Well, thank you so
+2:49:17 much for your time, Ethan. I really
+2:49:18 appreciate it.
+2:49:19 >> Thank you so much for the chance to do
+2:49:20 this a second time. It's been so much
+2:49:22 fun and the time has flown by.
+2:49:24 >> Awesome. And do you want to plug um your
+2:49:26 your stuff real quick? Well, I think if
+2:49:28 you've gotten something from this
+2:49:30 discussion and you want to know how to
+2:49:32 navigate your career, that's what I do
+2:49:34 all the time. I teach classes on it. I
+2:49:36 have a newsletter on it. So, if you want
+2:49:39 help, my goal is to help people succeed
+2:49:41 rather than bang their head against
+2:49:42 walls. If I've done some of that in this
+2:49:44 podcast, I can do more of it with more
+2:49:46 time.
+2:49:47 >> All right, three and a half hours in the
+2:49:49 chair, baby.
+2:49:51 >> Thank you for listening to the podcast.
+2:49:53 It's a passion project of mine that I've
+2:49:55 really enjoyed building. Another passion
+2:49:57 project that I've been working on kind
+2:49:59 of in secret is building an ergonomic
+2:50:01 keyboard that I wish existed and I
+2:50:03 finally have a prototype. So, I'd love
+2:50:05 to show you what we've built. It's ultra
+2:50:08 lowprofile and ergonomic and I couldn't
+2:50:11 find anything like it on the market. So,
+2:50:12 that's why we built it. I'll put a link
+2:50:14 to the keyboard in the description. You
+2:50:16 can take a look and learn more about the
+2:50:17 project there. We could definitely use
+2:50:19 your support. Also, if you have any
+2:50:21 feedback for me about the show, I'd love
+2:50:23 to hear it. Comments on YouTube have led
+2:50:25 to guests coming on like Ilia Gregoric
+2:50:28 and David Fowler. I wasn't aware of them
+2:50:30 until someone dropped a comment. Also,
+2:50:33 feedback in the comments helped me learn
+2:50:34 to reduce the number of cliffhers in the
+2:50:37 intros. So, your comments definitely
+2:50:38 make a difference. Please keep letting
+2:50:40 me know what you'd like to see more of
+2:50:41 in the show, and I'll see you in the
+2:50:43 next episode.

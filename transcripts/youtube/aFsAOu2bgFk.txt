@@ -1,0 +1,2934 @@
+0:00 Tell me about your levels.
+0:01 >> Level one, no AI. Level two, it's the
+0:03 yes or no. Can I do this thing in your
+0:05 IDE? At level six, you're bored because
+0:07 your agent's busy.
+0:08 >> What is Gas Town?
+0:09 >> If chat is complet,
+0:12 well, then we're going to put agents in
+0:14 a loop and that'll be an orchestrator.
+0:15 That's all it is. It's agents running
+0:16 agents. There's a vampiric effect
+0:19 happening with AI where it gets you
+0:21 excited and you work really, really
+0:23 hard. I find myself napping during the
+0:25 day, but I'm talking to friends at
+0:26 startups and they're finding themselves
+0:27 napping during the day. We're still not
+0:29 seeing that much more output from
+0:31 companies, teams that you would expect.
+0:33 >> What if what we're actually observing is
+0:35 that innovation at large companies is
+0:37 now dead. So I think what's happening is
+0:43 >> Steve Yagi has been a software engineer
+0:45 for 40 [music] years. He spent decades
+0:47 at Amazon and Google, is famous for his
+0:49 brutally honest rant about the industry,
+0:51 and for being right a lot. He recently
+0:54 built Gast Town, an open source AI agent
+0:56 orchestrator, [music] and co-authored
+0:57 the book Vibe Coding with Jean Kim. In
+0:59 today's conversation, we discuss Steve's
+1:02 eight levels of AI adoption for
+1:03 engineers [music] from no AI to running
+1:05 multiple agents in parallel, and why 70%
+1:08 of engineers are still stuck at the
+1:09 bottom levels, why AI is creating a
+1:11 vampire burnout effect on developers,
+1:14 where you can be 100 times more
+1:15 productive, but only get three good
+1:17 hours [music] a day. his prediction that
+1:18 big tech companies are quietly dying and
+1:20 that small teams of 2 to 20 people will
+1:22 rival their output [music] and many
+1:24 more. If you want to understand what the
+1:26 day-to-day of software engineering look
+1:28 like in the near future and how not to
+1:29 get left behind, this episode is for
+1:31 you. This episode is presented by
+1:33 Statsig, the unified platform for flags,
+1:35 analytics experiments, and more. Check
+1:37 out the show notes to learn more about
+1:38 them and our other season sponsors,
+1:40 Sonar and Work OS.
+1:43 So, Steve, really good to have you on
+1:45 the podcast again. What have you been up
+1:48 to,
+1:49 >> Ger? Great to be back. It's been uh 10
+1:52 months now.
+1:53 >> Closer to a year. Yeah,
+1:54 >> close to a year. Yeah, boy.
+1:56 >> Seems like forever.
+1:57 >> Yeah, sure does. Um uh yeah, uh it's
+2:00 there's been a lot going on. Um I'm uh
+2:03 unemployed right now, which has been
+2:05 incredibly fun.
+2:06 >> Unemployed or funemployed?
+2:08 >> I am um just doing whatever I want is
+2:11 what I'm doing, which is real nice. And
+2:13 uh had a couple software launches, which
+2:15 was nice. I had a book launch last year
+2:17 which was nice. I uh been living life.
+2:20 >> Yeah. So for a very long time you've
+2:23 been known as this kind of trutht teller
+2:26 of bringing in sometimes comical
+2:29 sometimes really uncomfortable facts or
+2:32 observations should I say. You wrote
+2:34 like often in really kind of fun fun
+2:36 ways with rants and a lot of them
+2:38 resonated with people. Do you remember
+2:41 what was around that really stood out
+2:43 and at any point in time that like you
+2:45 you got some really good feedback either
+2:46 at that point or later you felt
+2:48 validated by it?
+2:49 >> Oh uh well um so a lot of people tell me
+2:52 well those who know their favorite
+2:55 Stevie blog is actually execution in the
+2:57 kingdom of nouns. I don't know if you
+2:58 remember that one. Way back in the day,
+3:01 I was at Google, early days Google, and
+3:03 I was uh trying I was struggling to sort
+3:06 of like get this idea across to people
+3:08 that Java's growth was super linear with
+3:10 the amount of code. So, the amount of
+3:12 code would grow more than the amount of
+3:14 functionality, which is not a good place
+3:16 to be. And uh Java's gotten a lot better
+3:19 since then, right? But my post raised a
+3:21 lot of eyebrows at Sun because they were
+3:22 like, "What is this guy complaining
+3:24 about? Why doesn't he just shut up?" you
+3:25 know, but I was like, I want to use a
+3:27 language that has first class functions.
+3:29 And so I wrote a very very very uh
+3:32 unusual blog post called Execution in
+3:34 the Kingdom of Nouns. People really
+3:36 loved it where it was a story. It was
+3:38 just a a fairy tale about a a land where
+3:40 there were no verbs and uh it was uh it
+3:42 was fun. So one of your lesserk known
+3:45 blog posts or for a lot of listeners,
+3:47 it's called a rich programmer food
+3:50 essay. rich programmer food. Yeah. And
+3:52 this was about compilers. Do you
+3:56 remember what you argued about or what
+3:57 the what points you made?
+3:58 >> Of course. That's one of my most
+3:59 important blog posts ever. I got to tell
+4:01 you, I met a guy, okay, who he
+4:04 introduced himself at Swix's AI
+4:05 engineering conference in in in New
+4:07 York. And he's like, I've I've wanted to
+4:09 meet you, Steve. I'm one of your
+4:10 players, okay? And I'm like, whoa. Cuz
+4:12 this dude, you know, in his 30s, and you
+4:13 know, you know, he's played my game. You
+4:15 got to understand the game that I wrote.
+4:17 It's something most people wyvern most
+4:19 people haven't seen it because I didn't
+4:20 open source it. I will someday. It's
+4:22 just a pain in the butt.
+4:23 >> It's a really beautiful thing and it and
+4:25 it created so much love in the players
+4:26 for decades. They would come back,
+4:28 right? But this guy was so into it and
+4:30 he's like, I read your I read your rich
+4:32 programmer food blog post and decided to
+4:35 become a compiler expert. I became a
+4:37 PhD. He was in high school when he read
+4:38 it. Became a PhD. Started his own
+4:41 company. He's got a startup that's doing
+4:43 really, really well now. And he said it
+4:44 was all because of that post. And and
+4:47 this post talks about I think you argued
+4:49 that unless you know how compilers work,
+4:52 you're not going to be a good
+4:54 programmer, an efficient programmer. I'm
+4:56 not sure what what the phrase was.
+4:57 >> There's going to be a layer of magic
+5:00 between what you're doing and what the
+5:02 computer is doing that is forever going
+5:04 to be sort of a friction for you.
+5:07 >> And then I think you even argued that
+5:08 some PhDs don't even understand how
+5:10 compilers work and this will make it
+5:12 really hard for them to be efficient. At
+5:14 the time that was definitely true,
+5:16 right?
+5:17 How do you think that post has aged?
+5:19 Because at that time I think it was like
+5:21 2012 or so like even then I I would
+5:24 assume it was bit unconventional to say
+5:26 like you need to understand assembly
+5:28 because it was high level languages
+5:29 right Java was was was in its prime C
+5:32 Ruby was starting to come out I heck
+5:34 JavaScript was starting to become big
+5:35 react will start in a few years
+5:37 >> and most developers would have thought
+5:39 why would I need to know compilers
+5:41 assembly I mean that's what the compiler
+5:42 is for right
+5:43 >> yeah you're asking a really really
+5:45 really foundational question you're
+5:48 asking what universities should teach is
+5:50 what you're asking me, Gay. Okay. In
+5:52 disguise and uh you know um that that
+5:57 those goalposts have moved every few
+5:59 years since I got into this game in the
+6:01 80s. All right. What you need to know in
+6:03 order to be a software engineer, it used
+6:06 to be assembly language. It used to be
+6:07 like lots of bits and stuff like that.
+6:10 And over time, my buddies and I realized
+6:12 that our favorite bit manipulation
+6:14 questions were starting to bounce off
+6:15 candidates who had never seen a bit
+6:16 before, right? And we [snorts] real, you
+6:19 know, we did some soularching in the
+6:20 2010s, you know, and we were like, do
+6:23 you really need to know how to
+6:24 manipulate bits in a bite with XORS and
+6:26 stuff like that anymore? Probably not,
+6:28 right? And that was a depressing
+6:31 realization because we had prided
+6:32 ourselves in knowing how that stuff
+6:34 works, but we just don't need it
+6:36 anymore.
+6:37 >> And the sad reality is that, and I I I
+6:41 had a lot of my own ego and identity
+6:43 wrapped up in my sort of compiler
+6:44 background. It's all it's interesting,
+6:46 right? But it's it's not useful in any
+6:48 meaningful sense anymore.
+6:50 >> And is is it not useful because the
+6:54 compilers have gotten so good at
+6:56 optimizing for example? Is it that the
+6:58 problems have moved on to higher layers?
+7:01 Why do you think that is walking up the
+7:03 abstraction ladder? That's all.
+7:04 >> And we're not even talking about AI just
+7:06 yet. Like this this happened even
+7:08 >> say AI. Did you say?
+7:09 >> No, not yet. We we will say it. Yeah,
+7:11 >> but but this but even in I remember like
+7:13 you know late 2010s it didn't really
+7:15 come up like in in my career I can only
+7:18 remember one time where it would have
+7:20 been nice to know what the compiler did
+7:22 but even then might have been a red
+7:23 herring honestly.
+7:24 >> Look what you have to know just keeps
+7:26 moving. They just they keep changing the
+7:28 courses. They keep changing what they
+7:30 teach. Many people don't see this
+7:31 because they're only looking a year or
+7:33 two or three back and you know looking a
+7:34 little bit forward. But I've been doing
+7:36 this for 40 years and I can tell you
+7:38 they teach you very different things now
+7:39 than they used to teach. And it's
+7:40 because you need to know very different
+7:41 things. And nowhere is it more evident
+7:43 than when we saw the exponential curve
+7:45 of the graphics industry, computer
+7:46 graphics. Look at graphics today
+7:48 compared to 19, you know, 92 when I was
+7:51 learning graphics in university. And I
+7:53 had to learn how to literally, you know,
+7:55 do the algorithm to figure out where the
+7:57 next pixel goes on a line so I can
+7:59 render it to eventually turn it into a
+8:01 triangle, which is a polygon. Meanwhile,
+8:03 two years later, I took the same course
+8:04 and we were doing animation.
+8:06 >> I didn't even know what a polygon was. I
+8:08 mean I did but not at that level right
+8:10 the whole ladder just kept moving up and
+8:12 the jobs changed originally they needed
+8:14 people that could write device drivers
+8:15 and then they needed people and now they
+8:17 need people who can do game worlds and
+8:19 physics and all this stuff right it's
+8:20 they just graphics showed us the way
+8:23 this is what happens and software
+8:25 engineering jobs have been very stable
+8:26 for I don't know since iOS since mobile
+8:28 and cloud those are the last two big
+8:30 innovations right
+8:32 >> y Steve just made the point that the
+8:33 industry goes through these massive
+8:35 maturity leaps from raw pixels to game
+8:37 engines from bare metal to cloud. And if
+8:40 you're building software today that
+8:41 needs to make that leap to enterprise
+8:42 grade, there's a tool that handles
+8:44 exactly that. This is our season
+8:46 sponsor, Work OS. If you're building any
+8:48 SAS, especially an AI product,
+8:50 authentication, permissions, security,
+8:52 and enterprise identity can quietly turn
+8:54 into a long-term investment. SL edge
+8:57 cases, directory sync, audit logs, and
+9:00 all the things enterprise customers
+9:01 expect. It's a lot of work to build
+9:03 these mission critical parts and then
+9:05 some more to maintain them. But you
+9:07 don't have to. Work OS provides these
+9:09 building blocks as infrastructure so
+9:11 your team can stay focused on what
+9:12 actually makes your product unique.
+9:14 That's why companies like Entrophic,
+9:16 OpenAI, and Cursor already run on Work
+9:18 OS. Great engineers know what not to
+9:20 build. If identity is one of those
+9:22 things for you, visit work.com. With
+9:25 that, let's get back to the question of
+9:27 what the last real innovation in
+9:28 software engineering actually was.
+9:30 >> And it's been kind of dead since then,
+9:32 actually. Yeah,
+9:33 >> I don't want to say AI because we're not
+9:34 talking about it yet, but but I think we
+9:37 went through a I think we went through a
+9:38 period where people stagnated a little
+9:40 bit where the courses didn't change very
+9:41 much and we thought this is all we're
+9:42 ever going to need to know.
+9:44 >> I I I feel the last big innovation,
+9:47 correct me if I'm wrong, was distributed
+9:48 systems that that was the last kind of
+9:50 hard problem starting from like 2010s
+9:52 when you Uber brought brought
+9:54 microservices into there. How you scale
+9:56 services, how you store large amounts of
+9:58 data. I feel that was a like
+10:00 >> I mean it was a big it was a big slow
+10:03 >> yeah but honestly like I feel there's a
+10:05 lot of migrations happening new react
+10:07 versions coming up and developers
+10:09 struggling with that Apple every year
+10:10 throwing in a you know like uh a
+10:12 screwdriver in in in the wheels with the
+10:15 new breaking version Android developers
+10:17 needing to retire an Android old version
+10:21 and deciding like where to cut it off.
+10:22 So I feel there was that like kind of
+10:24 like migrations thing and and also
+10:26 business was just good right like
+10:28 everyone was growing we were like
+10:29 everyone was busy hiring like there's no
+10:31 tomorrow there there was a time in 2021
+10:33 the market was so hot a lot of boot
+10:35 campers with 3 months experience we're
+10:37 getting offers a pretty good company cuz
+10:38 everyone was so desperate to hire
+10:41 >> and then came AI in in 2022 one thing
+10:45 that always struck me about you even in
+10:47 those like you know 2020s and even
+10:50 before you're always pretty pragmatic uh
+10:52 you know You were by by trade you were
+10:54 always into compilers, debugger tools.
+10:56 That's where you started. You worked on
+10:57 hard problems at Amazon, at Google.
+10:59 Never shied away to getting into like
+11:01 hard technical problems and you know
+11:03 like all all these things. And when AI
+11:05 came out, I don't remember you saying,
+11:08 "Oh, this is amazing. This is going to
+11:09 change the world." How did you feel?
+11:10 Were you kind of like observing,
+11:12 skeptical like at the very beginning
+11:15 right when you first came across LMS?
+11:17 How was that? I was pretty blown away
+11:19 that they could write fairly coherent
+11:21 Emacs list functions like like chatg the
+11:24 original one in in December 2023
+11:28 >> 2022
+11:29 >> 2022 okay boy time flies um could
+11:32 already write code in a weird language
+11:34 right uh not very much of it and it was
+11:37 it was janky but that was for me that
+11:39 was the beginning of oh right uh you
+11:42 know because I've had friends in AI for
+11:44 20 years saying any minute now any day
+11:46 now right and they'd show us and it
+11:48 complete better and better and better
+11:49 and this was the first time it was like
+11:51 oh okay I I see now right but I was
+11:53 still skeptical like everybody else and
+11:55 I can I can tell you because when when
+11:57 the rumors came out about cloud code in
+12:00 uh beginning of last year right that
+12:03 anthropic had a tool internally that was
+12:04 writing code for them and it was a
+12:06 command line tool I I along with
+12:08 everyone else went no it's not you know
+12:11 it's we were just like just flatout
+12:13 rejection just absolutely not happening
+12:15 right until I used it and then I was
+12:17 like, "Oh, I get it. Uh, we're all
+12:18 doomed, [laughter]
+12:20 right?" And then I wrote Death of the
+12:21 Junior Developer right after that,
+12:22 actually. I think gosh, it might have
+12:24 even been after after uh 40 came out
+12:26 that I did Death the Junior Developer.
+12:28 But things changed really fast once that
+12:30 came out. So, was I a skeptic? Yes. But
+12:33 did I pay attention to the curves from
+12:35 the very beginning? I figured if Chat
+12:37 GP35 can write a coherent emacless
+12:40 function, then in a year, let's see how
+12:43 they do. And in a year, 40 was writing a
+12:45 thousand lines of code. A thousand
+12:48 lines, dude, that's most of the world's
+12:50 code is in files of a thousand lines or
+12:52 less, which means that it can make
+12:54 credible edits. It wasn't able to up
+12:56 until 40 came out, right? And so, like,
+12:58 man, it was that point when I was like,
+13:01 okay, we're on a curve. This is a ride.
+13:03 It's not stopping. Let's get on the ride
+13:05 and see where it goes. And I dove in,
+13:07 right? And I was like, I was behind. I
+13:10 didn't know AI. I didn't know like the
+13:12 the fundamentals of I didn't know the
+13:13 lingo. You know, everybody knows this
+13:15 stuff now, right?
+13:16 >> But I spent a year doing nothing but
+13:18 reading papers and catching up,
+13:19 >> right?
+13:20 >> So in this book, Vibe Coding, I remember
+13:24 last time you were on the podcast, this
+13:26 book was about to come out and I was
+13:28 reading an early early version of it or
+13:30 so. But the back cover, I just read the
+13:32 back cover and I realized that you must
+13:33 have written this about a year ago and
+13:35 it says, "The days of co coding by hand
+13:37 are over." When did you realize this?
+13:40 because I've realized this, you know,
+13:42 recently with Opus 4.5, but this was
+13:45 this was a lot before well before that.
+13:47 >> Mhm. Yeah, it was a year ago. It was uh
+13:50 let's see, what is it right now?
+13:51 January. So, it was over a year ago. It
+13:54 was 12 13 months ago when I first
+13:56 realized. And uh and it wasn't that
+13:58 wasn't even my quote. That was uh that
+14:00 was Dr. Eric Meyer, right? The inventor
+14:02 of many many many things uh in in the
+14:05 programming world, one of the most
+14:06 important compiler people in the world.
+14:08 That dude, think about it. He spent his
+14:10 life building technology for developers
+14:12 to be able to write code and he's saying
+14:14 developers aren't going to write code
+14:15 anymore. What would possess somebody to
+14:18 say my life's work isn't really right?
+14:20 And that's what caused actually Jean Kim
+14:22 and I both to go huh right you know if
+14:25 the inventor of you know you know he he
+14:27 made huge contributions to to to Visual
+14:29 Basic and C and and and link and and and
+14:32 Haskell and P and PHP with a pig. Is
+14:36 that what it's called? Right. All him.
+14:38 >> And he's just like no we're done. We're
+14:39 done writing code. I mean, that's that's
+14:40 that's that's pretty big words from a
+14:42 languages person, one of the most famous
+14:44 in the world,
+14:45 >> right? What does he see that we didn't?
+14:47 And he sees the curves, man. It's that
+14:49 simple. It's like exponential curves.
+14:53 They get real steep real fast. And we're
+14:55 we're heading into the steep part this
+14:57 year. So, the inventor of C and Visual
+14:59 Basic is saying that we're done writing
+15:01 code. But even if the AI writes all the
+15:03 code, someone has to verify it. And
+15:05 that's where our season sponsor Sonar
+15:07 comes in. Sonar, the makers of Sonar
+15:10 Cube, has introduced the agentcentric
+15:12 development cycle framework, AC/DC, a
+15:15 new software development methodology
+15:16 designed for the unique scale and speed
+15:18 of AI generated code. It's a move
+15:20 towards a more intentional four-stage
+15:22 loop that gives agents the guards they
+15:24 actually need. The four phases being
+15:27 guide. First, agents need to understand
+15:29 the canvas on which they're being asked
+15:31 to create so that the output fits with
+15:34 what the developer and organization
+15:35 require. Generate the LLM based tool
+15:38 generates the code it believes will
+15:39 achieve the desired outcome within the
+15:42 right context. Verify next. The agent is
+15:45 deliberately required to check its work,
+15:47 ensuring it actually achieves the
+15:49 desired outcomes and is reliable,
+15:51 maintainable, and secure. Solve.
+15:54 Finally, any issues identified are
+15:56 provided to a code repair agent to fix.
+15:58 To power this, Sonar has significantly
+16:01 strengthened its offering, introducing
+16:02 products and capabilities like Sonar
+16:04 context augmentation, Sonar Cubagentic
+16:07 analysis, Sonar Cube architecture, and
+16:10 Sonar Cube remediation agent. Head to
+16:12 sonarsource.com/pragmatic
+16:14 to learn more about the latest with
+16:15 sonar and how it's empowering
+16:16 organizations to embrace the agentic
+16:18 era. With this, let's get back to
+16:20 Steve's exponential curves of AI
+16:22 improvement. playing devil's advocate,
+16:24 you know, like one thing about being an
+16:26 engineer is like you you can draw up
+16:29 curves, but you know, like you never
+16:31 know when they end or if they flatten,
+16:32 what not. We can see where has come.
+16:34 What made you believe that this curve
+16:37 would keep going and especially that
+16:38 with LLMs, the fact that it even kind of
+16:40 works was a bit of a I guess surprise
+16:42 for a lot of people and the fact that it
+16:44 kept scaling is a surprise and there's
+16:45 this question of like how long they will
+16:47 scale.
+16:48 >> Yeah. So, the world is filled with
+16:49 unbelievers.
+16:51 Okay. people who specifically who
+16:53 believe the curve looks like this, an S.
+16:55 It goes up
+16:56 >> and then it flattens. Okay. And they
+16:58 actually think we're at the hump right
+16:59 now.
+16:59 >> Yeah.
+17:00 >> And they have thought that ever since
+17:01 the GP35 came out. They're like, "Yeah,
+17:03 it's not going to get any better." 40
+17:05 comes out. We love 40. People love 40.
+17:07 They still do. They can't get rid of it.
+17:09 >> But they still think that's as good as
+17:10 it gets. You know, Opus 4.5 is out and
+17:13 most people haven't played with it. Most
+17:15 people don't realize
+17:16 >> what's there. And that thing is already
+17:18 two months old. The half-life between
+17:20 model drops, as far as I can tell, has
+17:22 gone from about four months beginning of
+17:24 last year to two months from Anthropic
+17:25 at the beginning of this year. So any
+17:27 day we're going to see another model
+17:29 from Anthropic. It'll probably be out by
+17:30 the time we have this podcast out,
+17:32 right? And that will be so much further
+17:34 up the curve that people are going to
+17:35 start to be really freaked out by it.
+17:38 It's going to it's going to worry people
+17:39 when they see the next model, okay?
+17:41 because all of the bugs, all the
+17:43 mistakes that they're complaining about
+17:44 right now get fed right back in his
+17:46 training and so that it doesn't make
+17:47 them the next time. And this is what
+17:49 people aren't understanding, right? And
+17:51 also time continues. There will be three
+17:54 and five years from now. The sun's not
+17:55 going to stop, right? And it's coming.
+17:57 So this inevitable the collision of
+17:59 these curves, man, it's there will be
+18:01 societal upheaval is what's going to
+18:03 happen. And it's already started. And
+18:05 people are justifiably mad. And I'm mad
+18:08 with them. Gay. Okay. I'm mad at Amazon
+18:10 for laying off 16,000 people and blaming
+18:12 AI without an AI strategy for it. Those
+18:14 people are not going to be able to find
+18:15 jobs by and large. And they're the first
+18:17 of many to come. And nobody has a plan
+18:19 for this.
+18:20 >> Why? Wh Why do you think Amazon did that
+18:22 if they don't have an AI strategy?
+18:25 >> Because um unfortunately, and people are
+18:28 going to hate me for saying this, but me
+18:30 saying it doesn't make it true. It was
+18:32 true already. Everybody has a dial that
+18:34 they get to turn from 0 to 100. and you
+18:37 can keep your hand off the dial, but it
+18:38 just has a default setting of what
+18:40 percentage of your engineers you need to
+18:42 get rid of in order to pay for the rest
+18:43 of them to have AI because they're all
+18:45 starting to spend their own salaries in
+18:47 tokens. And so, at least for a while, if
+18:50 you want your engineers to be as
+18:52 productive as possible, you're going to
+18:53 have to get rid of half of them to make
+18:54 the other half maximally productive. And
+18:57 as it happens, half your engineers don't
+18:58 want to prompt anyway, and they're ready
+19:00 to quit. And so what's happening is
+19:03 everybody on average is setting that
+19:04 dial to about 50% and we're going to
+19:06 lose about half the engineers from big
+19:08 companies which is scary.
+19:10 >> Yeah, that's wild. It's it's way that's
+19:13 way way bigger than we've seen back at
+19:15 co and
+19:16 >> it's going to be way bigger. It's going
+19:18 to be awful. It's but but at the same
+19:19 time something else is happening which
+19:21 is AI is enabling non-programmers to
+19:23 write code and it's also enabling
+19:25 engineers who have seen the light and
+19:27 believe the curves are going to continue
+19:28 to go up to actually get together in
+19:30 groups of two and five and 10 and 20 and
+19:32 30 people and start to do things that
+19:35 rival the output of these big companies
+19:37 that are tripping over themselves. And
+19:38 so we've got this mad rush of innovation
+19:41 coming up bottom up and we've got this
+19:43 mad knowledge workers falling out of the
+19:45 sky as the big companies lay them off
+19:47 because there's clearly the big company
+19:49 is not the right size anymore. It's not
+19:51 even Andy Jasse saying it. We're going
+19:52 to do the same thing with fewer people,
+19:54 right? And so does this mean we're going
+19:56 to have a million times more companies?
+19:58 Is there going to be a massive explosion
+20:00 of software or people going to get out
+20:01 of software altogether and we're all
+20:03 going to go do other stuff? I mean like
+20:04 I I'm very curious where all this goes.
+20:06 Yeah. small teams that have the right
+20:08 skill set or or see the right business
+20:10 opportunity or have advantages can do
+20:12 way more. So there is something there in
+20:15 that
+20:15 >> there is. So there's this um land rush
+20:18 starting. I think a lot of the people
+20:19 coming out of knowledge work are just
+20:21 anti- AAI and those people are going to
+20:23 struggle. I'm sorry but if you're
+20:25 anti-AI at this point it's like being
+20:26 anti the sun. You're going to have to go
+20:28 live underground, right? But the people
+20:30 who are like pro AAI like I I think
+20:33 we're going to see a big redistribution
+20:35 of who's doing the work and and where
+20:37 you get your software from. And it may
+20:39 we may well wind up from I I I could
+20:41 actually see a happy place where
+20:43 Amazon's not even a thing anymore.
+20:45 >> I I really could because software
+20:47 becomes we don't have the words for
+20:49 what's happening right where you know so
+20:51 many things happening this year that we
+20:52 don't have words for. Have you noticed
+20:53 that? But software becomes sort of like
+20:55 uh distributed. I don't know.
+20:57 >> I do see non-technical people getting
+20:59 into software. Could there be a job
+21:01 there for engineers to come and actually
+21:04 take over maintenance? Yeah. I mean, I I
+21:06 think there's going to be plenty of
+21:07 opportunity for there's gonna be there
+21:08 gonna be a lot of engineers uh doing
+21:11 software engineering. I just think we're
+21:12 all going to be doing it with AI, right?
+21:15 >> Yeah.
+21:15 >> But I think it'll be quite some time
+21:17 before companies are comfortable
+21:18 trusting their code to be deploy written
+21:21 and deployed by AI without any human
+21:23 being involved at all. I think the the
+21:25 point that people are missing, the
+21:26 important point that the naysayers and
+21:28 the skeptics are missing is not that
+21:30 it's a AI is not coming to replace your
+21:32 job. It's not a replacement function.
+21:34 It's an augmentation function. It's here
+21:36 to make you better at your job, right?
+21:39 And uh that's not a bad thing actually.
+21:42 Uh I don't I don't know why people would
+21:44 fight that, but uh
+21:45 >> speaking about the job as as developers,
+21:47 you've said something that can be
+21:48 triggering for a lot of people. You've
+21:50 said that I think this was on the AI
+21:52 engineer summit that if you're still
+21:53 using an IDE now, you're you're a bad
+21:55 engineer.
+21:56 >> Yeah. Well, you got to be a little
+21:57 provocative. Yeah. Um you know, I I I
+22:00 let me put it this way, okay? I'm not
+22:02 going to say you're a bad engineer cuz I
+22:03 know some very very good engineers
+22:05 better than I am who are still at like
+22:06 level one or two in my chart, right? But
+22:08 I feel profoundly sorry for them. I feel
+22:11 pity for them like I've never felt in my
+22:13 life for these grown people who are good
+22:15 engineers or used to be and they they're
+22:18 like, "Yeah, you know, I use cursor and
+22:20 I I ask it questions sometimes and I'm
+22:22 really impressed with the answers and
+22:23 then I review its code really carefully
+22:24 and then I check it in and I'm like,
+22:26 dude, you're going to get fired and
+22:27 you're one of the best engineers I know.
+22:29 >> Tell me about your chart. Tell me about
+22:31 your levels that you came up with.
+22:33 >> Yeah, so I was drawing this on the board
+22:35 in Australia for a big group of people
+22:37 trying to show them what happens cuz I
+22:39 saw them at all different phases. Some
+22:41 of them had their IDs open. Some of them
+22:42 had a big wide coding agent. Some of
+22:44 them the coding agent was really narrow,
+22:46 right? You know, and so I was like,
+22:48 okay, we're going to put you all on a
+22:49 spectrum just to show what's going on,
+22:51 right? And level one, no AI, right? You
+22:54 know, and and and level two it's it's
+22:56 the the yes or no. can I do this thing,
+22:59 you know, in your in your IDE, right?
+23:01 And then level three, you're like, yolo,
+23:03 just do your thing, right? Your trust is
+23:05 going up, right?
+23:06 >> Level four, you're like the code, you're
+23:09 starting to squeeze the code out, right?
+23:10 Because you're like, you want to look at
+23:11 what the agent is doing and not so much
+23:13 at the diffs anymore, right?
+23:14 >> So, you're not reviewing as much now.
+23:16 >> You're not reviewing as much. You're
+23:17 you're you're you're letting more of it
+23:18 through and you're really focused on the
+23:20 conversation with the agent. Mhm.
+23:22 >> And then at level five, you're like,
+23:23 "Okay, I I just want the agent and and
+23:25 I'll look at the code in my IDE later,
+23:27 but I'm not coding with my IDE." At
+23:29 level six, you're bored because you're
+23:30 like, "Okay, my agent's busy. I got I
+23:32 got to do something. I'm twiddling my
+23:33 thumbs." And so, you fire up another
+23:34 agent and now you're addicted because
+23:36 you'll very quickly get into an
+23:37 equilibrium where every agent is
+23:39 waiting. There's always an agent waiting
+23:40 for you because somebody's finished,
+23:41 right? As soon as you spin up enough of
+23:43 them mathematically, right? And so, you
+23:45 find yourself just multiplexing between
+23:47 them going like this and you can't
+23:49 leave. practical question. Assuming I'm
+23:51 working on the same code base, do how do
+23:53 you spin up the multiple agents so they
+23:55 don't get in conflict? Is it your are
+23:56 you going to use like
+23:57 >> Yeah. So that takes you to level seven,
+23:59 which is um oh my god, I've made a mess,
+24:02 right? I accidentally texted the wrong
+24:03 agent and didn't realize it and they did
+24:05 a big project inside of this project
+24:07 because I asked them to and now I got to
+24:08 clean up this mess, etc. Right? All that
+24:11 stuff. And that was when I started
+24:12 going, okay, what if we were to like
+24:14 coordinate this? What if cla code could
+24:16 run cloud code? That's the question
+24:18 everybody wants to know. And everyone
+24:19 was trying all last year. It's going
+24:20 clog code. Run yourself. It would run
+24:22 for a while and it would stop, right? Y
+24:24 and and so it was the whole stopping
+24:26 thing that So yeah, I pushed on that
+24:28 really really really hard and and wound
+24:30 up building some some stuff to help with
+24:31 it. But uh
+24:33 >> yeah, boy, it's changed a lot, man. It's
+24:35 it's changed so much.
+24:36 >> Going back to the ID, you you had a
+24:38 really good live debate with Natan So
+24:40 from Zed and the title was the death of
+24:41 the ID and both of you argued your view.
+24:46 What what is your view about the ID and
+24:48 and also what did you learn from from
+24:50 Nathan on on like his take of he was a
+24:53 bit more pro ID and you were a bit more
+24:55 like maybe this is not going to be
+24:56 around forever.
+24:57 >> Yeah, I mean you know I am where I am in
+25:00 my journey which is I I think that AI
+25:02 will do it all for us eventually and so
+25:05 the way I see is what do they really do
+25:08 and what are they really for. Okay, it's
+25:10 not really for writing code. It's for
+25:11 bringing tools together and for making a
+25:14 big tool, right?
+25:16 >> Y
+25:16 >> and now you have MCP for that
+25:19 >> or whatever, right?
+25:21 >> Uh and so I see IDE returning and I
+25:23 think cloud co-work is a return to the
+25:27 IDE form. It's it's cloud code going,
+25:29 oh, I need to be for real people, right?
+25:32 >> But I think claude co-work form factor
+25:33 probably works better for the average
+25:35 developer than cloud code does, right?
+25:38 So I see IDE I see us coming back into a
+25:40 world where it's ideides except it's all
+25:42 conversations and you know monitoring
+25:45 >> and this is a really good point. My
+25:47 brother built a thing called craft
+25:49 agents which is pretty similar to to
+25:51 cloud co-work except they connected in
+25:53 in their company their own data sources
+25:54 and he said that some developers start
+25:56 to prefer that because it's a visual
+25:58 that's easier to see. Parallel agents
+26:01 for example if you're not a power user
+26:02 it's easier to scroll it's just a nicer
+26:04 UI. So your point on maybe some
+26:06 developers should try out like if if
+26:08 you're not sold on cloud code like try
+26:10 cloud co-work or any other similar more
+26:13 visual thing it might be more your thing
+26:15 but like you know get some people love
+26:16 the command line I actually just use the
+26:18 UI because I just don't like memorizing
+26:20 the commands as embarrassing it is to
+26:22 admit or maybe these days it's not as
+26:23 embarrassing.
+26:25 >> Yeah the key was try as long as you're
+26:27 trying something. Yeah. One, probably
+26:29 the single most important proxy metric
+26:32 that you can have in a company today is
+26:35 token burn because what token burn says
+26:37 is your engineers are trying to do stuff
+26:39 or your non-engineers. And when they're
+26:41 trying, they're failing and they're
+26:43 learning. And so if you want to get
+26:45 those organizational bottlenecks
+26:46 discovered early on and you want to get
+26:49 your engineers leveled up on my eight
+26:51 level spectrum early on and you want to
+26:52 solve your business processes ahead, you
+26:55 need to start now, which means try. It
+26:57 doesn't matter what you try. It doesn't
+26:59 matter which tool you use. As long as
+27:01 you're using AI and you're trying to get
+27:02 it to do the work, you're doing the
+27:04 right thing.
+27:05 >> Yeah. And I I think as professionals,
+27:06 like we really ought to just at least
+27:08 try. Like you get firsthand experience
+27:10 and then you can make your decision.
+27:12 >> Steve's point about token burn is really
+27:14 interesting. The companies that win are
+27:16 the ones that experiment the most. And
+27:18 if you want to bring that same
+27:19 experimental mindset to your product,
+27:21 not just your AI usage, that's exactly
+27:23 what our presenting sponsor, Static is
+27:25 built for. Static gives you the complete
+27:27 toolkit without building it yourself.
+27:29 You get feature flags, experimentation,
+27:31 and product analytics all in one
+27:33 platform and tied to the same underlying
+27:35 user assignments and data. In practice,
+27:38 it looks like this. You roll out a
+27:40 change to 1% of users at first. You see
+27:42 how it moves the topline metrics you
+27:44 care about, conversion, retention,
+27:46 whatever is relevant for that release.
+27:47 If something was wrong, instant roll
+27:49 back. If it's working, you can
+27:50 confidently scale it up. Companies like
+27:53 notion went from singledigit experiments
+27:55 per quarter to over 300 experiments with
+27:57 static. They shipped over 600 features
+27:59 behind feature flags moving fast while
+28:01 protecting against metric regression.
+28:03 Microsoft Atlassian and Brex use static
+28:05 for the same reason. It's the
+28:07 infrastructure that enables both speed
+28:08 and reliability at scale. Static has a
+28:11 general free tier to get started and
+28:12 propricing for teams starts at $150 per
+28:15 month. To learn more and get a 30-day
+28:17 enterprise trial, go to
+28:18 static.com/pragmatic.
+28:20 With that, let's get back to Steve's
+28:22 take on the state of Gast Town.
+28:24 >> Now, there's a huge problem with people
+28:25 not knowing how to try and they say,
+28:27 "Oh, let me do something." And then it
+28:28 does the wrong thing because they always
+28:30 do. And then they're like, "Whoa, this
+28:31 is garbage." Uh, so, you know, you have
+28:34 to teach them that it's a shovel and you
+28:35 don't go shovel dig like in Fantasia,
+28:38 right? Like make the brooms walk around.
+28:40 No, you pick up the shovel and you dig
+28:41 with it, but it's a shovel that you
+28:42 didn't have before you were using your
+28:43 hands. Like, it's a really really simple
+28:45 analogy, but people just don't get it.
+28:47 They don't get it. And I think and I'm
+28:48 going to say something that's
+28:49 contentious, but in it's it's just the
+28:51 reality of the world. Most people can't
+28:53 read. I've ruined much much of my work
+28:56 in my life, I've just completely gone
+28:58 down wrong paths by overestimating
+29:00 people's ability to read. And I think
+29:01 that reading is, if anything, getting
+29:04 harder to come by as a skill these days.
+29:06 And uh and this is the situation that
+29:09 we're in right now is that cloud code
+29:10 makes you read a lot. So I think we're
+29:13 in a weird limbo for the rest of this
+29:14 year, okay? where until the UIs arrive
+29:17 that are good enough for everybody who
+29:19 can't read, everybody who can't read is
+29:22 going to be a severe disadvantage.
+29:24 >> Tell me a little bit more about your
+29:26 observation. A lot of people, a lot of
+29:28 developers cannot read because you were
+29:29 at Amazon that place supposedly is
+29:32 running on six pages and people actually
+29:34 reading does it
+29:37 >> I mean most dude most people can't read
+29:39 you. I don't know if you know this man
+29:41 like I they read really slow. Okay. And
+29:44 and the AI is I mean come on to most
+29:46 people five paragraphs as an essay.
+29:49 Remember five paragraph scenes in high
+29:51 school is a thing we have in America. I
+29:52 guess maybe yours were 100 paragraphs in
+29:54 Amsterdam.
+29:55 >> But to us five paragraphs is a lot.
+29:57 >> Then that's like that's the AI just
+29:59 clearing its throat,
+30:00 >> right?
+30:01 >> Yeah. [laughter]
+30:02 >> You know, you got to be able to read
+30:04 waterfalls of text. And so we're looking
+30:06 at a world where that won't work. And so
+30:08 you're going to need recursive
+30:09 summarization. You're going to need a
+30:11 factory. And it's funny because like
+30:12 this is why I mean trying UIs is so
+30:14 important because Gas Town right now the
+30:16 reason I say you can't use it is that
+30:18 it's a factory filled with workers and
+30:19 you're talking to it through a
+30:20 telephone. You can also go and look
+30:22 through the window and pound on it and
+30:24 talk to the workers but it's not like
+30:26 you're in it right with a UI you're in
+30:29 it and you can you can see what's going
+30:31 on and right it's all invisible in yes
+30:32 by and large right you know hard to see.
+30:35 And so I really do think and I and I'm
+30:37 going to I'm just going to make a bold
+30:38 prediction. And I think that by the end
+30:39 of this year, and we'll see demos of it
+30:42 like right away, but by the end of this
+30:44 year, most people will be programming by
+30:46 talking to a face.
+30:48 >> A face as in
+30:50 >> a screen.
+30:51 >> Your AI, like the Gas Town mayor, will
+30:53 be a fox talking to you. And you'll say,
+30:56 "Why doesn't it work?" And it'll say,
+30:57 "I'll go look at it." And it'll go spin
+31:00 off its workers just like it's doing,
+31:01 but you're talking to a face. And it
+31:03 will talk only. Yeah. I think that's the
+31:05 only thing that's going to work for most
+31:06 people.
+31:07 >> Fascinating. Let's let's write this down
+31:09 to prediction. Why do you
+31:10 >> go build it? I'm not going to.
+31:12 >> Let's talk about Gas Town. You mentioned
+31:13 Gas Town. What for those that a lot of
+31:16 people have heard about it, what is Gas
+31:17 Town?
+31:18 >> Gas Town is an orchestrator. So 2023 was
+31:22 completions
+31:24 code completions.
+31:25 >> Yeah. Autocomplete. Yeah, that's when we
+31:27 said it's
+31:28 >> completion acceptance rate card. Do you
+31:29 remember that?
+31:30 >> Oh my god. People were measuring it.
+31:32 Yeah.
+31:32 >> Stupid metric by the way. Uh the second
+31:34 one was but it was close. It was a proxy
+31:36 for are they trying right? Then there
+31:38 was chat that was 2024 right and then
+31:41 agents was 2025. We knew you could just
+31:43 look at that curve and go okay well if
+31:45 if chat is completions in a loop
+31:47 basically and agents are basically chat
+31:49 in a loop well then we're going to put
+31:51 or we're going to put agents in a loop
+31:52 and that'll be an orchestrator right and
+31:54 a bunch of them started coming out and I
+31:56 built one of my own
+31:57 >> my own vision but that's all it is it's
+31:59 agents running agents
+32:00 >> and can you talk through an a software
+32:03 engineer through it architecture like
+32:05 how is it organized how can I imagine
+32:07 you know the setup
+32:08 >> yeah sure I mean look um Gastown is
+32:11 really complicated and it's been really
+32:13 broken all week because I'm migrating it
+32:14 to Dol and that's where I actually
+32:16 learned how complicated it was. It has a
+32:18 lot of features.
+32:18 >> You're migrating it to
+32:20 >> to Dalt. It's a uh a new database.
+32:23 >> Oh, okay.
+32:23 >> Yeah, Dol is uh Dol is amazing. Dolt is
+32:26 a git back database. It's a git
+32:28 database. It's beads is just git plus
+32:31 database crammed together badly. And
+32:33 there's actually a database that does
+32:34 this. So, I'm I'm migrating to it. But
+32:36 yeah, anyway, Gas Town is is is
+32:40 what it should be is one one mayor that
+32:42 you talk to, that's your your person,
+32:45 and then whatever else needs to get
+32:47 done, they're just going to fire off
+32:48 workers. Okay?
+32:50 >> It's a little a little bit more
+32:52 complicated than that because there are
+32:53 really I think there are two kinds of
+32:54 work that that that people go back and
+32:56 forth on and people are arguing about
+32:57 whether they're the right one. Some
+32:59 people at Anthropic told me it's the
+33:00 minimaxing context argument. Okay, there
+33:03 are people who believe that you should
+33:04 maximize your context window and fill it
+33:06 with rich juicy context so that the AI
+33:08 is wise and all knowing when it's
+33:10 talking to you. They want to like you
+33:12 know just right at the edge of the
+33:13 context. And then there are others who
+33:14 are like task kill it task kill it. I
+33:17 want the shortest possible window
+33:18 because of the quadratic ex you know
+33:20 increase in in um cost
+33:23 >> combined with the dramatic drop off in
+33:26 cognition as the tokens go up right
+33:28 losing their track and stuff.
+33:29 >> So so what which one's right? And we've
+33:31 got people who are like full on in the
+33:33 in the in the minimizing and and the the
+33:36 maxers. And and I looked at my work
+33:38 workflow and I was like, well, pcats are
+33:40 the min and crew are the max. I have two
+33:43 fundamental role worker roles and gas
+33:44 task.
+33:45 >> So you have you have the the really
+33:46 simple one which is the small concept.
+33:48 >> If you have a really if you have a
+33:49 really well specified task all broken
+33:51 down into subtasks, then you can find
+33:53 and and and it's like it's
+33:55 self-contained. It's it says what to do.
+33:57 Then you can give it to a worker and
+33:58 have it go do it, right? Meanwhile, you
+34:00 have a really difficult design problem.
+34:02 You're gonna have to have a series of
+34:05 conversations about this. I maximize
+34:07 context. I'm like, read all these docs
+34:09 and then we'll talk. Right? So, it's
+34:11 just two workflows.
+34:12 >> And like I I like the idea. I mean, it
+34:14 sounds like it's I think it's so easy to
+34:16 imagine like it's a little town, you
+34:18 know, like this wild wild west. There's
+34:20 the mayor, like the the crew, the the
+34:22 workers, everyone's buzzing and going
+34:24 around and the house are being built. In
+34:26 practice, how does this work? like how
+34:28 has it worked for you? How what what are
+34:30 you hearing people get projects done
+34:33 versus not getting it done versus
+34:34 turning into absolute chaos? What have
+34:36 you learned with Gas Town?
+34:37 >> It's been a great experiment. I mean,
+34:39 I've I've really
+34:40 >> experiment, right?
+34:41 >> Well, yeah. I mean, right. I mean, I
+34:42 went out and built something that
+34:43 doesn't that deliberately doesn't work.
+34:45 It's too hard. It's too hard for the
+34:46 models. Even Opus 4.5 is barely enough.
+34:49 And it's funny because the folks at
+34:50 Anthropic told me they they like it, but
+34:52 they're kind of embarrassed some of them
+34:53 because it feels like I've got all these
+34:55 workarounds for bugs in their model,
+34:57 which it kind of is, right? But it's not
+34:59 a bug. It's their model was never
+35:00 trained to be a factory worker and it
+35:01 will be soon. So a lot of gas time is
+35:03 going to disappear. A lot of the
+35:04 complexity, a lot of the roles that are
+35:06 monitoring,
+35:07 >> all they're trying to do is tell Opus 45
+35:09 to be smarter and that's being on the
+35:10 wrong side of the bidder lesson, right?
+35:12 So a lot Gastown is going to simplify
+35:14 and flatten into just minimax roles.
+35:18 crew for your max and your pole cats for
+35:19 your mins and and I think that's the
+35:21 natural shape and they'll just scale up
+35:23 >> and and could that be the pcast? They
+35:25 might just be sub agents at some point
+35:27 for example like
+35:27 >> well sub agent I mean you pcats are sub
+35:29 aents um it's just that they're they're
+35:31 more they're first class they have their
+35:34 own identity inbox you can talk to them
+35:36 you you can actually see how they
+35:37 performed over time by computing skill
+35:39 vectors on their their work and things
+35:41 like that. So a little little bit more
+35:43 than that than sub agents. I think sub
+35:44 agents have the problem of being opaque.
+35:46 I'm going to fire off a bunch of sub
+35:47 aents to go do this work and then you're
+35:49 like okay let me know when you're done.
+35:50 Whereas with Gastown you can go look at
+35:52 them and be like dude your pcat's not
+35:54 working. I'm going to poke it. Right.
+35:55 So, Gas Town gives you a lot of
+35:57 hands-on, I don't know, steering, right?
+36:00 It doesn't try to be it doesn't try to
+36:02 get out of your way. It's in your way.
+36:03 Gas Town, it's really fun, though. I
+36:06 miss it. It's been down for a few days
+36:08 for me. And I tell you, man, working
+36:09 with regular Claude just stinks by
+36:11 comparison because it's like an idea
+36:13 factory. Once it's actually running and
+36:15 all booted up and everything, you can
+36:16 have so many things going on at once and
+36:18 actually track them reasonably well.
+36:20 Now, it can suck you into a a mode where
+36:23 you don't sleep, you don't eat, and you
+36:24 start it's not good for you. And I
+36:27 actually wanted to talk to you a little
+36:28 bit about what's what's happening in the
+36:29 industry at some point. But but Gas Town
+36:32 itself, I mean, like it was all
+36:33 calculated, all the characters, you
+36:36 know, the naming. Why did I even do Gas
+36:38 Town, right? Why is it
+36:39 >> why?
+36:40 >> Because I wanted to move the Overton
+36:42 window, right? Because people last year
+36:45 when I would say orchestration's coming,
+36:47 they'd say no agents aren't aren't no
+36:50 swarms, no orchestration, whatever.
+36:51 Everything you're saying is just not
+36:53 true. And now what they're saying is,
+36:55 bro, you're being pretty aggressive,
+36:57 right? Which is a different
+36:58 conversation. They're like now they're
+37:00 like, well, your swarm, I don't know,
+37:02 maybe your swarm can't do blah blah. But
+37:04 it's just completely shifted the
+37:05 conversation from the realm of
+37:06 impossibility to the realm of
+37:08 possibility. So, is is it fair to say
+37:10 that you took on more than you you
+37:13 reasonably thought you could chew? You
+37:15 took on this more ambitious ones because
+37:17 you wanted to both stress test what
+37:20 these models can do.
+37:21 >> Uhhuh.
+37:23 >> And find out find out and honestly just
+37:25 have some fun.
+37:26 >> Have some fun. Find out what's next. And
+37:27 I'm continuing to do that. So, my next
+37:29 thing is I'm going to string 100 gas
+37:30 towns together. We have a community, a
+37:32 Discord. And if Molt book can get people
+37:35 to pitch in tokens for fun, like they
+37:38 paying they're paying you're paying for
+37:39 the inference of your your agent on
+37:41 Moltbook, right? So if I string a 100
+37:44 gas towns together and we decide to
+37:45 build something together, we will learn
+37:48 the mechanics of Federation, we're
+37:49 probably retracing Ethereum steps, but
+37:51 we will. And uh and we're going to come
+37:54 up with something remarkable. It's like
+37:56 the people version of MoltHub uh right
+37:59 malt book, whatever it is. And what what
+38:03 are misconceptions about Gas Town or
+38:05 what it's trying to do that you feel
+38:06 it's kind of, you know, gone off a
+38:09 little bit of rails and is good to clean
+38:10 up?
+38:10 >> Well, I mean, for starters, I don't
+38:12 think people should be using it and they
+38:14 are. And I I really mean it.
+38:16 >> When you say people should not be using
+38:17 it, like not should not be using it
+38:19 except if you're doing research or or if
+38:21 you're like actually understand that
+38:22 this is just a proof of concept. So,
+38:25 some some very very clever people that
+38:27 I've been talking to have have been
+38:29 searching their problem spaces for
+38:32 subsets, categories that Gas Town could
+38:34 productively use today at a big company,
+38:36 a big Fortune 50 company, say.
+38:38 >> Wow.
+38:39 >> And they've they've identified some
+38:41 problem spaces that you could put Gast
+38:42 Town on today. And I was like, oh,
+38:44 that's pretty pretty clever thinking.
+38:45 One of them was this company I talked to
+38:47 that sets up bespoke data centers for
+38:48 you, okay, in any region you want, which
+38:50 is something AWS has never been able to
+38:51 do. Google's always tried. and they say
+38:53 it's just three months of miserable
+38:55 button presses to try to install the
+38:57 software and check that it all works.
+38:58 And the acceptance criteria are very
+39:00 clear. It's, you know, it's almost a
+39:02 Ralph loop, but they think Gas Town
+39:03 could swarm it and and eventually
+39:05 converge on a data center that works and
+39:07 and save all the people the trouble. You
+39:09 know what I mean? And I was like, all
+39:10 right, all right. And this could
+39:12 potentially meaningful move the needle
+39:14 on their ability to open up more of
+39:15 these data data centers for people,
+39:16 right?
+39:17 >> Wow.
+39:17 >> Yeah, go figure. Uh, and the same guy
+39:19 was telling me that he's been looking at
+39:21 production incidents and he and he's
+39:22 realized their system is already in an
+39:24 indeterminate unknown broken state when
+39:26 they're down. So, how much worse can AI
+39:28 actually make it? Now, I cautioned him
+39:29 and said actually it can make it a lot
+39:30 worse. But he's thinking along the lines
+39:32 that there are certain categories of
+39:33 outages where you could have them in
+39:34 investigation mode or whatever, right?
+39:36 Where they could speed things up. So,
+39:38 people are looking for the fuzzy
+39:39 problems. There was a third one that
+39:41 came along. I forget what it was, but
+39:42 there's there's a classes of problems
+39:44 emerging for which you can swarm them
+39:45 because you don't care that the results
+39:47 are messy. It's the cumulative work that
+39:49 Right. But that's actually how I code
+39:50 now. I mean like Right. I mean like I
+39:52 code myself. I mean I bit off more than
+39:54 I could chew. There's no question about
+39:55 it, man. Gas Town is a huge mess right
+39:56 now. And everybody's going he's going to
+39:58 vibe coat himself into a corner and come
+40:00 crying out. You know, they're pretty
+40:02 close to true. Although I did manage at
+40:04 just before we got on the plane to get
+40:05 it back on track and it's working again.
+40:07 Right.
+40:07 >> So one interesting about Gas Town is you
+40:10 said you don't look at the code, you
+40:11 have the agents write the code and which
+40:13 is very very unlike what your career has
+40:16 been, right? you cared about craft code,
+40:19 >> elegance. Why did you decide to do it?
+40:21 And what are the results? I mean, are
+40:23 the results as bad as I would think they
+40:26 would? Cuz this is right like like if if
+40:28 you imagine we're going to put like a
+40:30 thousand interns on a project like we've
+40:32 kind of seen that in the past and the
+40:33 result has been well eventually a senior
+40:35 engineer comes in and cleans up the
+40:36 mess. And I'm I'm just curious like how
+40:39 how is it better or worse? Well, so the
+40:41 ceiling of what it can actually build
+40:43 productively before it just dissolves
+40:44 into a mess is going up.
+40:47 >> But right now, I think it's sitting
+40:48 somewhere between a half million and
+40:49 five million lines of code somewhere in
+40:51 there. Probably more on the half million
+40:53 side right now. And with the next drop
+40:55 of an anthropic model, we're probably
+40:56 going to see it jump up to a few million
+40:58 lines, which is pretty good size, but
+41:00 it's nothing compared to what
+41:01 enterprises have, right? Nothing.
+41:03 Enterprises are very, very, very, very
+41:04 big. They have hundreds of millions to
+41:07 billions of lines.
+41:08 >> Yeah. But not in one cold base. like h
+41:10 having a few million lines of code is
+41:11 already a big code base and you'll
+41:12 typically have 50 plus people sometimes
+41:14 100 plus 200 plus working on it
+41:16 >> right what what it really comes down to
+41:18 just to to summarize this conversation
+41:19 get to the end is how well you're going
+41:21 to be able to take advantage of AI
+41:23 totally depends on whether you're a
+41:24 monolith or not if you're a monolith
+41:26 which almost every company is a monolith
+41:28 they have one monolith and a bunch of
+41:29 microservices right if you're a monolith
+41:30 you're kind of hosed because I told you
+41:32 the ceiling's going up for what they can
+41:34 do but it ain't never going to hit your
+41:35 monolith that will never fit in the
+41:37 context window and you're never going to
+41:38 be able to never in the next 18 months
+41:40 be able to tell a model, go fix my
+41:42 monolith, you have to break it up. Okay.
+41:44 If you want to take advantage of AI or
+41:46 rewrite it from scratch, it's starting
+41:47 to get faster at this point to think
+41:49 about rewriting your stack. Yeah.
+41:50 >> One thing you you mentioned even before
+41:52 we started that AI can really drain you.
+41:55 It can drain your energy. It can pull
+41:56 you and it can suck you in. Can you tell
+41:57 me about this?
+41:58 >> Dude, there is something happening that
+42:00 we need to start talking about as a
+42:02 community, as an industry. Okay. There's
+42:05 a vampiric effect happening with AI
+42:09 where it gets you excited and you work
+42:11 really really hard and you're capturing
+42:13 a ton of value. For me, I'm doing it all
+42:16 for myself and it's still kind of like
+42:18 pushing me to my ragged edge. I find
+42:20 myself napping during the day, but I'm
+42:22 talking to friends at startups and
+42:23 they're finding themselves napping
+42:24 during the day. It's funny. They they
+42:25 literally try to load each other up with
+42:27 enough context to force the other one
+42:28 into a nap. Almost like a con a comp,
+42:31 you know, compassion event. It's so
+42:34 weird. And we're starting to get tired
+42:36 and we're starting to get cranky. And I
+42:39 started talking to people in the
+42:40 industry and they're starting to get
+42:42 tired and cranky. And what's happening
+42:43 is see companies are set up to extract
+42:47 value from you and then pay you for it.
+42:50 Right? But the way all companies have
+42:51 always been set up is that they will
+42:53 give you more work until you break. If
+42:56 you can do it, they'll just happily just
+42:57 say, "Give you more. I give you more
+42:58 until until you your your plate flows
+43:01 over and you die." And people have to
+43:02 learn the art of pushing back, right?
+43:04 And that's been a thing for a long time.
+43:06 But it's changed the equation. The way
+43:08 you push back, the reasons to push back
+43:10 and all that have changed very
+43:11 dramatically and and are changing right
+43:12 now because you've got all these people
+43:14 now who can be super productive. And
+43:16 it's like, let's say an engineer can be
+43:18 100 times as productive just just for
+43:19 sake of argument. All right. Who
+43:21 captures that value? If the if the
+43:23 engineer goes to work and works for
+43:25 eight hours a day and produces 100 times
+43:27 as much, the company captured all of
+43:30 that value. Y
+43:31 >> and that is not a fair capture exchange.
+43:33 >> I think we can argue unless if they have
+43:35 early say sharp and they have a
+43:37 meaningful equity that's a bit
+43:38 different. It grows for but that's not
+43:41 the majority of people right? It's a
+43:43 minority.
+43:43 >> Yeah.
+43:44 >> Yeah. We're probably getting there
+43:46 pretty quickly. I I didn't you know we
+43:49 did notice one thing like and you
+43:51 probably saw this as well about six
+43:52 months ago. We talked about a lot, the
+43:54 996 problem at AI startups. And we we
+43:57 were like, "Oh, it's interesting. AI
+43:58 startups, people are working really
+43:59 freaking long hours and they're posting
+44:01 that they're in the office at 3:00 a.m.
+44:02 And you could tell
+44:03 >> I'll share with people what 996 is who
+44:05 don't know." Okay. 996 is uh 9:00 a.m.
+44:09 to 9:00 p.m. 6 days a week, if I'm not
+44:11 mistaken. Yeah. Which is which is 996 is
+44:14 it's the standard you're expected to
+44:15 work in most of Southeast Asia, as far
+44:18 as I know. Uh I I haven't been to China
+44:20 or India, but I assume it's pretty much
+44:21 similar there too, right? There's
+44:23 another group of people who are uh
+44:26 capturing all of the value for
+44:28 themselves. Okay? They go in and they
+44:30 work for 10 minutes a day and they get
+44:31 100 times as much done and they don't
+44:33 tell anyone and they've captured all the
+44:34 value. And that's not really ideal
+44:36 either, right?
+44:38 So, uh at least in terms if if you're
+44:40 thinking in terms of how can groups of
+44:42 people be successful, it's best if
+44:44 they're uh all contributing, right? So,
+44:46 what do you do? And I think that the
+44:48 answer is each and every one of us has
+44:50 to learn how to say no real fast and get
+44:52 real good at it. And we need to learn
+44:54 how to start capturing and the correct
+44:57 this is the new work life balance. Okay?
+45:00 It's how much of the value are you going
+45:01 to capture from being 100 times as
+45:02 productive and how much of it are you
+45:03 going to pass along to your employer.
+45:05 And this is a really difficult place to
+45:07 be because we don't have any cultural
+45:09 all our cultural expectations are
+45:10 pointed in the wrong way for us to work
+45:12 harder and they want us to right
+45:14 everyone wants to extract extract
+45:15 extract. And so I I seriously think
+45:18 founders and and and company leaders and
+45:20 engineering leaders at all levels all
+45:23 the way down to line managers you're
+45:24 going to have to be aware of this and
+45:26 realize that getting your engineers onto
+45:28 this this treadmill is pulling them into
+45:30 they're using much much more of their
+45:32 system 2. you know, they're doing much
+45:33 much more of that hard thinking. Now,
+45:35 the easy stuff is getting automated by
+45:36 So, you're you're actually draining them
+45:38 at a higher rate. Their batteries are
+45:39 draining at a higher rate. You might
+45:41 only get three productive hours out of a
+45:44 person at max vibe coding speed, and yet
+45:47 they're still 100 times as productive as
+45:48 they would have been without AI. So, do
+45:50 you let them work for 3 hours a day? And
+45:52 the answer is, yeah, you better or your
+45:55 company's going to break. It's very
+45:56 interesting because also like the the
+45:58 value extraction I think I I can see us
+46:00 speeding up and we see it with a few
+46:02 prominent people. Peter Shinberger
+46:03 single-handedly pushes out so much more
+46:07 value output you name it commits in any
+46:10 way that would have been a team of 10
+46:12 pretty good engineers before and he you
+46:14 know like in all fairness he is
+46:15 capturing it in the sense that he's it's
+46:17 his project it's his baby. He does not
+46:19 sleep much. Uh so so that that's
+46:22 definitely showing but the value capture
+46:23 there is kind of okay but I I agree with
+46:25 you that this could be something really
+46:27 like in the past whenever there was a
+46:29 technology shift where people were more
+46:30 more efficient we couldn't in in your
+46:33 lifetime have you seen this where
+46:34 injuries became more efficient and
+46:36 suddenly you could do a lot more with a
+46:37 lot less
+46:38 >> and what happened at that time
+46:40 >> people got mad
+46:42 >> example Pearl
+46:43 >> the Pearl programming language was a
+46:45 massive accelerator Amazon's website was
+46:47 built in Pearl probably still is
+46:49 actually I think Facebook's technically
+46:50 is PHP is a fake pearl. Um, and you can
+46:54 quote me on that. So, and both of them
+46:56 were incredible productivity
+46:57 accelerators and everybody just could
+46:58 see it. You don't want to build websites
+47:00 and see, you just don't. Amazon tried it
+47:01 and they gave up, right? So, that caused
+47:04 a a huge rift, a huge schism. There were
+47:07 secondass citizens. All kinds of
+47:09 cultural dynamics happened there. Right.
+47:11 >> I'm curious about how some AI companies
+47:15 deal with this. Can we talk about how
+47:16 Entropic works?
+47:18 >> Yeah. Yeah. from what I know
+47:20 >> from from from what what you know from
+47:22 the outside I I know that you know you
+47:24 you talk with like people across the
+47:25 industry but Antroic is a very
+47:27 interesting place one interesting thing
+47:30 they Dario recently said is he thinks
+47:32 compensation specifically uh for for
+47:35 their staff the people who are building
+47:37 all these things and they're actually
+47:38 using the models and doing he said
+47:39 something interesting that maybe we
+47:41 should have compensation where people
+47:42 are compensated even after they leave
+47:44 the company for the value that they
+47:47 created which is just something
+47:48 completely unheard of, but it's clear
+47:50 that that he's thinking about this this
+47:52 thing that is changing where you can you
+47:53 as individuals can create massive value
+47:55 in a relatively short amount of time.
+47:58 >> Google, you can send me a check for all
+47:59 that stuff you never paid me for. Okay,
+48:02 just got to get that out of the way. I
+48:04 like that idea. Anthropic is unlike any
+48:06 company on Earth right now. They're
+48:08 operating in a space that is really
+48:10 fragile and they're very protective of
+48:12 it and they need to be uh because uh
+48:15 they've they've created a hive mind. uh
+48:17 they're running the company as far as I
+48:19 can tell like a pure functional data
+48:21 structure. Remember Crystal Kasaki's
+48:23 book? That was such a mind-blowing. You
+48:24 can make data structures that never
+48:26 mutate. Then how do you mutate them?
+48:28 Right? And the answer is you just keep
+48:29 adding. It's improv. Yes. And yes. And
+48:32 right and that's how they operate.
+48:34 >> And when you say hi mind, what what do
+48:36 you mean by that?
+48:37 >> It's it's a lot of it's like the markets
+48:39 today. Vibes. Everything's vibes. It
+48:41 just shifts. It's just right. It's it's
+48:44 it's vibing. It's it's kind of hard to
+48:46 explain, but you see here's the thing,
+48:48 right? We used to build products by like
+48:50 making a spec and then implementing it
+48:51 and then complaining about it and then
+48:53 shipping it, right?
+48:53 >> Having a road map and planning for it
+48:55 and waterfall and timing it for the
+48:57 company annual event, right? Apple,
+49:00 right, once a year. The way you work
+49:01 with like systems like Gastown and
+49:03 they've got their own internal
+49:04 orchestrators is you create and your
+49:07 founders the one that like the
+49:08 co-founder that was nontechnical you
+49:09 create the prototype and that's your
+49:11 product and you start building it and
+49:13 you just make it the product until it's
+49:15 right. So everybody just gathers around
+49:16 the prototype like a campfire and builds
+49:19 it and that is what Anthropic is doing
+49:21 at scale with thousands of people. So
+49:24 you're saying that the playbook of a
+49:26 successful tech product might have
+49:27 changed because the traditional wisdom
+49:29 since the lean startup in like 2010 or
+49:31 so was you use your prototype to get
+49:33 signal then you throw it away and then
+49:35 you build a lot more polish stuff right
+49:37 you and we used to I think every
+49:39 software engineering who's been around
+49:40 you don't ship a prototype you tell
+49:42 people it's a throwaway you start again
+49:44 you make it production ready scalable
+49:45 that kind of stuff because you don't
+49:46 want to give a bad experience to people
+49:48 >> what changed though
+49:49 >> just the ability to do infinite number
+49:51 of prototypes So instead, you make
+49:53 prototypes until you get a great one and
+49:55 you're like, "Let's launch this." And so
+49:56 apparently Claude co-work happened in 10
+49:58 days. Somebody went, "Hey, I did a
+50:01 prototype." And they were like, "We're
+50:02 gonna launch this." And 10 days later
+50:04 they launched it. So I mean, it works.
+50:06 >> But I guess one one important context
+50:07 there when I talked with Boris Churnney
+50:09 about a feature that they did about how
+50:11 they did the tasks in CL in cloth code,
+50:14 the task list of how it completes. He
+50:16 told me that in two days he built 20
+50:18 different prototypes that were all
+50:19 working thanks to AI. I didn't know that
+50:22 but he's doing what I'm talking about.
+50:23 They call it slot machine programming
+50:24 like you do 20 implementations and is
+50:26 that what he's doing?
+50:28 >> Something like that. I I don't want to
+50:29 put words in his mouth but but I was I
+50:31 was just floored because building 20
+50:33 working prototypes that would have been
+50:35 two weeks and and and you would have not
+50:37 you would have stopped at three, right?
+50:39 >> That's in our book actually if I can
+50:41 pitch the book for a moment. The fafo f
+50:43 a fo is the dimensions of value that you
+50:47 get from vi coding and the o is
+50:48 optionality which is the ability to
+50:50 create lots of prototypes. What it lets
+50:52 you do is defer your decision until you
+50:54 know what the right answer is which is
+50:56 cheating. So of course everybody does it
+50:58 right and it's going to fundamentally
+51:00 change the way that companies are run.
+51:02 It's going to change the way that people
+51:04 and organized to create software and
+51:06 it's going to happen this year.
+51:07 >> It's it's just fascinating how these
+51:10 changes are coming. But what what
+51:12 enables the these changes? Is is it the
+51:13 fact that we can iterate faster with
+51:15 these things? Like
+51:17 >> I I look I saw a phenomenon happen at
+51:19 Google. This is this is kind of a big
+51:22 company question. There's kind of two
+51:23 there's a big company and a small
+51:24 company answer to your question, right?
+51:25 So something happened at Google. I went
+51:28 through the golden age at Google where
+51:29 it was like anthropic. It was a hive
+51:31 mind. It was nobody was mean. Everybody
+51:34 was innovating and it was wonderful.
+51:36 >> Yeah. This was a time where like the
+51:37 founders were pretty close. you you go
+51:39 to the cafeteria and Larry and Sarah be
+51:41 sitting there and you'd hang out with
+51:42 them and just chat and it was like
+51:45 >> gold mage, right?
+51:46 >> Yeah.
+51:46 >> And then it changed rather abruptly. We
+51:49 made a few pivots and it became not that
+51:51 company anymore. And in fact, innovation
+51:52 died on the vine like altogether and
+51:55 since I don't know 2008 there has been
+51:58 no innovation from Google. It's all been
+52:00 acquisitions. They have they've created
+52:02 nothing new.
+52:03 >> I mean I mean they they did Gemini a few
+52:05 years few years later, right?
+52:06 >> Gem G. Yeah. Okay. Sure. They created
+52:08 LLM and then did nothing with them.
+52:10 That's a perfect example of why
+52:11 innovation dies there.
+52:12 >> Yeah. For five years,
+52:13 >> right? Five years they did nothing. So I
+52:15 don't count Gemini. That's a different
+52:17 Google. Yeah. Okay. We're talking about
+52:19 the Google that screwed up.
+52:20 >> I don't want Anthropic to screw up this
+52:22 way again. The the way that Google did.
+52:24 Google put safeguards in place to try to
+52:27 keep them from turning into the company
+52:28 that they turned into, which was oified,
+52:31 you know, territorial. Nobody could. I
+52:33 hired a brilliant dude from Microsoft,
+52:35 brought him into Google and said,
+52:37 "Figure out what you're going to do.
+52:38 Take as long as you need." It took him
+52:40 six months to find something that nobody
+52:41 else had claimed already. People claim
+52:43 work and then never do it at Google. So,
+52:46 I'm going to tell you something I've
+52:47 never said before. This is brand new
+52:49 take. I think what happened at Google
+52:51 was when Larry Page became CEO and he
+52:54 said, "We're going to put more wood
+52:55 behind fewer arrows." That was a motto.
+52:58 And he put a halt to innovation. Okay.
+53:01 Before then there was more work than
+53:03 people and after that there were more
+53:05 people than work and so people started
+53:08 to fight over the work and that's where
+53:10 people started to do land grabs and
+53:12 backstabbing and territoriality and
+53:14 empire building and all all the bad
+53:17 stuff you see all the politics that you
+53:19 see is about fighting over work and
+53:21 going back to anthropic they're at a
+53:23 frontier and there's infinite work and
+53:26 like literally all of them have too much
+53:28 to do and a friend of mine a friend of
+53:30 mine at Amazon once told me But we don't
+53:31 have a lot of the problems that Google
+53:32 has because everyone at Amazon is always
+53:34 slightly oversubscribed. They have too
+53:36 much work.
+53:37 >> I I've heard similar with Apple as well
+53:39 that that that's kind of deliberate.
+53:41 >> Interesting thing. I mean, if you assume
+53:43 I am seeing productivity gains for
+53:45 myself, so I'm not disputing that agents
+53:47 actually make you more productive and I
+53:48 think we can agree on by how much, but
+53:51 for me it's a lot. But if this happens a
+53:53 lot of companies, people can actually do
+53:55 a lot more work. Do you think a lot of
+53:57 companies that are larger will see
+53:59 politics show up which typically hence
+54:02 happens when
+54:03 >> if if you're right if like the catalyst
+54:05 for the bad stuff beginning is more
+54:08 people than work and all of a sudden
+54:09 people can do all the work.
+54:11 >> Yep.
+54:11 >> Then the company's biggest problem is
+54:13 going to be finding more work or they're
+54:14 going to have to get rid of people which
+54:16 is kind of bad, right? But it's it's not
+54:17 unlike Gas Town in the small. My biggest
+54:20 problem with Gas Town is feeding it
+54:21 because it works so fast. I have to I
+54:24 have to work really hard to come up with
+54:25 good designs for it, right? That's what
+54:26 I spend all my which this is why I'm
+54:27 taking naps all day on because I'm
+54:29 trying to come up with difficult work
+54:30 for it. Right? Other people have said
+54:32 this too. This is this is the problem
+54:33 with gas and this is the problem with
+54:34 everybody who's going to use any
+54:35 orchestrator. It doesn't have to be Gas
+54:37 Town. That thing will be dead in 4
+54:38 months probably. Right? I mean it's it's
+54:40 the shape that worked in December 2025.
+54:41 That's not going to be the shape that
+54:42 works in four months, right?
+54:43 >> One thing that I think you know we're it
+54:45 might sound that we're talking really
+54:46 abstract especially for people who have
+54:48 not done this type of work in the self
+54:50 is like well we're talking about
+54:51 orchestrators they're like all
+54:52 productive. Can you point to something
+54:55 that has been built with an orchestrator
+54:56 or with this higher productivity that is
+54:58 a production software either you built
+55:00 it or you've observed someone build it
+55:02 that could show like actually this is
+55:03 way more productive and we can actually
+55:06 see the output or turning it the other
+55:08 way around like we're still not seeing
+55:09 that much more output from companies
+55:12 teams that you would expect. Okay, like
+55:15 a lot of them are are having more
+55:17 productivity, but like from the outside,
+55:19 it's easy be to be skeptical when we're
+55:21 seeing not much has changed in terms of
+55:22 our day-to-day life the apps, you know,
+55:24 we're seeing signals here and there, but
+55:26 nothing major. Like why might that be?
+55:29 >> Yeah,
+55:30 that's fair. Um
+55:33 my my feeling is that probably uh people
+55:37 have a low tolerance for non-determinism
+55:41 and um these things are fundamentally
+55:43 nondeterministic. So they can't just go
+55:44 replace customer call center software
+55:46 because they they could be wrong. And it
+55:49 doesn't seem to matter that humans are
+55:50 also wrong very often. And AIs can these
+55:53 days can very easily get to the same
+55:54 level as a human as an average human in
+55:57 the job. But I think there's still still
+55:59 a lot of risk aversion.
+56:01 >> Right?
+56:02 >> So I think that the companies that are
+56:03 actually running with this are actually
+56:05 starting to see the results and it's
+56:06 going to be reflected in their quarterly
+56:08 earnings invisibly and in other ways at
+56:09 first. Could it be that we're we're
+56:11 focusing on on building the tools?
+56:13 >> I'll turn it around and I'll say what if
+56:16 what we're actually observing is that
+56:18 innovation at large companies is now
+56:20 dead and we are only going to see
+56:21 innovation from small places which is
+56:23 kind of what happened when cloud came
+56:25 out and Facebook was a college kid at
+56:28 one point. Facebook feels like the
+56:29 biggest company in the world right now
+56:30 but it was one dude. Okay. And so when a
+56:34 new enabling platform technology
+56:36 substrate appears, you're going to see
+56:38 innovation at the fringes because of the
+56:40 innovator's dilemma. Big companies can't
+56:42 innovate. They're all running into this
+56:44 problem. They may have hyperproductive
+56:45 engineers who are producing at a very
+56:48 very high rate, but the company itself
+56:49 can't absorb that work downstream.
+56:52 They're just hitting bottlenecks and
+56:52 these engineers are getting shut down
+56:54 and they're quitting. Right? So I think
+56:56 what's happening is we're all looking at
+56:57 the big companies going, "When are you
+56:59 going to give us something?" And the
+57:00 answer is we're looking at the big dead
+57:01 companies. We just don't know they're
+57:02 dead yet.
+57:03 >> Do you think they're dead? Because for
+57:04 example, it's it can now be cheaper to
+57:06 do something like we couldn't just say
+57:08 the eternal punching bag zenas customer
+57:10 support. They have been the de facto
+57:13 place to do your customer support
+57:14 because your agent can sign up. They get
+57:16 this UI, they get this workflow, etc.
+57:18 And for AI native companies that are
+57:20 using MCPs, whatnot, it makes no sense
+57:22 for them because they just want an API
+57:23 which Zundas does not want you to give
+57:25 to you because they want to charge
+57:26 extraordinary amounts for you to come to
+57:28 their platform and buy their AI for, you
+57:30 know, 10 times the cost.
+57:32 That model is going to struggle a lot in
+57:34 coming years because people will build
+57:36 their own stuff bespoke with APIs. This
+57:38 is this is this is my platform rant in
+57:40 real life, right? If Zendesk doesn't
+57:42 make themselves a platform, then they're
+57:43 going to they'll have producted
+57:44 themselves out of existence, I think.
+57:46 >> And the platform for the for looking
+57:49 ahead, it's is it API? Is it is it MCPS?
+57:52 >> I mean, as far as we can no maybe not
+57:54 MCP, right? I mean, what what did
+57:57 Anthropic found that what works better
+57:59 than MCP is having the AI write its own
+58:01 API to call the MCP because they're so
+58:03 good at writing code,
+58:04 >> but then nothing really changes because
+58:06 platforms are always APIs from the
+58:07 beginning, right?
+58:08 >> Yeah. So, why do we need MCP? Well, we
+58:09 needed some way to declare what the tool
+58:11 does in an AI way, but I mean like I
+58:13 just it's so loose and so flexible.
+58:15 Integration is going to be really easy.
+58:16 I don't know. I'm not following that
+58:18 space well enough to know if MCP is
+58:19 going to continue to be an important
+58:21 dominant player or if the AIs just use
+58:23 stuff directly like via command line
+58:25 tools, right, or APIs. But either way,
+58:29 um we're moving into this world where um
+58:32 uh the innovation is coming out of uh
+58:34 new shops who have who have adopted and
+58:38 adapted and and I see big companies
+58:41 struggling really bad right now with
+58:42 this. I wonder if these if if if we we
+58:45 will see a lot more of these building
+58:47 blocks that we didn't know we needed.
+58:48 >> Dude, I I I think we're going to see a
+58:51 huge ecosystem of building blocks for
+58:54 people who are non-technical who want to
+58:56 build stuff and they need those APIs and
+58:58 they right you know what I mean like for
+59:00 storage or for matching or for whatever
+59:02 it is they need to do. So, so, so I
+59:03 guess if you're in tech and if you're
+59:05 looking for an idea either because you
+59:06 know like your job is looking a bit
+59:08 shaky or you actually just want to do
+59:10 something like now could be a great time
+59:11 to start building some of these building
+59:13 blocks that we're going to need like
+59:14 reliable building blocks will probably
+59:16 be in need that are are that have state
+59:18 that have SLAs's whatever have some some
+59:21 some importance right that's not trivial
+59:23 to do
+59:24 >> that's right because AIs are lazy uh and
+59:26 with good reason they don't want to burn
+59:27 tokens if they don't have to so if you
+59:29 provide a service that's going to make
+59:31 something convenient for them they'll
+59:32 absolutely absolutely use it.
+59:34 >> Yeah, especially if it's a service that
+59:35 you you need to maintain, for example,
+59:37 like you need to keep up with may that
+59:39 be regulation or changes or logging or
+59:42 whatever. Yeah, that's kind of a lot of
+59:43 work to do even to prompt like to and go
+59:46 back every day to prompt again to like
+59:48 update and all that. Also, as humans,
+59:50 we're also lazy.
+59:51 >> Yeah. I mean, well, Larry Wall called
+59:52 it, right? It's that's one of the
+59:53 virtues of a programmer.
+59:54 >> Yeah. I want to go back to one of
+59:57 another one of your essays from 2012,
+59:59 uh, which was called the Borderlands Gun
+1:00:02 Collector Club.
+1:00:05 >> You're the one that read that one.
+1:00:06 >> I I got recommended on Blue Sky and and
+1:00:09 a lot of people liked it and I read it
+1:00:10 and I realized I didn't read it. And
+1:00:12 this was a really interesting essay
+1:00:13 because seemingly it has nothing to do
+1:00:15 with what we're talking about, but you
+1:00:16 talked about gamification and you talked
+1:00:18 about how this Borderlands game, which
+1:00:20 you played apparently, right?
+1:00:22 back in the day. You mentioned how after
+1:00:25 you completed the game,
+1:00:27 >> there was this weird thing that the game
+1:00:29 developers probably accidentally put in
+1:00:31 there. People kept coming back to have
+1:00:32 like custom guns. And these were like a
+1:00:35 metag goal that the designers probably
+1:00:36 never thought of, but it actually made
+1:00:38 the game pretty kind of addictive. And
+1:00:40 you you called this as a I think it was
+1:00:42 like some sort of elder game or or
+1:00:44 something like that. And you were kind
+1:00:45 of saying that, hey, this was pretty
+1:00:47 smart. there was accident from the game
+1:00:48 designers, but maybe more game designers
+1:00:50 should do this because it just makes the
+1:00:51 game addictive. And you know, like not
+1:00:53 saying that, but since that was in 2012,
+1:00:56 I've we've seen so many games just have
+1:00:59 like deliberate gamification and not
+1:01:00 just games, but but a lot of other
+1:01:02 things.
+1:01:03 >> Yeah, a lot of them found that mechanic
+1:01:04 eventually. What who is it? Did the
+1:01:06 Borderlands um take two or I forget.
+1:01:09 Anyway, they figured it out early, then
+1:01:11 they didn't capitalize on it. But uh
+1:01:12 yeah, so interestingly I think yeah
+1:01:14 gamification uh gamification's kind of
+1:01:16 rearing its head. People have pointed
+1:01:18 out that like people are making game
+1:01:19 front ends to gas town, right? I mean
+1:01:21 why not make it a game? Like come on,
+1:01:24 man. I mean like look, we have literally
+1:01:25 we have games for running factories.
+1:01:28 Imagine you're running an actual
+1:01:29 factory. How cool is that, right? That's
+1:01:32 what guess what gastown is. That's why
+1:01:34 it's so fun actually. And do you think
+1:01:36 that one of the reason that some of the
+1:01:38 agents are more successful than others
+1:01:40 looking at specifically cloud code is
+1:01:41 they also did some gamification where
+1:01:44 there's always something showing there
+1:01:46 right there's a tinkering there's the
+1:01:47 there's the different things that keeps
+1:01:49 talking to you there's always
+1:01:52 is is some of maybe accidentally or
+1:01:54 maybe deliberately
+1:01:55 >> oh I they they have the best product
+1:01:57 managers in the world and they have uh
+1:01:59 they have done absolute magic with
+1:02:01 command line UIs and stuff that they've
+1:02:04 done it's it's
+1:02:05 But look, I mean, come on, right? That's
+1:02:08 not going to work for most devs. So
+1:02:10 that's why cloud co-work is so cool,
+1:02:12 right? Because it's it's the direction
+1:02:15 that things are going to evolve. I think
+1:02:17 >> Yeah. So
+1:02:17 >> I think developers will use cloud
+1:02:18 co-work or something more like it
+1:02:21 >> with with traditional software. We have
+1:02:22 tech depth and we we know how to deal
+1:02:24 with it and we've talked so much of
+1:02:25 this. In fact, if if we think about like
+1:02:27 what what we spent we're very busy with
+1:02:29 the 2010s tech collecting it paying it
+1:02:32 off migrations yada yada yada. Now that
+1:02:35 we're doing you know a lot lot of vibe
+1:02:37 coding or you call it v coding but
+1:02:39 agentic engineering just turning out a
+1:02:40 lot of code how do you think we will
+1:02:42 recognize or deal with or do we need to
+1:02:44 deal with this like v coding depth or
+1:02:46 agent
+1:02:47 >> depth? You do you do one of my upcoming
+1:02:50 blog posts is about this actually I've
+1:02:52 discovered that there's a thing I've
+1:02:54 given it the name of it's called a
+1:02:56 heresy okay that happens in vibecoded
+1:02:59 code bases that you're not looking at
+1:03:00 where an idea can take root among the
+1:03:03 agents that's incorrect it's it's there
+1:03:06 wrong architecture or or wrong data flow
+1:03:08 or whatever that's that's causing an
+1:03:11 impedance mismatch for the rest of your
+1:03:12 code and what happens is I call it a
+1:03:14 heresy because they have the tend they
+1:03:16 have a tendency to uh to grow and to
+1:03:18 come back and they're really hard to
+1:03:20 weed out. Okay. Uh I had a bunch of them
+1:03:23 in Gast Town. There was a polecat heresy
+1:03:24 that kept coming back. And so what would
+1:03:27 happen was it's invisible
+1:03:29 and your your your product stops working
+1:03:32 properly along the edges and you don't
+1:03:34 know why and you start having the agents
+1:03:35 dig into it and you realize you've got a
+1:03:37 fracture. You got a fault line. you have
+1:03:40 like say two complete databases that are
+1:03:43 both live and operational and you're
+1:03:45 randomly choosing between the two of
+1:03:47 them, right? And you didn't realize this
+1:03:49 until just now, right?
+1:03:50 >> You you find terrible, you know, things
+1:03:52 in your code, right? Uh and you try to
+1:03:55 get them all out, but there will be one
+1:03:56 reference to it in some doc somewhere
+1:03:58 that an agent picks up on and goes, "Oh,
+1:04:00 that makes sense. It's the heresy." And
+1:04:01 it returns and the agent does the wrong
+1:04:03 thing and goes off and rebuilds the
+1:04:04 heresy and it starts to spread again. It
+1:04:06 comes back, right? It's like the agents
+1:04:09 want the system to work this certain way
+1:04:11 and you're telling them, "No, I want it
+1:04:12 to work this other way and and you're
+1:04:14 fighting with them and you what you have
+1:04:16 to do is you have to actually document
+1:04:17 the heresy in the beginning of your
+1:04:19 prompting and say, "This is one of the
+1:04:20 one of the ways that you can go wrong on
+1:04:22 my project. Don't do that." Right? And
+1:04:24 then you have to remind it periodically
+1:04:26 or even put in tooling to keep it from
+1:04:27 doing that. Another heresy is that my
+1:04:29 agents all think they should be doing
+1:04:31 PRs. It's like I'm the maintainer of
+1:04:33 this code, man. Just push domain, right?
+1:04:35 Or a branch or something. and don't make
+1:04:37 a PR. It's just polluting the PR space.
+1:04:39 That's for contributors. They can't get
+1:04:41 this today. Now, I could put a bunch of
+1:04:43 hacks in, but that's fighting the bitter
+1:04:45 lesson. Opus 5 will be fine. Opus 5 will
+1:04:48 be, "Oh, you don't want PRs? I won't do
+1:04:49 any PRs."
+1:04:50 >> What is the bitter lesson? And
+1:04:51 >> oh, the bitter lesson. Yes. Richard
+1:04:52 Sutton wrote a very, very short essay.
+1:04:55 It's like 800 words. It's one of the
+1:04:56 best essays ever. What called the bitter
+1:04:58 lesson where he's like, "Yeah, we uh
+1:04:59 we're AI researchers and we learned a
+1:05:01 bitter lesson and you need to learn this
+1:05:02 lesson." The bitter lesson is don't try
+1:05:04 to be smarter than the AI. Okay, you
+1:05:06 think that you've got special knowledge
+1:05:08 that humans bring special domain
+1:05:10 knowledge to this problem and we're
+1:05:12 going to teach it so that the AI will be
+1:05:13 smarter. What we found was bigger is
+1:05:16 smarter always
+1:05:20 more data, right?
+1:05:20 >> Yeah. And so like when they're going
+1:05:22 into Australia right now, you know,
+1:05:24 you've seen the drawings, you know, how
+1:05:25 big OpenAI's training center was, how
+1:05:27 big Anthropics training center was, and
+1:05:28 now the training centers that are being
+1:05:30 are, you know, 10 times larger. They're
+1:05:31 massive. They're in Australia because
+1:05:33 they have all the energy and the land
+1:05:34 and everything, but they are going to
+1:05:36 make models that are 10 times or more
+1:05:38 smarter than the ones we have today.
+1:05:40 Right.
+1:05:40 >> We talked about the the vibe that, but
+1:05:42 does it not pain you? I mean, as someone
+1:05:44 who has built software, you know how to
+1:05:46 build good software. You you went in
+1:05:47 there to clean up the mess of junior
+1:05:49 teams or like messes you you were you
+1:05:51 could clean it up and with your eyes
+1:05:53 closed or maybe had to keep it open.
+1:05:54 Does it not describe the AI going off
+1:05:58 and doing it if you scaled it back and
+1:06:00 said like hang on like let me step in
+1:06:02 let me make these decisions let me be
+1:06:04 the architect it would not happen.
+1:06:05 >> Yeah. Well see the thing is I've also
+1:06:08 been a vice president at big companies
+1:06:10 of engineering.
+1:06:11 >> True.
+1:06:12 >> And so when I'm working with a team of
+1:06:14 80 agents it's not very different from
+1:06:16 working with a team of 80 engineers. Any
+1:06:18 one of them can screw up too engineers.
+1:06:20 >> Oh and you've done that right? I have
+1:06:22 and I'm telling you they are isomorphic.
+1:06:24 So what is the bitter lesson? The bitter
+1:06:26 lesson is don't try to be smart, just
+1:06:28 try to be large. Okay. Now that's not
+1:06:31 the only way to make the AI smarter.
+1:06:34 They can also make them smarter in and a
+1:06:35 couple of other important frontiers that
+1:06:37 are also getting developed. And so to
+1:06:39 tie it full circle to a beginning of our
+1:06:41 conversation, everyone who believes
+1:06:43 right now that that the curve is
+1:06:45 S-shaped, they're 100% correct. They are
+1:06:48 100% correct. It is S-shaped.
+1:06:51 Eventually, we will run out of
+1:06:52 resources. The world will be out of
+1:06:54 resources and it will flood, right?
+1:06:57 But I can tell you that there are at
+1:06:59 least two more cycles left in this. And
+1:07:01 that means they will be at least 16
+1:07:03 times smarter than they are today. And
+1:07:04 that is going to cause all of knowledge
+1:07:06 work to be subsumed by this stuff.
+1:07:09 Before we go all the way there, let's
+1:07:11 talk about how all this the better
+1:07:14 models more productive could impact
+1:07:16 personal software things that that that
+1:07:19 people can can build themselves.
+1:07:21 >> This is what I thought you were asking
+1:07:22 about earlier when you said you wanted
+1:07:24 an API from Zenesk. Think about it.
+1:07:26 Everyone's going to want to build their
+1:07:27 own software.
+1:07:28 >> Oh, I I was talking about a business for
+1:07:29 for not not personal but
+1:07:31 >> Oh, business is name. But but but yeah,
+1:07:33 but but also personal software like what
+1:07:35 what would the future look like when
+1:07:36 everyone could have like Open Claw
+1:07:38 running in in their closet or Gas Town
+1:07:40 or or they can just they don't have to
+1:07:42 run it on their thing but they can turn
+1:07:43 to this agent.
+1:07:44 >> Yeah.
+1:07:44 >> How could that change like both personal
+1:07:46 software but also the software industry
+1:07:47 as a whole? Cuz for a long time personal
+1:07:49 software was the privilege of us
+1:07:51 engineers who could build it and we
+1:07:53 built our tools and we had open source
+1:07:55 and we had some billion dollar companies
+1:07:57 grow out of some of the cool things.
+1:07:59 What what do you think could happen now
+1:08:01 that this this will be democratized to
+1:08:03 some extent? How do you think open
+1:08:05 source could change?
+1:08:06 >> Open source, how would open source
+1:08:08 change?
+1:08:09 >> Could it could it have changed? Cuz one
+1:08:10 interesting thing that I I'm seeing is a
+1:08:12 lot of remixing happening. So people,
+1:08:14 you know, now a lot of open source
+1:08:15 projects don't really take poll requests
+1:08:17 because there's a lot of not great ones.
+1:08:20 But a lot of people are just remixing.
+1:08:21 They're just taking the open source
+1:08:22 project. They're telling the AI make
+1:08:23 this change and they publish it as open
+1:08:25 source as well. Often no one looks at
+1:08:27 it. But now
+1:08:29 people are like weaving things together.
+1:08:31 They say take this project, take this
+1:08:32 thing and it's actually a lot more open.
+1:08:35 >> I see what you're saying. In the old
+1:08:37 days, the f-word fork you used to be
+1:08:39 like kind of a declaration of war.
+1:08:41 >> Yeah. Like if you forked somebody's
+1:08:43 project, it meant you had had enough of
+1:08:44 them. Like Rode forked Klein and then
+1:08:47 somebody else forked Ru Code and it's
+1:08:48 just like I think it's now going to be
+1:08:50 an everyday occurrence, right? Good
+1:08:52 because it used to be that to fork it it
+1:08:54 would be a lot of time and effort to
+1:08:57 maintain a fork to merge back the the
+1:09:00 thing
+1:09:00 >> cursor is a fork, isn't it?
+1:09:02 >> It is.
+1:09:02 >> Yeah, that's a lot of work. That's a lot
+1:09:04 of work. Yeah.
+1:09:04 >> Um a lot less work now, right? So, uh
+1:09:07 yeah, everyone's going to be forking.
+1:09:09 So, yeah. No, I think that that's a
+1:09:10 that's a natural Yeah. consequence of of
+1:09:13 of um everybody writing code.
+1:09:15 >> Yeah.
+1:09:16 >> Just like everyone can take a picture
+1:09:18 now. That didn't used to be true.
+1:09:19 >> Yeah. What what are some of your beliefs
+1:09:22 from early on in your career that held
+1:09:24 really really well until recently and
+1:09:26 now we've just abandoned because of AI?
+1:09:28 [laughter]
+1:09:29 >> Engineers are special. There's one.
+1:09:32 >> Come on. We are special. No, I think
+1:09:34 we're so special. We can
+1:09:35 >> Yeah, sure. We learned how to do
+1:09:37 something by hand that computers can do
+1:09:39 now. Kind of cool, I guess.
+1:09:41 >> What about the engineering mindset? We
+1:09:43 we have that like it's not just coding
+1:09:45 that we do, right? Well, look, for one
+1:09:47 thing is I believe that our thirst for
+1:09:49 new software will never ever ever
+1:09:51 diminish. It will only grow. And so
+1:09:54 we're at the beginning of software. All
+1:09:56 the software we have right now is
+1:09:57 garbage. That right there, OBS
+1:09:59 especially. And we're going to see a new
+1:10:02 world over the next 10 years where
+1:10:03 software is commonplace and good. And
+1:10:06 you'll have your choice. And it won't be
+1:10:08 I have to pick and choose between three
+1:10:10 really bad OOTH solutions or or company
+1:10:14 HR systems or whatever stupid ass thing,
+1:10:16 right? Like today the selection is
+1:10:18 terrible. SAS is awful. The whole the
+1:10:21 whole right
+1:10:22 >> airline apps.
+1:10:23 >> Airline apps, right? Uh I mean we we we
+1:10:25 ran a vibe coding workshop in Sydney
+1:10:27 where a dude actually wrote an airline
+1:10:28 checkin app for himself and got it into
+1:10:30 the Android queue before Southwest
+1:10:32 realized you and shut him down because
+1:10:34 he was a bot. But that's what people
+1:10:35 want. They want personal bespoke
+1:10:37 software and they're gonna get it.
+1:10:39 >> And so, yeah, I think you're gonna see
+1:10:40 that's why when Jeffrey Emanuel forked
+1:10:42 beads, I was like, you go, you go. He's
+1:10:44 I feel so bad about it. And I'm like,
+1:10:45 dude, this is the new world, man. Fork,
+1:10:47 fork, fork. Let's have beads in every
+1:10:48 language. I don't care. Right. I
+1:10:50 >> mean, in all fairness, like just looking
+1:10:51 at it from the positive side, like I
+1:10:54 wouldn't mind just having good software
+1:10:56 for the stuff that I use dayto-day. My
+1:10:58 utility provider is some of it is
+1:11:00 getting better. the the government
+1:11:01 websites that I have to access my my
+1:11:04 paying my parking fine. The other day I
+1:11:06 tried to send a package to Canada from
+1:11:08 the Netherlands and the post like the
+1:11:10 official post has been broken. They
+1:11:12 cannot send anything for a week and I
+1:11:14 see the exception they cannot fix it. So
+1:11:15 I have to go DHL and pay a bunch more
+1:11:17 money.
+1:11:17 >> That's right.
+1:11:18 >> And like there's a lot of bad software
+1:11:20 out there.
+1:11:21 >> Yes.
+1:11:21 >> And your agent will be dealing with it,
+1:11:24 not you.
+1:11:24 >> Yeah. But I think people who write
+1:11:26 software that agents like and prefer and
+1:11:29 choose and then they find a way to
+1:11:30 market it and get the agents aware of
+1:11:32 it, they're going to win big because uh
+1:11:35 everyone will use agents. We'll all be
+1:11:36 dependent on it.
+1:11:37 >> Well, plus also I guess software or ways
+1:11:39 of making agents write quality software
+1:11:41 because I I have a feeling like you you
+1:11:43 will want to do better stuff that if if
+1:11:45 you do the same, you're not going to
+1:11:46 have a business, right?
+1:11:47 >> Yeah. So, I mean look, I think
+1:11:48 businesses will compete on more and more
+1:11:50 complex software. The ceiling will just
+1:11:52 keep going. We're building like we're
+1:11:53 gonna until we build the Death Star or
+1:11:54 whatever, right? I mean, like we're
+1:11:56 we're building bigger and bigger things.
+1:11:57 Oddly enough, Gay, I am an optimist
+1:12:01 through all of this. That's my first
+1:12:02 belief. I think first and foremost is
+1:12:04 that it's all going to work out.
+1:12:05 >> So, asking the optimist now, I got this
+1:12:07 question of I think it was on blue sky.
+1:12:10 This person asked like how do you think
+1:12:12 the software industry will continue to
+1:12:14 exist if we get to the point that any
+1:12:16 software could be trivially cloned?
+1:12:18 >> Yeah.
+1:12:19 >> Where will that leave us? What what
+1:12:20 cannot be cloned? What what is the moat?
+1:12:23 >> Ju just we we we just jump ahead. We
+1:12:25 assume that this these things actually
+1:12:26 can do
+1:12:27 >> connections human connections are
+1:12:29 probably the biggest one as as you know
+1:12:31 kind of almost counterintuitively as
+1:12:33 software does more and more automated
+1:12:35 for you people are going to be like oh
+1:12:37 well yeah but that's that's just
+1:12:39 automated I want a human to do it and
+1:12:40 they will literally want a human to
+1:12:42 bring their thing instead of a drone you
+1:12:44 know they'll they'll they'll want humans
+1:12:45 to curate things for them and I I think
+1:12:47 that's going to be humans will be a
+1:12:49 moat. Do you think if you look back at
+1:12:50 some of history like like from you know
+1:12:52 the history of the rest history like
+1:12:54 have we seen some changes that felt a
+1:12:57 bit like this and then we saw some
+1:12:58 professions thrive because of either
+1:13:00 more automation or you know like stack
+1:13:03 overflow I don't know uh I mean like
+1:13:05 that one jumped to mind uh mechanical
+1:13:07 turk like we've seen a bunch of weird
+1:13:09 big step functions it's just that we're
+1:13:11 we're about to see a whole bunch of them
+1:13:13 at once
+1:13:14 >> right I mean look at the news lately I
+1:13:16 mean like you you like this is the funny
+1:13:18 thing is everyone's like where's all the
+1:13:19 innovation and then in the news all day
+1:13:21 long they're seeing all this innovation
+1:13:22 in AI. It's just not coming from, you
+1:13:24 know, the Walmarts and Microsofts. It's
+1:13:25 coming from random individuals, right?
+1:13:28 But the innovation's there and uh from
+1:13:31 the startups that I've been talking to,
+1:13:32 you know, I've been talking to anywhere
+1:13:34 from two, five to 20 person startups.
+1:13:37 >> I think we're going to see some really
+1:13:38 impressive stuff launching in the next
+1:13:40 couple of months. Are
+1:13:41 >> are you seeing these small startups
+1:13:43 change how they work?
+1:13:44 >> Oh god, it's so different, dude. It's so
+1:13:47 It's so different. Okay, for starters,
+1:13:49 for starters, I [snorts] think in the
+1:13:50 new world, I'm I'm convinced of this.
+1:13:53 Okay, everything that you do will either
+1:13:56 have to be fully transparent or you're
+1:13:57 hiding it for a reason.
+1:13:59 >> Tell me more.
+1:13:59 >> In other words, if you don't want people
+1:14:01 to see what you're doing, just don't
+1:14:02 show it to them and they will never see
+1:14:03 it. And if you do want if you do want
+1:14:06 them to see what you're doing, then you
+1:14:07 had better get it out in front of them
+1:14:09 as you do it instantly or else the train
+1:14:12 will pass you by. So like what they're
+1:14:13 saying is like so I told the story on my
+1:14:15 blog, people have heard it, but they
+1:14:16 like yelled at a teammate. They were mad
+1:14:18 because he implemented a feature that
+1:14:19 they'd asked for two hours before and
+1:14:21 they were like two hours ago it's
+1:14:22 changed too much since then, right? And
+1:14:24 he's like what do I do? You know what's
+1:14:26 happening is they're they're getting
+1:14:28 into this mode where they're they
+1:14:29 realize that stuff moves so fast that
+1:14:32 everything is invisible effectively from
+1:14:35 the volume. And so you have to be
+1:14:37 extremely loud and transparent and
+1:14:39 intentional about saying everything that
+1:14:41 you're doing so that if anybody else is
+1:14:43 doing it, they can stop you right then
+1:14:45 and if they need to integrate with you,
+1:14:46 they can start right there.
+1:14:47 >> And and we're talking about startups
+1:14:48 that that are looking for product fit.
+1:14:50 They're looking for customers. They
+1:14:51 actually just want to get that what we
+1:14:53 call product market fit where the
+1:14:55 traditional wisdom was build something
+1:14:56 amazing and then release it to the
+1:14:57 world.
+1:14:58 >> Right. That's right. Try to find product
+1:15:00 market fit in secret as much as you can
+1:15:02 and then launch it and and then and then
+1:15:05 tune. Right. That's that's that's the
+1:15:06 formula and many people failed at it.
+1:15:08 >> It used to be now like you're saying
+1:15:11 with Gas Town I I I realized I'm not
+1:15:13 going to find product market fit by
+1:15:15 myself. So I launched it as soon as it
+1:15:16 kind of worked and was like help me and
+1:15:19 that's how I found out about the adult
+1:15:20 database which was a big change and and
+1:15:22 people people fixed a bunch of bugs. I
+1:15:23 got 100 plus PRs the first couple days
+1:15:25 and right and so it found its way closer
+1:15:28 to product market fit just by me getting
+1:15:29 it out there. And would you say that has
+1:15:32 brought you like on one end people look
+1:15:34 at you well yeah it's just one other
+1:15:36 open source project but is it bringing
+1:15:38 actually opportunity if you wanted to
+1:15:39 could you turn this into a business has
+1:15:41 it has it brought you the things the
+1:15:43 where I'm getting at is is these things
+1:15:45 that take off those open source projects
+1:15:47 like can they actually turn into actual
+1:15:48 businesses are at that stage
+1:15:51 >> I promise you if if you had made Gas
+1:15:53 Town you would be you would be shaking
+1:15:55 venture capitalists off you like ticks
+1:15:57 right now I am they're They're they're
+1:15:59 they're they're finding me everywhere.
+1:16:01 Okay. And and I and I and I tell you
+1:16:04 it's because there's a lot of money out
+1:16:05 there right now sniffing wanting to find
+1:16:07 its way into a it knows something big's
+1:16:09 going to happen, right? And it's looking
+1:16:11 and you can see it in all these
+1:16:13 different microeconomies that are
+1:16:14 springing up. But nowhere can you see it
+1:16:16 more clearly than when you launch
+1:16:17 something cool like Jeff Huntley did
+1:16:19 Ralph Wiggum VCs, right? You know,
+1:16:22 everyone want to talk to him.
+1:16:23 >> You just got to be real careful because
+1:16:25 anything you build probably has a real
+1:16:26 short shelf life at this point, right? a
+1:16:28 real short one. I don't I'm not attached
+1:16:30 to Gas Town in any way because I think
+1:16:32 it'll be supplanted by something better
+1:16:34 within six months if not sooner. Right?
+1:16:36 >> So too attached.
+1:16:38 >> So let's assume that staff engineer is
+1:16:40 listening to this podcast or watching it
+1:16:42 on their commute and they're at the type
+1:16:44 of company where they have co-pilot
+1:16:46 still there's people like this and and
+1:16:48 they're using it and they're they're
+1:16:49 they want to believe you but they're not
+1:16:51 sure they can. What would you tell them?
+1:16:53 what is the the thing that they can do
+1:16:55 to get proof that you're actually right
+1:16:57 and this thing is is working. We're not
+1:16:59 at 100%. We're not even at 50% for for
+1:17:01 people like a lot of people who are in
+1:17:03 this field have tried it out but there's
+1:17:05 there's a lot of people
+1:17:06 >> I would say probably still 70% aren't
+1:17:08 aren't doing it. Yeah.
+1:17:10 >> Um so like what would I say I had a
+1:17:12 really good message for them. Oh yeah.
+1:17:14 Get out. Get out. Um, so here's the
+1:17:17 thing, right? Copilot is uh if you were
+1:17:21 to line up all the tools, you know, from
+1:17:24 best to worst, right? Copilot is like
+1:17:26 >> here a line, right? It doesn't even know
+1:17:28 about the line, right?
+1:17:29 >> But it used to be the best four years
+1:17:30 ago in 2021, right?
+1:17:31 >> Yeah. And I was competition even maybe
+1:17:35 two and a half years ago, I was quite
+1:17:37 stunned that uh that somebody asked,
+1:17:39 "Does anybody use co-pilot at an AI
+1:17:40 tinkerers meeting?" And and somebody
+1:17:42 raised their hand. He goes, "Do you have
+1:17:43 to?" And everyone laughed and I was
+1:17:44 like, "What happened?" Right? The brand
+1:17:47 just tanked. But I'm serious. If you're
+1:17:49 working at a company that uses that gave
+1:17:51 you co-pilot, they think that they're
+1:17:53 starting to move faster and there's a
+1:17:55 barbarian horde of people using Opus 4.5
+1:17:58 that are destroy your company sooner or
+1:18:00 later. So what you need to do is go into
+1:18:03 the crazy part of crazy town and figure
+1:18:06 this stuff out and start building. hand
+1:18:08 because we are moving into a world very
+1:18:10 quickly this year where proof of work is
+1:18:12 so important and I mean proof of work
+1:18:14 not in the Bitcoin sense but your proof
+1:18:16 of what you have done your resume and I
+1:18:18 don't mean your resume because nobody's
+1:18:19 going to believe that I mean the actual
+1:18:21 work that you did which has to be
+1:18:23 visible back to our transparency right I
+1:18:26 think everyone's going to be bringing
+1:18:26 their work with them I mean the notion
+1:18:28 of proprietary work is starting to like
+1:18:30 be threatened I think because it's so
+1:18:32 easy to fork it's so easy to clone it's
+1:18:34 so easy to route around if you have
+1:18:36 anything proprietary you become
+1:18:38 this this thing that everybody just
+1:18:39 wants to run around you and so right so
+1:18:43 big big changes are a foot but man if
+1:18:45 you're working with co-pilot right now
+1:18:47 you are going to get left behind and so
+1:18:49 what you need to do is get get yourself
+1:18:51 find a half an hour a day to go play
+1:18:53 with with cloud code right and uh and
+1:18:57 and and and it's like I said or if
+1:18:59 you're a company make your token burn as
+1:19:02 high as your investors will let you go
+1:19:04 right because that token burn is your
+1:19:06 practice it's your it's your sorting
+1:19:08 things out.
+1:19:09 >> So I I want to ask you the other way
+1:19:12 around. Let's assume you're just wrong
+1:19:15 in terms of the the curve and we're
+1:19:16 we're at the peak and it will not be
+1:19:18 10x, it will plateau at 3x
+1:19:20 >> or let's just say the next model is
+1:19:22 inexplicably dumber than Opus 5 we've
+1:19:25 peaked.
+1:19:26 >> What would happen to the person who
+1:19:28 takes your advice and they go all in and
+1:19:30 they learn things? What's the worst
+1:19:31 thing that could happen to them? If you
+1:19:32 know if if these things take off, it's a
+1:19:34 great investment, right? But but what
+1:19:35 would happen to them if if they followed
+1:19:38 your advice and the models didn't
+1:19:40 follow. Where would that leave them?
+1:19:41 >> Exactly where they need to go because
+1:19:44 the damage is done. Opus 4.5 made this
+1:19:47 officially an engineering problem. We
+1:19:48 don't need you AI researchers anymore.
+1:19:50 Thank you. You can make smarter models,
+1:19:52 I guess. But we don't need them because
+1:19:54 we have something can you can take a
+1:19:56 bite-sized chunk out of a mountain and
+1:19:58 it's a bite size about town size now.
+1:20:00 And so we can eat mountains. Okay. It's
+1:20:03 purely an engineering problem at this
+1:20:05 point. It's like fire or steam. It's a
+1:20:07 it's a force. It's a power. And we wrap
+1:20:09 layer layer layer layer. I worked on a
+1:20:10 nuclear reactor. I was in the Navy. I
+1:20:12 know how these things work. Okay. We are
+1:20:14 going to put all right uh layers around
+1:20:17 Opus 4.5 if that's the smartest model
+1:20:19 ever. And that will do all of the
+1:20:21 engineering from now on. So, it's done.
+1:20:23 So, it's okay to jump into the pool.
+1:20:25 Now,
+1:20:25 >> your first job was about debuggers or or
+1:20:27 not debuggers, but you worked at this
+1:20:29 amazing company. You told me they had
+1:20:31 the best debugger tools. What was the
+1:20:32 name?
+1:20:33 >> It was GeoWorks and the debugger was
+1:20:35 called SWAT and it was amazing time
+1:20:37 machine and all that
+1:20:38 >> and and on the first pragmatic engineer
+1:20:39 interview when we talked uh this is in
+1:20:41 the newsletter you actually saying that
+1:20:43 you to this date you've not seen as good
+1:20:46 of a debugger but you're kind of
+1:20:47 determined to like build at some point
+1:20:49 and help build that.
+1:20:50 >> I did build a debugger enclosure for the
+1:20:52 JVM called Ganja. It was actually pretty
+1:20:55 cool but then I got an argument with
+1:20:57 Rich Hickey about how well he wanted to
+1:20:58 support the JVM and he doesn't. So um
+1:21:01 >> yeah but anyway you you're a guy who who
+1:21:03 is passionate about about
+1:21:04 >> story somewhere though.
+1:21:05 >> Yeah [laughter]
+1:21:06 >> you're passionate about debugging. What
+1:21:08 will happen with debugging? What will
+1:21:09 happen with debugging tooling? What do
+1:21:11 you think the future of debugging is?
+1:21:14 >> Uh with agents
+1:21:16 >> when I see agents say I'm going to debug
+1:21:18 this. They all use printfs. So uh you
+1:21:21 know I'm curious. It could very well be
+1:21:24 that they just haven't been trained on
+1:21:25 debuggers yet and that they'll all wake
+1:21:27 up in six months and go, "Oh, I should
+1:21:29 have been using this." But it could also
+1:21:31 be that we don't need them anymore. I
+1:21:32 don't know.
+1:21:33 >> And another step further, what do you
+1:21:34 think the future of the developer
+1:21:36 workstation like our our rigs, our
+1:21:38 machines will be, right? Like do you
+1:21:40 think it'll
+1:21:42 >> phone?
+1:21:42 >> I want gas on my phone. I almost I have
+1:21:45 it, but I just haven't worked on it. But
+1:21:47 >> Peter Shamberger told me that he had VIP
+1:21:49 tunnel where you could do it from your
+1:21:50 phone. He said he stopped it because it
+1:21:51 became too addictive. Oh yeah, no tail
+1:21:53 scale. And yeah, actually the only thing
+1:21:55 that's keeping me from just being
+1:21:56 addicted to it all day long is it's too
+1:21:57 hard to enter control characters in, but
+1:21:59 that's going to get fixed at some point.
+1:22:00 Programming on your phone will be a
+1:22:02 thing.
+1:22:02 >> But but so do you think that developer
+1:22:05 workstations can be this lightweight
+1:22:06 Chromebook, whatnot, or we actually want
+1:22:08 beefy ones which can run our local
+1:22:10 agents, whatnot, like where do you think
+1:22:12 it'll be headed on the short term and
+1:22:13 then maybe on the longer term?
+1:22:15 >> Yeah.
+1:22:15 >> See what I mean? Local models.
+1:22:17 >> Yeah. No, I um look uh I I love my
+1:22:20 laptop. I've been programming 40 years.
+1:22:22 I I get the local thing, but uh I've
+1:22:24 been saying for at least 15 years that
+1:22:26 we don't need this stuff locally, right?
+1:22:27 Google had an amazing client in the
+1:22:29 cloud high-speed network connection and
+1:22:31 what you can do, right?
+1:22:33 >> City was the base and then Cider was
+1:22:35 built way up on a higher layer, but but
+1:22:37 when you get something like that and
+1:22:38 you're not restrained by the especially
+1:22:40 in a world where you can run kind of
+1:22:41 unlimited agents based on your
+1:22:42 pocketbook, uh yeah, people are not
+1:22:45 going to be want working on their
+1:22:46 laptops. And I've already Gas Town has
+1:22:48 already completely stressed out my
+1:22:50 laptop to the wire, you know, cuz cloud
+1:22:52 code actually takes quite a bit of
+1:22:53 memory. And
+1:22:54 >> so yeah, I think we're moving to a world
+1:22:56 where uh people will work on servers and
+1:22:58 and and on mobile devices probably less
+1:23:00 less and iPads, not on um laptops as
+1:23:03 much. In the past, you've said that one
+1:23:05 of the most important kind of predictors
+1:23:08 of develop productivity is language
+1:23:09 design. Well-designed languages are
+1:23:10 easier to work with. Do you think this
+1:23:12 has completely erased or do you think it
+1:23:14 might come back at some point? either
+1:23:16 purpose-built languages.
+1:23:17 >> I think there will probably be
+1:23:18 purpose-built languages by AIS for AIS
+1:23:21 maybe, but right now we're in a funny
+1:23:23 place where the some languages work
+1:23:25 better than others still because they
+1:23:26 have better training data. But in the
+1:23:28 fullness of time, all the languages will
+1:23:29 work equally well. Uh
+1:23:32 >> I'd push back on that like if if a new
+1:23:34 language never has training data, how
+1:23:36 would it work that?
+1:23:37 >> No, I mean sorry, all the existing ones.
+1:23:39 Typescript, it struggles with TypeScript
+1:23:40 today. Yeah,
+1:23:41 >> it it does,
+1:23:42 >> but it's not going to in one or two
+1:23:44 model really matter.
+1:23:45 >> So, could we see a stagnation just fewer
+1:23:47 languages or no languages launching
+1:23:49 because they just get the job done and
+1:23:51 launching a new language seems a bit
+1:23:52 suicidal unless you like bring a bunch
+1:23:54 of like training data with it, right?
+1:23:55 >> Man, that's a loaded question. I mean,
+1:23:58 like part of me
+1:23:59 >> I didn't mean to make it loaded.
+1:24:00 >> No, it's a good question, right? Part of
+1:24:02 me says like languages just don't matter
+1:24:04 anymore, right? any more than assembly
+1:24:06 languages matter except for a few people
+1:24:08 who are trying to optimize really
+1:24:10 important things and then everybody else
+1:24:12 it doesn't it just doesn't matter right
+1:24:14 but then part of me says well energy is
+1:24:17 the most constrained and important
+1:24:18 resource on this planet and it's only
+1:24:19 going to get worse so finding better
+1:24:21 algorithms finding better ways to solve
+1:24:23 problems is often a language problem
+1:24:25 finding a DSL you know so I think for an
+1:24:30 optim from an optimization perspective
+1:24:32 an efficiency perspective the search for
+1:24:33 new languages will probably you but for
+1:24:35 pragmatic for for everyday I don't think
+1:24:37 it it doesn't matter what you pick
+1:24:39 >> you might not even ask your your agent
+1:24:41 what language it's using [laughter]
+1:24:44 >> so as a software professional who like
+1:24:45 loves the crafts is is into you know
+1:24:47 languages debuggers tooling etc a lot of
+1:24:50 what we talked about is pretty pretty
+1:24:51 sad because you know like a lot of the
+1:24:54 the the beauty the challenges that that
+1:24:56 we worked it seems they might be going
+1:24:58 away if we continue and if this
+1:25:00 continues as well. How did you work
+1:25:02 through this yourself? And and also what
+1:25:05 is what is the thing that actually
+1:25:07 excites you looking ahead?
+1:25:09 >> Right. So I had the benefit of going
+1:25:11 through 30 years of graphics evolution.
+1:25:14 And so I saw the sadness and I saw the
+1:25:16 resulting much better games we got after
+1:25:19 all that happy stuff we were doing by
+1:25:20 hand moved into the hardware. We're sad
+1:25:23 because we're used to it. Change is part
+1:25:26 of life. Okay? And we're, you know, at
+1:25:29 one point I had to say goodbye to
+1:25:30 assembly language, right? I was like,
+1:25:32 compiler writers, they finally caught
+1:25:34 up, right? And then we were mad, but
+1:25:35 then we were happier because compilers
+1:25:37 are obviously way better than writing an
+1:25:38 assembly language. And anybody would be
+1:25:40 stupid to say, oh god, yeah. No, you're
+1:25:42 not a good engineer if you can't write
+1:25:43 an assembly language today.
+1:25:44 >> But that was actually what we were
+1:25:46 saying in 1992.
+1:25:47 >> Yeah. And then you had the blog post out
+1:25:48 in in 2012 as well. Yeah.
+1:25:50 >> Yeah. No, I'm just saying stuff changes.
+1:25:52 What you need to know as an engineer
+1:25:53 will change and you can't rest on your
+1:25:55 laurels. and we're going through a
+1:25:56 period of faster change now.
+1:25:58 >> Mhm.
+1:25:58 >> But you have helpers called agents that
+1:26:01 can actually help you through this
+1:26:02 change. So stop complaining and just go
+1:26:05 do it.
+1:26:05 >> Yeah. And I think just recognize we're
+1:26:06 in this industry where change is a
+1:26:08 thing. And
+1:26:09 >> that's right. Now with that said, go
+1:26:11 through the five phases of grief, right?
+1:26:12 The five stages of grief. I mean like I
+1:26:13 went through uh I don't know if I I
+1:26:15 don't know about anger. I was angry. I
+1:26:17 was really angry for a lot of reasons
+1:26:18 two years ago. But but no, I mean like
+1:26:20 if you've ever truly grieved, if you've
+1:26:22 like lost someone, you know that it hits
+1:26:25 you in a lot of weird ways where you
+1:26:27 feel reality disconnected. Uh you feel
+1:26:30 uh sick, you feel stunned, you feel all
+1:26:34 day long, the world goes monochrome, all
+1:26:36 color disappears, all kind of weird
+1:26:37 stuff, right? And I went through that
+1:26:39 for about I don't know six or seven
+1:26:40 days. It didn't take me that long to get
+1:26:41 through it fortunately. Or maybe it was
+1:26:43 that was the peak and I was it was
+1:26:45 surrounded by a few months of it on
+1:26:47 either side. But there was a period that
+1:26:48 I went through it where I was checking
+1:26:50 off things that no longer mattered that
+1:26:53 I had really cared about like my ability
+1:26:56 to memorize or my ability to write or my
+1:26:58 ability to compute or whatever all those
+1:27:00 anything computing related I was very
+1:27:02 sad right because those things made me
+1:27:05 special somehow right but then to your
+1:27:07 question what makes me excited like as
+1:27:09 soon as I got through that I was like
+1:27:10 but wait I'm writing 10 times more code
+1:27:12 than I ever was and I'm having fun and
+1:27:15 why should I be sad this right and So, I
+1:27:17 realized it's just it's just me holding
+1:27:19 on to the old just like I did in
+1:27:20 graphics. And there's no point because
+1:27:22 the future is actually more fun than the
+1:27:24 present. It just it's going to be.
+1:27:26 >> You're known for your predictions and
+1:27:28 I'd like to put it to a test. Let's give
+1:27:30 some specific predictions for for next
+1:27:32 year in 2027. Things that you think will
+1:27:34 happen either with how we develop or or
+1:27:37 how the industry works.
+1:27:38 >> I think that my wife is going to be the
+1:27:40 top contributor to our video game.
+1:27:42 >> Oo, bold claim. summer of next year.
+1:27:45 >> And she is not a developer, I'm
+1:27:47 guessing.
+1:27:47 >> No. Oh, no, no, no. But she loves our
+1:27:50 game and she has lots of ideas, right?
+1:27:53 >> Amazing.
+1:27:54 >> Yeah. In fact, I think my whole family
+1:27:55 might be in on it. I I'm serious, man.
+1:27:58 Programming is going to be for everybody
+1:27:59 and it's going to be the most amazing
+1:28:01 thing because you know how much fun
+1:28:02 we've been having all those years and
+1:28:04 we've been telling people it's really
+1:28:05 fun, but now they're going to get to
+1:28:06 experience it, right?
+1:28:07 >> I I look at my kids and how they look at
+1:28:10 AI. They're having so much fun with it
+1:28:12 creating. They're just prompting Gemini
+1:28:14 or or any of these with their
+1:28:16 imagination and they actually have they
+1:28:17 don't think it's weird. I I think it's
+1:28:19 weird so I never would think of it, but
+1:28:20 they just enhance our photos with like
+1:28:22 squirrels on my head and it it it just
+1:28:24 made me laugh and and fun and you
+1:28:26 realize like there's just a lot of fun
+1:28:28 and new things with it when when you let
+1:28:30 go or or you never knew what was before.
+1:28:33 >> It's given the people the ability to do
+1:28:35 very sophisticated mashups of anything.
+1:28:37 And mashups are really where innovation
+1:28:39 happens, right? Innovation comes from
+1:28:41 taking things and putting them together
+1:28:42 and seeing where it goes, right? We're
+1:28:43 going to see everybody innovating, man.
+1:28:45 And it's going to be the most amazing
+1:28:47 thing ever. And then we're going to need
+1:28:49 ecosystems of agents that can go find
+1:28:52 stuff that you like because there'll be
+1:28:54 so much content. How are you going to
+1:28:55 find the stuff that's really like that
+1:28:57 you like? You're going to have an agent
+1:28:58 that knows you really well. I think any
+1:29:00 software engineer who wants to get go
+1:29:02 make a big business right now should go
+1:29:04 start working on agents that know how to
+1:29:06 go and search the new world, everything
+1:29:08 that's coming. I what we call it, right?
+1:29:09 the work pile for for uh software that
+1:29:13 you like, for experiences that you like.
+1:29:16 And if everybody's creating it, think
+1:29:18 about it. When when the internet came
+1:29:20 out and everybody could make a web page
+1:29:21 and upload we needed aggregators.
+1:29:23 We needed, you know, we needed search
+1:29:25 engines. We needed ways to organize and
+1:29:27 find and surface the good stuff, right?
+1:29:30 None of that exists right now, but
+1:29:31 everybody's about to start coding like,
+1:29:33 right? You know, and so like you can get
+1:29:36 ahead of this. This is why I keep saying
+1:29:37 just believe the curves. pick a point on
+1:29:40 the curve and aim for it and you will
+1:29:42 land there and you'll be first when it
+1:29:44 when when the AIs are ready for your
+1:29:45 thing.
+1:29:45 >> Yeah. And I think as engineers we
+1:29:47 already can build. We don't need
+1:29:48 permission. We can use these tools super
+1:29:49 efficiently
+1:29:50 >> right now.
+1:29:51 >> And we are ahead of we are ahead of the
+1:29:52 rest of the world right now.
+1:29:54 >> Right now.
+1:29:55 >> Well, it's exciting times. Well, Steve,
+1:29:56 we'll have to check back on on how if if
+1:29:58 if that prediction will come through
+1:30:00 with your wife contributing more, but
+1:30:02 this has been I think really eye opening
+1:30:04 and and it's, you know, sometime I think
+1:30:06 it's good to to go through the has been
+1:30:09 and the can be.
+1:30:10 >> Yeah. Well, thanks. I hope you enjoyed
+1:30:13 this [music] conversation as much as I
+1:30:15 did. An interesting thought from Steve
+1:30:17 is his parallel between the graphics
+1:30:19 industry and what's happening in
+1:30:20 software engineering right now. In 1992,
+1:30:23 Steve was learning to calculate where
+1:30:25 individual pixels [music] go on a line.
+1:30:27 Two years later, the same course was
+1:30:28 teaching animation. The work in graphics
+1:30:30 went from writing [music] device drivers
+1:30:32 to building game worlds and physics
+1:30:34 engines. It all just moved up the
+1:30:36 abstraction layer. Steve's argument is
+1:30:38 that software [music] engineering is
+1:30:39 going through exactly that same shift
+1:30:40 right now, except it's faster. Instead
+1:30:42 of asking, will engineers have jobs at
+1:30:44 all? A better question might be, what
+1:30:46 will the new jobs we do as software
+1:30:48 engineers look like? Another thing was
+1:30:50 the grief of this change. Steve is
+1:30:52 someone [music] who spent 40 years
+1:30:54 building his identity around compilers,
+1:30:55 debuggers, elegant code. And then one
+1:30:58 day he sat down and started checking off
+1:31:00 one by one the things that made him
+1:31:02 special that no longer mattered. His
+1:31:04 world went monochrome as he said. Within
+1:31:07 a week or so he came out from the other
+1:31:09 side and realized he was writing 10
+1:31:10 times more code and that he [music] was
+1:31:12 having more fun doing it. Still, I think
+1:31:14 a lot of engineers are quietly going
+1:31:16 through something similar right now and
+1:31:18 it's usually taking longer than a week
+1:31:19 to digest all of this. Finally, one
+1:31:21 thing I found really honest from Steve
+1:31:23 was his point about value capture.
+1:31:25 [music] If you become 100 times more
+1:31:26 productive with AI, who benefits? If you
+1:31:29 work 8 hours and produce 100 [music]
+1:31:30 times the output, the company captured
+1:31:32 all of that. But if you just work 10
+1:31:34 minutes in a day and produce the same
+1:31:35 value as before, [music] you technically
+1:31:37 captured all of it and your company
+1:31:39 captured none of it. Now, neither
+1:31:41 extreme is sustainable. Steve is saying
+1:31:43 that this new work life balance is a
+1:31:45 question that we'll need to figure out.
+1:31:46 We don't have the cultural norms for any
+1:31:47 [music] of this and it's going to be
+1:31:49 messy as we figure it out. If you've
+1:31:51 enjoyed this podcast, please do
+1:31:52 subscribe on your favorite podcast
+1:31:53 platform and on YouTube. A special thank
+1:31:55 you if you also leave a rating for the
+1:31:57 show. Thanks and see you in the next

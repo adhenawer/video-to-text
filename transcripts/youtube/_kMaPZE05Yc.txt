@@ -1,0 +1,691 @@
+0:00 Software engineers are most suited to
+0:02 become AI engineer because AI engineer
+0:04 is equal to software engineer with great
+0:07 backend skills plus LLM and AI model
+0:09 understanding plus AI system design.
+0:12 Many software engineers today want to
+0:14 transition to AI engineering role
+0:16 because that's where the future is. They
+0:18 start by becoming integrator which means
+0:20 they will call LLM APIs to build AI
+0:23 features into current software and later
+0:26 on they can learn how to fine-tune LLM
+0:28 models or even build ML and DL models
+0:32 from scratch. Before we start a short
+0:34 introduction on myself I am Daval. I
+0:36 have worked with big tech companies like
+0:38 Bloomberg and Nvidia for many years. At
+0:40 present I am the co-founder of AI
+0:42 consultancy company at lake where we
+0:44 have transitioned many of our existing
+0:46 software engineers into AI engineers
+0:50 role and that helped us implement more
+0:52 than 25 AI projects for our clients
+0:55 based in US and UAE. Whatever I'm going
+0:58 to share today is based on real life
+1:00 industry experience and today I will
+1:02 show you a most practical road map which
+1:06 will help you learn AI engineering. This
+1:09 contains weekby- week study plan with
+1:11 free learning resources. Here is the PDF
+1:14 of the road map. This is built
+1:16 exclusively for software engineers with
+1:18 minimum 2 years of software development
+1:20 experience. It is a fast-paced program
+1:23 which you can finish in 2 months using
+1:26 free resources. We are going to assume
+1:28 you are spending four to five hours 5 to
+1:31 6 days a week. Now exit time that you
+1:34 take to learn all these skills depends
+1:36 on your learning speed, your dedication
+1:39 and few other factors. This includes
+1:41 both technical skills and soft skills.
+1:44 In the AI era, soft skills are equally
+1:47 important folks. Okay. In week one, you
+1:50 will learn AI and Python fundamentals.
+1:53 Python is the programming language for
+1:56 AI. There is no doubt about it. Here I'm
+1:59 showing you a code snippet of how you
+2:01 can call open AI API from Python code.
+2:06 Python is something that people use
+2:08 across the industry. Hence, you need to
+2:10 know all these fundamentals. Okay,
+2:11 Python data types, functions,
+2:13 exceptions, loops, control flow, all of
+2:16 these. Now, as a software engineer, you
+2:19 already know about if, for loop,
+2:23 object-oriented programming and so on.
+2:26 Now you can use this transfer learning.
+2:28 You need to map the concepts that you
+2:31 have learned in different programming
+2:33 language. Let's say you know Java, you
+2:35 have worked in Java. You need to map
+2:37 those concepts to Python. That way your
+2:40 learning becomes very very easy. Fast
+2:43 API is super important. It is used to
+2:46 build a backend. Now as a Java orn net
+2:49 developer, you would have built back end
+2:50 already. So once again you need to map
+2:53 those concepts to quickly learn all
+2:56 these things. You don't want to spend
+2:58 six months learning Python and fast API
+3:01 folks. We live in the world of vibe
+3:04 coding AI first engineering. You should
+3:08 be uh willing to use this cloud codegp
+3:13 etc tools to write code faster. Okay.
+3:17 Forget syntax. You don't have to
+3:18 remember syntax now nowadays. Focus on
+3:21 fundamentals. Focus on building. Okay.
+3:25 Now once you have cleared some of the
+3:27 Python fundamentals,
+3:29 once again you don't need to go too much
+3:32 in depth in Python. Okay. Just map your
+3:35 programming concepts to Python. Then uh
+3:38 this is the most important tool folks.
+3:40 Grock. Okay. So Grock is a tool that
+3:43 will allow you to call LLM freely. So in
+3:48 your learning phase you don't want to
+3:51 spend money and this is an amazing tool
+3:54 for learning folks you can call all
+3:57 these models you can create free API key
+4:00 and you can uh build AI projects for
+4:04 free okay so gro is something very
+4:06 important you can register your account
+4:08 on this platform
+4:11 and they have documents if you want to
+4:15 call it from Python it's Super easy. Uh
+4:19 so let's see. Uh this is Grock. Okay. So
+4:23 client import
+4:25 uh this is I think open API code. But if
+4:28 I go to gro see gro API key you have to
+4:32 first get and then you will use this gro
+4:36 module and this is how you call uh let's
+4:39 say this llama model for whatever use
+4:43 case you want to call it. Okay. So you
+4:45 have to build uh this code using grock
+4:48 so that you know how to call LLM APIs
+4:53 from your uh Python code. Then you have
+4:56 to be very strong in V coding. I call it
+5:00 AI first engineering because V coding
+5:03 sounds like trivial hobby thing. As a
+5:06 software developer you are building
+5:09 complex systems where you will use
+5:12 cloud. Claude is my favorite tool by the
+5:14 way. Uh I use claude code all the time
+5:18 and recently we have published crash
+5:20 courses for all these tools. So here is
+5:23 a one for claude which we made it live
+5:26 just yesterday. Then we have one for
+5:29 Google anti-gravity cursor and so on.
+5:32 These tools are easy to learn for you as
+5:34 a software developer. But there are some
+5:36 V coding principles that you need to
+5:38 know such as what is skills.mmd file,
+5:41 what is claw.md file, how do you
+5:45 effectively supply context and optimize
+5:48 on your token usage. All this discipline
+5:51 you need to learn which I have mentioned
+5:53 in those tutorials. Then you need to
+5:55 know generative AI basics. What is geni
+5:57 agent? What are agents? What are
+5:59 different configuration parameters for
+6:01 LLM such as all of these? Okay. What is
+6:04 embedding vector database? Use cases of
+6:07 vector database. And when I talk about
+6:10 vector database, see chromad is an open
+6:12 source. So that is where people start
+6:15 their learning journey. But when you
+6:16 work in the industry, people don't use
+6:18 chrom, they use the commercial vector
+6:21 databases such as quadrant, pine cone
+6:24 and so on. So it is better you get
+6:26 hands-on experience on this complex
+6:29 vector databases. I have mentioned uh
+6:32 YouTube tutorials. These are all free
+6:34 learning resources folks. You don't have
+6:36 to spend any money. And as you see, we
+6:39 have Python tutorials. We have uh
+6:42 tutorials on on understanding the
+6:45 theoretical fundamentals for LLM and
+6:47 JNAI and so on. And the most important
+6:50 point here is folks, you should use
+6:52 cloud code or chat GPT as your personal
+6:55 tutor in this entire upskilling journey.
+6:57 Okay. Now, let's talk about soft skills.
+7:00 In the modern times what has become
+7:03 important is you build a personality
+7:06 where you are a write mix of soft skills
+7:10 and technical skills. In the previous
+7:13 era where we used to write all the code
+7:17 by hand technical skills mattered a lot.
+7:21 Nowadays you can write code using clawed
+7:24 code. So the importance of technical
+7:27 skills is actually reducing and the
+7:29 importance of soft skills is actually
+7:31 increasing. So let's say previously if
+7:34 you have 100%
+7:37 tech skills okay you will see these geek
+7:41 programmers working in a company who
+7:43 doesn't know even how to talk okay who
+7:46 are very weirdo type of personality and
+7:49 these people will survive okay so they
+7:52 will have 100% of tech skills and let's
+7:56 say 0% soft skills okay or let's say
+8:01 even if you have let's say I should not
+8:04 make it so extreme like everyone has
+8:06 some substance so these kind of people
+8:09 were surviving now in the age of claw
+8:12 code these people are going to lose
+8:14 their job folks there is no doubt about
+8:17 it now we live in a time where you have
+8:21 let's say even if you have 30% of soft
+8:24 skills or tech skills and 70% of soft
+8:28 skills you will actually become
+8:29 invincible okay and When I say tech
+8:32 skills, it includes uh coding, cloud
+8:36 knowledge, architecture. You should be
+8:38 able to build resilient AI systems. You
+8:41 should be able to optimize your token
+8:43 cost. You should be able to figure out
+8:47 uh the retry logic and you know how to
+8:50 scale your systems to millions of users.
+8:53 Okay, those skills are going to matter.
+8:55 But even more important thing is soft
+8:57 skills and therefore we have this
+9:00 section where uh these soft skills uh
+9:03 include the following. Okay. So I'm
+9:05 going to just list it down. So the first
+9:08 thing is stakeholder management then
+9:11 communication. Communication is required
+9:13 for every other soft skills including
+9:14 stakeholder management. Uh then
+9:17 presentation.
+9:19 See all these skills are going to matter
+9:21 a lot folks. Okay. And LinkedIn helps
+9:25 you build the fourth skill which I
+9:27 forgot to mention which is personal
+9:29 branding. You need to build personal
+9:32 brand. You need to have distribution
+9:34 folks. Otherwise you are not adding any
+9:37 value. You know cloud code can do
+9:39 coding. It can do architecture. So what
+9:42 value are you adding? Okay. So let's
+9:45 talk about personal branding. Here
+9:47 LinkedIn is the tool from where you can
+9:51 stream your credibility. You build your
+9:54 credibility somewhere else. Let's say by
+9:57 building open-source project, by
+9:58 competing in some uh tech competitions
+10:02 or by speaking at a tech conference,
+10:05 you're building your online credibility.
+10:07 Then you stream it through LinkedIn,
+10:10 through Twitter. Okay. So, Twitter is
+10:13 actually even more important than
+10:14 LinkedIn because most of the AI news
+10:17 updates, most of the activities uh or
+10:20 exchanges around AI are happening on
+10:23 Twitter. Okay? So, on LinkedIn and
+10:25 Twitter, first create a professionallook
+10:29 profile. Okay? And you can use this
+10:32 checklist folks. We have built a
+10:34 checklist. You see this checklist. So
+10:37 once you go through all these points at
+10:40 the end you would have created a
+10:42 professionallook LinkedIn profile. I
+10:46 know many software engineers who don't
+10:47 even have LinkedIn profile or if they
+10:50 have it they will only use it when they
+10:52 are switching the jobs. Okay that
+10:54 attitude is not going to work folks. You
+10:56 have to be active. You have to be part
+10:59 of the community if you want to stay
+11:01 relevant. Okay. In terms of assignments
+11:04 in this week, you will build a simple
+11:06 fast API server to display motivational
+11:08 quote. Okay. Then you will build a
+11:11 simple search engine using Chroma or
+11:13 Quadrant and you will build professional
+11:15 looking LinkedIn
+11:17 and I would say X profile. Okay. Now why
+11:21 LinkedIn and X is important? Because
+11:26 it's like if you have this kind of
+11:28 samosa shop in a small village, although
+11:31 you make very nice samosa,
+11:34 you will not make lot of business. But
+11:36 if you move the same shop to a busy
+11:38 market in Delhi or Bangalore or New
+11:41 York, you're going to make lot of money.
+11:44 The product is same. The product here is
+11:47 you folks. Okay? You are same but you
+11:50 are expressing yourself on LinkedIn and
+11:52 X which is a busy street and more people
+11:55 are noticing you. Okay. In week two you
+11:58 are going to work on rag fundamentals
+12:00 and lang chain. In most of the projects
+12:02 that we have worked at in atlic
+12:05 technologies I would say 60 to 70%
+12:08 projects are rag projects. RAG means
+12:11 retrieval augmented generation where you
+12:14 can point your LLM to your internal
+12:17 organizational data store and it can
+12:20 work on that knowledge base and it can
+12:24 do various things for you. So here you
+12:26 will learn the theoretical foundation
+12:28 which is what is rag, how to build rag
+12:30 pipeline, document parsing and chunking
+12:33 using dock link, lang chain basics, chat
+12:37 models and all of this and we have some
+12:40 free learning resources here. So just
+12:42 just look at them. Okay, there's a dock
+12:44 link tutorial by Redhead here. In terms
+12:47 of soft skills, see creating a profile
+12:50 alone is not enough. you have to start
+12:54 following the prominent uh AI
+12:57 personalities such as Andre Karpathi for
+12:59 example. Okay. And when they make a
+13:03 post, you engage in their post. You
+13:05 write thoughtful comment. Now these
+13:08 people have thousands and thousands of
+13:10 people who are in the AI industry. They
+13:13 are going to notice your personality.
+13:15 Okay? Maybe Andre Karpati will respond
+13:18 to your comment and other people will
+13:20 notice you. That way uh you are building
+13:23 this micro relationship when you engage
+13:26 in somebody's post asking thoughtful
+13:29 questions. You are uh leaving a positive
+13:32 impression on their mind and this
+13:35 relation that you build over a period of
+13:37 time is going to help you when you want
+13:40 to transition full-time to AI engineer
+13:42 role or when you want to switch your job
+13:45 or even when you want to do your own
+13:47 business. Okay, so this is super
+13:50 important folks. you start commenting
+13:52 meaningfully on AI and career related
+13:55 post. You can do the same thing on
+13:56 LinkedIn as well because remember that
+14:00 online presence is is a new form of ré.
+14:04 Don't go for old ways where you are
+14:06 using your réumé to apply in any job.
+14:09 It's not going to be that effective. Now
+14:13 these software engineers are working
+14:16 professionals and sometimes they prefer
+14:18 live learning. They don't like watching
+14:20 this YouTube videos with ads and all
+14:23 that. You know the main issue is the
+14:25 discipline. So if there is a live
+14:27 learning they will appreciate. If there
+14:30 is a live doubt clearing they will
+14:32 appreciate. And that is the reason after
+14:36 so many people requested this. We have
+14:38 launched live AI engineering cohort
+14:42 exclusively for software engineers with
+14:45 minimum 2 years of experience. It is 75
+14:48 days program which will quickly help you
+14:53 gain all these AI engineering skills.
+14:55 There are going to be sessions on
+14:57 weekends. It starts on March 7, 2026.
+15:00 You can enroll even later also. The
+15:04 second cohort will start after after the
+15:06 first cohort is over uh in 2 months. If
+15:09 you're interested uh if you want to know
+15:12 more uh check out this page uh all the
+15:14 details are included. Now when it comes
+15:16 to business fundamentals um you want to
+15:20 follow some uh resources so that you can
+15:24 gain business knowledge. When I was at
+15:26 Bloomberg we had many data analyst who
+15:30 will have this CFA degree who will have
+15:32 domain specific degree. So even if you
+15:34 want to get domain specific degree let's
+15:36 say in finance or healthcare it makes
+15:39 total sense because we will see this
+15:42 time where the role of and it is
+15:46 happening okay it's not future actually
+15:48 it's happening even right now the role
+15:51 of product uh owner or let's say
+15:54 business manager and software engineer
+15:57 is merging and we are seeing this new
+16:00 role called product engineer Okay,
+16:03 product engineer is 50% or let's say
+16:06 technical skills and 50%
+16:09 the product skills which is what your
+16:11 product owner or what your business
+16:13 manager is doing today. Right? It
+16:15 requires soft skills first of all and it
+16:19 also requires domain knowledge and that
+16:21 is the reason we have included some
+16:23 resources where you can build your
+16:26 business fundamentals. In terms of
+16:28 assignment, you will code a rag pipeline
+16:32 in pure python because frameworks like
+16:36 lang chain they keep on making updates.
+16:38 It is helpful if you can build uh this
+16:42 rack pipeline purely in python and folks
+16:45 you can use clawed code for this. It is
+16:48 totally okay but just understand the
+16:50 fundamentals you know try to understand
+16:51 code also just in case if it makes
+16:53 mistakes. It is helpful that you have
+16:56 understanding of the code and after you
+16:57 are done building this rag pipeline in
+16:59 Python you will code a simple lang chain
+17:03 rag chatboard for healthcare sector
+17:05 let's say for finance sector okay you
+17:07 will also write meaningful comments on
+17:09 at least 10 AI related LinkedIn or x
+17:12 post and note down your key learnings
+17:14 from three case studies on think school
+17:16 or any other uh business uh school okay
+17:20 in week three you will work on agentic
+17:24 AI fundamentals. So here you will learn
+17:27 what is AI agent, react loop, re
+17:31 reasoning plus action loop, building AI
+17:33 agents in lang chain, routing in AI
+17:36 agents, you know like how does the
+17:38 routing work? The way these AI agents
+17:41 work is for um given intent. So let's
+17:44 say if you are talking to an AI enabled
+17:47 customer care chatbot, it will have some
+17:50 kind of routing. It will detect your
+17:52 intent. Okay, you have technical query,
+17:54 you have query related to pricing etc.
+17:57 And based on that it will route. It will
+18:00 also route based on the complexity of
+18:02 the task. So if you are performing a
+18:04 simple task, it will use some uh cheap
+18:07 model. But let's say if you are asking
+18:10 deep question which requires thinking,
+18:12 it might use OPUS 4.6 thinking. Okay. So
+18:15 that kind of routing is required. Then
+18:18 this is super important folks. AI agent
+18:20 security. uh in my company at when we
+18:23 get clients the first question every
+18:26 single client has asked is what about
+18:29 security is my data secure I don't want
+18:32 to send my data to claude server okay
+18:35 there are ways to handle security so you
+18:38 will learn the fundamentals of that in
+18:41 this week guardrails is kind of
+18:44 overlapping with security and then you
+18:47 will also evaluate your system AI
+18:49 systems are probabilistic by nature.
+18:52 They're not like software
+18:54 where the things are predictable and
+18:57 deterministic. Here they are
+18:59 probabilistic. Hence you need a
+19:01 different paradigm for evaluation. If
+19:04 you're writing code you can write your
+19:06 test cases and you can say the output
+19:08 should be exactly this. But in in case
+19:10 of AI output is going to vary. See if
+19:13 you ask same question to chat GPT five
+19:15 times it gives you different output.
+19:17 Okay. That is the reason you need to
+19:19 know the evaluation techniques. Okay, we
+19:22 have mentioned the learning resources
+19:24 here in terms of soft skills. I have
+19:27 noticed that I would say majority of the
+19:30 software engineers are not good at
+19:31 presentation. If you ask them to present
+19:34 something, they will bore you to death.
+19:38 Okay? And that is the reason you need to
+19:40 watch this presentation called death by
+19:42 PowerPoint. It outlines simple
+19:46 techniques to make your presentation
+19:49 effective and compelling. You should be
+19:52 doing a storytelling. You should be
+19:54 engaging with the audience. Don't put
+19:56 your boring technical diagrams in PPT
+19:59 and you know make the people in audience
+20:02 go sleep. So folks, I would say this
+20:06 timeless skill is super duper important.
+20:10 Here are the assignment. The second
+20:11 assignment is writing two meaningful
+20:14 post on AI tech topic. The reason I'm
+20:16 giving this assignment is uh look at
+20:19 this job post. Okay, this is a real job
+20:21 post where they say effectively
+20:24 communicate with key stakeholders in
+20:26 written oral and presentation format.
+20:29 Okay, so there are many job post where
+20:32 even I have read you need to have good
+20:35 education skills. We have experienced
+20:37 this in my company where we had one
+20:40 project where client came and he was a
+20:44 business person but nowadays all these
+20:45 business people will talk to CH GPT and
+20:47 they come up with the technical
+20:49 architecture diagram. They tell us what
+20:53 kind of technical architecture we should
+20:54 be using. We have entered this era where
+20:59 business manager has access to these AI
+21:02 tools and they think they can build even
+21:05 technical architecture. Many of them can
+21:08 surely build but the problem is a
+21:11 business stakeholder having half cooked
+21:13 knowledge and a very high confidence.
+21:16 How do you deal with them? You want to
+21:18 talk to them so that you educate them in
+21:21 a right way without hurting their ego.
+21:24 It's very important. So, how to educate
+21:28 uh business stakeholders and nonte
+21:31 people is going to be an essential skill
+21:35 for you as an AI engineer. Okay. Now for
+21:40 that of course for that we have given
+21:42 this assignment which will help you
+21:44 build that skill. All right. Now in week
+21:46 four we will work on AI application
+21:50 observability and deployment and there
+21:54 you will cover lang. So if you talk
+21:56 about lang chain ecosystem we have lang
+21:59 chain which is a general framework we
+22:02 have lang graph which is to build a very
+22:06 customized agents and we have lang which
+22:10 is observability and monitoring
+22:13 platform. Okay. So you can track the the
+22:16 execution of your code. You can have
+22:18 traces, runs, threads, cost tracking and
+22:20 so on. Then you want to uh get clarity
+22:23 on how do you deploy agentic AI system
+22:27 to production because as I said AI
+22:30 systems are probabilistic. The
+22:33 deployment paradigm is little different
+22:35 than how you would deploy your regular
+22:38 software. Okay. AWS agent core is a
+22:41 platform uh that helps you deploy the
+22:45 agents into AWS cloud. We have a free
+22:50 tutorial here. See all these tutorials
+22:52 are free uh that you can learn. All you
+22:55 need is a laptop and a willpower folks.
+22:58 Now you want to start contributing to
+23:00 opensource as well because this adds to
+23:03 your online credibility. Whenever I'm
+23:07 hiring AI engineers for my team and if I
+23:09 see a resume where the first line is I
+23:11 have successfully contributed to
+23:13 opensource five PRs merged in this
+23:16 particular repository I will immediately
+23:18 call that guy for the interview and
+23:20 guess what I don't get so many of the
+23:24 these rums okay I get rarely I think 1%
+23:27 of rums that I review are having this
+23:30 kind of open-source contribution okay so
+23:32 if you want to uh stand apart in a
+23:35 competition Focus on this. Nowadays
+23:38 contributing to open source is again
+23:40 very easy. You can use chat GPD and claw
+23:43 code as your friend. Go to any
+23:47 repository. Okay, I'm going to mention
+23:50 some good repositories that you can
+23:52 start with and in this repositories you
+23:55 can search for a tag. Okay. So when you
+23:58 go to GitHub here I am on the GitHub of
+24:01 transformers which is an open source
+24:03 library and they have more than thousand
+24:07 pending issues. Now let's say you want
+24:09 to help them fix it. What you can do is
+24:12 you can search for good first issue.
+24:16 Okay good second issue things like that.
+24:18 And these are beginner friendly bugs
+24:21 that you can fix. Okay. I know there are
+24:24 two of them but you will find tons of
+24:26 other repositories. You can also search
+24:28 for good second issue and you can
+24:30 contribute it that way. Once again
+24:32 contributing to open source is easy. You
+24:34 don't have to be expert. All you need to
+24:37 know is how to use AI tools. Okay. And
+24:40 this is the assignment. In week five,
+24:42 you will focus on multi- aent systems
+24:44 and context engineering. In first four
+24:47 weeks, you have learned how to build AI
+24:50 agents, single AI agent. Now you are
+24:52 talking about multiple agents. Okay? And
+24:56 langraph is a framework that will uh let
+25:00 you customize things. It's like you have
+25:02 a DSLR camera and you are recording in
+25:06 auto mode. So that is using lang chain.
+25:08 But if you want to uh record in a manual
+25:12 mode, so many of these professional
+25:14 photographers they record in a manual
+25:17 mode. Uh and when you do that you get
+25:20 lot of control. So, langraph gives you
+25:22 that kind of custom deep control on
+25:26 building agentic system especially
+25:29 multi- aent system. Crew AI is another
+25:32 framework by the way. Okay. So, you'll
+25:34 learn all these topics and for context
+25:36 engineering also I have mentioned few of
+25:40 the topics and these are the resources
+25:43 you can follow. Most of these resources
+25:46 have high views, high engagement and uh
+25:50 good quality content folks. So we have
+25:53 carefully listed down all these uh
+25:56 resources. Okay. And these are the
+25:58 assignments. You can build a multi- aent
+26:00 system to automate marketing task and
+26:03 you can build an MCP server for a public
+26:07 API. Now comes week six. Here you are
+26:11 entering the world of advanced AI
+26:13 engineering topics such as optimizing
+26:17 the cost of AI applications, rate
+26:20 limiting, model selection and cascading
+26:24 response caching. If you keep on calling
+26:27 open AI API or cloud API on every single
+26:30 iteration, your bill is going to blow
+26:33 up. Folks, this is the experience we
+26:36 have at at where our clients are like,
+26:40 "No, no, I want to use the best model.
+26:42 Let's go with OpenAI." We start using it
+26:45 and when we deploy it in production and
+26:48 when they get a bill at the end of the
+26:50 month, they are blown away. Uh this is
+26:54 like AWS bill, right? Like AWS I
+26:58 sometimes feel like is like a black box.
+27:00 you don't have a way to track what kind
+27:02 of bill you are going to get. You know
+27:04 only when you actually have bill in your
+27:07 hand. Okay. So that can happen with this
+27:10 LLM APIs. Therefore from day one you
+27:14 should be optimizing your token uh cost
+27:19 and for that caching rate limiting model
+27:22 selection and cascading are the
+27:25 techniques that you can use. Then you
+27:27 have to explore the topic of multimodel
+27:30 rag especially in the fields of
+27:33 healthcare and manufacturing there is
+27:35 lot of usage of computer vision okay you
+27:38 are dealing with images and videos and
+27:40 so on and that's what multimodel means
+27:43 multimodel means not just text but audio
+27:45 video etc there might be a need where
+27:49 you have to fine-tune the LLM rag alone
+27:52 may not work you have to use Laura Qura
+27:55 etc Um and you can do all of that using
+27:58 this module or package or a framework
+28:02 called onslaught. Okay. And I have
+28:04 mentioned all these resources. Running a
+28:09 model locally is also very important. So
+28:12 we have bunch of clients from UAE and
+28:15 they have requirements that they want to
+28:17 run things locally. They don't want the
+28:19 data to go out at all. So you know you
+28:23 see all these businesses uh across the
+28:26 world where they're okay getting a
+28:28 computer getting bunch of GPUs in house
+28:32 but they don't want to send their data
+28:36 outside
+28:37 and in that case running models locally
+28:41 becomes important. Okay and Olama is one
+28:44 of those frameworks that helps you do
+28:46 this and we have a tutorial for this as
+28:49 well. In week seven, you will learn
+28:52 declarative AI using DSPY. DSPI is a
+28:56 framework that you can use to build AI
+28:59 applications using declarative approach.
+29:03 If you're a software programmer, you
+29:04 will know about declarative programming.
+29:06 This is the same thing but for AI. Okay.
+29:09 So, we have mentioned all the learning
+29:10 resources, assignment and so on. In week
+29:13 eight, which is the last week, you will
+29:15 learn how to deploy your models to
+29:17 production. uh you will use Azure and
+29:20 AWS which are two prominent clouds when
+29:24 it comes to building AI solution. Google
+29:26 is also important, Google AI studio etc.
+29:30 Okay. See the way I look at cloud is
+29:33 once you learn one cloud
+29:36 working on other cloud becomes easier.
+29:38 So you don't have to learn all three.
+29:40 Learn Azure which is very popular and
+29:42 then learn either AWS or GCP when you
+29:45 have time. Okay. You want to clear your
+29:48 fundamentals on resource groups,
+29:50 subscriptions, regions, storage, IM,
+29:52 etc. And here also you can use transfer
+29:54 learning technique. Once you know one
+29:56 concept, if you go to AWS or let's say
+29:58 GCP,
+30:00 they will have similar concept. They
+30:02 will just call it by a different name.
+30:04 All right? So look through these topics.
+30:06 Uh once again if you want to fast track
+30:09 your uh learning uh with live sessions
+30:13 then we have this particular boot camp.
+30:16 It's a live cohort so of course it's
+30:18 going to starts on 7 and it will end in
+30:21 few days. We'll close the enrollments.
+30:24 The link is in the video description
+30:26 below. Now here are some of the tips for
+30:28 effective learnings. You will have your
+30:30 software engineer friends with whom you
+30:33 are discussing over a coffee break
+30:35 what's going to happen to our job etc.
+30:38 And many of these people might be
+30:42 willing to learn AI. So why don't you
+30:45 make a group study group okay you can
+30:47 make a study group and you can learn
+30:49 together. That way you can have a weekly
+30:51 check-in. You hold each other
+30:53 accountable for the progress. You can
+30:56 share your learning your thoughts. it
+30:57 becomes so easy. It's like if I'm going
+31:01 alone to learn yoga, it's difficult. But
+31:04 if I'm going in a group, it's going to
+31:06 be easy. And you need to spend less time
+31:09 in consuming information, more time in
+31:12 digesting, implementing, and sharing.
+31:14 That is the rule of effective learning.
+31:18 That's all we had. I have attached this
+31:20 PDF file in video description below. If
+31:22 you have any questions folks, feel free
+31:25 to post in the comment box. We are going
+31:28 to respond to all the questions, okay? I
+31:30 will try my best to respond to all the
+31:33 queries that you're posting in the
+31:34 comment box below. I wish you all the
+31:37 best and thank you very much for
+31:39 watching.

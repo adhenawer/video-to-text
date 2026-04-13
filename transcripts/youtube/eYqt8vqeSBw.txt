@@ -1,0 +1,1242 @@
+0:01 Hello and welcome to the webinar. So
+0:03 today we're going to be talking about uh
+0:05 idea to production. How to deploy your
+0:09 own custom app in 48 hours. This is a
+0:11 subject that really just a few months
+0:13 ago would have seemed completely unreal
+0:16 and unbelievable. Uh and now it's
+0:19 actually a reality so long as you
+0:21 understand a few certain things. So I'm
+0:23 joined today by Kane Hooper. Uh Kane is
+0:26 of course the COO of Reinteractive.
+0:28 However, uh Kane, by way of
+0:32 introduction, in case people don't know
+0:33 you, uh there's probably a few more
+0:36 things that people should know about
+0:37 you, in particular, your history and
+0:39 education with regards to machine
+0:41 learning and AI. Do you want to go
+0:43 through a couple of those things?
+0:45 >> Yeah, of course. No worries. Uh yeah,
+0:47 I've been working on AI. Well, I started
+0:50 my work with AI probably when I was
+0:51 about 10 years old. uh back in the day
+0:54 when I had an old uh very lowowered IBM
+0:59 computer and the first sort of AI
+1:02 chatbot. It wasn't AI but you could have
+1:04 a conversation with the computer and it
+1:07 all just worked on uh declarative loops.
+1:10 So if you said hello it would say an
+1:12 exact thing but it was the first step at
+1:14 trying to turn or to humanize uh
+1:17 technology and I was fascinated at that
+1:20 time. So over the years I've been
+1:23 working in technology for a long long
+1:26 time. Uh but in the last 10 years things
+1:30 started to get a lot more interesting.
+1:32 So we built rein interactive and I
+1:34 architected
+1:36 uh a machine learning tooling using just
+1:40 straight statistical mathematics in the
+1:42 way we were building machine learning 10
+1:44 years ago uh for a finance client which
+1:47 was projecting revenue and projecting
+1:50 expenses. So it was for it's like an
+1:52 accounting style application. Uh we've
+1:54 moved into then uh with the New South
+1:57 Wales State Library, we helped them
+1:59 build out their Amplify product. So
+2:02 they've got
+2:04 50 years of oral history. So where
+2:06 they've recordings and interviews uh of
+2:10 of local people uh whether that's you
+2:13 know native people, whether that's with
+2:15 the Aboriginals, whether that's you know
+2:17 people who uh were coming to Australia,
+2:20 immigrants and so forth and they were
+2:22 losing that data. So they we built an
+2:24 application that would transcribe the uh
+2:28 text and that that time getting it to
+2:29 about an 80% success rate was quite a
+2:32 win and from there there was the human
+2:34 intervention of validating uh which
+2:37 became a community project which is
+2:39 really fascinating. Uh but in the last 3
+2:42 years of course with the introduction of
+2:43 chat GPT
+2:45 uh I've gone all in on AI. I was in the
+2:47 middle of doing a mast's of applied AI
+2:51 but I dropped it because the university
+2:55 could not keep up with the advancements
+2:58 and what was changing. So that that's
+3:00 another story. But with when I saw chat
+3:04 GPT and I saw here the the real I would
+3:07 say advent of humanized AI where a human
+3:12 any any person could now interact with
+3:14 an AI agent to get things done. And
+3:17 since that time I've been constantly
+3:19 working on the cutting edge. How can we
+3:21 push the frontier? How can we get the
+3:23 most out of these AI agents? And I would
+3:26 say in the last three months we've had
+3:29 uh an absolutely incredible uh there's
+3:32 my daughter. Hello
+3:35 >> Kelly.
+3:36 >> Bye.
+3:39 The joys of working from home.
+3:42 In the last three months, we've had such
+3:45 an incredible uh paradigm shift. It's
+3:49 like we've hit a critical mass almost uh
+3:52 where the the the models themselves, the
+3:56 AI models, they're get definitely
+3:58 getting better, but what the major shift
+4:00 is is the tying it all together from an
+4:02 agent perspective where a whole
+4:06 orchestrated platform can take the large
+4:08 language model to do the the reasoning,
+4:11 but now you've got tooling to whether
+4:13 it's to read code files, it's tooling to
+4:16 go and run things on the internet. uh
+4:18 it's it's tooling that performs many
+4:22 many actions that makes the large
+4:24 language models uh exceedingly more
+4:28 valuable and we have entered in the last
+4:31 few months well I've been working on
+4:32 this for the past 3 years how to get
+4:34 agents
+4:36 to code at an extremely high level of
+4:39 quality and security technologies now
+4:42 got to a point where we can build
+4:45 the whole coding orchestrator
+4:49 still requiring technical review and
+4:52 intervention but it's at a level now
+4:54 where and I'm running experiments
+4:57 experiments on this where well-run
+4:59 agents can code at about five times the
+5:01 speed of a single developer. So one
+5:04 developer can increase their speed by
+5:06 about 5x uh while maintaining high
+5:09 levels of security, high quality code
+5:13 and importantly without all the AI slop.
+5:17 So that's what I what I've been working
+5:19 on. In the last week in particular, I've
+5:21 solved and cracked a few problems uh
+5:24 that at least publicly haven't been
+5:26 solved before. And it's pushing our AI
+5:28 agents to a whole new level of well
+5:32 ability, I guess. Well, let's just for
+5:34 the listeners, Kane, let's just lay out
+5:36 where we've come probably in the last 12
+5:39 months. So uh a year year and a half ago
+5:42 let's say a piece of development work
+5:44 that would have taken let's say maybe
+5:46 six weeks of development to do by a
+5:48 developer a skilled developer with a
+5:51 project manager let's say it took six
+5:53 weeks now around the middle of last year
+5:55 using AI tools we can improve the
+5:58 efficiency of that by about 20%. Maybe a
+6:02 little bit more for some types of
+6:03 applications maybe a little bit less for
+6:05 others but about 20%. Uh and that was
+6:08 pretty much across the board like I
+6:10 spoke to a lot of developers that time
+6:12 as I think you did Kane and we found
+6:14 that that was pretty broadly true.
+6:16 People who are skilled and using those
+6:18 tools like um like GitHub's copilot for
+6:21 example uh were able to achieve those
+6:24 those benefits. Now that changed I think
+6:27 around December and has been rapidly
+6:30 changing from that point onwards from
+6:32 that 20 maybe 30% up to 90 95%.
+6:38 The skill level has the skill set
+6:41 required to do that development has
+6:43 changed dramatically. So a piece of work
+6:44 that would take six weeks can now maybe
+6:47 be done in one week but only if you know
+6:49 what you're doing. Now I stress that
+6:51 because it's very easy to get wrong.
+6:54 It's very easy to go, oh, I can just
+6:56 build this. And I'll give you an
+6:58 example. If you were to pick up, um,
+7:00 let's say Codeex or Claude Code, uh, the
+7:04 two main tools that are available, uh,
+7:06 if you were to pick up one of those and
+7:08 type into it, program me a snake game,
+7:13 it would probably do a single Python
+7:15 file to produce that snake game in a
+7:18 matter of minutes, and you would have a
+7:20 playable game. Now, that's a very simple
+7:22 and basic thing to do. But if you were
+7:25 to ask it to program an application that
+7:28 required a high level of security, a
+7:32 high high level of maintainability, a
+7:34 high level of usability for complex
+7:37 tasks,
+7:39 then you're going to start to get into
+7:40 trouble. What's your observation on
+7:42 that?
+7:44 So the the primary observation is that
+7:47 in the right hands
+7:50 AI can generate AI AI
+7:54 monitored coding can generate about a
+7:56 five times speed for a senior level
+7:58 developer
+7:59 >> and you're seeing this in the industry
+8:01 now where the companies have a couple of
+8:04 senior developers who have a team of
+8:06 agents working for them producing five
+8:09 times the output uh that they were
+8:10 producing before. out the
+8:14 the problems and risks right now. So,
+8:16 the the market's been flooded with vibe
+8:20 coding tools. I get ads for Bass 44, uh,
+8:23 for Lovable. I think Replet's another
+8:25 one of these tools,
+8:27 >> and they are great for the amateur
+8:30 wanting to throw together a calorie
+8:33 counting dashboard that they can just
+8:36 use. Uh, it it solves that personal use
+8:39 problem. I've got an idea. I want to be
+8:42 able to just automate and manage it, use
+8:44 one of those platforms. Absolutely. And
+8:46 and they are amazing for the the average
+8:49 individual. But we're we're talking
+8:52 about the difference between vibe coding
+8:56 and agentic engineering. We're talking
+8:59 about the difference between
+9:02 something that under stress will have
+9:05 severe security vulnerabilities, will
+9:07 leak data, will probably crash versus
+9:10 something that's highly constrained that
+9:13 is enterprise secure, enterprise scale,
+9:16 but still built at the speed of AI. And
+9:19 that's the shift that we're moving to.
+9:21 But if you do it wrong and we are seeing
+9:23 examples of many companies doing it
+9:26 wrong. For example, the post that I saw
+9:29 uh the other day where the AI agent
+9:33 decided to delete the entire production
+9:36 database uh for a fairly serious
+9:40 >> true story.
+9:41 >> True story. And well, one letting
+9:45 unrestricted AI on a production
+9:47 environment is like rule number one.
+9:50 never ever ever. Uh but in the wrong
+9:53 hands, it can exacerbate
+9:57 uh a number of the fundamental flaws
+10:00 which large language models have. And
+10:03 we'll talk about that today because if
+10:05 you if you get it right, the gains uh
+10:09 are quite significant.
+10:11 >> So we we're talking about a situation
+10:13 where let's say I was um a guy sitting
+10:17 in my office. I've got a white collar
+10:19 desk job as an example. I mean, you
+10:21 could be a trader. You could be
+10:22 anything. It doesn't really matter. But
+10:23 I've got this brilliant idea. I'm going
+10:25 to build this app. It's going to, you
+10:27 know, it's going to make a ton of money.
+10:28 It's going to be amazing. Now, a year
+10:30 ago, I would have had to have called
+10:32 Reinteractive and said, "Hey, I've got
+10:34 this idea for an app." We would have had
+10:35 many conversations to understand what
+10:38 you're trying to do and where you want
+10:39 to go with it and how you want to
+10:40 produce it and how you want to develop
+10:42 it. And then we would go ahead and we'd
+10:44 build the UX for that and you'd approve
+10:45 it. And then we'd get you the scope and
+10:47 we'd build the application and that
+10:49 would be you know a serious amount of
+10:52 money to get done and you'd have your
+10:53 app done at the end of say 6 months
+10:56 deployed ready for you to sell and
+10:58 market. Um and that's how it was a year
+11:01 a year and a half ago. Now today if I
+11:03 was that same person and I have this
+11:05 brilliant idea for an app and I want to
+11:06 build it. I can now do that myself with
+11:11 those safeguards that you're talking
+11:12 about. And it's the safeguards that are
+11:14 important. It's the safeguards that will
+11:16 set you apart from
+11:19 the average Joe, so to speak.
+11:23 >> So, when we're talking about the
+11:24 safeguards, we're not talking about
+11:26 things that are going to stop you
+11:27 producing your application or prevent
+11:28 you from doing something amazing. We're
+11:31 talking about the things that are going
+11:32 to allow you to develop something to an
+11:35 enterprise level, to a level that is
+11:38 professional and can be marketed and can
+11:40 be put onto the app store safely or
+11:43 Google Play Store or whatever it might
+11:45 be or just as a web application. Um,
+11:48 that's really what we're talking about.
+11:49 Is that correct, K?
+11:51 >> Yeah. Yeah, that's right. It's how to
+11:53 get something out to the market that is
+11:56 secure, that's not AI slop, that's not
+12:00 going to turn around and bite you in the
+12:02 proverbial backside uh because you had
+12:06 no idea how to encrypt uh a password on
+12:11 the database
+12:12 >> or that you even should do that.
+12:14 >> Yeah, that's right. And so so there are
+12:18 yes there's there's a number of there's
+12:20 certainly there's there's certainly key
+12:21 principles which I definitely want to
+12:23 talk about uh but there are also quite
+12:27 precise technical guard rails uh which
+12:30 we won't have time to get too in depth
+12:32 in today but that make the ability to
+12:37 generate that secured
+12:39 well-written code that is not going to
+12:42 turn around and cause you a a lawsuit
+12:45 liability because you just accidentally
+12:47 leaked your 5,000 user database and all
+12:51 their password credentials.
+12:53 >> Right. Right. So, here's the thing. It
+12:55 is possible to produce an application
+12:57 that is secure, that's properly
+12:59 deployed, that is maintainable, and it
+13:01 can be done in a very very short period
+13:03 of time. And I know I think we promoted
+13:05 this this webinar as being within 48
+13:07 hours. You could do that maybe in 48
+13:09 hours depending on what you're trying to
+13:10 do. Maybe it's going to take you a week,
+13:11 but okay, it can be done pretty fast and
+13:14 you can do it. But there are certain
+13:17 things. So Kane, let's go over some of
+13:18 those. Let's talk about some of those
+13:20 guard rails that you've worked out and
+13:23 you understand and you've seen go wrong.
+13:26 What are some of those things now?
+13:28 >> Yeah. So, if I can just say, I've been
+13:31 using these guard rails and these
+13:32 principles on a very recent client of
+13:35 ours where we've basically taken what in
+13:40 the past would have been a probably 12
+13:44 to 15 week software project and already
+13:48 we've delivered half of the project.
+13:51 half to build half the project took six
+13:53 days and that included the the
+13:56 understanding from the client what they
+13:57 wanted the design of the application and
+14:00 then the the build. So blue
+14:04 >> blue hurdle.
+14:04 >> What's that?
+14:05 >> Blue hurdle.
+14:05 >> Yeah, totally.
+14:06 >> Yeah. Oh, the the speed what the speed
+14:10 to market is increased and the cost of
+14:13 development is converging
+14:15 towards zero but it will never get to
+14:17 zero but it's definitely coming down
+14:20 like in the it's coming down
+14:21 dramatically again as long as you follow
+14:23 the guardrails because that what that
+14:26 apparency of convergence of the price
+14:28 coming downwards uh if done incorrectly
+14:31 it'll be like a parabolic curve. it'll
+14:35 come down and then all of a sudden it
+14:36 will spike up exponentially because of
+14:39 the fact that your code is a minefield
+14:41 of disaster waiting to happen. So
+14:45 you know in in software development
+14:48 since the dawn of the uh IBM I eniac
+14:52 computers that were uh building the
+14:55 launch trajectories uh for the NASA
+14:57 spaceship. So if if anyone's seen the
+15:00 movie Hidden Figures uh about the uh the
+15:03 the women who helped launch uh the first
+15:06 men into space, it's a fascinating
+15:08 movie. But since that that day, the the
+15:12 the most important principle of
+15:16 software and dealing with computers was
+15:18 the idea of garbage in, garbage out.
+15:22 And that principle has been strong up
+15:26 until about 18 months ago. Now all of a
+15:30 sudden it seems everyone has forgotten
+15:34 the garbage in garbage out.
+15:37 The difference we've got with AI is it
+15:39 does have
+15:40 >> just explain garbage in garbage out.
+15:41 What does that mean as a fundamental
+15:43 axiom of development? What does that
+15:45 mean?
+15:46 >> All right. So if you put in bad data,
+15:48 you feed bad data into the computer.
+15:50 Okay. If you talk about, let's talk
+15:52 about scoping a project as a good idea.
+15:56 If you're dealing with a client and the
+15:57 client only has a vague idea of what
+15:59 they want and you take that vague
+16:04 description and you get feed that into
+16:06 the development team and they build it
+16:08 and then out the other end comes a vague
+16:11 project where the client turns around
+16:12 and goes, "Well, that's not what I
+16:14 want."
+16:15 >> And you've got, you know, serious client
+16:17 problems when that occurs.
+16:19 So the the what's fed in at the
+16:22 beginning
+16:24 affects the downstream and every
+16:28 piece of garbage. And garbage can be
+16:30 defined as something that's ambiguous,
+16:33 something that's not clear,
+16:34 >> something that's contradictory or in the
+16:36 worst case if you're talking with data,
+16:39 something that has errors in it. So
+16:40 you've got like customer data and and
+16:43 somehow you've allowed data to become
+16:44 corrupted.
+16:47 Every bit of that garbage as it goes
+16:49 downstream through the different
+16:51 processes that it needs to go through,
+16:53 that garbage gets worse and worse and
+16:56 worse till you get the final output. And
+16:59 it's it's a stream of of garbage coming
+17:01 out. That's why project managers and
+17:04 really good project managers have been
+17:06 so important in the past because they
+17:08 have been the guard rail against that
+17:11 initial input of garbage. you making
+17:13 sure that the the project is clearly
+17:15 speced that there is an exact
+17:18 understanding of what the client needs
+17:20 and wants to be delivered
+17:22 >> right
+17:23 >> now what I see right now again with all
+17:26 these vibe coding tools is and they're
+17:29 great for iterating like again base 44
+17:32 repletable all these they're great for
+17:34 building a prototype they're great for
+17:35 building a little hobby project they're
+17:37 great to muck around and just try things
+17:39 >> right and if you're just going to use it
+17:40 yourself no problem jump in go for for
+17:42 it.
+17:43 >> Yeah, it's fine.
+17:45 But if you're if you're just giving it a
+17:47 vague idea like build me a calorie
+17:50 counting page,
+17:52 for example, like this, I might as well
+17:55 just show. Let's see if I can get this
+17:56 to work,
+17:59 >> but nothing like a good demo.
+18:02 >> We'll we'll let this run. So, here we're
+18:05 going to Are you seeing the Gemini
+18:07 screen here, Errol?
+18:08 >> Certainly am.
+18:09 >> Okay, good. So this I would constitute
+18:12 as this is vibe coding. This is no
+18:16 constraints, no real specification of
+18:19 what you want. It's just throw it at the
+18:21 AI and see what you get. That has a
+18:23 place and it has a place.
+18:24 >> You've actually gone far too far there
+18:26 by specifying HTML, CSS, and JavaScript.
+18:28 >> Oh well, that that's just so I can get
+18:30 it, too. On to me.
+18:32 >> So Gemini, by the way, has this really
+18:34 good canvas tool, but we can do this.
+18:35 This will take a minute for it to
+18:37 produce.
+18:38 >> Uh, and there it goes. it's writing the
+18:40 code.
+18:40 >> Mhm.
+18:41 >> So what we're going to see is this is
+18:44 this is the idea of vibe coding. What
+18:45 are we actually going to get out uh on
+18:47 the other side uh when this completes?
+18:49 But the thing with AI and garbage in
+18:52 garbage out is that uh AI for everything
+18:55 is an accelerant. It speeds up the
+18:58 process of everything. If you think
+19:00 about a pipe, you know, you got a pipe
+19:04 uh running water into your home, and if
+19:08 you've got a leak, but you only only got
+19:10 a small amount of water going through,
+19:13 it can be very hard to find the leak.
+19:15 You got to kind of use a lot of tooling
+19:17 and test, but if you flood a lot of
+19:21 water through that, the leaks spring big
+19:23 time. And so what you see with uh AI
+19:27 agents, if you feed it bad data, you
+19:29 feed it poor specifications
+19:31 that it will exacerbate and spring licks
+19:33 left, right, and center in a big way.
+19:35 All right, so this is fitfest
+19:37 >> or jam the pipe up all together.
+19:39 >> Yeah. Well, yeah. I mean, that's sort of
+19:43 okayish, I suppose. Kind of fun.
+19:46 >> I mean, for you know, for what did that
+19:47 take? A minute. Two minutes maybe.
+19:49 >> Yeah, it took a minute. And great. And
+19:51 again for your own personal use that's
+19:53 really really good. But if you are
+19:56 building something you want to take to
+19:57 market but you want it to be
+19:59 professional
+20:01 then you need
+20:03 >> that's right. So now we got to get a
+20:04 little more specific. So this is my
+20:06 other screen. So this is one way of
+20:08 designing
+20:10 uh it's it's it's a level up. There's
+20:12 better ways to do this but just for so
+20:14 I've basically taken a screenshot of
+20:16 another application that I thought
+20:19 looked pretty cool. uh and I'm like,
+20:21 okay, this is how I want to design uh my
+20:24 application. So, I've added this as
+20:26 context uh to the AI. I haven't given it
+20:29 much. So, it still is vibe coding, but
+20:32 at least it's a a level up of
+20:34 improvement.
+20:34 >> Slightly improved. Yeah.
+20:36 >> And I'll see how well
+20:39 uh the AI builds uh this one. I would
+20:42 think it will be better,
+20:44 >> right?
+20:45 >> Well, it will certainly look better.
+20:47 >> It will. I hope so. I mean, it's still
+20:50 pretty vibe coded. I I give whenever I'm
+20:52 building, uh, I'm a lot more detailed in
+20:55 the way I specify uh, how the agent, but
+20:58 again, this is a really good way and
+20:59 things like Google Gemini are a great
+21:01 way to prototype your ideas.
+21:04 >> Uh, but the the the idea is so garbage
+21:08 in, garbage out. But to prevent garbage,
+21:11 the the the idea is you have to ground
+21:14 your agent with context.
+21:17 >> All right, that's better. Oh, it looks
+21:18 lovely. Yeah,
+21:20 >> it's a bit constricted because of the
+21:22 size of my screen at the moment, but
+21:24 it's followed that.
+21:25 >> Yeah,
+21:26 >> relatively well.
+21:26 >> Feeling there's a lot of there that's
+21:27 not going to work too. Like I don't know
+21:29 how well the actual buttons in
+21:30 interaction works.
+21:32 >> Oh, I don't even know if the buttons
+21:33 will work at the moment.
+21:34 >> Let's see.
+21:36 >> No. So, but I haven't asked it to yet.
+21:38 But that's the thing. Uh, no. Nothing
+21:41 nothing actually works at this stage.
+21:42 But the idea is I was using that as a
+21:44 prototype design. So, but this this here
+21:48 is the speed of design has gone from
+21:50 like a designer in the past to to design
+21:53 what we've got here um would take
+21:59 I would say several days. uh whereas
+22:02 right now and now I can iterate and I
+22:05 could say uh
+22:09 change the um button
+22:13 color from green to I'm not a good
+22:17 designer so I'm not very good with
+22:18 colors
+22:19 >> right but you're still going to be
+22:20 better than the computer is because the
+22:21 computer's doing the base average of
+22:24 design it's taking an average of all of
+22:26 the things that's been trained on and
+22:27 producing this as a result so any input
+22:30 that you give to it is going to be an
+22:32 improvement on that
+22:34 >> assuming.
+22:35 >> Yeah. Well, that's right. Well, I've
+22:36 asked See, one of the things you can
+22:38 I've asked it to use something from the
+22:40 color palette. So, that's one of the
+22:41 things actually using he can use agents
+22:44 really well. If you're not a designer,
+22:45 you can say, "All right, what's a really
+22:47 good color palette for this kind of
+22:50 presentation? I want the customer to
+22:51 have this kind of uh I want my site to
+22:54 be positioned in a certain way. I want
+22:56 it to look a certain way. What's a
+22:57 really good color palette that works for
+22:59 that?" And then you can get it to pick
+23:00 colors out of that. So it helps sort of
+23:02 guide you um on that front. Okay. But oh
+23:06 there we go. So now it's changing. So
+23:08 but the this the speed of iteration on
+23:11 uh building out designs is
+23:12 extraordinarily fast.
+23:14 >> And the the way in design to get away
+23:19 from just pure vibecoded AI slop
+23:25 is to ground it with actual data. Now in
+23:27 this case I grounded it with a design
+23:30 image. Now I want it to look like this.
+23:33 Uh and as you move down every step of
+23:37 the development life cycle. So there's
+23:40 design once you get into actually coding
+23:43 as well you need to ground the agent in
+23:49 technical
+23:52 uh the technical articles. So if you're
+23:54 using a particular software language,
+23:56 Ruby on Rails,
+23:57 >> you've got to give it the Ruby on Rails
+24:00 official documentation, you've got to
+24:02 give it the code that is currently used.
+24:06 You know, what patterns has the code
+24:07 already used? Make sure it's given that
+24:10 as context and grounded in that context
+24:12 so it continues to follow those
+24:14 patterns.
+24:16 So, so garbage in garbage out is one
+24:18 thing. But the other big principle of
+24:21 well there's two other big principles of
+24:22 AI is the hallucination factor
+24:27 and then the drift factor.
+24:31 >> The hallucination is pretty we'll come
+24:32 back to hallucination. Drift is the is
+24:35 really important but not really spoken
+24:36 about a lot. So as you've got an agent
+24:40 workflow and we'll talk about from the
+24:41 point of view of coding is that it goes
+24:44 through multiple steps. So, we've got
+24:45 this design step
+24:47 >> and then it's got to build actually code
+24:50 the user interface and then it's got to
+24:52 build a database and it's got to secure
+24:55 the database and it's got to have all
+24:57 the background logic on how the
+24:58 application works. It's a it's a
+25:00 multi-step
+25:02 agentic process,
+25:04 >> right?
+25:04 >> Drift is where the agent over time moves
+25:08 away from your original intent. So you
+25:12 fed the agent
+25:14 the garbage in was like the the data in
+25:16 was good. It's not garbage. You spent
+25:18 the time you you really you worked out
+25:20 what you wanted to build. You built a
+25:22 really or you wrote out a nice
+25:24 specifications document that the agent
+25:26 can read and understand. So that bit's
+25:28 fine. But as over time agents will tend
+25:31 to drift. And by the time you get to the
+25:34 end of the chain, particularly as you're
+25:36 building lots of features and adding
+25:38 more and more to it, uh the agent dis
+25:41 diverges from what you had uh originally
+25:44 intended.
+25:44 >> And that's because it has a context
+25:46 memory of this amount and your
+25:48 application's this amount. It just can't
+25:51 store the whole amount.
+25:53 >> Can't store the whole amount. And it's a
+25:57 all AI models are probabilistic models.
+26:01 Meaning
+26:03 there's no actual real reasoning in AI.
+26:06 It just works on probabilities. But it's
+26:09 been trained on so much human data that
+26:12 it's found these probability patterns.
+26:14 It found that humans when they do this
+26:18 more mostly do this and this afterwards.
+26:22 uh you know there's there's elements of
+26:23 human nature that are predictable.
+26:25 There's things that happen over and over
+26:26 again and then same in software. It
+26:29 tends to be that when you build a login
+26:32 page, but you also want a forgot
+26:34 password and so the agent can can
+26:37 through its probability matrix go okay
+26:40 login page needs a forgot password.
+26:43 Okay, so that's fine.
+26:45 But the models themselves again they are
+26:48 just probabilities and so what you
+26:51 wanted may not fit that exact
+26:54 probability the exact line that the
+26:57 agent will follow and that so your
+26:59 intention is going down a certain path
+27:01 but that may not fit the average of
+27:05 every human being on the planet that the
+27:07 AI has been trained on. And so yours,
+27:10 your idea actually diverges off the
+27:12 average, which I hope it does because
+27:13 you want to build something new, but the
+27:15 AI unguided will just follow its average
+27:17 path.
+27:18 >> It'll it'll converge to the mean and so
+27:22 it drifts from your intention,
+27:23 >> right? But correct instructions and
+27:25 correct prompts and correct use of
+27:27 agents will keep it on the path that you
+27:29 want it to go on rather than on its path
+27:31 of least resistance, so to speak.
+27:34 >> Yeah. With a lot of Let me stop that.
+27:36 with a with a lot of guard rails uh and
+27:39 a lot of work and this is where agentic
+27:42 engineering comes in as opposed to vibe
+27:44 coding.
+27:45 >> Okay. So explain that then like I think
+27:47 we've we've moved into into this. So
+27:49 what is agentic and how does that differ
+27:51 from vibe coding?
+27:53 >> Right. So we know vibe coding you throw
+27:56 it at the agent and the AI and let's see
+27:58 what it builds. And anyone who's written
+28:03 or uh tried to get agents to write blog
+28:05 posts, you may have realized that they
+28:08 all start to sound the same.
+28:10 >> And in fact, they all start to sound the
+28:12 same so much that there's tooling that
+28:15 can detect AI written articles and blog
+28:18 posts. In fact, I'm sure behind the
+28:20 scenes, Google and their search
+28:22 algorithms are heavily doing this
+28:24 because you see the results of AI blog
+28:26 posts. You get a spike in traffic and
+28:28 then just dies compared to other
+28:31 organizations that write their own blogs
+28:33 and they get a consistent uptick.
+28:35 So, vibe coding is that. Now, the
+28:37 problem with vibe coding uh when you're
+28:40 talking about production ready things
+28:41 you want to take to market is like a
+28:43 blog post, all the websites start to
+28:45 look the same. It's got to the point now
+28:48 where someone who's building a research
+28:52 application uh for tracking uh critical
+28:55 neurological illnesses and you know
+28:58 different it's like a research tracker
+29:01 for trying different medications and
+29:03 seeing what the effects are. They showed
+29:05 me the app and and within 5 seconds I
+29:08 knew they had coded it vibe coded the
+29:11 whole thing and
+29:13 >> stashes.
+29:15 >> Yeah. But like looking for the M dashes,
+29:17 it's like looking for the terminology in
+29:18 the blog post that AIS love to use,
+29:20 which is game changer. Let's delve into
+29:23 >> why why this hits so hard.
+29:25 >> Yeah, that's right.
+29:28 >> You you'll start to see certain design
+29:30 patterns like if you ask it to do dark
+29:33 mode, it'll often use uh this sort of
+29:37 purplish
+29:38 >> uh
+29:39 >> gradient style. So it has this like
+29:42 gradient from one purple. So, I can
+29:44 purple to a blue.
+29:46 >> And I just I just said to them, "Hey,
+29:47 you vibe coded this, didn't you?" And
+29:48 they said, "Oh, yeah, 100%." Yeah, I can
+29:51 tell.
+29:53 >> That's a reap, so I'm Yeah. I'm a bit
+29:55 concerned though about the quality
+29:57 behind it.
+29:58 >> All right. So, VIP coding is great.
+29:59 We've said it's great for prototyping.
+30:01 It's great for your own mini projects.
+30:03 Go have at it. Have fun. It actually is
+30:05 fun.
+30:06 >> Agentic engineering is this is the
+30:08 factor of engineering. It's the the
+30:10 control and the guidance of the agents
+30:13 to produce very exact and specific
+30:15 outcomes.
+30:17 >> Uh and that's building outcomes that are
+30:19 not only matching a very specific design
+30:22 that you want. Same in the old days how
+30:25 we would design an application before we
+30:27 built it. You know, you'd create the
+30:29 this is what the page would look like
+30:30 and you would have a designer work with
+30:32 the client. So there's that factor. uh
+30:35 it's making sure that the output the it
+30:38 follows your intention it doesn't
+30:40 diverge it's making sure that the
+30:44 security is enterprisegrade security not
+30:48 what we are seeing with vibe coding
+30:50 which is disasters just waiting to
+30:53 happen
+30:54 and that's aentic engineering it's not
+30:57 just letting the aging go it's very
+31:01 specific agent actions with very
+31:03 specific evaluation points
+31:06 with humans in the loop at very exact
+31:08 and specific points done right that'll
+31:10 give you the 5x speed with the
+31:13 enterprise level of security.
+31:15 >> Right. Right. And something that's
+31:17 maintainable as well is very important
+31:19 because an application when you write
+31:20 it, it's like a house. Things fall
+31:23 apart. You want to add things onto it.
+31:25 You want to change things. Nothing stays
+31:27 still. So unless you want your
+31:29 application to die after a few months,
+31:30 it has to be maintained. uh and this is
+31:33 possibly the greatest misunderstood
+31:35 thing amongst people who don't have
+31:38 experience or knowledge of of
+31:39 developing. They think once the program
+31:41 is written it runs forever and it just
+31:43 doesn't.
+31:45 No, one of the research points regarding
+31:49 AI coded applications
+31:52 is that the
+31:55 for for those who are technical and know
+31:57 you know you know when you write code
+31:58 you got to refactor it. So you write it,
+32:00 you get it to work, the code's a bit of
+32:02 a mess, then you come back and you clean
+32:04 up the code and you put it into
+32:06 different modules and you make it really
+32:08 easy to maintain.
+32:10 >> So AI let loose by itself will tend to
+32:13 write single files. So it will take what
+32:17 you're trying to build and maybe in
+32:18 total it's like 2,000 lines of code.
+32:21 it'll try and jam it into a single file
+32:24 and without exact and precise guidance
+32:28 it won't automatically refactor uh and
+32:32 the the longer this goes on. So this is
+32:34 of course we always knew this in
+32:36 software development as technical debt
+32:38 >> it's you have to pay that debt down at
+32:41 some point meaning you have to come back
+32:43 and you have to clean up the code.
+32:45 agents can get away with it a little
+32:47 longer than a human can because it can
+32:50 consume huge amounts of data
+32:52 >> much easier than a human. But but the
+32:55 problem is it will also expand how much
+32:57 of this unfaced code there is to a point
+33:00 once it gets to a a critical mass point
+33:02 even the agent has trouble fixing it up
+33:05 and now you've got the human having to
+33:07 go back and spend copious amounts of
+33:09 hours fixing. So
+33:12 >> a small app will get away with it but
+33:14 there is an inflection point where the
+33:17 app gets to a certain point the code is
+33:20 in such a mess now now the AI agent
+33:23 cannot even build on top of it without
+33:25 introducing
+33:27 an exponential number of bugs in fact
+33:31 research is showing that on average AI
+33:34 coded applications are introducing bugs
+33:36 2.7 times faster than human development.
+33:40 >> Right. Right. And there is a tendency
+33:41 then for the tools rather than to well
+33:43 they do fix bugs obviously but instead
+33:45 of fixing bugs sometimes it just adds
+33:47 layers of uh like gaffitate maybe is the
+33:51 best way to describe it. Instead of
+33:52 fixing the original bug just what do we
+33:54 do if that bug exists in the code then
+33:56 we go on this path instead and you never
+34:00 get the actual bug fixed. You just have
+34:02 an apparency that it now works.
+34:05 >> Yeah, that's right. does that all the
+34:07 time and it's um
+34:10 you know and I've been through it. I've
+34:11 been on this particularly Asian
+34:14 trying to build out agentic engineering
+34:16 for three years and I've made every
+34:18 mistake and I've the only thing I
+34:20 haven't done because I was at least wise
+34:22 to this is I haven't let my agents work
+34:24 on production infrastructure like the
+34:26 actual service
+34:28 >> to let you know one of our one of our
+34:30 staff actually was building
+34:33 um some trading bots uh they're a good
+34:37 trader currency trader
+34:39 >> and he violated his own principle of
+34:42 don't let agents touch your production
+34:45 infrastructure.
+34:46 >> And he just after the weekend, he just
+34:48 realized that the agent had spun up 10
+34:51 times the number of servers needed and
+34:53 his bill going to go up from like $200
+34:56 to probably thousands of dollars over a
+34:58 weekend.
+34:59 >> That's one of those things, right? There
+35:00 was a there was a bug in the code and
+35:02 the code slowed down. So, how do we
+35:04 solve the problem? Just add more
+35:05 instances.
+35:07 >> Yeah. Don't worry about the cost because
+35:09 the money means nothing to the to the
+35:11 agent.
+35:12 >> No, unless it's constrained and unless
+35:14 you give it guardrails
+35:16 >> and this agentic engineering is about
+35:20 it's about guardrails. So, you know,
+35:22 people talk about, you know, we first
+35:25 had prompt engineering. So, how to write
+35:28 your prompts, then you had context
+35:30 engineering, like how to feed. So
+35:33 grounding the agent in the right
+35:34 context, making sure you don't give too
+35:36 much context because that costs tokens
+35:38 which costs uh you know money depending
+35:41 on what type of model you're using. Uh
+35:43 but but now we're getting into agentic
+35:45 guardrails. That's and and it is in my
+35:49 view the final step in the evolution to
+35:53 being able to produce again enterprise
+35:57 secure but at the speed of AI. Uh and as
+36:01 these agent, you know, in five years
+36:02 from now, it'll be completely shifted
+36:04 again. You know, these guard rails will
+36:06 be pre-built into the models. Most
+36:08 likely
+36:09 >> they'll be able to solve a lot of this.
+36:11 >> But right now, uh these are the problems
+36:14 we have to solve.
+36:15 >> And you don't want to wait for 5 years.
+36:17 You want to get something to market now.
+36:18 You can do it five times faster than you
+36:20 could before. Let's go. You know, let's
+36:22 start generating some revenue. Let's not
+36:23 wait until it can do it better because
+36:26 then 5 years later, it'll do it better
+36:28 again. and you you'll end up waiting
+36:30 forever. So you just go now with the
+36:32 tools but understand the limitations.
+36:36 >> So a basic framework then came would be
+36:38 you initially write what we call the
+36:40 tickets which would be concise and
+36:43 compact statements of what you want done
+36:45 the prompt but those statements need to
+36:48 be um whilst concise they need to have
+36:50 enough information probably more than
+36:53 you would typically give to a human. It
+36:54 would have to have what is the outcome
+36:56 that's expected from that ticket. it
+36:58 would have to have how do you test it
+36:59 and I mean the person not the computer
+37:01 how do you test that ticket to say yes
+37:04 that's done so that would be the first
+37:06 step and then off to the side you have
+37:07 the agents the agents as those things
+37:10 being built they check for security they
+37:12 check for maintainability they check for
+37:16 um I'm not sure what else maybe they're
+37:18 running the test suites as we as they go
+37:20 that sort of thing
+37:21 >> what what else might you have those
+37:23 agents doing as the main agent is
+37:26 writing the code what are these things
+37:28 off to the side doing
+37:30 >> right. So the principle that I've I'm
+37:32 using now is is the conductor principle.
+37:35 >> And it's an it's an orchestration
+37:37 pattern. Meaning you've got at the top
+37:40 you've got a conductor that guides a
+37:43 number of smaller agents. Right? So
+37:46 right now for my coding pipeline I've
+37:49 got the conductor which guides and then
+37:52 I've got at this stage I've got about 19
+37:54 different sub aents.
+37:56 >> All with a very specific task to do.
+37:59 Yeah,
+38:00 >> very specific, very tailored, very one
+38:03 action, one specialty. So then that at
+38:08 that conductor pattern, which I can't
+38:09 get too in depth into right now because
+38:11 it's quite ind depth,
+38:12 >> but but you might have one that say
+38:14 looks after the interface, so the
+38:16 interface stays clean. You have another
+38:18 one that looks after the security. You
+38:20 have another one that looks at like that
+38:22 that sort of thing or another one that
+38:23 looks after deployments.
+38:25 Well, let let me give you a very short
+38:27 rundown of some of the key points of
+38:28 that pipeline.
+38:30 >> Okay,
+38:30 >> so you've got the the scope validator.
+38:33 It takes the scope that's come in and it
+38:35 checks for ambiguities. It checks for
+38:37 conf conflicting data. Uh does it
+38:40 conform with what the code already
+38:41 exists is and it and it loops. So one of
+38:44 the other key things is the evaluation
+38:47 loop in these agents. They produce
+38:49 something and then it does a validation
+38:51 loop and it validates and it may ask the
+38:53 user questions or it may check it
+38:56 grounded against the codebase. But that
+38:58 validation loop is the other key to
+39:01 success because it's again there's
+39:02 garbage in garbage out. Every issue at
+39:05 the beginning of the chain as it goes
+39:08 through its 16 different sub aents will
+39:11 get worse and worse and worse and worse
+39:13 till the output is just complete
+39:15 garbage. Right? So you validate the
+39:18 scope, you loop and you loop and you
+39:20 loop until the agent has a confidence
+39:22 score above like 90%.
+39:25 >> Uh then you get into like planning. So
+39:27 it takes the scope and it works out.
+39:28 Again, it's grounded in the existing
+39:30 code. It's grounded in the technical
+39:31 documents of that language and it
+39:33 creates the implementation plan and it
+39:35 evaluates and it loops and loops and
+39:37 loops until it's valid. And then you get
+39:39 into say the the writing. And I'm not
+39:42 sure if everyone's a coder on on here,
+39:44 but one of the things you always want to
+39:45 write with your code is automated tests.
+39:48 So it it their tests that actually test
+39:50 that the code you're you're writing is
+39:52 working. It's not breaking anything else
+39:54 in the application. So you have a test
+39:56 writer agent and then you have the code
+39:58 writer agent and then you have the test
+40:00 runner agent and then you have the test
+40:02 fixer agent and you're looping through
+40:04 here until it's all completely good and
+40:06 then you've got the the uh code refactor
+40:10 agent and it loops and then you've got
+40:12 the security review agent and it loops
+40:15 and then you've got the agent that
+40:16 checks the original scope and what we've
+40:19 delivered here. It goes through a
+40:21 checklist has it delivered everything
+40:22 and
+40:23 >> right
+40:23 >> so on and so on and it and it's going
+40:25 through a constant loop pattern of
+40:26 validation
+40:28 uh and
+40:30 if you don't validate as you go if you
+40:32 just pass it through a channel from
+40:34 beginning to end
+40:36 you you'll get it'll diverge you'll get
+40:39 hallucinations there are ways to
+40:42 mitigate I'm getting close to 100%
+40:45 mitigation on hallucinations not quite
+40:47 there I'm probably at about 98%
+40:49 >> right But it's all of these additional
+40:51 checks that get done through the process
+40:53 that uh that mitigate against that.
+40:57 >> They're actually the checks that a human
+40:58 would usually do when they're
+40:59 developing.
+41:01 >> Difference is we can do it faster. Uh
+41:03 the other check as well uh for anyone
+41:06 writing code is there's a a tool called
+41:09 playright
+41:10 >> which can go out and it can actually run
+41:14 a browser. So what happens now in my
+41:16 agent cluster I call my my tool is
+41:19 called the agent cluster is it goes
+41:21 through all these steps and one of those
+41:22 steps is it'll actually go to the
+41:24 website one it'll take a screenshot of
+41:27 the website compare it against the
+41:28 design so it's looking for divergence
+41:30 against the design but then it'll
+41:32 actually go and do the things it'll log
+41:34 it'll click the login button
+41:35 >> the fields right
+41:37 >> y and then it'll loop again and that
+41:39 sends it and it will find errors and
+41:40 that will send it back to the beginning
+41:41 of the
+41:43 >> uh coding flow
+41:44 So in the old days of writing
+41:48 uh basic back like talking 30 years ago
+41:51 uh on
+41:52 >> computer language for anyone who doesn't
+41:54 know.
+41:55 >> Yeah. Was great. There were a lot of
+41:57 go-to like you had to write lines of
+41:59 code and you'd like write go to 10
+42:02 meaning you'd loop back to line 10 you
+42:03 start again. We're actually at that very
+42:05 basic stage with these AI agents.
+42:07 There's a lot of go-to statements. Uh
+42:09 and this will all get a lot more
+42:11 sophisticated. Uh but there's a lot of
+42:13 looping again there's the evaluation
+42:16 loop the scope evaluate it is it clear
+42:19 concise are there any ambiguities but
+42:21 then you got longer loops so it goes
+42:23 through the code platform uh it gets the
+42:26 end you've got playright actually
+42:28 checking visually doing the user testing
+42:30 and it'll send it right back to the
+42:32 beginning of the coding loop uh if it
+42:35 finds anything it's got to now write
+42:36 more tests it's got to make write the
+42:38 code it's got to run the tests it's got
+42:40 to check it's secure it's got to
+42:41 refactor the code da da da da da da da
+42:44 does the visual check again
+42:46 >> right
+42:46 >> uh and it's quite an extensive pattern
+42:49 but this is how you engine and this is
+42:52 aentic engineering and how you write
+42:55 enterprise secure at the speed of AI now
+42:59 here's I think the important part you're
+43:01 talking from the viewpoint of someone
+43:03 who's educated has spent decades in the
+43:06 industry to get to the point where you
+43:08 understand how to create this but we can
+43:12 hand these tools over to someone who
+43:14 doesn't have all of those decades of
+43:15 experience just knows that they want to
+43:17 build something and using those tools
+43:20 correctly
+43:22 educated in them will be able to build
+43:24 something. Is that correct?
+43:26 >> Yeah, I'm actually building that tooling
+43:28 as we speak. I've been literally 16-hour
+43:32 days for the past month uh building out
+43:36 what I call the agent cluster or or what
+43:39 manages the agentic uh engineering. And
+43:43 I to humble brag a little bit certainly
+43:47 publicly what I'm building there's
+43:50 nothing else in the public domain that
+43:53 does this. There's things that do parts
+43:55 of it, but the entire Agentic agent, the
+43:58 entire Agentic engineering flow
+44:00 publicly, there's no one else doing it.
+44:02 I'm sure there's companies that are and
+44:04 certainly working on it. Uh, and I've
+44:06 been doing a huge number of uh, eval
+44:10 research evals and comparing it against
+44:11 other tools in the market. And what
+44:14 we're building here at Reactive is
+44:16 beating everything else by major
+44:19 percentages. and uh and and yeah, we
+44:23 we're we're building something actually
+44:25 I'm really really proud of and something
+44:28 that
+44:29 >> allows I'm I'm trying to make it
+44:33 as humanproof as possible. There's still
+44:36 points of human
+44:38 >> thank you accessible is a better term
+44:39 that anyone can go in and use this
+44:41 tooling
+44:42 >> with a bit of education. You can't just
+44:44 get thrown into it because then you're
+44:46 just vibe coding again. with a bit of
+44:48 education and a bit of guidance can use
+44:51 these tools to build these applications
+44:53 that are secure that are quality written
+44:57 code that can be maintained in the
+44:59 future without bringing about future
+45:01 disaster.
+45:02 >> Right. So the the good news is we're
+45:04 taking this on the road so to speak.
+45:06 We're doing a series of workshops
+45:08 starting in Melbourne and then moving to
+45:09 Sydney and then elsewhere around the
+45:12 world I assume. uh I say assume because
+45:15 I haven't planned anything beyond Sydney
+45:17 yet but we'll get there. Uh so if you're
+45:19 interested we do uh we do want people to
+45:22 attend these and we are looking for I'm
+45:23 going to bring up the slide one second
+45:25 here
+45:27 uh so that you can see exactly where
+45:29 we're going.
+45:31 Uh so you can you can scan the QR code
+45:33 that's on the screen at the moment. Um
+45:36 and the first one is in Melbourne 31st
+45:38 of March to the 1st of April. So, it's a
+45:40 two-day workshop where we're going to be
+45:42 teaching the exact skills that we've
+45:43 been discussing here today. We're going
+45:45 to be showing people exactly how to use
+45:48 these agents and we're going to give
+45:49 them the tools to be able to do this.
+45:51 So, you'll be able to walk away from
+45:52 that workshop building your own
+45:55 application. In fact, at the end of the
+45:56 two days, you might even have something
+45:58 close to a a done application. So, um
+46:01 and we'll even help you with ideas. So,
+46:04 uh, I would like you to scan this code,
+46:06 have a look at what it says there, and
+46:07 then sign yourself up for this workshop.
+46:09 Um, I haven't got the dates yet for
+46:12 Sydney, but I'll have those pretty soon,
+46:13 and they'll be on the website. So, if
+46:14 you want to scan the code there, and you
+46:16 can have a look when it comes up in
+46:17 Sydney. Um, and we would like everybody
+46:20 to be there. Just before we go Kane,
+46:22 today if there's anybody online at the
+46:24 moment that wants to ask a question,
+46:25 please feel free to if you're listening
+46:28 to this as a recording later, you can
+46:30 just send your questions in the comments
+46:32 or you can contact me. There'll be a
+46:34 slide at the end in a moment with some
+46:36 contact details so you can get on to me
+46:38 or Kane and ask your questions. Uh, and
+46:41 if you want to go to the workshop, have
+46:43 a look at that QR code. Anything you
+46:44 want to say before we finish, Kane?
+46:47 No, but the point of the workshop is so
+46:49 that you can actually start to deliver
+46:51 and in the two days we will help you
+46:53 build something that you can now it
+46:56 might be the beginnings of something or
+46:58 it might be if you start small something
+47:00 that you can actually get out live. So,
+47:02 we'll go from the beginning all the way
+47:03 through to how to actually deploy uh the
+47:07 code actually how to get it onto whether
+47:08 it's a website or whether it's onto uh
+47:11 the the the app store or play store for
+47:14 Android. Like we'll take you from the
+47:16 beginning to the end uh so that you can
+47:19 actually start building your own. So,
+47:20 you got an idea, you've been thinking
+47:21 about it'd be great if we could just
+47:23 build this. Why hasn't someone built
+47:25 this? or I want to automate something in
+47:27 my business and I need a tool uh that
+47:30 will do that and I don't want to spend
+47:31 $100,000 implementing Salesforce or some
+47:34 other platform. It needs to be
+47:36 customized and tailored to my exact
+47:38 needs in my company. That's the purpose
+47:40 of this workshop to show you how to do
+47:42 that. Yeah, absolutely. We're just going
+47:44 to empower people to do it themselves.
+47:48 All right. Well, thank you very much for
+47:50 joining me today, Kane. I hope we
+47:51 answered everybody's questions. I know
+47:53 there's a lot to to consume and
+47:55 understand with this subject, but we
+47:56 want you to be able to understand it,
+47:58 hence the workshop, hence the ability
+48:00 for you to just ask your questions
+48:01 directly. So, um, thank you very much
+48:03 for joining us today.
+48:06 Thanks all.
+48:38 Hey,
+48:46 hey, hey. Heat. Heat.
+49:10 Heat. Heat.

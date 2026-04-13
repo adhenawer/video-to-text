@@ -1,0 +1,1570 @@
+0:05 Okay. Um let's start. Uh welcome
+0:07 everyone and this is a webinar about
+0:12 agentic engineering uh context carails
+0:15 and creativity. So um I'd like to start
+0:18 with some in introductions. Uh my name
+0:21 is Tomas. You can call me Tom as well.
+0:23 I'm working as a product solutions lead
+0:25 uh in port. Uh basically uh my
+0:29 background is a dev sec ops. Uh so I
+0:32 actually worked before as a solutions
+0:33 architect in GitLab helping
+0:35 organizations to build dev secops
+0:36 platforms and also I'm based in
+0:39 Melbourne in Australia.
+0:42 >> And I'm Zach. I'm solution engineering
+0:44 here at port for for APJ. Uh similar to
+0:48 Tomas I've got a background in in
+0:50 DevOps. Probably more DevOps than Dev
+0:52 Sec Ops if I have to uh be be nitpicky.
+0:54 Uh I'm based in Sydney, Australia, which
+0:56 is obviously the superior city in uh in
+0:59 Australia.
+1:02 >> Thanks uh thanks for sharing Zach. Okay.
+1:03 Uh before we start uh deep dive, we want
+1:07 to ask you uh one just one question and
+1:11 it will help us as well to see uh what
+1:14 is uh what is the current state of the
+1:18 agentic engineering in your
+1:19 organization.
+1:21 So the question is when AI agent takes
+1:24 action in your engineering workflow
+1:25 today, what's your biggest concern?
+1:30 Let's give a 15 seconds.
+1:53 H very interesting. Uh very
+1:57 I would say quite balance in some way,
+2:00 but we have a winner.
+2:03 Uh
+2:05 yeah, there aren't enough guards to
+2:08 prevent destructive actions. So this is
+2:11 interesting one. We are going to talk
+2:14 about this today and also how it can
+2:17 help you. So looks like Zach, this fits
+2:20 our uh webinar very nicely. Although we
+2:23 have a second winner as well here, which
+2:26 is uh we don't have AI agents uh in our
+2:30 workflow yet. So hopefully uh after also
+2:34 the webinar, you'll have maybe a better
+2:36 understanding or we inspire you as well
+2:39 how you can start your agentic
+2:41 workflows.
+2:44 Zach, what do you think about the
+2:46 winner? There aren't enough guard rails
+2:49 to prevent destructive actions.
+2:51 >> I figured that was going to be the case
+2:52 is that when you look at a lot of the
+2:54 things that have happened in in recent
+2:56 times like Amazon deleting part of their
+2:58 codebase, I think the guardrails to
+3:00 prevent destructive actions. Yeah, I
+3:02 would agree that would be my most
+3:04 concerning one as well.
+3:07 >> All right, thanks uh thanks everyone for
+3:09 providing responses. Uh, okay. Uh, by
+3:13 the way, let's share results. I guess
+3:16 you can see it. Everyone can share it.
+3:19 Um,
+3:21 okay. Can you see everything?
+3:24 Okay, closing.
+3:26 So, let's move to the this section and
+3:29 we'd like to actually open it with some
+3:31 problem statement. This is actually
+3:33 related with the qu like the questions
+3:36 we ask you and by the way by the way the
+3:38 winner as well of the of the responses
+3:40 right the agents pro uh so I actually
+3:45 like to ask you Zach uh you have a lot
+3:49 of infrastructure engineering experience
+3:52 and you work talk with the platform
+3:54 teams every day does it look familiar to
+3:57 them uh when you actually show it
+4:00 >> I think even if you take the agents out
+4:03 the the chaos and the sprawl of tooling
+4:07 documentation I think really rings true
+4:09 particularly in 2026 is like look at
+4:12 like as we've tried to kind of solve a
+4:14 lot of these issues throughout you know
+4:16 over the last you 101 15 years we have
+4:18 had devops come through sur platform
+4:20 engineering everyone's trying to
+4:21 simplify things down and go through and
+4:23 give um an easier platform for people to
+4:26 interact with and then now we're adding
+4:28 AI agents in over the top of that the
+4:29 complexity is just it's growing growing
+4:31 and growing. And when you look at like
+4:33 why that complexity is there and like
+4:35 what are the key challenges of even
+4:36 trying to get an agent into a workflow,
+4:38 let alone into production, you know,
+4:40 it's kind of those four points down the
+4:42 bottom there. You know, there's a lack
+4:43 of visibility into agents and what
+4:45 they're doing. There's a lack of human
+4:46 oversight, human control. You're
+4:49 duplicating a lot of work between
+4:50 engineers and the agents. And that last
+4:52 part, you know, the winner of the polit,
+4:54 there's no real guard rails. How do you
+4:55 actually wrap guard rails around an AI
+4:57 agent and how do you keep it on the the
+4:59 golden path or the happy path to what
+5:01 you're trying to go through and and
+5:02 achieve?
+5:04 >> Thanks, Zach. And this is exactly what I
+5:06 was seeing as well when I was working
+5:08 before um in the the sec of space a lot
+5:11 with the the customers like everyone in
+5:15 some way maybe uh was bringing some
+5:18 agents to the to the organization but
+5:20 everything was super chaotic and uh like
+5:25 every team had very different agents use
+5:28 actually those agents in the like very
+5:30 different ways uh and you couldn't
+5:33 really see like any central centralized
+5:35 uh place where you have all these agents
+5:37 available.
+5:42 So let's maybe think about this uh agent
+5:47 explor agent chaos and if we solve this
+5:51 problem um and we actually get a real
+5:54 control
+5:56 what we can achieve
+5:59 and uh this is uh this is a very
+6:02 interesting area because uh of course uh
+6:06 everything accelerated uh recently with
+6:09 very different use cases. uh what I'd
+6:13 like to share actually we we are seeing
+6:16 many many uh use cases especially the
+6:19 ones uh here uh visible what basically
+6:23 kind of use cases you can build like we
+6:25 have a very u common use cases like auto
+6:28 secret resolution self-healing incidents
+6:31 uh there are basically many use cases
+6:33 which organizations uh can uh can create
+6:38 uh but I'd like to actually ask you Zach
+6:40 when also like um talk with the with the
+6:44 customers on a daily basis. Is it like
+6:46 they just have uh you know or customers
+6:51 that actually are implementing it
+6:52 already?
+6:54 >> No, I think there's a bit of both. The
+6:56 customers that we are we're working
+6:58 with, they're now starting to look at
+6:59 the full implementation. What does an
+7:00 end toend agentic workflow really look
+7:02 like? Um where agents are doing the the
+7:05 the bulk of the work. And so when we
+7:07 look at like you know what people are
+7:09 trying to go through and build whether
+7:10 it's things like I want to take a
+7:12 feature request and push that through to
+7:13 production. I want to take an incident
+7:15 and do all of my triaging my remediation
+7:18 my postmortem stuff all through one one
+7:20 continuous flow is that people are now
+7:22 starting to get there. Um and like I
+7:24 said with some of our customers we are
+7:25 seeing them go through these workflows
+7:27 build them out and have great success
+7:28 with them. Um so and then like when you
+7:31 look at what it takes to actually get
+7:33 there and what do they need to go
+7:35 through and build or how are they going
+7:36 through and empowering these workflows
+7:38 so they have confidence and they have
+7:39 trust in them. You know sort of the key
+7:41 things for me is that like on that right
+7:43 hand side there that the key ones for me
+7:44 is like number one is being able to
+7:45 actually go through and give like
+7:47 context to the agent. So it's not just a
+7:49 chatbot that's querying some data for
+7:50 you. It's something that is actually
+7:52 able to go through and look at what is a
+7:54 service and what what constitutes a
+7:56 service what makes up this who owns it.
+7:58 It's being able to go through and have
+8:00 those guard rails and the rback around
+8:02 an AI agent of what it can go through
+8:03 and do as in it can only deploy to a
+8:05 production environment. It can only
+8:06 deploy to a dev environment. Um having
+8:09 that oversight over it. And I think
+8:11 ultimately I think one of the things
+8:12 that will that gives everyone confidence
+8:13 is that ability to have that human in
+8:15 the loop, human oversight into what the
+8:18 the AI is going through and doing. It's
+8:19 not just a black box of here's some
+8:21 inputs and here's my output. It's like
+8:23 how did it actually come to that um
+8:25 decision? And again having a human being
+8:27 able to go through and see and review
+8:28 that is what's really going through and
+8:31 giving people that confidence giving
+8:32 them that trust to have an end to end
+8:34 aentic flight.
+8:35 >> Exact one uh because I can see on the
+8:38 top is a context like right uh can you
+8:40 please expand like uh what is actually a
+8:44 context like?
+8:45 >> That's right. So for us like when you
+8:46 feed something to an AI agent or to
+8:48 anything that's AI you're like I want to
+8:50 build X Y and Z. It lacks obviously zero
+8:53 context of what you're trying to go
+8:54 through and build or what your
+8:55 architecture stack is. What's the
+8:57 language that you need to be developing
+8:58 in what other tools your tool sets are
+9:00 using sneak versus whiz and so on. So
+9:03 for us at port like when we talk about a
+9:05 context like it's all of that data that
+9:07 you need as an engineer that you'd
+9:09 expect you know the knowledge that you
+9:10 would need to go through and build
+9:12 something and being able to go through
+9:13 and supply that to the to the AI agent.
+9:15 So when we talk about context, it's
+9:16 things like what is my services, how are
+9:18 my services built, where are my
+9:19 repositories, my pull requests, and how
+9:22 that's all related to together because
+9:23 that becomes really important. If we can
+9:25 feed better context, more accurate
+9:27 context to an AI agent, we're going to
+9:29 go through and get a better response
+9:31 from the from the AI.
+9:33 >> Amazing. Thanks for sharing, Zach. And
+9:35 maybe also question to the audience. uh
+9:38 if you may be working on some other use
+9:41 cases which are not visible here uh
+9:43 different agentic workflows please also
+9:46 share in the chat it will be great to
+9:48 see what uh you are doing um in the in
+9:51 the space
+9:53 okay so today's session it's not like we
+9:56 are going through the slides uh we
+9:59 actually have a quite practical session
+10:01 today uh we'd like to show you how it
+10:04 looks like in a in a real environment So
+10:07 what we are going to cover today three
+10:10 uh main uh parts. The first one is
+10:13 autonomous ticket resolution. So we're
+10:15 going to talk about how you know we can
+10:18 get a road ticket to production under
+10:20 the full control. So this is actually
+10:22 what uh related to the our survey
+10:25 question. Uh the second part will be we
+10:28 have a lot of sometimes incidents in
+10:30 production which of course affect a lot
+10:32 of workloads uh services. how we can
+10:35 actually move this instance from alert
+10:38 to th to remediation. How we can make
+10:40 this actually process uh automated but
+10:44 also of course include AI agents in this
+10:46 in this workflow this process. And the
+10:48 third one is uh of course when we build
+10:51 for instance those workflows you'd like
+10:53 to in some way measure the ROI you'd
+10:56 like to see if there is a value and of
+10:58 course like we we we can see that a lot
+11:01 of platform engineers um uh in this in
+11:05 this webinar. So of course someone will
+11:07 ask you what is actually the ROI can you
+11:09 show me the numbers and we'd like to
+11:12 share with you some some ideas as well.
+11:15 Uh all right. So before actually uh
+11:19 we're going to do a a deep dive into a
+11:23 specific uh workflow uh Zach quick one
+11:27 how we can address agentic chaos in the
+11:31 first place.
+11:33 >> Yeah. Yeah. And I think like when you
+11:34 actually start looking at building out
+11:36 an auditic workflow in the first place,
+11:38 I think a lot of people come to sort of
+11:40 the uh the problem of like where do I
+11:42 actually store and like where do I
+11:44 control my agents from? Um and so I
+11:46 think it's really important to start
+11:47 with that before you even build an
+11:48 agentic workflow, you need to be able to
+11:50 go through and have a central repository
+11:51 for the tools or the things that your
+11:53 agents need to actually go through and
+11:55 and do. So whether it's registering an
+11:57 agent that's built by Paul, built by
+11:58 yourself, it's being able to go through
+12:00 store these agents and have them in a
+12:02 central repository that you can share
+12:03 out to the different teams or different
+12:05 tools that need to actually go through
+12:07 and consume these. So whether it's
+12:09 things like I have a task manager that
+12:11 you know translates jury tickets for me.
+12:12 I have something that goes through and
+12:14 advises on work items. I have a triage
+12:16 agent. All of these things is that we're
+12:18 able to go through track and centralize.
+12:19 So when we say track and centralize,
+12:21 it's being able to go through and see
+12:22 the details of, you know, where this
+12:24 agent is from, what are the guard rails
+12:26 in terms of what tools and things that
+12:27 can go through and and use, you know,
+12:29 what's the prompt that we're actually
+12:30 using as part of this agent. Um, being
+12:33 able to go through and audit it and and
+12:34 things like that as well. It's also a
+12:36 place where we can store all of our
+12:37 things like our skills registry. So as
+12:39 we start talking about guard rails and
+12:41 giving AI agents the ability to do
+12:43 something in a very specific way, where
+12:45 do I have all these things? I have the
+12:46 skills. I have a central repository. Um,
+12:48 it's being able to go through and save
+12:50 valuable prompts for your engineers and
+12:51 for these agents of what they can go
+12:53 through and consume. And I think
+12:54 finally, it's being able to go through
+12:56 and review as an agent goes through and
+12:58 does something, what is the actual
+13:00 result? How do I actually go through and
+13:01 have an audit of this and seeing that
+13:03 when I ran this this AI agent triage
+13:05 work uh went is that you know what was
+13:07 the actual response that it gave? What
+13:09 was the prompt that it gave or was given
+13:12 and how did it actually go through and
+13:13 and execute it. So my first thing is
+13:16 that
+13:16 >> agents. Yeah,
+13:18 >> quick one. Uh so so this is basically a
+13:20 centralized place where I can really
+13:23 have a strong governance of of the
+13:25 agents. So if I let's say it's an
+13:27 organization uh maybe I don't know uh
+13:30 let's say you know few hundred
+13:32 developers, 500 developers you know it
+13:36 doesn't mean basically that I can create
+13:38 those agents and uh they can be
+13:41 available for uh for the rest of the
+13:43 team. That's right. You don't have to
+13:45 like rebuild what a triage agent does.
+13:47 You can have a central place, have that
+13:48 distributed out and people can consume
+13:50 it knowing that it's already built to
+13:51 the best practices that you want as part
+13:53 of your your agent infrastructure.
+13:56 >> Right? It reminds me a bit like uh you
+13:58 know for instance Docker registry or the
+14:01 pipelines you centralize it and then for
+14:04 instance as a platform team you
+14:05 centralize it and then you provide uh
+14:08 this uh for the consumption to to other
+14:10 teams.
+14:11 >> That's right. Avoid the rework, consume
+14:13 what's already been built, that's
+14:14 already working.
+14:16 >> Okay. Uh, amazing. And just a quick one,
+14:18 uh, Zach, I can see a skills registry
+14:21 here. Uh, can you expand just, uh, very
+14:24 quickly?
+14:25 >> Yeah, that's right. So, as I was saying
+14:26 before around the actual skills and
+14:28 having like that central place is that
+14:29 you want to be able to go through and
+14:30 distribute these skills to your agents
+14:32 and you want them to be able to go
+14:33 through consume the ones that are best
+14:34 practice, not something that's living
+14:35 inside of a repository in someone's
+14:37 machine. It's here's actually the
+14:38 central place that we have or here's how
+14:40 as an organization we're going to go
+14:42 through and do our triage. Here's how
+14:44 we're going to go through and do our
+14:45 investigation. So it's being able to go
+14:47 through have that central place.
+14:48 Everyone can consume it. Everyone can
+14:49 refine over the top. So basically can
+14:52 like create specialized agents and
+14:54 making sure that agents can exactly like
+14:57 follows the specific you know steps to
+15:00 for instance address the specific uh
+15:01 issues. Yeah.
+15:03 >> Yeah. That's right.
+15:04 >> Awesome. Uh so thank thanks for that and
+15:07 uh let's now transition to the the first
+15:10 part really which is uh um autonomous
+15:13 secret resolution workflow.
+15:16 >> Awesome. And so when we start looking at
+15:18 the agentic flows the two we're going to
+15:20 take a look at today is taking like a
+15:21 work item through a workflow. So a work
+15:23 item in this case being anything like a
+15:25 maybe it's a bug probably going to be a
+15:27 feature. We want to be able to go
+15:28 through take that work item, push it
+15:30 through our workflow, go through the
+15:32 steps that we would as you if you were
+15:34 doing this by hand or if you were the
+15:35 the human I guess you could say is like
+15:37 you got to go through and do product
+15:38 planning. You got to build things like a
+15:40 PD. You need to go through and actually
+15:41 do development work. You then need to go
+15:43 through and do the code security views
+15:45 before you can go through and and
+15:46 deploy. So that's what we're going to go
+15:47 through and and and show today. So when
+15:50 we look at, you know, what's actually
+15:51 coming through or like how does this
+15:52 workflow actually actually work for us
+15:54 is that it can be triggered in a number
+15:56 of different ways. It can be automated
+15:57 in terms of as soon as you receive
+15:59 something like a work item, you can go
+16:00 through and actually trigger this out or
+16:02 you can manually trigger it as you
+16:03 receive um like uh work items in there
+16:06 and it into port. But if we look at the
+16:07 autonomous sticker resolution, I want to
+16:09 go through push something one of my work
+16:11 items through this process. I'm going to
+16:12 go through and select this add wish
+16:14 list. I want to add a wish list to my
+16:16 cart. And so I'm going to go through
+16:18 start this process and we can have a
+16:20 look really quickly here what that flow
+16:22 actually looks like and where the AI
+16:23 agents are actually going through and
+16:24 coming into it. So, as you can see here,
+16:26 there's the actual workflow here. So,
+16:28 someone submitted a work item. We're now
+16:30 going through getting the work item
+16:32 details. We're now starting to go
+16:34 through and enrich and get context for
+16:35 this work item cuz it's not a work item
+16:37 in isolation. It's not just add a wish
+16:39 list. It's like add a wish list to a
+16:40 particular service. We want to
+16:42 understand the repositories, the pull
+16:44 request, the pipelines that are part of
+16:45 it cuz that's what's going to be able to
+16:47 uh when we go and generate the PRD using
+16:49 one of our AI agents here is that's
+16:51 what's going to give it the really good
+16:53 context to give us a really good result.
+16:55 So really solid inputs give us a really
+16:56 solid output and then we start going
+16:58 through the overall flow of generating
+17:00 the text spec with AI as well and then
+17:02 pushing it through to whether we can do
+17:03 this through a coding agent or it's got
+17:05 to be done by hand.
+17:07 >> Zach please
+17:10 uh if you can please show us the initial
+17:11 stages of this of this workflow. Um just
+17:14 scroll
+17:17 just go to the workflow again. Let me go
+17:20 back to the workflow.
+17:23 So I can see there is like fetch word
+17:26 item details right and then you generate
+17:28 the prd. So for example let's say uh you
+17:31 know like previously when I was uh
+17:32 working what was happening uh you know
+17:35 when I was for instance building I was
+17:38 building a GCP cloud infrastructure
+17:41 basically someone was creating a ticket
+17:43 then probably like a few days later I
+17:45 realized oh actually they have to assign
+17:47 it to me because I'm responsible for
+17:49 this specific task then I had to figure
+17:52 out what is actually going on here. So I
+17:54 had to figure out right do we have
+17:56 provision environments do we have all
+17:58 the resources available. So I I just uh
+18:02 you can expand like uh well what's
+18:05 actually happening in this stage the for
+18:07 fetch work item details and how we how
+18:09 do we know if we generate the PRD
+18:12 relevant for instance for organization.
+18:14 >> Yeah let's so when we actually talk
+18:16 about fetching the work item details so
+18:18 this is the port going through and
+18:19 querying the context link to go through
+18:21 and get all that information. So all the
+18:23 details about the services that this add
+18:26 wish list work items related to where
+18:28 this would potentially be deployed who
+18:31 are the teams that actually work on this
+18:32 whether they're GitHub teams whether
+18:34 they're teams inside a port in terms of
+18:35 how I organize my my organization. Um
+18:38 that's what's that f that work item
+18:40 details is doing. It's not just getting
+18:41 the description of it. It's actually
+18:43 going through pulling all the context
+18:44 for us to feed into the actual
+18:46 generation there um of the of the PRD.
+18:49 So, if we were to go actually and look
+18:51 now from here, it's like, okay, I've
+18:53 gone through, I've generated my put this
+18:55 through the workflow. I can now look at
+18:56 my ad wish list um task here, and I can
+19:00 now go through and see those different
+19:01 steps along the way that the AI is going
+19:03 through and help me. So, when I we look
+19:05 at the prep and the plan, which is
+19:06 helping me go through and generate what
+19:07 the PD is going to go through and be
+19:09 here, I'm now able to go through and
+19:10 review this as a human. It's not just
+19:12 the AI generated it and went into the
+19:14 Ether. It's like, okay, I'm going to
+19:15 read through this. I'm going to see does
+19:16 this match with what I think the PR
+19:18 should go through and be and add any
+19:20 additional context that I need to. But
+19:21 it gives us a problem statement. It
+19:23 gives us what success criteria
+19:24 potentially things are going to go
+19:25 through and be out of scope.
+19:27 >> And as a human, I now have the option to
+19:29 go through and do a few things. Number
+19:30 one is that I can approve this plan if
+19:31 I'm happy with it. So this is the human
+19:33 oversight and potentially part of the
+19:35 guardrails. I can go through and iterate
+19:37 over this as well. So I can go through
+19:38 and have an action which says actually I
+19:40 need to add some additional things or I
+19:41 need to consider some other parts of
+19:42 this workflow. Um, and then I can push
+19:45 this through to the next phase. So,
+19:46 we're able to go through and see that
+19:47 after the prep and plan, we're going to
+19:48 go into a develop and review stage. And
+19:50 then this is where I start looking at
+19:52 things such as is this actually ready to
+19:54 be coded? Do I still need to do more
+19:56 work? Is my PD complete? And we can see
+19:58 here that we're using scorecards and
+20:00 kind inside of port to be able to go
+20:01 through and create those benchmarks to
+20:03 create those guardrails or those checks
+20:04 and balances. So, you know, is this
+20:06 ticket ready? Is this plan approved? Has
+20:08 the text back been generated? Blast
+20:09 radius um and and so on as well. T we
+20:14 have a great question from Hen here. Uh
+20:16 you know if we let's say what an example
+20:18 of a ticket and uh would will the agent
+20:21 come back with needs more information if
+20:23 it's poorly written or will it try to
+20:26 resolve anyway and make assumptions. I
+20:28 think this will this will be related a
+20:30 part to uh the context like and showing
+20:33 the entities relations right.
+20:35 >> Yeah that's right. So as we actually
+20:37 start looking at the like when we start
+20:40 looking like if it needs more
+20:41 information and things like that is that
+20:42 it is going to do what AI is going to go
+20:43 through and do to a certain degree right
+20:45 that this is the human oversight
+20:46 component which is important to go
+20:47 through and review and so I think this
+20:49 comes down to your actual prompts like
+20:50 the prompt engineering side of things
+20:52 and how you wrap these kinds of things
+20:54 around but what's important to
+20:55 understand is that we're trying to avoid
+20:57 like the idea of the context like this
+20:58 that we have more information it doesn't
+21:00 go through and hallucinate and be like
+21:01 hey you guys use a three tier web
+21:03 application when actually you just run
+21:05 everything in as a micros service and
+21:06 Kubernetes. But what we can see is like
+21:08 the context should give the agent a much
+21:11 better uh knowledge base to work off. So
+21:14 we can go through and have a look at
+21:15 things like the graph and see what's
+21:16 actually constituting into this
+21:17 particular flow. So it's not just you
+21:20 know here is my ad wishlist feature. I
+21:22 can see everything around it from
+21:23 dependencies you know where the service
+21:25 comes from. Uh I can see what other
+21:27 services are related to this currency
+21:29 this authorization service. So the
+21:32 hopefully what happens along this
+21:33 process that you can a review it so when
+21:35 you get to you know someone's going to
+21:37 review this I need to iterate I need to
+21:38 add more information if I think so um
+21:41 and then the context like again at the
+21:43 at each phase is going to add more and
+21:44 more uh on top of this
+21:47 >> and Zach can you please show again the
+21:48 the graph the entity graph
+21:51 I can indeed
+21:54 so so also I just like to confirm uh you
+21:57 know this looks like basically agent can
+22:00 access only those uh specific
+22:04 entities uh blueprints and data. It
+22:07 can't access any other systems. That's
+22:10 right. So when we actually go through
+22:11 and we configure an AI agent inside of
+22:13 port is that we give it access to only
+22:15 the things that it needs to. So for
+22:16 instance for the work item uh agent when
+22:19 it needs to go through and generate a
+22:20 PD, it knows that it needs to have
+22:22 access to the work item itself. It's
+22:24 probably going to need access to some of
+22:25 the services, but we may not need access
+22:27 to like the security information or
+22:29 anything like that. we can be very
+22:30 targeted of what it can go through and
+22:31 do, what tools, what options also what
+22:33 like skills it can go through and use to
+22:35 uh do this kind of stuff and it's same
+22:37 as when we think about automations and
+22:38 like sort of actions that it would go
+22:40 through and take like I need to go
+22:41 through and deploy to prodive
+22:43 on what it can go through and do by
+22:45 guiding it in the actual configuration.
+22:48 >> Okay, that's that makes a lot of sense
+22:50 and Hayen uh a great question. Thanks uh
+22:52 for posting this and I'd just like to
+22:55 add as well. So we have the AI skills uh
+22:58 which you can also use to uh basically u
+23:02 for the agents to really understand what
+23:05 for instance information is required
+23:07 before uh make actually for instance any
+23:10 actions.
+23:14 Uh all right uh that's uh that's cool.
+23:17 So um
+23:19 something I'd like to also ask you uh um
+23:23 ask you Zach as well is uh so so you're
+23:25 showing us this this workflow here right
+23:28 which is uh uh means you basically can
+23:31 automate you can you know every step
+23:34 really in the DLC you can you can
+23:36 accelerate because you can make those u
+23:40 you can use those AI agents to bring
+23:43 information from many different sources
+23:45 uh but for example aside um
+23:49 if I know that many um probably also um
+23:53 users joined this this webinar they
+23:56 might have a different tools what what
+23:57 is actually the main value here of doing
+24:00 this in port
+24:03 >> yeah it's a good question we get this a
+24:04 lot from from people where it's like
+24:05 well I can I could build an agentic
+24:07 workflow but I think the key thing for
+24:08 me is that number one is context like so
+24:11 being able to go and provide context to
+24:13 those agents context about your
+24:15 environment things that are unique to to
+24:17 you. It's the be able to go through and
+24:20 add the guardrail. So things like being
+24:21 able to go through and add scorecard
+24:23 checks and balances in place so that as
+24:24 we go through and do things or the agent
+24:26 does things, it has a reference point of
+24:27 whether it's actually achieving the the
+24:29 goal that it's set out to to do. There
+24:31 is the human in the loop. So the human
+24:33 as us as we're going through this, we're
+24:35 able to go through and see that we're
+24:36 still reviewing what's happening at each
+24:38 phase of the each at each phase of the
+24:40 workflow. the AI is doing the heavy
+24:42 lifting in terms of building me a PR,
+24:43 but I'm still going through and using my
+24:45 knowledge and my experience to assess
+24:46 whether that's actually valid. And I
+24:48 think the other piece as well is
+24:50 probably the most important piece is
+24:52 that we're not jumping between tools to
+24:53 go through and do this. I'm not using
+24:54 like an agent somewhere else. I'm not
+24:56 using Jira and then switching tools.
+24:58 There's a lot of context is put into the
+25:00 one place. But port overall as being the
+25:02 central control plane for both AI and
+25:05 human uh to go through and actually
+25:07 collaborate on here. We're using the
+25:09 same data sets. using the same context,
+25:10 the same knowledge base to go through
+25:12 and get to the to the end result.
+25:15 Um
+25:17 and it's like by the way this workflow
+25:19 is like seems like those steps are quite
+25:22 clearly defined which means let's say in
+25:25 this case that the process is also
+25:26 clearly defined for instance how we
+25:28 deliver as an example tickets uh to
+25:30 production right but let's say if I have
+25:32 a completely different way like maybe
+25:35 more complexity involved maybe more
+25:37 steps what can what can I do
+25:40 >> so these are all fully like these are
+25:41 all fully configurable so when we
+25:43 actually go through and have a look at
+25:44 things like the actual workflows
+25:45 themselves, we're able to go through and
+25:47 obviously build these workflows out to
+25:49 what we need them to go through and be.
+25:50 So when we're going through and fetching
+25:52 work items, we might not call it
+25:53 generating a PRD, maybe we call it
+25:54 generating a tech doc or something like
+25:56 that. We can go through and build out
+25:58 the different components that is needed
+25:59 within our organization to go through
+26:02 and and do that. We can add different
+26:03 stages. The workflow is fully
+26:05 customizable to what you needed to go
+26:06 through and and be uh it's not dictated
+26:09 to you in terms of this is the only way
+26:10 you can go through and do it. There are
+26:12 many different ways obviously to go
+26:14 through and achieve the the workflow or
+26:15 what you're trying to go through and do
+26:17 but typically this is like the highle
+26:18 view I guess you can say of what a
+26:20 workflow is typically going to be like
+26:22 >> and it's like every basic basically
+26:24 let's say Jio or the CCAT is it routed
+26:28 automatically like to to to AI agents or
+26:31 you have some kind of control of it
+26:33 >> yeah that's right so there's actually
+26:35 like um when we looked at part of the
+26:36 workflow there was actually assessment
+26:38 in place around whether it was actually
+26:40 going through um whether it was being
+26:42 routed to a human or whether that was
+26:44 going through and being routed to um to
+26:46 to the AI agent. So when we actually go
+26:48 through and have a look at things like
+26:49 the the um the overviews here, we're
+26:52 able to go through and see like is AI
+26:54 going through and leading this? Is this
+26:55 actually going through and being routed
+26:57 correctly? We can see here the routing
+26:58 decision. So based on the rules that
+27:00 we've said like for some complex stuff,
+27:01 we might want more human oversight. For
+27:03 more simple stuff, we may go through and
+27:04 want the um uh AI to go through and
+27:07 handle it. So we can see here that for
+27:09 this work item for the wish list it's
+27:10 suitable for an agent to be delegated to
+27:12 an agent. We can see that there's key
+27:14 rules around not being mission critical.
+27:16 It's you know the customer service
+27:18 facing the blast rate is potentially for
+27:20 adding this feature is not going to go
+27:21 through and and be high. Um so this is
+27:23 how we actually go through and have that
+27:25 intelligent routing so that we know
+27:26 stuff that needs to be done by human
+27:27 stuff that needs to be done by AI easily
+27:29 seen.
+27:31 >> Amazing. Uh that's great uh great Zach.
+27:35 So now let's transition to the second
+27:37 one. So you know autonomous secret
+27:39 resolution of course is helping us to uh
+27:42 improve uh velocity uh accelerate
+27:45 basically uh you know like the value
+27:48 delivery
+27:50 but of course on the other hand we have
+27:51 situations uh maybe a kind of a
+27:53 different problem when we might have a
+27:56 lot of incidents uh in the in the
+27:58 environment and we need to have a quick
+28:01 way of uh resolving it. So I just wanted
+28:05 Zach how how we can use self-healing
+28:07 incidents workflow to to help with that.
+28:10 >> Yeah, I think this is like probably one
+28:11 of the more exciting ones like as
+28:13 someone who was like a cloud engineer or
+28:14 DevOps like the more I used to hate
+28:16 getting up at 2 a.m. to go through and
+28:17 solve incidents. So this is one that's
+28:19 near and dear to my heart in terms of
+28:21 you get it's 2 a.m. in the morning, you
+28:22 receive a P2 incident, you got to
+28:24 respond to it, you're half asleep. This
+28:26 is where AI, I think for me is like the
+28:28 dream world, right? Does most of the
+28:29 work for me, does all my triaging. Um
+28:31 but this is the flow that we actually
+28:33 have customers going through and and
+28:34 implementing. We have a few financial
+28:36 institutions that are pushing this for
+28:38 uh some of their incidents in a more
+28:39 controlled setting. Um but ultimately is
+28:41 that people are letting AI now go
+28:43 through and resolve incidents from the
+28:45 actual raising of the incident all the
+28:47 way through to a to a postmortem
+28:48 perspective. So when we think about that
+28:49 workflow receive an alert you're going
+28:51 to have to do some triaging you got to
+28:53 investigate remediate and resolve. Um
+28:55 and all these things are really
+28:57 timeconuming like it could take you a
+28:58 long time to do a triage. it could take
+29:00 you a long time to do the investigation,
+29:01 but this is where AI can really help
+29:03 give you the leg up and speed these
+29:04 processes up um to ensure that you get a
+29:08 really nice quick uh incident resolution
+29:10 and hopefully a nice and accurate one as
+29:11 well.
+29:13 And so when we actually look at the flow
+29:15 here if we want to have a look at you
+29:16 know any of these instance the same sort
+29:18 of flow like towards the that um uh the
+29:21 work item taking a work item going
+29:22 through that autonomous ticket
+29:24 resolution it's a very similar flow like
+29:26 we want to be able to people to go in
+29:27 you know I need to go through wake up I
+29:29 receive my incident I want to be able to
+29:30 go through and triage it let's go and
+29:32 have a look at this uh check out payment
+29:34 failure for instance I can go through
+29:36 and push this through the similar sort
+29:38 of workflow that I would to those work
+29:39 items before so when we look at it it's
+29:41 similar workflow So I'm going to go
+29:43 through I'm going to take this
+29:44 particular incident. I'm going to go
+29:46 through get port to go through and fetch
+29:47 all the context details for it. And this
+29:50 is different context right to what a um
+29:53 what a work item is going to go through
+29:54 and and have
+29:57 >> exactly we have a question from the
+29:58 audience which is actually very related
+30:00 to what you're showing now and the
+30:02 question is the you know the depth on
+30:04 the of the context and the different use
+30:06 cases like uh you can have a look the
+30:09 question from Bimales and Rakkesh we're
+30:12 talking about the uh the importance of
+30:15 the data and actually the context like
+30:18 uh can Can you maybe expand like how
+30:22 like especially with the incidents why
+30:24 this is so important to bring this data
+30:27 from the different sources which you can
+30:30 have in port?
+30:32 >> Yeah. So the first and foremost is that
+30:33 we integrate into a lot of the tooling
+30:35 that that is out there. So we we plug
+30:37 into things like Azure GCP, we plug into
+30:40 Jira, GitHub, ADO, we ingest all the
+30:43 data from these tools and we build out a
+30:45 context like a model of everything in
+30:47 your environment and what that looks
+30:48 like. So when you look at what is a
+30:50 service or an application, it's like
+30:51 what is connected to or what is related.
+30:54 Um and so this is how we start
+30:55 understanding like when you look at a
+30:56 service and you want to understand am I
+30:58 deploying to a production environment,
+30:59 what goes into that production
+31:00 environment. All that data is going to
+31:02 be ingested into port to allow you to go
+31:04 through and do that. So when we start
+31:06 looking at things like part of incident
+31:07 resolution, it's like I need to go
+31:09 through and actually pull some more logs
+31:10 from something like a data dog or
+31:12 something like that. We can go through
+31:13 and take advantage of like their MCP
+31:15 server. So you can integrate MCP servers
+31:17 into port and as a part of those
+31:19 workflows port can then go through and
+31:20 query those external services to get
+31:22 more um to get more information. Um so
+31:25 as part of like um one of the flows
+31:28 we'll go through in a second is like
+31:29 we'll actually look at the AI and how it
+31:30 generates and the tools and the skills
+31:31 that it's using but I will hopefully
+31:33 explain a bit more. So like with the
+31:35 fetch incident details basically that
+31:37 means uh and I I had a situation uh
+31:40 years ago when I was working uh I was a
+31:43 part of the incident and we had a we had
+31:46 a kubernetes cluster there was an issue
+31:48 so um a service was actually affected
+31:51 but uh in fact it wasn't just one
+31:54 service there was 20 different
+31:55 microservices every micros service had a
+31:58 different owner so we'd like to we
+32:01 actually wanted to quickly identify
+32:03 right the service is now is actually
+32:05 affecting a lot of customers. How I can
+32:07 quickly bring everyone to the same room
+32:10 to figure out what's going on. So this
+32:11 is just one part of the workflow where I
+32:14 can now with uh based on the context
+32:16 like catch the uh get the data from for
+32:20 instance Jira from GitHub from other
+32:23 sources and really see who is the most
+32:26 appropriate person uh to solve the
+32:28 incident. Yeah.
+32:30 >> Yeah. That's that's right. And like as
+32:32 you go through and you fetch those
+32:33 incidents, the same as what we went
+32:34 through and saw before with the um with
+32:36 the with that graph view is that we're
+32:38 able to actually go through and look at
+32:39 everything that goes into the incident
+32:41 because the incident again is not
+32:42 something in isolation. Like when we go
+32:44 through and look at the related
+32:45 entities, there's things that I want to
+32:46 be able to go through um and actually
+32:49 see or be able to go through and and
+32:50 graph out. So whether on this case uh
+32:53 I'm looking at the wrong thing here, but
+32:54 it'll be able to go through and show you
+32:56 all the information. like what services
+32:58 impacted, where is the actual um you
+33:01 know when was the last time we went
+33:02 through and did a deployment and things
+33:04 like that. All that information can be
+33:05 flown flowed through as as part of the
+33:08 workflow to be able to go through and
+33:09 give us the the correct triage.
+33:12 >> Zach and I actually uh I like the the
+33:15 graph you show it because it just show
+33:17 the one entity which means well there is
+33:19 actually no more context, right? So if
+33:21 you really want to isolate those
+33:23 feelings and making sure that maybe you
+33:25 have very like confidential in some way
+33:28 incidents right this is how you can
+33:30 limit access uh for instance for the AI
+33:33 agents.
+33:35 >> Yeah that's that's right like when we
+33:36 look at like some of the ones that have
+33:38 actually gone through you know some of
+33:39 these are all in the alert phase but if
+33:40 we go through something that's actually
+33:41 gone through uh and we look at sort of
+33:44 the investigation here like this one
+33:45 that's gone through and been triggered
+33:46 we'll see more information. And we'll
+33:48 see that as the AI has gone through and
+33:49 generated the the triage for us like
+33:51 okay here's everything that we need to
+33:53 know about this particular um particular
+33:56 incident. So the the triage or the tree
+33:59 the initial triage here is that we've
+34:00 got a high service error a it can go
+34:02 through and look at my business impact
+34:03 my you know what the the the downstream
+34:06 or the upstream services that are going
+34:07 to go through and be impacted and then I
+34:09 can start pushing this through like if
+34:10 I'm happy with what this actual triage
+34:12 says like okay cool now I need to go to
+34:14 the investigate stage and actually now
+34:16 go through and do a deep dive for this
+34:18 and this is where I can start asking
+34:19 port AI to be like help me investigate
+34:22 >> this this incident
+34:26 >> and what we'll see is that As we
+34:27 actually go through and we trigger this
+34:28 as part of the AI, we'll start seeing
+34:29 the different tools and things being
+34:31 used and the different MCP servers and
+34:32 stuff that are going to go through and
+34:33 be triggered. So I can go through and
+34:35 add additional servers here in terms of
+34:36 well it's going through and spinning up.
+34:38 Um but I can go through and see here
+34:40 we'll be using certain skills. We're
+34:41 loading you know skills in here
+34:42 investigating incidents. So this is the
+34:44 using the registry of the skills that we
+34:46 have um as part of the overall workflow
+34:48 here with this agent. So that it's doing
+34:50 the things that we would typically do as
+34:51 a human or how we would want to go
+34:52 through and investigate it. And we can
+34:54 see here it's now starting to pull the
+34:55 information. I can start adding
+34:56 additional data sources those external
+34:58 MCP servers such as I want to pull data
+35:00 from cloud wallet I want to pull data
+35:01 from data dog so that we get an even
+35:03 more complete picture of what's actually
+35:05 going through and and happening here.
+35:08 >> Great. Uh and we have another question
+35:11 uh can we mandate standardized
+35:13 governance and compliance checks within
+35:15 the project life cycle for all full
+35:17 stack projects?
+35:20 >> So can we mandate standardized
+35:22 governance and compliance checks within
+35:23 the project life for all full stack
+35:25 projects? Yes. Uh we absolutely can. So
+35:27 we would use like again it's going to
+35:29 depend on like what tooling and stuff
+35:30 you're using to go through and you know
+35:31 do your scanning and things like that.
+35:33 But typically when we look at these
+35:34 flows that yes we can use scorecarding
+35:36 to go through and assess like whether as
+35:38 we go through and we do something that's
+35:40 meeting our checks and balances. So when
+35:41 we go through and we have a pull request
+35:42 we know that a pull request should have
+35:44 a code scan against it. It should have
+35:46 code coverage. It should have unit
+35:47 tests. As long as we have that
+35:48 information we can then benchmark
+35:50 against what we've defined to say that I
+35:51 need code coverage greater than 85%. I
+35:54 want my you know more than 100% of my
+35:56 unit tests are passing um we can create
+35:58 benchmarks for those using our
+35:59 scorecarding system
+36:01 >> and this is an important part with a
+36:03 survey uh we had today right because a
+36:06 lot of uh users it seems like they worry
+36:09 that agents will actually do some uh
+36:12 some actions right so what we want to do
+36:14 is of course limit for instance the like
+36:17 provide the specific context uh so the
+36:20 agents exactly you have a full control
+36:22 of what's happening But of course uh
+36:25 secondly we have a scorecards where you
+36:27 can enforce some standards and the
+36:29 governance. So basically the agents
+36:32 actually are also having those uh uh
+36:35 guard rails to you know some actions are
+36:37 not allowed some actions are allowed now
+36:39 based on the for instance specific
+36:41 service scorecard also uh that's
+36:44 something they will be able to align
+36:45 with.
+36:47 And uh just a question there quickly
+36:49 from you Hayden. Are we triggering the
+36:51 workflow for the incident or is the
+36:52 agent listening to the to the alerts?
+36:54 We're triggering it manually in this
+36:55 case because if we turned on auto for
+36:57 everything just like non-stop triggering
+36:59 AI for us. Um but typically yeah as a
+37:01 part of the workflow like as soon as you
+37:03 receive an incident you could have it go
+37:04 through and do the triaging for you and
+37:06 give you like that first um first
+37:07 summary of what you think it needs to go
+37:09 through on B and then you can put you
+37:10 know as you saw before with like the the
+37:12 routing like does this need to go to a
+37:13 human? Does it need to go AI? Um, and in
+37:16 terms of like if you don't have great
+37:17 observability and you know users going
+37:19 through and just creating random tickets
+37:21 and things like that, I actually think
+37:22 that's part of like a really good use
+37:23 case for doing triage of any ticket that
+37:25 comes in like if they raise an incident
+37:26 through Jira like being able to assess
+37:28 like is this actually an incident and
+37:30 things like that and you know pass this
+37:31 off to human to make a decision and so
+37:32 forth. I have seen that as people going
+37:34 through and doing the workflows is just
+37:35 an initial triage of is this ticket
+37:37 valid um as as part of their workflow.
+37:40 some some actually interesting another
+37:42 example let's say maybe just a simple uh
+37:46 you know API
+37:48 ingestion like for example we are
+37:51 checking if this API responding for
+37:53 instance it can be a website can be
+37:54 something else now based on for instance
+37:58 ingestion uh based for instance on the
+37:59 status we can actually trigger a
+38:01 workflow now the interesting part here
+38:04 is based on the context like all the
+38:06 different services we can actually for
+38:08 instance understand what exactly is not
+38:11 working. So you can really uh dig into a
+38:14 root cause of uh specific services just
+38:17 for instance based on the one uh API
+38:20 right
+38:24 very nice.
+38:26 So in the interest of time, the last
+38:28 thing I'll just quickly cover off here
+38:29 is that there's there's final steps to
+38:31 like an incident, right, is that
+38:33 obviously you have to remediate and
+38:34 resolve the incident is that this is
+38:36 where Paul can be quite powerful with
+38:37 combining with the agent the assessments
+38:39 that you've gone through and seen, but
+38:40 giving either yourself tools or the
+38:42 agent tools to do things like roll back
+38:43 a deployment, be able to go through and
+38:45 sync an application in Argo based on
+38:47 what that investigation is going to go
+38:49 through and see. And the final part, the
+38:50 most boring part of an incident, root
+38:53 cause analysis. Uh so being able to go
+38:55 through and use AI to to pull all that
+38:57 data from the initial incident being
+38:59 raised, the triaging, what was what was
+39:01 done during the remediation is I can
+39:03 actually go through as well as part of
+39:04 my workflow is generate a postmortem
+39:06 with AI using one of our postmortm AIs
+39:08 to to go through and do that. So
+39:10 reducing that burden, it means that
+39:12 you're keeping well up to date with your
+39:13 ITSM requirements, doing your problem
+39:15 management and things like that. Um, so
+39:17 as not AI not replacing humans but
+39:20 speeding up like the uh the overall
+39:22 process flow because this stuff takes
+39:23 ages particularly 2 am
+39:26 >> and and this like this RCA is
+39:28 interesting because you might have let's
+39:29 say uh you know let's say maybe 100
+39:33 incidents right but 90 incidents they
+39:36 might have the same maybe root cause
+39:39 right and you can like because this data
+39:41 is in port you can actually make all
+39:44 those improvements quickly Because of
+39:46 course you instruct AI agents to make
+39:49 for instance some recommendations
+39:50 remediation based on the RCAs you have
+39:53 in your in port.
+39:55 >> That's right. And the other thing as
+39:56 well is like when you look at some of
+39:58 the more like the lower priority like a
+40:00 P4 instance, it's probably happened
+40:02 before and port can actually see that
+40:04 stuff's happened before and recommend
+40:05 remediations based on what it's seen
+40:07 before. Yeah, incident management tools
+40:09 go through and do this as well, but it's
+40:10 actually again it's the context of
+40:12 everything that wraps around it. So it's
+40:13 not just here's the ticket and this is
+40:15 the resolutions like the service is
+40:16 impacted and we can see trends and
+40:18 things like that as well. So speaking of
+40:21 trends and uh probably moving on from
+40:24 the incident side of things I'm going to
+40:25 throw it over to you Tame. So we've now
+40:29 we've gone through the autonomous ticket
+40:31 resolution looked at the incident
+40:32 resolution workflow as well. So seeing
+40:36 as engineering intelligence is your area
+40:38 of expertise, what's the first metric
+40:40 that you would look at to determine
+40:42 whether like an agentic workflow is
+40:44 actually giving value to to your
+40:46 business?
+40:47 >> Right? So like overall you need to
+40:50 really uh a few things of course
+40:52 different perspectives and different
+40:54 personas they might be uh interested in
+40:56 also different metrics but I will
+40:58 provide some examples today. Uh so for
+41:02 instance like in this example what we'd
+41:04 like to of course see is how many
+41:07 tickets has been for instance resolved
+41:09 autonomously or for instance in other
+41:11 words features for instance delivered by
+41:14 autonomous ticket resolution right so
+41:16 for instance in this scenario 64% that
+41:19 means this is actually a pretty uh
+41:21 pretty large number so we can see for
+41:22 instance the increasing adoption but of
+41:25 course it doesn't mean that uh you know
+41:27 you uh like you're doing well like you
+41:31 can of course increase this number but
+41:33 you need to understand other details. So
+41:36 uh you definitely like to show
+41:38 especially like the leadership they are
+41:40 interested in the time savings. So for
+41:42 instance you can actually for instance
+41:44 show the hours saved by ATI right uh so
+41:48 in this case so 17,000 hours you can
+41:50 multiply for instance by a specific
+41:52 number and this number is actually going
+41:53 to very big uh so this is a really
+41:56 important value you can show the same
+41:58 for the instance u right so you'd like
+42:00 to show for instance the number of
+42:01 instance resolved by the self-healing
+42:04 agent the same with the uh hours save
+42:07 now something I'd like to mention
+42:09 critical as well so we have hours saved
+42:12 by ATR, right? And one important part
+42:16 here is to mention that
+42:19 you like you should create the baseline
+42:22 now like for instance let's say uh how
+42:25 long uh it takes let's say to deliver as
+42:29 an example tickets to production right
+42:32 what is the lead time how long it takes
+42:34 from let's say Jira is open Jira let's
+42:37 say let's say is resolved it takes
+42:40 amount of it takes amount of time But if
+42:44 you'd like to for instance see the ROI
+42:46 of the workflow where well we have a
+42:48 delta. So you'd like to actually uh
+42:50 based on the those two metrics uh
+42:52 provide uh basically what is the what is
+42:55 the time save. So recommendation uh
+42:58 define the baseline measure what you
+43:00 actually currently have then when you
+43:02 introduce the AI agents you can actually
+43:04 see how much improvement they did.
+43:09 >> That's pretty cool. the uh I think I was
+43:11 going to ask so when we look at you know
+43:13 we can check whether they're delivering
+43:14 value but how do you actually know if an
+43:16 agent is doing a good job
+43:19 >> yeah right because for instance let's
+43:21 say uh you might have situations when
+43:24 the numbers are going up but it doesn't
+43:26 really uh mean maybe sometimes anything
+43:28 right so I'd like to give you some
+43:30 examples so let's say with autonomous
+43:31 ticket resolution right we can think
+43:34 about few things like let's say what is
+43:36 actually number of uh executed ATR are
+43:40 uh workflows. So this number is
+43:42 increasing which also you know you will
+43:45 see the number actually of features
+43:47 delivered as well. This number is
+43:48 increasing. Now everyone of course has a
+43:52 maybe sometimes a big backlog uh and
+43:54 this is also what we want to see that
+43:56 the backlog is actually also decreasing
+43:59 especially with like uh you know the low
+44:01 priority tickets for instance the
+44:03 technical depth etc which can be for
+44:04 instance easily resolved uh by the
+44:06 agents. Another example, self-healing
+44:09 incidents as well. We'd like to see that
+44:12 the number of the incidents resolve is
+44:15 actually decreasing when you for
+44:17 instance increase the usage of the
+44:19 self-healing uh incident workflow. But
+44:22 why it happens? Well, because actually
+44:25 AI agents the workflow helps you with
+44:29 different stages of this life cycle. for
+44:31 instance, understanding who is involved
+44:32 in the incident, understanding how you
+44:35 can remediate it, uh, based for inance
+44:37 also on the previous RCAs, etc.
+44:44 >> Very nice. Thank you for answering that
+44:45 one. The probably just got a couple more
+44:47 here just very quickly. So, we've seen
+44:50 like you obviously got this graph here.
+44:51 We've got you saw all those metrics in
+44:53 the background, right? MTR and things
+44:54 like that. Um, what do you do with all
+44:57 this data? It might seem like a loaded
+44:59 question or an obvious question, but
+45:01 what do you do now? You've got all this
+45:02 correlation, you got all this data, what
+45:04 should you do with it?
+45:05 >> This is actually a very uh I like this
+45:08 question because I think this is a a big
+45:11 value which uh I I really love in part
+45:15 is uh having an end toend feedback loop,
+45:17 right? So uh I think about it, we bring
+45:20 all the data through the two ports and
+45:23 we have a context leg. So the AI agents
+45:25 they actually can access the context leg
+45:27 and rely on the good source of data. Now
+45:31 we are showing for instance the metrics
+45:34 uh the ROI but also what you can do is
+45:36 trigger the different workflows
+45:38 different use cases based on the
+45:41 different for instance thresholds you
+45:43 might have maybe let's say there is a
+45:45 situation when the PR throughput the
+45:48 lead time is actually decreasing for the
+45:50 specific team. what you can do is based
+45:53 on this specific uh condition trigger
+45:56 again the uh agentic workflow. So that
+45:59 means basically we have a end to end
+46:01 feedback loop and you can see the
+46:04 improvements in the in ports in in the
+46:07 platform.
+46:09 >> Very cool. Very nice. The final one
+46:13 slash two questions I'm going to ask
+46:14 that probably click together is that
+46:16 okay there's tons of data that's
+46:17 obviously import here but what if I have
+46:19 data that is outside of port do I have
+46:22 to ingest it into port how do I go
+46:24 through and combine that together and
+46:26 then I guess finally as part of that is
+46:27 that for the data that is inside of port
+46:29 can I access that outside of port
+46:32 >> yeah so that's interesting and we are
+46:34 seeing this uh more common use case so a
+46:37 lot of actually customers asking right
+46:39 we ingest a lot data uh to port which is
+46:42 great because you have a lot of
+46:43 integrations. Now the second part of it
+46:46 is uh they actually might have a very
+46:49 different maybe unstructured data maybe
+46:52 they have a data let's say in uh notion
+46:55 maybe they have a data in slack and
+46:58 sometimes they'd like to understand what
+47:00 is slowing down the team so I'd like to
+47:03 show you basically apart from the
+47:05 integrations we have like for instance
+47:07 here of course like a bucket githl like
+47:10 pretty plenty of them we have MCPS which
+47:14 means Means you can now enable the MCP
+47:17 for instance for Atlasian or notion and
+47:20 when you have let's say agentic AI
+47:23 agents and you'd like to let's say uh
+47:27 figure out why there is an incident or
+47:30 how to resolve an incident. Now you can
+47:32 actually query multiple data sources. uh
+47:36 right and this is where you know if you
+47:38 ask the specific question here you're
+47:41 actually using the MCP connector uh and
+47:44 this is a really really important one
+47:46 because uh uh port of course it's a as
+47:49 you mentioned as like the the control
+47:51 plane we bring the data to a context leg
+47:56 but also for you when you're working for
+47:57 instance on the incidents or you want to
+48:00 deploy um features uh tickets let's say
+48:03 uh faster this is where you can actually
+48:06 uh bring the power of the MCP giving you
+48:09 additional context from Slack and other
+48:13 tools as well.
+48:20 Oh, thank you for showing us all of
+48:22 that. Um
+48:24 I think probably the the one we didn't
+48:26 cover up just there just quickly was
+48:28 accessing that data outside of port.
+48:30 What is the can you go through and do
+48:31 that?
+48:33 >> Yeah. Okay. So this is another
+48:35 interesting one and uh you know like for
+48:38 instance in this situation like I might
+48:40 have a you know a very different
+48:42 dashboards here. So I have a my context
+48:44 like uh import pretty well defined. Now
+48:48 some customers might see the different
+48:50 use cases like for instance how I can
+48:52 actually query this all relations uh and
+48:56 show for instance the
+48:59 you know users data for maybe some other
+49:02 systems as well or how I can very
+49:04 quickly you know have a question maybe
+49:07 I'd like to understand the ROI of not
+49:09 maybe the agency workflows maybe
+49:10 something something else as well right
+49:12 so this is where we having port MCP and
+49:15 the port MCP here is uh basically
+49:21 uh we provide you the access for
+49:23 instance to the context like but also to
+49:25 do all the different actions different
+49:27 automations. So for instance you can ask
+49:29 uh the question I'm using cloth I'm
+49:31 using a port MCP for instance as
+49:34 done here. So I have a port uh MCP
+49:37 connector and you can see I'm actually
+49:40 going through all the different sources.
+49:42 I'm loading tools uh and
+49:47 basically through the MCP I'm quering
+49:49 all this data,
+49:51 all the blueprints, all the services,
+49:55 all the workflows done and I'll show I I
+49:58 can show quickly the ROI how it looks
+50:01 like. Well, it's going to take probably
+50:02 like a few more pure a few more minutes.
+50:05 So, I will show you an example after the
+50:07 execution. And this is where we can also
+50:09 like very quickly understand the ROI of
+50:11 the of the workflows. Now I'd like to
+50:14 highlight here as well because we have
+50:16 uh we have in the webinar is about
+50:19 context guards and the creativity. So
+50:22 the creativity here is actually a big
+50:25 part because you can with board with the
+50:28 context like you can have really plenty
+50:30 of uh great use cases uh to the plenty
+50:34 of automations. You can show the value
+50:37 uh to a different teams. You can show
+50:39 basically what's going on and uh you
+50:41 know quickly maybe understand the gaps
+50:43 but maybe something is uh something is
+50:45 not working.
+50:50 All
+50:51 >> righty. Conscious of the time. Thanks.
+50:52 That looks really cool in terms of being
+50:53 able to take stuff that's inside a port
+50:55 and, you know, build it into something
+50:56 that's uh maybe a little bit more
+50:58 consumable for a leader or or something
+51:00 like that. Um but let's probably look at
+51:04 wrapping up here then.
+51:07 All right. Um we covered quite a lot, I
+51:11 think. Uh so I hope this was uh quite
+51:15 insightful for uh all of you but we'd
+51:18 like to summarize in some way uh also
+51:20 what we
+51:22 what we what we saw today. So how to
+51:24 make agent engineering right uh Zach
+51:28 maybe you can summarize in some way also
+51:30 what we what we saw today. Yeah. So we
+51:33 saw those workflows around uh autonomous
+51:36 ticket resolution, the self-healing
+51:37 incidents and looking at like how to
+51:39 actually go through and measure these
+51:40 things using like the engineering
+51:41 intelligence and I think like when you
+51:43 think about how do you actually go
+51:44 through and get it right is that it all
+51:46 comes down for me is to trust. Trust in
+51:48 the AI, trust in the humans being able
+51:50 to go through and do what they want to
+51:52 be able to go through and do. It's
+51:53 important that you have that central
+51:54 place, that central collaboration area
+51:56 for AI and humans. So everyone's working
+51:58 off the same data set. It allows you to
+52:01 go through and put context into your AI
+52:04 agents. It allows you to put guard rails
+52:06 in, humans in the loop so that there's
+52:08 oversight and governance on top of that.
+52:10 And I think those points down the bottom
+52:12 there is like being able to reuse your
+52:13 skills, your prompts, your agents is
+52:15 very handy be able to share those out to
+52:16 other teams, reuse the agents as part of
+52:18 your workflows. It gives you more
+52:20 control. It gives you more trust into
+52:22 those workflows. Um, and it allows you
+52:24 to go through and achieve um, in my
+52:26 opinion, you're going to get a higher
+52:27 ROI because you've got confidence. and
+52:29 you're able to deploy these gentic
+52:30 workflows and you're pushing them
+52:31 towards that end to end experience.
+52:35 >> Thanks for summary, Zach. And uh we'd
+52:37 like to always finish with a call to
+52:39 action. So uh you can actually build
+52:42 yourself. You can create environment uh
+52:45 import you can start start ingesting
+52:47 your data and what I love also here is
+52:50 uh we create many many guides for you.
+52:53 So we are actually not lost when you
+52:56 building a different for instance
+52:57 workflows. So let's say if you're
+52:59 interested specifically in security
+53:01 engineering intelligence or like we
+53:03 discussed auto ticket resolution you can
+53:06 see very very different uh use cases. So
+53:10 feel free to follow that but again um
+53:12 you know this is also a lot about the
+53:14 creativity your custom uh use cases. So
+53:18 feel free to create it and build
+53:20 something build something cool. Um also
+53:23 if you maybe require some you know uh
+53:26 different session like for instance to
+53:28 map your engineering for in reality to
+53:31 uh our agentic uh workflow solutions uh
+53:34 feel free to reach out as well.
+53:39 Awesome. We are going to stay here for a
+53:41 bit longer uh and also address if you
+53:45 have any additional questions we are uh
+53:47 we are here for you.
+53:50 Ah, and let's please complete the
+53:51 survey. That'll be also quite important
+53:53 for us to see if you actually enjoy it.
+53:58 >> There was a there was a really
+54:00 interesting question actually in the in
+54:01 the chat just around uh if you're in
+54:04 like a this is from Alvin. It was like
+54:05 if you're in a distributed environment
+54:06 involving API, back end, a system of
+54:08 record, does the platform automatically
+54:10 generate and propagate like a
+54:11 correlation ID, end to end ID, source
+54:13 the destination to assist with the
+54:14 triage?
+54:16 We as port, we're not trying to like
+54:19 replace the tools in terms of your log
+54:21 systems and things like that. We will
+54:23 pull information out of them to allow us
+54:24 to go through and do the correlation.
+54:26 But for that kind of work where it's
+54:27 like I want to be able to go through and
+54:29 do a full trace, we need to analyze the
+54:30 logs. This is where like our external
+54:32 MCP connectors become really important
+54:34 because there's all the context that
+54:36 port has around what's a service, where
+54:38 is my pull request, when was the last
+54:39 time I deployed, and then there's things
+54:41 like your end to end traces. And so as
+54:42 part of the workflow is that as port
+54:44 gets all the context from here's all
+54:46 what what your environment looks like
+54:47 this is my service this is my incident
+54:49 and then as being able to go through
+54:50 great now I understand this I want to be
+54:52 able to go through and now go talk to
+54:54 the data dogs of the worlds the new
+54:55 relics give me an end toend trace um so
+54:58 that I can now enrich this information
+55:00 and so that's when you saw some of those
+55:01 incidents when we're going through uh
+55:03 and we were using the the AI agent and
+55:05 it was using some of those skills it's
+55:06 actually calling those additional tools
+55:08 as a part of that workflow to get that
+55:10 information for
+55:13 That makes a lot of sense, Zach. Thanks.
+55:15 Thanks for that.
+55:18 Any more questions? Thank you. Thank you
+55:20 everyone joining. Uh great to see you.
+55:23 And by the way, uh feel free to also
+55:26 check our uh website upcoming webinars
+55:29 as well.
+55:31 I hope you're going to organize another
+55:33 one soon in this in this region. I know
+55:35 that sometimes Tyson can be a challenge,
+55:38 but uh yeah. Um, some more questions.
+55:45 Okay, amazing. Uh, thanks everyone and
+55:48 thank you Zach. It was really a a big
+55:50 pleasure to to have this webinar with
+55:52 you and thank you Neta also for
+55:53 supporting us.
+55:56 Thanks everyone.

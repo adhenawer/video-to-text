@@ -1,0 +1,874 @@
+0:00 And I like the idea of like setting the
+0:01 junior engineer up for success. But I
+0:03 also call out that in a world where
+0:05 you're the expert, the AI is the junior
+0:07 engineer with unlimited energy. So give
+0:10 it the toil. And in a world where you're
+0:12 maybe not the expert, like I don't know
+0:14 rust. I think of the AI as being more
+0:17 senior to me until my code smell ability
+0:20 meets it or exceeds it and then I start
+0:22 treating it again as a junior intern
+0:24 with a lot of energy. Hi, I'm Scott
+0:26 Hansselman. This is another episode of
+0:28 Hansel Minutes. Today I have the
+0:29 pleasure of chatting with Don Sim. He's
+0:32 the designer and architect of the F
+0:33 programming language, but he has turned
+0:35 his eyes to something more interesting
+0:36 lately, which is Agentic Workflows.
+0:39 How's it going, sir?
+0:40 >> Hello, Scott. And it's a real pleasure
+0:43 to be uh appearing on your podcast.
+0:45 Great great to be great to be back here.
+0:48 >> It's been a minute. Absolutely. It's
+0:50 been a minute. And you know, I think you
+0:51 and I are in an interesting place right
+0:53 now because we are people of a certain
+0:56 age with a certain amount of history and
+0:58 context at a moment in computer science
+1:00 where I think more stuff is changing
+1:03 than anything I could remember. I cannot
+1:05 think of a time that was more kind of
+1:08 chaotic and interesting than this time
+1:09 that we're in right now.
+1:11 >> It's a super super interesting time. the
+1:14 way I you know uh I think a lot about
+1:17 what uh people entering uh software
+1:19 engineering and uh is is is uh coming
+1:22 into and I you know they've one analogy
+1:25 I like to use is that they have wizard
+1:27 powers in their hand uh you know they
+1:30 got the magic staff they can bang the
+1:33 ground and you know up comes the the
+1:36 magic the magic construction of a piece
+1:39 of software using modern coding agents
+1:43 uh And it's extraordinary powers and
+1:46 there's a lot to learn about how to use
+1:48 those well and how to use them well in
+1:51 teams and how to you know use them well
+1:53 in companies and and what it all the
+1:55 ramifications of having room fulls of uh
+1:58 wizards kind of working together but
+2:00 it's incredible changing times for
+2:02 software development for sure. Do you do
+2:05 you mourn the loss of the craft or do
+2:07 you think that the craft is dying or
+2:09 just changing? Because I feel like we've
+2:10 been handed a power tool and people who
+2:12 chop trees down with axes might be sad
+2:14 about the advent of the chainsaw.
+2:17 >> Yeah, there's a lot of analogies you can
+2:19 use. I'm not one to uh to to mourn. I
+2:22 love the craft. you know, I've invested
+2:24 a lot of time in making uh much better
+2:27 experiences for developers, for making
+2:30 software you can rely on to that has
+2:32 this, you know, strong construction
+2:34 guarantees uh as you uh you know, if you
+2:37 look at say um null getting rid of nulls
+2:39 all the way through software and kind of
+2:41 just making robustness in the the
+2:43 underlying structures. Uh that's all
+2:45 still relevant. You know, that's uh and
+2:47 that's all those themes are kind of
+2:49 going to come back uh in one way or the
+2:51 other. we are going to want as much as
+2:53 people are happy vibe coding up uh
+2:55 Python and and the like there is still a
+2:57 notion of better software and a lot of
+2:59 the work we're kind of doing is about
+3:01 how can we how can we get the best of
+3:03 both worlds right how do how do you
+3:05 empower the developer to be running full
+3:08 throttle in uh not necessarily in the
+3:10 vibe coding mode but certainly in that
+3:12 kind of creating creative vive coding
+3:13 can be part of that uh you can be using
+3:16 CCA sort of task oriented programming
+3:18 [snorts] copilot uh in in GitHub or
+3:20 whatever you're using and yet you want
+3:24 them to be strong in their construction.
+3:26 You want to be good performance. You
+3:28 want to be solid software. You want to
+3:30 be well tested software. You want to be
+3:33 achieving, you know, achieving all the
+3:35 notions of quality in software that we
+3:36 still need to be kind of chasing chasing
+3:38 after.
+3:40 >> One of the the samples and examples that
+3:42 I use when I'm teaching this stuff is I
+3:45 made a silly little trivial app that's a
+3:47 Windows ring light. It draws a square, a
+3:51 rounded square on your screen and it
+3:52 used the brightness of your LCD screen
+3:55 to give you a light like a ring light
+3:57 like the one that I've got here.
+3:59 >> And on its face, I vibeccoated a rounded
+4:04 white square.
+4:06 >> That's a simplistic thing and someone
+4:07 could look at that and say, "Well,
+4:08 that's trivial. That's a oneshot, right?
+4:11 That's a oneprompt vied thing." But then
+4:14 I say it has a GitHub workflow. It has
+4:17 signed certificates. It has a packaging
+4:19 model. It has change logs. It has tests.
+4:22 It has an automatic updating system. It
+4:24 works on this operating system and that
+4:26 one. There there's a software
+4:28 development life cycle even around
+4:30 something as trivial as I want to ship a
+4:32 rounded square.
+4:34 >> And I think that's important for people
+4:36 to remember.
+4:37 >> Absolutely. And uh you know we'll get
+4:40 into sort of GitHub agentic workflows
+4:42 and automating aspects of improvements
+4:45 and the like in in just a moment. Yeah,
+4:47 we're getting into examples of
+4:48 improvement, but one of the one of the
+4:50 cases I came across was where the agents
+4:53 uh in a repository automatically uh
+4:55 suggested to me that I use Nougat
+4:57 trusted publishing and nougat.org and I
+5:00 hadn't actually set up the repositories
+5:02 to do this before and I was just amazing
+5:03 because the agents kind of proactively
+5:05 kick in and say, "Hey, you can improve
+5:07 your engineering along this dimension."
+5:09 And of course, I've got to double check
+5:10 that and I've got to be in control of
+5:12 that cuz these critical aspects about
+5:14 how to shape software and actually get
+5:16 it out to customers just like you were
+5:17 saying.
+5:18 >> Yeah. I feel like though if the corpus
+5:22 of material is the last 50 years of
+5:25 programming or at least the last 20 or
+5:27 30 years of it being online, are we at a
+5:30 place where it's going to just make the
+5:33 statistical mean of the software
+5:35 development life cycle? How do we
+5:36 improve the software development like
+5:38 ciphel if we are just training it on
+5:40 workflows that already exist that are
+5:41 all kind of like mediocre? How do you
+5:44 call out best practices and who owns
+5:46 best practices? I mean it in my in my
+5:50 setting something that's really
+5:52 important to me in our current work is
+5:53 that we be about empowering the
+5:56 repository maintainers repository owners
+5:58 the core engineers who are kind of
+6:00 shaping the whole direction the whole
+6:02 trajectory of the overall piece of the
+6:04 software including they can be product
+6:06 managers and they can be stronger
+6:07 connection with product for example that
+6:10 we be empowering them to be setting the
+6:12 tone and the direction and in control of
+6:15 the automation that they're using in
+6:16 their repositories and what goals are
+6:18 being chased after by that automation.
+6:21 It's clear we're at a point where you
+6:23 can specify the goals of a repository
+6:25 and the agent's going to chase after
+6:27 those goals with great uh with great
+6:30 vigor. Uh and but someone's got to be
+6:32 there setting up the right feedback
+6:34 loops. For example, if you're going to
+6:35 get it to chase after performance goals,
+6:37 it really helps to have production
+6:38 profiling
+6:40 production telemetry data uh uh and
+6:43 metrics coming flowing into your kind of
+6:45 a loops that are about self-improving
+6:47 the software as it goes.
+6:49 >> Yeah. You know, the these loops, I call
+6:51 them the ambiguity loops. I feel like
+6:54 there's four loops and then there's
+6:56 ambiguity loops. And for loops are
+6:58 deterministic and programmatic and clear
+7:00 and it's like I'm doing a thing and it's
+7:02 unambiguous.
+7:04 But the power of an ambiguity loop is
+7:06 the amount of like flexibility it has to
+7:09 make the decision it needs to to solve
+7:11 the problem that it needs to in the
+7:12 moment. So if something is fragile, I
+7:15 can either make it less fragile by
+7:19 making my for loop more robust and
+7:21 putting in error handling and checks and
+7:24 asserting my assumptions. Or I could
+7:26 introduce an ambiguity loop that has a
+7:28 little bit more flexibility in its
+7:30 ability to change and make decisions to
+7:32 make the software more robust. But that
+7:34 ambiguity loop itself requires checks
+7:37 and balances and tests and all the
+7:39 things that make software good. Whether
+7:41 it be a check for cyclatic complexity or
+7:43 a series of tests to indicate what
+7:45 success looks like. Unchecked ambiguity
+7:48 loops are I think where uh AI software
+7:52 goes off the rails and I feel like good
+7:55 software engineering is what keeps it on
+7:56 rails.
+7:58 >> Absolutely. The the term we've kind of
+8:01 been throwing around to kind of package
+8:03 up what's happening in the SDLC is we we
+8:05 we love the term continuous integration.
+8:07 We love the term continuous deployment
+8:10 >> and those are absolutely critical parts
+8:12 of the software industry going forward.
+8:14 But it's like it's like there turns out
+8:16 there two pillars of of a stool. There's
+8:18 a third leg we need to add and the one
+8:20 we're adding is what we call continuous
+8:22 AI [snorts] and that is all about these
+8:26 ambigu ambiguity loops these ami these
+8:28 these soft uh judgments that need to be
+8:31 made about software. So uh for example
+8:34 you have continuous documentation. Now
+8:37 when you do continuous documentation,
+8:39 you've got a lot of judgments you need
+8:40 to make.
+8:41 >> Do you update the docs or did someone
+8:43 update the docs and you've actually got
+8:44 to go update the code for example? You
+8:46 got to make judgments about how well how
+8:48 to how to how to update the docs. Of
+8:51 course, a human needs to be there
+8:52 checking that the the doc updates are
+8:55 good and guiding the kind of process.
+8:58 And so we obviously want continuous
+9:01 integration. We want continuous
+9:02 development. I want to add to that a
+9:05 third link, continuous documentation.
+9:08 >> Uh, okay. But it's not just about the
+9:10 continuous documentation. We've got all
+9:12 sorts of other things we can be adding.
+9:14 We can be doing continuous triage. We
+9:17 can be doing and ones that are really
+9:19 close to my heart are like continuous
+9:21 code simplification. like why not
+9:24 improve your code continuously
+9:27 continuous test improvement
+9:29 continuous um reporting of uh say say
+9:33 security analyses or other kind of
+9:35 analyses over your code and so yeah this
+9:38 is this is the world we're heading to
+9:40 where we in the SDLC where we're adding
+9:43 and it's it's really important to see
+9:45 that it's additive because actually
+9:47 devop devops becomes even more important
+9:50 but there's a strong culture in DevOps
+9:52 where you know people are for CI and CD
+9:56 you don't want non-determinism there's a
+9:58 huge culture around determinism in that
+10:01 space and that's great we love that okay
+10:04 but and so you got to open your mind a
+10:07 little bit to say let's also bring in
+10:09 continuous AI into this to allow these
+10:12 powerful tools to be present in this
+10:15 SDLC yet still under human control
+10:18 there's an interesting culture shifts
+10:21 that are going to happen in the whole
+10:22 world devops and SDLC
+10:25 >> there. Uh I got a a negative comment
+10:27 recently on one of my uh Instagrams
+10:30 where I uh you know I put out clips of
+10:32 our shows and stuff and someone said
+10:34 that they felt that the podcast lately
+10:37 had become an AI selling machine and the
+10:42 podcast is my own my you know I work for
+10:44 Microsoft and GitHub you work for GitHub
+10:46 in our day jobs. What do you say to
+10:48 someone who who who says, "Oh man, Don,
+10:52 that was my guy. You know, I love F and
+10:54 I love all the work that Don's done for
+10:55 the last 30 years, and now he's he's
+10:57 selling AI." Are you selling AI or are
+11:01 you meeting the the software development
+11:03 life cycle moment and trying to meet it
+11:05 with integrity?
+11:07 >> Uh, of course, you set up the question.
+11:10 I'm I'm going to say
+11:11 >> I'm honestly wondering because I I feel
+11:13 like I know what I'm doing. I'm trying
+11:14 to explore the space.
+11:16 I mean you I absolutely this you get the
+11:22 reactions and there's there is some
+11:24 snake oil in in in the AI industry that
+11:26 that's that that that that that's true
+11:28 but
+11:30 >> the we have to shift the conversation
+11:33 about what is the future of software
+11:35 development to understand how developers
+11:38 can be given the power to decide how
+11:42 much automation they use and what kind
+11:44 of automation they
+11:46 And that's exactly
+11:48 what we're doing with GitHub agentic
+11:49 workflows is we're saying just like in
+11:52 CI/CD, how did we resolve that com
+11:54 conversation about how how continuous
+11:57 integration how how and continuous
+11:59 development happen? Well, the resolution
+12:01 for a huge portion of the industry is
+12:03 found in GitHub actions and it's found
+12:06 in GitHub actions YAML and it's found in
+12:08 the fact that developers are given a
+12:10 very quite powerful set of tools in
+12:14 order to decide how CI/CD happens in
+12:17 their repo, decide how build, decide
+12:19 what automation means in their
+12:21 repositories.
+12:23 And I am all in favor of giving that
+12:26 power to teams and to repository
+12:29 maintainers and to individual developers
+12:31 to say actually let's solve this
+12:33 question the same way which is I don't
+12:36 know how much AI you should be using in
+12:39 your repository. I don't know what your
+12:41 constraints are and as I think you
+12:46 should be given the power to decide how
+12:49 much to be using and what it how to
+12:53 guard rail that and at the outset we
+12:57 should give by default extremely strong
+13:00 guard rails to allow to make sure that
+13:02 whatever happens proceeds safely.
+13:05 >> Yeah. So, okay. So, let's talk about
+13:08 GitHub actions workflows and and how
+13:10 that turns into agentic workflows. So, I
+13:13 have a GitHub agitub folder in my
+13:15 repositories. Within that, I have.yaml
+13:17 files and I do my I like a build.yaml
+13:20 and things like that. And then I have
+13:22 other workflows that are not necessarily
+13:24 builds. They might be on a check-in, I
+13:26 run a workflow or when an I when an when
+13:28 an issue uh moves into a certain state,
+13:31 I run a workflow. What then is an
+13:34 agentic workflow? Because these YAML
+13:36 ones are very deterministic. I mean,
+13:38 they're almost a little programming
+13:39 language. Most of my GitHub actions are
+13:41 little scripts, little programs, and
+13:43 they don't really deal well with things
+13:45 moving. A file doesn't isn't named right
+13:47 or some folder is moved, then the build
+13:50 will break. It's pretty un unambiguous.
+13:54 >> Absolutely. So, a GitHub agentic
+13:56 workflow, I mean, at some level, it's
+13:58 really really simple. You got some front
+14:00 matter and you got some markdown. And
+14:02 you can think of this as a bit like a
+14:03 prompt. Uh in fact the prompt the
+14:05 markdown is going to end up in the hands
+14:07 of a coding agent and it's going to be
+14:09 run in a sandbox in the context of your
+14:11 repository and it's going to do all the
+14:12 magical things that kind of coding
+14:14 agents can do except it's being run with
+14:17 extremely strong constraints around it.
+14:19 It's going to be run in a readonly mode.
+14:21 So it's it can't do anything can't do
+14:23 any write actions to to GitHub. It's
+14:26 going to hand off its results and
+14:28 they're going to be checked further and
+14:29 then they're kind of going to be
+14:30 applied. Okay. So, an agentic workflow
+14:33 just has at the uh at the top it's got
+14:35 like uh here are the tools that will be
+14:38 available. Uh like here here's what
+14:40 here's what it can read from GitHub and
+14:43 uh and that's usually limited just to
+14:45 the repository itself. Uh and here's the
+14:48 outputs it can be can make and we call
+14:51 those safe outputs and those are
+14:53 extremely guardrail set of safe outputs.
+14:56 So, for example, you can say that it's
+14:58 allowed to add a comment to an issue,
+15:00 but it's not allowed to add a comment to
+15:02 any issue. It says you're allowed to add
+15:04 a comment to the issue you accepted as
+15:07 input. And that's all you're allowed to
+15:09 do, Mr. Mr. AI agent. You can you can
+15:13 deliver your comment. And we're going to
+15:15 check that a little bit more with uh
+15:17 with another agent. We're kind of check
+15:18 that it looks looks safe and then you
+15:21 can then you can make the make the
+15:23 comment. And [clears throat] so an
+15:25 agentive workflow is sort of a pure
+15:27 expression of intent. It's like it's
+15:29 just saying here's the markdown. Here's
+15:31 the intent that we have. We'd like you
+15:34 to uh do an analysis of the issue and
+15:36 report back possible useful resources
+15:39 for from the documentation sets that we
+15:41 have uh for for for investigating this
+15:43 issue. If that's the AI automation you
+15:45 want in your your repository, you can
+15:47 kind of set up those sort of automated
+15:49 responses. you can get it to write the
+15:51 markdown so things are collapsed so it's
+15:53 not too intrusive into the repository
+15:55 there's many different you're in charge
+15:57 of how the automation kind of proceeds
+15:59 in the in the repository
+16:02 >> uh so it differs uh it because it's sort
+16:05 of intentbased working
+16:08 uh it differs because there's an
+16:10 implicit use of uh a coding agent to do
+16:14 the the kind of core of the work it you
+16:19 can mix the two. So you can have a an
+16:21 initial section which does a set of kind
+16:24 of traditional kind of YAML uh to kind
+16:26 of collect data. For example, for
+16:28 instance, you might want to you say you
+16:30 want to um triage all the issues in the
+16:33 uh repository. You can list out 500
+16:35 issues and kind of uh all the unlabeled
+16:39 ones for example and grab that as a data
+16:41 set and then have the agentic uh step
+16:43 kind of work on that data set and and
+16:45 output a whole lot of labels to apply.
+16:48 Mhm. You had told I think you had told
+16:50 me that there was
+16:52 >> like some technical debt that you were
+16:54 really passionate about looking at a
+16:55 project and breaking ditch technical
+16:57 debt down.
+16:58 >> Give me a success give me a success
+17:00 story because I think people are
+17:01 listening to this as an audio podcast
+17:03 and they might be saying this is all
+17:05 very squishy. Tell me how I can use this
+17:07 today to make my life better.
+17:09 >> Absolutely. So uh one of the uses of
+17:11 GitHub agentic workflows is a workflow I
+17:15 put together which is called repo assist
+17:17 and I'm looking at it from the point of
+17:19 view of the life as a maintainer and I
+17:22 was in a particular kind of repository
+17:24 where there's a fair chunk of technical
+17:26 debt maybe even from tracking back over
+17:28 years. Okay. So, you might have like 200
+17:31 issues uh going back over years and
+17:34 you've never been closing those out and
+17:36 you've kind of got this guilt of a
+17:38 maintainer where you say, "I'm not
+17:40 taking this software forward because
+17:42 there's all this technical debt and what
+17:44 do I do with this uh repository? I'm not
+17:48 properly maintaining it and I and I want
+17:50 an assistant. I want help in making
+17:52 progress on this repo." So you install
+17:55 this thing called uh repo assist and
+17:57 it's like dead easy to add to the
+17:59 repository. You just go uh uh gh aw add
+18:04 wizard and uh agent uh then add re repo
+18:08 assist and it takes you through the
+18:09 process of setting it up in the
+18:10 repository and that just installs one
+18:12 yaml workflow one agentic workflow into
+18:15 your repository. It'll appear under
+18:16 github/workflows and it'll start running
+18:19 and by default it runs four times a day.
+18:21 You can also run it in a repeat sort of
+18:23 mode that it kind of blasts away for
+18:25 like 30 days worth of work or uh just by
+18:28 a dash repeat 30 and then you get a
+18:30 whole lot of assists coming through the
+18:32 repo. Now before you start running it
+18:34 you can configure it. It as I said it's
+18:36 under your control but the default
+18:38 configuration is it it sort of chooses
+18:40 between different repository maintenance
+18:42 kind of tasks. It can label issues. If
+18:46 the if there are unlabelled issues
+18:47 that's the first thing it'll kind of
+18:48 focus in on. uh it'll try and fix bugs.
+18:52 It'll propose improvements, engineering
+18:54 improvements to the repository. And
+18:56 it'll do that by creating issues for
+18:58 those. If it's open to pull requests,
+19:00 it'll update its own pull requests. And
+19:03 it will also uh uh will also prepare
+19:06 releases in the repository. It won't
+19:08 make the release, but it will kind of
+19:10 make sure everything's in order
+19:11 according to the kind of guidelines and
+19:14 so on for towards moving towards a
+19:17 release, the release notes and whatever
+19:18 else needs to be done.
+19:21 And it is I found it absolutely amazing.
+19:25 I've I've worked in I've used it I think
+19:27 in seven repositories now. We'll take
+19:29 one. Uh it's a f.Control.asynchronous
+19:32 sequences. Uh it's a piece of software
+19:34 that's very uh dear to to my heart uh
+19:37 because it's one of the first ever
+19:39 implementations of asynchronous
+19:41 sequences uh and it let it it it's used
+19:44 widely in the F community and so that I
+19:47 think we had about 50 uh issues in that
+19:50 repo and it just closed it just either
+19:54 made very good comments on on the whole
+19:57 very good comments on the on the issues
+19:59 it was set up to be able to do that and
+20:02 I was able to close out about half the
+20:04 issues with really good solid technical
+20:06 analysis because it's like these days if
+20:09 you get an issue into a repository
+20:10 what's the first thing as a maintainer
+20:12 you're likely to do you're probably
+20:14 quite likely I mean to use a coding
+20:17 agent to help understand the kind of
+20:20 issue and it's kind of automating that
+20:21 step of course the human needs to be in
+20:23 control of actually checking those kind
+20:26 of results and I went through and you go
+20:28 through and you're guided through this
+20:30 process each day you get a kind of set
+20:32 of links of things you should check,
+20:34 comments you should check.
+20:36 >> It's funny you mentioned that because in
+20:38 in this world now I'm spending like 90%
+20:40 of my time like reviewing stuff that AI
+20:42 has generated and we're producing
+20:44 artifacts faster than the community than
+20:47 I can manage as a human. And if you take
+20:49 that combinatoric and apply it to open
+20:52 source to your point, issues are coming
+20:54 in, pull requests are coming in, open
+20:56 source maintainers are getting
+20:57 overwhelmed and no one knows if they
+20:59 want to look at a PR, if the PR was AI
+21:02 generated or not, if the person's a good
+21:04 committer like the the open-source
+21:06 community and I think Peter uh
+21:08 Steinberger from openclaw is a great
+21:09 example. People are using their open
+21:11 clause to make pull requests to open
+21:13 clause. He needs to bucketize all of
+21:15 those issues and see like he might have
+21:18 10 PRs and they all represent the same
+21:20 problem. That historically has all been
+21:22 done manually. That seems like a perfect
+21:24 opportunity for an agentic workflow to
+21:26 step in.
+21:27 >> Absolutely. So you install and and again
+21:30 you got to think about what are the
+21:31 problems I'm having in the repository
+21:33 and what help do I actually need and
+21:36 like getting a kind of an agentic
+21:38 opinion about how this issue relates to
+21:40 all the other issues in the repository
+21:42 uh as it prepared and ready for the
+21:45 maintainer to work on that's absolutely
+21:48 in the zone of what we are enabling with
+21:51 agentic workflows. So my typical morning
+21:54 so once you crunch through the technical
+21:56 debt uh and that itself is just this
+21:58 incredibly freeing process. You're like,
+22:00 you feel like you're coming alive as a
+22:02 maintainer again cuz you got this
+22:04 software you love and you're just, you
+22:06 know, it's reached that kind of stage
+22:08 where it's become a little bit of a
+22:09 burden. It's become like there's that
+22:11 technical debt and you know, actually
+22:13 you you crunch through that technical
+22:15 debt and it just goes back the it being
+22:18 the the the agentic workflows. It goes
+22:20 back over old issues from say 200 I
+22:23 don't know 2021, right? and it'll find
+22:26 this issue and there was a real bug
+22:28 there that hasn't been fixed and it'll
+22:30 do the depth analysis and bring you the
+22:32 fix and of course you're in control.
+22:34 Nothing gets merged and all issue
+22:36 comments should be checked by the by the
+22:38 human and you get to work on that kind
+22:41 of uh you get to bank that fix or close
+22:44 out the issue and say actually we don't
+22:45 really care about that. the technical
+22:47 debt gets crunched away through this
+22:49 automatic process and it all in the
+22:51 context of GitHub and the repositories
+22:53 that you're using and working with
+22:56 today. I love that process. I've
+22:58 absolutely adored uh being a maintainer
+23:01 again. I feel like I've come alive again
+23:03 as a maintainer on about six or seven
+23:05 different repos. We've got people uh I I
+23:08 work with I'm collaborating with I find
+23:09 I'm collaborating better with the humans
+23:11 in the repository and this I mean you've
+23:13 got to be aligned. the maintainers
+23:15 absolutely have to be kind of talking to
+23:17 each other about like the worst thing
+23:19 you can do as a maintainer probably is
+23:21 just like just bring it in uh and um
+23:25 against the wishes of the other m active
+23:27 maintainers in the repository. So you
+23:30 got to have good discussions. But I'm
+23:32 find it it raises the level of
+23:34 collaboration to be much more about
+23:36 guidance and specification
+23:39 and about direction and uh so it's a
+23:43 little it the focus absolutely shifts
+23:46 more to the issues and less to the kind
+23:48 of pull requests. The pull requests of
+23:50 course you got to review them closely
+23:52 but you know the collaboration between
+23:54 the maintainers can be much more uh
+23:56 around the actual what do we actually
+23:58 want for this repository where are we
+24:00 going
+24:01 >> where do you find most of your time then
+24:03 from a just a purely UI perspective
+24:05 because I get overwhelmed at GitHub do
+24:06 you go into each repository are you
+24:08 spending times in your GitHub inbox is
+24:11 that what is your interaction model with
+24:13 this
+24:13 >> yeah I I I think this is a wide openen
+24:16 thing going going forward so my
+24:18 interaction at the moment is to kind
+24:19 along to the different repositories that
+24:20 I've uh installed this um repo assist a
+24:23 dentic workflow into and I I you know I
+24:26 wake up in the morning often on my phone
+24:28 and I kind of say ah what's it done for
+24:29 me this morning and I you know this
+24:30 morning I woke up I went along to f
+24:32 control async seek yesterday I had
+24:35 dropped in an issue into the repository
+24:37 saying hey since you've cleared out all
+24:38 the technical debt how about working on
+24:39 the performance you know there's an
+24:41 issue there this during the night the
+24:43 repo assist woke up and it uh it kicked
+24:46 in and did some work it's optimized one
+24:48 two, three, five, three different kind
+24:50 of uh functions in the in the in the
+24:53 library and and I you know my morning
+24:56 it's like it's a beautiful morning
+24:58 because you deliver these performance
+24:59 optimizations to software you care
+25:01 about. Uh it's like you're waking up to
+25:04 goodness. You're waking up to sunshine.
+25:07 It's like [laughter] you know it's it's
+25:10 like I've got no no problems in these
+25:13 repos anymore. It's like just pure pure
+25:16 happiness going uh it's progressing
+25:18 along and uh I I absolutely love that
+25:21 feeling and it's a taste of I think of
+25:23 what's ahead and it's a taste of how
+25:25 automated AI can really counter some of
+25:28 these narratives that are around about
+25:30 like slop or other AI generation because
+25:33 it can clean up this stuff. It can make
+25:35 your software better. You set it in the
+25:38 right direction and you're going to get
+25:39 the kind of improvements you want uh
+25:41 coming out. So I I I I I can feel your
+25:46 your excitement and your enthusiasm and
+25:48 your energy and I appreciate like that.
+25:50 That's really cool. I wonder how you
+25:53 just really have to try it, don't you?
+25:54 You know what I mean? Like you have to
+25:56 just see it, experience it, and see a
+25:58 good PR or see a good issue that shows
+26:00 up and and to to feel like, yeah, okay,
+26:04 this is for me.
+26:05 >> Yeah. And there are limits to this.
+26:07 Look, there are look, I I I've
+26:11 there are some early versions of this.
+26:12 that we installed into repositories
+26:14 where for example we didn't talk to
+26:16 enough of the maintainers and some of
+26:18 the maintainers just said look this is
+26:20 this this this this one is wrong and you
+26:23 know this is not a good not a good
+26:25 suggestion it was so so uh I've got a
+26:27 blog uh post dsim.net And uh you can
+26:30 take a look through some of the blogs uh
+26:32 and one of them is about automatic
+26:34 performance engineering and I've given
+26:36 an example of a small library that
+26:38 benefits from automatic uh
+26:40 semi-automatic perform performance
+26:42 engineering. Now if you're in a C++
+26:45 library where that's taking 30 minutes
+26:48 to build and it hasn't got good
+26:50 microbenchmarking setup
+26:52 >> then automatic performance engineering
+26:54 is probably not going to work out well.
+26:56 Okay. Because to do automatic
+26:58 performance engineering, you've got to
+26:59 be able to take really good
+27:01 microbenchmarks like we know it from
+27:02 like benchmark.net or whatever else
+27:04 you're kind of kind of using. And uh so
+27:09 [clears throat] how well the engineering
+27:11 in like we all know about like
+27:12 agents.mmd and kind of setting up the
+27:15 the the agents for success in the
+27:17 repository. If you're going to get it to
+27:19 do more advanced software engineering
+27:21 tasks like performance engineering or
+27:23 test improvement, then you really need
+27:26 to be setting it up setting the auto
+27:28 automated coding agents up for success.
+27:31 >> And that means uh that means investing
+27:34 in making benchmarking sweet in the in
+27:38 the in the repository. It might mean you
+27:40 doing sort of manual verification that
+27:42 whatever kind of uh performance was
+27:44 taken in say a GitHub a actions VM
+27:47 actually checks out for real on a real
+27:50 uh on on actual real machine. So so
+27:52 there's serious engineering that needs
+27:55 to be done that needs some of the best
+27:56 talent in the industry to be guiding and
+28:01 shaping that what the how these uh
+28:04 aentic experiences explore a sort of
+28:06 problem in the design space. So that
+28:08 really comes down to the the the
+28:12 harness. Like I keep trying to tell
+28:13 people that if the ambiguity loop has no
+28:16 bounds, it will make stuff up. It will
+28:19 make slop. And the slop that people are
+28:21 experiencing is you left it up to
+28:23 interpretation.
+28:25 And tests and performance or
+28:28 microbenchmarks
+28:29 reduces or removes that that up for
+28:32 interpretation moment.
+28:34 >> Yeah. uh look you there's I love this
+28:37 question of like how ambiguous should uh
+28:39 a workflow be and where should the kind
+28:41 of gu uh guard railing be and where the
+28:45 way you know the framework I usually use
+28:47 is you've got goals and you got
+28:48 constraints you got guard rails and uh
+28:51 that's the um that that that that that's
+28:54 a magic kind of combination and I I I
+28:57 also just like thinking through the kind
+28:59 of setting up the engineer for success
+29:03 if you think of the agent as a junior um
+29:05 uh sort of
+29:08 kind of junior performance engineer are
+29:10 probably much much worse than that. They
+29:12 they they you know they they're not
+29:14 necessarily good at doing performance
+29:15 engineering and they might lag in their
+29:17 results. That is some of these agents do
+29:19 have a tendency to not be to not reveal
+29:25 fully whether they for instance ran
+29:27 fully proper before and after tests on
+29:29 the performance of a piece of software.
+29:32 Uh and uh so you've got to be setting
+29:35 the agents up for success and you got to
+29:36 be setting the human reviewer up for
+29:39 success to correctly review the proposal
+29:43 that the AI is coming up with. Yeah, I
+29:47 think that that that can't be overstated
+29:48 and I think people don't people haven't
+29:51 yet seen the big picture and we as a
+29:52 community as a software development
+29:54 community are still trying to see this.
+29:57 And I like the idea of like setting the
+29:59 junior engineer up for success. But I
+30:01 also call out that in a world where
+30:02 you're the expert, the AI is the junior
+30:05 engineer with unlimited energy. So give
+30:07 it the toil. And in a world where you're
+30:10 maybe not the expert, like I don't know
+30:12 Rust, I think of the AI as being more
+30:14 senior to me until my code smell ability
+30:17 meets it or exceeds it and then I start
+30:19 treating it again as a junior intern
+30:22 with a lot of energy.
+30:23 >> Yeah. I mean I don't I I was very
+30:26 cautious there about using the an like
+30:28 the anthropomorphization language. I
+30:30 don't like anthropology and I kind of
+30:32 take want to take that back because one
+30:35 of the things I I really love in this
+30:36 space is is to think about the education
+30:39 aspect that I think we can shape the
+30:42 education of uh people coming through
+30:45 the universities and coming through
+30:46 their kind of uh learning first part of
+30:49 their learning process so they can do
+30:51 this well
+30:52 >> and I absolutely believe that they're
+30:55 able to to to to be great engineers in
+31:00 this kind of automated software
+31:01 engineering or agentically assisted
+31:04 software engineering. I believe every
+31:06 university should be having a course on
+31:07 agendically uh assisted or AI assisted
+31:11 uh software development and kind of
+31:13 exploring the space. So these kind of
+31:15 ramifications of what's going to h
+31:16 what's happening and that's so I all the
+31:20 all the juniors uh you know on this call
+31:23 go learn how to use the learn what makes
+31:26 software great learn what makes software
+31:29 good learn what how what good
+31:31 performance engineering means learn what
+31:32 good test engineering means uh learn the
+31:35 learn how to make great tools under the
+31:37 hood because these days tools are easier
+31:39 than ever to kind of make and uh there's
+31:42 there's just so much potential to make
+31:45 uh to be great at the craft of uh
+31:47 guiding uh guiding software to the right
+31:50 to the place it needs to be like we're
+31:52 all sculptors these days or something
+31:54 like that. The analogies everyone uses
+31:55 different analogies but you know you can
+31:56 kind of sculpt the kind of software and
+31:58 you got to start start on that journey
+32:00 today.
+32:01 >> Yeah. Yeah. I really think that there's
+32:03 a moment here and I feel like as kids
+32:05 are coming out or young people are
+32:06 coming out of school having learned
+32:08 computer science the software
+32:10 engineering the actual practice of
+32:12 shipping quality software is the skill
+32:16 that needs to be and good decisions uh
+32:18 good judgment and the toil that will go
+32:21 away will kind of fade into the
+32:23 background but being able to make and
+32:25 ship quality software matters more than
+32:27 ever before. So you're working on GitHub
+32:29 agentic workflows. You've got automated
+32:32 markdown workflows, AI powered
+32:34 decision-making, integrates tightly with
+32:36 GitHub. You can use whatever AI engine
+32:38 you want, Copilot, Claude, Codeex,
+32:40 whatever makes you happy, and you can
+32:42 learn more about continuous AI. Just go
+32:44 ahead and check out GitHub, aentic
+32:46 workflows. Go out and Google with Bing
+32:48 or your favorite search engine, and
+32:49 you'll learn all about how repository
+32:51 automation is making Dons love being an
+32:54 open source maintainer. Again, thanks so
+32:56 much for chatting with me today,
+32:58 >> Scott. It's been a pleasure and look
+33:01 look forward to coming back and we'll
+33:03 talk through all these all these kind of
+33:05 things.
+33:05 >> All right, this has been another episode
+33:07 of Hansel Minutes and we'll see you
+33:09 again next week.

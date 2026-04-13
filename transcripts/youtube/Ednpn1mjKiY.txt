@@ -1,0 +1,1610 @@
+0:01 All right. Hello everyone. I'm AJ,
+0:03 technical content lead here at Augment,
+0:06 and we're starting a series where we're
+0:08 bringing on real senior engineers and
+0:10 staff engineers and show how they're
+0:12 actually coding with AI. It's a chance
+0:14 to see how they work and ask some
+0:16 questions directly. So, if you have any
+0:18 questions, please pop them in the chat
+0:20 and we'll try to read them out. Today,
+0:22 I'm very excited to be joined by Sam
+0:24 Breed. Sam was previously a senior staff
+0:27 engineer at Credit Karma and now a
+0:29 partner at Sutter Hill Ventures. He's
+0:32 one of the lead engineers building the
+0:34 intent app and he was actually part of
+0:37 augment when it was just Eigor, one of
+0:39 our founders. So yeah, very excited to
+0:42 bring on Sam today. I'm really
+0:44 interested to see how he's using intent.
+0:46 I'm I'm you I'm trying to get the most
+0:48 out of it myself and I'm sure a lot of
+0:50 you in the audience are as well. And
+0:52 yeah, I encourage you if you have any
+0:54 questions to please drop them in the
+0:55 chat and me and Sam will answer them as
+0:58 we as as they come through. Sam, thank
+1:00 you so much for joining us today. How
+1:02 was that intro? Is there anything I
+1:03 missed that you'd like to add?
+1:05 >> Oh, no, that was perfect, AJ. Thanks.
+1:06 Uh, yeah, really happy to be here and uh
+1:09 yeah, we're going to have some fun.
+1:10 We're going to build some websites.
+1:12 >> Awesome. So, yeah, let's let's jump
+1:14 straight into it. Should I bring your
+1:16 screen on stage here?
+1:17 >> Yeah. Yeah. So, uh I'll set a little bit
+1:19 of context while uh we're getting set
+1:21 here. So, um, this is actually like a
+1:24 real world task that I did in the last
+1:26 week or so. And we're going to be taking
+1:28 a design that a designer made fully
+1:31 comped out in Figma. It's got maybe 10
+1:33 pages, some design system stuff, and
+1:36 using the Figma MCP integration and
+1:38 intent. We're going to be able to pull a
+1:40 bunch of content directly into the
+1:42 context for intent to go. And uh, oh no,
+1:45 did my camera just die?
+1:48 >> Of course. Yeah, you've went black, but
+1:50 we still see the share screen.
+1:52 >> Okay, cool. Cool. One one second, my
+1:54 >> no problem. I'll just shout out to
+1:57 MVA
+1:59 Robert from Minneapolis. Also have
+2:01 someone from Muldova, Nico
+2:05 Grum asking when the Windows version of
+2:07 Intent is coming. A lot of a lot of
+2:10 demand for that. Hopefully Sam maybe can
+2:12 give more insight on that. [laughter] I
+2:14 know it's coming eventually.
+2:15 >> Yeah, it's it's in it's in progress.
+2:17 Absolutely. Okay. So, uh I'll fuss with
+2:20 the camera in just a moment. Okay. Here,
+2:22 here we go. Okay. Back up. There we go.
+2:24 >> Always have a backup. Uh hot spare. Um
+2:28 cool. So, uh so yeah. So, we've got a
+2:29 Figma MCP. We've got uh that running.
+2:32 It's already connected. Um so, if you're
+2:34 curious about, you know, how that works.
+2:36 Uh if you go into workspace setup, you
+2:39 have you can turn on the custom MCP
+2:41 servers. Um I've got two configured, one
+2:44 for Versell and another for Figma. Um,
+2:46 the Figma setup is, uh, you still have
+2:49 to set it up as a custom MCP and Figma
+2:51 makes this URL really, really hard to
+2:53 find. Um, so you have to like search
+2:55 their docs for it. It's, uh, localhost
+2:57 3845MP
+2:59 MCP. Okay. So, um,
+3:02 >> I think I have some alpha on the Figma
+3:04 MCP. The remote one is coming for
+3:07 augment compatibility very soon, like
+3:09 this month.
+3:09 >> Oh, awesome.
+3:10 >> Um, but yeah, continue.
+3:13 >> Okay, cool. Okay, my bad. Um, let's see.
+3:16 Let me get a prompt up here so we don't
+3:18 have to watch me type. Okay, so we're
+3:20 going to do some visual design. We're
+3:21 going to take a look at the Figma MCP
+3:23 and start by adding some custom colors
+3:25 to the Tailwind config. And so now what
+3:27 I'm going to do, I'm going to go over
+3:28 into Figma and I'm going to uh
+3:30 rightclick on some frames and copy links
+3:33 to their selections. And um that way
+3:37 this is kind of like right now it's the
+3:39 way that you can kind of put contacts
+3:41 directly from like artboards or layers
+3:43 or whatever from Figma into their MCP
+3:46 integration. Hopefully in the future you
+3:48 can just like say what you want. Uh but
+3:50 right now there's a little bit of manual
+3:52 shoveling back and forth and uh so I'll
+3:56 show this project as we kind of get
+3:57 started. So we're kicking off a
+3:58 workspace and uh you know I've seated
+4:01 this project with a little bit of of
+4:05 stuff. Um so okay PMPI
+4:10 and uh so for things like this like one
+4:13 of the techniques that I really like to
+4:14 do is right like I have an idea in mind
+4:16 of like how I want to build this
+4:18 project. I want to use Astro. I want to
+4:19 use Tailwind. There are a couple other
+4:22 things that I like might want to have. I
+4:24 tend to like do those first opening
+4:26 moves myself. One, because they're like
+4:28 good generators for these things. And
+4:31 two, it kind of like by seating that
+4:33 context into the project with, you know,
+4:36 what you want as a developer, um, you
+4:38 get an opportunity to, uh, have, you
+4:42 know, have your opinions in there, um,
+4:44 and not just rely on like whatever
+4:47 default is going to get spit out from
+4:48 weights. So, uh, so, right, like
+4:51 there's, uh, you know, a little bit of
+4:52 content here. Astro server is capable of
+4:54 running. And so while we've been doing
+4:57 that um intent has been off pulling
+5:00 these this context directly from Figma.
+5:03 It found that hey there's this you know
+5:05 design system layer. Um there are a
+5:08 bunch of custom colors in it. Um
+5:11 and it sees that it's tail 1v4. It's not
+5:14 going to try to write a tail 1v3 file.
+5:16 And so it wrote a little bit of uh a
+5:20 little spec here to kind of like do
+5:22 this. So, we'll approve the plan, start
+5:24 the implementation, and yeah, we're off
+5:27 to the races. This is going to start um
+5:30 firing off agents. Yeah.
+5:32 >> Can I double click? Yeah, double click
+5:34 on the part you just said about manually
+5:36 setting up. Is that just mentioning the
+5:38 frameworks inside your prompt or do you
+5:41 actually run like init commands to
+5:43 initialize?
+5:43 >> So, in this ca for this case, I just ran
+5:45 the init commands. um you know that
+5:48 seems to be like you know a lot of the
+5:51 times right with models you know even
+5:53 with the ability to pull context from
+5:55 the internet right like the training
+5:58 data is potentially you know months old
+6:01 um so especially for like frameworks
+6:03 where you want to be getting the latest
+6:04 versions of things you want to be
+6:05 patched all the way to the top you don't
+6:07 want to be getting you know choices that
+6:09 are maybe kind of uh just buried like
+6:12 deeply you know kind of in the weights
+6:14 from six months ago um So, I like doing
+6:17 that. Um, you know, especially for new
+6:19 projects, too. It kind of like gives me
+6:20 a little bit of, you know, those kind of
+6:22 initial first opening moves. They're
+6:24 almost always the same. So, yeah, like
+6:27 you know, the the project in
+6:29 initializers are pretty good.
+6:31 >> We have uh one question from the chat
+6:33 here says, can we touch on agent access
+6:36 security/sandboxing?
+6:38 How do you prevent an agent from
+6:40 silently editing files outside the
+6:42 workspace?
+6:44 Um
+6:44 >> uh I've never seen it do that. So
+6:47 context background on so I've been using
+6:49 AI for code uh since about 2021. Um so I
+6:53 joined Sutter in 2020 to help work on
+6:56 prototypes around GPT3 and what you know
+7:00 was kind of the pending wave of AI that
+7:02 you know we've we've seen happen over
+7:04 the past four or five years. So one I
+7:07 guess starting about jealous just like
+7:08 sensible defaults default I use Auggie
+7:10 for everything. Um, Auggie is running in
+7:14 the scope in the directory. It's
+7:16 exceptionally well prompted and I'm
+7:18 using, you know, the kind of top of the
+7:21 frontier models. I'm not using, you
+7:23 know, haiku to do this. I'm not using,
+7:26 you know, so like like an old fast model
+7:28 or I'm not using, you know, uh, what's
+7:30 possible in uh, intent is to use
+7:32 something like open code that gives you
+7:33 even like the ability to do local
+7:36 inference. Um, so perhaps with some of
+7:38 those I would be more concerned about
+7:41 sandboxing, but as a practical matter,
+7:43 I've never had any problems with
+7:46 sandboxing in now several years of
+7:48 writing code with AI in basically every
+7:51 conceivable way. Um, and so yeah, so I'm
+7:55 I'm team YOLO. Um, I I think the
+7:58 dangerously skipped permissions thing
+7:59 should just be on by default.
+8:01 >> Nice. And they are in Auggie, right?
+8:04 >> Yeah. Yeah, there's there's no there
+8:07 there's no safety. You're you're playing
+8:09 with live rounds here. Um, cool. So, uh,
+8:12 so yeah, so now we can move on to the
+8:15 next step. Um, so this is this is done.
+8:17 Um, there's not going to be really any
+8:19 side effects to look at on the website,
+8:21 but we can take a look at the commit
+8:23 that it wrote. Um, which, you know,
+8:25 pretty simple. Again, this isn't, you
+8:27 know, rocket science to do, but
+8:28 certainly saves a little bit of copying
+8:30 and pasting, you know, from the Figma
+8:32 file. Um, and so, but now the the fun
+8:35 start the the fun's really going to
+8:36 start because this Figma file doesn't
+8:38 just have um a bunch of, you know,
+8:41 design guidelines in it. It actually has
+8:43 like full content for, you know, uh, you
+8:45 know, seven, eight pages on on a
+8:47 website.
+8:48 So, um, you know, and these are this is
+8:51 real prompts. Like I did this session,
+8:53 you know, a couple days ago and like
+8:55 this was kind of like exactly how I
+8:56 arrived at like a working website. So,
+8:59 we're doing it live. We're going to see
+9:01 uh see how this goes. Hope hopefully
+9:03 it's going to it's going to work pretty
+9:04 well. Um so again, I'm going back over
+9:07 into Figma now and I'm hitting uh
+9:10 command L to grab um you know the direct
+9:14 links to artboards. Uh so let's see, the
+9:17 designer has a bunch of typography stuff
+9:23 and like suggested grid dimensions. We
+9:26 got some asks to see the current Figma
+9:29 design if that's possible to
+9:31 >> Yeah.
+9:31 >> Yeah. Yeah. Yeah. Yeah. Let me uh let me
+9:34 stop sharing and switch screens.
+9:38 Your screen window.
+9:41 >> Also, while you're doing that, I had a
+9:42 message here from Nikita says, "It'd be
+9:44 great if the isolated workspaces feature
+9:46 was optional." I think that is true. You
+9:49 can check mark like to use not a work
+9:52 tree. Is that right? Yeah.
+9:53 >> Yeah, that's absolutely right. Uh so
+9:55 this is a little bit hard to find. It's
+9:57 uh you know it's it's in the submen when
+10:00 you're selecting which branch to do.
+10:02 There's a checkbox at the bottom of that
+10:03 menu that says work directly in this
+10:05 branch. Um I was going to talk about
+10:07 that later in the stream. Um it's
+10:09 actually quite useful when you like tee
+10:11 something up, get it good, and then just
+10:12 want to make little minor edits using a
+10:14 workspace. But uh yeah, so onto the
+10:16 comp. This is the the thing that I'm
+10:18 pulling out uh pulling things out of.
+10:21 Um,
+10:22 we've got uh we've got it in developer
+10:24 mode. So, uh, you know, shift D in Figma
+10:27 if to flip back and forth between
+10:30 developer mode, which is actually really
+10:32 really cool. They kind of like muted a
+10:33 bunch of the features and made it hard
+10:35 to like accidentally change stuff or,
+10:37 you know, change the rotation on a thing
+10:39 when you're trying to grab its corner,
+10:40 you know, the classic foibless that
+10:42 developers run into. So, this was like
+10:45 the first frame that I grabbed and uh,
+10:47 yeah, let me zoom in here. It's got like
+10:49 some spacing conventions. It's got some
+10:52 custom colors. It's got some custom
+10:54 gradients. Um
+10:57 there's a bunch of really specific type
+11:00 annotations with like a licensed font.
+11:03 Um we'll be showing these uh a little
+11:06 bit later um with like actually pulling
+11:09 in and integrating like the font assets
+11:11 here. Um, we've got uh some kind of
+11:14 reusable components that are going to be
+11:16 common across pages and a grid system
+11:19 and then yeah, a a bunch of content.
+11:22 I'll I'll zoom out here and see. So,
+11:24 like when I was looking at doing this,
+11:26 this is like a a landing page. Um, you
+11:29 know, this is maybe
+11:31 I'm pretty fast. I could probably do
+11:32 this in like a day, maybe two of like
+11:35 coding all the markup, getting it
+11:38 responsive, making it like pulling all
+11:41 the assets out. You know, there's a
+11:43 bunch of little stuff in here like these
+11:46 guys are actually videos that like want
+11:48 to loop and like the go carousel and
+11:50 like mobile web. So, it's like, you
+11:52 know, it's a a couple days of work if
+11:55 this is all you're doing and you're like
+11:56 real fast and you know, have have done
+11:59 this before. It's a lot of work if
+12:00 you've like are you know trying to learn
+12:03 a framework while you're doing this. Um
+12:05 and yeah so uh so yeah I had uh I was
+12:08 able to get you know in a few sessions
+12:10 with intent ripped through this like a
+12:11 chainsaw. It was like 45 minutes and it
+12:13 was [laughter]
+12:14 >> pretty pretty functionally close. It was
+12:16 like 95%. And now the designer has
+12:19 intent and is iterating on the last 5%
+12:22 of all the little knobs and screws. And
+12:24 this is a person who's never used Git
+12:25 before. Um, and was like, you know, uh,
+12:30 super super enabled by this. Okay, cool.
+12:32 So, I'll uh I'll flip back to intent.
+12:38 >> Awesome. Yeah,
+12:39 >> your screen
+12:40 >> and if you can quickly show that
+12:42 checkbox like we got another comment.
+12:44 >> Yeah. Yeah, I'll I'll show where it is
+12:46 >> to um
+12:48 word. So, uh, sorry about the up the
+12:50 workspace option. So yeah, on the home
+12:52 screen, if you're here, you click on
+12:55 your main branch and there's this dude
+12:58 right down here. Work directly on the
+13:00 main branch. You can, this also works
+13:02 like if you select other branches in the
+13:05 in the repository, you can work directly
+13:07 on those as well. Um
+13:09 >> Oh, great.
+13:10 >> Yeah. So, so work directly on the branch
+13:12 and it says no work tree when you're
+13:14 doing this. Um, arguably there should be
+13:17 maybe a bigger setting more prominently
+13:19 so you can just like turn work tree mode
+13:21 off entirely, but uh but yeah,
+13:24 >> for sure.
+13:26 >> Cool.
+13:27 >> We have a comment uh asking, can intent
+13:30 store the spec to git?
+13:33 >> Can intent store the spec to git? Uh
+13:36 yes, it can. Um so the spec files do end
+13:42 up on disk. So if you click this open in
+13:46 menu, you can open them in Finder or the
+13:49 editor of your choice. They are files in
+13:51 the home/intent directory. Um and if so
+13:55 you would need to move the spec files
+13:56 over into your repo, but if you wanted
+13:58 to have the spec be a long-term durable
+14:00 object and uh yeah, the the sub items
+14:04 are are separate are separate files with
+14:06 the um with like the the subspecs.
+14:10 >> Interesting.
+14:12 Maybe potentially could you sim link to
+14:15 have it live as well? I don't know.
+14:17 Maybe [laughter]
+14:20 >> I'd want to test that first. Maybe I'd
+14:24 try it and see. We can type that in the
+14:25 box and see and see if it goes. Um,
+14:28 cool. So, I
+14:29 >> I had fat fingered a click on a
+14:31 suggested prompt earlier. Um, the the
+14:33 fun of doing this live. So, I need to
+14:35 tee this up a little bit more uh before
+14:37 we press go again. Um, so we've got the
+14:40 first page, we've got the grid,
+14:44 we've got the typography.
+14:49 >> It's all good
+14:49 >> word.
+14:50 >> While you do that, I think I can answer
+14:52 this question here. Can enterprises
+14:54 customize augment code with their
+14:55 internal frameworks, coding standards or
+14:58 domain specific knowledge? I think the
+15:00 general st the standard for doing this
+15:02 is like an agents MD kind of file which
+15:05 or like the rules files. So in that uh
+15:08 in those files we have it in our
+15:10 documentation as well where to put them
+15:12 um they'll always be included into
+15:14 context. So you can have all your coding
+15:16 standards domain specific knowledge and
+15:19 the agent will have that in context um
+15:21 at all times. And by the way guys I
+15:23 forgot to mention um intent
+15:26 >> with augment code is completely free
+15:28 right now with GPT 5.4. We're offering
+15:31 that for free for a limited time. So you
+15:33 don't need to use any credits or spend
+15:35 any money if you want to try Intent or
+15:38 any augment code product for free with
+15:39 GBT 5.4. Sorry for cutting you off, Sam.
+15:42 Go ahead.
+15:42 >> Oh, yeah. No, all good. I was going to
+15:44 say in answer to the enterprise
+15:45 question, uh, mono repos perform great
+15:47 with augment. Um, so if you have a monor
+15:49 repo that has a bunch of different
+15:50 projects in it, has a bunch of
+15:52 documentation, has your internal coding
+15:53 standards as well as on top of the kind
+15:56 of support of agents. MD and other
+15:58 metaphors.
+16:02 >> Yeah. Yeah, the context engine and
+16:03 augment really great for um large monor
+16:07 repos.
+16:09 Um yeah, for people that just joined,
+16:11 Sam, do you want to give a refresh on
+16:13 kind of what what we're working on here?
+16:14 >> Yeah. Yeah. So we are uh we're
+16:17 essentially building a website out from
+16:19 a Figma comp that we've got uh teed up
+16:22 in Figma with Figma MCP turned on and
+16:25 we've seated a project with some
+16:27 initializers for a couple of frameworks
+16:29 for Astro Tailwind CSS and uh we've got
+16:33 the first round done of some initial
+16:35 mison plots of setting things up and now
+16:37 we've got the uh agent starting to cook
+16:40 on the first uh you know kind of page in
+16:43 the website and the goal here is, you
+16:45 know, in the next 20 30 minutes to get a
+16:47 fully imagined thing out that is like
+16:50 pretty faithful to the comps that we had
+16:51 in Figma. And I'll flip back and forth
+16:53 to the Figma comp again as we kind of uh
+16:55 go through this.
+16:58 >> Nice.
+17:00 Someone here has asked for the URL for
+17:01 intent app. It's just augment.comintent
+17:05 to get there.
+17:09 >> Okay, cool. I heard the ding. Uh so that
+17:12 means that it's time for me as the human
+17:14 in the loop to uh to pay attention. Um
+17:18 cool. So uh let's see. We've got full
+17:21 picture. We started this. Okay. So it's
+17:23 added four tasks to the spec. Um you
+17:26 know it looked at the URLs to the design
+17:30 system that I sent. Um I'd also given it
+17:33 a note that like hey we're going to be
+17:35 adding the fonts later. So, like just
+17:37 use placeholders um for now so that you
+17:39 know if the designer looks over my
+17:41 shoulder, he's not going to be like, "My
+17:42 fonts aren't being used." Um you'd have
+17:44 to look a little bit more closely to
+17:46 that. Um I won't try to pull a fast one
+17:47 on them and just use system fonts,
+17:49 although that is a good trick. Um cool.
+17:52 So, uh yeah, let's go. Um you fall into
+17:58 one of two camps. You either like to
+17:59 read the plans or you like to see what
+18:01 they do. Um I'm more of a like let's go.
+18:05 Uh sometimes I'll I'll see something
+18:08 like glaringly wrong in the plan and
+18:09 I'll either ask the coordinator to
+18:11 change it or go in and you know make
+18:14 make edits myself. But um like I said
+18:17 kind of at the at the start of this,
+18:19 this is a you know I'm recreating kind
+18:21 of a speedrun of a task that I did uh
+18:23 you know earlier you know last week or
+18:25 so. Um so I'm pretty high confidence
+18:27 that like these prompts are going to
+18:29 lead to uh to some decent or at least
+18:32 exciting results.
+18:34 Yeah, that kind of touches on a question
+18:36 from the chat that's like how do you
+18:38 iterate on the on the spec and the
+18:40 artifacts. Um, personally like I I found
+18:44 intent produces like this assumptions
+18:47 section and that's like what kind of
+18:48 always needs the most attention. I'm not
+18:50 sure if you have one here, but yeah,
+18:52 there you go. So, like sometimes
+18:54 there'll be some assumptions made that
+18:56 might not be aligned with what I
+18:59 intended. So yeah, that's kind of where
+19:02 I iterate the most on, but yeah,
+19:04 generally like I
+19:05 >> I find the plans to be pretty good by
+19:07 themselves.
+19:09 >> Yeah, same. And I think that there's,
+19:11 you know, two ways of doing this. You
+19:12 can either re-engage with a coordinator,
+19:15 say, "Hey, there's some things wrong
+19:16 with the plan. Maybe you should change
+19:17 X, Y, and Z." Um, or you can make that
+19:20 it's yourself directly. Um, I tend to
+19:22 favor the latter because the coordinator
+19:24 tends to write prompts that are a little
+19:27 bit more fully specified uh than, you
+19:30 know, I would be willing to to write.
+19:32 Um, it also touches a little bit on, you
+19:34 know, the kind of like working mental
+19:37 model for, you know, where intent works
+19:39 best. And I think that it's actually
+19:42 really shines on tasks that are, you
+19:45 know, of the size right now of like a
+19:47 PR. So of a single pull request to like
+19:50 a repository. Um, you know, you can do
+19:53 you can have really ambitious PRs that,
+19:55 you know, change hundreds of files and,
+19:57 you know, maybe have tens of thousands
+19:58 of changes, but those are a lot harder
+20:00 to evaluate and they maybe need a lot
+20:02 more planning. And so even in this like
+20:04 we're going to get uh probably two or
+20:06 three more steps here and then we're
+20:08 going to jump out and make a new
+20:09 workspace. We're going to like merge
+20:11 this stuff and make a new workspace. Um
+20:14 because one is a reflection of the
+20:16 workflow that I would actually use where
+20:17 I get to like a decent stopping point
+20:20 where adding to the plan is going to
+20:22 just result in like 40% of the plan
+20:24 being like rewritten or invalidated. And
+20:28 like if you've been working with large
+20:31 language models for a long time, you
+20:33 kind of get these instincts, these
+20:36 second, you know, kind of hunches of
+20:38 about like where uh context is going to
+20:41 be the most useful. And you know the the
+20:44 less context you know that is accurate
+20:47 the better because if you have even with
+20:50 a million length you know million token
+20:52 length context window um one a million
+20:55 tokens is a lot of text like it's kind
+20:58 of it's easy to to throw it around like
+21:00 ah ah ah ah ah ah ah ah ah ah a million
+21:01 stuff you know it's an easy number to
+21:02 imagine maybe but if you actually like
+21:04 printed out those tokens on paper it's a
+21:07 stack of phone books that is like 2
+21:08 meters tall [laughter] and and like Do
+21:12 you need all that? Um,
+21:15 and like the models are obviously
+21:16 getting better and better and better
+21:17 with each generation, but you know,
+21:20 keeping things on track and especially
+21:23 being like fast, right? Like, you know,
+21:25 these models attend to everything in
+21:26 their context. So, if you have a
+21:29 smaller, you know, kind of set of
+21:31 contexts that you're bringing into the
+21:32 model and it's the right stuff, you're
+21:35 going to just get faster response times.
+21:38 you know, it's going to have less
+21:40 opportunity or will be less inclined to
+21:42 kind of wander off the the path that
+21:44 you're trying to get it to go down.
+21:46 >> Yeah. Speaking of models, we have a few
+21:48 questions here. Um, do you always use
+21:50 Opus? I want to know if you always use
+21:53 Opus. You have any opinions on different
+21:56 models?
+21:56 >> Yeah.
+21:57 >> So, you know, in in technology, you
+22:00 often get these uh these dichotoies.
+22:02 There's Vim versus Emacs. There's uh
+22:05 tabs versus spaces and [snorts] there's
+22:08 opus versus codecs or cloud code versus
+22:10 open AAI models. Um
+22:14 I think they are kind of tools that are
+22:17 very equally capable and you know the
+22:20 subtleties come in with how you prompt
+22:22 them and how you use them. Um I've been
+22:26 personally I've been using claude models
+22:29 uh you know as my kind of go-to for
+22:31 maybe the last like two years or so. Um,
+22:34 I really think that the work that Claude
+22:35 did with like the 3.5 sonnet release to
+22:38 get tool calling like good enough to the
+22:40 point where uh you can have an agent
+22:43 that goes off semi-autonomously and
+22:46 drives towards a task through a series
+22:48 of dozens of tool calls. Like that was
+22:51 the first time I saw that like happen in
+22:52 a model and it felt like oh this is the
+22:55 sign that like coding is now going from
+22:58 you know what it used to be to something
+22:59 new and it took you know two years for
+23:01 that to kind of bear out and I think
+23:03 that tool calling is the way to go. So
+23:05 like yeah I Claude's my OG um I use
+23:07 cloud every day for everything. Um
+23:09 although I try everything right like
+23:11 when the new models come out like it's
+23:13 really useful to go and try them because
+23:15 look faster and is better and if you're
+23:18 fast and accurate right like it's good
+23:21 enough it's good enough for me. So I've
+23:22 been playing around with 54 this week um
+23:24 as we were kind of like pre-flighting it
+23:26 testing it to go into intent and it's
+23:28 real good. Um, so if you've been using
+23:31 OpenAI models and are like pleased with
+23:33 them, like you got more good stuff
+23:35 coming along the way. And I think that
+23:37 like competition is only going to drive
+23:39 this forward faster. Uh, so yeah, and
+23:42 it's try it for free and intent or other
+23:45 augment products.
+23:47 >> Yeah.
+23:49 Got a question here. Can you change the
+23:51 ding sound in augment?
+23:54 >> You you can turn it off. [laughter]
+23:56 and the built-in notifications also are
+23:58 capable of making a sound. Um, but uh,
+24:03 yes, we'll we'll put that under
+24:05 consideration.
+24:06 >> Yeah, there's definitely internally I
+24:07 know some people don't like that sound
+24:09 too. So,
+24:09 >> yeah,
+24:10 >> hopefully we can we can bring in some
+24:11 more op options. I know someone that has
+24:13 like a plugin for the Warcraft like
+24:15 Zugzug any more work available plugin
+24:19 for um for his agents.
+24:21 >> Yeah, we could we could make it
+24:23 something fun. We could put a soundboard
+24:24 in there. I mean, that's uh that's a
+24:26 thing. It's we could probably just type
+24:28 that in the box and put a whole little
+24:29 synthesizer on that settings page.
+24:31 >> Mhm.
+24:34 Um got a request to see the specialized
+24:38 agent setup. Do you have specialized
+24:41 agent setup or do you just run with kind
+24:43 of what intent brings out of the box?
+24:46 >> Yeah, so um again this kind of goes back
+24:48 to this other, you know, there's a
+24:50 endless debate about this stuff. Um, I'm
+24:53 team. Don't mess with it. Um, [laughter]
+24:56 so, but that's also why I use intent is
+25:00 because we have a lot of these things
+25:03 that are that are built in that are
+25:04 already exceptionally well prompted.
+25:07 And, you know, there are definitely ones
+25:09 in here that I use that uh that I invoke
+25:13 directly. A really cool one um that uh
+25:16 I've been using a lot over the past
+25:18 couple weeks is this PR Shepard. Um so
+25:23 currently this only works with with
+25:24 augment uh and with augment code review
+25:27 but essentially you can when you have an
+25:30 open poll request and let's say it has
+25:32 some you know CI things are failing and
+25:34 you've get some review comments either
+25:36 from humans or through automation um you
+25:39 can launch this specialist in an intent
+25:41 workspace and it will basically long
+25:44 pull against the comment thread and will
+25:47 chase down a green pull request like the
+25:50 terminator hunting for on Connor. Um,
+25:53 [laughter]
+25:53 so you can run this thing and it'll just
+25:56 like chirp away. Uh, you know, the
+25:58 augment code review bot is really really
+26:00 good and it makes oftentimes, you know,
+26:04 very actionable suggestions and so
+26:06 having that loop be really tight where
+26:08 it's those are getting addressed and it
+26:10 leaves feedback on the comments too. So
+26:12 it's not just like, oh, I'm going to
+26:14 push a commit and mark resolved. It's
+26:16 like it goes in, it makes a detailed
+26:18 comment. Um, and this is a kind of an
+26:21 outgrowth of a skill that intent can
+26:23 just do. Like when you have the GitHub
+26:26 uh stuff wired up, like you can just ask
+26:28 the coordinator be like, "Hey, are there
+26:29 any comments on this PR? Can you address
+26:31 them?" And like it'll write to the spec,
+26:33 it'll fire stuff fire away. But that
+26:35 also involves you like typing the box
+26:37 kind of knowing the context like are
+26:38 there pull requests right now? Um, so
+26:41 this is like part of the like SDLC that
+26:43 we're really excited about like helping
+26:45 you know smooth down and chamfer off
+26:47 like the rough edges. uh because stuff
+26:49 like this just really like nails it. Um
+26:52 the UI designer prompt, this is another
+26:54 one that like Amelia wrote. So like the
+26:56 fun thing about prompts and I think that
+26:58 like the skills.sh like you know
+27:00 explosion of that ecosystem like really
+27:02 shows this is like the best prompt is
+27:04 the one you didn't have to write
+27:05 yourself uh that somebody else you know
+27:08 just uh just goes out and nails for you.
+27:10 Um, and so right like part of this is
+27:13 being a discerning user of this is like
+27:15 spend enough time to think about these
+27:16 things but you know you can overindex on
+27:18 them and the difference between like a
+27:20 pretty good prompt and a perfect prompt
+27:22 is like I don't know it's uh it's it's a
+27:25 limiting factor like you like you could
+27:26 spend a lot of time and not get you know
+27:28 better results and you know more
+27:30 inference is probably the best way to
+27:32 get to uh to better code rather than
+27:34 spending lots and lots of time um
+27:36 specifying the perfect prompt.
+27:40 Nice.
+27:43 We have a question on like when to use
+27:45 different models if you do you ever like
+27:47 switch between Haiku Sonnet or Opus GBT.
+27:51 >> Yeah. So like this is a question that I
+27:55 think is you know in the past it used to
+27:58 be much more relevant. Um, so in
+28:01 previous AI tools that I've worked on
+28:03 and in like earlier runs at like this
+28:06 app before the before Opus 4 6 like
+28:08 December 2025 is a pretty memorable
+28:11 moment for like a step change and when
+28:13 everything got better and uh full
+28:15 context we've been working on intent
+28:16 since you know before that there there
+28:18 was a couple months leadup um when it
+28:21 was kind of going through a prototyping
+28:22 phase and we were seeing uh because we
+28:24 were all using Auggie CLI in you know
+28:27 T-Mox with six split panes and you know
+28:30 writing down specs. So like this
+28:32 workflow grew out organically and in
+28:34 those cases it was absolutely like hey
+28:36 use a smart model to write the spec use
+28:39 a fast model to verify it use a decent
+28:43 like middle of the road like like sonnet
+28:45 you know or um you know codeex 5.1 use
+28:48 one of those mo models with like medium
+28:50 thinking to you know do the
+28:52 implementation and then you put put it
+28:54 in this you know gracious feedback loop
+28:56 where you know the verifier looks at it
+28:59 the smart model writes the And you know,
+29:01 it's kind of like a gas town thing or
+29:03 you know what people are doing with with
+29:04 cloud code. And you can get a lot of,
+29:07 you know, juice out of that, but it's
+29:09 kind of like tuning a carburetor or
+29:11 something in a car. like there is an a
+29:12 sweet spot to get into and you kind of
+29:15 got to listen to it and like try a bunch
+29:16 of stuff and like it's uh it's a lot of
+29:20 time that when a good model comes along
+29:22 and or a better better model generation
+29:24 comes along a lot of those concerns just
+29:26 evaporate because like you know a model
+29:30 like 54 or model like Opus 46 they're
+29:32 just good at doing this stuff they can
+29:34 go so fast they can go so far they can
+29:36 drive the specs really really well and I
+29:38 find that just staying in those models
+29:40 is the sweet spot. But, uh, that's also
+29:43 like different strokes for different
+29:44 folks. You can get get this stuff done
+29:45 in a lot of different ways.
+29:48 >> Nice.
+29:50 >> Do you did you want to show the
+29:52 progress?
+29:53 >> Yeah. Yeah. Yeah. Sorry, I've been
+29:54 yapping away here. Let's
+29:56 >> No, no, it's good. We We have questions
+29:57 coming and it's good to answer them, but
+29:59 >> Yeah. Yeah. I guess we should also Yeah.
+30:01 Go ahead.
+30:02 >> Cool. Uh, hidden features. You can't see
+30:03 the key keystrokes that I'm doing, but
+30:06 uh yeah, it's um all the all of your
+30:09 favorite VS code. Command J to dismiss
+30:13 the terminal. Command B to dismiss the
+30:14 sidebar. Um especially when you're
+30:17 trying to like look at a browser. So,
+30:19 okay, this like looks like a website.
+30:22 [laughter] Um we've got So, what this
+30:24 has done, if you're just joining the
+30:25 stream, um we have this comped out in
+30:28 Figma where uh worked with a designer on
+30:31 this. they have, you know, seven or
+30:32 eight pages that has a bunch of, you
+30:36 know, content that's written out that's
+30:38 kind of done in this, you know, pretty
+30:39 specific way. Right now, there are a few
+30:41 things that like you can't see this with
+30:43 Figma comp, I'm sorry, but like there
+30:45 are a few things that are like visually
+30:46 off, but we're going to address those.
+30:48 Um, but it's been able to pull things
+30:50 like, you know, colors for gradients.
+30:52 It's obviously not making like an all
+30:55 purple and you know shad CN,
+30:59 you know, kind of the the tells. It used
+31:01 to be Bootstrap, now it's Chad and uh
+31:03 and purple gradients that you know, you
+31:05 you copied your homework from the from
+31:07 the open source repo. Um,
+31:10 cool. So, like I think we're we're doing
+31:13 we're doing pretty good on this. Um,
+31:16 so we haven't started one task and we
+31:19 have hotkeys up here in the corner.
+31:21 Another fun thing that like we have
+31:24 these views where you can see uh
+31:28 is that a bug? Come on.
+31:31 Okay, so we we have views that you can
+31:33 see like you know a tile view of like
+31:36 all the agents that have launched in the
+31:38 >> in your chat and you know these are like
+31:40 kind of the standard pane interactions
+31:42 that you would normally expect. Um, but
+31:45 my favorite one is to just take me back
+31:47 take me back to the planning spec when
+31:49 I've been like messing around and
+31:51 dragging tabs back and forth. It gives
+31:52 this two-up view of like here's
+31:54 everything that you've done. Here's the
+31:55 plan we've written so far. Here's the
+31:57 coordinator agent. Um, coordinator's a
+31:59 boss. He's the best person to talk to.
+32:01 Um,
+32:02 cool. So, we looked at this and it's
+32:05 pretty good. Um,
+32:08 next up we're gonna have it break out
+32:10 the header and footer. Um, because we're
+32:14 gonna go make some more pages. Like this
+32:15 page is okay and we're going to address
+32:17 like the problems on that page. But the
+32:19 magic of working in uh an agent
+32:22 orchestration workspace like intent is
+32:24 that you can do a bunch of stuff in
+32:26 parallel, especially when they're not
+32:27 uh, you know, going to be writing, you
+32:29 know, over top of the same lines in one
+32:32 file. Uh, so once again, I'm going to go
+32:34 back over to Figma where I'm going to
+32:36 grab a link from a comp and then full
+32:39 send. Let's go. And then what I'm also
+32:41 going to do is tee up the next prompt,
+32:44 which is a fun thing that we have. Um,
+32:48 where we can add tasks for and then cue
+32:51 and then cue them up. Um, so I'm going
+32:53 to quick speedun through getting all the
+32:57 rest of these of these little dudes
+33:00 lined up.
+33:03 Nice.
+33:09 Uh, we have a question about reviewing
+33:12 code output.
+33:14 Um, checking that it follows your
+33:16 standards and guidelines or how how do
+33:19 you or if do you review any code these
+33:24 days?
+33:25 >> Yeah. Uh, yes, I review a lot of code
+33:27 these days. Um it is the the thing
+33:31 that's exploding right now with our
+33:32 ability to write more is that uh we're
+33:35 writing a lot more code and so you know
+33:39 I do a mix of reviewing things in the
+33:42 application in intent um occasionally I
+33:45 still will open an IDE um but uh a lot
+33:49 of my work now is capable to happen
+33:52 directly in intent um so yeah so this is
+33:55 what we've got so far um So like I said,
+33:58 I preceded this project with a little
+34:01 bit of starting HTML. So I kind of had
+34:04 some stuff in like in distribution like
+34:06 the way that I liked it, you know, with
+34:08 some showing some Tailwind classes here
+34:09 and there. Um, you know, stuff like
+34:11 this. And so right like this is uh an
+34:15 area of the app where we're like
+34:16 continuing to iterate and we want to
+34:18 make this like the place where it's like
+34:20 nice to come and review code. Um, and if
+34:24 you spend a lot of time in like GitHub
+34:26 pull requests, uh, you'll know that
+34:28 there's uh there's room there's room to
+34:30 grow. Uh, there's uh definitely nicer
+34:33 interfaces to be able to to to do
+34:35 things. So, a lot of times, you know,
+34:37 code review comes in in a couple
+34:39 different flavors. One, there's just
+34:40 like looking at it and doing trying to
+34:42 do like a literate reading or an
+34:44 informed reading of the code. Um that's
+34:46 pretty good if you know you're pro you
+34:49 can keep the project in your head if you
+34:50 have the theory of the program pretty
+34:52 crisp in your mind that's good uh then
+34:55 the other side of code review u is
+34:58 really more like validation and QA which
+35:01 is like do the things that need to run
+35:04 you know do smoke tests run can you run
+35:06 the app and so for an app like intent
+35:08 that like we use every day and we're dog
+35:10 fooding really aggressively like every
+35:12 time I get a pull request for intent I
+35:14 pull it down onto my local put it in a
+35:15 work tree open it up uh run the server
+35:19 drive the app around uh we have
+35:20 automation for this but I also you know
+35:24 that's part of I think you know having
+35:26 uh a good grasp of like whether the
+35:28 thing you know can you exercise this
+35:30 feature do you know what's changed do
+35:31 you know what to look for you know um
+35:34 things like that so for stuff like this
+35:35 for like lighter weight like webdev
+35:37 tasks this is more like a vibe vibes
+35:39 based thing like okay there's a bunch of
+35:40 content coming in here it all looks good
+35:44 um you know the dev server is already
+35:46 running so I kind of know that I'll do
+35:48 things like run you know lint and
+35:50 formatting
+35:51 um and one of the features that we're
+35:54 going to be integrating soon is like
+35:56 direct integration with like npm or node
+35:59 scripts or like scripts make files
+36:01 things that we can automatically detect
+36:03 so that you can get affordance in the
+36:04 app for like running those things with
+36:05 with one click instead of having to uh
+36:08 come into the the terminal like a
+36:10 caveman and uh and type you know MPM.
+36:14 Uh, probably have one of these things.
+36:18 >> Sam, I'd love to double click on um
+36:22 verification testing and specifically
+36:24 with work trees. So, personally, I think
+36:28 a lot of people are new to work trees.
+36:30 And you know, when you first spin up a
+36:32 work tree, it doesn't have a lot of the
+36:34 things like maybe node modules or
+36:36 binaries installed. So, I know there's
+36:39 like setup scripts. Is that what you use
+36:41 to get, you know, intent ready to review
+36:45 once you spin up a work tree? And can
+36:47 you show us that flow?
+36:49 >> Yeah, so the so the setup script flow,
+36:52 um, you know, the one thing that I can't
+36:55 show easily on stream because I'm I'm
+36:57 only sharing one window at a time is
+36:59 that I usually roll with like four or
+37:01 five intent windows open um with
+37:04 different workspaces or different work
+37:05 trees. So like the command shiftn open a
+37:08 new window to show something is just
+37:10 absolutely tattooed into my brain. Um
+37:12 but you can you can get to it from here
+37:14 too. Uh just commandn of the the hotkey
+37:18 for creating new workspace. So we have a
+37:21 bunch of um of pre-anned templates for
+37:25 these types of scripts. Um so it's a
+37:28 little bit hidden or like on the on the
+37:29 homepage. You might miss it the first
+37:31 time that you look at the application,
+37:32 but on when you go to launch a project,
+37:34 there's uh a button to, you know, choose
+37:37 the script. The default that we have is
+37:39 to copy config files. Um, so you know,
+37:42 if you have, uh, you know, MV file or
+37:45 or, you know, the the other, you know,
+37:47 kind of uh, you know, common culprits,
+37:50 um, for monor repos, really helpful to
+37:52 do that recursively. Um, so you're not
+37:54 having to to do this yourself. Um, but
+37:57 there's also things like, you know, a
+37:58 script that will do the config file
+38:00 dance and then run pnpm install or or
+38:03 npm with yarn or pip with python, etc.
+38:07 Um, you can also write your own. You can
+38:09 also generate them from the repo. Uh,
+38:12 >> yeah, so it's um, you know, this is
+38:14 definitely a place where like the
+38:16 iteration loop might feel a little bit
+38:18 clunky right now. um you know th those
+38:21 types of setup scripts arguably you know
+38:23 might be well suited it checked into
+38:25 your repo is something else that we can
+38:27 run but uh there's absolutely a a good
+38:30 way to like write durable automation for
+38:32 this that you can use every time and you
+38:34 can you know kind of get access to like
+38:36 the path directories of that you know
+38:38 you're working with and stuff like that
+38:41 >> and I see a comment here and this is
+38:43 something that I had to learn as well is
+38:46 the kind of the locking or not being
+38:49 able to check out the same branch when
+38:51 you have it open in a work tree. Is
+38:52 there like some kind of mindset that
+38:54 someone has to adopt um to be using this
+38:57 new way of work trees?
+39:00 >> Yeah, I think so. Yeah. And and that
+39:03 that's tough because right like you know
+39:05 if you've been using git for any length
+39:07 of time like git is a huge universe of
+39:10 stuff like we didn't I personally I've
+39:12 been using git since like 2008. I didn't
+39:14 know work trees were a thing until like
+39:15 last June. Um, right. So, like they've
+39:18 been in there for a while, too. Uh,
+39:20 >> 2015, I think.
+39:21 >> Yeah. So, so only 11 years to get used
+39:24 to one of the hundreds of subcomands
+39:26 that you'll never ever run. So, right,
+39:28 like Git is already, you know, kind of a
+39:31 little bit to keep in your head. You
+39:32 know, version control is a thing that
+39:33 you develop a close personal
+39:35 relationship with because you run these
+39:36 commands day in and day out if you're
+39:38 doing software development, you know,
+39:40 full-time. And so yeah, so work trees
+39:42 are kind of weird and they take some
+39:45 getting used to for sure. Um I found
+39:47 that there's a learning curve that kind
+39:49 of once you get the comfort level of
+39:50 like hey I'm in a work this is in a work
+39:53 tree I can't check it out to main. If I
+39:54 want to get it into main or I want to
+39:56 see it in another branch my options are
+39:59 to merge it or you know use there is a
+40:02 force way to force the branches but I've
+40:04 never ever used that. Okay. Um because
+40:07 you can get disconnected heads basically
+40:10 where you have like the you know the
+40:13 branches like won't sync easily like so
+40:16 don't do it but like yeah so so one um
+40:20 so that's what kind of like why we put
+40:22 the terminal you know as a first class
+40:24 entity in here um and one because like
+40:28 and we put these the work trees in a
+40:30 place that's you know uh not cryptic not
+40:33 you know easy to discover you can
+40:35 control this the location of this
+40:37 directory um too. And then also we give
+40:41 you know some affordances like here at
+40:43 the top to be able to like quickly open
+40:46 this in any of your kind of like common
+40:49 apps or just copy the absolute path. Um,
+40:52 and a fun thing you can move the sidebar
+40:54 over
+40:56 the uh, so so yeah. So like the mental
+40:58 model for work trees is kind of like,
+41:00 yeah, they're an isolated thing. Spend
+41:02 time working in them, but in my mind
+41:05 they're not meant to be like super super
+41:07 longived. And if they are living for,
+41:11 you know, let's say multiple days or
+41:12 weeks or months, um, you'll commonly
+41:15 probably need to come into the terminal
+41:17 and like merge main back into them or
+41:20 merge your t your tracking branch. Um,
+41:23 and so that works really well, you know,
+41:24 in I'm also of the, you know, persuasion
+41:27 to do squash commits for most
+41:29 everything, especially into like main
+41:31 branches. So like for me having you know
+41:33 potentially a bunch of like ugly looking
+41:35 merge commits in a longunning feature
+41:38 branch is kind of a sin that gets washed
+41:40 away when you ultimately merge back into
+41:43 main like nobody's going to see that you
+41:45 had to you know merge main 65 times back
+41:47 into this branch. Um
+41:50 >> and for that cleanup and maintenance if
+41:52 you just you know uh delete a workspace
+41:55 in intent will that clean up the work
+41:57 tree on your local file system too?
+41:59 >> Yeah. So we have we have two modes for
+42:01 it. We have an archive which is like a
+42:03 softer deletion where it just doesn't
+42:05 show up in intent but the work tree
+42:06 physically stays on disk. And then we
+42:08 have a delete which you know eats the
+42:11 files gets gets rid of them but it's a
+42:13 branch in Git. So it's just like
+42:14 everything once you've deleted the work
+42:15 tree you're free to check it out
+42:17 wherever you want. Um, and what's funny
+42:20 is that like in the previous, you know,
+42:23 kind of, uh, prior to knowing what work
+42:25 trees were, I was working on a really,
+42:27 really busy project that had, you know,
+42:28 a bunch of PRs that I was doing active
+42:30 Devon, you know, maybe 20, 30 PRs to a
+42:32 day that I was reviewing some portion of
+42:34 and working on multiple features at a
+42:36 time. I had three checkouts of this
+42:38 project that I would manually move
+42:40 between and use like different VS Code
+42:42 themes to like know which one I'm
+42:44 working in to know if I'm like in main
+42:46 I'm checking out PRs or reviewing stuff
+42:48 or if I'm like in my feature branch and
+42:50 it was a lot to keep in my head. I had
+42:51 to like use different themes and that
+42:53 mode of working I feel like intent just
+42:55 makes you know 10 times easier.
+42:57 >> 100%.
+42:59 >> Cool. So yeah, let's let's see. So we've
+43:03 got a plan. And I should have clicked
+43:04 approve on this a few minutes ago. Um,
+43:07 so yeah, we're we're going to go full
+43:10 send on this thing. Um, it's going to
+43:11 extract header and footer into reusable
+43:14 components and then it's going to um
+43:16 build out the rest of these pages and
+43:18 then it's going to do a verification
+43:20 pass against Figma. So, that was kind of
+43:22 at the end of the last uh the last
+43:24 prompt that I dropped in here to be
+43:26 like, "Hey, now that you've like gotten
+43:28 this stood up, it's kind of like what
+43:30 you have to do with a with a person of
+43:32 being like, "Okay, did you really do it?
+43:33 Did you go and play what's different and
+43:35 look at each one of these pages and see
+43:37 if you actually got all of it?" Um,
+43:39 because the agents aren't perfect. You
+43:40 know, the uh they're they're they're
+43:43 bound to, you know, want to be helpful
+43:45 assistants and finish the problem. um
+43:47 sometimes even if they didn't really do
+43:49 their jobs.
+43:53 >> Sure. Got a question about code quality.
+43:56 Uh do you do anything in your workflow
+43:58 to detect stuff like code duplication,
+44:00 circular dependencies, any violations,
+44:04 stuff like that,
+44:06 >> you know, not beyond the normal kind of
+44:08 quality metrics that you get through
+44:10 linting, formatting, enforcement, and
+44:12 you know, use unit tests. Um I haven't
+44:15 really felt like I've been burned by
+44:17 like a circular dependency or type of
+44:19 thing. The duplication thing is real
+44:20 though. Um and that's a thing that you
+44:23 need to catch in code review. Um I feel
+44:26 like the verification the verifier at in
+44:28 intent and kind of part of the reason
+44:30 why it runs in this you know kind of you
+44:33 know multi-phase process where it goes
+44:35 from I'm going to plan I'm going to you
+44:37 know build out a build out a spec. I'm
+44:39 going to then kind of delegate and go
+44:41 through and then at the end I'm going to
+44:43 go through and do a verification pass.
+44:44 Um hopefully that verification pass is
+44:46 good enough to catch those types of
+44:48 things. But um I feel like this is a
+44:50 problem that I've seen humans do uh in
+44:52 equal measure of just being you know
+44:55 maybe a little lazy and not looking if
+44:57 the util for formatting the date the way
+44:59 that they want is actually checked into
+45:00 the project or if they're adding you
+45:02 know a third or fourth copy of it. Um
+45:05 and that said having I we have had good
+45:08 success with having a workspace where
+45:11 you just say hey go find duplicate code
+45:13 in this repo find code that has similar
+45:15 signatures you know keep like look at
+45:18 utils make sure that things are
+45:19 abstracted make sure that like things
+45:21 are you know reasonably dry and like you
+45:24 can usually go on a fishing trip and
+45:26 come back with something because most
+45:27 big code bases will will have an amount
+45:30 of duplication in them.
+45:32 >> Nice. We've got another question about
+45:34 timelines for Windows and Linux for
+45:36 intent. Sam, do you know more than me?
+45:38 From from what I know, it's like we
+45:40 don't have a
+45:41 >> um solid timeline.
+45:43 >> Yeah, we don't have a solid timeline for
+45:45 when we're we're going to be releasing
+45:46 them. But I can say that uh we have in
+45:49 we have internal testing that we've been
+45:51 that we've been working on with this and
+45:54 have have people hard at work to make
+45:57 sure that they are, you know, really
+45:59 high quality and, you know, meet the
+46:01 same expectations. Uh so yeah, soon is
+46:03 is what I can say. It's definitely a
+46:05 priority. It's like, you know, we have
+46:08 active work going on about these
+46:10 >> for sure. And I'll plug that if you
+46:11 haven't already, you can go into
+46:13 augment.com/intent
+46:15 and the drop down here will have a
+46:18 button for Windows and Linux to sign up
+46:20 to the wait list. So as soon as we do go
+46:22 live with Windows and Linux, you'll be
+46:24 notified. And again, a plug for Intent,
+46:27 a fully free app you can download. And
+46:29 also we um are giving GPT 5.4 for free
+46:34 inside intent and other augment products
+46:36 too. So you can try it completely for
+46:38 free right now on Mac. Um but if you're
+46:41 on Windows and Linux, you can try ogi
+46:42 with 5.4 for free as well if you'd like.
+46:47 Thanks.
+46:51 >> Cool. So uh so so it's it's cooking, but
+46:53 we can take a look at the uh at the at
+46:55 the dev server. Okay. In interest for
+46:57 time, I have Ros um ask me if you can
+47:00 touch on your sentry to PR use case. I
+47:02 think that's a really cool thing to show
+47:03 as well if you have time.
+47:05 >> Yeah. Yeah, for sure. Um so
+47:09 yeah
+47:14 we will
+47:17 so if you click on this on this ad add
+47:20 context um you get a
+47:24 you know uh oh here's a fun one um you
+47:28 so one you need to go in and in
+47:34 word no in accounts Sorry. Um, we've
+47:36 moved this. Um, you need to come into
+47:39 the connections tab and connect to
+47:42 GitHub. This is just standard OOTH
+47:44 connection that lets us, you know,
+47:46 interact with your GitHub on on your
+47:47 behalf. Um, through their API and oh,
+47:50 I'm sorry, on on Sentry. So, the Sentry
+47:52 one, you you do need to mint in an an
+47:54 API key to do this right now. It's
+47:56 definitely on target for us to be able
+47:57 to, you know, have a really smooth rail
+47:59 here. Um, I also kind of have two modes
+48:02 of using this. I also use the Sentry
+48:03 CLI, which is quite good. I have that
+48:05 installed and set up on my computer and
+48:07 is uh a kind of a quick way that I can
+48:09 be like, hey, I there's a link to the
+48:11 sentry issue. Take a look at it. But we
+48:13 do have a way here where if you click on
+48:15 the add context, we will pull the
+48:18 context for you know a uh you know for
+48:22 your specific sentry projects. Um
+48:24 >> can [snorts] you also briefly um touch
+48:26 on what sentry is as well just in case.
+48:28 >> Oh yeah, so Sentry is super cool. Um, so
+48:31 basically every time that you have a,
+48:34 you know, any type of, you know,
+48:36 website, application, mobile app, game,
+48:39 anything, that thing is going to be
+48:40 throwing more errors than you ever see
+48:42 in dev mode. Um, no matter how
+48:45 rigorously you test or or no matter how
+48:48 uh, you know, hard you go on the
+48:50 application, things will happen that you
+48:52 that you don't expect. Um, and so right
+48:56 like um,
+48:58 yeah, so so Century is really cool. I've
+49:00 actually uh you know got a lot of
+49:02 history with Sentry. I'd been an early
+49:04 customer of theirs in like 2014 and then
+49:07 um did a bunch of uh open source work
+49:10 with them in 2014 and 2015 uh when I was
+49:13 still running my consultancy. Um and
+49:15 when Sentry was like four or five people
+49:16 and they're a huge company right now. Um
+49:19 yeah, they're super cool. Um yeah, we
+49:22 use them basically for everything. I
+49:23 think it's like the best-in-class
+49:24 solution for for error tracing in in
+49:27 products and it gets really really
+49:29 detailed stuff. Um, so this is one of my
+49:32 favorite uh ones where if you run intent
+49:34 out of the downloads directory um this
+49:37 error just spews like radioactive like
+49:40 [laughter] a like a piece of uranium or
+49:43 something where uh it's it's not
+49:45 actually anything but uh it's not
+49:47 nothing and Sentry gets a lot of it. So
+49:49 for for something like this, I'd say
+49:51 like, "Hey, big dog, fix this error."
+49:55 >> Big dog.
+49:57 >> Yeah. If you talk to the models with the
+49:59 big dog lingo, it'll occasionally throw
+50:02 you the big shaka emoji when it's done.
+50:04 Um, [laughter] and so this is also one
+50:06 where I use the rapid fire mode for
+50:08 stuff like this, which all it is is it's
+50:10 going to create a workspace in the
+50:11 background and like I can walk away and
+50:12 like hit check as many times as I need
+50:15 to. Yeah. So, um, yeah, I I think we've
+50:20 got, uh, we've got some stuff cooking
+50:21 now. So, it's so it's doing the verifier
+50:23 stuff. I realized I had by queuing
+50:26 things up to like make them fire rapidly
+50:28 in the stream, it hadn't delegated this
+50:30 extract footer. Um, so we can just run
+50:33 that now. So, we'll we'll just say run
+50:35 it. Um, and that's actually like a cool
+50:37 like
+50:38 >> like a button.
+50:40 >> Yeah. Yeah. So in like the like the OJ
+50:44 versions of intent like you know when we
+50:47 were still prototyping on it like the
+50:49 first take was actually that it just
+50:50 wrote the task list and then you needed
+50:52 to like review it and click through and
+50:55 decide what was capable of running
+50:58 parallel and it always felt like a oh
+51:01 man I've really got to think about this
+51:03 stuff and then we did an experiment that
+51:05 was like well you know the coordinator
+51:07 wrote this plan it can see everything it
+51:09 can read every document ment it can kind
+51:12 of anticipate because one of the things
+51:13 for complex changes that you'll find in
+51:15 these plans is that the agents will
+51:16 usually have like oh I'm going to work
+51:18 on this file I'm going to work on like
+51:19 this method I'm going to do these things
+51:20 to it um and we found that like with
+51:24 just only a smidge of prompting we could
+51:26 get the delegator to or the coordinator
+51:28 to delegate agents in waves uh very
+51:31 effectively uh to the point where like
+51:34 it can get into uh you know some some
+51:38 bad cases occasionally where it
+51:41 have agents kind of fighting over o over
+51:43 files. But um in my experience and again
+51:45 somebody who's like using this thing
+51:47 like 10 hours a day um when multiple
+51:50 workspaces all day long, I rarely bump
+51:52 into that. Um but yeah, you can just you
+51:55 can just click play on the on the tasks
+51:57 and and they'll go off and uh and and
+52:00 run themselves just like they would if
+52:02 the coordinator team.
+52:03 >> Do you mind giving a high level of kind
+52:05 of like the default team? I know we have
+52:07 a coordinator implementer and then if
+52:10 you can touch on the verifier as well
+52:11 which I believe is currently going I
+52:12 think that'd be great to just give
+52:14 people a sense of like why a team works
+52:17 and and what what it comprises of.
+52:20 >> Yeah. Yeah. Exactly. The uh so the
+52:22 coordinator is the the main like kind of
+52:26 default mode. I think it's the best way
+52:28 to use intent is to always start with a
+52:30 workspace where you create a coordinator
+52:32 and you give it your highle plan. Um,
+52:34 and this can be really high level. Now,
+52:36 you can spend a lot of time typing out
+52:38 prompts, but like I we found that like
+52:40 you can actually just say like, "Hey,
+52:42 take a look at this thing. Hey, fix this
+52:43 thing." And it'll go out and write a
+52:44 write a spec. And then you iterate that.
+52:46 So, the coordinator is kind of like, you
+52:48 know, the the boss. And then it will
+52:51 farm out to implementers. And so
+52:53 implementers are, you know, pretty
+52:55 generic. And here's the thing, right?
+52:57 Like this stuff is not emote. It's not
+53:00 secret. Like here are the prompts.
+53:02 they're in the application. You can edit
+53:04 these. You can change this behavior. Uh
+53:06 it we tell you when when you do when you
+53:08 have and like you can reset back to base
+53:11 if you want. But um you know this is how
+53:13 we're prompting this thing. Um and so
+53:16 and the coordinator similarly has these
+53:18 these rules and like how we developed
+53:20 these prompts over a few months of of
+53:23 doing this and you know accumulated you
+53:25 know mult many years of having you know
+53:28 separately you know worked with with
+53:30 agents. Um and so essentially the the
+53:33 main members of the team are the
+53:35 coordinator, the verifier and the
+53:37 implement. Um the imple does stuff, the
+53:40 coordinator plans it the verify the
+53:42 verifier checks it. So you know this is
+53:45 that kind of you know it creates enough
+53:47 play where right like agents are they're
+53:52 you know jokingly they're stochastic
+53:54 parrots right like they're going to do
+53:56 things a little bit differently each
+53:58 time. They're going to have some play.
+54:00 there's some smear shmear in their
+54:01 distribution of like you know what
+54:03 they're capable of doing but you can
+54:05 steer them through in context learning
+54:07 and prompting that's effectively the
+54:09 prompting that we're doing and the and
+54:11 the context that like augment injects
+54:13 into this and so there's no like big
+54:15 hidden system prompt other than like hey
+54:17 this is your intent you're an agent this
+54:19 is what time it is this is what model
+54:20 you're using you know here's the kind of
+54:22 here's like the working directory that
+54:24 you're in um and then it's just kind of
+54:26 you know these uh these specialist
+54:28 prompts for the coordinator and
+54:29 implement, right? So those things go,
+54:32 you know, pretty uh it's like enough
+54:34 that they can do really really
+54:36 specialized work. Now, a cool kind of
+54:39 extension of this is that like if you
+54:41 have a thing that you want to do that's
+54:44 very specific, you can also write that.
+54:45 You can add your own custom specialists.
+54:48 Um you know, that's how the the UI
+54:50 designer started. Like this was a this
+54:53 is one that will do a bunch of of you
+54:56 know, design token extraction, right?
+54:58 like um [snorts] agents are are are just
+55:01 like people where they are really lazy
+55:03 and they'll do like the inline tailwind,
+55:06 you know, pixel values and stuff instead
+55:08 of using the design tokens, especially
+55:10 if you have like if you have that
+55:12 pattern elsewhere in your codebase
+55:13 because some pesky human put it in
+55:15 there, right? Like um you know they'll
+55:18 they'll repeat what they see.
+55:20 >> I got a question. What's the difference
+55:21 between the implementer and the
+55:23 developer agent?
+55:25 Ah yeah. So the developer is essentially
+55:28 the a combination of the sorry clicking
+55:32 around like crazy here. Um
+55:35 the developer is like a combination of
+55:39 the coordinator and the implement. Like
+55:43 the developer will write plans but the
+55:45 developer will also just go and do them.
+55:47 Um, so like the um,
+55:52 you know, it's it's got a lot of these
+55:53 same things where it's going to write us
+55:54 back. It's going to look at stuff, but
+55:56 it's going to just, you know, kind of
+55:58 grind away at a problem without firing
+56:01 off a a bunch of a bunch of agents. And,
+56:05 you know, I think that this is more of
+56:06 like trying to meet people where they're
+56:08 at with like this is more like how, you
+56:11 know, a single threaded agent pain chat
+56:13 works. And there are some tasks that
+56:15 this is probably faster for. Um, but
+56:18 also it's like it's just like the
+56:20 standalone option if you don't want to
+56:21 have a bunch of subprocesses like
+56:24 running or you have something that's
+56:25 like maybe uh pretty cut and dry and
+56:28 creating a custom agent with a developer
+56:30 will will go and run that stuff down for
+56:32 you and still write a plan and make like
+56:34 good documents and and do best practices
+56:36 for that stuff.
+56:37 >> Another question here. Are the
+56:38 specialist agents detected and
+56:40 dispatched automatically and can you
+56:42 prompt to trigger and force uh one of
+56:45 them? So the the coordinator is prompted
+56:48 to dispatch implementers and verifiers
+56:51 automatically. Um but you can manually
+56:54 through prompting just say like okay so
+56:57 let's do this live. Hey bro, let's use
+57:01 the um UI designer
+57:05 specialist
+57:09 to do a separate pass at this. Thanks
+57:16 dog.
+57:19 Really hope that this works. [snorts] It
+57:22 will. Um so it's going to it's going to
+57:24 read this back. Um,
+57:27 >> I've also seen you've been I think
+57:28 you're able to like at mention the um
+57:31 persona as well
+57:35 >> plausible.
+57:37 [laughter]
+57:38 You can cool
+57:42 use this app every day. Didn't know
+57:44 that.
+57:44 >> Experimental feature.
+57:46 >> Uh yeah. Well, a bunch of the, you know,
+57:49 the the folks working on this are are
+57:51 pretty pretty awesome and like we have a
+57:53 lot of little joyful things that have
+57:55 been put into the application. There's a
+57:57 lot of a lot of care went that went into
+57:59 some of the the UI choices. Um,
+58:02 >> okay, let me add a task and spin up a UI
+58:04 designer to polish off all the pages,
+58:05 fixing all the issues that the verifier
+58:07 found.
+58:08 >> Great. Um, in the interest of time, I
+58:11 think we only have two minutes left, so
+58:12 I'll let you show off whatever else you
+58:15 want to show off. any cool pro tips or
+58:17 tricks that we haven't covered? Um
+58:20 >> ah yeah yeah yeah I I made some notes
+58:22 before. So um so yeah so using multiple
+58:25 windows uh that's the one thing that I
+58:27 haven't shown um because I'm just like
+58:29 showing one one window at a time but
+58:31 like I will often have multiple windows
+58:33 open so that I can see if I have
+58:34 multiple work trees going. That's like
+58:37 definitely a thing that works pretty
+58:39 well. Um, the uh the MCP integrations,
+58:42 like I said, like the Figman MCP
+58:44 integrations, I was honestly shocked at
+58:47 how well it worked the first time that I
+58:48 used it because it's always been the
+58:50 classic thing of like, oh man, you've
+58:51 got to shovel all of this stuff from one
+58:53 app into another. You've got to click to
+58:55 copy. You've got to, you know, look at
+58:56 all the colors. And it's kind of, you
+58:58 know, it could be hard if the Figma
+59:00 file, you know, depending on how it's
+59:01 made. Um, so setting up the custom MCP
+59:03 servers, uh, with Auggie is like super
+59:07 super good. Um, on that note, you do
+59:10 have to be a little bit cautious. Like
+59:12 just going and lightening it up like a
+59:14 Christmas tree and having 11 MCP servers
+59:16 on at once is probably uh not a a great
+59:21 thing because right like ultimately
+59:23 there's context management that needs to
+59:24 go on and MCP servers what they're doing
+59:27 is they're adding tool definitions into
+59:29 the system prompt. Um, so and that's
+59:31 kind of like I think why the skills
+59:33 ecosystem has developed like it is where
+59:35 it's a little bit more
+59:35 autodiscocoverable and and stuff like
+59:37 that. Um, but like the MCP stuff when
+59:39 used appropriately and like in a
+59:42 targeted way makes this uh, you know,
+59:44 multiplicatively better. Um,
+59:48 and yeah, I think that the other things
+59:50 are just like, you know, this is a, you
+59:53 know, I see this as like a yes and
+59:55 product. Like, yes, it does, you know,
+59:57 make it so that you don't have to spend
+59:58 a lot of time in an IDE, but it doesn't
+1:00:00 obviate the need to use an IDE. So, like
+1:00:03 I have an IDE open. Usually, I like take
+1:00:05 a look at stuff in an in an IDE. You
+1:00:08 know, it is where I'm f familiar. If I'm
+1:00:10 going to be writing a lot of code and
+1:00:12 not using AI, like I'm still opening an
+1:00:14 ID, I still use the the CLI quite a bit
+1:00:17 too. Um, so like Auggie CLI really good.
+1:00:20 It's goated at doing stuff like when
+1:00:22 you're especially if you you know have
+1:00:24 if I have a quick question about a
+1:00:25 codebase if I have a thing that I want
+1:00:27 to see if I want to have you know like a
+1:00:29 direct control like the one thing that
+1:00:31 intent adds is like you know this kind
+1:00:34 of additional stuff all these things you
+1:00:36 need to do to you know make it you know
+1:00:38 go really far really fast in a short
+1:00:40 amount of time. Um, the Auggie CLI has a
+1:00:44 lot of those same features, but it's
+1:00:45 also like does it in a like super super
+1:00:48 targeted way and it's super fast and
+1:00:50 like works anywhere. So, I run it on
+1:00:51 servers, I run it uh, you know, on my
+1:00:54 openclaw setup. Like I've got it I've
+1:00:55 got it everywhere.
+1:01:01 Oh, AJ, you're muted.
+1:01:04 Sorry. Okay. Thank you so much, Sam. I
+1:01:06 think that's all we have time for today.
+1:01:08 I really enjoyed that. There's so much I
+1:01:11 learned from you. So yeah, thank you
+1:01:14 again. And um to the audience, if you
+1:01:16 want to try Intent, you can go to
+1:01:19 augmentode.com/intent
+1:01:21 right now and download it for free and
+1:01:23 use it for free with our GPT 5.4 Pro
+1:01:27 Freomo uh promo free promo. [laughter]
+1:01:32 Um yeah. Okay, I think we'll end end the
+1:01:35 stream here. Thank you so much.
+1:01:37 >> Yeah, thanks a lot.
