@@ -17,18 +17,22 @@
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "Article", "headline": "IA Agêntica: Progressão do Uso de Modelos de Linguagem", "description": "Meu nome é Inseo. Hoje vamos abordar IA agêntica como uma progressão do uso de modelos de linguagem. O roteiro da aula inclui: visão geral dos modelos de linguagem, como os utilizamos, limitações...", "author": {"@type": "Person", "name": "Inseo Bong"}, "publisher": {"@type": "Organization", "name": "Leituras — Podcasts & Vídeos Traduzidos"}, "inLanguage": "pt-BR", "isAccessibleForFree": true, "url": "https://x.com/noisyb0y1/status/2041884593087803841", "articleSection": ["INTRODUÇÃO — IA AGÊNTICA COMO PROGRESSÃO DO USO DE MODELOS DE LINGUAGEM", "COMO OS MODELOS SÃO TREINADOS", "USANDO MODELOS DE LINGUAGEM VIA API", "BOAS PRÁTICAS DE PROMPTING", "EXEMPLOS PRÁTICOS DE PROMPTING", "DETECÇÃO DE INTENÇÃO E ROTEAMENTO", "LIMITAÇÕES COMUNS DOS MODELOS DE LINGUAGEM", "RAG — GERAÇÃO AUMENTADA POR RECUPERAÇÃO", "USO DE FERRAMENTAS E FUNCTION CALLING", "RACIOCÍNIO, PLANEJAMENTO E AÇÃO", "WORKFLOWS AGÊNTICOS NA PRÁTICA", "PADRÕES DE DESIGN AGÊNTICOS", "RESUMO E RECOMENDAÇÕES"]}
 </script>
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../../css/style.css">
 </head>
 <body class="page-article" data-storage-key="reading_2041884593087803841_">
 <div class="progress" id="progress"></div>
 <div class="reading-pct" id="readingPct"></div>
 <article class="container">
-  <a href="../index.html" class="back-home">← Voltar ao índice</a>
+  <a href="../../index.html" class="back-home">← Voltar ao índice</a>
   <header>
     <h1>IA Agêntica: Progressão do Uso de Modelos de Linguagem</h1>
     <p class="meta"><cite>Inseo Bong · Stanford Online</cite></p>
     <p class="meta"><a href="https://x.com/noisyb0y1/status/2041884593087803841" target="_blank" rel="noopener">🐦 Ver no Twitter/X</a></p>
   </header>
+  <div class="lang-bar">
+    <a class="lang-btn active" href="#" aria-label="Português">🇧🇷 Português</a>
+    <a class="lang-btn" href="../original/ia-agentica-progressao-uso-modelos-linguagem-stanford.html" aria-label="English">🇺🇸 English</a>
+  </div>
   <div class="theme-bar">
     <button class="theme-btn active" onclick="setTheme('light')">☀️ Sépia</button>
     <button class="theme-btn" onclick="setTheme('cool')">🌤️ Claro</button>
@@ -54,41 +58,41 @@
   </nav>
 <section>
 <h2 id="s1">INTRODUÇÃO — IA AGÊNTICA COMO PROGRESSÃO DO USO DE MODELOS DE LINGUAGEM</h2>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0001.jpg" alt="Slide — 0:00" loading="lazy"><figcaption class="slide-caption">Slide — 0:00</figcaption></figure>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0002.jpg" alt="Slide — 0:10" loading="lazy"><figcaption class="slide-caption">Slide — 0:10</figcaption></figure>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0003.jpg" alt="Slide — 1:50" loading="lazy"><figcaption class="slide-caption">Slide — 1:50</figcaption></figure>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0004.jpg" alt="Slide — 3:50" loading="lazy"><figcaption class="slide-caption">Slide — 3:50</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0001.jpg" alt="Slide — 0:00" loading="lazy"><figcaption class="slide-caption">Slide — 0:00</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0002.jpg" alt="Slide — 0:10" loading="lazy"><figcaption class="slide-caption">Slide — 0:10</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0003.jpg" alt="Slide — 1:50" loading="lazy"><figcaption class="slide-caption">Slide — 1:50</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0004.jpg" alt="Slide — 3:50" loading="lazy"><figcaption class="slide-caption">Slide — 3:50</figcaption></figure>
 <p>Meu nome é Inseo. Hoje vamos abordar IA agêntica como uma progressão do uso de modelos de linguagem. O roteiro da aula inclui: visão geral dos modelos de linguagem, como os utilizamos, limitações comuns, métodos que melhoram essas limitações, e a transição para modelos de linguagem agênticos e seus padrões de design.</p>
 <p>O QUE SÃO MODELOS DE LINGUAGEM</p>
 <p>Um modelo de linguagem é um modelo de machine learning que prevê a próxima palavra dado um texto de entrada. Se a entrada é &ldquo;os estudantes abrem seus&rdquo;, o modelo pode prever que a palavra mais provável é &ldquo;livros&rdquo; ou &ldquo;laptops&rdquo;. Se o modelo foi treinado com um grande corpus, ele gera a probabilidade da próxima palavra. Para continuar gerando, o output se torna o input do próximo passo, e o modelo continua gerando palavra por palavra.</p>
 </section>
 <section>
 <h2 id="s2">COMO OS MODELOS SÃO TREINADOS</h2>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0005.jpg" alt="Slide — 7:00" loading="lazy"><figcaption class="slide-caption">Slide — 7:00</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0005.jpg" alt="Slide — 7:00" loading="lazy"><figcaption class="slide-caption">Slide — 7:00</figcaption></figure>
 <p>O treinamento tem duas partes. O pré-treinamento usa um grande corpus de textos coletados da internet, livros e fontes publicamente disponíveis, treinado com o objetivo de predição do próximo token. Depois do pré-treinamento, o modelo é bom em prever palavras, mas não é fácil de usar diretamente.</p>
 <p>O pós-treinamento inclui instruction following training (SFT — supervised fine-tuning), que adapta o modelo para seguir instruções específicas, tornando-o mais fácil de usar e capaz de responder em estilos específicos. Depois vem o RLHF (reinforcement learning with human feedback), que alinha o modelo às preferências humanas usando esquemas de recompensa.</p>
 </section>
 <section>
 <h2 id="s3">USANDO MODELOS DE LINGUAGEM VIA API</h2>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0006.jpg" alt="Slide — 8:50" loading="lazy"><figcaption class="slide-caption">Slide — 8:50</figcaption></figure>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0007.jpg" alt="Slide — 9:40" loading="lazy"><figcaption class="slide-caption">Slide — 9:40</figcaption></figure>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0008.jpg" alt="Slide — 10:20" loading="lazy"><figcaption class="slide-caption">Slide — 10:20</figcaption></figure>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0009.jpg" alt="Slide — 11:40" loading="lazy"><figcaption class="slide-caption">Slide — 11:40</figcaption></figure>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0010.jpg" alt="Slide — 12:50" loading="lazy"><figcaption class="slide-caption">Slide — 12:50</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0006.jpg" alt="Slide — 8:50" loading="lazy"><figcaption class="slide-caption">Slide — 8:50</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0007.jpg" alt="Slide — 9:40" loading="lazy"><figcaption class="slide-caption">Slide — 9:40</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0008.jpg" alt="Slide — 10:20" loading="lazy"><figcaption class="slide-caption">Slide — 10:20</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0009.jpg" alt="Slide — 11:40" loading="lazy"><figcaption class="slide-caption">Slide — 11:40</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0010.jpg" alt="Slide — 12:50" loading="lazy"><figcaption class="slide-caption">Slide — 12:50</figcaption></figure>
 <p>Os modelos são usados em diversas aplicações: assistentes de código, co-pilotos de domínio específico e interfaces conversacionais como ChatGPT. Para usar esses modelos, você pode fazer chamadas de API para provedores na nuvem ou hospedar modelos localmente — até em dispositivos móveis para modelos suficientemente pequenos.</p>
 <p>O processo é: preparar texto de entrada como instrução, formatar na estrutura de API do provedor, enviar a chamada, o provedor gera o output na nuvem e responde. Seu software então processa o output e pode fazer chamadas subsequentes ao modelo.</p>
 </section>
 <section>
 <h2 id="s4">BOAS PRÁTICAS DE PROMPTING</h2>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0011.jpg" alt="Slide — 13:30" loading="lazy"><figcaption class="slide-caption">Slide — 13:30</figcaption></figure>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0012.jpg" alt="Slide — 14:40" loading="lazy"><figcaption class="slide-caption">Slide — 14:40</figcaption></figure>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0013.jpg" alt="Slide — 17:10" loading="lazy"><figcaption class="slide-caption">Slide — 17:10</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0011.jpg" alt="Slide — 13:30" loading="lazy"><figcaption class="slide-caption">Slide — 13:30</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0012.jpg" alt="Slide — 14:40" loading="lazy"><figcaption class="slide-caption">Slide — 14:40</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0013.jpg" alt="Slide — 17:10" loading="lazy"><figcaption class="slide-caption">Slide — 17:10</figcaption></figure>
 <p>Como o input é texto livre, como você prepara seu prompt é crítico. Estratégias bem conhecidas incluem:</p>
 <p>Escrever instruções claras e descritivas em detalhe — o modelo não lê sua mente. Incluir exemplos few-shot para demonstrar o formato de output desejado. Fornecer contexto e referências relevantes para reduzir alucinações. Habilitar raciocínio Chain of Thought (CoT) — dar tempo ao modelo para pensar. Quebrar tarefas complexas em etapas simples encadeadas. Manter rastreamento sistemático e logging para debugging e auditoria. E ter avaliação automatizada desde o início do desenvolvimento.</p>
 </section>
 <section>
 <h2 id="s5">EXEMPLOS PRÁTICOS DE PROMPTING</h2>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0014.jpg" alt="Slide — 18:10" loading="lazy"><figcaption class="slide-caption">Slide — 18:10</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0014.jpg" alt="Slide — 18:10" loading="lazy"><figcaption class="slide-caption">Slide — 18:10</figcaption></figure>
 <p>Instruções claras: em vez de uma solicitação curta, descreva em detalhe para que o modelo saiba exatamente o que gerar. Few-shot: forneça exemplos de input e output no estilo desejado, e depois faça sua pergunta real — o modelo seguirá o padrão.</p>
 <p>Contexto e referências: use templates como &ldquo;responda apenas com base no artigo fornecido&rdquo; para RAG. Se o modelo não encontrar a resposta, instrua-o a dizer que não encontrou.</p>
 <p>Chain of Thought: em vez de pedir a resposta direta, peça ao modelo para elaborar sua própria solução primeiro e depois comparar. Isso dá ao modelo a oportunidade de prestar atenção a todos os inputs e gerar respostas mais precisas.</p>
@@ -96,26 +100,26 @@
 </section>
 <section>
 <h2 id="s6">DETECÇÃO DE INTENÇÃO E ROTEAMENTO</h2>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0015.jpg" alt="Slide — 23:30" loading="lazy"><figcaption class="slide-caption">Slide — 23:30</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0015.jpg" alt="Slide — 23:30" loading="lazy"><figcaption class="slide-caption">Slide — 23:30</figcaption></figure>
 <p>Em vez de processar o prompt de entrada como está, você pode detectar a intenção e direcionar para diferentes handlers de prompt. Isso é conhecido como prompt router. Com base no tipo de consulta, você pode usar um prompt mais simples com um modelo mais simples — isso ajuda tanto em custos operacionais quanto em gerar outputs mais apropriados.</p>
 </section>
 <section>
 <h2 id="s7">LIMITAÇÕES COMUNS DOS MODELOS DE LINGUAGEM</h2>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0016.jpg" alt="Slide — 26:50" loading="lazy"><figcaption class="slide-caption">Slide — 26:50</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0016.jpg" alt="Slide — 26:50" loading="lazy"><figcaption class="slide-caption">Slide — 26:50</figcaption></figure>
 <p>Alucinação: modelos às vezes geram informações incorretas com alta confiança. Corte de conhecimento: os dados de treinamento têm uma data de corte. Falta de atribuição: o modelo não diz de onde tirou a informação. Privacidade de dados: treinado com dados públicos, sem acesso a dados proprietários. Contexto limitado: embora esteja aumentando rapidamente, contextos mais longos trazem custos operacionais e latência.</p>
 </section>
 <section>
 <h2 id="s8">RAG — GERAÇÃO AUMENTADA POR RECUPERAÇÃO</h2>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0017.jpg" alt="Slide — 32:00" loading="lazy"><figcaption class="slide-caption">Slide — 32:00</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0017.jpg" alt="Slide — 32:00" loading="lazy"><figcaption class="slide-caption">Slide — 32:00</figcaption></figure>
 <p>Para abordar essas limitações, RAG (Retrieval Augmented Generation) é uma das soluções. Reduz alucinações usando referências relevantes reais. Fornece citações porque sabe de onde a referência vem. Permite usar seus próprios dados proprietários. E faz bom uso de contextos limitados porque seleciona apenas dados relevantes.</p>
 <p>O processo: indexe seus dados dividindo-os em chunks menores, converta para espaço de embedding usando um modelo de embedding e armazene em um banco de dados vetorial. Quando uma consulta chega, converta para embedding, faça busca por vizinhos mais próximos, selecione os top-K chunks relevantes e coloque como parte do prompt.</p>
 <p>Métodos alternativos incluem busca web em tempo real e knowledge graphs (GraphRAG).</p>
 </section>
 <section>
 <h2 id="s9">USO DE FERRAMENTAS E FUNCTION CALLING</h2>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0018.jpg" alt="Slide — 35:20" loading="lazy"><figcaption class="slide-caption">Slide — 35:20</figcaption></figure>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0019.jpg" alt="Slide — 38:20" loading="lazy"><figcaption class="slide-caption">Slide — 38:20</figcaption></figure>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0020.jpg" alt="Slide — 39:00" loading="lazy"><figcaption class="slide-caption">Slide — 39:00</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0018.jpg" alt="Slide — 35:20" loading="lazy"><figcaption class="slide-caption">Slide — 35:20</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0019.jpg" alt="Slide — 38:20" loading="lazy"><figcaption class="slide-caption">Slide — 38:20</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0020.jpg" alt="Slide — 39:00" loading="lazy"><figcaption class="slide-caption">Slide — 39:00</figcaption></figure>
 <p>O modelo é text-in, text-out. Não executa ações nem extrai informações externas sozinho. Tool usage ou function calling resolve isso — permite obter informações em tempo real ou executar computações gerando código.</p>
 <p>Exemplo: se alguém pergunta &ldquo;qual é o clima em São Francisco?&rdquo;, o modelo não sabe por si só. Mas se instruído previamente, gera um output no formato de chamada de API (get_weather com argumento &ldquo;San Francisco&rdquo;). O software recebe esse texto, faz a chamada real à API do clima, e retorna o resultado ao modelo para gerar uma resposta amigável.</p>
 <p>O modelo também pode gerar código Python para ser executado em um sandbox separado.</p>
@@ -130,7 +134,7 @@
 </section>
 <section>
 <h2 id="s11">WORKFLOWS AGÊNTICOS NA PRÁTICA</h2>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0021.jpg" alt="Slide — 45:10" loading="lazy"><figcaption class="slide-caption">Slide — 45:10</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0021.jpg" alt="Slide — 45:10" loading="lazy"><figcaption class="slide-caption">Slide — 45:10</figcaption></figure>
 <p>Aplicações reais incluem: desenvolvimento de software (geração de código, correção de bugs), pesquisa e análise (busca, síntese, relatórios) e automação de tarefas.</p>
 <p>A diferença fundamental: com o mesmo modelo, se você fizer uma solicitação direta, o modelo pode não conseguir resolver. Mas se colocar a tarefa em formato agêntico, o modelo faz tarefas mais complexas usando modelos que sozinhos não conseguiriam. É por isso que o uso agêntico está expandindo os limites do que podemos fazer com IA.</p>
 </section>
@@ -144,7 +148,7 @@
 </section>
 <section>
 <h2 id="s13">RESUMO E RECOMENDAÇÕES</h2>
-<figure class="slide-figure"><img class="slide-img" src="../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0022.jpg" alt="Slide — 57:00" loading="lazy"><figcaption class="slide-caption">Slide — 57:00</figcaption></figure>
+<figure class="slide-figure"><img class="slide-img" src="../../img/agentic-ai-progressao-uso-modelos-linguagem-stanford/slide-0022.jpg" alt="Slide — 57:00" loading="lazy"><figcaption class="slide-caption">Slide — 57:00</figcaption></figure>
 <p>O uso agêntico de modelos de linguagem é uma progressão e extensão do uso simples. As boas práticas de uso simples continuam aplicáveis, mas agora temos métodos adicionais: recuperação, busca, uso de ferramentas, workflows com diferentes tipos de prompts.</p>
 <p>O modelo serve como núcleo de raciocínio, enquanto ferramentas e recuperação permitem interagir com o mundo externo. Combinando tudo, alcançamos tarefas complexas que o uso simples de input-output não conseguiria.</p>
 <p>Para avaliação de agentes: usar LLM-as-a-judge com padrão de reflexão (feedback de &ldquo;engenheiro júnior&rdquo; revisado por &ldquo;engenheiro sênior&rdquo;) melhora significativamente a qualidade da avaliação.</p>
@@ -159,6 +163,6 @@
     <button class="dismiss" onclick="dismissResume()">✕</button>
   </div>
 </div>
-<script src="../js/reader.js"></script>
+<script src="../../js/reader.js"></script>
 </body>
 </html>

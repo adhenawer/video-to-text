@@ -105,6 +105,13 @@ function htmlToMarkdown(articleHtml) {
 
 export default {
   async fetch(request, env, ctx) {
+    // 301 redirect for legacy /leituras/ URLs
+    const url = new URL(request.url);
+    if (url.pathname.startsWith("/leituras/")) {
+      const newPath = url.pathname.replace("/leituras/", "/posts/pt_br/");
+      return Response.redirect(`${url.origin}${newPath}`, 301);
+    }
+
     if (!wantsMarkdown(request)) {
       return fetch(request);
     }

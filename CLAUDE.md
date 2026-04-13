@@ -16,7 +16,7 @@ video-to-text/
 │   ├── js/
 │   │   └── reader.js           ← JS de leitura (tema, progresso, resume)
 │   ├── img/                    ← slides extraídos de apresentações
-│   ├── leituras/               ← artigos HTML individuais
+│   ├── posts/pt_br/               ← artigos HTML individuais
 │   ├── robots.txt              ← permite crawling, aponta para sitemap
 │   ├── sitemap.xml             ← URLs para Google
 │   └── llms.txt                ← índice para crawlers de LLMs
@@ -143,13 +143,13 @@ python3 src/build_html.py \
   'Subtítulo / Fonte' \
   'https://youtu.be/VIDEO_ID' \
   /tmp/VIDEO_ID_pt.txt \
-  docs/leituras/slug-do-titulo.html
+  docs/posts/pt_br/slug-do-titulo.html
 ```
 
 ### 4. Adicionar card no docs/index.html
 
 Inserir novo `<a class="card">` em `docs/index.html` com:
-- `href="leituras/slug-do-titulo.html"`
+- `href="posts/pt_br/slug-do-titulo.html"`
 - Título, meta (fonte, autor), descrição resumida
 - `<div class="progress-info" id="p-VIDEOID"></div>`
 - No `<script>` do index.html, adicionar: `showProgress('reading_VIDEO_ID_', 'p-VIDEOID');`
@@ -157,7 +157,7 @@ Inserir novo `<a class="card">` em `docs/index.html` com:
 ### 5. Commit
 
 ```bash
-git add docs/leituras/slug-do-titulo.html docs/index.html
+git add docs/posts/pt_br/slug-do-titulo.html docs/index.html
 git commit -m 'feat: adiciona artigo — Título do Vídeo'
 ```
 
@@ -259,7 +259,7 @@ Arquivo `llms.txt` no root — convenção para crawlers de LLMs (similar a robo
 Após adicionar um novo artigo, atualizar `sitemap.xml` adicionando:
 ```xml
 <url>
-  <loc>https://adhenawer.net/leituras/SLUG.html</loc>
+  <loc>https://adhenawer.net/posts/pt_br/SLUG.html</loc>
   <lastmod>YYYY-MM-DD</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.8</priority>

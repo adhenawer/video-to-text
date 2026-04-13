@@ -94,6 +94,6 @@ Do ponto de vista de hardware, o modelo E4B 8bit é o limite prático para um Ma
 
 ## Arquivos de referência
 
-- Claude Opus 4.6: `leituras/de-ides-para-agentes-de-ia-steve-yegge.html`
-- Gemma 4 E4B: `leituras/teste-gemma4-pipeline.html`
+- Claude Opus 4.6: `posts/pt_br/de-ides-para-agentes-de-ia-steve-yegge.html`
+- Gemma 4 E4B: `posts/pt_br/teste-gemma4-pipeline.html`
 - Screenshot Memory Pressure: `benchmarks/assets/memory-pressure-gemma4-e4b.png`

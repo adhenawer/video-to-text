@@ -50,7 +50,8 @@ def _slide_html(slide):
 
 
 def make_html(vid_id, title, subtitle, url, txt_path,
-              link_text="🎥 Assistir no YouTube", slides_json_path=None):
+              link_text="🎥 Assistir no YouTube", slides_json_path=None,
+              lang="pt_br", slug=None):
     """Read translated txt, parse sections, return full HTML string."""
     with open(txt_path, 'r') as f:
         raw = f.read()
@@ -169,8 +170,32 @@ def make_html(vid_id, title, subtitle, url, txt_path,
 
     body_html = '\n'.join(semantic_parts)
 
+    # Language switcher — paths are relative to docs/posts/{lang}/
+    is_ptbr = lang == "pt_br"
+    html_lang = "pt-BR" if is_ptbr else "en"
+    og_locale = "pt_BR" if is_ptbr else "en_US"
+    back_label = "← Voltar ao índice" if is_ptbr else "← Back to index"
+    toc_label = "📑 Índice" if is_ptbr else "📑 Table of Contents"
+    toc_aria = "Índice do artigo" if is_ptbr else "Article table of contents"
+    resume_text = "📖 Continuar de onde parou" if is_ptbr else "📖 Resume where you left off"
+    resume_btn = "Continuar" if is_ptbr else "Resume"
+    pt_label = "🇧🇷 Português"
+    en_label = "🇺🇸 English"
+
+    other_slug = slug or vid_id
+    if is_ptbr:
+        ptbr_href = "#"
+        en_href = f"../original/{other_slug}.html"
+        pt_class = "active"
+        en_class = ""
+    else:
+        ptbr_href = f"../pt_br/{other_slug}.html"
+        en_href = "#"
+        pt_class = ""
+        en_class = "active"
+
     return f'''<!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="{html_lang}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -180,7 +205,7 @@ def make_html(vid_id, title, subtitle, url, txt_path,
 <meta property="og:type" content="article">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{first_para}">
-<meta property="og:locale" content="pt_BR">
+<meta property="og:locale" content="{og_locale}">
 <meta property="og:site_name" content="Leituras — Podcasts &amp; Vídeos Traduzidos">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{title}">
@@ -188,25 +213,29 @@ def make_html(vid_id, title, subtitle, url, txt_path,
 <script type="application/ld+json">
 {jsonld}
 </script>
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../../css/style.css">
 </head>
 <body class="page-article" data-storage-key="{storage_key}">
 <div class="progress" id="progress"></div>
 <div class="reading-pct" id="readingPct"></div>
 <article class="container">
-  <a href="../index.html" class="back-home">← Voltar ao índice</a>
+  <a href="../../index.html" class="back-home">{back_label}</a>
   <header>
     <h1>{title}</h1>
     <p class="meta"><cite>{subtitle}</cite></p>
     <p class="meta"><a href="{url}" target="_blank" rel="noopener">{link_text}</a></p>
   </header>
+  <div class="lang-bar">
+    <a class="lang-btn {pt_class}" href="{ptbr_href}" aria-label="Português">{pt_label}</a>
+    <a class="lang-btn {en_class}" href="{en_href}" aria-label="English">{en_label}</a>
+  </div>
   <div class="theme-bar">
     <button class="theme-btn active" onclick="setTheme('light')">☀️ Sépia</button>
     <button class="theme-btn" onclick="setTheme('cool')">🌤️ Claro</button>
     <button class="theme-btn" onclick="setTheme('dark')">🌙 Escuro</button>
   </div>
-  <nav aria-label="Índice do artigo">
-    <h3>📑 Índice</h3>
+  <nav aria-label="{toc_aria}">
+    <h3>{toc_label}</h3>
     <ol>
 {toc_html}
     </ol>
@@ -215,13 +244,13 @@ def make_html(vid_id, title, subtitle, url, txt_path,
 </article>
 <a href="#" class="back-top" id="backTop">↑</a>
 <div class="resume-banner" id="resumeBanner">
-  <span id="resumeText">📖 Continuar de onde parou</span>
+  <span id="resumeText">{resume_text}</span>
   <div>
-    <button onclick="resumeReading()">Continuar</button>
+    <button onclick="resumeReading()">{resume_btn}</button>
     <button class="dismiss" onclick="dismissResume()">✕</button>
   </div>
 </div>
-<script src="../js/reader.js"></script>
+<script src="../../js/reader.js"></script>
 </body>
 </html>'''
 
