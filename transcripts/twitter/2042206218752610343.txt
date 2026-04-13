@@ -1,0 +1,1095 @@
+0:00 In this video, I'm going to walk you through every single feature in Claude, from the basics
+0:04 all the way up to the more advanced techniques like creating automations that do the heavy
+0:08 lifting for you.
+0:09 Also, I'm going to show you how to build your AI operating system.
+0:13 This is going to turn Claude into your executive assistant.
+0:16 Now, I use Claude every single day.
+0:18 I'm talking researching, scripting, strategy, brainstorming, knocking out tasks that used
+0:22 to take me an hour in literally five minutes.
+0:25 It is the tool I have open more than anything else.
+0:27 And the reason for that is simple.
+0:29 Everything you need is already built in.
+0:31 You don't need to connect 30 different tools and watch 20 different tutorials before it's
+0:35 actually useful.
+0:36 You open it, you set it up right, and it just works.
+0:40 So this is the full Claude guide.
+0:42 Let's get right into it.
+0:43 All right, let's start from the very beginning.
+0:45 If you don't have a Claude account yet, this is going to take you about two minutes.
+0:48 If you already have one, skip ahead.
+0:50 I'll put timestamps in the description.
+0:52 But even if you have an account, I recommend you stick around for the plan breakdown because
+0:55 most people are on the wrong plan for what they're actually trying to do.
+0:59 All right, so here's the pricing.
+1:01 Now, the free plan is genuinely good.
+1:03 You get Claude Sonnet, web search, file uploads, artifacts.
+1:06 It's great for trying everything out before spending money.
+1:09 As you can see, you have all of the features right here.
+1:12 I'm currently at Claude.com slash pricing.
+1:15 You can find the pricing page there.
+1:17 I'll even leave a link in the description if you want to access that quickly.
+1:19 Now, the thing I recommend to every person wanting to actually get into AI and use it
+1:24 is to actually get some skin in the game.
+1:26 Like, start putting some money into this.
+1:28 I don't get anything for you doing this.
+1:30 I just remember when I went from free to the next plan up, the $17 or the $20 a month of
+1:35 build monthly, this is when everything started to change because this is like, okay, I'm invested
+1:39 now.
+1:40 You know, like you need to kind of get invested to get the genuine benefits out of all of
+1:45 these plans.
+1:45 But really don't overthink it.
+1:47 You can watch this video.
+1:48 Start free.
+1:49 If you hit the limits within a week upgrade and that's signaled it.
+1:52 Okay.
+1:52 Yeah, you've moved on.
+1:54 But what you can do is you can hit try Claude on any one of these.
+1:56 And if you're not signed in, it's going to take you to a signup where you can sign up
+1:59 with, I believe Apple or Google.
+2:01 And it's just like any other signup process.
+2:03 But now you're in Claude and you've probably been here before.
+2:06 This is your prompt bar in the middle of the screen.
+2:08 This is where you type into the intelligent models.
+2:10 You have your model selector right here.
+2:12 So I'm usually on either Opus 4.6 or Sonnet 4.6.
+2:16 Sonnet is good for everyday tasks.
+2:18 Opus is for like, as you can see, ambitious work.
+2:22 They even have a voice model right here where you can use voice mode.
+2:25 I'll show that later.
+2:26 And a plus button where you can access a bunch of the features.
+2:29 Now, over on the left hand side is where you can create a new chat.
+2:32 You can open up your sidebar to view all of your past conversations.
+2:36 You can kind of navigate around your Claude workspace.
+2:39 We're going to be going over a lot of this stuff today in this video.
+2:42 So when I open up my sidebar, what you're going to see is I have some projects here,
+2:45 which we're going to get into projects.
+2:47 And I have all of my chat threads.
+2:49 So I can click into one of these and view my past conversations that I've had with Claude,
+2:54 which is very cool.
+2:55 I'll ask, what's the weather like in Southwest Michigan today?
+2:58 I can use that for Sonnet.
+3:00 And then I can send it off.
+3:02 As you can see, it pulls up a nice view of what the weather looks like in Southwest Michigan.
+3:06 Gives me a nice little day-by-day.
+3:08 And then in the sidebar, as you can see, I have my chats over here.
+3:11 And if you click into your chat, you can do a couple of things.
+3:14 You can star it so it stays up top pinned.
+3:17 You can rename it.
+3:18 So I can just name this weather for the week.
+3:21 I can hit save.
+3:23 And I can even add it to a project, which we'll get into later.
+3:26 Okay, so you're in.
+3:26 Now, before I show you any features, I need to show you one thing that determines whether Claude is useful to you or not.
+3:33 And that's how you talk to it.
+3:34 Now, most people, when they're talking to models, write something vague, like write me an email or give me a business plan.
+3:40 And they get something back generic.
+3:41 And then they start thinking, like, that's just how AI works.
+3:44 That's what it does.
+3:45 But it's not.
+3:46 Claude is only as good as what you give it.
+3:48 The more context, the more specific you are about what you actually want, the better the output gets.
+3:52 And I mean dramatically better.
+3:54 So instead of talking about it, let me actually show you.
+3:57 All right, so here's an example of what a bad prompt might look like.
+4:02 And this is how a lot of people start.
+4:04 They go in here and they ask it a question like 99% of people.
+4:08 But I always say if you talk to AI like 99% of people talk to AI, doing things like what I'm showing you right now, you're going to get results like 99% of people.
+4:17 And 99% of people aren't where you want to be.
+4:20 So don't talk to it like everyone else.
+4:22 Everyone's asking basic, generic, canned questions like this, things that you used to type into Google.
+4:26 So I'm going to show you a side-by-side example of what a bad prompt looks like with a good prompt.
+4:31 And how you should actually be communicating with AI right now.
+4:33 So I've got a framework for this and it's going to help you wrap your mind around how should you be talking to AI?
+4:38 How should you be asking questions?
+4:39 But I need to show you the bad prompt first in order for you to see how good the good result actually is.
+4:44 So I'm typing this in.
+4:46 How do I go viral on social media?
+4:48 I'm going to actually use incognito.
+4:51 So it doesn't pick up any of my past chats.
+4:54 It doesn't pick up any of my memory, anything it knows about me.
+4:56 Just so we can have a plain prompt, raw clawed.
+4:59 How can I go viral on social media?
+5:01 I'm going to send that off.
+5:03 And then it gives me some generic advice.
+5:05 You know, it's fine.
+5:06 It's usable.
+5:06 But I would spend 20 minutes just trying to get this to actually go into my workflow.
+5:11 And to be honest, this is canned generic advice you could find anywhere.
+5:15 So it says going viral isn't a guaranteed science.
+5:18 Create content that people want to share.
+5:21 Like evoke strong emotions.
+5:23 Tell a story.
+5:24 Be relatable.
+5:26 That's talking about certain formats like short form reels, TikTok shorts.
+5:31 Captions matter.
+5:33 Post consistently.
+5:34 Play the algorithm game.
+5:36 Ride trends.
+5:37 Collaborate.
+5:38 Very basic things that honestly now I've got to take this and I've got to shape it into my own world.
+5:44 When I could have shaped the model into my world so that I didn't have to do that myself.
+5:48 So let me show you what a better prompt would look like using my flagship format.
+5:52 So here I've got the same idea, right?
+5:55 We asked Claude, how can I go viral on social media?
+5:58 Great, right?
+5:59 But if you want to get the most out of Claude, you got to give it some more.
+6:01 So what I like using is the goal, context, action, output format framework, otherwise known as GCAO.
+6:09 I have a full video in the upper right hand corner.
+6:11 If you want to pause here, go watch how I think about creating these styles of prompts and what I include in each section.
+6:18 You can do that.
+6:19 But this is so much better.
+6:21 And this is how you should be talking to Claude.
+6:23 For example, instead of I want to go viral on social media, give it information about your situation.
+6:27 I want to attract small business owners who are already making money but feel overwhelmed running everything by themselves.
+6:32 I'm not trying to get famous.
+6:33 I want the right people finding me and reaching out about working together.
+6:36 Then I give context.
+6:37 I run a coaching business doing about 15K a month.
+6:39 I post on Instagram and LinkedIn.
+6:41 See, I'm giving it platform specific things now, but I get generic engagements and I'm bringing up a problem.
+6:47 Likes from people who will never buy.
+6:49 I've tried posting tips and motivational content.
+6:50 It hasn't translated to clients.
+6:52 I have about 45 minutes a day to spend on this.
+6:54 So I'm giving it a lot of context into what I've tried, what I've got.
+6:57 And then I give it a clear action.
+6:58 Identify the specific type of content that attracts buyers rather than followers for a service-based business.
+7:04 And explain why that content works differently than the content designed for reach.
+7:07 And then I give it a specific output format.
+7:09 I want everything above in, which is the O in GCAO.
+7:13 So I say, give me three content angles with one sentence explanation of why each one attracts buyers specifically.
+7:19 No generic advice about consistency or hashtags.
+7:21 So as you can see, this is a much better way of talking to Claude than this.
+7:27 This is so basic and you might as well not even use AI.
+7:31 Give it a goal.
+7:31 Give it a good context.
+7:32 Give it an action.
+7:33 Give it an output format when you're prompting and when you want to solve a problem or when you want to brainstorm something.
+7:38 So I'm going to send this off using the exact same model in incognito mode.
+7:42 So it doesn't know anything about me.
+7:44 And now it's going to give me actual angles that I can hit using my specific platform.
+7:50 So as you can see, I asked to give me three content angles.
+7:53 So it's going to give me three different pieces of content I can create with why it works and why it attracts buyers in my niche specifically.
+8:00 And then it really goes down into drills down into these three things.
+8:05 So I turned down a client stories or any decision that cost me something.
+8:09 That would be like a social media post I would create.
+8:11 You know, we don't have to go into the answers, but as you can see, it's in my specific output format.
+8:16 It's very specific to my problem because I just took more time and I actually put effort into my prompt, which is going to make the AI begin working for me.
+8:24 Honestly, most people stop there, but I highly encourage iteration.
+8:27 Keep talking to the model until you get what you want.
+8:30 So I could say, give me six more variations of number two.
+8:36 I can send that off.
+8:37 Maybe I like content angle number two.
+8:39 And now it's going to give me six variations of before and after operational specifics from client work.
+8:45 And these are the types of iteration questions or statements that you want to really drill into.
+8:50 There have been times where I've sat here and had a conversation with Claude for literally seven to eight hours straight until I got the answer that I was satisfied with.
+8:59 So don't be scared.
+9:00 Like ask it anything, no matter how dumb the question is, until you figure out what you want.
+9:04 Okay, so now you know how to actually talk to Claude, but most people think that that's all it does.
+9:09 They use it like Google where you go in and you type something and it types something back.
+9:13 You get your answer and you leave.
+9:14 But here's the thing.
+9:15 Claude can actually see things, number one, and search the internet in real time.
+9:20 These two features alone turn it from a little bit of like a glorified Google search into a full research and analysis tool.
+9:27 And I am using web search constantly.
+9:30 I pull in documentation for any tool that my team is using.
+9:33 I'm researching current events.
+9:35 I'm looking up competitors, anything at all where I need information that is accurate and up to date at this very moment.
+9:41 That's what I'm using web search for.
+9:44 Now, vision changes the game completely because you can upload screenshots, photos, documents.
+9:50 Claude looks at them and understands them and then helps you solve problems based around them.
+9:54 So let me show you both an action.
+9:57 Okay, so let's just start off with the web search feature.
+9:59 This one is more powerful than people think because it's like you have a really smart assistant friend that you can go give tasks to do on the internet.
+10:07 You can give it these huge props, tell it to research, do information on a specific company, a specific person, a specific tool, a competitor, whatever you want.
+10:15 And you can have it do actions for you, like create blog posts or do whatever.
+10:19 And it's all powered with web search.
+10:20 So in order to turn on web search, what you need to do, and by the way, you need to have this on all the time so you can get relevant, up to date, non-hallucinated information.
+10:28 But what you need to do is you need to hit this plus button and you need to just click where it says web search.
+10:32 Okay, that's it.
+10:33 So I'm going to click web search and now it's blue and it's activated.
+10:36 And so in this prompt, yes, I'm using my same prompt framework and I'm building off of that because I'm serious about prompting like garbage in, garbage out.
+10:44 Good quality in, good quality out.
+10:46 So what I'm doing right now is I want to use web search to understand exactly what Andy Elliott is doing with his coaching offer right now.
+10:53 This is a high ticket ex-car salesman guru.
+10:58 And honestly, he's helped me a lot.
+10:59 I went to a lot of his mentorships and met him.
+11:01 Very cool dude.
+11:02 But let's say I want to research how he's running his operations.
+11:05 Like maybe I run a high ticket coaching business.
+11:09 Let's say I run a high ticket AI business coaching offer targeting small business owners doing 15 to 100K a month.
+11:13 This would be like my context, but I'm using web search, remember?
+11:16 So I say use web search to research Andy Elliott's coaching offer, content strategy and sales funnel.
+11:22 Identify his main offer and price point.
+11:23 So I'm basically using web search to get live information on one of not really my competitors,
+11:27 but somebody I look up to that I kind of want to copy some of the elements to drive sales.
+11:33 So I'm going to send this off.
+11:35 And because we have web search active, what you're going to notice is it's going to start looking through articles live on the internet for us.
+11:40 It says searching the web.
+11:42 And then it's pulling in all of these articles for what he's actually doing.
+11:45 It's pulling in Quora.
+11:47 It's pulling in his website, his Instagram.
+11:49 And after it synthesized all of that information from the web, now it's bringing me back an actual response.
+11:55 So it says his primary call to action routes.
+11:58 And it's giving me literally everything with web search in such a short amount of time.
+12:03 This is insane.
+12:04 Entry level product is zero to 100K.
+12:06 Self-study course priced around 599.
+12:08 Pulls people in before upselling to coaching.
+12:10 Beautiful.
+12:11 Gives me the content strategy.
+12:13 Gives me sales language and positioning.
+12:15 Top 1% big dogs, not for beginners.
+12:17 Those ready to go dark.
+12:19 Okay, so it's some pretty heavy stuff here.
+12:22 Gives me the gaps and underserved angles.
+12:24 Very cool.
+12:25 So this is just one example of me researching a competitor or somebody that I look up to that's doing better than me in what I want to do and giving me their strategy in a matter of seconds.
+12:35 So that's web search in a nutshell.
+12:37 You can do that with current events.
+12:38 You can do that with market info, tool documentation.
+12:41 You can have it create anything for you with web search.
+12:45 It's pretty sweet.
+12:46 Now let me show you vision.
+12:47 Vision is one of those things that if you're not using it, you need to start using it.
+12:51 And it's one of the more powerful things because Claude can actually see images.
+12:54 I'm talking real life things you take with your phone, analyze it, and give you feedback.
+12:59 So think about this in terms of business.
+13:01 Like you can take a screenshot of your website and go, what can I do in order to increase conversion on my landing page?
+13:07 What can I do to increase conversion with my form?
+13:09 How do these flowers look?
+13:10 Why are they dying?
+13:11 I mean, you can go completely opposite.
+13:12 But what I'm going to show you is an example of having Claude analyze one of my thumbnails and telling me what it could do better.
+13:19 So I'm going to hit this plus button and then you can actually add files or photos.
+13:24 But since we're using vision, I want to upload a photo so it can actually look at the photo and give me feedback.
+13:29 I'll select this.
+13:30 And then I uploaded an image from my desktop.
+13:32 It's currently loading.
+13:33 This was a thumbnail in one of my recent videos.
+13:36 Sellable AI systems under 20 minutes.
+13:38 Let me see what Claude has to think about this thumbnail.
+13:41 And I could say something like, give me feedback on this thumbnail in order to increase click-through rate.
+13:46 And then I can send it off and Claude will actually be able to give me real lifetime feedback because it can read images and see it.
+13:52 I know this wasn't the best prompt.
+13:54 I should give it my industry, my niche and all of that stuff.
+13:56 But just so you get the idea.
+13:58 Here's honest feedback to increase CTR.
+14:00 What to fix.
+14:01 Your title has a framing problem.
+14:03 Sellable AI systems requires a viewer to already want to sell AI systems.
+14:07 It's insider language compared to how I build AI systems clients pay 5k for.
+14:12 Okay.
+14:12 Yeah, it got me there.
+14:14 Your face is too passive.
+14:15 Hand on chin is thoughtful.
+14:16 Not excited.
+14:17 Not excited or authoritative.
+14:19 Okay.
+14:19 Maybe I look a little passive.
+14:21 So Claude can tear your thumbnails apart.
+14:23 We do know that.
+14:23 But the point that I want you to understand is it can read images.
+14:28 So I'm sure you already have thoughts and ideas jogging through your mind about how this might be able to work for you.
+14:33 Okay.
+14:33 So this next feature is called artifacts.
+14:35 And this is the one that blows people's minds the first time they see it.
+14:39 I know it did for me.
+14:40 You can ask Claude to create something substantial.
+14:43 Something like a tool, a calculator, a dashboard, a form, an interactive document.
+14:48 And it won't just give you text.
+14:51 What it does is it opens up an entirely new panel and builds you a fully working thing right there in the conversation without any code or technical knowledge.
+14:59 You just describe exactly what you need.
+15:01 Claude builds it and then you can publish it.
+15:03 Share your links to your clients, your team, and literally anyone on the internet can use it.
+15:07 So essentially what you can do is build custom tools in five minutes that would have taken a developer days.
+15:14 So let me show you that in action.
+15:15 All right.
+15:16 Let's get into it.
+15:16 One of my favorite features in Claude, the artifacts.
+15:19 Now you can go to your left-hand sidebar.
+15:22 If you want to open it up, you can even do that there.
+15:24 But what you're going to notice is there's an artifacts button.
+15:27 And when you click artifacts, you get some templates.
+15:30 You can create a new artifact up here on the right-hand side.
+15:34 You can see all of the things that it has to offer.
+15:38 So you can transform raw notes into structured notes.
+15:41 You can edit writing.
+15:42 You can go PRD to prototype.
+15:44 Slack project insights.
+15:46 Flashcards.
+15:47 And so you can look through these.
+15:48 They're fun to look through.
+15:49 You can play around with them.
+15:50 But to be honest, I don't really like looking for something to build.
+15:54 I like it when I have an idea.
+15:56 I love knowing I can just come and throw it in Claude for an MVP and get something built in a matter of seconds.
+16:02 So I could do an animation.
+16:04 I could do an app, a website, whatever I want.
+16:06 If I visually want to see something, I'm coming to Claude and building an artifact for it.
+16:10 Let me show you a quick example of something with actual utility.
+16:13 So maybe I'm trying to start a new AI agency or something.
+16:16 And I want business owners that I'm going to selling automations to, to see the return on investment for, you know, building automations with me.
+16:24 So I want to build this interactive ROI calculator for business owners who are considering AI automation in their business.
+16:31 The inputs of this calculator should be their hourly rate, hours per week spent on manual or repetitive tasks, and number of weeks they work per year.
+16:38 The outputs should be the annual cost of those manual tasks, estimated time saved, estimated annual savings, and a simple ROI metric if they invested 5K in an automation setup.
+16:47 Something that makes it a no-brainer to invest with me.
+16:51 You know, I'm building out this calculator that people will be able to use.
+16:54 So I can do that.
+16:56 And I can even say like in an artifact up top here, just so it knows that it needs to create an artifact.
+17:03 Once I have that, I can send it off.
+17:06 And honestly, for these more capable tasks, what I want to do is use Opus 4.6 since it's better at coding and better at building these things.
+17:14 So when I send this off, what it's going to do now is use code from our natural language in order to build something for us.
+17:21 Absolutely insane.
+17:23 Now there was no magic thing happening off camera.
+17:25 This is a one-shot prompt, meaning I typed in a prompt and it created it in one response for a calculator.
+17:33 So now we have a mini app that is dynamic that I can use and it shows annual cost of manual work.
+17:40 So this is an ROI calculator for a business owner.
+17:43 Like what's their hourly rate on a certain task?
+17:45 Maybe it's like bookkeeping, $30 an hour.
+17:48 Maybe we're automating their entire bookkeeping process.
+17:51 Manual hours per week.
+17:52 Well, that's a 40-hour a week job.
+17:54 Working hours per year, 50 weeks per year.
+17:58 But this is a literal calculator now that we built with one prompt.
+18:01 I mean, you saw the prompt.
+18:02 It took five minutes to build it.
+18:04 And now what I can do in the upper right-hand corner is I can download this or I can publish the artifact.
+18:09 And I can publish and copy link.
+18:12 Now I can copy this link.
+18:13 I can paste it in and hit enter.
+18:15 And now this is a public thing that I can use as an asset.
+18:19 I can even go full screen, make this look a little bit nicer.
+18:22 But this is great for building out MVPs, mini animations, visual ways to see things.
+18:28 And it really just, with Claude, it's quite the experience building out these artifacts.
+18:33 And so if you're not using this yet, I highly recommend you get in here and start building out these mini apps, mini projects that are going to help you be more productive.
+18:41 All right, now everything I've shown you this far, the prompting, the search, the vision, the artifacts, all of that works in just a blank conversation with zero setup.
+18:52 That's just native Claude features and it's already super powerful.
+18:55 But what I'm about to show you next is where Claude goes from a good tool to something that actually works for you specifically.
+19:02 Now Claude has a place where you can give it permanent instructions.
+19:05 These are rules that it follows every single time you talk to it or start a new conversation.
+19:09 This feature is called custom instructions.
+19:12 It allows you to customize the outputs of Claude.
+19:15 So let me just go in, set a quick custom instruction right now and show you how it works before I actually show you how I use it personally.
+19:23 Now, like I told you, custom instructions are super, super powerful if you use them right.
+19:28 First, I'm just going to show you where they're at and show you a quick example.
+19:30 So you can kind of in your mind, understand and begin to think about different ways that you could use this.
+19:36 This is one of the most powerful features in Claude in any model because it allows you to transform the model into something that nobody else has.
+19:44 A customized personal assistant.
+19:46 So in order to get to that, in order to get to the place where you can provide custom instructions, what you need to do is in the bottom left-hand corner, hit your profile and then go to your settings.
+19:55 And when you're in general, you can do a couple of things.
+19:57 You can select this thing, what best describes your work.
+20:00 Then right here in this box, these are personal preferences Claude should consider in its responses.
+20:06 So anything you put here, it's going to take into account for every single new conversation that you start.
+20:12 So this is super powerful.
+20:13 Let me just type something funny out so you can see the power of this.
+20:17 So I told Claude, when I say pirate mode, you are to type an answer like a pirate.
+20:21 And the last sentence of whatever you type should always be written backwards in reverse word order in this pirate mode, even if it hurts readability.
+20:30 So what I'm going to do is I'm going to hit save changes, going to wait for it to save.
+20:34 So now my account preferences have been updated.
+20:36 So now Claude's going to take this into account whenever I send off a message.
+20:39 And when I say pirate mode, it's going to sound like a pirate.
+20:43 Okay, I'm just going to say, hey there, how are you?
+20:47 And it should just talk to me like normal.
+20:49 Like, hey, okay, I'm doing well.
+20:51 How are you?
+20:51 What can I help you with today?
+20:52 I'm going to say pirate mode.
+20:55 I am looking for something to eat.
+20:59 I'll send that off.
+21:01 And as you can see, it goes into pirate mode here.
+21:03 So it says, ahoy there, matey.
+21:05 Looking for something to eat, you say?
+21:07 Well, blow me down.
+21:08 I got some fine suggestions for ye.
+21:10 Ye could be mending your belly with some hearty provisions.
+21:13 Okay, so it followed those instructions because I said pirate mode.
+21:15 How about the last sentence?
+21:17 As you can see, it says, adventure fur sail set and to grub some grab should ye.
+21:22 So if you read that backwards, ye should grab some grub and set sail for adventure or fur adventure.
+21:29 So this is a goofy example, but I'm just trying to show you what custom instructions do to your Claude account.
+21:34 You could make it sound pretty insane.
+21:37 And it's really good at following these little instructions.
+21:39 Now imagine this.
+21:40 Instead of something silly like writing backwards,
+21:43 imagine if you told Claude your name, your role, your business, your communication style,
+21:47 and how you want every response formatted.
+21:50 This is where it gets real.
+21:51 So instead of re-explaining yourself every time to Claude, which is good to do, you know,
+21:55 I'm a consultant.
+21:56 I work with X, Y, or Z clients.
+21:59 I prefer direct communication.
+22:00 I like my responses short.
+22:02 Instead of doing all that, you just tell Claude once and it remembers forever.
+22:06 Now in order to make it really useful,
+22:08 I've got a template in the description that I want you to use.
+22:10 And this is going to take it much further than the average Claude user.
+22:14 We're going to be filling out a custom profile.
+22:17 And this is going to be where you build your AI operating system.
+22:20 This is where you train a model on all of your preferences,
+22:23 your name, what you like, what you don't like, and everything in between.
+22:27 And so every time you come to Claude to use it,
+22:30 it understands already what you want.
+22:32 So you don't have to spend your time explaining yourself constantly.
+22:35 So everything that I've showed you up until this point has been pretty beginner-based stuff.
+22:39 But now is when we're going to cross the line.
+22:41 We're not just typing prompts.
+22:42 What you need to do is use all that stuff that I told you consistently for a week or two,
+22:46 maybe even before you get into this.
+22:49 But I recommend everyone starts thinking in this manner.
+22:52 How can we make AI work for us as a partner, a thinking partner,
+22:55 rather than us trying to just force our way and just constantly type prompts,
+23:02 develop your AI operating system.
+23:03 And you can do so using that template that I left you for free down in the description.
+23:07 And it's very simple.
+23:08 You have five sections.
+23:09 And this just takes a little bit of time to fill out.
+23:11 So I mean, you don't have to complete this now,
+23:13 but fill it out over the week as you're thinking about how you want AI to think with you.
+23:18 How would you want another employee to think with you?
+23:19 So the five sections of this prompt,
+23:22 this is really going to make Claude work for you in many different ways.
+23:26 So the five sections are identity,
+23:29 who you are and what your business does,
+23:31 or maybe not even your business, but what do you do in your life?
+23:33 A lot of us aren't even business owners, right?
+23:35 Might be a business owner,
+23:36 but you also might be working for a company or wanting to escape the nine to fives.
+23:41 So don't necessarily think of everything in terms of business,
+23:43 but if you do own a business, that's great.
+23:45 But who are you?
+23:46 What is your work, right?
+23:48 Communication style.
+23:48 How do you want AI to talk to you?
+23:50 Do you like more direct stuff?
+23:51 Do you like when it has fun and have more emojis?
+23:53 There's a lot of people in my community of builders where they have their AI model,
+23:57 send them like hundreds of emojis,
+23:59 and they just like love having it be like all fun and like a best friend.
+24:02 Like they're texting the girls in the group chat or something.
+24:05 Number three, goals and priorities.
+24:06 What are you focused on right now?
+24:07 Not like what were you focused on,
+24:09 but what are you focused on right at this very moment?
+24:12 Because AI, when it has a goal, when it knows what you want,
+24:14 it can help work towards that goal.
+24:16 Number four is super important.
+24:18 Daily schedule and non-negotiables.
+24:19 Your time constraints and structure.
+24:21 When do you like doing certain tasks?
+24:23 So if AI is planning something for you,
+24:25 it knows not to plan it in that certain time slot.
+24:28 Number five, avoidances.
+24:30 What you never want to see in responses.
+24:32 Guardrails.
+24:32 Be strict and give AI what you don't want just as much as what you do want from it.
+24:37 And so I've left this in a system prompt template
+24:39 and I've given you bracketed sections where you put your own details.
+24:44 So delete any sections that don't apply to you
+24:46 and then you can paste it in that custom instructions box that I was showing you.
+24:50 So for example, it says, my name is your name.
+24:53 I run business or description or I work for whatever company as what role.
+24:58 My clients are or my employees are or my team is.
+25:02 My role is.
+25:03 So as you can see, it goes super in-depth and drills down into who you are in order to create
+25:09 this operating system for you and your model to operate in for the rest of this video.
+25:14 And really for the rest of your life, this is like an updated file where AI understands you
+25:20 and it can communicate with you.
+25:21 And this is really how you start getting the most benefits out of AI.
+25:24 So this is in the description.
+25:26 I'll show you mine real quick.
+25:27 I'm not going to fill this out live, but if you want to fill this out live,
+25:30 just hit this copy button right here.
+25:32 Go to like a new Google document.
+25:34 I'm really sorry for the light mode.
+25:35 And then just paste it in.
+25:37 And then you can come in here and you can start editing things out.
+25:39 Like my name is Drake Sirach.
+25:43 I run and then my business and I could go on.
+25:46 I already went on and I did all of that.
+25:47 So here's what mine looks like.
+25:49 This is what mine looks like.
+25:51 It's huge.
+25:52 I've got all sorts of fun stuff in here.
+25:54 My name is Drake.
+25:55 I run two businesses, an AI education company, a YouTube channel with 300K,
+25:58 a school community called AI Foundations, 49 a month flagship courses.
+26:03 I've got clients doing 15 to 100K per month who want AI systems implemented in their system.
+26:09 So I'm giving Claude all this information so it knows how to gear its responses towards me.
+26:14 I'm giving it my role.
+26:15 An AI systems builder who uses AI practically.
+26:18 I'm not a developer, but I do build real AI systems, giving it communication style.
+26:22 My goals, like growing my YouTube channel to drive inbound leads for my AI business audit offer.
+26:27 So this is how you want to construct a system prompt except for yourself.
+26:33 And this is what's going to put you in the top 1% of people because nobody's doing this.
+26:37 Nobody's putting in this work.
+26:38 And you can do this on Claude and have it really be a good tool for you.
+26:42 So I'm going to save changes.
+26:43 And now anytime I talk to Claude in every conversation, it's going to be geared towards my personalized instructions.
+26:51 So if I hit new chat, I can say, what is my YT channel at?
+26:56 And of course, these would need to be updated dynamically, but it has like a general idea.
+27:00 Just gives me it straight away.
+27:02 300K subs.
+27:03 Beautiful.
+27:03 Beautiful.
+27:03 How many school members?
+27:06 You can send that off.
+27:08 And it just knows it about me.
+27:09 What is my ideal schedule?
+27:13 And the point is not to ask these silly questions.
+27:15 I'm just trying to show you how it understands those system instructions.
+27:19 And it can see into exactly what you want it to see.
+27:23 And it knows things about you.
+27:24 So when it's crafting its responses, it's going to be so much better than if you just let it go free.
+27:30 But let me just show you quick two examples back to back for why this would be powerful.
+27:35 I can say something like, it's Tuesday.
+27:39 What should I be focusing on this week right now?
+27:44 And since it has my custom instructions and it knows everything about me and knows what I do on certain days,
+27:50 knows what I did on Monday, knows what I've got to do on Wednesday.
+27:53 And so it's going to give me exactly what me, Drake Sirach, needs to do on this day.
+27:59 It has my company information.
+28:01 And if you have a team or if you're working with people, everybody should be doing this.
+28:05 So there's Lurdy, AI Foundations.
+28:07 Right now, morning deep work window since it's 12 in the morning as I'm filming this.
+28:13 So now AI is strategizing with you, not against you.
+28:16 Like I said, if you want that exact template that we just used and that I use for this,
+28:21 the full AI operating system framework with every section mapped out,
+28:24 I've got it linked in the description.
+28:25 It's completely free.
+28:26 You can grab it, fill it in, paste it into Claude.
+28:29 It takes about 15 minutes and it changes everything from the very first conversation
+28:33 where you start actually prompting with it.
+28:35 And it's something you have to do once and then it works forever.
+28:38 All right, so it's time to get into the next feature, which is projects.
+28:40 Now, custom instructions are the foundation of everything.
+28:43 That's kind of like your personal layer.
+28:46 But now let me show you how to build on top of that.
+28:48 So projects are dedicated workspaces inside of Claude that have permanent context.
+28:54 You create a project, you upload documents.
+28:56 These documents are things like brand guidelines, SOPs, client files, past work,
+29:00 whatever you've got.
+29:01 And you can also set custom instructions for that project.
+29:06 So you don't only have your personal custom instructions,
+29:09 but you can have custom instructions within a project.
+29:11 So now every conversation you have inside that project starts with Claude knowing
+29:15 everything it needs to know about that project situation.
+29:19 And not only that, but you have your personal Claude instructions as well.
+29:22 So they're working with each other.
+29:24 So not only do I have a project set up for each one of my businesses,
+29:27 but literal departments within my business.
+29:29 So I have one for my content, one for my community that I run.
+29:33 So when I sit down to work and strategize,
+29:35 all I have to do is open the project that I know Claude is trained on.
+29:40 And it is up to date on literally everything about me.
+29:42 It knows what I talked about with it last week, since it has memory.
+29:45 It knows what my standards are.
+29:47 It knows what I expect.
+29:48 I don't have to re-explain myself and I don't have to paste context in every single time.
+29:53 Now, this is truly the difference between using AI casually
+29:56 and actually running parts of your business through it or parts of your life through it.
+30:00 Let me show you how to set up a successful project.
+30:03 In order to get to projects, open up your sidebar in the upper left-hand corner.
+30:07 And then what you can see here is we've got chats, projects, artifacts, and code.
+30:11 Obviously, you want to click on the projects button.
+30:14 And when you open projects, you're going to get this folder-like system.
+30:17 I can just create these custom little containers in Claude
+30:20 that have it perform in a completely different way from anywhere else on the app.
+30:24 So usually, we're just in this little chat window right here, right?
+30:27 We are, if I go to the new chat,
+30:29 we're just communicating with Claude in the normal container
+30:32 that everyone else is using.
+30:33 When we go to projects, we get to create our own little custom container.
+30:37 So if I hit new project, it's going to automatically start walking me through the process.
+30:41 Since it's something that I'm used to and it's in my domain,
+30:44 we just do YouTube video scripting,
+30:48 or maybe not even scripting, but just like YouTube video ideation.
+30:52 Maybe I'll create ideas, get them scored,
+30:55 and I'll try to create intros for my YouTube videos in here whenever I type in an idea.
+31:00 Then you can tell what you want to achieve.
+31:03 For now, I'm just going to hit create project.
+31:05 And now we're in the project folder.
+31:08 So this looks a little different, right?
+31:10 We have our chat bar over here on the left.
+31:12 We have this little section right here.
+31:15 We have something called memory, which I'll explain memory in a second.
+31:18 But then we have instructions and files.
+31:21 This is what takes you to the next level.
+31:24 So not only do you have your personal instructions,
+31:26 which we already set up, which are running in the background,
+31:29 like your AI operating system that we built together,
+31:31 that's always running.
+31:32 But we have project level instructions.
+31:34 We also have files, so PDFs, documents,
+31:37 or anything that you want Claude to reference when you're talking with it.
+31:40 This could be things like SOPs.
+31:42 This could be things like invoices, proposals,
+31:45 any type of document that you use often,
+31:48 you could use in a Claude project.
+31:50 And it will always reference it whenever you talk to Claude over here.
+31:53 So I'll just show you what that looks like.
+31:54 I'm going to hit add files.
+31:56 And first we're going to add some files.
+31:57 So you can add things from GitHub.
+31:59 So if you have a code base, you can upload things from Google Drive.
+32:03 You can just add normal text content.
+32:05 So I could just name this just like Drake's favorite food,
+32:10 which is a bad example.
+32:11 But I could put in something like pasta.
+32:14 I could put in salmon.
+32:17 You know, I could keep on going.
+32:18 And that's just the way you can add content to the project.
+32:21 And now Claude will understand my favorite food in this project in specific.
+32:25 Not account level, but project level.
+32:27 So I'm going to actually delete that.
+32:29 It's a bad example.
+32:30 But what I want to do is I want to upload from device.
+32:32 Because if I'm going to have YouTube video ideation,
+32:34 I want Claude to understand the format that I like scripting videos in.
+32:38 And that's not something you'd put on an account level
+32:40 because I don't want it thinking about scripting videos
+32:42 when I'm coming to ask a general question.
+32:43 I've got these two files right here, my brand guidelines and my intro formula.
+32:48 When I'm getting help scripting videos, I wanted to know the exact formula I use.
+32:52 So I'm going to upload both of these files up here.
+32:55 And then I'm going to hit open.
+32:57 And now only 1% of my project capacity is used.
+33:01 You can add a ton of different stuff in here.
+33:03 If I go into the brand guidelines, for instance,
+33:06 we have a who Drake is, his brand voice.
+33:09 Maybe this is for a specific brand.
+33:10 Maybe my AI foundations brand, I could make it a little bit more energetic.
+33:14 I could make it a little bit more fun.
+33:17 And so what you can do now is in this custom instructions,
+33:19 you can actually reference these files and tell Claude,
+33:22 whenever Drake has a video idea,
+33:24 always reference brand guidelines and intro formula.
+33:27 So if I click into here, now we have this project instructions.
+33:31 When creating any script outline or content brief,
+33:34 always reference the uploaded brand guidelines in the intro formula before writing.
+33:38 Match Drake's voice positioning and content rules exactly as described in the documents.
+33:42 So not only am I setting these custom instructions for how to write scripts
+33:45 and how to do everything,
+33:47 but what I'm also doing is telling it to reference these files.
+33:50 So if I say something like,
+33:51 I want to create a video script for how to use Claude for beginners,
+34:00 in 2026,
+34:03 and I send that off.
+34:04 Now it's going to be taking all of my project instructions into account
+34:08 when actually being within this project folder.
+34:12 And so you can like go through here and actually look at what it's thinking too.
+34:15 If you click into this typing indicator,
+34:17 you can see it says,
+34:18 let me read the brand guidelines and intro formula before writing the script.
+34:21 Video concept check.
+34:23 Topic audience.
+34:24 This fits Drake's brand well.
+34:26 Title options.
+34:27 Result first.
+34:28 No revenue figures.
+34:29 Beautiful.
+34:30 And then it talks about contrarian angles and how I like creating certain video structures
+34:35 because I put it in my intro formula.
+34:38 And so this would be like a title.
+34:39 How to actually use Claude.
+34:40 Most beginners get this wrong.
+34:42 Target audience.
+34:43 Beginner ICP.
+34:44 Search demand.
+34:44 High.
+34:45 And so as you can see,
+34:45 I've only uploaded 1%.
+34:47 I could upload all of my YouTube analytics.
+34:49 You could upload things like terms of service.
+34:51 You could upload privacy policies.
+34:52 If you need to be careful about what you say for those public things, you can put it in here.
+34:58 I don't know if I recommend putting any legal stuff in here, but I've been known to do it.
+35:02 And so being in a project really allows you and your team,
+35:05 because you can invite teams to your projects,
+35:07 to be aligned in using the same model because coherence is slipping.
+35:12 If everyone's using their own model,
+35:14 how do you know that it's not validating the wrong idea?
+35:17 So you want to get people within a project and get people working in a system.
+35:19 Okay, so the next feature we're going to talk about is skills.
+35:23 And this is where things really start getting powerful.
+35:26 So you've got your custom instructions as the foundation.
+35:29 You've got your projects as the workspace.
+35:30 Now let me show you skills.
+35:32 Because skills are how you teach Claude how to do the specific tasks
+35:35 in the exact way you want them done.
+35:38 Instead of just explaining what you want every single time,
+35:41 you can create a skill.
+35:43 A skill is a specific set of instructions with examples,
+35:46 and Claude will follow it whenever that type of task comes up.
+35:50 Think of it like training an employee.
+35:52 You show them how to do something once, you document it,
+35:54 and from there on out, they just handle it.
+35:56 It's like an SOP, except it's custom instructions with examples,
+36:01 and you can even run code in these things that AI can generate.
+36:04 So if you do something more than twice ever,
+36:07 if you're constantly coming back to the chat thread,
+36:09 you just need to make a skill,
+36:10 because you can just invoke that skill,
+36:12 and Claude will know how to do that exact task.
+36:14 So it's like template prompts, if you would.
+36:17 Let me show you what that actually looks like.
+36:18 Usually these things take a little bit of time and effort up front
+36:22 to get the SOP or the process down the exact way you want it,
+36:26 but we can combine it with things like artifacts.
+36:28 So it can generate artifacts for us
+36:30 without us having to explain the style,
+36:32 the structure, or anything at all.
+36:34 It just knows what to do.
+36:36 So think about this for proposals, invoices, briefings,
+36:40 on real data.
+36:41 You could upload real data and have it use a briefing skill
+36:45 that formats the data in the exact way you want,
+36:48 in an artifact that's downloadable,
+36:50 that you can send to your team, things like that.
+36:52 So what you want to do is you want to open up the sidebar,
+36:55 and skills are a little weird to find.
+36:57 You have to hit this customize button under the search tab,
+36:59 and this might move.
+37:00 But right now you have to hit customize,
+37:03 and then you're going to be presented with a couple of options,
+37:05 connectors and skills.
+37:07 For now, I'm just going to hit create new skill.
+37:08 And as you can see, it gives you a bunch of examples in here.
+37:11 It gives you my skills.
+37:13 For this account, this is all I have right now,
+37:14 is the Excalibur diagram.
+37:16 For when I want to create diagrams, I can do that.
+37:19 But what I'm going to do is hit this little plus button up here,
+37:22 and then I'm going to select create with Claude,
+37:25 because Claude's really good at building these skills for you.
+37:27 And you don't want to sit there and just build the skill yourself
+37:29 when something better than you can build the skill.
+37:32 So I'm just going to tell Claude,
+37:33 let's create a skill together using your skill creator skill.
+37:36 So Claude has a skill for creating skills.
+37:38 For other people, it's so meta, but it's great.
+37:41 And remember, skills are like those little buttons you can press
+37:44 that just spawn things in for you with little information that you give it.
+37:48 You'll see that in the live example.
+37:49 But I'm going to send that off.
+37:51 It's going to ask me, what do you want the skill to do?
+37:53 I can say I want it to generate a professional AI business audit proposal
+37:57 as a downloadable .docx file.
+38:00 So I just want to be able to come in here,
+38:02 tell Claude to use the skill that generates the proposal,
+38:05 and give like a little bit of information about the client that needs it.
+38:09 I can send that off.
+38:10 And so now it's just a step-by-step process walking through.
+38:13 And so now it's just asking me.
+38:15 Good starting point, a few questions to make sure the skill actually fits,
+38:18 how you use it, what inputs does the person running this provide?
+38:22 So what I'm going to do is I'm just going to create a prompt
+38:24 that kind of answers all of these questions for the skill.
+38:27 Now, this is a pretty big prompt that I created.
+38:29 And anytime you see these little hashtags or pound signs, it's just markdown.
+38:34 So this would be like a heading two, a heading three, and things like that.
+38:37 So now I'm just going to give it everything that I want in the proposal
+38:41 and what I want it to generate each and every time.
+38:44 And this is really going to help it create the skill for us
+38:47 to generate it in this format.
+38:49 This is like a templatized prompt.
+38:51 So I'm going to send this off.
+38:53 And now I'm just walking through with Claude, building the skill.
+38:56 This really turns Claude into like an automation tool for you
+38:59 rather than something you have to go and manually type in.
+39:01 I can even give it an activation command once it's done writing.
+39:04 I can say activate when the user says proposal,
+39:07 create a proposal, client proposal,
+39:09 or mentions preparing a document for a prospective client.
+39:13 Once Claude is done creating the skill,
+39:15 I can add this activation command so that when I just come into Claude,
+39:19 I can just say proposal.
+39:20 And it will know instantly what it needs to use and what I'm about to do.
+39:24 Boom, just like that.
+39:26 It says both files are ready.
+39:27 It did the test script.
+39:29 And now it says the dot skill file is ready to install.
+39:32 And the test proposal is there.
+39:34 So you can see exactly what the output looks like.
+39:36 The test was with a business coach at 25 to 40k a month.
+39:39 And so now I can just click into here
+39:42 and see what does that proposal look like.
+39:43 And if I don't like the styling of this proposal,
+39:46 I need to change it here because this is like the foundation.
+39:48 This is what it's going to look like anytime I invoke the skill.
+39:51 So AI business audit, elevate coaching group,
+39:54 prepared for Sarah Chen by Drake.
+39:56 AI foundations and it gives the exact date.
+39:58 I can scroll down the problem, what we will audit,
+40:02 investment, $1,000 includes, about Drake.
+40:07 So that was a one-shot prompt.
+40:09 I could add my logo to this.
+40:10 I could get super customized so that it generates this template
+40:14 every single time that I want to generate a proposal.
+40:17 So I'm going to send this off.
+40:18 Can we activate when the user says proposal,
+40:21 create proposal, client proposal, or mentions preparing a document?
+40:23 And now it's editing my skill file live.
+40:26 And so now what I can do is I can hit copy to your skills.
+40:29 And as you can see in the upper right-hand corner,
+40:30 it says copied to your skills.
+40:32 I'm going to hit manage.
+40:33 And now in my skills, I have the AI business audit proposal.
+40:38 What I said right here is create a proposal for James Chen at Apex Digital.
+40:42 Marketing agency doing about 40k a month.
+40:44 His main bottleneck is client onboarding.
+40:46 Takes his team eight hours a week,
+40:47 and he's involved in every single one.
+40:49 So I could say something like that.
+40:51 And now I can send it off.
+40:53 Now watch the magic happen.
+40:55 It's actually going to read the proposal skill that it created.
+40:58 It's going to read the doc X skill that it has within my proposal skill.
+41:02 And so this is going to produce a ready to send proposal
+41:06 based on what I typed in here.
+41:08 So if you're in like a service business, like a construction worker,
+41:10 imagine you just come into Claude.
+41:12 And with your voice, using the voice mode, you just say,
+41:14 hey, I got off the phone with a client.
+41:18 They really want me to redo their deck.
+41:20 It's this much square footage.
+41:22 I live in this region.
+41:23 So make sure to check available pricing using the web search tool.
+41:27 And you can really just get creative and just push this thing to the limits.
+41:31 And it can do the heavy lifting for you.
+41:32 You don't have to sit down.
+41:33 And my dad's in construction, so I know what it's like.
+41:35 You know, he gets home from a long day of work,
+41:37 has to sit down for three hours and write a proposal,
+41:39 do all the math, format it nicely.
+41:42 And he just needs to do what he's doing best,
+41:44 which is, you know, doing the actual construction,
+41:46 not sitting there writing proposals.
+41:48 But now it just created that live.
+41:50 So now I can just download this and send it to the client
+41:51 once I really get this thing streamlined into the exact way I want it.
+41:56 But whenever you want to edit the styling,
+41:58 you just go and edit the skill so that anytime you use the skill,
+42:01 it creates it in this style.
+42:02 So now it's created an artifact for us.
+42:05 The AI business audit for Apex Digital.
+42:07 Remember, I said I want one for Apex Digital.
+42:10 And it says prepared by me.
+42:11 It says right now, client onboarding is eating eight hours a week,
+42:14 and you're personally involved in every single one.
+42:16 At 40K a month, that's not a capacity problem.
+42:18 That is a systems problem.
+42:19 And so now it's selling for me.
+42:20 And it's saying investment.
+42:22 The AI business audit is going to be $1,000.
+42:24 A 90-minute deep dive session.
+42:25 Full written audit report.
+42:27 Recorded walkthrough you can reference at any time.
+42:29 Full AI implementation starting at $7,500.
+42:32 About Drake.
+42:33 So then it gives a little bit about me.
+42:35 You can really just customize this however you want.
+42:37 But the thing is, is I can download this now.
+42:40 I can actually download it to my computer and edit this if I want.
+42:42 So I moved it from the center all the way up top.
+42:45 I can, you know, adjust the things as I need.
+42:48 So you don't have to be completely out of the loop.
+42:49 It's just doing tasks for you that you shouldn't be doing.
+42:52 You shouldn't be spending your time on.
+42:54 And real quick, just to clear things up,
+42:55 because people usually ask me,
+42:57 what's the difference between projects and skills?
+42:59 Like, couldn't you just put project instructions
+43:01 and have it do the same thing?
+43:03 Well, you could, kind of.
+43:04 But skills are a different type of file
+43:06 and they can transfer to other things, other models.
+43:10 And so projects are the context.
+43:11 They hold your knowledge, your documents, your client info.
+43:14 And skills are the processes that take place
+43:16 behind all of that info.
+43:17 They know how to do a specific task the same way
+43:19 every time they work together.
+43:21 And one has the knowledge
+43:22 and the other has the instructions.
+43:24 Okay, the next Claude feature we're going to talk about
+43:26 is a feature that takes Claude from a standalone tool
+43:28 to something that actually plugs into
+43:30 what you already use for work.
+43:32 And this is the connectors tool.
+43:34 So connectors let Claude talk directly to your other tools.
+43:37 Things like Google Calendar, Gmail, Google Drive, Slack,
+43:40 and a growing list of others.
+43:41 They're adding new ones every week.
+43:42 So that means you can sit in a Claude conversation
+43:45 and say, check my calendar for tomorrow
+43:47 or find the proposal I sent last week
+43:50 or draft a response to that email.
+43:53 And Claude just goes and does it
+43:54 once you connect to your tool.
+43:55 And it's not just generating text about your tools.
+43:58 It's literally talking to them directly
+44:00 and performing actions on them.
+44:01 So think about when you combine this with projects.
+44:03 Claude has your client context, your documents,
+44:05 and it has access to your calendar and your email.
+44:09 That's when it stops feeling like some Google search chat bot
+44:11 and starts feeling like actual infrastructure.
+44:14 So let me show you how to use it
+44:16 and how to connect a tool.
+44:17 All right, this is the last big feature.
+44:18 And this is really the one
+44:19 that kind of ties everything together.
+44:21 So in order to get to your connectors,
+44:23 we need to go to that customize sidebar item,
+44:26 the same one we went to to get to skills.
+44:27 I'm going to select customize.
+44:29 And in here, you're going to see a tab called connectors.
+44:32 If I select connectors,
+44:33 you can see all of the things that you can connect.
+44:35 You can connect a custom tool.
+44:37 I've connected my SaaS platform, Lurdy, for agent building.
+44:41 I've connected N8N, which is an automation tool.
+44:43 You can connect your Gmail, Google Calendar,
+44:45 Google Drive, your GitHub.
+44:47 I've also connected to another tool called Gamma,
+44:49 which allows me to create presentations
+44:51 for videos like this.
+44:53 And so this is pretty sweet.
+44:55 If I go to Google Calendar, for instance,
+44:58 what I can do is I can hit this big connect button,
+45:00 and then I'm going to be able to connect
+45:02 to my actual Google Calendar, which is quite amazing.
+45:05 Whatever calendar you want to connect to,
+45:06 in this case, I'm just connecting to Google Calendar.
+45:08 You also get to select what it can access.
+45:10 So I'm just going to select everything,
+45:11 see and download, see edit, share,
+45:14 view all of my events,
+45:15 and then I'm going to hit continue.
+45:17 But once you connect to Google Calendar,
+45:19 it's not just full reign.
+45:20 You can select how you want these things being approved.
+45:25 Do you want them to always approve?
+45:26 Like if you say, what are my meetings this week?
+45:29 Do you want it to ask for approval
+45:30 before it actually goes and takes an action
+45:32 on your Google Calendar?
+45:33 Or do you want it to just auto approve?
+45:35 It depends on the task.
+45:35 Usually if it's creating things,
+45:37 like creating events or deleting events,
+45:39 I always want it to have my approval.
+45:42 If it's doing something like listing my events,
+45:43 I don't really care.
+45:44 It's just something that it looks at it
+45:46 and it lists them.
+45:47 It can't edit unless it has right access.
+45:50 And so for things like writing or deleting,
+45:52 I always have needs approval.
+45:54 So I tried moving my head a little bit
+45:56 out of the way here.
+45:57 But as you can see,
+45:58 you can set things to always allow needs approval
+46:00 or just blocked entirely.
+46:02 Or you can customize the individual actions.
+46:06 So create calendar event.
+46:07 I always want it to need approval.
+46:10 Delete calendar event.
+46:11 Maybe I never want it to delete anything
+46:12 so I could block that.
+46:14 Respond to calendar event.
+46:15 Needs approval.
+46:16 Update.
+46:17 Needs approval.
+46:18 But anything with listing,
+46:19 I can just do.
+46:20 So let me go back and show you what just happened.
+46:23 If I select new chat now,
+46:25 my Google calendar is connected.
+46:27 So I can say,
+46:28 what events do I have coming up next week?
+46:33 And then I can send that off.
+46:34 And it will actually use my Google calendar tool
+46:36 since we just connected it.
+46:37 And it takes about five seconds to connect.
+46:39 And so now it's searching available tools.
+46:41 Now it's listing my calendar events.
+46:43 And it says three things in the calendar next week.
+46:45 Monday, content strategy team call on Discord.
+46:48 Wednesday, I've got a Q&A with my community
+46:50 from 1030 to 1130.
+46:51 Friday, I've got another content strategy call.
+46:54 Pretty light week.
+46:54 Aligns well with your schedule.
+46:55 Monday, content day.
+46:56 And then it's using my personalized instructions.
+46:58 So you can use connectors to connect
+47:00 to any outside tool like Google Drive,
+47:03 custom MCP servers like my Lurdy access.
+47:06 And the other cool thing about connectors
+47:07 is you can have it pull from multiple connectors
+47:09 and synthesize everything in one response.
+47:12 Think about your calendar, email,
+47:14 and your personalized context all in one.
+47:16 That right there is why connectors matter.
+47:18 Claude isn't just writing text anymore.
+47:20 It's actually pulling from your actual tools,
+47:22 combining the information,
+47:23 and giving you something you can act on immediately.
+47:26 All right, that was kind of a lot.
+47:27 So let me just pull everything together
+47:29 so you can kind of see from an overhead view
+47:31 how all of these features work cohesively as one system
+47:34 rather than just a bunch of individual tricks
+47:36 that you can use.
+47:37 So here's the stack from bottom to top.
+47:39 At your base, you have your AI operating system,
+47:41 which is your custom instructions.
+47:43 You know, the things like who you are, how you work,
+47:45 your goals, your schedule, your communication style,
+47:47 anything you want to put in there, your preferences.
+47:49 That's the foundation,
+47:50 and Claude will read it every single time.
+47:53 On top of that, you have projects.
+47:54 Each one is a dedicated workspace
+47:55 for a specific part of your life or business.
+47:58 Each one has its own uploaded knowledge
+48:00 and its own custom instructions
+48:01 layered on top of your personal ones.
+48:04 Now, inside those projects, you have skills.
+48:06 And skills are native to your entire Claude workspace,
+48:08 but I like thinking of them as project or department based.
+48:12 These are the repeatable processes that Claude runs
+48:15 the same way every single time.
+48:17 Things like content briefs, client emails,
+48:20 weekly reports, whatever you've trained it to do.
+48:22 And finally, you have connectors.
+48:24 And this ties it to your real tools
+48:26 that you actually use on a day-to-day basis.
+48:28 Your calendar, your email, Google Drive, Slack.
+48:32 All of a sudden, Claude isn't just thinking,
+48:33 it's actually doing.
+48:35 So that's the full stack.
+48:37 Personal instructions, project context,
+48:39 trained skills, connected tools.
+48:41 Most people are typing questions into a blank chat bar.
+48:45 That's level one stuff.
+48:46 Now you know what level five looks like.
+48:48 And I'll be honest,
+48:49 this did not just happen to me overnight.
+48:50 I've been using AI for three years
+48:52 and I started exactly where you are right now.
+48:54 Like one conversation, one decent prompt.
+48:57 And then I would templatize the prompt
+48:58 so I could reuse it.
+49:00 And then I realized you could actually
+49:01 save those as instructions.
+49:02 Then I started building projects, then skills.
+49:04 It stacks over time.
+49:06 You don't need to do everything today.
+49:07 You just need to start.
+49:08 Now, if you liked this video,
+49:09 I know that you're going to like this one right here.
+49:12 So make sure you go ahead and give that a watch
+49:14 and I'll see you there.
+49:15 Thank you.

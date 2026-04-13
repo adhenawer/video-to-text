@@ -1,0 +1,2765 @@
+0:00 100% of my code is written by quad code.
+0:02 I have not edited a single line by hand
+0:05 since November. Every day I ship 10, 20,
+0:07 30 p requests. So at the moment I have
+0:09 like five [music] agents running while
+0:10 we're recording this.
+0:11 >> Yeah. Yeah. Do you miss writing code?
+0:13 >> I have never enjoyed coding as much as I
+0:15 do today because I don't have to deal
+0:17 with all the minutia. Productivity per
+0:19 engineer has increased 200%.
+0:21 >> There's always this question, should I
+0:22 learn to code? In a year or two, it's
+0:23 not [music] going to matter. Coding is
+0:24 largely solved. I imagine a world where
+0:26 everyone is able to program. Anyone can
+0:28 just build software anytime. What's the
+0:30 next big shift [music] to how software
+0:31 is written?
+0:32 >> Quad is starting to come up with ideas.
+0:33 It's looking through feedback. It's
+0:35 looking at bug reports. It's looking at
+0:36 telemetry for bug fixes and things to
+0:38 ship a little more like a co-orker or
+0:40 something like that.
+0:41 >> A lot of people listening to this are
+0:42 product managers and they're probably
+0:44 sweating. I think by the end of the
+0:45 year, everyone's going to be a product
+0:46 manager and everyone codes. The title
+0:48 software engineer is going to start
+0:49 [music] to go away. It's just going to
+0:50 be replaced by builder and it's going to
+0:52 be painful for a lot of people.
+0:56 Today my guest is Boris Churnney, head
+0:58 of Claude Code at Anthropic. It is hard
+1:01 to describe the impact that Claude Code
+1:03 has had on the [music] world. Around the
+1:05 time this episode comes out will be the
+1:07 one-year anniversary of Claude Code. And
+1:09 in that short time, it has completely
+1:11 transformed the job of a software
+1:13 engineer and it is now starting to
+1:15 transform the jobs of many other
+1:17 functions in tech which we talk about.
+1:19 Cloud code itself is also a massive
+1:22 driver of anthropic overall growth over
+1:24 the past year. They just raised a round
+1:26 at over [music] $350 billion. And as
+1:29 Boris mentions, the growth of Claude
+1:31 Code itself is still accelerating. Just
+1:33 in the past month, their daily active
+1:35 users has doubled. Boris is also just a
+1:37 really interesting, thoughtful,
+1:39 deepinking human. And during this
+1:41 conversation, we discover we were born
+1:43 in the same city in Ukraine. That is so
+1:46 funny. I had no idea. A huge thank you
+1:48 to Ben Man, Jenny Wen, and Mike Griger
+1:50 for suggesting topics for this
+1:52 conversation. Don't forget to check out
+1:53 lennisprodpass.com
+1:55 for an incredible set of deals available
+1:57 exclusively to Lenny's newsletter
+1:58 subscribers. Let's get into it after a
+2:01 short word from our wonderful sponsors.
+2:04 Today's episode is brought to you by DX,
+2:06 the developer intelligence platform
+2:08 designed by leading researchers. To
+2:10 thrive in the AI era, organizations need
+2:12 to adapt quickly. But many organization
+2:15 leaders struggle to answer pressing
+2:16 questions like [music] which tools are
+2:18 working? How are they being used? What's
+2:21 actually driving value? DX provides the
+2:23 data and insights that leaders need to
+2:25 navigate this shift. With DX, companies
+2:28 like Dropbox, Booking.com, Adion, and
+2:30 Intercom get a deep understanding of how
+2:33 AI is providing value to their
+2:34 developers and what impact AI is having
+2:37 on engineering productivity. To learn
+2:39 more, visit DX's website at
+2:41 getdx.com/lenny.
+2:44 That's getdx.com/lenny.
+2:48 Applications break in all kinds of ways.
+2:50 Crashes, slowdowns, regressions, and the
+2:53 stuff that you only see once real users
+2:55 show up. Sentry catches it all. See what
+2:58 happened where, and why, [music] down to
+3:00 the commit that introduced the error,
+3:01 the developer who shipped it, and the
+3:04 exact line [music] of code all in one
+3:06 connected view. I've definitely tried
+3:08 the five tabs [music] and Slack thread
+3:10 approach to debugging. This is better.
+3:13 Sentry shows you how the request moved,
+3:15 what ran, what slowed down, and what
+3:18 users saw. Seir, Sentry's AI debugging
+3:21 agent, takes it from there. It uses all
+3:23 of that Sentry context to tell you the
+3:25 root cause, suggest a fix, and even
+3:27 opens a PR for you. It also reviews your
+3:29 PR and [music] flags any breaking
+3:31 changes with fixes ready to go. Try
+3:33 Sentry and SER [music] for free at
+3:36 centry.io/lenny
+3:38 and use code Lenny for $100 in Sentry
+3:40 credits. That's s n t r y.io/lenny.
+3:49 Boris, thank you so much for being here
+3:52 and welcome to the podcast. [music]
+3:54 >> Yeah, thanks for having me on.
+3:55 >> I want to start with a a spicy question.
+3:58 About 6 months ago, I don't know if
+3:59 people even remember this, you actually
+4:01 left Anthropic. You joined Curser and
+4:05 then two weeks later, you went back to
+4:07 Anthropic. What happened there? I don't
+4:09 think I've ever heard the actual story.
+4:11 >> [laughter]
+4:12 >> It's the fastest job change that I've
+4:13 ever had.
+4:17 Um, I joined Cursor because I'm a big
+4:19 fan of the product and honestly I met
+4:22 the team and I was just really
+4:23 impressed. Uh, they're an awesome team.
+4:25 Uh, I still I still think they're
+4:27 awesome and they're just building really
+4:28 cool stuff and kind of they they saw
+4:30 where AI coding was going I think before
+4:31 a lot of people did. So the idea of
+4:34 building good product was just very
+4:35 exciting for me. I think as soon as I
+4:38 got there, what I started to realize is
+4:40 what I really missed about Ant was the
+4:42 mission. And that's actually what
+4:44 originally drove me to Ant also cuz uh
+4:48 but before I joined Anthropic, I was,
+4:49 you know, I was working in big tech and
+4:50 then I was at some point I wanted to
+4:52 work at a at a lab to just help shape
+4:55 the future of this crazy thing that that
+4:58 we're building in some way. And the
+5:00 thing that drew me to anthropic was the
+5:01 mission. And it was, you know, it's all
+5:02 about safety. And when you talk to
+5:04 people at Enthropic, just like find
+5:06 someone in the hallway, if you ask them
+5:08 why they're here, the answer is always
+5:10 going to be safety. Um, and so this kind
+5:13 of like missiondrivenness just really
+5:14 really resonated with me. And I just
+5:16 know personally it's something I need in
+5:18 order to be happy. Um, and I that's just
+5:22 a thing that I really missed. And I
+5:23 found that, you know, whatever the work
+5:25 might be, no matter how exciting, even
+5:27 if it's building a really cool product,
+5:28 it's just not really a substitute for
+5:29 that. Um, so for me it was actually u it
+5:33 was pretty obvious that that I was
+5:34 missing that pretty quick.
+5:35 >> Okay. So let me follow the thread of
+5:37 just coming back to anthropic and the
+5:39 work you've done there. This podcast is
+5:41 going to come out around the year
+5:42 anniversary of launching cloud code. So
+5:45 I'm going to spend a little time just
+5:46 reflecting on the impact that you've
+5:49 had. There's um this report that
+5:51 recently came out that I'm sure you saw
+5:53 by semi analysis that showed that 4% of
+5:55 all GitHub commits are authored by cloud
+5:58 code now. and they predicted it'll be a
+6:00 fifth of all code commits on GitHub by
+6:03 the end of the year. The way they put it
+6:05 is while we blinked, AI consumed all
+6:07 software development.
+6:10 The day that we're recording this,
+6:11 Spotify just put out this uh headline
+6:13 that their best developers haven't
+6:14 written a line of code since December
+6:17 thanks to AI. More and more of the most
+6:20 advanced senior engineers, including
+6:22 you, are sharing the fact that you don't
+6:24 write code anymore, that it's all AI
+6:26 generated. and many aren't even looking
+6:28 at code anymore is how far we've gotten
+6:31 in large part thanks to this little
+6:33 project that you started and that your
+6:34 team has scaled over the past year. I'm
+6:37 curious just to hear your reflections on
+6:39 on this past year and the impact that
+6:41 your work has had. These numbers are
+6:43 just totally crazy, right? Like four 4%
+6:45 of all commits in the world is just way
+6:48 more than I imagined and like like you
+6:49 said, it still feels like the starting
+6:51 point. Um these are also just public
+6:53 commits. So we actually think if you
+6:54 look at private repositories, it's quite
+6:56 a bit higher than that. And I I think
+6:58 the craziest thing for me isn't even the
+6:59 number that we're at right now, but the
+7:02 pace at which we're growing because if
+7:04 you look at Quad Code's growth rate kind
+7:05 of across any metric, it's continuing to
+7:07 accelerate. Um so it's not just going
+7:09 up, it's going up faster and faster.
+7:12 When I first started Quad Code, it was
+7:13 just going to be a like it was just
+7:16 supposed to be a little hack. Um you
+7:18 know we we broadly knew at Enthropic
+7:20 that we wanted to get a we wanted to
+7:22 ship some kind of coding product and you
+7:24 know for enthropic for a long time we
+7:26 were building the models in this way
+7:28 that kind of fit our mental model of the
+7:30 way that we build safe hi where the
+7:32 model starts by being really good at
+7:34 coding then it gets really good at tool
+7:35 use then it gets really good at computer
+7:37 use roughly this is like the trajectory
+7:40 uh and you know we've been working on
+7:41 this for a long time and when you look
+7:44 at the team that I started on it was
+7:46 called the anthropic labs team uh and
+7:47 actually Mike Kger and you know Ben man
+7:49 they just kicked this team off again uh
+7:51 for kind of round two the team built
+7:54 some pretty cool stuff so we built quad
+7:55 code we built MCP we built the desktop
+7:57 app so you can kind of see the seeds of
+7:59 this idea you know like it's coding then
+8:01 it's tool use then it's computer use and
+8:04 the reason this matters for anthropic is
+8:06 uh because of safety it's kind of again
+8:09 just back to that AI is getting more and
+8:11 more powerful it's getting more and more
+8:12 capable the thing that's happened in the
+8:14 last year is that for at least For
+8:16 engineers, the AI doesn't just write the
+8:18 code. It it's not just a conversation
+8:20 partner, but it actually uses tools. It
+8:22 acts in the world. Um, and I think now
+8:24 with co-work, we're starting to see the
+8:25 transition for non-technical folks also.
+8:28 Um, for a lot of people that use
+8:30 conversational AI, this might be the
+8:32 first time that they're using the thing
+8:34 that actually acts. It can actually use
+8:35 your Gmail, it can use your Slack, it
+8:37 can do all these things for you and it's
+8:38 quite good at it. Um, and it's only
+8:40 going to get better from here. So I
+8:42 think for anthropic for a long time
+8:44 there was this feeling that we wanted to
+8:45 build something but it wasn't obvious
+8:46 what and so uh when I joined ant I spent
+8:50 one month kind of hacking and you know
+8:52 built a bunch of like weird prototypes
+8:53 most of them didn't ship and you know
+8:55 weren't even close to shipping it was
+8:56 just kind of understanding the
+8:57 boundaries of what the model can do then
+8:59 I spent a month doing post- training um
+9:02 so to understand kind of the research
+9:03 side of it and I think honestly that's
+9:05 just for me as an engineer I find that
+9:08 to do good work you really have to
+9:09 understand the layer under the layer at
+9:11 which you work. And with traditional
+9:14 engineering work, you know, if you're
+9:15 working on product, you want to
+9:17 understand the infrastructure, the
+9:18 runtime, the virtual machine, the
+9:20 language kind of whatever that is, the
+9:21 system that you're building on. But, uh,
+9:24 yeah, if you're like if you're working
+9:25 in AI, you just really have to
+9:26 understand the model to some degree to
+9:28 to do good work. So, I took a little
+9:31 detour to do that and then I came back
+9:32 and just started prototyping what
+9:34 eventually became quad code. Uh, and the
+9:37 very first version of it, I I have like
+9:39 a there's like a video recording of the
+9:40 summer because I recorded this demo and
+9:42 I posted it. It was called QuadCLI back
+9:44 then. And I just kind of showed off how
+9:46 it used a few tools and the shocking
+9:48 thing for me was that I gave it a batch
+9:50 tool and uh it just was able to use that
+9:53 to write code to tell me what music I'm
+9:56 listening to when I asked it like what
+9:57 music am I listening to? And this is the
+10:00 craziest thing, right? cuz it's like
+10:02 there's no we I I didn't instruct the
+10:04 model to say, you know, use, you know,
+10:06 this tool for this or kind of do
+10:08 whatever. The model was given this tool
+10:09 and I figured out how to use it to
+10:11 answer this question that I had that I
+10:12 wasn't even sure if it could answer.
+10:14 What music am I listening to?
+10:16 And so I I I started prototyping this a
+10:19 little bit more. Um I made a post about
+10:21 it and I announced it internally and it
+10:23 got two likes. That's the that was that
+10:27 was the extent of the reaction at the
+10:28 time because I think people internally
+10:30 you know like when you think of coding
+10:31 tools you think of like you think of IDE
+10:33 you think about kind of all these pretty
+10:34 sophisticated environments no one
+10:37 thought that this thing could be
+10:38 terminal based um that's sort of a weird
+10:40 way to design it and that wasn't really
+10:42 the intention but uh you know from the
+10:44 start I built it in a terminal because
+10:47 you know for the first couple months it
+10:48 was just me so it was just the easiest
+10:50 way to build uh and for me this is
+10:52 actually a pretty important product
+10:53 lesson right is like you want to
+10:55 underresource things a little bit at the
+10:57 start. Then we started thinking about
+11:00 what other form factors we should build
+11:02 and we actually decided to stick with
+11:04 the terminal for a while and the biggest
+11:06 reason was the model is improving so
+11:08 quickly. We felt that there wasn't
+11:10 really another form factor that could
+11:12 keep up with it. And honestly this was
+11:14 just me kind of like struggling with
+11:16 kind of like what should we build you
+11:17 know like for the last year quad code
+11:19 has just been all I think about. And so
+11:21 just like late at night, this is just
+11:22 something I was thinking about like,
+11:23 okay, the model is continuing to
+11:24 improve. What do we do? How can we
+11:26 possibly keep up? And the terminal was
+11:28 honestly just the only idea that I had.
+11:31 And uh yeah, it ended up catching on
+11:33 after after I released it pretty
+11:36 quickly. It became a hit at Anthropic
+11:38 and you know, the the daily active users
+11:40 just went vertical. And really early on,
+11:42 actually before I launched it, Ben man
+11:44 uh nudged me to make a DAU chart and I
+11:46 was like, you know, it's like kind of
+11:47 early maybe, you know, should we really
+11:49 do it right now? and he was like,
+11:50 "Yeah." And so the the chart just went
+11:52 vertical pretty immediately. Uh and then
+11:55 in February, we released it externally.
+11:57 Actually, something that people don't
+11:58 really remember is Quad Code was not
+12:01 initially a hit when we released it. It
+12:04 it got a bunch of users. There was a lot
+12:06 of early adopters that got it
+12:07 immediately, but it actually took many
+12:09 months for everyone to really understand
+12:11 what this thing is. Just again, it's
+12:13 like it's just so different. And when I
+12:15 think about it, kind of part of the
+12:17 reason quad code works is this idea of
+12:19 latent demand where we bring the tool to
+12:21 where people are and it makes existing
+12:23 workflows a little bit easier, but also
+12:25 because it's it's in a terminal. It's
+12:26 like a little surprising. It's a little
+12:28 alien in this way. So you have to you
+12:29 have to kind of be open-minded and you
+12:31 had to learn to use it. And of course
+12:33 now you know quad code is available you
+12:35 know in the iOS and Android quad app.
+12:38 It's available in the desktop app. It's
+12:39 available on the website. It's available
+12:41 as IDE extensions in Slack and GitHub.
+12:43 you know all these places where
+12:44 engineers are it's a little more
+12:46 familiar but that wasn't the starting
+12:47 point
+12:49 so yeah I mean at the beginning it was
+12:51 kind of a surprise that this thing was
+12:53 even useful and uh you know as the team
+12:57 grew as the product grew as it started
+13:00 to become more and more useful to people
+13:02 just people around the world from you
+13:03 know small startups to the biggest fang
+13:05 companies started using it and they
+13:07 started giving feedback and I think just
+13:10 reflecting back it's been such a
+13:11 humbling experience cuz we just we keep
+13:14 learning from our users and just the
+13:16 most exciting thing is like you know
+13:18 none of us really know what we're doing.
+13:19 Um and we're just trying to figure out
+13:21 along with everyone else and the single
+13:23 best signal for that is just feedback
+13:24 from users. Um so that's just been the
+13:27 best I' I've been surprised so many
+13:28 times. It's incredible how fast
+13:31 something can change in today's world.
+13:33 You launched this a year ago and it
+13:35 wasn't the first time people could use
+13:36 AI to code but uh in a year the entire
+13:40 profession of software engineering has
+13:42 dramatically changed like there's all
+13:44 these predictions oh AI is going to be
+13:46 written 100% AI's code is going to be
+13:48 written by AI everyone's like no that's
+13:50 crazy what are you talking about now
+13:51 it's like
+13:52 >> of course it's happening exactly as they
+13:53 said it's just so things move so fast
+13:55 and change so fast now
+13:58 >> yeah it's really fast back at uh back at
+13:59 code with quad back in May that was like
+14:01 our first uh you know like developer
+14:03 conference that we did as Enthropic. Um
+14:06 I did a short talk and in the Q&A after
+14:08 the talk people were asking what are
+14:10 your predictions for the end of the year
+14:12 and my prediction back in May of 2025
+14:14 was by the end of the year you might not
+14:16 need an ID to code anymore and we're
+14:18 going to start to see engineers not
+14:19 doing this and I remember the room like
+14:21 audibly gasped. It was such a crazy
+14:23 prediction but I think like at anthropic
+14:26 like this is just the way the way we
+14:27 think about things is exponentials and
+14:30 this is like very deep in the DNA. Like
+14:31 if you look at our co-founders like
+14:33 three of them were the first three
+14:34 authors on the scaling laws paper. Um so
+14:37 we really just think in exponentials and
+14:40 if you kind of look at the exponential
+14:41 of the percent of code that was written
+14:43 by quad at that point if you just trace
+14:44 the line it's pretty obvious we're going
+14:46 to cross 100% by the end of the year
+14:48 even if it just does not match intuition
+14:50 at all. Um, and so all I did was trace
+14:52 the line and yeah, in November that, you
+14:55 know, that happened for me personally
+14:56 and that's been the case since and we're
+14:58 starting to see that for a lot of
+15:00 different customers too. I thought was
+15:01 really interesting what you just shared
+15:02 there about kind of the journey is this
+15:04 kind of idea of just playing around and
+15:07 seeing what happens. This came up comes
+15:09 up with open claw a lot just like Peter
+15:10 was playing around and just like a thing
+15:12 happen. And it feels like that's a
+15:14 central kind of ingredient to a lot of
+15:15 the biggest innovations in AI is people
+15:17 just sitting around trying stuff to
+15:19 pushing the models further than most
+15:21 other people.
+15:21 >> I mean this the thing about innovation
+15:23 right like you can't uh you can't force
+15:24 it. There's no road map for innovation.
+15:26 Um you just have to give people space.
+15:28 You have to give them maybe the word is
+15:30 like safety. So it's like psychological
+15:32 safety that it's okay to fail. It's okay
+15:34 if 80% of the ideas are bad. Um you also
+15:36 have to hold them accountable a bit. So
+15:38 if the idea is bad, you you know you cut
+15:39 your losses, move on to the next idea
+15:41 instead of investing more. Uh in the
+15:44 early days of quad code, I had no idea
+15:45 that this thing would be useful at all.
+15:47 Cuz even in February when we released
+15:50 it, it was writing maybe I don't know
+15:51 like 20% of my code, not more. And even
+15:54 in May, it was writing maybe 30%. I was
+15:56 still using you know curtzer for most of
+15:57 my code. And it only crossed 100% in
+16:00 November. So it took a while. But even
+16:02 from the earliest day, it just felt like
+16:03 I was on to something. And I was just
+16:05 spending like every night, every weekend
+16:07 hockey on this. And luckily my, you
+16:08 know, my wife was very supportive. Um,
+16:11 but it it just felt like it was on to
+16:13 something. It wasn't obvious what. And
+16:14 and sometimes, you know, you find a
+16:16 thread, you just have to pull on it.
+16:17 >> So at this point, 100% of your code is
+16:19 written by cloud code. Is that is that
+16:21 kind of the current state of your
+16:22 coding?
+16:23 >> Yeah. So 100% of my code is written by
+16:25 cloud code. Um, I am a fairly prolific
+16:28 coder. Um, and this has been the case
+16:30 even when I worked back at Instagram. I
+16:31 was like one of the top few most
+16:33 productive engineers. Um and that's
+16:35 actually that's still the case uh here
+16:37 at Anthropic.
+16:38 >> Wow. Even as head of head of the team.
+16:41 >> Yeah. Yeah. Do still do a lot of coding.
+16:43 Um and so every you know every day I
+16:45 ship like 10 20 30 p requests something
+16:47 like that
+16:47 >> every day.
+16:49 >> Every day. Yeah.
+16:50 >> Good god.
+16:50 >> Uh 100% written by quad code. I have not
+16:53 edited a single line by hand since uh
+16:57 November.
+16:59 And yeah, that that's been it. I do look
+17:02 at the code. So I I don't think we're
+17:04 kind of at the point yet where you can
+17:06 be totally hands-off, especially when
+17:07 there's a lot of people, you know, like
+17:08 running the program. You have to make
+17:09 sure that it's correct. You have to make
+17:11 sure it's safe and so on. Um, and then
+17:13 we also have Quad doing automatic code
+17:15 review for everything. Um, so here at
+17:16 Enthropic, Quad reviews 100% of poll
+17:19 requests. Um, there's still layer of
+17:20 like human review after it, but you kind
+17:22 of like you still do want some of these
+17:24 checkpoints like you still want a human
+17:25 looking at the code. um unless it's like
+17:27 pure prototype code that you know it's
+17:29 not going to run it's not going to run
+17:31 anywhere it's just a prototype.
+17:32 >> What's kind of the next frontier? So at
+17:34 this point 100% of your code is being
+17:37 written by AI. This is clearly where
+17:39 everyone is going in software
+17:41 engineering. That felt like a crazy
+17:43 milestone. Now it's just like of course
+17:45 this is the world now. What's what's
+17:48 kind of the next big shift to how
+17:50 software is written that either your
+17:51 team's already operating in or you think
+17:52 will head towards? I think something
+17:55 that's happening right now is Quad is
+17:56 starting to come up with ideas. Um so
+17:59 Quad is looking through feedback. It's
+18:01 uh looking at bug reports. It's looking
+18:03 at um you know like telemetry and and
+18:05 things like this and it's starting to
+18:06 come up with ideas for bug fixes and
+18:08 things to ship. So it's just starting to
+18:11 get a little more um you know like a
+18:14 little more like a co-orker or something
+18:15 like that. I think the second thing is
+18:17 we're starting to branch out of coding a
+18:18 little bit. So I think at this point
+18:20 it's safe to say that coding is largely
+18:22 solved. At least for the kind of
+18:24 programming that I do, it's just a
+18:25 solved problem because quad can do it.
+18:27 And so now we're starting to think about
+18:28 okay like what's next? What's beyond
+18:30 this? There's a lot of things that are
+18:32 kind of adjacent to coding. Um and I
+18:34 think this is going to be coming. But
+18:36 also just you know general tasks, you
+18:38 know, like I use co-work every day now
+18:40 to do all sorts of things that are just
+18:42 not related to coding at all and just to
+18:43 do it automatically. Like for example, I
+18:45 had to pay a parking ticket the other
+18:46 day. I just had co-work do it. um all of
+18:49 my project management for the team uh
+18:51 co-work does all of it. It's like
+18:52 syncing stuff between spreadsheets and
+18:54 messaging people on Slack and email and
+18:56 all this kind of stuff. So I think the
+18:59 frontier is something like this and I I
+19:02 don't think it's coding because I think
+19:03 coding is you know it's pretty much
+19:05 solved and over the next few months I
+19:07 think what we're going to see is just
+19:08 across the industry it's going to become
+19:09 increasingly solved you know for every
+19:11 kind of codebase every tech stack that
+19:13 people work on.
+19:14 >> This idea of helping you come up with
+19:16 what to work on is so interesting. A lot
+19:17 of people listening to this are product
+19:19 managers and they're probably sweating.
+19:22 How do you use Claude for this? Do you
+19:24 just talk to it? Is there anything
+19:26 clever you've come up with to help you
+19:28 use it to come up with what to build?
+19:29 >> Honestly, the simplest thing is like
+19:31 open quad code or co-work and point it
+19:33 at a Slack thread. Um, you know, like
+19:35 for us, we have this channel that that's
+19:37 all the internal feedback about Quad
+19:38 Code. Since we first released it, even
+19:41 in like 2024 internally, it's just been
+19:44 this fire hose of feedback. Um, and it's
+19:46 the best. And like in the early days,
+19:47 what I would do is anytime that someone
+19:49 sends feedback, I would just go in and I
+19:51 would fix every single thing as fast as
+19:53 I possibly could. So like within a
+19:55 minute, within 5 minutes or whatever.
+19:56 And this just really fast feedback
+19:58 cycle, it encourages people to give more
+19:59 and more feedback. It's just so
+20:01 important cuz it makes them feel heard
+20:03 cuz you know like usually when you use a
+20:05 product, you give feedback, it just goes
+20:06 into a black hole somewhere and then you
+20:07 don't give feedback again. So if you
+20:09 make people feel heard, then they want
+20:10 to contribute and they want to help make
+20:12 the thing better. Um, and so now I kind
+20:14 of do the same thing, but Quad honestly
+20:16 does a lot of the work. So I pointed at
+20:18 the channel and it's like, "Okay, here's
+20:20 a few things that I can do. I just put
+20:22 up a couple PRs. Want to take a look at
+20:24 that one?" I'm like, "Yeah." Have you
+20:25 noticed that it is getting much better
+20:27 at this? Because this is kind of the
+20:28 holy grail, right? Now it's like, "Cool,
+20:30 building solved." Code review became
+20:32 kind of the next bottleneck. All these
+20:34 PRs, who's going to review them all? The
+20:36 next big open question is just like,
+20:37 okay, now we need to now now humans are
+20:40 necessary for figuring out what to
+20:41 build, what to prioritize. And you're
+20:42 saying that that's where claude code is
+20:44 starting to help you. Has it has it
+20:45 gotten a lot better with like say Opus
+20:47 46 or what's been the trajectory there?
+20:50 >> Yeah. Yeah, it's improved a lot. Um I
+20:52 think some of it is kind of like
+20:54 training that we do specific to coding.
+20:56 Um so you know obviously you know best
+20:58 coding model in the world and you know
+21:00 it's getting better and better like 4.6
+21:02 is just incredible but also actually a
+21:04 lot of the training that we do outside
+21:05 of coding translates pretty well too. So
+21:07 there is this kind of like transfer
+21:09 where you teach the model to do you know
+21:10 X and it kind of gets better at Y. Um
+21:14 yeah and the the gains have just been
+21:16 insane like at anthropic over the last
+21:18 year like since we introduced quad code
+21:20 we probably I don't know the exact
+21:22 number we probably like 4x the
+21:23 engineering team or something like this
+21:25 but productivity per engineer has
+21:27 increased 200%.
+21:29 in terms of like pull requests and like
+21:31 this number is just crazy for anyone
+21:33 that actually works in the space and
+21:34 works on deaf productivity because back
+21:36 in a previous life I was at Meta and you
+21:38 know one of my responsibilities was code
+21:39 quality for the company. So this is like
+21:41 the all of our code bases that was my
+21:43 responsibility like Facebook, Instagram,
+21:45 WhatsApp all this stuff. Um and a lot of
+21:47 that was about productivity because if
+21:49 you make the code higher quality then
+21:51 engineers are more productive and things
+21:53 that we saw is you know in a year with
+21:56 hundreds of engineers working on it you
+21:57 would see a gain of like a few
+21:58 percentage points of productivity
+22:00 something like this. Um and so nowadays
+22:02 seeing these gains of just hundreds of
+22:03 percentage points it's is just
+22:05 absolutely insane. What's also insane is
+22:07 just how normalized this has all been
+22:08 like we hear these numbers like of
+22:10 course AI is doing this to us. It's just
+22:12 it's so unprecedented the amount of
+22:14 change that is happening to software
+22:17 development to building products to just
+22:18 this the world of tech. It's just like
+22:20 so easy to get used to it. But it's
+22:22 important to recognize this is crazy.
+22:25 This is something like I have to remind
+22:27 myself once in a while. There's sort of
+22:28 like a downside of this because the
+22:30 model changes so well there's actually
+22:32 like there's many kind of downsides that
+22:33 that we could talk about but I think one
+22:35 of them on a personal level is the model
+22:37 changes so often that I sometimes get
+22:40 stuck in this like old way of of
+22:42 thinking about it and I even find that
+22:45 like new people on the team or even new
+22:46 grads that join do stuff in a more kind
+22:50 of like AGI forward way than I do. So
+22:53 like sometimes for example I I I had
+22:55 this case like a couple months ago where
+22:56 there was a memory leak and so like what
+22:58 this is is you know like quad code the
+23:00 memory usage is going up and at some
+23:01 point it crashes. This is like a very
+23:03 common kind of engineering problem that
+23:05 you know every engineer has debugged a
+23:06 thousand times and traditionally the way
+23:08 that you do it is you take a heap
+23:10 snapshot you put it into a special
+23:12 debugger you kind of figure out what's
+23:13 going on you know use these special
+23:15 tools to see what's happening. Um, and I
+23:18 was doing this and I was kind of like
+23:19 looking through these traces and trying
+23:20 to figure out what was going on. And the
+23:22 engineer that was newer on the team just
+23:25 uh had Quad Code do it and was like,
+23:27 "Hey Quad, it seems like there's a leak.
+23:28 Can you figure it out?" And so like Quad
+23:30 Code did exactly the same thing that I
+23:31 was doing. It it took the heap snapshot.
+23:33 It wrote a little tool for itself so it
+23:35 can kind of like analyze it itself. Um,
+23:37 it was sort of like a just in time
+23:39 program. Uh, and it found the issue and
+23:41 put up a pull request faster than I
+23:42 could. So it's it's something where like
+23:45 for those of us that have been using the
+23:47 model for a long time, you still have to
+23:49 kind of transport yourself to the
+23:51 current moment and not get stuck back in
+23:54 an old model because it's not sonnet 3.5
+23:56 anymore. The new models are just
+23:57 completely completely different. Uh and
+24:00 just this this mindset shift is is very
+24:02 different. I hear you have these very
+24:04 specific principles that you've codified
+24:06 for your team that when people join you
+24:09 you kind of walk them through them. I
+24:11 believe one of them is what's better
+24:12 than doing something having Claude do
+24:14 it. And it feels like that's exactly
+24:15 what you describe with this memory leak
+24:17 is just like you almost forgot that
+24:18 principle of like okay let me see if
+24:20 Claude can solve this for me. There's
+24:22 this uh there's this interesting thing
+24:23 that happens also when you um when you
+24:26 underfund everything a little bit uh
+24:28 because then people are kind of forced
+24:29 to clify and this is something that we
+24:32 see. So you know for work where
+24:33 sometimes we just put like one engineer
+24:35 on a project and the way that they're
+24:38 able to ship really quickly because they
+24:40 want to ship quickly. This is like an
+24:41 intrinsic motivation that comes from
+24:42 within is just wanting to do a good job.
+24:44 One if you have a good idea you just
+24:45 really want to get it out there. No one
+24:47 has to force you to do that. That comes
+24:48 from you. Um and and so if you have
+24:51 claude, you can just use that to
+24:52 automate a lot of work. Uh and that
+24:55 that's kind of what we see over and
+24:56 over. So I think that's kind of like one
+24:58 principle is underfunding things a
+25:00 little bit. I think another principle is
+25:02 just encouraging people to go faster. So
+25:04 if you can do something today, you
+25:06 should just do it today. And this is
+25:08 something we we really really encourage
+25:10 on the team. Early on it was really
+25:12 important because it was just me and so
+25:14 our only advantage was speed.
+25:17 that's the only way that we could ship a
+25:18 product that would compete in this very
+25:19 crowded coding market. But nowadays,
+25:21 it's still very much a principle we have
+25:23 on the team. And if you want to go
+25:25 faster, a really good way to do that is
+25:28 to just have Claude do more stuff. Um,
+25:30 so he it just very much encourages that.
+25:32 This idea of underfunding, it's so
+25:34 interesting because in general there's
+25:36 this feeling like AI is going to allow
+25:38 you to not have as many employees, not
+25:40 have as many engineers. And so it's not
+25:42 only you can be more productive. What
+25:43 you're saying is that you will actually
+25:45 do better if you underfund. It's not
+25:47 just that AI can make you faster. It's
+25:49 you will get more out of the AI tooling
+25:51 if you have fewer people working on
+25:53 something. Yeah. If you if you hire
+25:56 great engineers, they'll figure out how
+25:57 to do it. And uh especially if you
+25:59 empower them to do it. This is something
+26:00 I actually talk talk a lot about with uh
+26:03 you know with like CTO's and kind of all
+26:04 sorts of companies. My advice generally
+26:07 is don't try to optimize. Don't don't
+26:09 try to cost cut at the beginning. Start
+26:11 by just giving engineers as many tokens
+26:13 as possible. And now now you're starting
+26:15 to see companies like you know at
+26:16 Anthropic we have you know everyone can
+26:17 use a lot of tokens. We're starting to
+26:19 see this come up as like a perk at some
+26:21 companies. Like if you join you get
+26:23 unlimited tokens. This is a thing I very
+26:25 much encourage because um it makes
+26:29 people free to try these ideas that
+26:31 would have been too crazy and then if
+26:33 there's an idea that works then you can
+26:36 figure out how to scale it and that's
+26:37 the point to kind of optimize and to
+26:38 cost cut figure out like you know maybe
+26:40 you can do it with haiku or with sonnet
+26:42 instead of opus or whatever but at the
+26:44 beginning you just want to throw a lot
+26:45 of tokens at it and see if the idea
+26:47 works and give engineers the freedom to
+26:48 do that. So the advice here is uh just
+26:51 be be loose with your tokens with this
+26:53 the cost on on using these models.
+26:55 People hearing this may be like of
+26:57 course he works at Anthropic. He wants
+26:58 us to use as many tokens as possible.
+27:00 But you're what you're saying here is
+27:02 the the most interesting innovative
+27:03 ideas will come out of someone just kind
+27:05 of taking it to the max and seeing
+27:06 what's possible.
+27:08 >> Yeah. And I and I think the reality is
+27:09 like at small scale like you know you're
+27:11 not going to get like a giant bill or
+27:12 anything like this. Like if it's an
+27:14 individual engineer experimenting, it's
+27:16 the token cost is still probably
+27:18 relatively low relative to their salary
+27:21 or you know other costs of running the
+27:23 business. So it it's actually like not
+27:25 not a huge cost as the thing scales up.
+27:28 So like let's say you know they build
+27:29 something awesome and then it takes a
+27:31 huge amount of tokens and then the cost
+27:33 becomes pretty big. That's the point at
+27:34 which you want to optimize it. But don't
+27:36 don't do that too early.
+27:37 >> Have you seen companies where their uh
+27:39 token cost is higher than their salary?
+27:41 Is that a trend you think we're going to
+27:43 find and see?
+27:44 >> You know, at Anthropic, we're starting
+27:45 to see some engineers that are spending,
+27:47 you know, like hundreds of thousands a
+27:48 month in in tokens. Um, so we're
+27:51 starting to see this a little bit. Um,
+27:53 there's some companies that are we're
+27:54 starting to see similar things. Yeah.
+27:58 >> Going back to coding, do you miss
+28:00 writing code? Is this something you're
+28:02 kind of sad about that this is no longer
+28:04 a thing you will do as a software
+28:05 engineer? It's funny for me, you know,
+28:07 like when when I learned engineering,
+28:10 for me it was very practical. I learned
+28:13 engineering so I could build stuff
+28:16 and for me I was I was selftaught, you
+28:17 know, like I studied economics in
+28:19 school, but um I didn't study CS, but I
+28:22 I taught myself engineering kind of
+28:24 early on. I was programming in like
+28:25 middle school and from the very
+28:27 beginning it was very practical. So I
+28:29 actually like I learned to code so that
+28:30 I can cheat on a math test. That was
+28:32 like the first thing we had these like
+28:34 graphing calculators and you know I just
+28:36 programmed the answer into
+28:37 >> TI83.
+28:38 >> T83 plus. Yeah. Yeah. Exactly.
+28:41 [laughter]
+28:41 >> Plus. Yeah. So like I programmed the
+28:42 answers in and then the next like math
+28:45 test whatever like the next year that it
+28:47 was just like too hard. Like I couldn't
+28:48 program all the answers in because I
+28:49 didn't know what the questions were. And
+28:50 so I had to write like a little solver
+28:52 so that it it was a program that would
+28:54 just like solve these like uh you know
+28:56 these al algebra questions or whatever.
+28:58 And then I figured out you can get a
+28:59 little cable, you can give the program
+29:01 to the rest of the class and then the
+29:02 whole class gets A's. But then we all
+29:04 got caught and the teacher told us to
+29:05 knock it off. But from the very
+29:07 beginning it's it's always just been
+29:08 very practical for me where programming
+29:11 is a way to build a thing. It's not the
+29:14 end in itself.
+29:16 At some point I personally fell into the
+29:18 rabbit hole of kind of like the the
+29:20 beauty of of programming. Um so like I I
+29:23 wrote a book about TypeScript. Um, I
+29:25 started the actually at the time it was
+29:27 the world's biggest uh, TypeScript
+29:28 meetup just because I fell in love with
+29:30 the language itself. Uh, and I kind of
+29:32 got in deep into like functional
+29:34 programming and and all this stuff. I
+29:36 think a lot of coders they get
+29:38 distracted by this. For me, it was
+29:41 always sort of um they there is a beauty
+29:44 to programming and especially to
+29:45 functional programming. There's a beauty
+29:47 to type systems. Um, there there's a
+29:49 certain kind of like this like buzz that
+29:51 you get like when you solve like a
+29:52 really a really complicated uh math
+29:55 problem. It's kind of similar when you
+29:57 kind of balance the types or you know
+29:58 the program is just like really
+30:00 beautiful but it's really not the end of
+30:02 it. Um I think for me coding is very
+30:04 much a tool and it's a way to do things.
+30:07 Uh that said not everyone feels this
+30:09 way. So for example you know like
+30:10 there's one engineer uh on the team Lena
+30:13 who you know was still writing C++ on
+30:15 the weekends by hand because you know
+30:17 for her she just really enjoys writing
+30:18 C++ by hand. And so everyone is
+30:21 different and I think even as this field
+30:23 changes, even as everything changes,
+30:26 there's always space to do this, there's
+30:28 always space to enjoy the art um and to
+30:30 and and to kind of do do things by hand
+30:33 uh if you want.
+30:34 >> Do you worry about your skills atrophing
+30:36 as an engineer? Is that something you
+30:38 worry about or is it just like, you
+30:39 know, this is just the way it's going to
+30:41 go?
+30:41 >> I think it's just the way that that it
+30:42 happens. I I don't worry about it too
+30:44 much personally. I think for me like
+30:46 programming is on is on a continuum and
+30:49 you know like way back in the day you
+30:50 know like software actually is like
+30:52 relatively new right like if you look at
+30:54 the way programs are written today like
+30:56 using software that's running on a
+30:57 virtual machine or something this has
+30:59 been the way that we've been writing
+31:00 programs since probably the 1960s so you
+31:03 know it's been you know like 60 years or
+31:05 something like that. Before that it was
+31:07 punch cards. Before that it was
+31:08 switches. Before that it was hardware.
+31:09 And before that it was just you know
+31:11 like literally pen and paper. It was
+31:12 like a room a room full of people that
+31:13 were doing math on on paper. And so, you
+31:17 know, programming has always changed in
+31:18 this way. In some ways, you still want
+31:21 to understand the layer under the layer
+31:23 because it helps you be a better
+31:24 engineer. And I think this will be the
+31:25 case maybe for the next year or so. Um,
+31:27 but I think pretty soon it just won't
+31:29 really matter. It's just going to be
+31:30 kind of like the the assembly code wring
+31:33 running under the programmer or
+31:34 something like this.
+31:36 uh at an emotional level, you know, I I
+31:40 feel like I've always had to learn new
+31:41 things. And as a programmer, it's
+31:44 actually not it doesn't feel that new
+31:45 because there's always new frameworks,
+31:46 there's always new languages. It's just
+31:48 something that we're quite comfortable
+31:49 with in the field. But at the same time,
+31:51 I you know, this isn't true for
+31:52 everyone. And I think for some people,
+31:54 they're going to feel a greater sense
+31:55 of, I don't know, maybe like loss or
+31:58 nostalgia or atrophy or something like
+32:00 this. I don't know if you saw this, but
+32:02 Elon was saying that uh why isn't the AI
+32:05 just writing binary straight to binary?
+32:07 Uh because what's the point of all this,
+32:09 you know, programming abstraction in the
+32:11 end?
+32:12 >> Yeah, it's a good question. I mean, it
+32:13 totally can do that if you wanted to.
+32:15 >> Oh, man. So, what I'm hearing here is in
+32:18 terms there's always this question,
+32:19 should I learn to code? Should people in
+32:20 school learn to code? Uh what I heard
+32:22 from you is your take is in like a year
+32:25 or two, you don't really need to. My
+32:27 take is I think for for people that are
+32:30 using um there that are using quad code
+32:33 that are using agents to code today you
+32:35 still have to understand the layer under
+32:37 but yeah in a year or two it's not going
+32:38 to matter. I I was thinking about um
+32:42 what is the right like historical analog
+32:44 for this cuz like like somehow we have
+32:47 to situate this thing in history and and
+32:49 kind of figure out when have we gone
+32:51 through similar transitions. What's the
+32:52 right kind of mental model for this? I
+32:54 think the thing that's come closest for
+32:56 me is the printing press. And so you
+32:59 know if you look at Europe in uh you
+33:01 know like in the in the mid the mid400s
+33:04 literacy was actually very low. Uh there
+33:06 was sub 1% of the population it was
+33:08 scribes that uh you know they were the
+33:11 ones that did all the writing. They they
+33:12 were the ones that did all the reading.
+33:14 They were employed by like lords and
+33:15 kings that often were not literate
+33:17 themselves. And so you know it was their
+33:19 job of this very tiny percent of the
+33:20 population to do this. And at some point
+33:23 the you know Gutenberg and and the
+33:24 printing press came along and there was
+33:27 this crazy stat that in the 50 years
+33:29 after the printing press was uh built
+33:32 there was more printed material created
+33:34 than in the c in the in the thousand
+33:36 years before
+33:38 and so the the volume of printed
+33:40 material just went way up. Uh the cost
+33:43 went way down. It went down something
+33:44 like 100x over the next 50 years. And if
+33:47 you look at literacy, you know, it
+33:49 actually took a while because learning
+33:50 to read and write is, you know, it's
+33:52 quite hard. It takes an education
+33:53 system. It takes free time. You it takes
+33:56 like not having to work on a farm all
+33:57 day so that you actually have time for
+33:59 education and things like this. But over
+34:01 the next 200 years, it went up to like
+34:02 70% globally. So I think this is the
+34:07 kind of thing that we might see is a
+34:10 similar kind of transition. And there
+34:13 was uh there was actually this
+34:14 interesting um historical document where
+34:16 there was an interview with some like
+34:17 scribe in the 1400s about like how do
+34:20 you feel about the printing press? And
+34:23 they were actually very excited because
+34:24 they were like actually the thing that I
+34:25 don't like doing is copying between
+34:27 books. The thing that I do like doing is
+34:29 drawing the art in books and then doing
+34:30 the book binding. And I'm really glad
+34:32 that now my time is freed up. And it's
+34:35 interesting like as an engineer I sort
+34:38 of felt like a peril with this. It's
+34:40 like this is sort of how I feel where I
+34:42 don't have to do the tedious work
+34:43 anymore of coding because this has
+34:46 always been sort of the detail of it.
+34:47 It's always been the tedious part of it
+34:49 and kind of like messing with like git
+34:50 and kind of using all these different
+34:52 tools. That that was not the fun part.
+34:54 The fun part is figuring out what to
+34:55 build and coming up with this. It's uh
+34:58 it's talking to users. It's thinking
+34:59 about these big systems. It's thinking
+35:01 about the future. It's collaborating
+35:03 with you know other people on the team.
+35:04 And that's what I get to do more of now.
+35:07 And what's amazing is that the tool
+35:09 you're building allows anybody to do
+35:11 this. People that have no technical
+35:13 experience can do exactly what you're
+35:14 describing. Like I'm I've been doing a
+35:16 bunch of random little projects and any
+35:18 it's just like anytime you get stuck
+35:20 just like help me figure this out and
+35:22 you get on block. Like I used to I was
+35:24 an engineer for early in my career for
+35:26 10 years and I just remember spending so
+35:29 much time on like libraries and
+35:30 dependencies and things and just like oh
+35:32 my god what do I do and then looking on
+35:34 stack overflow and now it's just like
+35:35 help me figure this out and here's step
+35:37 by step one two three four okay we got
+35:39 this.
+35:39 >> Yeah exactly exactly I was talking to an
+35:41 engineer earlier today they're like
+35:43 they're writing some service and go and
+35:45 you know it's been like a month already
+35:46 and they they built up the service like
+35:47 it's working quite well and then I was
+35:49 like okay so like how do you feel
+35:50 writing it? He was like, you know, like
+35:51 I I still don't really know Go, but
+35:54 [laughter]
+35:55 and I think we're going to start to see
+35:56 more and more of this. It's like if you
+35:58 know that it works correctly and
+35:59 efficiently, then you you don't actually
+36:01 have to know all the details. Clearly,
+36:03 the life of a software engineer has
+36:05 changed dramatically. It's like a whole
+36:07 new job now as of the past year or two.
+36:12 What do you think is the next role that
+36:13 will be most impacted by AI within
+36:16 either within tech like you know product
+36:18 managers, designers or even outside tech
+36:20 just like what do you think where do you
+36:21 think AI is going next?
+36:23 >> I think it's going to be a lot of the
+36:24 roles that are adjacent to engineering.
+36:26 Um so yeah it could be like product
+36:28 managers, it could be design, could be
+36:29 data science. It is going to expand to
+36:32 pretty much any kind of work that you
+36:34 can do on a computer because the model
+36:36 is just going to get better and better
+36:37 at this. Um, and you know, like this is
+36:39 the co-work product is kind of the first
+36:41 way to get at this, but it's just the
+36:43 first one. And
+36:45 it's the thing that I think brings AI to
+36:48 a agentic AI to people that haven't
+36:50 really used it before, and people are
+36:52 starting just to to to get a sense of it
+36:54 for the first time. When I think back to
+36:56 engineering a year ago, no one really
+36:58 knew what an agent was. No one really
+37:00 used it. But nowadays, it's just the way
+37:02 that, you know, we do we do our work.
+37:04 And then when I look at non-technical
+37:05 work today um so you know like or maybe
+37:09 semi-technical like product work and you
+37:10 know like data science and things like
+37:12 this when you look at the kinds of AI
+37:14 that people are using it's all it's
+37:15 always these like conversational AI it's
+37:17 like a chatbot or whatever but no one
+37:19 really has used an agent before and this
+37:22 word agent just gets thrown around all
+37:23 the time and it's just like so misused
+37:25 it's like lost all meaning but agent
+37:27 actually has like a very specific
+37:28 technical meaning which is it's a it's a
+37:31 AI it's a LM that's able to use tools.
+37:34 So it doesn't just talk, it can actually
+37:36 act and it can interact with your system
+37:39 and you know this means like it can use
+37:41 your Google docs and it can it can send
+37:43 email. It can run commands on your
+37:44 computer and do all this kind of stuff.
+37:46 So I think like any kind of job where
+37:48 you do you use computer tools in this
+37:50 way. I think this is going to be next.
+37:53 This is something we have to kind of
+37:54 figure out as a as a society. This is
+37:56 something we have to figure out as an
+37:57 industry. Um and I think for me also
+37:59 this is one of the reasons it it feels
+38:01 very important and urgent to do this
+38:03 work at anthropic because I think we
+38:06 take this very very seriously. Um and so
+38:08 now you know we have economists we have
+38:11 uh policy folks we have social impact
+38:12 folks this is something we just want to
+38:14 talk about a lot so as society we can
+38:16 kind of figure out what to do because it
+38:17 shouldn't be up to us.
+38:19 >> So the big question which you're kind of
+38:21 alluding to is jobs and job loss and
+38:22 things like that. There's this concept
+38:24 of Jevans paradox of just as we can do
+38:27 more we hire more and it's not actually
+38:29 as scary as it looks. What have you
+38:31 experienced so far I guess with AI
+38:33 becoming a big part of the engineering
+38:35 job? Just are you hiring more than if
+38:38 you didn't have AI and just thoughts on
+38:40 jobs?
+38:41 >> Yeah, I mean for our team we're we're
+38:43 hiring. Um so quadco team is hiring. Um
+38:46 if you're interested just check out the
+38:47 jobs page on on anthropic. Personally,
+38:50 it's, you know, all this stuff has just
+38:52 made me enjoy my work more. I have never
+38:56 enjoyed coding as much as I do today
+38:58 because I don't have to deal with all
+38:59 the minutia. So, for me personally, it's
+39:02 been quite exciting. This is something
+39:03 that we hear from a lot of customers
+39:05 where they love the tool, they love Quad
+39:07 Code because it just makes coding
+39:09 delightful again. Uh, and that's just
+39:12 that's just so fun for them. But it's
+39:14 hard to know where this thing is going
+39:16 to go. And I again I just like I have to
+39:18 reach for these historical analoges. Uh
+39:21 and I I think the printing press is just
+39:23 such a good one because what happened is
+39:26 this technology that was locked away to
+39:27 a small set of people like knowing how
+39:29 to read and write became accessible to
+39:31 everyone. It was just inherently
+39:32 democratizing. Everyone started to be
+39:35 able to do this. And if that wasn't the
+39:37 case then something like the Renaissance
+39:40 just could never have happened because a
+39:42 lot of the Renaissance it was about like
+39:44 knowledge spreading. It was about like
+39:45 written records that people used to
+39:47 communicate. Um, you know, cuz there
+39:49 were no phones or anything like this.
+39:52 There was there was no internet at the
+39:53 time. So, it's about like what does this
+39:55 enable next? And I think that's the very
+39:59 optimistic version of it for me. And
+40:00 that's the part that I'm really excited
+40:01 about. It's just unimaginable, you know,
+40:04 like we couldn't be talking today if the
+40:06 printing press hadn't been invented.
+40:07 Like our microphones wouldn't exist.
+40:09 None of the things around us would
+40:10 exist. it just wouldn't be possible to
+40:12 coordinate such a large group of people
+40:13 if that wasn't the case. And so I
+40:16 imagine a world, you know, a few years
+40:17 in the future where everyone is able to
+40:19 program. And what does that unlock?
+40:21 Anyone can just build software anytime.
+40:23 And I have no idea. It's just the same
+40:26 way that, you know, in the 1400s, no one
+40:28 could have predicted this. Um, I think
+40:29 it's the same way. But I do think in the
+40:31 meantime, it's going to be very
+40:32 disruptive and it's going to be painful
+40:34 for a lot of people. Um, and again, as a
+40:37 society, this is a conversation that we
+40:39 have to have and this is a thing that we
+40:41 have to figure out together.
+40:42 >> So, for folks hearing this that want to
+40:45 succeed and, you know, make it in this
+40:48 crazy turmoil we're entering, any
+40:50 advice? Is it, you know, play with AI
+40:52 tools, get really proficient at the
+40:53 latest stuff? Is there anything else
+40:55 that you recommend to help people uh
+40:57 stay ahead? Yeah, I think that's pretty
+40:59 much it. Uh, experiment with the tools,
+41:01 get to know them, don't be scared of
+41:02 them. um just you know dive in try them
+41:05 be on the bleeding edge beyond the
+41:06 frontier. Maybe the second piece of
+41:09 advice is try to be a generalist more
+41:12 than you have in the past. For example,
+41:14 in school a lot of people that study CS
+41:16 they learn to code and they don't really
+41:19 learn much else. Maybe they learn a
+41:21 little bit of systems architecture or
+41:23 something like this. But some of the
+41:25 most effective engineers that I work
+41:27 with every day and some of the most
+41:28 effective, you know, like product
+41:29 managers and so on, they cross over
+41:31 disciplines. So on the quad code team,
+41:33 everyone codes. You know, our product
+41:34 manager codes, our engineering manager
+41:36 codes, our designer codes, our finance
+41:39 guy codes, our data scientist codes.
+41:42 Like everyone on the team codes. And and
+41:43 then if I look at particular engineers,
+41:45 people often cross different
+41:47 disciplines. So some of the strongest
+41:48 engineers are hybrid product and
+41:50 infrastructure engineers or product
+41:53 engineers with really great design sense
+41:54 and they're able to do design also or an
+41:57 engineer that has a really good sense of
+41:58 the business and can use that to figure
+42:00 out what to do next. or an engineer that
+42:03 also loves talking to users and can just
+42:06 really channel what what users want to
+42:08 figure out what's next. So I think a lot
+42:11 of the people that will be rewarded the
+42:12 most over the next few years, they won't
+42:15 just be AI native and they don't just
+42:17 know how to use these tools really well,
+42:18 but also they're curious and they're
+42:21 generalists and they cross over multiple
+42:23 disciplines and can think about the
+42:25 broader problem they're solving rather
+42:27 than just the engineering part of it. Do
+42:29 you find these three separate
+42:30 disciplines still useful as a way to
+42:32 think about the team? They're, you know,
+42:33 engineering, design, uh, product
+42:35 management. Do you find like those, even
+42:37 though they are now coding and
+42:39 contributing to thinking about what to
+42:41 build, do you feel like those are three
+42:42 roles that will persist long term, at
+42:44 least at this point? I think in the
+42:46 short term it'll persist, but one thing
+42:48 that we're starting to see is there's
+42:49 maybe a 50% overlap in these roles where
+42:52 a lot of people are actually just doing
+42:53 the same thing and some people have
+42:54 specialties. for example, I code a
+42:56 little bit more versus cat RPM does a
+42:59 little bit more, you know, coordination
+43:00 or planning or, you know, forecasting or
+43:03 things like this.
+43:04 >> Stakeholder alignment.
+43:05 >> Stakeholder alignment. Exactly. I I do
+43:08 think that there's a future where I
+43:10 think by the end of the year what we're
+43:11 going to start to see is these start to
+43:13 get even murkier murkier where I think
+43:16 in some places the title software
+43:17 engineer is going to start to go away
+43:19 and it's just going to be replaced by
+43:21 builder or maybe it's just everyone's
+43:22 going to be a product manager and
+43:24 everyone codes or something like this.
+43:26 Who says hiring has to be fair? Every
+43:28 founder and hiring manager I've been
+43:30 speaking with these days is feeling the
+43:32 same pressure. Hire the best people as
+43:34 fast as possible. But [music] recruiting
+43:36 is time consuming, alignment is hard,
+43:39 and competition for great talent keeps
+43:41 getting tighter. That's why teams like
+43:44 11 Labs, Brex, Replet, Deal, and 5,000
+43:47 [music]
+43:48 other organizations use MetaView, the AI
+43:51 company giving high performance teams a
+43:53 real unfair advantage in hiring. They
+43:55 give you a suite of AI agents that
+43:57 behave like recruiting co-workers. They
+43:59 find candidates for you based on your
+44:01 exact criteria, [music]
+44:02 take interview notes automatically,
+44:05 gather insights across your hiring
+44:07 process, and help you identify the best
+44:09 candidates in your pipeline. AI handles
+44:12 the recruiting toil and gives you a real
+44:14 source of truth. That means hours saved
+44:16 per hire and a team focused on what
+44:18 matters most, winning the right [music]
+44:20 candidates. Don't let your competitors
+44:23 outhire you. Metav customers close roles
+44:26 30% faster. Try Metaview today for free
+44:29 and [music] get an extra month of
+44:31 sourcing at metaview.ai/lenny.
+44:34 That's me.
+44:37 Lenny. You talked about how you're
+44:39 enjoying coding more. I actually did
+44:40 this little informal survey on Twitter.
+44:42 I don't know if you saw this where I
+44:44 just asked I did three different polls.
+44:46 I asked engineers, are you enjoying your
+44:48 job more or less since adopting AI
+44:49 tools? And then I did a separate one for
+44:51 PMs and one for designers. And both
+44:54 engineers and PMs, 70% of people said
+44:57 they are enjoying their job more and
+44:59 about 10% said they're enjoying their
+45:01 job less. Designers, interestingly, only
+45:04 55% said they are enjoying their job
+45:07 more and 20% said they're enjoying their
+45:09 job less. Thought that was really
+45:11 interesting.
+45:11 >> That's super interesting. I' I'd love to
+45:13 talk to these people uh you know, both
+45:15 in the more bucket and the less bucket
+45:17 just to understand. Do did you get to
+45:18 follow up with any of them? They a few
+45:20 people replied and we're actually doing
+45:22 a follow poll that we'll link to in the
+45:23 show notes of going deeper into some of
+45:25 the stuff, but a lot of there's like,
+45:27 you know, the factors that make it more
+45:29 fun and less fun. The designers, they
+45:31 didn't share a lot actually of just like
+45:32 the people that are actually asked just
+45:34 like why are you enjoying your job less?
+45:35 And I didn't hear a lot. So, I'm curious
+45:36 what's going on there.
+45:37 >> Yeah, I I'm seeing this a little bit
+45:38 with uh at anthropic. I think everyone
+45:40 is fairly technical.
+45:43 This is something that we screen for,
+45:45 you know, when when people join. We have
+45:47 there there's a lot of technical
+45:48 interviews that people go go through
+45:50 even for non-technical functions.
+45:52 Uh and you know our designers largely
+45:56 code. So I think for them this is
+45:58 something that they have enjoyed from
+46:01 what I've seen because now instead of
+46:04 bugging engineers they can just like go
+46:05 in and code. And even some designers
+46:07 that didn't code before have just
+46:08 started to do it and for them it's great
+46:10 cuz they can unblock themselves. But I'd
+46:13 be really interested just to hear more
+46:14 people's experiences cuz I I I bet it's
+46:16 not uniform like that.
+46:17 >> Yeah. So maybe if you're listening to
+46:19 this, leave a comment if you're finding
+46:20 your jobs less fun and enjoying your job
+46:22 less cuz what you're saying and what I'm
+46:24 hearing from most people, 70% of PMs and
+46:27 engineers are loving their job more.
+46:28 That's like if you're not in that
+46:30 bucket, you could something's going on.
+46:32 >> Yeah. Yeah. We do see that people use
+46:34 also different tools. So for example,
+46:36 our designers, they use uh the cloud
+46:38 desktop app a lot more to to do their
+46:40 coding. So you just download the desktop
+46:42 app. There's a code tab. Uh it's right
+46:44 next to co-work and it's actually the
+46:46 same exact quad code. So it's like the
+46:47 same agent and everything. We've had
+46:48 this for, you know, for many, many
+46:50 months. Uh and so you can use this to
+46:52 code in a way that you don't have to
+46:53 open a bunch of terminals, but you still
+46:56 get the power of quad code. And the
+46:58 biggest thing is you can just run as
+46:59 many, you know, quad sessions in
+47:00 parallel as you want. We, you know, we
+47:02 call this multi-quading.
+47:04 >> So this is a it's it's a little more
+47:06 native, I think, for folks that are not
+47:07 engineers. And really, this is back to
+47:10 bringing the product to where the people
+47:12 are. You don't want to make people use a
+47:13 different workflow. You don't want to
+47:14 make them go out of their way to learn a
+47:16 new thing. It's whatever people are
+47:18 doing, if you can make that a little bit
+47:19 easier, then that's just going to be a
+47:21 much better product that people enjoy
+47:23 more. And this is just this principle of
+47:25 latent demand, which I I think is just
+47:26 the the single most important principle
+47:28 in product.
+47:29 >> Can you talk about that actually because
+47:30 I was going to go there. Explain what
+47:32 this principle is and and and just what
+47:35 happens when you unlock this latent
+47:36 demand. Latent demand is this idea that
+47:39 if you build a product in a way that can
+47:41 be hacked or can be kind of mi
+47:44 [clears throat] misused by people in a
+47:45 way it wasn't really designed for to do
+47:47 kind of something that they want to do
+47:50 then this helps you as the product
+47:52 builder learn where to take the product
+47:54 next. So an example of this is uh
+47:56 Facebook marketplace. So the the manager
+47:59 for the team Fiona she she was actually
+48:01 the founding manager for uh the
+48:03 marketplace team and she talks about
+48:04 this a lot.
+48:06 Facebook Marketplace. It started based
+48:08 on the observation back in uh this must
+48:10 have been like 20 2016 or or something
+48:12 like this that 40% of posts in Facebook
+48:15 groups are buying and selling stuff. So
+48:17 this is crazy. It's like people are
+48:19 abusing the Facebook groups product to
+48:20 buy and sell. And it's not it's not
+48:22 abuse in kind of like a security sense.
+48:23 It's abuse in that no one designed the
+48:25 product for this, but they're kind of
+48:26 figuring it out because it's just so
+48:28 useful for this. And so it was pretty
+48:30 obvious if you build a better product to
+48:32 let people buy and sell, they're going
+48:33 to like it. And it was just very obvious
+48:35 that marketplace would be a hit from
+48:37 this. And so the first thing was buy and
+48:38 sell groups. So kind of special purpose
+48:40 groups to let people do that. And the
+48:42 second product was marketplace.
+48:45 Uh Facebook dating I think started in a
+48:47 pretty similar place. And I think that
+48:49 the observation was if you look at
+48:51 people looking if you look at uh profile
+48:53 views so people looking at each other's
+48:54 profiles on Facebook 60% of profile
+48:57 views were people that are not friends
+48:58 with each other that are opposite
+48:59 gender. And so this is this kind of like
+49:02 you know like traditional kind of dating
+49:04 setup but you know people are just like
+49:05 creeping on each other. So maybe if you
+49:07 can build a product for this it's you
+49:08 know it might work. Um and so this idea
+49:12 of latent demand I think is just so
+49:14 powerful. And for example this is also
+49:17 where co-work came from. We saw that for
+49:20 the last 6 months or so a lot of people
+49:22 using quad code were not using it to
+49:24 code. There was someone on Twitter that
+49:26 was using it to grow tomato plants.
+49:27 There was someone else using it to
+49:28 analyze their genome. Someone was using
+49:31 it to uh recover photos from a corrupted
+49:33 hard drive. It was like uh wedding
+49:34 photos. Uh there was someone that was
+49:37 using it for uh I think like uh they
+49:41 they were using it to analyze a MRI. So
+49:43 there there's just all these different
+49:45 use cases that are not technical at all.
+49:47 And it was just really obvious like
+49:48 people are jumping through hoops to use
+49:51 a terminal to do this thing. Maybe we
+49:53 should just build a product for them.
+49:55 And we saw this actually pretty early
+49:57 back in maybe May of last year. I
+49:59 remember walking into the office and our
+50:01 data scientist Brendan was had a quad
+50:03 code on his uh computer. He just had a
+50:05 terminal up and I was like I was
+50:08 shocked. I was like Brendan what what
+50:10 are you doing? Like you you figured out
+50:11 how to open the terminal which is you
+50:14 know it's a very engineering product.
+50:15 Even a lot of engineers don't want to
+50:16 use a terminal. It's just like a it's
+50:18 like just like the lowest level way to
+50:20 to do your work. Um just really really
+50:23 uh kind of in the weeds of the computer.
+50:26 And so he figured out how to use the
+50:27 terminal. He downloaded Node.js. He
+50:29 downloaded quad code and he was doing
+50:31 SQL analysis in a terminal and it was
+50:33 crazy. And then the next week all the
+50:34 data scientists were doing the same
+50:35 thing. So when you see people abusing
+50:37 the product in this way, using it in a
+50:39 way that it wasn't designed in order to
+50:40 do something that is useful for them,
+50:42 it's just such a strong indicator that
+50:45 you should just build a product and and
+50:47 people are going to like that. It's
+50:48 something that's special purpose for
+50:49 that. I think now there there's also
+50:51 this kind of interesting second
+50:52 dimension to latent demand. This is sort
+50:54 of the traditional framing is look at
+50:56 what people are doing, make that a
+50:57 little bit easier, empower them. The
+51:00 modern framing that I've been seeing in
+51:01 the last 6 months is a little bit
+51:03 different and it's look at what the
+51:05 model is trying to do and make that a
+51:08 little bit easier.
+51:10 And so when we first started building
+51:12 quad code, I think a lot of the way that
+51:13 people approached designing things with
+51:16 LLMs is they kind of put the model in a
+51:18 box and they were like, here's this
+51:20 application that I want to build. Here's
+51:21 the thing that I wanted to do. model,
+51:22 you're going to do this one component of
+51:24 it. Here's the way that you're going to
+51:25 interact with these tools and APIs and
+51:26 whatever. And for cloud code, we
+51:28 inverted that. We said the product is
+51:30 the model. We want to expose it. We want
+51:32 to put the minimal scaffolding around
+51:34 it. Give it the minimal set of tools.
+51:36 So, it can do the things. It can decide
+51:37 which tools to run. It can decide in
+51:38 what order to run them in and so on. And
+51:41 I I think a lot of this was just based
+51:43 on kind of latent demand of what the
+51:44 model wanted to do. And so, in research,
+51:46 we call this being on distribution. Uh
+51:48 you want to see like what the model is
+51:50 trying to do. In product terms, latent
+51:51 demand is just the same exact concept
+51:53 but applied to a model.
+51:55 >> You talked about co-work something that
+51:56 I saw you talk about when you launched
+51:58 that initially is you your team built
+51:59 that in 10 days.
+52:01 >> That's insane. Uh I it came out I think
+52:03 it was like you know used by millions of
+52:05 people pretty quickly something like
+52:07 that being built in 10 days. Uh anything
+52:09 there any stories there other than just
+52:11 it was just you know we use cloud code
+52:12 to build it and that's it.
+52:14 >> Yeah it's funny. Uh cloud code like I
+52:16 said when we released it was not
+52:18 immediately a hit. it became a hit over
+52:20 time and there was a few inflection
+52:21 points. So one was you know like Opus 4
+52:24 uh it just really really inflected and
+52:25 then in November it inflected and it
+52:27 just keeps inflecting. The growth just
+52:29 keeps getting steeper and steeper and
+52:30 steeper every day. But you know for the
+52:32 first few months it wasn't a hit. Uh
+52:34 people used it but a lot of people
+52:36 couldn't figure out how to use it. They
+52:37 didn't know what it was for. The model
+52:39 still like wasn't very good. Co-work
+52:41 when we released it was just immediately
+52:43 a hit much more so than cloud code was
+52:45 early on. I think a lot of the credit
+52:47 honestly just goes to like Felix and and
+52:49 Sam and the and Jenny and the the team
+52:52 that built this. It's just an incredibly
+52:53 strong team. And again, the the place co
+52:56 came from is just this latent demand.
+52:58 Like we saw people using quad code for
+52:59 these non-technical things and we're
+53:01 trying to figure out what do we do? And
+53:02 so for a few months the team was
+53:03 exploring they were trying all sorts of
+53:05 different options and in the end someone
+53:07 was just like okay what what if we just
+53:10 take quad code and put it in the desktop
+53:12 app and that's essentially the thing
+53:14 that worked. And so over 10 days they
+53:17 just completely use quad code to build
+53:18 it. Uh and you know co-work is actually
+53:21 there's this very sophisticated security
+53:23 system that's that's built in and
+53:25 essentially these guard rails to make
+53:26 sure that the model kind of does the
+53:28 right thing. It doesn't go off the
+53:29 rails. So for example we ship an entire
+53:32 virtual machine with it. And quad code
+53:34 just wrote all of this code. So we just
+53:36 had to think about all right how do we
+53:37 make this a little bit safer a little
+53:38 more self-guided for uh people that are
+53:40 not engineers. It was fully implemented
+53:42 with quad code. took about 10 days. We
+53:45 launched it early. You know, it was
+53:47 still pretty rough and it's still pretty
+53:48 rough around the edges. But this is kind
+53:50 of the way that we learn um both on the
+53:52 product side and on the safety side is
+53:54 we have to release things a little bit
+53:56 earlier than we think so that we can get
+53:59 the feedback so that we can talk to
+54:00 users. We can understand what people
+54:02 want and and that will shape where the
+54:04 product goes in the future.
+54:05 >> Yeah, I think that point is so
+54:06 interesting and and it's so unique.
+54:08 There's always been this idea release
+54:10 early, learn from users, get feedback,
+54:12 iterate. The fact that it's hard to even
+54:15 know what the AI is capable of and how
+54:17 people will try to use it is like is a
+54:20 unique reason to start releasing things
+54:23 early that'll help you as you exactly
+54:25 describe this idea of what is the latent
+54:27 demand in this thing that we didn't
+54:28 really know. Let's put it out there and
+54:29 see what people do with it.
+54:30 >> Yeah. And in philanthropic as a safety
+54:31 lab, the other dimension of that is
+54:33 safety because um you know like when you
+54:35 think about model safety, there's a
+54:36 bunch of different ways to study it.
+54:38 Sort of the lowest level is alignment
+54:40 and mechanistic interpretability. So
+54:42 this is when we train the model, we want
+54:44 to make sure that it's safe. We at this
+54:47 point have like pretty sophisticated
+54:48 technology to understand what's
+54:50 happening in the neurons to trace it.
+54:52 And so for example like if there's a
+54:53 neuron related to deception we can start
+54:56 we're starting to get to the point where
+54:57 we can monitor it and understand that
+54:59 it's activating. Um and so this is just
+55:01 this is alignment this is mechanistic
+55:02 interpretability. It's like the lowest
+55:04 layer. The second layer is evolves and
+55:07 this is essentially a laboratory
+55:08 setting. The model is in a petri dish
+55:09 and you study it and you put in a
+55:11 synthetic situation and just say okay
+55:13 like model what do you do and are you
+55:15 doing the right thing? Is it aligned? Is
+55:16 it safe? And then the third layer is
+55:19 seeing how the model behaves in the
+55:20 wild. And as the model gets more
+55:23 sophisticated, this this becomes so
+55:25 important because it might look very
+55:27 good on these first two layers but not
+55:28 great on the third one. We released
+55:31 cloud code really early because we
+55:33 wanted to study safety and we actually
+55:35 used it within anthropic for I think
+55:37 four or 5 months or something before we
+55:39 released it because we weren't really
+55:41 sure like this is the first agent that
+55:43 you know the first big agent that I
+55:45 think folks had released at that point.
+55:47 um it was definitely the first uh you
+55:49 know coding agent that became broadly
+55:50 used and so we weren't sure if it was
+55:52 safe and so we actually had to study it
+55:54 internally for a long time before we
+55:55 felt good about that and even since you
+55:58 know there's a lot that we've learned
+55:59 about alignment there's a lot that we've
+56:00 learned about safety that we've been
+56:01 able to put back into the model back
+56:03 into the product and for co-work it's
+56:05 pretty similar uh the model's in this
+56:07 new setting it's you know doing these
+56:09 tasks that are not engineering tasks
+56:10 it's an agent that's acting on your
+56:12 behalf it looks good on alignment it
+56:14 looks good on evals we try to internally
+56:16 it looks good we it with a few
+56:17 customers, it looks good. Now, we have
+56:19 to make sure it's safe in the real
+56:20 world. And so, that's why we release a
+56:22 little early. That's why we call it a
+56:23 research preview. Um, but yeah, it's
+56:25 just it's constantly improving. Um, and
+56:27 this is really the only way to to make
+56:29 sure that over the long term the model
+56:30 is aligned and it's doing the right
+56:32 things. It's such a wild space that you
+56:35 work in where there's this insane
+56:36 competition and pace. At the same time,
+56:39 there's this fear that if you get some
+56:41 if the the you know the god can escape
+56:43 and cause damage and just finding that
+56:45 balance must be so challenging. What I'm
+56:48 hearing is there's kind of these three
+56:49 layers and I know there's like this
+56:50 could be a whole podcast conversation is
+56:52 how you all think about the safety piece
+56:54 but just what I'm hearing is there's
+56:55 these three layers you work with. Uh
+56:56 there's kind of like observing the model
+56:58 thinking and operating. There's tests
+57:01 eval that tell you this is doing bad
+57:03 things and then releasing it early. I
+57:05 haven't actually heard a ton about that
+57:06 first piece. That is so cool. So you
+57:08 guys can there's an observability tool
+57:11 that can let you peek inside the model's
+57:13 brain and see how it's thinking and
+57:14 where it's heading. Yeah, you should uh
+57:17 you should at some point have Chris Ola
+57:18 on the podcast because uh he he's just
+57:20 the industry expert on this. He he
+57:22 invented this field of uh we call it
+57:23 mechanistic interpretability. Uh and the
+57:26 the idea is uh you know like at its core
+57:29 like what is your brain? Like what are
+57:31 what is it? It's like it's a bunch of
+57:32 neurons that are connected. And so what
+57:33 you can do is like in a human brain or
+57:35 animal brain you can study it at this
+57:38 kind of mechanistic level to understand
+57:39 what the neurons are doing. It turns out
+57:41 surprisingly a lot of this does
+57:43 translate to models also. So model
+57:45 neurons are not the same as animal
+57:47 neurons but they behave similarly in a
+57:49 lot of ways. And so we've been able to
+57:51 learn just a ton about the way these
+57:52 neurons work, about, you know, this
+57:54 layer or this neuron maps to this
+57:56 concept, how particular concepts are
+57:58 encoded, how the model does planning,
+58:01 how it how it thinks ahead, you know,
+58:03 like a long time ago, we weren't sure if
+58:05 the model is just predicting the next
+58:06 token or is doing something a little bit
+58:08 deeper. Now, I think there's actually
+58:10 quite strong evidence that it is doing
+58:12 something a little bit deeper. And then
+58:13 the structures that were to do this are
+58:15 pretty sophisticated now where as the
+58:18 models get bigger, it's not just like a
+58:19 single neuron that corresponds to a
+58:21 concept. A single neuron might
+58:22 correspond to a dozen concepts. And if
+58:24 it's activated together with other
+58:26 neurons, this is called superposition.
+58:28 And uh together it represents this more
+58:30 sophisticated concept. And it's just
+58:33 something we're learning about all the
+58:34 time, you know, and philanthropic as as
+58:36 we think about the way this space
+58:38 evolves,
+58:40 doing this in a way that is safe and
+58:42 good for the world is just this is the
+58:43 reason that we exist and this is the
+58:46 reason that everyone is at anthropic.
+58:47 Uh, everyone that is here, this is the
+58:49 reason why they're here. So, a lot of
+58:51 this work we actually open source. Uh,
+58:52 we publish it a lot. Um and you know we
+58:55 publish very freely to talk about this
+58:57 just so we can inspire other labs that
+58:58 are working on similar things to do it
+59:01 in a way that's safe and this is
+59:03 something that we've been doing for
+59:04 cloud code also we call this the race to
+59:06 the top uh internally and so for cloud
+59:10 code for example we released an open
+59:11 source sandbox and this is a sandbox
+59:14 they can run the the agent in and it
+59:17 just makes sure that there's certain
+59:18 boundaries and it can't access like
+59:19 everything on your system. Uh, and we
+59:21 made that open source and it actually
+59:23 works with any agent, not just quad code
+59:25 because we wanted to make it really easy
+59:26 for others to do the same thing. Um, so
+59:29 this is just the same principle of race
+59:30 to the top. Um, we we want to make sure
+59:33 this thing goes well and this is just
+59:34 the this is the lever that we have.
+59:37 >> Incredible. Okay, I definitely want to
+59:38 spend more time on that. I I will follow
+59:40 up with this suggestion. Something else
+59:42 that I've been noticing in the in the
+59:45 field across engineers, product
+59:47 managers, others that work with agents
+59:49 is there's this kind of anxiety people
+59:51 feel when their agents aren't working.
+59:54 There's a sense that like, oh man, Nza
+59:57 has a question, I need to answer or it's
+59:58 like blocked on something or it's or I
+1:00:01 just like I I'm like there's all this
+1:00:02 productivity I'm losing. I can't like I
+1:00:04 need to wake up and get it going again.
+1:00:06 Is that something you feel? Is that
+1:00:07 something your team feels? Do you feel
+1:00:08 like this is a a problem we need to
+1:00:10 track and think about? I always have a
+1:00:12 bunch of agents running. So like at the
+1:00:13 moment I have like five agents running
+1:00:15 and at any moment like you know like I I
+1:00:17 wake up and I I stored a bunch of
+1:00:18 agents. Like the first thing I did when
+1:00:20 I woke up is like oh man I I want I
+1:00:22 really want to check this thing. So like
+1:00:23 I opened up my phone quad iOS app code
+1:00:26 tab uh you know like agent do do blah
+1:00:28 blah blah cuz I I wrote some code
+1:00:30 yesterday and I was like wait did did I
+1:00:32 do this right? I was like kind of double
+1:00:33 double guessing something and it and it
+1:00:35 was correct. But now it's just like so
+1:00:37 easy to do this. So I don't know, there
+1:00:39 is this little bit of anxiety. Maybe I
+1:00:42 personally haven't really felt it just
+1:00:43 cuz I have agents running all the time.
+1:00:45 Um, and I'm also just like not locked
+1:00:47 into a terminal anymore. Maybe a third
+1:00:49 of my code now is in the terminal, but
+1:00:50 also a third is uh using the desktop app
+1:00:53 and then a third is the iOS app, which
+1:00:56 is just so surprising cuz I did not
+1:00:58 think that this would be the way that I
+1:00:59 code uh in even in 2026. I love that you
+1:01:03 describe it as coding still, which is
+1:01:05 just talking to the to cloud code to
+1:01:07 code for you essentially. And it's
+1:01:09 interesting that this is now like this
+1:01:10 is now coding. Coding now is describing
+1:01:13 what you want, not writing actual code.
+1:01:16 >> I I I kind of wonder if uh the people
+1:01:18 that used to code using punch cards or
+1:01:20 whatever, if you show them software,
+1:01:21 what they would have said. Isn't that
+1:01:23 crazy? And I I remember reading
+1:01:25 something this was maybe like very early
+1:01:26 versions of like ACM uh like like
+1:01:29 magazine or something where people were
+1:01:32 saying no it's not the same thing like
+1:01:33 this isn't this isn't really coding uh
+1:01:35 and you know like they called it
+1:01:36 programming I think coding is kind of a
+1:01:38 new word
+1:01:39 >> but I kind of think about this like in
+1:01:40 the back in the you know my family is
+1:01:42 from the Soviet Union I you know I I was
+1:01:44 born in Ukraine um and my grandpa was
+1:01:46 actually one of the first programmers in
+1:01:48 the Soviet Union and he programmed using
+1:01:51 punch cards And uh you know like he he
+1:01:54 told my mom uh growing up told these
+1:01:56 stories of like or she she told these
+1:01:58 stories that when she was growing up he
+1:01:59 would bring these punch cards home and
+1:02:01 there was these like big stacks of punch
+1:02:03 cards and for her she would like draw
+1:02:05 all over them with crayons and that was
+1:02:06 like her childhood memory but for him
+1:02:08 that was like his experience of
+1:02:10 programming and he actually never saw
+1:02:11 the software transition but at some
+1:02:13 point it did transition to software and
+1:02:15 I think there's probably this older
+1:02:16 generation of programmers that just
+1:02:18 didn't take software very seriously and
+1:02:20 they would have been like well you know
+1:02:21 it's not really coding.
+1:02:22 But I I think this is a field that just
+1:02:24 has always been changing in this way.
+1:02:26 >> Uh I don't think you know this, but I
+1:02:28 was born in Ukraine also.
+1:02:30 >> Oh, I don't know. Yeah. Which time?
+1:02:32 >> I'm I'm from Odessa.
+1:02:34 >> Oh, me too.
+1:02:36 [laughter]
+1:02:36 >> What?
+1:02:36 >> Yeah, that's crazy.
+1:02:39 >> Wow. Incredible. What a moment. Uh maybe
+1:02:42 related in some small way.
+1:02:44 >> Uh what year did your home did you leave
+1:02:46 and your family leave?
+1:02:48 >> Uh we came in 95.
+1:02:50 >> Okay. We left in ' 88. a little earlier.
+1:02:52 >> Oh, yeah.
+1:02:53 >> What a different life that would have
+1:02:54 been to not to not leave, huh?
+1:02:57 >> Yeah. I just I feel I feel so lucky
+1:02:59 every day that uh get get to grow up
+1:03:01 here.
+1:03:02 >> Yeah. My family anytime there's like a
+1:03:03 toaster or a meal, they're just like to
+1:03:05 America.
+1:03:07 It's like, okay, enough about that. But
+1:03:09 you get it, you know, once you start
+1:03:10 really thinking about what life could
+1:03:11 have been.
+1:03:12 >> Yeah. Yeah. Exactly. Yeah. We do we do
+1:03:14 the same toast, but it's still vodka.
+1:03:16 >> It's still vodka. Absolutely. [laughter]
+1:03:19 Oh, man. Okay. Let me ask you a couple
+1:03:21 more things here. You shared some really
+1:03:23 cool tips for how to get the most out of
+1:03:26 AI, how to build on AI, how to build
+1:03:28 great products on AI. One tip you shared
+1:03:30 is give your team as many tokens as they
+1:03:32 want. Just like let them experiment. You
+1:03:34 also shared just advice generally of
+1:03:36 just build towards the model where the
+1:03:38 model is going, not to where it is
+1:03:39 today. What other advice do you have for
+1:03:40 folks that are trying to build AI
+1:03:42 products?
+1:03:42 >> I'd probably share a few more things.
+1:03:44 So, one is don't try to box the model
+1:03:46 in. Um I I think a lot of people's
+1:03:48 instinct when they build on the model is
+1:03:51 they try to make it behave a very
+1:03:52 particular way. They're like this is a
+1:03:54 component of a bigger system. I I think
+1:03:56 some examples of this are people
+1:03:58 layering like very strict workflows on
+1:03:59 the model for example you know to say
+1:04:01 like you must do step one then step two
+1:04:03 then step three and you have this like
+1:04:04 very fancy orchestrator doing this. But
+1:04:06 actually almost always you get better
+1:04:07 results if you just give the model tools
+1:04:09 you give it a goal and you let it figure
+1:04:10 it out. I think a year ago you actually
+1:04:12 needed a lot of the scaffolding but
+1:04:14 nowadays you don't really need it. So,
+1:04:16 you know, I I don't know what to call
+1:04:18 this principle, but it's like, you know,
+1:04:19 like ask not what the model can do for
+1:04:21 you. Maybe maybe it's something like
+1:04:22 this. Just think about how do you give
+1:04:25 the model the tools to do things. Don't
+1:04:26 try to overcurate it. Don't try to put
+1:04:28 it into a box. Don't try to give it a
+1:04:30 bunch of context up front. Give it a
+1:04:32 tool so that it can get the context it
+1:04:33 needs. You're just going to get better
+1:04:35 results.
+1:04:37 I think a second one is um maybe
+1:04:40 actually like a a more even more general
+1:04:42 version of this principle is just the
+1:04:44 bitter lesson.
+1:04:45 Uh and actually for the quad code team
+1:04:47 we have a you know hopefully hopefully
+1:04:49 um listeners have have read this but
+1:04:51 Rich Sutton had this blog post maybe 10
+1:04:53 years ago called the bitter lesson. Uh
+1:04:55 and it's actually a really simple idea.
+1:04:57 His idea was that the more general model
+1:04:59 will always outperform the more specific
+1:05:01 model and I think for him he was talking
+1:05:03 about like self-driving cars and other
+1:05:05 domains like this but actually there's
+1:05:07 just so many corlaries to the bitter
+1:05:09 lesson. And for me, the biggest one is
+1:05:12 just always bet on the more general
+1:05:14 model and you know over the long term
+1:05:16 like don't don't try to use tiny models
+1:05:18 for stuff. Don't try to like fine-tune.
+1:05:19 Don't try to do any of this stuff.
+1:05:21 There's like some applications you know
+1:05:22 there's some reasons to do this but
+1:05:24 almost always try to bet on the more
+1:05:26 general model if you can if you have
+1:05:27 that flexibility.
+1:05:29 Um and so these workflows are
+1:05:30 essentially a way that uh you know it's
+1:05:33 it's not it's not a general model. It's
+1:05:35 putting the scaffolding around it. And
+1:05:36 in general what we see is maybe
+1:05:38 scaffolding can improve performance
+1:05:39 maybe 10 20% something like this but
+1:05:42 often these gains just get wiped out
+1:05:44 with the next model. Uh so it's almost
+1:05:47 better to just wait for the next one.
+1:05:50 And I think maybe this is a final
+1:05:51 principle and something that quad code I
+1:05:53 think got right in hindsight. From the
+1:05:56 very beginning, we bet on building for
+1:05:58 the model six months from now, not for
+1:06:01 the model of today.
+1:06:03 And for the very early versions of the
+1:06:06 product, it just wrote so little of my
+1:06:08 code cuz I I didn't trust it cuz, you
+1:06:10 know, it was like sonnet 3.5, then it
+1:06:12 was like 3.6 or forget 3 3.5 new,
+1:06:15 whatever whatever whatever name we gave
+1:06:16 it. Um, these models just weren't very
+1:06:19 good at coding yet. Um, they were they
+1:06:20 were getting there, but it was still
+1:06:21 pretty early. So back then the model did
+1:06:25 uh you used git for me it automated some
+1:06:28 things but it it really wasn't doing a
+1:06:29 huge amount of my coding and so the bet
+1:06:32 with quad code was at some point the
+1:06:33 model gets good enough that it can just
+1:06:36 write a lot of the code and this is a
+1:06:38 thing that we first started seeing with
+1:06:39 opus 4 and sonnet 4 and opus 4 was our
+1:06:41 first kind of ASL3 class model uh that
+1:06:44 we released back in May and we just saw
+1:06:47 this inflection because everyone started
+1:06:49 to use quad code for the first time and
+1:06:51 that was kind of when our growth really
+1:06:52 went exponential and like I said it's
+1:06:54 kind of it stayed there. So I think this
+1:06:56 is some this is advice that I actually
+1:06:58 give to to a lot of folks especially
+1:07:00 people building startups. It's going to
+1:07:02 be uncomfortable cuz your product market
+1:07:04 fit won't be very good for the first 6
+1:07:05 months but if you build for the model 6
+1:07:08 months out when that model comes out
+1:07:11 you're just going to hit the ground
+1:07:12 running and the product is going to
+1:07:13 click and and start to work. And when
+1:07:16 you say build for the model 6 months out
+1:07:18 what is what is it that you think people
+1:07:19 can assume will happen? Is it just
+1:07:21 generally it will get better at things?
+1:07:23 Is it just like okay, it's like almost
+1:07:26 good enough and that's a sign that it'll
+1:07:28 probably get better at that thing. Is
+1:07:29 there any advice there?
+1:07:30 >> I think that's a good way to do it.
+1:07:31 Like, you know, obviously within an AI
+1:07:33 lab, we get to see the specific ways
+1:07:34 that it gets better. [laughter]
+1:07:36 >> So, it's a it's a little unfair, but we
+1:07:38 we also we try to talk about this. So,
+1:07:41 you know, like one of the ways that it's
+1:07:42 going to get better is it's going to get
+1:07:44 better and better at using tools and
+1:07:45 using computers.
+1:07:47 This is a bet that I would make. Uh,
+1:07:49 another one is it's going to get better
+1:07:50 and better for long for running for long
+1:07:52 periods of time. And this is a place,
+1:07:55 you know, like there's all sorts of
+1:07:56 studies about this, but if you just
+1:07:57 trace the trajectory or, you know, maybe
+1:07:59 even like for my own experience when I
+1:08:01 used Sonnet 3.5 back, you know, a year
+1:08:03 ago, it could run for maybe 15 or 30
+1:08:06 seconds before before it started going
+1:08:09 off the rails and you just really had to
+1:08:10 hold its hand through any kind of
+1:08:12 complicated task. But nowadays with Opus
+1:08:14 4.6, fix, you know, on average it'll run
+1:08:16 maybe 10, 30, 20, 30 minutes unattended
+1:08:19 and I'll just like start another quad
+1:08:21 and have it do something else. And you
+1:08:23 know, like I said, I always have a bunch
+1:08:24 of quads running. Uh, and they can also
+1:08:26 run for hours or even days at a time. I
+1:08:29 think there are some examples where they
+1:08:30 ran for many weeks. And so I think over
+1:08:32 time this is going to become more and
+1:08:33 more normal where the models are running
+1:08:35 for a very very long period of time and
+1:08:37 you you don't have to sit there and
+1:08:38 babysit them anymore.
+1:08:39 >> So we just talked about tips for
+1:08:41 building AI products. Any tips for
+1:08:43 someone just using cloud code say for
+1:08:45 the first time or just someone already
+1:08:46 using cloud code that wants to get
+1:08:48 better? What are like a couple pro tips
+1:08:50 that you could share?
+1:08:51 >> I will give a caveat which is there's no
+1:08:53 one right way to use quad code. So I I
+1:08:55 can share some tips but honestly this is
+1:08:57 a dev tool. Developers are all
+1:08:59 different. Developers have different
+1:09:00 preferences. They have different
+1:09:01 environments. So there's just so many
+1:09:03 ways to use these tools. There's no one
+1:09:05 right way. Um you you sort of have to
+1:09:07 find your own path. Luckily you can ask
+1:09:09 Quad Code. Uh it's able to make
+1:09:11 recommendations. It can edit your
+1:09:12 settings. It kind of knows about itself.
+1:09:14 So, it can help it can help with that. A
+1:09:17 few tips that generally I find pretty
+1:09:18 useful. So, number one is just use the
+1:09:20 most capable model. Um, currently that's
+1:09:22 Opus 4.6. I have maximum effort enabled
+1:09:24 always. The thing that happens is
+1:09:27 sometimes people try to use a less
+1:09:28 expensive model like sonnet or something
+1:09:30 like this. But because it's less
+1:09:32 intelligent, it actually takes more
+1:09:33 tokens in the end to do the same task.
+1:09:35 Um, and so it's actually not obvious
+1:09:36 that it's cheaper if you use a less
+1:09:38 expensive model. often it's actually
+1:09:40 cheaper and less token intensive if you
+1:09:42 use the most capable model because it
+1:09:44 can just do the same thing much faster
+1:09:45 with less correction, less uh less
+1:09:47 handholding and so on. So that's the
+1:09:49 first tip is just use the best model.
+1:09:51 The second one is use plan mode. I start
+1:09:55 almost all of my tasks in plan mode,
+1:09:57 maybe like 80%. And plan mode is
+1:09:59 actually really simple. All it is is we
+1:10:02 inject one sentence into the model's
+1:10:04 prompt to say please don't write any
+1:10:05 code yet. That's it. like there's
+1:10:07 there's actually like nothing fancy
+1:10:08 going on. It's just the simplest thing.
+1:10:10 >> Um, and so for people that are in the
+1:10:12 terminal, it's just shift tab twice and
+1:10:14 that gets you into plan mode. Uh, for
+1:10:16 people in the desktop app, there's a
+1:10:17 little button. On web, there's a little
+1:10:19 button. It's coming pretty soon to
+1:10:20 mobile also. Uh, and we just launched it
+1:10:22 for the SWAC integration, too. Uh, so
+1:10:25 plan mode is the second one. And uh,
+1:10:28 essentially the model would just go back
+1:10:29 and forth with you. Once the plan looks
+1:10:31 good, then you let the model execute. I
+1:10:33 auto accept edits after that because if
+1:10:35 the plan looks good, it's just going to
+1:10:36 oneshot it. It'll get it right the first
+1:10:38 time almost every time with Opus 4.6.
+1:10:42 And then maybe the third tip is just
+1:10:43 play around with different interfaces. I
+1:10:45 think a lot of people when they think
+1:10:46 about cloud code, they think about a
+1:10:47 terminal. Um, and you know, of course,
+1:10:49 we support every terminal. We support
+1:10:50 like Mac, Windows, you know, like
+1:10:52 whatever terminal you might use, it
+1:10:53 works perfectly. But we actually support
+1:10:56 a lot of other form factors too like you
+1:10:58 know, we have like iOS and Android apps.
+1:10:59 We have a desktop app. There's uh you
+1:11:01 know the Slack integration. There's all
+1:11:03 sorts of things that we support. So I
+1:11:05 would just like play around with these.
+1:11:06 And again it's like every engineer is
+1:11:07 different. Everyone that's building is
+1:11:08 different. Just find the thing that
+1:11:10 feels right to you and and use that. You
+1:11:12 don't have to use a terminal. It's the
+1:11:13 same quad agent running everywhere.
+1:11:15 >> Amazing. Okay. Just a couple more
+1:11:17 questions to round things out. What's
+1:11:20 your take on Codeex? How do you feel
+1:11:23 about that product? How do you feel
+1:11:24 about where they're going? Just kind of
+1:11:25 competing in this very competitive space
+1:11:28 uh in coding agents. Yeah, I actually
+1:11:31 haven't really used it, but uh I I think
+1:11:34 I did use it maybe when it came out. It
+1:11:36 looked a lot like Quad Code to me, so
+1:11:38 that was kind of flattering. It's I
+1:11:40 think it's actually good, you know, to
+1:11:41 have more competition cuz people should
+1:11:43 get to choose and hopefully it forces
+1:11:45 all of us to like do a even better job.
+1:11:48 Honestly, for our team though, we're
+1:11:50 just focused on solving the problems
+1:11:52 that users have. Um so for us, you know,
+1:11:55 we don't spend a lot of time looking at
+1:11:56 competing products. We don't really try
+1:11:58 the other products. I you know you kind
+1:12:00 of you want to be aware of them. You
+1:12:01 want to know they exist but for me I
+1:12:04 just I love talking to users. I love
+1:12:05 making the product better. Um I I love
+1:12:08 just acting on on feedback. So it's
+1:12:10 really just about building a building a
+1:12:12 good product.
+1:12:13 >> Maybe a last question. So I talked to
+1:12:15 Ben man co-founder of Anthropic. What
+1:12:17 what to talk to you about. He had a
+1:12:18 bunch of suggestions which I've
+1:12:19 integrated throughout our chat. One
+1:12:21 question he had for you is what's your
+1:12:23 plan post AGI?
+1:12:26 What do you think you're going to be
+1:12:26 doing? What's your life like once we hit
+1:12:28 AGI? whatever that means.
+1:12:30 >> So before I joined Anthropic, um I was
+1:12:33 actually living in rural Japan and it
+1:12:35 was like a totally different lifestyle.
+1:12:37 Um I was like the only engineer in the
+1:12:39 town. I was the only English speaker in
+1:12:40 the town. It was just like a totally
+1:12:42 different vibe. Like a couple times a
+1:12:45 week I would like bike to the farmers
+1:12:46 market. Uh and you know you like bike by
+1:12:49 like rice patties and stuff. It was just
+1:12:51 like a totally different speed than just
+1:12:53 complete opposite of San Francisco. One
+1:12:55 of the things that I really liked is a
+1:12:57 way that we got to know our neighbors
+1:12:59 and we kind of built friendships is by
+1:13:01 trading like pickles.
+1:13:03 So in that in the town where we lived,
+1:13:05 it was actually like everyone made like
+1:13:06 miso. Everyone made pickles. Uh and so I
+1:13:09 actually got like decently good at
+1:13:10 making miso. Um and you know I made a
+1:13:13 bunch of batches and um this is
+1:13:15 something that I still make. Uh miso is
+1:13:18 this interesting thing where it teaches
+1:13:20 you to think on these longtime skills.
+1:13:21 That's just very different than
+1:13:22 engineering cuz like uh you know like a
+1:13:24 batch of white miso takes like at least
+1:13:26 three months to make and a red miso is
+1:13:28 like you know 2 3 4 years. You just have
+1:13:30 to be very patient. You kind of mix it
+1:13:32 up and then you just like wet it sit.
+1:13:33 You have to be very very patient.
+1:13:35 >> So I the thing that I love about it is
+1:13:37 just thinking in these longtime skills.
+1:13:39 Uh, and yeah, I think postGI or if I
+1:13:42 wasn't at anthropic, I'd probably be
+1:13:44 making miso. [laughter]
+1:13:46 >> I love this answer. Uh, Ben asked me to
+1:13:49 ask you about what's the deal with you
+1:13:50 and miso and so I love that you answered
+1:13:53 it. Okay, so the future the future might
+1:13:56 be just going deep into miso, getting
+1:13:59 really good at get making miso. Uh,
+1:14:02 amazing. Uh, Boris, this was incredible.
+1:14:05 I feel like we're we're brothers now
+1:14:06 from Ukraine. Uh before we get to a very
+1:14:09 exciting lightning round, is there
+1:14:10 anything else that you wanted to share?
+1:14:12 Is there anything you want to leave
+1:14:14 listeners with? Anything you want uh you
+1:14:16 want to double down on?
+1:14:18 >> Yeah, I I think I would just like
+1:14:19 underscore, you know, like for for
+1:14:22 anthropic since the beginning, this idea
+1:14:24 of like starting at coding, then getting
+1:14:26 to tool use, then getting to computer
+1:14:27 use has just been the way that we think
+1:14:29 about things. And we this is the way
+1:14:31 that we know the models are going to
+1:14:32 develop or, you know, the way that we
+1:14:34 want to build our models. And it's also
+1:14:36 the way that we get to learn about
+1:14:38 safety, study it, and improve it the
+1:14:39 most. So, you know, everything that's
+1:14:42 happening right now around, you know,
+1:14:43 just like Quad Code becoming this huge,
+1:14:46 you know, multi-billion dollar business
+1:14:48 and, you know, like now all of my
+1:14:50 friends use Quad Code and they just text
+1:14:51 me about it all the time. Uh, so just
+1:14:53 like, you know, this thing getting kind
+1:14:55 of big and in some ways it's a total
+1:14:56 surprise because this isn't kind of the
+1:15:00 we didn't know that it would be this
+1:15:01 product. We didn't know that it would
+1:15:02 start in a terminal or anything like
+1:15:04 this. But in some ways, it's just
+1:15:05 totally unsurprising because this has
+1:15:07 been our belief as a company for for a
+1:15:09 long time. At the same time, it just
+1:15:11 feels still very early, you know, like
+1:15:13 most of the world still does not use
+1:15:14 quad code. Most of the world still does
+1:15:16 not use AI. So, it just feels like this
+1:15:18 is 1% done and there's so much more to
+1:15:20 go.
+1:15:21 >> Yeah. Man, that's insane to think seeing
+1:15:23 the numbers that are coming out. You
+1:15:25 guys just raised a bazillion dollars. Uh
+1:15:27 I think Cloud Code alone is making$2
+1:15:30 billion dollars in revenue. you think
+1:15:32 Anthropic, I think the number you guys
+1:15:33 put out, you're making 15 billion in
+1:15:35 revenue. It's uh insane to just think
+1:15:38 this is how early it still is and just
+1:15:40 the numbers we're seeing.
+1:15:42 >> Yeah. Yeah. Yeah. It's crazy. And and I
+1:15:44 mean like the the way that Quad Code has
+1:15:46 kept growing is honestly just the users.
+1:15:47 Like we so many people use it. They're
+1:15:49 so passionate about it. They fall in
+1:15:51 love with the product and then they tell
+1:15:52 us about stuff that doesn't work, stuff
+1:15:54 that they want. And so like the only
+1:15:56 reason that it keeps improving is
+1:15:57 because everyone is using it. Everyone
+1:15:59 is talking about it. Everyone keeps
+1:16:00 giving feedback and this is just the
+1:16:02 single most important thing and you know
+1:16:04 for me this is the way that I love to
+1:16:06 spend my day is just talking to users
+1:16:07 and making it better for them
+1:16:09 >> and making me so
+1:16:11 >> and making me so well the you know the
+1:16:13 miso is like not super involved it just
+1:16:14 you just got to wait you just got to
+1:16:16 wait
+1:16:17 >> well Boris with that we've reached our
+1:16:19 very exciting lightning round I've got
+1:16:21 five questions for you are you ready
+1:16:23 >> let's do it first question what are two
+1:16:26 or three books that you find yourself
+1:16:27 recommending most to other people
+1:16:29 >> I I'm a greeter. Uh I would start with
+1:16:31 the technical book one is it it is
+1:16:33 functional programming in Scola. This is
+1:16:36 the single best technical book I've ever
+1:16:37 read. It's very weird because you're
+1:16:40 probably not going to use Scola and I
+1:16:41 don't know how much this matters in the
+1:16:42 future now but there's this just
+1:16:44 elegance to functional programming and
+1:16:46 thinking in types and this is just the
+1:16:48 way that I code and the way that I can't
+1:16:50 stop thinking about coding. So you know
+1:16:52 you could think of it as a historical
+1:16:53 artifact. You could think of it as
+1:16:54 something that will level you up.
+1:16:56 >> I love this neverbeforementioned book.
+1:16:58 My favorite.
+1:16:59 >> Oh, amazing. Amazing. Uh, okay. Second
+1:17:02 one is uh Accelerondo by Straws. This is
+1:17:05 probably, you know, like my my big genre
+1:17:07 is uh is sci-fi. Uh like probably sci-fi
+1:17:10 and fiction. Accelerondo is just this
+1:17:12 incredible book and it it it's just so
+1:17:14 fast-paced. The pace gets faster and
+1:17:16 faster and faster. And I just feel like
+1:17:17 it captures the essence of this moment
+1:17:19 that we're in more than any other book
+1:17:21 that I've read. Just the speed of it.
+1:17:23 And it starts as a liftoff is starting
+1:17:26 to happen and you know starting to
+1:17:27 approach the singularity and it ends
+1:17:30 with like this like collective lobster
+1:17:31 consciousness orbiting Jupiter. Um and
+1:17:34 you know this happens over like the span
+1:17:36 of a few decades or something. So the
+1:17:38 the pace is just incredible. I I really
+1:17:40 love it. Maybe I'll I'll do one more
+1:17:42 book. Uh the wandering earth uh
+1:17:45 wandering earth by uh sishlu. So he's
+1:17:48 the guy that did uh three body problem.
+1:17:50 I think a lot of people know him for
+1:17:52 that. I actually I think your body
+1:17:53 problem was awesome, but I actually
+1:17:54 liked his short stories even more. So,
+1:17:56 Wandering Earth is one of the short
+1:17:58 story collections and it just has some
+1:17:59 really really amazing stories and it
+1:18:02 it's also just quite interesting to see
+1:18:04 uh Chinese sci-fi because it has a very
+1:18:06 different perspective than Western
+1:18:08 sci-fi and kind of the way that um at
+1:18:10 least he as a writer thinks about it.
+1:18:11 So, it's just really really interesting
+1:18:13 to read and just beautifully written.
+1:18:15 It's so interesting how sci-fi has
+1:18:16 prepared us to think about where things
+1:18:18 are going. Just like it creates these
+1:18:21 mounts to models of like okay I see I've
+1:18:23 read about this sort of world. Yeah. I
+1:18:24 think I think for me this is like the
+1:18:26 reason that I joined anthropic actually
+1:18:28 cuz uh you know like like I said I was
+1:18:30 living in this rural place. I was
+1:18:32 thinking these longtime skills because
+1:18:34 everything is just so slow out there at
+1:18:36 least compared to SF. Um and just like
+1:18:38 all the things that you do are based
+1:18:39 around the seasons and it's based around
+1:18:41 this food that takes many many months.
+1:18:43 That's the way that kind of like social
+1:18:44 events are organized. That's the way you
+1:18:46 kind of organize your time. You like you
+1:18:48 go to the farmers market and it's like
+1:18:50 it's pimmen season and you know that
+1:18:52 because there's like 20 pimmen vendors
+1:18:54 and then the next week the season is
+1:18:55 done and it's like grape season and you
+1:18:57 kind of see this. So it's like these
+1:18:58 kind of longtime skills and I was also
+1:19:00 reading a bunch of sci-fi at the time
+1:19:02 and just like being in this moment I was
+1:19:04 like you know just thinking about these
+1:19:05 long time scales. I know how this thing
+1:19:07 can go and I just I felt like I had to
+1:19:09 contribute to it going a little bit
+1:19:11 better and that's actually why I ended
+1:19:13 up at Ant and Ben man was also a big
+1:19:15 part of that too.
+1:19:16 >> I feel like I want to do a whole podcast
+1:19:18 just talking about your time in Japan
+1:19:20 and the journey of Boris through Japan
+1:19:23 to anthropic but we'll keep it we'll
+1:19:25 keep it short. Uh I'll quickly recommend
+1:19:27 a sci-fi book to you if you haven't read
+1:19:28 it. Have you read Fire Upon the Deep?
+1:19:31 >> Uh this is Ving, right? Yeah. It's
+1:19:33 great.
+1:19:34 >> Yes. Okay. That one's like it's like so
+1:19:36 interesting from a AI AGI perspective.
+1:19:39 Uh so few people have read that so um I
+1:19:42 myself
+1:19:43 >> Yeah. It's like a lot.
+1:19:46 >> Yeah. Yeah. Yeah. I like Deepness in the
+1:19:47 Sky also. I think those sequels, right?
+1:19:50 Or
+1:19:50 >> Yeah.
+1:19:50 >> Yeah. Yeah. Yeah. I think so.
+1:19:52 >> Yeah. It's very long and like complex to
+1:19:53 get into but so good. Okay. We'll keep
+1:19:55 going through a lightning round. Uh do
+1:19:56 you have a favorite recent movie or TV
+1:19:58 show you really enjoyed?
+1:19:59 >> So, I actually don't really watch TV or
+1:20:01 movies. I just don't really have time
+1:20:03 these days. Um, I did watch I I I'm
+1:20:05 going to bring up another sishloo, but
+1:20:07 the three body problem series on Netflix
+1:20:09 I I really loved. Um, I thought that was
+1:20:11 like a great rendition of the book
+1:20:12 series.
+1:20:12 >> So, the common pattern across uh AI
+1:20:14 leaders is no time to watch TV or
+1:20:16 movies, which I completely understand.
+1:20:19 Uh, is there a favorite product you've
+1:20:20 recently discovered that you really
+1:20:21 love?
+1:20:22 >> I'm going to like chill a little bit and
+1:20:24 just say co-work cuz this is
+1:20:27 legitimately the the one product that's
+1:20:28 been pretty life-changing for me. uh
+1:20:30 just because I I have it running all the
+1:20:32 time and uh the the Chrome integration
+1:20:34 in particular is just really excellent.
+1:20:36 Uh so it's been like it paid a traffic
+1:20:38 fine for me. It like canceled a couple
+1:20:40 subscriptions for me. Uh just like the
+1:20:42 amount of like tedious work it gets out
+1:20:43 of the way is awesome. I I also don't
+1:20:45 know if it's a product, but maybe I'll
+1:20:46 I'll uh also another podcast that I
+1:20:48 really love obviously besides uh besides
+1:20:50 Venny is
+1:20:51 >> obviously
+1:20:52 >> Yeah, it's uh it's the acquired uh
+1:20:55 podcast by Ben Ben and David.
+1:20:57 >> Uh it's it's just like super it's super
+1:20:59 awesome. Um, I feel like the way that
+1:21:00 they get into like business history and
+1:21:02 bring it alive is is really really good.
+1:21:04 And I would start with a Nintendo
+1:21:06 episode if uh if you haven't listened to
+1:21:08 it.
+1:21:08 >> Great tip uh with co-work just so people
+1:21:11 understand if they haven't tried this
+1:21:12 like basically you type something you
+1:21:14 want to get done and it can launch
+1:21:17 Chrome and just do things for you. I saw
+1:21:19 one of the someone went on pat leave
+1:21:21 from anthropic and he had it fill out
+1:21:23 these like medical forms for him. these
+1:21:25 like really annoying PDFs where it just
+1:21:27 like loads up the browser, logs in,
+1:21:28 fills them out, and bits them.
+1:21:30 >> Yeah, exactly. Exactly. And and it
+1:21:31 actually just kind of works. Like we
+1:21:32 tried this experiment like a year ago
+1:21:34 and it didn't really work cuz the model
+1:21:35 wasn't ready, but now now it actually
+1:21:37 just works. And it's amazing. I think a
+1:21:39 lot of people just don't really
+1:21:40 understand what this is because they
+1:21:42 haven't used agent before. And it it
+1:21:45 just feels very very similar to me to
+1:21:47 quad code a year ago. Um but like I
+1:21:49 said, it's just growing much faster than
+1:21:50 quad code did in the early days. So, I
+1:21:53 think it's starting to it's starting to
+1:21:54 break through a bit.
+1:21:55 >> And there's also this Chrome extension
+1:21:56 that you mentioned that you could just
+1:21:57 use stand alone that sits in Chrome and
+1:21:59 you could just talk to Claude uh looking
+1:22:02 at your screen at your browser and have
+1:22:04 it do stuff, have it tell you about what
+1:22:06 you're looking at, summarize what you're
+1:22:07 looking at, things like that.
+1:22:08 >> Exactly. Exactly. For for people that
+1:22:10 are like just starting to use co-work,
+1:22:11 the thing I recommend is so you download
+1:22:13 the Quad Desktop app, you go to the
+1:22:14 co-work tab. It's right next to the code
+1:22:16 tab. Um the thing that I recommend doing
+1:22:18 is like start by having it use a tool.
+1:22:20 So like clean up your desktop or like
+1:22:22 summarize your email or something like
+1:22:24 this or you know like respond to the top
+1:22:25 three emails like it actually just
+1:22:27 responds to emails for me now too. The
+1:22:29 second thing is connect tools. So like
+1:22:31 if you connect like if you say look at
+1:22:33 my top emails and then send slack
+1:22:35 messages or you know like put them in a
+1:22:36 spreadsheet or something or for example
+1:22:38 like I use it for all my project
+1:22:39 management. So we have a single
+1:22:40 spreadsheet for the whole team. there's
+1:22:42 like a row per engineer. Every week
+1:22:44 everyone fills out a status and every
+1:22:46 Monday co-work just goes through and it
+1:22:47 messages every engineer on Slack that
+1:22:49 hasn't filled out their status and so I
+1:22:51 don't have to do this anymore. And this
+1:22:52 is just one prompt. It'll do everything.
+1:22:54 And then the third thing is just run a
+1:22:56 bunch of quads in parallel. So we can
+1:22:58 co-work you can have as many tasks
+1:22:59 running as you want. So it's like start
+1:23:01 one task, you know, I have this project
+1:23:02 management thing running, then I'll have
+1:23:04 it do something else, then something
+1:23:05 else and I'll kick these off and then I
+1:23:07 just go get a coffee while it runs.
+1:23:09 There's a post I'll link to that shares
+1:23:11 a bunch of ways people use uh what was
+1:23:14 previously cloud code and now just you
+1:23:16 could do through code work because a lot
+1:23:17 of this is just like oh wow I hadn't
+1:23:18 thought I could use it for that and once
+1:23:20 you see like these examples I think are
+1:23:22 what people need to hear of just like oh
+1:23:24 wow I didn't know I could do that
+1:23:26 >> so
+1:23:26 >> yeah I think a lot of this was also
+1:23:28 >> some of this was also inspired by you
+1:23:30 any
+1:23:31 >> you you had this post about uh it was
+1:23:32 like 50 non-technical use cases for
+1:23:34 quote or something like this
+1:23:36 >> so we actually one of our PMs used that
+1:23:38 as a way to evaluate co-work before we
+1:23:40 released it. Um, and I think at the
+1:23:42 point where we hit where Coowork was
+1:23:43 able to do like 48 out of the 50, they
+1:23:45 were like, "Okay, it's pretty good."
+1:23:46 >> Wow. I did not know that. That
+1:23:48 [laughter] is awesome. Uh, it's I've
+1:23:51 become an eval.
+1:23:53 >> Yeah. How does that feel?
+1:23:55 >> Amazing.
+1:23:57 I feel like I'm valuable to the future
+1:23:59 of AI.
+1:24:01 >> This is like reverse breaking through.
+1:24:03 [laughter]
+1:24:05 >> Wow, that is so cool. Wow. Okay. I
+1:24:06 wonder what those last two are. Anyway,
+1:24:08 okay, two more questions. Um, do you
+1:24:10 have a favorite life motto that you
+1:24:12 often come back to in work or in life?
+1:24:14 >> Use common sense.
+1:24:16 I think a lot of the failures that I see
+1:24:18 in especially in a work environment is
+1:24:20 people just failing to use common sense.
+1:24:22 Like they follow a process without
+1:24:23 thinking about it. Um, they just do a
+1:24:25 thing without thinking about it or
+1:24:26 they're working on a product that's like
+1:24:27 not a good product or not a good idea
+1:24:29 and they're just following the momentum
+1:24:30 and not thinking about it. I think the
+1:24:32 best results that I see are people
+1:24:33 thinking from first principles and just
+1:24:35 developing their own common sense. Like
+1:24:37 if something smells weird, then you know
+1:24:39 it's probably not a good idea. So I
+1:24:41 think I think just this this is the
+1:24:43 single advice that I give, you know, to
+1:24:44 co-workers more more than anything too.
+1:24:46 And
+1:24:46 >> I feel like that alone could be its own
+1:24:48 podcast conversation. What is common
+1:24:50 sense? How do you build? But we'll keep
+1:24:52 this short. Uh final question. Uh so
+1:24:54 you've been got more active on Twitterx.
+1:24:57 I'm curious just uh why and just what's
+1:25:00 your experience been with with Twitter,
+1:25:01 the world of Twitter? Uh because you get
+1:25:03 a lot of engagement on on Twitterx.
+1:25:06 >> So for a long time I used Threads
+1:25:08 exclusively because I actually helped
+1:25:10 build threads a little bit back in the
+1:25:11 day. Um and I also just like the design.
+1:25:13 It's like a very clean product. I I just
+1:25:15 really like that.
+1:25:17 >> I started using Threads cuz actually I
+1:25:18 was bored. Um so in in December I was in
+1:25:21 Europe.
+1:25:21 >> You started using Twitter, you mean?
+1:25:23 >> Oh yeah. Yeah. Yeah. I started I started
+1:25:24 using uh Twitter because I was bored. So
+1:25:26 my my wife and I were uh we were
+1:25:27 traveling around in in Europe for
+1:25:29 December. We're just kind of nomading
+1:25:30 around. We went to like Copenhagen, went
+1:25:32 to like a few different countries. Um
+1:25:34 and for me it was just like a coding
+1:25:36 vacation. So every day I was coding and
+1:25:38 that's like my favorite kind of vacation
+1:25:40 just to just like code all day. It's the
+1:25:42 best. And at some point I just kind of
+1:25:44 got bored and like I ran out of ideas
+1:25:46 for you know like a few hours. I was
+1:25:48 like okay what do I want to do next? And
+1:25:49 so I opened Twitter. I saw some people
+1:25:51 like tweeting about quad code and then I
+1:25:53 just started responding and then I was
+1:25:55 like okay maybe actually I think I
+1:25:57 should do is just like look for people
+1:25:59 look for bugs that people have maybe
+1:26:01 people have like bugs or kind of
+1:26:02 feedback they have and so kind of
+1:26:04 introduce myself ask for if people had a
+1:26:05 bunch of bugs and feedback and I think
+1:26:08 they were kind of surprised by like the
+1:26:09 pace at which we're able to address
+1:26:11 feedback nowadays. Um, for me it's just
+1:26:14 like so normal like if someone has a bug
+1:26:16 like I can probably fix it within a few
+1:26:17 minutes because I just sort of quad and
+1:26:19 as long as the description is good it'll
+1:26:21 just go and do it and then I'll I'll go
+1:26:23 do something else and answer the next
+1:26:24 thing. But I think for a lot of people
+1:26:26 was pretty surprising. So that was
+1:26:27 really cool and yeah the experience on
+1:26:29 Twitter has been pretty great. It's it's
+1:26:31 been awesome just engaging with people
+1:26:32 and seeing what people want uh hearing
+1:26:35 hearing about bugs, hearing about
+1:26:37 features. I saw complaints to Nikita
+1:26:39 Beer the other day on Twitter of just
+1:26:41 you they're like posting many threads
+1:26:42 and it was breaking and just like oh man
+1:26:44 what's going on here.
+1:26:45 >> Yeah. Yeah. Yeah. There there was a bug.
+1:26:47 I hope it's fixed now. Amazing. Oh man,
+1:26:50 Boris, I could chat with you for hours.
+1:26:52 Uh I'll let you go. Thank you so much
+1:26:54 for doing this. Uh you're wonderful. Um
+1:26:57 where can folks find you online? How can
+1:26:58 listeners be useful to you?
+1:27:00 >> Yeah, find me on threads or on Twitter.
+1:27:03 That's the that's the easiest place. And
+1:27:06 please just tag me on stuff. Um, send
+1:27:08 bugs, send feature requests, what's
+1:27:10 missing, what can we do to make the
+1:27:11 products better? What do you like? What
+1:27:13 do you want? Um, I I love love hearing
+1:27:15 it.
+1:27:16 >> Amazing. Boris, thank you so much for
+1:27:18 being here.
+1:27:18 >> Cool. Thanks, Funny.
+1:27:20 >> Bye, everyone.
+1:27:21 >> Thank you so much for listening. If you
+1:27:23 found this valuable, you can subscribe
+1:27:25 to the show on Apple Podcasts, Spotify,
+1:27:27 or your favorite podcast app. Also,
+1:27:30 please consider giving us a rating or
+1:27:32 leaving a review as that really helps
+1:27:33 other listeners find the podcast. You
+1:27:36 can find all past episodes or learn more
+1:27:38 about the show at lennispodcast.com.
+1:27:41 See you in the next episode.

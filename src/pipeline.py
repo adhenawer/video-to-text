@@ -171,8 +171,8 @@ def main():
         build_cmd.append(slides_json)
     run_step("3/3  Gerando HTML", build_cmd)
 
-    # Save transcripts to repo for future reuse
-    transcripts_dir = os.path.join(PROJECT_DIR, "transcripts")
+    # Save transcripts to repo for future reuse (organized by provider)
+    transcripts_dir = os.path.join(PROJECT_DIR, "transcripts", provider.name)
     os.makedirs(transcripts_dir, exist_ok=True)
     repo_transcript = os.path.join(transcripts_dir, f"{video_id}.txt")
     repo_translated = os.path.join(transcripts_dir, f"{video_id}_pt.txt")

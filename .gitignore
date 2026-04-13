@@ -3,7 +3,7 @@
 !requirements.txt
 !robots.txt
 !llms.txt
-!transcripts/*.txt
+!transcripts/**/*.txt
 __pycache__/
 *.pyc
 .venv/

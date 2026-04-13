@@ -20,7 +20,9 @@ video-to-text/
 │   ├── robots.txt              ← permite crawling, aponta para sitemap
 │   ├── sitemap.xml             ← URLs para Google
 │   └── llms.txt                ← índice para crawlers de LLMs
-├── transcripts/                ← transcrições originais (EN) e traduções (PT-BR) persistidas
+├── transcripts/                ← transcrições persistidas, organizadas por provider
+│   ├── youtube/                  ← {video_id}.txt (EN) + {video_id}_pt.txt (PT-BR)
+│   └── twitter/                  ← {tweet_id}.txt (EN) + {tweet_id}_pt.txt (PT-BR)
 ├── tests/                      ← testes unitários (pytest, TDD obrigatório)
 ├── requirements.txt            ← dependências Python (mlx, mlx-lm, yt-dlp, mlx-whisper, ...)
 ├── src/                        ← pacote Python principal
