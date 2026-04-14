@@ -46,20 +46,32 @@ def build_sitemap():
         },
     })
 
-    # Blog posts
+    # Blog posts (bilingual: PT at /blog/, EN at /blog/en/)
     blog_dir = os.path.join(PROJECT_DIR, "docs", "blog")
+    blog_en_dir = os.path.join(blog_dir, "en")
     if os.path.isdir(blog_dir):
         for fname in sorted(os.listdir(blog_dir)):
             if not fname.endswith(".html"):
                 continue
-            url = f"{BASE}/blog/{fname}" if fname != "index.html" else f"{BASE}/blog/"
+            pt_url = f"{BASE}/blog/" if fname == "index.html" else f"{BASE}/blog/{fname}"
+            en_url = f"{BASE}/blog/en/" if fname == "index.html" else f"{BASE}/blog/en/{fname}"
+            alts = {"pt-BR": pt_url, "en": en_url, "x-default": pt_url}
             urls.append({
-                "loc": url,
+                "loc": pt_url,
                 "lastmod": TODAY,
                 "changefreq": "monthly",
                 "priority": "0.7",
-                "alternates": {"en": url, "x-default": url},
+                "alternates": alts,
             })
+            en_path = os.path.join(blog_en_dir, fname)
+            if os.path.exists(en_path):
+                urls.append({
+                    "loc": en_url,
+                    "lastmod": TODAY,
+                    "changefreq": "monthly",
+                    "priority": "0.7",
+                    "alternates": alts,
+                })
 
     for entry in index:
         pt_slug = entry["slug"]
@@ -134,7 +146,7 @@ def build_llms_txt():
         lines.append(f"  Fonte: {subtitle}")
         lines.append("")
 
-    lines.append("## Blog")
+    lines.append("## Blog — Português")
     lines.append("")
     blog_dir = os.path.join(PROJECT_DIR, "docs", "blog")
     if os.path.isdir(blog_dir):
@@ -149,6 +161,25 @@ def build_llms_txt():
             desc = _re.search(r'<meta name="description" content="([^"]+)"', html)
             desc = desc.group(1).strip() if desc else ""
             lines.append(f"- [{title}]({BASE}/blog/{fname})")
+            if desc:
+                lines.append(f"  {desc}")
+            lines.append("")
+
+    lines.append("## Blog — English")
+    lines.append("")
+    blog_en_dir = os.path.join(blog_dir, "en")
+    if os.path.isdir(blog_en_dir):
+        import re as _re
+        for fname in sorted(os.listdir(blog_en_dir)):
+            if not fname.endswith(".html") or fname == "index.html":
+                continue
+            with open(os.path.join(blog_en_dir, fname)) as f:
+                html = f.read()
+            title = _re.search(r"<h1>([^<]+)</h1>", html)
+            title = title.group(1).strip() if title else fname
+            desc = _re.search(r'<meta name="description" content="([^"]+)"', html)
+            desc = desc.group(1).strip() if desc else ""
+            lines.append(f"- [{title}]({BASE}/blog/en/{fname})")
             if desc:
                 lines.append(f"  {desc}")
             lines.append("")

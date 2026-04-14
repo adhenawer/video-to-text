@@ -1,43 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Markdown for Agents on Free Tier Cloudflare Workers · Blog</title>
-<meta name="description" content="How to replicate Cloudflare's paid Markdown for Agents feature with a free-tier Worker: content negotiation, regex-based HTML to Markdown, and a 75% token reduction for LLM crawlers.">
+<title>Markdown para Agentes no plano gratuito do Cloudflare Workers · Blog</title>
+<meta name="description" content="Como replicar o recurso pago Markdown for Agents da Cloudflare com um Worker no plano gratuito: content negotiation, conversão de HTML para Markdown com regex e redução de 75% de tokens para crawlers de LLMs.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown for Agents on Free Tier Cloudflare Workers">
-<meta property="og:description" content="A zero-cost Worker that serves Markdown to agents via Accept headers, cutting article payloads from 53k to 13k tokens.">
-<meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="Readings Blog">
+<meta property="og:title" content="Markdown para Agentes no plano gratuito do Cloudflare Workers">
+<meta property="og:description" content="Um Worker de custo zero que entrega Markdown para agentes via headers Accept, reduzindo o payload de artigos de 53k para 13k tokens.">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Blog de Leituras">
 <meta name="twitter:card" content="summary">
+<link rel="alternate" hreflang="pt-BR" href="markdown-for-agents-free-tier.html">
+<link rel="alternate" hreflang="en" href="en/markdown-for-agents-free-tier.html">
+<link rel="alternate" hreflang="x-default" href="markdown-for-agents-free-tier.html">
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="page-article">
 <header class="site-header">
-  <a class="site-brand" href="../index.html">🎙 Readings</a>
+  <a class="site-brand" href="../index.html">🎙 Leituras</a>
   <div class="lang-bar">
-    <a class="lang-btn" href="../blog/">← Blog</a>
+    <button class="lang-btn active" data-lang="pt-BR" aria-label="Português">🇧🇷 PT</button>
+    <button class="lang-btn" data-lang="en" aria-label="English">🇺🇸 EN</button>
   </div>
 </header>
 <article class="container">
-  <a href="./" class="back-home">← Back to blog</a>
+  <a href="./" class="back-home">← Voltar ao blog</a>
   <header>
-    <h1>Markdown for Agents on Free Tier Cloudflare Workers</h1>
+    <h1>Markdown para Agentes no plano gratuito do Cloudflare Workers</h1>
     <p class="meta"><cite>video-to-text · 2026-04-13</cite></p>
   </header>
 
-  <p>Cloudflare ships a feature called <em>Markdown for Agents</em> that returns a clean Markdown version of any page when a client sends <code>Accept: text/markdown</code>. It is gated behind Pro and Business plans. For a static blog hosted on GitHub Pages, paying for an edge plan just to help crawlers parse articles is hard to justify. This post walks through a 170-line Cloudflare Worker that replicates the feature on the free tier for <code>adhenawer.net</code>, and explains the trade-offs.</p>
+  <p>A Cloudflare oferece um recurso chamado <em>Markdown for Agents</em> que devolve uma versão limpa em Markdown de qualquer página quando o cliente envia <code>Accept: text/markdown</code>. Ele está restrito aos planos Pro e Business. Para um blog estático hospedado no GitHub Pages, pagar por um plano de edge só para ajudar crawlers a interpretarem artigos é difícil de justificar. Este post percorre um Cloudflare Worker de 170 linhas que replica o recurso no plano gratuito para <code>adhenawer.net</code> e explica os trade-offs envolvidos.</p>
 
-  <h2>Why bother serving Markdown at all</h2>
+  <h2>Por que servir Markdown</h2>
 
-  <p>Each article on this site is a self-contained HTML file with theme switcher, progress bar, resume banner, JSON-LD, Open Graph tags, and inline navigation. A single article weighs around 53,000 tokens when an LLM ingests the raw HTML. Most of that is markup the model will discard. Serving the same content as Markdown with a YAML frontmatter brings the same article down to roughly 13,000 tokens. That is a 75% reduction, which matters for any retrieval pipeline that pays per token or has a finite context window.</p>
+  <p>Cada artigo deste site é um arquivo HTML autocontido com seletor de tema, barra de progresso, banner de retomada, JSON-LD, tags Open Graph e navegação inline. Um único artigo pesa cerca de 53.000 tokens quando um LLM ingere o HTML cru. A maior parte disso é marcação que o modelo vai descartar. Servir o mesmo conteúdo em Markdown com um frontmatter YAML reduz o mesmo artigo para aproximadamente 13.000 tokens. Isso é uma redução de 75%, o que importa para qualquer pipeline de retrieval que paga por token ou tem uma janela de contexto finita.</p>
 
-  <p>The trick is content negotiation. A browser asks for <code>text/html</code> and gets the full HTML. An agent asks for <code>text/markdown</code> and gets Markdown. The URL stays the same. No separate endpoints, no sitemap duplication, no new paths to index.</p>
+  <p>O truque é content negotiation. Um navegador pede <code>text/html</code> e recebe o HTML completo. Um agente pede <code>text/markdown</code> e recebe Markdown. A URL continua a mesma. Sem endpoints separados, sem duplicação de sitemap, sem novos caminhos para indexar.</p>
 
-  <h2>The Worker in one read</h2>
+  <h2>O Worker em uma leitura</h2>
 
-  <p>The entry point checks the <code>Accept</code> header. If it does not include <code>text/markdown</code>, the Worker simply proxies the request to the origin and returns whatever GitHub Pages served. No transformation, no overhead beyond a <code>fetch</code>.</p>
+  <p>O entry point verifica o header <code>Accept</code>. Se ele não inclui <code>text/markdown</code>, o Worker simplesmente faz proxy da requisição para a origem e devolve o que o GitHub Pages retornou. Sem transformação, sem overhead além de um <code>fetch</code>.</p>
 
   <pre><code class="language-js">function wantsMarkdown(request) {
   const accept = request.headers.get("Accept") || "";
@@ -53,13 +57,13 @@ export default {
   }
 };</code></pre>
 
-  <p>When Markdown is requested, the Worker fetches the same URL from the origin with <code>Accept: text/html</code> forced, then extracts the <code>&lt;article&gt;</code> block, strips the chrome, and converts what remains.</p>
+  <p>Quando Markdown é solicitado, o Worker busca a mesma URL na origem forçando <code>Accept: text/html</code>, extrai o bloco <code>&lt;article&gt;</code>, remove o chrome e converte o que sobra.</p>
 
-  <h2>Why regex instead of a parser</h2>
+  <h2>Por que regex em vez de um parser</h2>
 
-  <p>The obvious way to convert HTML to Markdown is to use Turndown with JSDOM. Neither runs cleanly in the Workers runtime. JSDOM pulls in Node built-ins that are not available, and bundling DOM parsers blows past the 1 MB Worker script limit on the free tier. Cloudflare does offer <code>HTMLRewriter</code>, which is fast and streaming, but it is designed for targeted rewrites rather than full tree-to-text conversion.</p>
+  <p>O caminho óbvio para converter HTML em Markdown é usar Turndown com JSDOM. Nenhum dos dois roda bem no runtime dos Workers. O JSDOM puxa built-ins do Node que não estão disponíveis, e empacotar parsers de DOM estoura o limite de 1 MB de script do Worker no plano gratuito. A Cloudflare oferece o <code>HTMLRewriter</code>, que é rápido e streaming, mas ele foi desenhado para reescritas pontuais e não para converter a árvore inteira em texto.</p>
 
-  <p>Since the source HTML is generated by my own <code>build_html.py</code>, its structure is predictable. A sequence of regex passes is enough. This is not a general-purpose converter. It is a converter for exactly the HTML this site produces.</p>
+  <p>Como o HTML de origem é gerado pelo meu próprio <code>build_html.py</code>, a estrutura é previsível. Uma sequência de passes de regex é suficiente. Isso não é um conversor de uso geral. É um conversor para exatamente o HTML que este site produz.</p>
 
   <pre><code class="language-js">// Remove elements we don't want
 md = md.replace(/&lt;div class="theme-bar"&gt;[\s\S]*?&lt;\/div&gt;/gi, "");
@@ -77,11 +81,11 @@ md = md.replace(/&lt;a[^&gt;]*href="([^"]*)"[^&gt;]*&gt;([\s\S]*?)&lt;\/a&gt;/gi
 // Strip whatever tags remain
 md = md.replace(/&lt;[^&gt;]+&gt;/g, "");</code></pre>
 
-  <p>Order matters. Links must be converted before the generic tag stripper, otherwise the <code>href</code> is lost. Headings must be converted before paragraphs, otherwise inner text gets wrapped twice. Script and style blocks must be deleted first because they contain characters that would otherwise confuse the regex for anchors and attributes.</p>
+  <p>A ordem importa. Links precisam ser convertidos antes do removedor genérico de tags, senão o <code>href</code> é perdido. Headings precisam ser convertidos antes dos parágrafos, senão o texto interno é embrulhado duas vezes. Blocos de script e style precisam ser deletados primeiro porque contêm caracteres que confundiriam os regex de âncoras e atributos.</p>
 
-  <h2>Frontmatter and the token header</h2>
+  <h2>Frontmatter e o header de tokens</h2>
 
-  <p>The Worker pulls <code>&lt;title&gt;</code>, <code>meta name="description"</code>, and <code>meta name="author"</code> from the original HTML and builds a YAML frontmatter block. It also emits an <code>x-markdown-tokens</code> response header with an estimated token count (length divided by four, good enough for budgeting).</p>
+  <p>O Worker extrai <code>&lt;title&gt;</code>, <code>meta name="description"</code> e <code>meta name="author"</code> do HTML original e monta um bloco de frontmatter YAML. Ele também emite um header de resposta <code>x-markdown-tokens</code> com uma estimativa de contagem de tokens (comprimento dividido por quatro, suficiente para orçamento).</p>
 
   <pre><code class="language-js">return new Response(finalMarkdown, {
   status: 200,
@@ -94,24 +98,25 @@ md = md.replace(/&lt;[^&gt;]+&gt;/g, "");</code></pre>
   },
 });</code></pre>
 
-  <p>The <code>Vary: Accept</code> header is not optional. Without it, any cache in front of the Worker, including Cloudflare's own, may serve the HTML version to an agent or the Markdown version to a browser depending on who asked first. With <code>Vary: Accept</code>, the cache keys on the header and both variants coexist.</p>
+  <p>O header <code>Vary: Accept</code> não é opcional. Sem ele, qualquer cache na frente do Worker, incluindo o da própria Cloudflare, pode servir a versão HTML para um agente ou a versão Markdown para um navegador, dependendo de quem pediu primeiro. Com <code>Vary: Accept</code>, o cache chaveia pelo header e as duas variantes coexistem.</p>
 
-  <h2>Cost and limits</h2>
+  <h2>Custo e limites</h2>
 
-  <p>The Workers free tier gives 100,000 requests per day and 10 ms of CPU per request. The regex pipeline on a 50 KB HTML file runs in a couple of milliseconds. A small blog will never come close to either ceiling. Egress is free, and there is no charge for the subrequest to GitHub Pages.</p>
+  <p>O plano gratuito dos Workers oferece 100.000 requisições por dia e 10 ms de CPU por requisição. O pipeline de regex em um arquivo HTML de 50 KB roda em poucos milissegundos. Um blog pequeno nunca chega perto de nenhum dos tetos. Egress é gratuito e não há cobrança pela subrequest ao GitHub Pages.</p>
 
-  <p>The trade-offs are worth naming. The converter is fragile against HTML it was not designed for. Add a new component to the template without updating the Worker and the Markdown output will contain leaked markup or missing content. There is no test suite shipped with the Worker; the feedback loop is a <code>curl</code> in the terminal. And regex cannot handle nested lists or tables well. For a transcription blog where articles are paragraphs, headings, and occasional figures, that is fine. For a documentation site with code samples and tables, a real parser would be worth the extra setup.</p>
+  <p>Os trade-offs merecem ser nomeados. O conversor é frágil contra HTML para o qual não foi desenhado. Adicione um novo componente ao template sem atualizar o Worker e o Markdown resultante vai conter marcação vazada ou conteúdo ausente. Não há suíte de testes no Worker; o ciclo de feedback é um <code>curl</code> no terminal. E regex não lida bem com listas aninhadas ou tabelas. Para um blog de transcrições onde os artigos são parágrafos, headings e figuras ocasionais, tudo bem. Para um site de documentação com exemplos de código e tabelas, um parser de verdade valeria o setup extra.</p>
 
-  <h2>Try it</h2>
+  <h2>Experimente</h2>
 
-  <p>The full source is at <a href="https://github.com/adhenawer/video-to-text" rel="noopener">github.com/adhenawer/video-to-text</a> under <code>workers/markdown-agent/</code>. To see it in action:</p>
+  <p>O código-fonte completo está em <a href="https://github.com/adhenawer/video-to-text" rel="noopener">github.com/adhenawer/video-to-text</a> em <code>workers/markdown-agent/</code>. Para ver funcionando:</p>
 
   <pre><code class="language-bash">curl -H "Accept: text/markdown" https://adhenawer.net/posts/pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html</code></pre>
 
-  <p>Same URL, different <code>Accept</code>, a fraction of the tokens. No plan upgrade required.</p>
+  <p>Mesma URL, <code>Accept</code> diferente, uma fração dos tokens. Nenhum upgrade de plano necessário.</p>
 
 </article>
 <a href="#" class="back-top" id="backTop">↑</a>
 <script src="../js/reader.js"></script>
+<script src="../js/lang.js"></script>
 </body>
 </html>

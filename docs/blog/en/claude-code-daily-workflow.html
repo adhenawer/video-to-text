@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Running this project daily inside Claude Code · Blog</title>
+<meta name="description" content="What it actually looks like to run video-to-text day-to-day inside Claude Code: the prompts, the subprocesses, why CLAUDE.md is load-bearing, and where subagents pay off.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Running this project daily inside Claude Code">
+<meta property="og:description" content="A concrete walkthrough of the prompts, commands, and patterns used to ship articles on video-to-text using Anthropic's Claude Code CLI.">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Readings Blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Running this project daily inside Claude Code">
+<meta name="twitter:description" content="The prompts, commands, and patterns used to ship articles on video-to-text using Claude Code.">
+<link rel="alternate" hreflang="pt-BR" href="../claude-code-daily-workflow.html">
+<link rel="alternate" hreflang="en" href="claude-code-daily-workflow.html">
+<link rel="alternate" hreflang="x-default" href="../claude-code-daily-workflow.html">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="page-article">
+<header class="site-header">
+  <a class="site-brand" href="../../index.html">🎙 Readings</a>
+  <div class="lang-bar">
+    <button class="lang-btn " data-lang="pt-BR" aria-label="Português">🇧🇷 PT</button>
+    <button class="lang-btn active" data-lang="en" aria-label="English">🇺🇸 EN</button>
+  </div>
+</header>
+<article class="container">
+  <a href="../" class="back-home">← Back to blog</a>
+  <header>
+    <h1>Running this project daily inside Claude Code</h1>
+    <p class="meta"><cite>video-to-text · 2026-04-13</cite></p>
+  </header>
+
+  <p>This project — a static site of podcast and video transcripts translated to Brazilian Portuguese — used to be driven from WhatsApp. A 3rd-party agent (OpenCode, then a custom Hermes fork) would receive a URL, reuse my Anthropic subscription token, run the pipeline, and push to GitHub. That stopped working when Anthropic blocked subscription-token reuse in 3rd-party agents. Fair enough: the token is for the first-party client.</p>
+
+  <p>So everything moved into Claude Code, the official terminal CLI. It turns out that was an upgrade, not a downgrade. What follows is what "running the repo" actually looks like now — the prompts, the subprocess calls, and the handful of places where I still have to steer.</p>
+
+  <h2>The setup</h2>
+
+  <p>There is no setup, which is the point.</p>
+
+  <pre><code>cd ~/code/video-to-text
+claude</code></pre>
+
+  <p>The CLI starts, reads <code>CLAUDE.md</code> from the repo root, and that's the session. No WhatsApp gateway, no queue, no daemon. The project memory file is ~300 lines: folder layout, the pipeline command, slug conventions, the card template for <code>docs/index.html</code>, the sitemap update rule, the TDD requirement. Claude Code treats it as ground truth for every turn.</p>
+
+  <h2>A typical run</h2>
+
+  <p>A normal session to add one article is one sentence from me and about two minutes of tool calls.</p>
+
+  <blockquote><p><strong>Me:</strong> add an article from <code>https://youtu.be/abc123</code>, title "Obsidian + Claude Code", subtitle "Eduardo Mendes".</p></blockquote>
+
+  <p>What Claude Code does next, without me asking:</p>
+
+  <ol>
+    <li>Runs <code>python3 src/fetch_transcript.py 'https://youtu.be/abc123' --text-only --timestamps &gt; /tmp/transcript_abc123.txt</code> and checks the exit code.</li>
+    <li>Reads <code>/tmp/transcript_abc123.txt</code> into context.</li>
+    <li>Translates to PT-BR, organizing the text into thematic sections using the <code>================</code> / <code>SECTION NAME</code> format that <code>build_html.py</code> expects. Fillers, ads, and <code>[music]</code> markers are dropped.</li>
+    <li>Writes the result to <code>/tmp/abc123_pt.txt</code>.</li>
+    <li>Runs <code>build_html.py</code> with the right positional args to produce <code>docs/leituras/obsidian-claude-code.html</code>.</li>
+    <li>Edits <code>docs/index.html</code> to insert a new <code>&lt;a class="card"&gt;</code> and the matching <code>showProgress('reading_abc123_', 'p-abc123')</code> line in the footer script.</li>
+    <li>Adds a <code>&lt;url&gt;</code> entry to <code>sitemap.xml</code> with today's <code>lastmod</code>.</li>
+    <li>Appends an entry to <code>llms.txt</code>.</li>
+    <li><code>git add</code> the five touched files, commits with the convention <code>feat: adiciona artigo — &lt;Título&gt;</code>, pushes.</li>
+  </ol>
+
+  <p>The parts that actually need me are the translation itself (taste, not mechanics) and catching when a YouTube video has no captions — at which point I redirect to the Twitter/X provider or ask it to pull audio via <code>yt-dlp</code> and run <code>mlx-whisper</code> locally.</p>
+
+  <h2>Why CLAUDE.md is load-bearing</h2>
+
+  <p>Without the memory file, Claude Code would still succeed at step 1 and then start inventing. Slug formats would drift (<code>obsidian_claude_code</code> vs <code>obsidian-claude-code</code>). The card HTML would get a new class name. The sitemap would be forgotten. Commits would be in English instead of the <code>feat: adiciona artigo — Título</code> convention.</p>
+
+  <p>The file isn't documentation for humans. It's a prompt. Every rule in it exists because the agent got it wrong once and I wrote down the fix. Representative entries:</p>
+
+  <pre><code>Slugs: kebab-case PT-BR sem acentos → como-construi-sistema-suporte-cliente-ia.html
+Traduções .txt: ficam em /tmp, não commitadas
+Commits: feat: adiciona artigo — Título / fix: ... / style: ...</code></pre>
+
+  <p>The "load-bearing" test is simple: if I delete a line from <code>CLAUDE.md</code>, does the next run break? For most of the file, yes. That's the signal that it's doing real work and not just sitting there looking like documentation.</p>
+
+  <h2>Subagents for big refactors</h2>
+
+  <p>The single-article flow fits in one context. The backfill did not.</p>
+
+  <p>At one point I wanted to add English versions of 19 existing articles. Doing that serially meant loading 19 transcripts, 19 translations, 19 HTML generations into one conversation. The main context would blow up around article 6 and quality would drop for the rest.</p>
+
+  <p>The fix was the Task tool — Claude Code's subagent primitive. One prompt:</p>
+
+  <blockquote><p><strong>Me:</strong> For each Portuguese article in <code>docs/leituras/</code>, spawn a subagent to produce the English version at <code>docs/readings/&lt;slug&gt;.html</code>. Each subagent should read its one source file, translate, run <code>build_html.py</code>, and return the output path. Run up to 4 in parallel.</p></blockquote>
+
+  <p>Each subagent gets a fresh context window, does one article, returns a short summary, and exits. The main conversation sees only the summaries — nineteen lines of "wrote <code>docs/readings/x.html</code>" instead of nineteen full translations. The same pattern applies when I ask it to audit every article for broken links or missing JSON-LD.</p>
+
+  <p>Plan mode gets used for anything that touches shared code: adding a new provider in <code>src/providers/</code>, changing the CSS theme tokens, restructuring the test layout. <code>/plan</code>, read the plan, push back on two or three points, then approve. It's slower than letting it start immediately and much faster than undoing a bad refactor.</p>
+
+  <h2>Lessons learned</h2>
+
+  <p>A year of running the project this way, a few things are clear.</p>
+
+  <p><strong>Reference, don't paste.</strong> Early on I would paste a transcript into the chat. That eats the context window and produces worse translations than just saying "read <code>/tmp/transcript_abc123.txt</code>". The agent is better at pulling from disk than parsing a wall of quoted text.</p>
+
+  <p><strong>Name the file, not the behavior.</strong> "Add the card" is ambiguous. "Edit <code>docs/index.html</code> to add a new card following the pattern of the last entry" is not. The <code>@docs/index.html</code> reference shorthand pins the target.</p>
+
+  <p><strong>Review in a new turn.</strong> When I want a sanity check, I open a fresh message: "review the HTML you just generated for missing <code>og:</code> tags". The model critiques its own output far better when it isn't defending it in the same turn.</p>
+
+  <p><strong>It is not magic.</strong> Claude Code mis-parses YouTube URLs with trailing query strings about once a week. It has invented non-existent flags for <code>yt-dlp</code>. It occasionally stages a file I didn't want committed, which is why I read every <code>git status</code> before approving the commit. The workflow is fast because the agent is fast, not because the agent is infallible.</p>
+
+  <p>What changed moving off the WhatsApp gateway is that the feedback loop shrank from minutes to seconds. I see every tool call. I can interrupt. I can ask "why did you pick that slug?" and get an answer. The pipeline didn't get simpler; the surface I see got honest.</p>
+
+  <p>Repo: <a href="https://github.com/adhenawer/video-to-text" rel="noopener">github.com/adhenawer/video-to-text</a>.</p>
+
+</article>
+<a href="#" class="back-top" id="backTop">↑</a>
+<script src="../../js/reader.js"></script>
+<script src="../../js/lang.js"></script>
+</body>
+</html>
