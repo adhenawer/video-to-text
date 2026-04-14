@@ -6,8 +6,6 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-MLX-black)](https://github.com/ml-explore/mlx)
 [![Cloudflare Workers](https://img.shields.io/badge/edge-Cloudflare%20Workers-F38020)](https://workers.cloudflare.com/)
-[![Languages](https://img.shields.io/badge/languages-PT--BR%20%7C%20EN-brightgreen)](https://adhenawer.net/en/)
-[![Articles](https://img.shields.io/badge/articles-20%2B-blueviolet)](https://adhenawer.net/)
 
 > 🇧🇷 **[Leia em português brasileiro](README-pt_br.md)** · 🇺🇸 You are reading in English
 
