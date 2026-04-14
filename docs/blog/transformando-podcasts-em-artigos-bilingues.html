@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Transformando podcasts de horas em artigos que dá pra ler · Blog</title>
-<meta name="description" content="Como montei um pipeline bilíngue que transforma vídeos do YouTube e Twitter/X em artigos estáticos — Whisper local, Claude pra organização e tradução, HTML puro, Cloudflare Worker grátis pra servir Markdown pra agentes.">
+<meta name="description" content="Um pipeline bilíngue que transforma vídeos do YouTube e Twitter/X em artigos estáticos — Whisper local, Claude para organização e tradução, HTML puro, Cloudflare Worker grátis servindo Markdown para agentes.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Transformando podcasts de horas em artigos que dá pra ler">
 <meta property="og:description" content="Um site estático bilíngue que publica podcasts e vídeos como artigos organizados por seções temáticas.">
@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="Blog de Leituras">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Transformando podcasts de horas em artigos que dá pra ler">
-<meta name="twitter:description" content="Pipeline bilíngue com Whisper, Claude e HTML puro. Custo mensal zero.">
+<meta name="twitter:description" content="Pipeline bilíngue com Whisper, Claude e HTML puro.">
 <link rel="alternate" hreflang="pt-BR" href="transformando-podcasts-em-artigos-bilingues.html">
 <link rel="alternate" hreflang="en" href="en/turning-podcasts-into-readable-articles.html">
 <link rel="alternate" hreflang="x-default" href="transformando-podcasts-em-artigos-bilingues.html">
@@ -34,23 +34,21 @@
     <p class="meta"><cite><a href="https://github.com/adhenawer" target="_blank" rel="noopener">Rodolfo Moraes</a> · 2026-04-14</cite></p>
   </header>
 
-  <p>Não sei se você também tem essa vibe, mas quando vejo um podcast novo de 2, 3, 4 horas no YouTube eu já sei: não vou ver. Não no celular encaixado no metrô, não no sofá depois do expediente, não na pausa do almoço. O problema não é falta de interesse — é que vídeo longo é um formato hostil pra quase tudo que não seja assistir do começo ao fim, sentado.</p>
+  <p>Vídeo longo é um formato hostil pra quase tudo que não seja assistir do começo ao fim, sentado. Um podcast de 2, 3, 4 horas no YouTube tem baixa chance de ser consumido depois pelo próprio público que se interessou.</p>
 
   <p>Vídeo é ruim pra:</p>
   <ul>
-    <li><strong>Pesquisar</strong>: Ctrl+F não existe. Se você lembra vagamente que "aquele cara falou sobre vibe coding", boa sorte achando o trecho.</li>
-    <li><strong>Citar</strong>: mandar um link com timestamp resolve mal, e transcrever a mão é trabalhoso.</li>
+    <li><strong>Pesquisar</strong>: Ctrl+F não existe. Achar "o trecho onde o fulano falou sobre X" requer navegar timestamps manualmente.</li>
+    <li><strong>Citar</strong>: link com timestamp resolve mal, e transcrever a mão é trabalhoso.</li>
     <li><strong>Reler</strong>: não tem marcador visual, não tem progresso, não tem seções nomeadas.</li>
-    <li><strong>Skim</strong>: você não consegue bater o olho e decidir se vale investir 3 horas.</li>
+    <li><strong>Skim</strong>: não dá pra bater o olho e decidir se vale o investimento de tempo.</li>
   </ul>
 
-  <p>Artigo resolve tudo isso. Mas quase nenhum podcast tem versão escrita decente. E legendas automáticas do YouTube são ilegíveis — um paredão de texto sem pontuação, cheio de "é, tipo, né, então".</p>
+  <p>Artigo resolve tudo isso. Mas quase nenhum podcast tem versão escrita decente, e legendas automáticas do YouTube são ilegíveis — paredão de texto sem pontuação, cheio de "é, tipo, né, então".</p>
 
-  <h2>O que construí</h2>
+  <h2>O objetivo do projeto</h2>
 
   <p><a href="https://adhenawer.net">adhenawer.net</a> é um site estático que pega vídeos do YouTube ou Twitter/X e transforma em <strong>artigos bilíngues organizados por seções temáticas</strong>. Português brasileiro e inglês, mesmo conteúdo, URLs canônicas em cada idioma.</p>
-
-  <p>No momento são 20 artigos publicados, cobrindo gente como Boris Cherny (Claude Code), Simon Willison, Steve Yegge, Andrew Ng na Stanford, Dario Amodei, Robert Shiller (Yale, sobre finanças comportamentais), Patrick Winston (MIT, aquela palestra clássica de <em>How to Speak</em>), e mais.</p>
 
   <p>Cada artigo tem:</p>
   <ul>
@@ -117,13 +115,13 @@ result = mlx_whisper.transcribe(
     word_timestamps=False,
 )</code></pre>
 
-  <p>Se você está em Linux ou Windows dá pra trocar por <code>faster-whisper</code> (CTranslate2), mesma ideia. A única coisa que importa é não mandar áudio pra API de ninguém pra economizar grana — Whisper rodando local é bom o suficiente e é grátis.</p>
+  <p>Em Linux ou Windows dá pra trocar por <code>faster-whisper</code> (CTranslate2), mesma ideia. O importante é não mandar áudio pra API de ninguém — Whisper rodando local é bom o suficiente e é grátis.</p>
 
-  <h2>A parte que mais me divirto: Markdown para agentes</h2>
+  <h2>Markdown para agentes</h2>
 
-  <p>Essa é a mais massa. A Cloudflare tem uma feature chamada <strong>Markdown for Agents</strong> que converte HTML em Markdown na edge quando um agente de IA faz a requisição com <code>Accept: text/markdown</code>. O problema é que essa feature só existe no plano <strong>pago</strong> (Pro ou Business).</p>
+  <p>A Cloudflare tem uma feature chamada <strong>Markdown for Agents</strong> que converte HTML em Markdown na edge quando um agente de IA faz a requisição com <code>Accept: text/markdown</code>. Essa feature só existe no plano <strong>pago</strong> (Pro ou Business).</p>
 
-  <p>Eu dei uma olhada no Worker runtime deles e percebi que dá pra replicar em ~150 linhas de JavaScript rodando no plano <strong>Free</strong> (100k requests/dia). A chave é que HTMLs bem estruturados não precisam de nada muito sofisticado — regex resolve:</p>
+  <p>Dá pra replicar em ~150 linhas de JavaScript rodando no plano <strong>Free</strong> (100k requests/dia) do Cloudflare Workers. HTMLs bem estruturados não precisam de nada muito sofisticado — regex resolve:</p>
 
   <pre><code class="language-javascript">export default {
   async fetch(request) {
@@ -153,7 +151,7 @@ result = mlx_whisper.transcribe(
 
   <p>Resultado: um HTML de artigo que custa ~53.000 tokens pra um agente parsear vira ~13.000 tokens em Markdown — <strong>redução de 75%</strong>. Sem Turndown, sem JSDOM (nenhum dos dois roda em Worker runtime), só regex e uns cuidados com <code>&lt;pre&gt;</code> e <code>&lt;code&gt;</code>.</p>
 
-  <p>Testa você mesmo:</p>
+  <p>Dá pra testar:</p>
 
   <pre><code class="language-bash"># Humano recebe HTML
 curl -sI https://adhenawer.net/posts/original/state-ai-2026.html | grep -i content-type
@@ -164,16 +162,13 @@ curl -s https://adhenawer.net/posts/original/state-ai-2026.html \
   -H "Accept: text/markdown" | head -10
 # ---
 # title: "The State of AI in 2026"
-# author: "Simon Willison · Lenny's Podcast"
 # lang: en
 # ---
 # ## THE NOVEMBER INFLECTION POINT</code></pre>
 
-  <p>Custo total pra mim: <strong>zero dólares</strong>. Escrevi um post técnico sobre isso aqui no blog se quiser detalhes: <a href="markdown-for-agents-free-tier.html">Markdown para agentes no Cloudflare grátis</a>.</p>
-
   <h2>Referências extraídas automaticamente</h2>
 
-  <p>Cada artigo tem uma sidebar fixa com referências que aparecem na transcrição. São organizadas em categorias:</p>
+  <p>Cada artigo tem uma sidebar fixa com referências extraídas da transcrição. Categorias:</p>
 
   <ul>
     <li><strong>Livros</strong> → busca no Amazon</li>
@@ -188,13 +183,13 @@ curl -s https://adhenawer.net/posts/original/state-ai-2026.html \
   <p>A extração é feita por subagentes do Claude em paralelo — um por artigo, cada um recebe a transcrição e devolve um JSON estruturado:</p>
 
   <pre><code class="language-json">{
-  "video_id": "We7BZVKbCVw",
+  "video_id": "...",
   "books": [
     {
       "title": "Functional Programming in Scala",
       "author": "Paul Chiusano &amp; Rúnar Bjarnason",
       "url": "https://www.amazon.com/s?k=functional+programming+in+scala+chiusano",
-      "context": "Single best technical book I've ever read"
+      "context": "..."
     }
   ],
   "people": [
@@ -206,23 +201,20 @@ curl -s https://adhenawer.net/posts/original/state-ai-2026.html \
   ],
   "related_posts": [
     {
-      "slug_pt": "estado-da-ia-2026-ponto-de-inflexao-simon-willison",
-      "slug_en": "state-ai-2026",
-      "reason": {
-        "pt": "Simon Willison sobre o mesmo momento de inflexão da IA",
-        "en": "Simon Willison on the same AI inflection moment"
-      }
+      "slug_pt": "...",
+      "slug_en": "...",
+      "reason": {"pt": "...", "en": "..."}
     }
   ]
 }</code></pre>
 
-  <p>No total são <strong>714 referências extraídas</strong> em 21 posts. Nos 101 <em>people</em> referenciados, 53 estão linkados a perfis de Twitter (o resto é acadêmico falecido ou figura histórica sem Twitter, óbvio).</p>
+  <p>Campos sensíveis ao idioma (como <code>role</code> de pessoas e <code>reason</code> de posts relacionados) são armazenados bilíngues — a renderização escolhe o idioma do artigo em tempo de build.</p>
 
-  <h2>Por que bilíngue?</h2>
+  <h2>Bilíngue</h2>
 
   <p>Dois motivos:</p>
   <ol>
-    <li><strong>Alcance</strong>: boa parte do conteúdo que consumo é em inglês, mas quero que amigos BR leiam sem barreira de idioma.</li>
+    <li><strong>Alcance</strong>: boa parte de podcasts técnicos está em inglês, mas um público BR tem barreira de idioma.</li>
     <li><strong>SEO</strong>: <code>hreflang</code> alternates corretamente configurados em sitemap + cada HTML geram ranqueamento natural em ambos idiomas.</li>
   </ol>
 
@@ -233,64 +225,55 @@ curl -s https://adhenawer.net/posts/original/state-ai-2026.html \
     <li>EN: <code>/posts/original/head-claude-code-happens-after-coding-solved.html</code></li>
   </ul>
 
-  <p>Cada slug é derivado do título no idioma correspondente. Switcher de idioma na lateral direita do header usa o <code>&lt;link rel="alternate" hreflang&gt;</code> como fonte da verdade — zero configuração hardcoded de "URL A → URL B".</p>
+  <p>Cada slug é derivado do título no idioma correspondente. O switcher de idioma no header usa o <code>&lt;link rel="alternate" hreflang&gt;</code> como fonte da verdade — zero configuração hardcoded de "URL A → URL B".</p>
 
-  <h2>O fluxo diário no Claude Code</h2>
+  <h2>Fluxo dentro do Claude Code</h2>
 
-  <p>O projeto roda quase inteiramente dentro do <a href="https://claude.com/claude-code">Claude Code</a> (a CLI oficial da Anthropic). Eu abro o terminal, entro no repo, chamo <code>claude</code> e digo:</p>
+  <p>O projeto roda dentro do <a href="https://claude.com/claude-code">Claude Code</a> (a CLI oficial da Anthropic). No terminal, dentro do repo:</p>
 
   <pre><code>&gt; adiciona artigo de https://youtu.be/VIDEO_ID</code></pre>
 
-  <p>O agente faz o resto sozinho: busca transcrição, organiza em seções, traduz pra PT-BR, gera o HTML, atualiza o <code>docs/index.html</code>, atualiza o <code>sitemap.xml</code>, extrai referências, commita e faz push. Eu revejo o diff. Se algo ficou estranho, peço pra corrigir.</p>
+  <p>O agente executa o pipeline sozinho: busca transcrição, organiza em seções, traduz pra PT-BR, gera o HTML, atualiza o <code>docs/index.html</code>, atualiza o <code>sitemap.xml</code>, extrai referências, commita e faz push. Revisão do diff fica por conta do humano.</p>
 
-  <p>Isso funciona bem por dois motivos:</p>
+  <p>Isso funciona por dois motivos:</p>
 
-  <ol>
-    <li><strong><code>CLAUDE.md</code></strong> — um arquivo de markdown na raiz que contém a base de conhecimento do projeto (convenções, estrutura de pastas, formato de slug, etc.). É o que faz o Claude Code "entender" o projeto sem eu precisar re-explicar a cada sessão.</li>
-    <li><strong>Subagentes pra trabalhos paralelos</strong> — pra backfills grandes (tipo gerar versão inglesa dos 20 artigos que só existiam em PT), o agente principal dispara 20 subagentes em paralelo, cada um com contexto isolado, e agrega os resultados. Um backfill de 19 artigos com ~270 mil palavras de transcrições rodou em 2 minutos desse jeito. Contexto do main fica limpo.</li>
-  </ol>
+  <ul>
+    <li><strong><code>CLAUDE.md</code></strong>: um arquivo markdown na raiz que contém a base de conhecimento do projeto (convenções, estrutura de pastas, formato de slug). Funciona como memória persistente entre sessões.</li>
+    <li><strong>Subagentes para paralelismo</strong>: tarefas que podem ser quebradas em unidades independentes (como extrair referências de N artigos) rodam em subagentes paralelos com contexto isolado. Main context não é poluído.</li>
+  </ul>
 
   <h2>Stack completo</h2>
 
-  <p>Custo mensal total: <strong>$0</strong> (só o domínio, que é anual).</p>
+  <table>
+    <thead><tr><th>Camada</th><th>Tecnologia</th></tr></thead>
+    <tbody>
+      <tr><td>Interface</td><td>Claude Code (CLI)</td></tr>
+      <tr><td>Modelo</td><td>Claude Opus 4.6 (plano Max da Anthropic)</td></tr>
+      <tr><td>Transcrição YouTube</td><td><code>youtube-transcript-api</code></td></tr>
+      <tr><td>Transcrição Twitter/X</td><td><code>yt-dlp</code> + <code>mlx-whisper</code></td></tr>
+      <tr><td>Organização/tradução</td><td>Claude</td></tr>
+      <tr><td>Build HTML</td><td>Python puro (~400 linhas)</td></tr>
+      <tr><td>Frontend</td><td>HTML estático, CSS em um arquivo</td></tr>
+      <tr><td>Hosting</td><td>GitHub Pages</td></tr>
+      <tr><td>Domínio + CDN</td><td>Cloudflare (Free)</td></tr>
+      <tr><td>Edge / agentes</td><td>Cloudflare Worker (Free) — Markdown on demand</td></tr>
+      <tr><td>Analytics</td><td>Umami Cloud (Free tier)</td></tr>
+    </tbody>
+  </table>
 
-  <ul>
-    <li><strong>Interface</strong>: Claude Code (CLI)</li>
-    <li><strong>Modelo</strong>: Claude Opus 4.6</li>
-    <li><strong>Transcrição YouTube</strong>: <code>youtube-transcript-api</code></li>
-    <li><strong>Transcrição Twitter/X</strong>: <code>yt-dlp</code> + <code>mlx-whisper</code></li>
-    <li><strong>Organização/tradução</strong>: Claude</li>
-    <li><strong>Build HTML</strong>: Python puro (~400 linhas)</li>
-    <li><strong>Frontend</strong>: HTML estático, CSS em um arquivo</li>
-    <li><strong>Hosting</strong>: GitHub Pages</li>
-    <li><strong>Domínio + CDN</strong>: Cloudflare (Free)</li>
-    <li><strong>Edge / agentes</strong>: Cloudflare Worker (Free) — Markdown on demand</li>
-    <li><strong>Analytics</strong>: Umami Cloud (Free tier)</li>
-  </ul>
+  <p>Infraestrutura sem custo mensal. O único gasto recorrente é a assinatura Claude Max (~$100/mês), que já uso para outras coisas — o projeto é um consumidor a mais dessa cota.</p>
 
   <h2>O que tem de aberto</h2>
 
-  <p>Código todo em <a href="https://github.com/adhenawer/video-to-text">github.com/adhenawer/video-to-text</a>, licença MIT. Os arquivos que importam:</p>
+  <p>Código todo em <a href="https://github.com/adhenawer/video-to-text">github.com/adhenawer/video-to-text</a>, licença MIT:</p>
 
   <ul>
     <li><code>src/pipeline.py</code> — orquestrador de ponta a ponta</li>
-    <li><code>src/providers/</code> — abstração multi-provider (YouTube, Twitter/X). Fácil adicionar Vimeo, TikTok, etc.</li>
+    <li><code>src/providers/</code> — abstração multi-provider (YouTube, Twitter/X). Adicionar um novo provider (Vimeo, TikTok) exige implementar <code>detect(url)</code>, <code>extract_id(url)</code> e <code>fetch_transcript(url)</code>.</li>
     <li><code>src/build_html.py</code> — geração de HTML</li>
     <li><code>workers/markdown-agent/src/index.js</code> — Worker do Cloudflare</li>
     <li><code>transcripts/</code> — transcrições originais + traduzidas + JSONs de referências</li>
   </ul>
-
-  <p>Se alguém quiser rodar pra si, fork, clone, <code>pip install -r requirements.txt</code>, Claude Code, e manda uma URL no chat.</p>
-
-  <h2>Convite</h2>
-
-  <p>Não estou fazendo grana com isso. É um sistema pra <strong>eu mesmo</strong> consumir conteúdo bom no formato que funciona pra mim. Se serve pra mais alguém, melhor.</p>
-
-  <p>Se você quiser contribuir com um novo provider (tipo Vimeo ou podcast feeds), bugs no CSS, ou sugerir um vídeo pra transcrever, abre uma issue ou PR. Se só quiser ler, o índice está em <a href="https://adhenawer.net">adhenawer.net</a> (PT) e <a href="https://adhenawer.net/en/">adhenawer.net/en/</a> (EN).</p>
-
-  <p>Quem me deu o pontapé inicial foi uma conversa sobre como o Claude Code mudou o que "um engenheiro consegue fazer num fim de semana". Esse projeto é, em boa parte, uma demonstração disso. Também é uma desculpa pra consumir mais podcast bom sem precisar passar 4 horas de fone.</p>
-
-  <p>Se você tem uma dor parecida — conteúdo bom em formato ruim — talvez valha o detour.</p>
 </article>
 <script src="../js/reader.js"></script>
 <script src="../js/lang.js"></script>
