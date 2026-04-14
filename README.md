@@ -6,15 +6,7 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-MLX-black)](https://github.com/ml-explore/mlx)
 
-Transforma vídeos e podcasts do YouTube e Twitter/X em artigos de leitura — traduzidos para português brasileiro, organizados por seções e publicados como HTML estático.
-
-## Por que criei o projeto 
-
-Eu prefiro ler um post do que assistir um vídeo longo. Leio no meu ritmo, pulo o que não interessa, volto no que precisa de mais atenção.
-
-O que me motivou foi acompanhar as tendências de IA, o volume de conteúdo em podcasts e vídeos é enorme. Não tenho tempo de assistir, a solução foi automatizar: mando o link de um vídeo pelo WhatsApp para o [Hermes](https://github.com/NousResearch/hermes-agent) e ele devolve o artigo pronto, traduzido e organizado em seções.
-
-A ideia é consumir o conteúdo pelo celular, então o formato importa. Cada artigo é um post limpo, dividido em seções com índice clicável, progresso salvo e retomada automática. As cores seguem a paleta sépia de e-readers como o Kindle — conforto para leitura longa, sem cansar a vista.
+Transforma vídeos e podcasts do YouTube e Twitter/X em posts para leitura — organizados por seções e publicados como HTML estático
 
 ---
 
@@ -371,21 +363,3 @@ npx wrangler deploy
 - **Barra de progresso** e % lido fixos durante a rolagem
 - **Índice clicável** com todas as seções
 - Responsivo para mobile
-
----
-
-## Artigos
-
-1. [Chefe do Claude Code: o que acontece depois que a programação for resolvida](https://adhenawer.net/posts/pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html)
-2. [Estado da IA em 2026: ponto de inflexão — Simon Willison](https://adhenawer.net/posts/pt_br/estado-da-ia-2026-ponto-de-inflexao-simon-willison.html)
-3. [Práticas de engenharia para agentes de código — Simon Willison](https://adhenawer.net/posts/pt_br/praticas-de-engenharia-para-agentes-de-codigo-simon-willison.html)
-4. [De IDEs para Agentes de IA — Steve Yegge](https://adhenawer.net/posts/pt_br/de-ides-para-agentes-de-ia-steve-yegge.html)
-5. [Engenheiro sênior: fluxo de desenvolvimento com especificações e IA](https://adhenawer.net/posts/pt_br/engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia.html)
-6. [Um agente não é suficiente: programação agêntica além do Claude Code](https://adhenawer.net/posts/pt_br/um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code.html)
-7. [Do prompt à produção: o que é engenharia agêntica](https://adhenawer.net/posts/pt_br/do-prompt-a-producao-o-que-e-engenharia-agentica.html)
-8. [Engenharia agêntica: contexto, guardrails e criatividade](https://adhenawer.net/posts/pt_br/engenharia-agentica-contexto-guardrails-e-criatividade.html)
-9. [Como construí um sistema de suporte ao cliente com IA de nível produção](https://adhenawer.net/posts/pt_br/como-construi-sistema-suporte-cliente-ia-nivel-producao.html)
-10. [Fluxos de trabalho agênticos — Don Syme](https://adhenawer.net/posts/pt_br/fluxos-de-trabalho-agenticos-don-syme.html)
-11. [Roteiro: engenheiro de IA para desenvolvedores de software](https://adhenawer.net/posts/pt_br/roteiro-engenheiro-ia-para-desenvolvedores-de-software.html)
-12. [Política corporativa em tech — Ethan Evans (ex-VP Amazon)](https://adhenawer.net/posts/pt_br/politica-corporativa-tech-tudo-que-ninguem-te-conta.html)
-13. [Por que paramos de construir agentes e começamos a construir skills — Anthropic](https://adhenawer.net/posts/pt_br/por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills.html) *(via Twitter/X)*
