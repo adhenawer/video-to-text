@@ -215,6 +215,7 @@ def make_html(vid_id, title, subtitle, url, txt_path,
 {jsonld}
 </script>
 <link rel="stylesheet" href="../../css/style.css">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="40c8ae3d-2e6b-4af4-a89b-f578dd3b2315"></script>
 </head>
 <body class="page-article" data-storage-key="{storage_key}">
 <header class="site-header">

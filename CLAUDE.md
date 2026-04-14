@@ -266,6 +266,26 @@ Após adicionar um novo artigo, atualizar `sitemap.xml` adicionando:
 </url>
 ```
 
+## Analytics (Umami)
+
+**TODO HTML novo ou manualmente criado DEVE incluir o snippet do Umami dentro de `<head>`:**
+
+```html
+<script defer src="https://cloud.umami.is/script.js" data-website-id="40c8ae3d-2e6b-4af4-a89b-f578dd3b2315"></script>
+```
+
+O `build_html.py` já inclui automaticamente. Para HTMLs criados manualmente (blog, landing pages, etc.), inserir o snippet imediatamente antes de `</head>`.
+
+Se esquecer e criar vários de uma vez, rodar:
+```bash
+python3 scripts/inject_umami.py
+```
+Esse script injeta o snippet em todos os `.html` em `docs/` que ainda não o têm.
+
+Dashboard: https://cloud.umami.is — site "adhenawer.net" (ID: `40c8ae3d-2e6b-4af4-a89b-f578dd3b2315`).
+
+---
+
 ## Testes (TDD obrigatório)
 
 Toda nova implementação DEVE seguir TDD:
