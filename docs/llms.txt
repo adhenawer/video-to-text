@@ -1,102 +1,132 @@
-# Leituras — Podcasts & Vídeos Traduzidos
+# Leituras — Translated Podcasts & Videos / Podcasts & Vídeos Traduzidos
 
-> Site com artigos traduzidos de podcasts e vídeos sobre IA, tecnologia e finanças.
-> Conteúdo traduzido para português brasileiro a partir de vídeos do YouTube e Twitter/X.
-> Cada artigo é a transcrição completa traduzida e organizada em seções temáticas.
+> Bilingual site (PT-BR + English) with articles from podcasts and videos about AI, tech and finance.
+> Each article is a full transcript organized into thematic sections.
+> Source: YouTube and Twitter/X videos.
 
-## Artigos
+## Articles — Português (PT-BR)
 
-- [Boris Cherny — O Futuro Depois Que a Programação For Resolvida](https://adhenawer.net/posts/pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html)
+- [Chefe do Claude Code: O Que Acontece Depois Que a Programação For Resolvida](https://adhenawer.net/posts/pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html)
   Fonte: Lenny's Podcast com Boris Cherny (Chefe do Claude Code, Anthropic)
-  Seções (30): INTRODUÇÃO | BORIS CHERNY E O IMPACTO DO CLAUDE CODE | DA CURSOR DE VOLTA PARA A ANTHROPIC | DE DOIS LIKES A UM FENÔMENO GLOBAL | PENSANDO EM EXPONENCIAIS | ...
-  Resumo: 100% do meu código é escrito pelo Claude Code. Eu não editei uma única linha à mão desde novembro. Todo dia eu envio 10, 20, 30 pull requests. Neste momento, tenho uns cinco agentes rodando enquanto...
-
-- [Como Construí um Sistema de Suporte ao Cliente com IA de Nível Produção](https://adhenawer.net/posts/pt_br/como-construi-sistema-suporte-cliente-ia-nivel-producao.html)
-  Fonte: Usando Claude Code — Tutorial prático
-  Seções (5): INTRODUÇÃO | CONFIGURANDO O CLAUDE CODE | ERROS E DEBUGGING NA PRÁTICA | RESULTADO FINAL | LIÇÕES DO PROCESSO
-  Resumo: Este tutorial mostra na prática como usar o Claude Code para construir um sistema de suporte ao cliente por e-mail — do zero até uma aplicação funcionando localmente, em tempo real, sem cortes. O...
-
-- [Conselhos de Carreira em IA — Andrew Ng e Lawrence Moroney na Stanford](https://adhenawer.net/posts/pt_br/conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford.html)
-  Fonte: Andrew Ng & Lawrence Moroney · Stanford CS230
-  Seções (8): INTRODUÇÃO — A ERA DOURADA PARA CONSTRUIR COM IA | AS PESSOAS AO SEU REDOR | TRABALHE DURO — UM CONSELHO POLITICAMENTE INCORRETO | TRÊS PILARES DO SUCESSO EM IA | DÍVIDA TÉCNICA E VIBE CODING | ...
-  Resumo: Andrew Ng abre a palestra sobre conselhos de carreira em IA na Stanford. Ele observa que este é o melhor momento de todos os tempos para construir com IA e desenvolver uma carreira na área.
-
-- [Dario Amodei — Scaling, RL, AGI e o Futuro da Anthropic](https://adhenawer.net/posts/pt_br/dario-amodei-scaling-rl-agi-futuro-anthropic.html)
-  Fonte: Dario Amodei (CEO, Anthropic) · Dwarkesh Patel
-  Seções (7): INTRODUÇÃO — O QUE MUDOU EM TRÊS ANOS | PREVISÕES CONCRETAS — O "PAÍS DE GÊNIOS NO DATA CENTER" | DIFUSÃO E ADOÇÃO EMPRESARIAL | ESTRUTURA DO MERCADO — OLIGOPÓLIO, NÃO MONOPÓLIO | SEGURANÇA, INTERPRETABILIDADE E RISCO EXISTENCIAL | ...
-  Resumo: Dwarkesh Patel entrevista Dario Amodei, CEO da Anthropic, pela segunda vez — três anos após a primeira conversa. A pergunta de abertura: o que mudou? Dario responde que a tecnologia subjacente...
-
-- [De IDEs para Agentes de IA](https://adhenawer.net/posts/pt_br/de-ides-para-agentes-de-ia-steve-yegge.html)
-  Fonte: Steve Yegge — Sourcegraph Podcast
-  Seções (7): INTRODUÇÃO | DA CETICISMO AO ENTENDIMENTO DOS MODELOS | OS OITO NÍVEIS DE ADOÇÃO DE IA | GAS TOWN: O ORQUESTRADOR DE AGENTES | GRANDES EMPRESAS VERSUS PEQUENAS EQUIPES | ...
-  Resumo: Steve Yegge é engenheiro de software há 40 anos. Passou décadas na Amazon e no Google, ficou famoso por seus textos brutalmente honestos sobre a indústria — e por acertar muito. Recentemente...
-
-- [Do Prompt à Produção: O Que É Engenharia Agêntica?](https://adhenawer.net/posts/pt_br/do-prompt-a-producao-o-que-e-engenharia-agentica.html)
-  Fonte: Live — Engenharia Agêntica na Prática
-  Seções (6): INTRODUÇÃO | GARBAGE IN, GARBAGE OUT: O PRINCÍPIO ESQUECIDO | VIBE CODING VERSUS ENGENHARIA AGÊNTICA | OS TRÊS PROBLEMAS FUNDAMENTAIS DOS LLMs | DÍVIDA TÉCNICA E O PONTO DE INFLEXÃO | ...
-  Resumo: Kane Hooper é COO da Reinteractive e trabalha com IA desde os anos 90 — começando com chatbots declarativos em computadores IBM antigos. Nos últimos três anos, ele mergulhou de cabeça na questão...
-
-- [Engenharia Agêntica: Contexto, Guardrails e Criatividade](https://adhenawer.net/posts/pt_br/engenharia-agentica-contexto-guardrails-e-criatividade.html)
-  Fonte: Palestra técnica sobre Engenharia Agêntica
-  Seções (7): INTRODUÇÃO | CONTEXTO: O QUE É E POR QUE É FUNDAMENTAL | WORKFLOW 1: RESOLUÇÃO AUTÔNOMA DE TICKETS | WORKFLOW 2: RESOLUÇÃO DE INCIDENTES COM SELF-HEALING | GUARDRAILS E CONTROLE | ...
-  Resumo: Este webinar da Port reúne Tomas (product solutions lead, background em DevSecOps e GitLab) e Zach (solution engineer para APJ, background em DevOps) para falar sobre engenharia agêntica na prática:...
-
-- [Engenheiro Sênior Demonstra Fluxo de Desenvolvimento com Especificações de IA](https://adhenawer.net/posts/pt_br/engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia.html)
-  Fonte: Live — Desenvolvimento Guiado por Especificação com IA
-  Seções (7): INTRODUÇÃO | INTEGRAÇÃO FIGMA MCP NA PRÁTICA | ARQUITETURA DO TIME DE AGENTES | WORK TREES: O MODELO MENTAL CERTO | VERIFICAÇÃO E QUALIDADE DO CÓDIGO | ...
-  Resumo: Sam Breed é ex-engenheiro staff sênior no Credit Karma e atualmente sócio na Sutter Hill Ventures. Ele é um dos engenheiros principais construindo o app Intent e participou do início da Augment...
-
-- [Simon Willison — O Estado da IA em 2026](https://adhenawer.net/posts/pt_br/estado-da-ia-2026-ponto-de-inflexao-simon-willison.html)
-  Fonte: Passamos o Ponto de Inflexão e as &ldquo;Fábricas Escuras&rdquo; Estão Chegando
-  Seções (15): INTRODUÇÃO: QUEM É SIMON WILLISON | O PONTO DE INFLEXÃO DE NOVEMBRO | PROGRAMANDO PELO CELULAR E O QUE É POSSÍVEL HOJE | VIBE CODING VERSUS ENGENHARIA AGÊNTICA | O PADRÃO DAS FÁBRICAS ESCURAS | ...
-  Resumo: Simon Willison é, na opinião de Lenny, uma das vozes mais importantes e úteis sobre como a IA está mudando a forma como construímos software e como o trabalho profissional está se transformando de...
-
-- [Finanças Comportamentais — Robert Shiller na Yale](https://adhenawer.net/posts/pt_br/financas-comportamentais-robert-shiller-yale.html)
-  Fonte: Robert Shiller · Yale Open Courses
-  Seções (12): INTRODUÇÃO — FINANÇAS COMPORTAMENTAIS | ADAM SMITH E O DESEJO POR MERECIMENTO | TRANSTORNO DE PERSONALIDADE ANTISSOCIAL | MANIPULAÇÃO E O SISTEMA DE LIVRE MERCADO | TEORIA DA PERSPECTIVA (PROSPECT THEORY) | ...
-  Resumo: Quero falar hoje sobre finanças comportamentais, ou sobre psicologia em finanças. É um interesse de longa data meu — estou envolvido com isso há mais de 20 anos. Finanças comportamentais, ou economia...
-
-- [Fluxos de Trabalho Agênticos com Don Syme](https://adhenawer.net/posts/pt_br/fluxos-de-trabalho-agenticos-don-syme.html)
-  Fonte: Don Syme — Criador do F# sobre Agentes de IA
-  Seções (6): INTRODUÇÃO | LOOPS DE AMBIGUIDADE VERSUS LOOPS DETERMINÍSTICOS | GITHUB AGENTIC WORKFLOWS NA PRÁTICA | CASO DE USO REAL: REPO ASSIST | MANUTENÇÃO DE OPEN SOURCE TRANSFORMADA | ...
-  Resumo: Don Syme é o designer e arquiteto da linguagem de programação F#. Neste episódio do Hansel Minutes com Scott Hanselman, ele fala sobre algo um pouco diferente do seu trabalho habitual: workflows...
 
 - [Guia Completo do Claude — De Iniciante a Sistema Operacional de IA](https://adhenawer.net/posts/pt_br/guia-completo-claude-iniciante-sistema-operacional-ia.html)
   Fonte: 51bodila · Twitter/X
-  Seções (12): INTRODUÇÃO — O GUIA COMPLETO DO CLAUDE | ESCOLHENDO O MODELO E INTERFACE BÁSICA | COMO FALAR COM O CLAUDE — O FRAMEWORK GCAO | PROJETOS — SEU WORKSPACE ORGANIZADO | ARTEFATOS — RESULTADOS VISUAIS E INTERATIVOS | ...
-  Resumo: Neste vídeo, vou guiar você por cada funcionalidade do Claude, do básico até técnicas avançadas como criar automações que fazem o trabalho pesado por você. Também vou mostrar como construir seu...
 
-- [IA Agêntica: Progressão do Uso de Modelos de Linguagem](https://adhenawer.net/posts/pt_br/ia-agentica-progressao-uso-modelos-linguagem-stanford.html)
-  Fonte: Inseo Bong · Stanford Online
-  Seções (13): INTRODUÇÃO — IA AGÊNTICA COMO PROGRESSÃO DO USO DE MODELOS DE LINGUAGEM | COMO OS MODELOS SÃO TREINADOS | USANDO MODELOS DE LINGUAGEM VIA API | BOAS PRÁTICAS DE PROMPTING | EXEMPLOS PRÁTICOS DE PROMPTING | ...
-  Resumo: Meu nome é Inseo. Hoje vamos abordar IA agêntica como uma progressão do uso de modelos de linguagem. O roteiro da aula inclui: visão geral dos modelos de linguagem, como os utilizamos, limitações...
+- [Claude Code Leak: What We've Learned So Far](https://adhenawer.net/posts/pt_br/claude-code-leak-what-weve-learned-so-far.html)
+  Fonte: Goju Tech Talk
+
+- [Como Construí um Sistema de Suporte ao Cliente com IA de Nível Produção](https://adhenawer.net/posts/pt_br/como-construi-sistema-suporte-cliente-ia-nivel-producao.html)
+  Fonte: Usando Claude Code — Tutorial prático
+
+- [De IDEs para Agentes de IA](https://adhenawer.net/posts/pt_br/de-ides-para-agentes-de-ia-steve-yegge.html)
+  Fonte: Steve Yegge — Sourcegraph Podcast
+
+- [Do Prompt à Produção: O Que É Engenharia Agêntica?](https://adhenawer.net/posts/pt_br/do-prompt-a-producao-o-que-e-engenharia-agentica.html)
+  Fonte: Live — Engenharia Agêntica na Prática
+
+- [Engenharia Agêntica: Contexto, Guardrails e Criatividade](https://adhenawer.net/posts/pt_br/engenharia-agentica-contexto-guardrails-e-criatividade.html)
+  Fonte: Palestra técnica sobre Engenharia Agêntica
+
+- [Engenheiro Sênior Demonstra Fluxo de Desenvolvimento com Especificações de IA](https://adhenawer.net/posts/pt_br/engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia.html)
+  Fonte: Live — Desenvolvimento Guiado por Especificação com IA
+
+- [O Estado da Arte da IA em 2026](https://adhenawer.net/posts/pt_br/estado-da-ia-2026-ponto-de-inflexao-simon-willison.html)
+  Fonte: Passamos o Ponto de Inflexão e as &ldquo;Fábricas Escuras&rdquo; Estão Chegando
+
+- [Fluxos de Trabalho Agênticos com Don Syme](https://adhenawer.net/posts/pt_br/fluxos-de-trabalho-agenticos-don-syme.html)
+  Fonte: Don Syme — Criador do F# sobre Agentes de IA
 
 - [Política Corporativa em Tech — Tudo Que Ninguém Te Conta](https://adhenawer.net/posts/pt_br/politica-corporativa-tech-tudo-que-ninguem-te-conta.html)
   Fonte: Ethan Evans (ex-VP Amazon) · Ryan Peterman
-  Seções (22): INTRODUÇÃO | CONSTRUÇÃO DE IMPÉRIOS | REORGANIZAÇÕES E SEUS BASTIDORES | COMO PEDIR O QUE VOCÊ QUER COM DIPLOMACIA | FAZENDO ACORDOS COM SUBORDINADOS AMBICIOSOS | ...
-  Resumo: Este é Ethan Evans, ex-Vice-Presidente da Amazon, de volta pela segunda vez porque eu sabia que ele tinha muito a compartilhar sobre política corporativa. Da última vez que conversamos, uma das...
-
-- [Por Que Paramos de Construir Agentes e Começamos a Construir Skills](https://adhenawer.net/posts/pt_br/por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills.html)
-  Fonte: Barry Zhang & Mahesh Sathiamoorthy · Anthropic
-  Seções (7): INTRODUÇÃO | DIVULGAÇÃO PROGRESSIVA | TENDÊNCIAS EMERGENTES | COMPARTILHAMENTO E DISTRIBUIÇÃO | APRENDIZADO CONTÍNUO | ...
-  Resumo: Eu sou Barry, e este é Mahesh. Nós criamos o Agent Skills. Nesta palestra, vamos mostrar por que paramos de construir agentes e começamos a construir skills.
 
 - [Práticas de Engenharia que Fazem os Agentes de Código Funcionar](https://adhenawer.net/posts/pt_br/praticas-de-engenharia-para-agentes-de-codigo-simon-willison.html)
   Fonte: Simon Willison — The Pragmatic Engineer Podcast
-  Seções (8): INTRODUÇÃO | DESENVOLVENDO NO CELULAR EM TEMPO REAL | TDD COM AGENTES: POR QUE FUNCIONA AGORA | DESENVOLVIMENTO GUIADO POR CONFORMIDADE | QUALIDADE DE CÓDIGO: QUANDO IMPORTA E QUANDO NÃO IMPORTA | ...
-  Resumo: Simon Willison é co-criador do Django, criado em 2003 numa redação de jornal no Kansas. Ele mantém centenas de repositórios open source, co-fundou o Lanyard (adquirido pela Eventbrite) e hoje...
 
 - [Roteiro do Engenheiro de IA para Desenvolvedores de Software](https://adhenawer.net/posts/pt_br/roteiro-engenheiro-ia-para-desenvolvedores-de-software.html)
   Fonte: Guia de carreira — AI Engineering Roadmap
-  Seções (10): INTRODUÇÃO | SEMANA 1: FUNDAMENTOS DE IA E PYTHON | SEMANA 2: FUNDAMENTOS DE RAG E LANGCHAIN | SEMANA 3: FUNDAMENTOS DE IA AGÊNTICA | SEMANA 4: OBSERVABILIDADE E DEPLOY | ...
-  Resumo: Daval é co-fundador de uma consultoria de IA e passou anos trabalhando em empresas como Bloomberg e Nvidia. Ele ajudou dezenas de engenheiros de software a fazer a transição para funções de...
-
-- [Trading com Order Flow — Do Mercado Global ao Chinês](https://adhenawer.net/posts/pt_br/trading-com-order-flow-mercado-global-ao-chines.html)
-  Fonte: Trader Chinês · Twitter/X
-  Seções (4): TRADING COM ORDER FLOW — DO MERCADO GLOBAL AO MERCADO CHINÊS | UM EXEMPLO PRÁTICO NO NASDAQ | ACESSIBILIDADE PARA TRADERS INDIVIDUAIS | VISÃO PARA O MERCADO CHINÊS
-  Resumo: Nós fazemos trading em mercados globais: ouro, contratos grandes, e também alguns instrumentos no mercado americano, como futuros do S&P 500 e futuros do Nasdaq.
 
 - [Um Agente Não É Suficiente: Programação Agêntica Além do Claude Code](https://adhenawer.net/posts/pt_br/um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code.html)
   Fonte: Vídeo técnico — Multi-agent Coding
-  Seções (7): INTRODUÇÃO | ARQUITETURA DE TRÊS CAMADAS | AGENTES COM MEMÓRIA E ESPECIALIZAÇÃO ACUMULADA | PERSPECTIVAS MÚLTIPLAS: O VALOR DO CONSENSO | CONFIGURAÇÃO E CUSTOMIZAÇÃO | ...
-  Resumo: Se você já trabalhou com agentes de código e foi empurrando os limites do que eles conseguem fazer, chegou a uma conclusão: um agente não é suficiente. Este vídeo apresenta uma arquitetura de...
+
+- [Obsidian + Claude Code: Pensamento Amplificado](https://adhenawer.net/posts/pt_br/obsidian-claude-code-pensamento.html)
+  Fonte: @heyamit_ (com Vin)
+
+- [Conselhos de Carreira em IA — Andrew Ng e Lawrence Moroney na Stanford](https://adhenawer.net/posts/pt_br/conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford.html)
+  Fonte: Andrew Ng & Lawrence Moroney · Stanford CS230
+
+- [Entendendo Rony Coder](https://adhenawer.net/posts/pt_br/entendendo-rony-coder.html)
+  Fonte: @ronycoder
+
+- [Finanças Comportamentais — Robert Shiller na Yale](https://adhenawer.net/posts/pt_br/financas-comportamentais-robert-shiller-yale.html)
+  Fonte: Robert Shiller · Yale Open Courses
+
+- [IA Agêntica: Progressão do Uso de Modelos de Linguagem](https://adhenawer.net/posts/pt_br/ia-agentica-progressao-uso-modelos-linguagem-stanford.html)
+  Fonte: Inseo Bong · Stanford Online
+
+- [Por Que Paramos de Construir Agentes e Começamos a Construir Skills](https://adhenawer.net/posts/pt_br/por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills.html)
+  Fonte: Barry Zhang & Mahesh Sathiamoorthy · Anthropic
+
+- [Trading com Order Flow — Do Mercado Global ao Chinês](https://adhenawer.net/posts/pt_br/trading-com-order-flow-mercado-global-ao-chines.html)
+  Fonte: Trader Chinês · Twitter/X
+
+## Articles — English
+
+- [The Head of Claude Code on What Happens After Coding Is Solved](https://adhenawer.net/posts/original/head-claude-code-happens-after-coding-solved.html)
+  Source: Lenny's Podcast with Boris Cherny (Head of Claude Code, Anthropic)
+
+- [The Complete Claude Guide — From Beginner to AI Operating System](https://adhenawer.net/posts/original/complete-claude-guide-beginner-ai-operating-system.html)
+  Source: 51bodila · Twitter/X
+
+- [Claude Code Leak: What We Have Learned So Far](https://adhenawer.net/posts/original/claude-code-leak-we-have-learned-so-far.html)
+  Source: Goju Tech Talk
+
+- [How I Built a Production-Grade AI Customer Support System](https://adhenawer.net/posts/original/how-i-built-production-grade-ai-customer-support-system.html)
+  Source: Using Claude Code — A Hands-On Tutorial
+
+- [From IDEs to AI Agents](https://adhenawer.net/posts/original/ides-ai-agents.html)
+  Source: Steve Yegge — The Pragmatic Engineer Podcast
+
+- [From Prompt to Production: What Is Agentic Engineering?](https://adhenawer.net/posts/original/prompt-production-agentic-engineering.html)
+  Source: Live — Agentic Engineering in Practice
+
+- [Agentic Engineering: Context, Guardrails, and Creativity](https://adhenawer.net/posts/original/agentic-engineering-context-guardrails-creativity.html)
+  Source: Port Webinar — Tomas & Zach on taming agentic chaos
+
+- [A Senior Engineer Demonstrates a Spec-Driven AI Development Flow](https://adhenawer.net/posts/original/senior-engineer-demonstrates-spec-driven-ai-development-flow.html)
+  Source: Live — Spec-Driven Development with AI (Sam Breed, Augment Intent)
+
+- [The State of AI in 2026](https://adhenawer.net/posts/original/state-ai-2026.html)
+  Source: We Crossed the Inflection Point and the Dark Factories Are Coming
+
+- [Agentic Workflows with Don Syme](https://adhenawer.net/posts/original/agentic-workflows-don-syme.html)
+  Source: Don Syme — Creator of F# on AI Agents
+
+- [Corporate Politics in Tech: Everything Nobody Tells You](https://adhenawer.net/posts/original/corporate-politics-tech-everything-nobody-tells.html)
+  Source: Ethan Evans (former Amazon VP) · Ryan Peterman
+
+- [Engineering Practices That Make Coding Agents Work](https://adhenawer.net/posts/original/engineering-practices-make-coding-agents-work.html)
+  Source: Simon Willison — The Pragmatic Engineer Podcast
+
+- [The AI Engineer Roadmap for Software Developers](https://adhenawer.net/posts/original/ai-engineer-roadmap-software-developers.html)
+  Source: Dhaval Patel — Codebasics / Atliq Technologies
+
+- [One Agent Is Not Enough: Multi-Team Agentic Coding Beyond Claude Code](https://adhenawer.net/posts/original/one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code.html)
+  Source: Technical video — Multi-agent Coding
+
+- [Obsidian + Claude Code: Your Second Brain, Amplified](https://adhenawer.net/posts/original/obsidian-claude-code-second-brain-amplified.html)
+  Source: @heyamit_ (with Vin)
+
+- [AI Career Advice — Andrew Ng and Lawrence Moroney at Stanford](https://adhenawer.net/posts/original/ai-career-advice-andrew-ng-lawrence-moroney-stanford.html)
+  Source: Andrew Ng & Lawrence Moroney · Stanford CS230
+
+- [How to Speak: Patrick Winston on Giving Talks That Matter](https://adhenawer.net/posts/original/how-speak-patrick-winston-giving-talks-matter.html)
+  Source: Patrick Winston · MIT Lecture (shared by @ronycoder)
+
+- [Behavioral Finance: Psychology, Manipulation, and Integrity in Markets](https://adhenawer.net/posts/original/behavioral-finance-psychology-manipulation-integrity-markets.html)
+  Source: Robert Shiller · Yale Open Courses
+
+- [Agentic AI: The Progression of Language Model Usage](https://adhenawer.net/posts/original/agentic-ai-progression-language-model-usage.html)
+  Source: Inseo Bong · Stanford Online
+
+- [Why We Stopped Building Agents and Started Building Skills](https://adhenawer.net/posts/original/why-we-stopped-building-agents-started-building-skills.html)
+  Source: Barry Zhang & Mahesh Sathiamoorthy · Anthropic

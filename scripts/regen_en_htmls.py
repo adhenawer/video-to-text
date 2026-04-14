@@ -38,27 +38,27 @@ def main():
 
     count = 0
     for entry in index:
-        slug = entry["slug"]
+        pt_slug = entry["slug"]
+        en_slug = entry.get("slug_en", pt_slug)
         vid_id = entry["video_id"]
         provider = entry["provider"]
         url = entry["url"]
 
-        html_path = os.path.join(original_dir, f"{slug}.html")
+        html_path = os.path.join(original_dir, f"{en_slug}.html")
         txt_path = os.path.join(PROJECT_DIR, "transcripts", provider, f"{vid_id}_en.txt")
 
         if not os.path.exists(html_path):
-            print(f"  SKIP {slug} — EN HTML not found")
+            print(f"  SKIP {en_slug} — EN HTML not found")
             continue
         if not os.path.exists(txt_path):
-            print(f"  SKIP {slug} — EN transcript not found at {txt_path}")
+            print(f"  SKIP {en_slug} — EN transcript not found at {txt_path}")
             continue
 
         en_title, en_subtitle, link_text = extract_en_metadata(html_path)
         if not en_title or not en_subtitle:
-            print(f"  SKIP {slug} — could not extract EN title/subtitle")
+            print(f"  SKIP {en_slug} — could not extract EN title/subtitle")
             continue
 
-        # Get link text from original PT-BR (EN equivalent)
         if "Watch on YouTube" in link_text or "YouTube" in link_text:
             link_text = "🎥 Watch on YouTube"
         elif "Twitter" in link_text or "X" in link_text:
@@ -74,11 +74,12 @@ def main():
             txt_path=txt_path,
             link_text=link_text,
             lang="original",
-            slug=slug,
+            pt_slug=pt_slug,
+            en_slug=en_slug,
         )
         with open(html_path, "w") as f:
             f.write(html)
-        print(f"  OK   {slug}")
+        print(f"  OK   {en_slug}")
         count += 1
 
     print(f"\n{count} HTMLs regenerated")

@@ -1,129 +1,390 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://adhenawer.net/</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/en/</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/"/>
   </url>
   <url>
     <loc>https://adhenawer.net/posts/pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/head-claude-code-happens-after-coding-solved.html"/>
   </url>
   <url>
-    <loc>https://adhenawer.net/posts/pt_br/como-construi-sistema-suporte-cliente-ia-nivel-producao.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <loc>https://adhenawer.net/posts/original/head-claude-code-happens-after-coding-solved.html</loc>
+    <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adhenawer.net/posts/pt_br/conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adhenawer.net/posts/pt_br/dario-amodei-scaling-rl-agi-futuro-anthropic.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adhenawer.net/posts/pt_br/de-ides-para-agentes-de-ia-steve-yegge.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adhenawer.net/posts/pt_br/do-prompt-a-producao-o-que-e-engenharia-agentica.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adhenawer.net/posts/pt_br/engenharia-agentica-contexto-guardrails-e-criatividade.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adhenawer.net/posts/pt_br/engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adhenawer.net/posts/pt_br/estado-da-ia-2026-ponto-de-inflexao-simon-willison.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adhenawer.net/posts/pt_br/financas-comportamentais-robert-shiller-yale.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://adhenawer.net/posts/pt_br/fluxos-de-trabalho-agenticos-don-syme.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/head-claude-code-happens-after-coding-solved.html"/>
   </url>
   <url>
     <loc>https://adhenawer.net/posts/pt_br/guia-completo-claude-iniciante-sistema-operacional-ia.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/guia-completo-claude-iniciante-sistema-operacional-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/guia-completo-claude-iniciante-sistema-operacional-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/complete-claude-guide-beginner-ai-operating-system.html"/>
   </url>
   <url>
-    <loc>https://adhenawer.net/posts/pt_br/ia-agentica-progressao-uso-modelos-linguagem-stanford.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <loc>https://adhenawer.net/posts/original/complete-claude-guide-beginner-ai-operating-system.html</loc>
+    <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/guia-completo-claude-iniciante-sistema-operacional-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/guia-completo-claude-iniciante-sistema-operacional-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/complete-claude-guide-beginner-ai-operating-system.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/pt_br/claude-code-leak-what-weve-learned-so-far.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/claude-code-leak-what-weve-learned-so-far.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/claude-code-leak-what-weve-learned-so-far.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/claude-code-leak-we-have-learned-so-far.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/original/claude-code-leak-we-have-learned-so-far.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/claude-code-leak-what-weve-learned-so-far.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/claude-code-leak-what-weve-learned-so-far.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/claude-code-leak-we-have-learned-so-far.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/pt_br/como-construi-sistema-suporte-cliente-ia-nivel-producao.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/como-construi-sistema-suporte-cliente-ia-nivel-producao.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/como-construi-sistema-suporte-cliente-ia-nivel-producao.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/how-i-built-production-grade-ai-customer-support-system.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/original/how-i-built-production-grade-ai-customer-support-system.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/como-construi-sistema-suporte-cliente-ia-nivel-producao.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/como-construi-sistema-suporte-cliente-ia-nivel-producao.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/how-i-built-production-grade-ai-customer-support-system.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/pt_br/de-ides-para-agentes-de-ia-steve-yegge.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/de-ides-para-agentes-de-ia-steve-yegge.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/de-ides-para-agentes-de-ia-steve-yegge.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/ides-ai-agents.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/original/ides-ai-agents.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/de-ides-para-agentes-de-ia-steve-yegge.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/de-ides-para-agentes-de-ia-steve-yegge.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/ides-ai-agents.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/pt_br/do-prompt-a-producao-o-que-e-engenharia-agentica.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/do-prompt-a-producao-o-que-e-engenharia-agentica.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/do-prompt-a-producao-o-que-e-engenharia-agentica.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/prompt-production-agentic-engineering.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/original/prompt-production-agentic-engineering.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/do-prompt-a-producao-o-que-e-engenharia-agentica.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/do-prompt-a-producao-o-que-e-engenharia-agentica.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/prompt-production-agentic-engineering.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/pt_br/engenharia-agentica-contexto-guardrails-e-criatividade.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/engenharia-agentica-contexto-guardrails-e-criatividade.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/engenharia-agentica-contexto-guardrails-e-criatividade.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/agentic-engineering-context-guardrails-creativity.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/original/agentic-engineering-context-guardrails-creativity.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/engenharia-agentica-contexto-guardrails-e-criatividade.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/engenharia-agentica-contexto-guardrails-e-criatividade.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/agentic-engineering-context-guardrails-creativity.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/pt_br/engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/senior-engineer-demonstrates-spec-driven-ai-development-flow.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/original/senior-engineer-demonstrates-spec-driven-ai-development-flow.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/senior-engineer-demonstrates-spec-driven-ai-development-flow.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/pt_br/estado-da-ia-2026-ponto-de-inflexao-simon-willison.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/estado-da-ia-2026-ponto-de-inflexao-simon-willison.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/estado-da-ia-2026-ponto-de-inflexao-simon-willison.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/state-ai-2026.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/original/state-ai-2026.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/estado-da-ia-2026-ponto-de-inflexao-simon-willison.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/estado-da-ia-2026-ponto-de-inflexao-simon-willison.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/state-ai-2026.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/pt_br/fluxos-de-trabalho-agenticos-don-syme.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/fluxos-de-trabalho-agenticos-don-syme.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/fluxos-de-trabalho-agenticos-don-syme.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/agentic-workflows-don-syme.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/original/agentic-workflows-don-syme.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/fluxos-de-trabalho-agenticos-don-syme.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/fluxos-de-trabalho-agenticos-don-syme.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/agentic-workflows-don-syme.html"/>
   </url>
   <url>
     <loc>https://adhenawer.net/posts/pt_br/politica-corporativa-tech-tudo-que-ninguem-te-conta.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/politica-corporativa-tech-tudo-que-ninguem-te-conta.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/politica-corporativa-tech-tudo-que-ninguem-te-conta.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/corporate-politics-tech-everything-nobody-tells.html"/>
   </url>
   <url>
-    <loc>https://adhenawer.net/posts/pt_br/por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <loc>https://adhenawer.net/posts/original/corporate-politics-tech-everything-nobody-tells.html</loc>
+    <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/politica-corporativa-tech-tudo-que-ninguem-te-conta.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/politica-corporativa-tech-tudo-que-ninguem-te-conta.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/corporate-politics-tech-everything-nobody-tells.html"/>
   </url>
   <url>
     <loc>https://adhenawer.net/posts/pt_br/praticas-de-engenharia-para-agentes-de-codigo-simon-willison.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/praticas-de-engenharia-para-agentes-de-codigo-simon-willison.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/praticas-de-engenharia-para-agentes-de-codigo-simon-willison.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/engineering-practices-make-coding-agents-work.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/original/engineering-practices-make-coding-agents-work.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/praticas-de-engenharia-para-agentes-de-codigo-simon-willison.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/praticas-de-engenharia-para-agentes-de-codigo-simon-willison.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/engineering-practices-make-coding-agents-work.html"/>
   </url>
   <url>
     <loc>https://adhenawer.net/posts/pt_br/roteiro-engenheiro-ia-para-desenvolvedores-de-software.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/roteiro-engenheiro-ia-para-desenvolvedores-de-software.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/roteiro-engenheiro-ia-para-desenvolvedores-de-software.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/ai-engineer-roadmap-software-developers.html"/>
   </url>
   <url>
-    <loc>https://adhenawer.net/posts/pt_br/trading-com-order-flow-mercado-global-ao-chines.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <loc>https://adhenawer.net/posts/original/ai-engineer-roadmap-software-developers.html</loc>
+    <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/roteiro-engenheiro-ia-para-desenvolvedores-de-software.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/roteiro-engenheiro-ia-para-desenvolvedores-de-software.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/ai-engineer-roadmap-software-developers.html"/>
   </url>
   <url>
     <loc>https://adhenawer.net/posts/pt_br/um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code.html"/>
   </url>
   <url>
-    <loc>https://adhenawer.net/posts/pt_br/ronycoder-video.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <loc>https://adhenawer.net/posts/original/one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code.html</loc>
+    <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/pt_br/obsidian-claude-code-pensamento.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/obsidian-claude-code-pensamento.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/obsidian-claude-code-pensamento.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/obsidian-claude-code-second-brain-amplified.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/original/obsidian-claude-code-second-brain-amplified.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/obsidian-claude-code-pensamento.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/obsidian-claude-code-pensamento.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/obsidian-claude-code-second-brain-amplified.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/pt_br/conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/ai-career-advice-andrew-ng-lawrence-moroney-stanford.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/original/ai-career-advice-andrew-ng-lawrence-moroney-stanford.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/ai-career-advice-andrew-ng-lawrence-moroney-stanford.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/pt_br/entendendo-rony-coder.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/entendendo-rony-coder.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/entendendo-rony-coder.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/how-speak-patrick-winston-giving-talks-matter.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/original/how-speak-patrick-winston-giving-talks-matter.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/entendendo-rony-coder.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/entendendo-rony-coder.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/how-speak-patrick-winston-giving-talks-matter.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/pt_br/financas-comportamentais-robert-shiller-yale.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/financas-comportamentais-robert-shiller-yale.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/financas-comportamentais-robert-shiller-yale.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/behavioral-finance-psychology-manipulation-integrity-markets.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/original/behavioral-finance-psychology-manipulation-integrity-markets.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/financas-comportamentais-robert-shiller-yale.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/financas-comportamentais-robert-shiller-yale.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/behavioral-finance-psychology-manipulation-integrity-markets.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/pt_br/ia-agentica-progressao-uso-modelos-linguagem-stanford.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/ia-agentica-progressao-uso-modelos-linguagem-stanford.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/ia-agentica-progressao-uso-modelos-linguagem-stanford.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/agentic-ai-progression-language-model-usage.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/original/agentic-ai-progression-language-model-usage.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/ia-agentica-progressao-uso-modelos-linguagem-stanford.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/ia-agentica-progressao-uso-modelos-linguagem-stanford.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/agentic-ai-progression-language-model-usage.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/pt_br/por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/why-we-stopped-building-agents-started-building-skills.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/original/why-we-stopped-building-agents-started-building-skills.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/why-we-stopped-building-agents-started-building-skills.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/pt_br/trading-com-order-flow-mercado-global-ao-chines.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/trading-com-order-flow-mercado-global-ao-chines.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/trading-com-order-flow-mercado-global-ao-chines.html"/>
   </url>
 </urlset>

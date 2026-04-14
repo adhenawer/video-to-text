@@ -51,7 +51,7 @@ def _slide_html(slide):
 
 def make_html(vid_id, title, subtitle, url, txt_path,
               link_text="🎥 Assistir no YouTube", slides_json_path=None,
-              lang="pt_br", slug=None):
+              lang="pt_br", slug=None, pt_slug=None, en_slug=None):
     """Read translated txt, parse sections, return full HTML string."""
     with open(txt_path, 'r') as f:
         raw = f.read()
@@ -170,7 +170,7 @@ def make_html(vid_id, title, subtitle, url, txt_path,
 
     body_html = '\n'.join(semantic_parts)
 
-    # Language switcher — paths are relative to docs/posts/{lang}/
+    # Language configuration
     is_ptbr = lang == "pt_br"
     html_lang = "pt-BR" if is_ptbr else "en"
     og_locale = "pt_BR" if is_ptbr else "en_US"
@@ -179,20 +179,18 @@ def make_html(vid_id, title, subtitle, url, txt_path,
     toc_aria = "Índice do artigo" if is_ptbr else "Article table of contents"
     resume_text = "📖 Continuar de onde parou" if is_ptbr else "📖 Resume where you left off"
     resume_btn = "Continuar" if is_ptbr else "Resume"
-    pt_label = "🇧🇷 Português"
-    en_label = "🇺🇸 English"
+    site_brand = "Leituras" if is_ptbr else "Readings"
 
-    other_slug = slug or vid_id
-    if is_ptbr:
-        ptbr_href = "#"
-        en_href = f"../original/{other_slug}.html"
-        pt_class = "active"
-        en_class = ""
-    else:
-        ptbr_href = f"../pt_br/{other_slug}.html"
-        en_href = "#"
-        pt_class = ""
-        en_class = "active"
+    # Determine pt_slug and en_slug for hreflang alternates
+    # Backwards compat: if only `slug` is passed, derive the other side from it
+    cur_slug = slug or vid_id
+    if pt_slug is None:
+        pt_slug = cur_slug if is_ptbr else cur_slug
+    if en_slug is None:
+        en_slug = cur_slug if not is_ptbr else cur_slug
+
+    pt_href = f"../pt_br/{pt_slug}.html"
+    en_href = f"../original/{en_slug}.html"
 
     return f'''<!DOCTYPE html>
 <html lang="{html_lang}">
@@ -202,6 +200,9 @@ def make_html(vid_id, title, subtitle, url, txt_path,
 <title>{title}</title>
 <meta name="description" content="{first_para}">
 <meta name="author" content="{subtitle}">
+<link rel="alternate" hreflang="pt-BR" href="{pt_href}">
+<link rel="alternate" hreflang="en" href="{en_href}">
+<link rel="alternate" hreflang="x-default" href="{pt_href}">
 <meta property="og:type" content="article">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{first_para}">
@@ -216,6 +217,13 @@ def make_html(vid_id, title, subtitle, url, txt_path,
 <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body class="page-article" data-storage-key="{storage_key}">
+<header class="site-header">
+  <a class="site-brand" href="../../index.html">🎙 {site_brand}</a>
+  <div class="lang-bar">
+    <button class="lang-btn" data-lang="pt-BR" aria-label="Português">🇧🇷 PT</button>
+    <button class="lang-btn" data-lang="en" aria-label="English">🇺🇸 EN</button>
+  </div>
+</header>
 <div class="progress" id="progress"></div>
 <div class="reading-pct" id="readingPct"></div>
 <article class="container">
@@ -225,10 +233,6 @@ def make_html(vid_id, title, subtitle, url, txt_path,
     <p class="meta"><cite>{subtitle}</cite></p>
     <p class="meta"><a href="{url}" target="_blank" rel="noopener">{link_text}</a></p>
   </header>
-  <div class="lang-bar">
-    <a class="lang-btn {pt_class}" href="{ptbr_href}" aria-label="Português">{pt_label}</a>
-    <a class="lang-btn {en_class}" href="{en_href}" aria-label="English">{en_label}</a>
-  </div>
   <div class="theme-bar">
     <button class="theme-btn active" onclick="setTheme('light')">☀️ Sépia</button>
     <button class="theme-btn" onclick="setTheme('cool')">🌤️ Claro</button>
@@ -251,6 +255,7 @@ def make_html(vid_id, title, subtitle, url, txt_path,
   </div>
 </div>
 <script src="../../js/reader.js"></script>
+<script src="../../js/lang.js"></script>
 </body>
 </html>'''
 

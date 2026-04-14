@@ -4,6 +4,7 @@ compatibility_date = "2024-12-01"
 
 routes = [
   { pattern = "adhenawer.net/posts/*", zone_name = "adhenawer.net" },
+  { pattern = "adhenawer.net/en/*", zone_name = "adhenawer.net" },
   { pattern = "adhenawer.net/leituras/*", zone_name = "adhenawer.net" },
   { pattern = "adhenawer.net/index.html", zone_name = "adhenawer.net" },
   { pattern = "adhenawer.net/llms.txt", zone_name = "adhenawer.net" }
