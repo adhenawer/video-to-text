@@ -76,48 +76,76 @@ To add a new provider (e.g. Vimeo), create a new module in `src/providers/` and 
 
 ## Full setup
 
-### 1. Install Hermes
+> **Note on agents**: this project used to run inside external agents (OpenCode/Hermes) sending the pipeline over WhatsApp. Anthropic has since blocked subscription tokens from being reused by third-party agents, so the workflow now runs **directly inside [Claude Code](https://claude.com/claude-code)** — the official Anthropic CLI. You drive the pipeline by chatting with Claude Code in your terminal; it edits files, runs commands and pushes to git on your behalf.
+
+### 1. Install Claude Code
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/src/install.sh | bash
-source ~/.bashrc   # or: source ~/.zshrc
-hermes             # starts the agent in the terminal
+# macOS / Linux / WSL2
+curl -fsSL https://claude.ai/install.sh | bash
+
+# Alternatively, via npm (any OS)
+npm install -g @anthropic-ai/claude-code
 ```
 
-Works on Linux, macOS and WSL2. The installer handles Python, Node.js and dependencies.
+Run `claude` in any directory to start the agent. First run will prompt you to sign in with your Anthropic account (subscription or API key).
 
-### 2. Configure model and tools
-
-```bash
-hermes model    # choose provider and model (e.g. anthropic:claude-sonnet-4-6)
-hermes tools    # enable required tools
-```
-
-To use Claude, you need an Anthropic API key in `ANTHROPIC_API_KEY`.
-
-### 3. Connect to WhatsApp (optional, but recommended)
-
-Hermes can receive messages straight from WhatsApp. To set it up:
-
-```bash
-hermes gateway setup    # configure messaging platforms
-hermes gateway start    # start the gateway
-```
-
-Scan the QR code with WhatsApp. Once connected, you send URLs right from the app and receive the generated article.
-
-> Also works via Telegram, Discord, Slack or directly in the terminal with `hermes`.
-
-### 4. Clone this repo
+### 2. Clone and install Python deps
 
 ```bash
 git clone https://github.com/<YOUR-USERNAME>/video-to-text
 cd video-to-text
-python3 -m venv .venv && source .venv/bin/activate
+python3 -m venv .venv && source .venv/bin/activate   # macOS/Linux
+# .venv\Scripts\activate                              # Windows PowerShell
 pip install -r requirements.txt
 ```
 
-### 5. Run the local server
+`requirements.txt` includes `youtube-transcript-api`, `yt-dlp`, `mlx-whisper`, `mlx-vlm` and others.
+
+### 3. Install Whisper hardware dependencies
+
+Whisper runs **locally** — no API calls, no external cost. Requirements differ by hardware:
+
+#### Apple Silicon (macOS, recommended)
+
+Uses [`mlx-whisper`](https://github.com/ml-explore/mlx-examples/tree/main/whisper) — MLX framework natively optimized for M1/M2/M3/M4 chips.
+
+```bash
+# ffmpeg is needed by yt-dlp to demux audio
+brew install ffmpeg
+
+# mlx-whisper already installed via requirements.txt
+# Model (~1.5GB) is auto-downloaded on first run:
+#   mlx-community/whisper-large-v3-turbo
+```
+
+Recommended: M1 Pro 16GB or higher. Transcription runs at ~5× real-time speed.
+
+#### Windows (CPU or CUDA GPU)
+
+`mlx-whisper` is Apple-only. On Windows, swap to [`faster-whisper`](https://github.com/SYSTRAN/faster-whisper) (CTranslate2-based):
+
+```powershell
+# Install ffmpeg (PowerShell as admin)
+winget install Gyan.FFmpeg
+
+# In your venv
+pip uninstall mlx-whisper mlx-vlm mlx-lm -y
+pip install faster-whisper
+
+# If you have an NVIDIA GPU, install CUDA-enabled PyTorch for speed:
+pip install torch --index-url https://download.pytorch.org/whl/cu121
+```
+
+You'll need to tweak `src/providers/twitter.py` to call `faster_whisper.WhisperModel` instead of `mlx_whisper.transcribe`. Claude Code can do this patch in a few seconds — ask it: *"Swap mlx-whisper for faster-whisper in src/providers/twitter.py, same interface."*
+
+GPU: NVIDIA 8GB+ VRAM for the `large-v3` model, or use `medium`/`small` for CPU-only.
+
+#### Linux (CPU or CUDA)
+
+Same as Windows — use `faster-whisper`. Install `ffmpeg` via your package manager (`apt install ffmpeg` / `dnf install ffmpeg`).
+
+### 4. Run the local server
 
 ```bash
 python3 -m http.server 8080
@@ -127,83 +155,77 @@ python3 -m http.server 8080
 
 ---
 
-## Usage via pipeline
+## Detailed agentic flow (inside Claude Code)
 
-### YouTube (Claude translates)
+This is the exact flow I use daily. You open the project in Claude Code (`claude` in the repo root) and drive everything through chat.
 
-```bash
-python3 src/pipeline.py \
-  'https://youtu.be/VIDEO_ID' \
-  --title 'Article title' \
-  --subtitle 'Source / Channel' \
-  --slug 'article-slug'
-```
+### macOS example
 
-### Twitter/X (Claude translates)
+**1. Start Claude Code in the repo**
 
 ```bash
-python3 src/pipeline.py \
-  'https://x.com/user/status/TWEET_ID' \
-  --title 'Article title' \
-  --subtitle 'Source / Channel' \
-  --slug 'article-slug'
+cd ~/code/video-to-text
+claude
 ```
 
-### Local translation (Gemma 4)
+**2. Ask Claude Code to process a video**
 
-```bash
-python3 src/pipeline.py \
-  'VIDEO_URL' \
-  --title 'Title' --subtitle 'Source' --slug 'slug' \
-  --local
+```
+> add article from https://youtu.be/owmJyKVu5f8 — Simon Willison on The Pragmatic
+  Engineer. Slug: praticas-de-engenharia-para-agentes-de-codigo-simon-willison
 ```
 
-The pipeline auto-detects the provider from the URL.
+Claude Code then, on its own:
 
----
+- Runs `python3 src/fetch_transcript.py 'https://youtu.be/owmJyKVu5f8' --text-only --timestamps > /tmp/transcript_owmJyKVu5f8.txt`
+- Reads the transcript, translates to PT-BR and organizes into thematic sections, writing `/tmp/owmJyKVu5f8_pt.txt`
+- Calls `python3 src/build_html.py owmJyKVu5f8 'Title' 'Source' 'URL' /tmp/owmJyKVu5f8_pt.txt docs/posts/pt_br/SLUG.html`
+- Edits `docs/index.html` to add a card
+- Updates `docs/sitemap.xml` and `docs/llms.txt`
+- `git add`, `git commit`, `git push`
 
-## Detailed agentic flow
+You review the diff inside Claude Code. If anything looks off, ask it to fix.
 
-This is the exact flow I use daily via WhatsApp:
+### Windows example
 
-**1. Send the URL to the chat**
-```
-https://youtu.be/owmJyKVu5f8
-```
+Open PowerShell, activate the venv, start Claude Code:
 
-**2. Hermes captures the transcript automatically**
-```bash
-python3 src/fetch_transcript.py 'https://youtu.be/owmJyKVu5f8' \
-  --text-only --timestamps > /tmp/transcript_owmJyKVu5f8.txt
-```
-
-For Twitter/X, the pipeline uses `yt-dlp` to download the audio and `mlx-whisper` to transcribe locally on Apple Silicon.
-
-**3. Claude translates and organizes**
-The agent reads the transcript and produces a clean `.txt` in Brazilian Portuguese, split into thematic sections, with no timestamps, ads or spoken-language filler.
-
-**4. HTML is generated**
-```bash
-python3 src/build_html.py \
-  owmJyKVu5f8 \
-  'Article title' \
-  'Source / Channel' \
-  'https://youtu.be/owmJyKVu5f8' \
-  /tmp/owmJyKVu5f8_pt.txt \
-  docs/posts/pt_br/article-slug.html
+```powershell
+cd C:\code\video-to-text
+.venv\Scripts\activate
+claude
 ```
 
-**5. Card is added to the index**
-The agent edits `docs/index.html`, inserting the new card with title, description and link.
+Same conversation as above. For Twitter/X videos, make sure you've done the `faster-whisper` swap from the setup section — Claude Code can do this transparently when it sees the Windows environment.
 
-**6. Commit and push**
-```bash
-git add docs/posts/pt_br/article-slug.html index.html
-git commit -m 'feat: adds article — Video title'
-git push
+### Twitter/X flow
+
+```
+> transcribe https://x.com/user/status/1234567890, title "How to Speak",
+  subtitle "Patrick Winston · MIT"
 ```
 
-> See [CLAUDE.md](CLAUDE.md) for full project documentation.
+Under the hood:
+
+- `yt-dlp` downloads the audio to `/tmp/`
+- `mlx-whisper` (macOS) or `faster-whisper` (Windows/Linux) transcribes locally
+- Same translation + HTML generation path as YouTube
+
+### English article backfill
+
+To generate English versions of existing articles, ask Claude Code:
+
+```
+> generate the English version for docs/posts/pt_br/SLUG.html
+> use the original transcript at transcripts/youtube/VIDEO_ID.txt
+> output to docs/posts/original/ with a canonical English slug
+```
+
+Claude Code organizes the English transcript thematically (same sectioned format as PT-BR), runs `build_html.py` with `lang='original'`, and updates the sitemap.
+
+### Full project docs
+
+> See [CLAUDE.md](CLAUDE.md) for the full project knowledge base Claude Code uses to navigate the codebase.
 
 ---
 
