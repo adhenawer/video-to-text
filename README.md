@@ -112,7 +112,7 @@ Run `claude` in any directory to start the agent. First run will prompt you to s
 ### 2. Clone and install Python deps
 
 ```bash
-git clone https://github.com/<YOUR-USERNAME>/video-to-text
+git clone https://github.com/adhenawer/video-to-text
 cd video-to-text
 python3 -m venv .venv && source .venv/bin/activate   # macOS/Linux
 # .venv\Scripts\activate                              # Windows PowerShell
