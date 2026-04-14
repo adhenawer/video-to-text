@@ -25,28 +25,23 @@
 </head>
 <body class="page-article" data-storage-key="reading_owmJyKVu5f8_">
 <header class="site-header">
-  <a class="site-brand" href="../../index.html">🎙 Readings</a>
+  <a class="site-brand" href="../../index.html">Readings</a>
   <div class="lang-bar">
-    <button class="lang-btn" data-lang="pt-BR" aria-label="Português">🇧🇷 PT</button>
-    <button class="lang-btn" data-lang="en" aria-label="English">🇺🇸 EN</button>
+    <button class="lang-btn" data-lang="pt-BR" aria-label="Português">PT</button>
+    <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
   </div>
 </header>
 <div class="progress" id="progress"></div>
 <div class="reading-pct" id="readingPct"></div>
 <article class="container">
-  <a href="../../index.html" class="back-home">← Back to index</a>
+  <a href="../../index.html" class="back-home">← Back</a>
   <header>
     <h1>Engineering Practices That Make Coding Agents Work</h1>
     <p class="meta"><cite>Simon Willison — The Pragmatic Engineer Podcast</cite></p>
     <p class="meta"><a href="https://youtu.be/owmJyKVu5f8" target="_blank" rel="noopener">🎥 Watch on YouTube</a></p>
   </header>
-  <div class="theme-bar">
-    <button class="theme-btn active" onclick="setTheme('light')">☀️ Sépia</button>
-    <button class="theme-btn" onclick="setTheme('cool')">🌤️ Claro</button>
-    <button class="theme-btn" onclick="setTheme('dark')">🌙 Escuro</button>
-  </div>
   <nav aria-label="Article table of contents">
-    <h3>📑 Table of Contents</h3>
+    <h3>Contents</h3>
     <ol>
 <li><a href="#s1">FROM WRITING CODE TO DIRECTING AGENTS</a></li>
 <li><a href="#s2">RED-GREEN TDD AS THE FOUNDATION</a></li>
@@ -168,9 +163,9 @@
 <p>But we’re seeing projects flooded with junk contributions, to the point that people are trying to convince GitHub to disable pull requests — which is something GitHub has never done. That’s been the fundamental value of GitHub: open collaboration and pull requests. Now people are saying, “look, we’re just flooded by them, this doesn’t work anymore.” It’s difficult. It’s really complicated.</p>
 </section>
 </article>
-<aside class="references-sidebar" aria-label="📚 References">
-<h3>📚 References</h3>
-<details open><summary>🛠 Tools <span class="ref-count">(24)</span></summary>
+<aside class="references-sidebar" aria-label="References">
+<h3>References</h3>
+<details open><summary>Tools <span class="ref-count">(24)</span></summary>
 <ul>
 <li><a href="https://claude.com/product/claude-code" target="_blank" rel="noopener">Claude Code</a></li>
 <li><a href="https://www.anthropic.com/claude" target="_blank" rel="noopener">Claude Opus 4.5</a></li>
@@ -197,12 +192,12 @@
 <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Atom_(web_standard)" target="_blank" rel="noopener">Atom Feeds</a></li>
 </ul></details>
-<details open><summary>👥 People <span class="ref-count">(2)</span></summary>
+<details open><summary>People <span class="ref-count">(2)</span></summary>
 <ul>
-<li><a href="https://twitter.com/simonw" target="_blank" rel="noopener">Simon Willison</a><br><small>Co-criador do Django, criador do Datasette, blogger sobre IA</small></li>
-<li><a href="https://www.statsig.com/" target="_blank" rel="noopener">Eric</a><br><small>Líder de infraestrutura e segurança na Statsig</small></li>
+<li><a href="https://twitter.com/simonw" target="_blank" rel="noopener">Simon Willison</a><small>Co-criador do Django, criador do Datasette, blogger sobre IA</small></li>
+<li><a href="https://www.statsig.com/" target="_blank" rel="noopener">Eric</a><small>Líder de infraestrutura e segurança na Statsig</small></li>
 </ul></details>
-<details open><summary>🧠 Concepts <span class="ref-count">(7)</span></summary>
+<details open><summary>Concepts <span class="ref-count">(7)</span></summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Test-driven_development" target="_blank" rel="noopener">Test-Driven Development (Red-Green TDD)</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Prompt_injection" target="_blank" rel="noopener">Prompt Injection</a></li>
@@ -212,7 +207,7 @@
 <li><a href="https://simonwillison.net/" target="_blank" rel="noopener">Conformance-Driven Development</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Sandbox_(computer_security)" target="_blank" rel="noopener">Sandboxing</a></li>
 </ul></details>
-<details open><summary>🏢 Companies <span class="ref-count">(10)</span></summary>
+<details open><summary>Companies <span class="ref-count">(10)</span></summary>
 <ul>
 <li><a href="https://www.statsig.com/" target="_blank" rel="noopener">Statsig</a></li>
 <li><a href="https://www.anthropic.com/" target="_blank" rel="noopener">Anthropic</a></li>
@@ -225,7 +220,7 @@
 <li><a href="https://www.docker.com/" target="_blank" rel="noopener">Docker</a></li>
 <li><a href="https://www.apple.com/" target="_blank" rel="noopener">Apple</a></li>
 </ul></details>
-<details open><summary>🔗 Related posts <span class="ref-count">(7)</span></summary><ul>
+<details open><summary>Related <span class="ref-count">(7)</span></summary><ul>
 <li><a href="../original/state-ai-2026.html">Mesmo autor (Simon Willison) discutindo inflexões e estado da IA</a></li>
 <li><a href="../original/claude-code-leak-we-have-learned-so-far.html">Simon fala extensivamente sobre Claude Code como ferramenta principal</a></li>
 <li><a href="../original/head-claude-code-happens-after-coding-solved.html">Discussão sobre futuro da programação com Claude Code</a></li>
@@ -235,9 +230,8 @@
 <li><a href="../original/one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code.html">Simon discute rodar múltiplos agentes em paralelo em projetos diferentes</a></li>
 </ul></details>
 </aside>
-<a href="#" class="back-top" id="backTop">↑</a>
 <div class="resume-banner" id="resumeBanner">
-  <span id="resumeText">📖 Resume where you left off</span>
+  <span id="resumeText">Resume where you left off</span>
   <div>
     <button onclick="resumeReading()">Resume</button>
     <button class="dismiss" onclick="dismissResume()">✕</button>

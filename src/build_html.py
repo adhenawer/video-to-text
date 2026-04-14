@@ -54,14 +54,14 @@ def _render_references_sidebar(refs, is_ptbr):
     if not refs:
         return ""
     L = {
-        "title": "📚 Referências" if is_ptbr else "📚 References",
+        "title": "Referências" if is_ptbr else "References",
         "books": "Livros" if is_ptbr else "Books",
         "tools": "Ferramentas" if is_ptbr else "Tools",
-        "papers": "Artigos / papers" if is_ptbr else "Papers",
+        "papers": "Papers" if is_ptbr else "Papers",
         "people": "Pessoas" if is_ptbr else "People",
         "concepts": "Conceitos" if is_ptbr else "Concepts",
         "companies": "Empresas" if is_ptbr else "Companies",
-        "related": "Posts relacionados" if is_ptbr else "Related posts",
+        "related": "Relacionados" if is_ptbr else "Related",
     }
     parts = [f'<aside class="references-sidebar" aria-label="{L["title"]}">']
     parts.append(f'<h3>{L["title"]}</h3>')
@@ -73,35 +73,35 @@ def _render_references_sidebar(refs, is_ptbr):
 
     def render_group(key, label, icon, items, item_fn):
         if not items: return
-        parts.append(f'<details open><summary>{icon} {label} <span class="ref-count">({len(items)})</span></summary>')
+        parts.append(f'<details open><summary>{label} <span class="ref-count">({len(items)})</span></summary>')
         parts.append("<ul>")
         for it in items:
             parts.append(f"<li>{item_fn(it)}</li>")
         parts.append("</ul></details>")
 
-    render_group("books", L["books"], "📖", refs.get("books", []), lambda b:
+    render_group("books", L["books"], "", refs.get("books", []), lambda b:
         f'<a href="{esc(b.get("url",""))}" target="_blank" rel="noopener">{esc(b.get("title",""))}</a>'
-        + (f'<br><small>{esc(b.get("author",""))}</small>' if b.get("author") else ""))
-    render_group("tools", L["tools"], "🛠", refs.get("tools", []), lambda t:
+        + (f'<small>{esc(b.get("author",""))}</small>' if b.get("author") else ""))
+    render_group("tools", L["tools"], "", refs.get("tools", []), lambda t:
         f'<a href="{esc(t.get("url",""))}" target="_blank" rel="noopener">{esc(t.get("name",""))}</a>')
-    render_group("papers", L["papers"], "📄", refs.get("papers", []), lambda p:
+    render_group("papers", L["papers"], "", refs.get("papers", []), lambda p:
         f'<a href="{esc(p.get("url",""))}" target="_blank" rel="noopener">{esc(p.get("title",""))}</a>'
-        + (f'<br><small>{esc(p.get("authors",""))}</small>' if p.get("authors") else ""))
-    render_group("people", L["people"], "👥", refs.get("people", []), lambda p:
+        + (f'<small>{esc(p.get("authors",""))}</small>' if p.get("authors") else ""))
+    render_group("people", L["people"], "", refs.get("people", []), lambda p:
         (f'<a href="{esc(p.get("url",""))}" target="_blank" rel="noopener">{esc(p.get("name",""))}</a>'
          if p.get("url") else esc(p.get("name", "")))
-        + (f'<br><small>{esc(p.get("role",""))}</small>' if p.get("role") else ""))
-    render_group("concepts", L["concepts"], "🧠", refs.get("concepts", []), lambda c:
+        + (f'<small>{esc(p.get("role",""))}</small>' if p.get("role") else ""))
+    render_group("concepts", L["concepts"], "", refs.get("concepts", []), lambda c:
         f'<a href="{esc(c.get("url",""))}" target="_blank" rel="noopener">{esc(c.get("name",""))}</a>'
         if c.get("url") else esc(c.get("name", "")))
-    render_group("companies", L["companies"], "🏢", refs.get("companies", []), lambda c:
+    render_group("companies", L["companies"], "", refs.get("companies", []), lambda c:
         f'<a href="{esc(c.get("url",""))}" target="_blank" rel="noopener">{esc(c.get("name",""))}</a>'
         if c.get("url") else esc(c.get("name", "")))
 
     # Related posts — pick slug by language
     related = refs.get("related_posts", [])
     if related:
-        parts.append(f'<details open><summary>🔗 {L["related"]} <span class="ref-count">({len(related)})</span></summary><ul>')
+        parts.append(f'<details open><summary>{L["related"]} <span class="ref-count">({len(related)})</span></summary><ul>')
         for r in related:
             target_slug = r.get("slug_pt") if is_ptbr else r.get("slug_en")
             if not target_slug: continue
@@ -250,10 +250,10 @@ def make_html(vid_id, title, subtitle, url, txt_path,
     is_ptbr = lang == "pt_br"
     html_lang = "pt-BR" if is_ptbr else "en"
     og_locale = "pt_BR" if is_ptbr else "en_US"
-    back_label = "← Voltar ao índice" if is_ptbr else "← Back to index"
-    toc_label = "📑 Índice" if is_ptbr else "📑 Table of Contents"
+    back_label = "← Voltar" if is_ptbr else "← Back"
+    toc_label = "Conteúdo" if is_ptbr else "Contents"
     toc_aria = "Índice do artigo" if is_ptbr else "Article table of contents"
-    resume_text = "📖 Continuar de onde parou" if is_ptbr else "📖 Resume where you left off"
+    resume_text = "Continuar de onde parou" if is_ptbr else "Resume where you left off"
     resume_btn = "Continuar" if is_ptbr else "Resume"
     site_brand = "Leituras" if is_ptbr else "Readings"
 
@@ -300,10 +300,10 @@ def make_html(vid_id, title, subtitle, url, txt_path,
 </head>
 <body class="page-article" data-storage-key="{storage_key}">
 <header class="site-header">
-  <a class="site-brand" href="../../index.html">🎙 {site_brand}</a>
+  <a class="site-brand" href="../../index.html">{site_brand}</a>
   <div class="lang-bar">
-    <button class="lang-btn" data-lang="pt-BR" aria-label="Português">🇧🇷 PT</button>
-    <button class="lang-btn" data-lang="en" aria-label="English">🇺🇸 EN</button>
+    <button class="lang-btn" data-lang="pt-BR" aria-label="Português">PT</button>
+    <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
   </div>
 </header>
 <div class="progress" id="progress"></div>
@@ -315,11 +315,6 @@ def make_html(vid_id, title, subtitle, url, txt_path,
     <p class="meta"><cite>{subtitle}</cite></p>
     <p class="meta"><a href="{url}" target="_blank" rel="noopener">{link_text}</a></p>
   </header>
-  <div class="theme-bar">
-    <button class="theme-btn active" onclick="setTheme('light')">☀️ Sépia</button>
-    <button class="theme-btn" onclick="setTheme('cool')">🌤️ Claro</button>
-    <button class="theme-btn" onclick="setTheme('dark')">🌙 Escuro</button>
-  </div>
   <nav aria-label="{toc_aria}">
     <h3>{toc_label}</h3>
     <ol>
@@ -329,7 +324,6 @@ def make_html(vid_id, title, subtitle, url, txt_path,
 {body_html}
 </article>
 {references_sidebar}
-<a href="#" class="back-top" id="backTop">↑</a>
 <div class="resume-banner" id="resumeBanner">
   <span id="resumeText">{resume_text}</span>
   <div>
