@@ -273,6 +273,10 @@ routes = [
 
 A conversão HTML→Markdown é feita com regex puro (sem dependências externas) porque os HTMLs do projeto têm estrutura previsível (`<article>` envolvendo `<h2>`, `<p>`, `<section>`, `<figure class="slide-figure">`). Evita Turndown/JSDOM que não rodam nativamente em Workers runtime.
 
+### Custo
+
+**Zero.** O plano Free do Cloudflare Workers oferece **100.000 requisições/dia sem custo**. Mais que suficiente para um site estático com tráfego moderado de agentes.
+
 ### Deploy
 
 ```bash
@@ -281,6 +285,11 @@ npm install
 npx wrangler login          # primeira vez
 npx wrangler deploy
 ```
+
+### Referências
+
+- Post no blog da Cloudflare: [Markdown for Agents](https://blog.cloudflare.com/markdown-for-agents/)
+- Documentação da feature (pago): [developers.cloudflare.com/fundamentals/reference/markdown-for-agents](https://developers.cloudflare.com/fundamentals/reference/markdown-for-agents/)
 
 ---
 
@@ -353,11 +362,6 @@ python3 scripts/update_index_references.py  # atualiza contagens no index.json
 
 ---
 
-## Features de leitura
+## Artigos
 
-- **3 temas**: ☀️ Sépia (padrão, estilo Kindle) · 🌤️ Claro · 🌙 Escuro
-- **Progresso por dispositivo** — cada dispositivo salva a posição independentemente
-- **Retomada automática** — banner "continuar de onde parou" ao reabrir
-- **Barra de progresso** e % lido fixos durante a rolagem
-- **Índice clicável** com todas as seções
-- Responsivo para mobile
+O índice completo de artigos está em [adhenawer.net](https://adhenawer.net/) (PT-BR) e [adhenawer.net/en/](https://adhenawer.net/en/) (inglês).
