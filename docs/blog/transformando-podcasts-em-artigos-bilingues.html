@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Transformando podcasts de horas em artigos que dá pra ler · Blog</title>
-<meta name="description" content="Um pipeline bilíngue que transforma vídeos do YouTube e Twitter/X em artigos estáticos — Whisper local, Claude para organização e tradução, HTML puro, Cloudflare Worker grátis servindo Markdown para agentes.">
+<meta name="description" content="Um laboratório pessoal de pipeline bilíngue que transforma vídeos do YouTube e Twitter/X em artigos estáticos — Whisper local, Claude para organização e tradução, HTML puro, Cloudflare Worker grátis servindo Markdown para agentes.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Transformando podcasts de horas em artigos que dá pra ler">
-<meta property="og:description" content="Um site estático bilíngue que publica podcasts e vídeos como artigos organizados por seções temáticas.">
+<meta property="og:description" content="Laboratório pessoal com Claude Code que virou um site estático bilíngue de podcasts e vídeos organizados por seções.">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Blog de Leituras">
 <meta name="twitter:card" content="summary">
@@ -34,12 +34,14 @@
     <p class="meta"><cite><a href="https://github.com/adhenawer" target="_blank" rel="noopener">Rodolfo Moraes</a> · 2026-04-14</cite></p>
   </header>
 
-  <p>Vídeo longo é um formato hostil pra quase tudo que não seja assistir do começo ao fim, sentado. Um podcast de 2, 3, 4 horas no YouTube tem baixa chance de ser consumido depois pelo próprio público que se interessou.</p>
+  <blockquote><strong>Disclaimer</strong>: construí este projeto para testar conceitos e técnicas de desenvolvimento com o Claude Code e aplicar na prática conhecimentos que venho acumulando. É um laboratório pessoal que acabou virando algo útil, e documento aqui para quem estiver interessado em como um pipeline assim se monta na prática.</blockquote>
 
-  <p>Vídeo é ruim pra:</p>
+  <p>Vídeo longo é um formato hostil pra quase tudo que não seja assistir do começo ao fim, sentado. Um podcast de 2, 3, 4 horas no YouTube é difícil de ser consumido até para assuntos interessantes.</p>
+
+  <p>Vídeo é pior ainda pra:</p>
   <ul>
     <li><strong>Pesquisar</strong>: Ctrl+F não existe. Achar "o trecho onde o fulano falou sobre X" requer navegar timestamps manualmente.</li>
-    <li><strong>Citar</strong>: link com timestamp resolve mal, e transcrever a mão é trabalhoso.</li>
+    <li><strong>Citar</strong>: link com timestamp resolve mal, e transcrever é trabalhoso.</li>
     <li><strong>Reler</strong>: não tem marcador visual, não tem progresso, não tem seções nomeadas.</li>
     <li><strong>Skim</strong>: não dá pra bater o olho e decidir se vale o investimento de tempo.</li>
   </ul>
@@ -48,7 +50,7 @@
 
   <h2>O objetivo do projeto</h2>
 
-  <p><a href="https://adhenawer.net">adhenawer.net</a> é um site estático que pega vídeos do YouTube ou Twitter/X e transforma em <strong>artigos bilíngues organizados por seções temáticas</strong>. Português brasileiro e inglês, mesmo conteúdo, URLs canônicas em cada idioma.</p>
+  <p><a href="https://github.com/adhenawer/video-to-text">Video to text</a> transforma vídeos do YouTube ou Twitter/X em <strong>artigos organizados por seções temáticas</strong>.</p>
 
   <p>Cada artigo tem:</p>
   <ul>
@@ -208,25 +210,6 @@ curl -s https://adhenawer.net/posts/original/state-ai-2026.html \
   ]
 }</code></pre>
 
-  <p>Campos sensíveis ao idioma (como <code>role</code> de pessoas e <code>reason</code> de posts relacionados) são armazenados bilíngues — a renderização escolhe o idioma do artigo em tempo de build.</p>
-
-  <h2>Bilíngue</h2>
-
-  <p>Dois motivos:</p>
-  <ol>
-    <li><strong>Alcance</strong>: boa parte de podcasts técnicos está em inglês, mas um público BR tem barreira de idioma.</li>
-    <li><strong>SEO</strong>: <code>hreflang</code> alternates corretamente configurados em sitemap + cada HTML geram ranqueamento natural em ambos idiomas.</li>
-  </ol>
-
-  <p>URLs canônicas são diferentes em cada lado:</p>
-
-  <ul>
-    <li>PT: <code>/posts/pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html</code></li>
-    <li>EN: <code>/posts/original/head-claude-code-happens-after-coding-solved.html</code></li>
-  </ul>
-
-  <p>Cada slug é derivado do título no idioma correspondente. O switcher de idioma no header usa o <code>&lt;link rel="alternate" hreflang&gt;</code> como fonte da verdade — zero configuração hardcoded de "URL A → URL B".</p>
-
   <h2>Fluxo dentro do Claude Code</h2>
 
   <p>O projeto roda dentro do <a href="https://claude.com/claude-code">Claude Code</a> (a CLI oficial da Anthropic). No terminal, dentro do repo:</p>
@@ -261,7 +244,7 @@ curl -s https://adhenawer.net/posts/original/state-ai-2026.html \
     </tbody>
   </table>
 
-  <p>Infraestrutura sem custo mensal. O único gasto recorrente é a assinatura Claude Max (~$100/mês), que já uso para outras coisas — o projeto é um consumidor a mais dessa cota.</p>
+  <p>Infraestrutura sem custo mensal. O único gasto recorrente é a assinatura Claude Max, que já uso para outras coisas — o projeto é um consumidor a mais dessa cota.</p>
 
   <h2>O que tem de aberto</h2>
 
