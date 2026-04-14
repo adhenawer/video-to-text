@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapa de Conteúdo — Leituras</title>
+<meta name="description" content="Map of Content — grafo visual dos artigos e suas conexões temáticas, no estilo Obsidian.">
+<meta name="author" content="adhenawer">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mapa de Conteúdo — Leituras">
+<meta property="og:description" content="Grafo visual dos artigos e suas conexões temáticas, no estilo Obsidian.">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Leituras">
+<link rel="stylesheet" href="css/style.css">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="40c8ae3d-2e6b-4af4-a89b-f578dd3b2315"></script>
+<style>
+  body.page-moc { padding-top: 52px; }
+  .moc-wrap {
+    max-width: 1100px; margin: 0 auto; padding: 24px 20px 40px;
+  }
+  .moc-wrap h1 { font-size: 1.6rem; letter-spacing: -0.01em; margin-bottom: 6px; }
+  .moc-wrap > header p { color: var(--text-muted); margin-bottom: 16px; }
+  .moc-meta { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 10px; }
+  .moc-meta strong { color: var(--text); font-weight: 600; }
+  .moc-canvas {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    height: min(78vh, 780px);
+  }
+  .moc-canvas svg { display: block; width: 100%; height: 100%; cursor: grab; }
+  .moc-canvas svg:active { cursor: grabbing; }
+  .moc-edge { stroke: var(--border-strong); stroke-width: 1; opacity: 0.55; }
+  .moc-edge.hl { stroke: var(--accent); stroke-width: 1.6; opacity: 1; }
+  .moc-node circle {
+    fill: var(--bg);
+    stroke: var(--accent);
+    stroke-width: 1.4;
+    transition: r 120ms ease, fill 120ms ease;
+  }
+  .moc-node:hover circle,
+  .moc-node.hl circle { fill: var(--accent); }
+  .moc-node text {
+    font: 11px ui-sans-serif, system-ui, -apple-system, sans-serif;
+    fill: var(--text);
+    pointer-events: none;
+    user-select: none;
+  }
+  .moc-node.dim { opacity: 0.22; }
+  .moc-edge.dim { opacity: 0.08; }
+  .moc-controls {
+    display: flex; gap: 8px; flex-wrap: wrap;
+    align-items: center; margin: 12px 0 4px;
+  }
+  .moc-controls input[type="search"] {
+    font: inherit; font-size: 0.9rem;
+    padding: 6px 10px;
+    border: 1px solid var(--border); border-radius: 6px;
+    background: var(--bg); color: var(--text);
+    min-width: 220px;
+  }
+  .moc-controls input[type="search"]:focus { outline: none; border-color: var(--accent); }
+  .moc-controls button {
+    font: inherit; font-size: 0.85rem;
+    padding: 6px 10px;
+    background: var(--bg); color: var(--text);
+    border: 1px solid var(--border); border-radius: 6px;
+    cursor: pointer;
+  }
+  .moc-controls button:hover { border-color: var(--accent); color: var(--accent); }
+  .moc-legend { font-size: 0.8rem; color: var(--text-muted); margin-left: auto; }
+  .moc-empty { padding: 40px; text-align: center; color: var(--text-muted); }
+  @media (max-width: 700px) {
+    .moc-canvas { height: 70vh; }
+    .moc-node text { font-size: 10px; }
+  }
+</style>
+</head>
+<body class="page-moc">
+<header class="site-header">
+  <a class="site-brand" href="/">Leituras</a>
+  <div class="lang-bar">
+    <button class="lang-btn" data-lang="pt-BR" aria-label="Português">PT</button>
+    <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+  </div>
+</header>
+
+<div class="moc-wrap">
+  <header>
+    <h1>Mapa de Conteúdo</h1>
+    <p>Grafo dos artigos conectados por <em>related posts</em>. Clique num nó para abrir o artigo.</p>
+  </header>
+
+  <div class="moc-meta" id="moc-stats">Carregando…</div>
+
+  <div class="moc-controls">
+    <input type="search" id="moc-search" placeholder="Filtrar por título…" aria-label="Filtrar artigos">
+    <button type="button" id="moc-reset">Reorganizar</button>
+    <span class="moc-legend">Arraste nós · scroll para zoom</span>
+  </div>
+
+  <div class="moc-canvas">
+    <svg id="moc-svg" role="img" aria-label="Grafo de artigos">
+      <g id="moc-viewport">
+        <g id="moc-edges"></g>
+        <g id="moc-nodes"></g>
+      </g>
+    </svg>
+    <div id="moc-empty" class="moc-empty" hidden>Sem dados para exibir.</div>
+  </div>
+</div>
+
+<script>
+(async function () {
+  const svg = document.getElementById('moc-svg');
+  const viewport = document.getElementById('moc-viewport');
+  const edgesG = document.getElementById('moc-edges');
+  const nodesG = document.getElementById('moc-nodes');
+  const statsEl = document.getElementById('moc-stats');
+  const searchEl = document.getElementById('moc-search');
+  const resetBtn = document.getElementById('moc-reset');
+  const emptyEl = document.getElementById('moc-empty');
+  const SVG_NS = 'http://www.w3.org/2000/svg';
+
+  let data;
+  try {
+    const res = await fetch('data/moc.json', { cache: 'no-cache' });
+    data = await res.json();
+  } catch (e) {
+    emptyEl.hidden = false;
+    emptyEl.textContent = 'Falha ao carregar data/moc.json';
+    return;
+  }
+  if (!data || !data.nodes || !data.nodes.length) {
+    emptyEl.hidden = false;
+    return;
+  }
+
+  const rect = () => svg.getBoundingClientRect();
+  let W = rect().width;
+  let H = rect().height;
+
+  // --- Layout state ---
+  const nodes = data.nodes.map((n, i) => {
+    const angle = (i / data.nodes.length) * Math.PI * 2;
+    const r = Math.min(W, H) * 0.32;
+    return {
+      ...n,
+      x: W / 2 + Math.cos(angle) * r,
+      y: H / 2 + Math.sin(angle) * r,
+      vx: 0, vy: 0,
+      degree: 0,
+    };
+  });
+  const byId = new Map(nodes.map(n => [n.id, n]));
+  const edges = data.edges
+    .map(e => ({ source: byId.get(e.source), target: byId.get(e.target) }))
+    .filter(e => e.source && e.target);
+  edges.forEach(e => { e.source.degree++; e.target.degree++; });
+
+  const adjacency = new Map();
+  edges.forEach(e => {
+    if (!adjacency.has(e.source.id)) adjacency.set(e.source.id, new Set());
+    if (!adjacency.has(e.target.id)) adjacency.set(e.target.id, new Set());
+    adjacency.get(e.source.id).add(e.target.id);
+    adjacency.get(e.target.id).add(e.source.id);
+  });
+
+  statsEl.innerHTML = `<strong>${nodes.length}</strong> artigos · <strong>${edges.length}</strong> conexões`;
+
+  // --- Render static elements ---
+  const edgeEls = edges.map(e => {
+    const line = document.createElementNS(SVG_NS, 'line');
+    line.setAttribute('class', 'moc-edge');
+    edgesG.appendChild(line);
+    e.el = line;
+    return line;
+  });
+
+  const nodeEls = nodes.map(n => {
+    const g = document.createElementNS(SVG_NS, 'g');
+    g.setAttribute('class', 'moc-node');
+    g.setAttribute('data-id', n.id);
+    const circle = document.createElementNS(SVG_NS, 'circle');
+    const r = Math.min(12, 4 + Math.sqrt(n.degree) * 2.1);
+    circle.setAttribute('r', r);
+    g.appendChild(circle);
+    const text = document.createElementNS(SVG_NS, 'text');
+    text.setAttribute('x', r + 6);
+    text.setAttribute('y', 3.5);
+    text.textContent = n.title;
+    g.appendChild(text);
+
+    // click → open article
+    g.addEventListener('click', (ev) => {
+      if (g.dataset.dragged === '1') { g.dataset.dragged = '0'; return; }
+      window.location.href = n.url_pt;
+    });
+    // hover → highlight
+    g.addEventListener('mouseenter', () => highlight(n.id));
+    g.addEventListener('mouseleave', () => highlight(null));
+
+    nodesG.appendChild(g);
+    n.el = g;
+    n.r = r;
+    return g;
+  });
+
+  function highlight(id) {
+    if (!id) {
+      nodeEls.forEach(el => el.classList.remove('hl', 'dim'));
+      edgeEls.forEach(el => el.classList.remove('hl', 'dim'));
+      return;
+    }
+    const neigh = adjacency.get(id) || new Set();
+    nodeEls.forEach(el => {
+      const nid = el.dataset.id;
+      el.classList.toggle('hl', nid === id);
+      el.classList.toggle('dim', nid !== id && !neigh.has(nid));
+    });
+    edges.forEach(e => {
+      const touch = e.source.id === id || e.target.id === id;
+      e.el.classList.toggle('hl', touch);
+      e.el.classList.toggle('dim', !touch);
+    });
+  }
+
+  // --- Force simulation (Fruchterman-Reingold-ish) ---
+  let alpha = 1;
+  const targetLen = 110;
+  const repel = 4200;
+  const centerPull = 0.012;
+  const damping = 0.86;
+
+  function step() {
+    if (alpha < 0.01) { requestAnimationFrame(step); return; }
+    for (const n of nodes) { n.fx = 0; n.fy = 0; }
+
+    // repulsion (O(n^2) — fine for n<200)
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i], b = nodes[j];
+        let dx = a.x - b.x, dy = a.y - b.y;
+        let d2 = dx * dx + dy * dy;
+        if (d2 < 1) { d2 = 1; dx = Math.random() - 0.5; dy = Math.random() - 0.5; }
+        const f = repel / d2;
+        const d = Math.sqrt(d2);
+        const fx = (dx / d) * f;
+        const fy = (dy / d) * f;
+        a.fx += fx; a.fy += fy;
+        b.fx -= fx; b.fy -= fy;
+      }
+    }
+
+    // spring on edges
+    for (const e of edges) {
+      const a = e.source, b = e.target;
+      const dx = b.x - a.x, dy = b.y - a.y;
+      const d = Math.sqrt(dx * dx + dy * dy) || 1;
+      const diff = d - targetLen;
+      const f = diff * 0.035;
+      const fx = (dx / d) * f;
+      const fy = (dy / d) * f;
+      a.fx += fx; a.fy += fy;
+      b.fx -= fx; b.fy -= fy;
+    }
+
+    // center pull
+    for (const n of nodes) {
+      n.fx += (W / 2 - n.x) * centerPull;
+      n.fy += (H / 2 - n.y) * centerPull;
+    }
+
+    for (const n of nodes) {
+      if (n.pinned) continue;
+      n.vx = (n.vx + n.fx * alpha) * damping;
+      n.vy = (n.vy + n.fy * alpha) * damping;
+      n.x += n.vx;
+      n.y += n.vy;
+      const pad = 30;
+      n.x = Math.max(pad, Math.min(W - pad, n.x));
+      n.y = Math.max(pad, Math.min(H - pad, n.y));
+    }
+
+    alpha *= 0.992;
+    paint();
+    requestAnimationFrame(step);
+  }
+
+  function paint() {
+    for (const n of nodes) {
+      n.el.setAttribute('transform', `translate(${n.x.toFixed(1)}, ${n.y.toFixed(1)})`);
+    }
+    for (const e of edges) {
+      e.el.setAttribute('x1', e.source.x.toFixed(1));
+      e.el.setAttribute('y1', e.source.y.toFixed(1));
+      e.el.setAttribute('x2', e.target.x.toFixed(1));
+      e.el.setAttribute('y2', e.target.y.toFixed(1));
+    }
+  }
+
+  requestAnimationFrame(step);
+
+  // --- Drag nodes ---
+  let dragging = null;
+  nodeEls.forEach(el => {
+    el.addEventListener('mousedown', startDrag);
+    el.addEventListener('touchstart', startDrag, { passive: false });
+  });
+  function toLocal(ev) {
+    const pt = svg.createSVGPoint();
+    const e = ev.touches ? ev.touches[0] : ev;
+    pt.x = e.clientX; pt.y = e.clientY;
+    const ctm = viewport.getScreenCTM().inverse();
+    return pt.matrixTransform(ctm);
+  }
+  function startDrag(ev) {
+    ev.preventDefault();
+    const id = ev.currentTarget.dataset.id;
+    dragging = byId.get(id);
+    dragging.pinned = true;
+    dragging.el.dataset.dragged = '0';
+  }
+  window.addEventListener('mousemove', onDrag);
+  window.addEventListener('touchmove', onDrag, { passive: false });
+  window.addEventListener('mouseup', endDrag);
+  window.addEventListener('touchend', endDrag);
+  function onDrag(ev) {
+    if (!dragging) return;
+    ev.preventDefault();
+    const p = toLocal(ev);
+    dragging.x = p.x; dragging.y = p.y;
+    dragging.vx = 0; dragging.vy = 0;
+    dragging.el.dataset.dragged = '1';
+    alpha = Math.max(alpha, 0.3);
+  }
+  function endDrag() {
+    if (dragging) dragging.pinned = false;
+    dragging = null;
+  }
+
+  // --- Pan & zoom ---
+  let vx = 0, vy = 0, vk = 1;
+  let panning = null;
+  function applyTransform() {
+    viewport.setAttribute('transform', `translate(${vx}, ${vy}) scale(${vk})`);
+  }
+  svg.addEventListener('wheel', (ev) => {
+    ev.preventDefault();
+    const p = toLocal(ev);
+    const delta = -ev.deltaY * 0.0015;
+    const newK = Math.max(0.35, Math.min(3, vk * (1 + delta)));
+    const factor = newK / vk;
+    vx = p.x - (p.x - vx) * factor;
+    vy = p.y - (p.y - vy) * factor;
+    vk = newK;
+    applyTransform();
+  }, { passive: false });
+  svg.addEventListener('mousedown', (ev) => {
+    if (ev.target.closest('.moc-node')) return;
+    panning = { x: ev.clientX, y: ev.clientY, vx, vy };
+  });
+  window.addEventListener('mousemove', (ev) => {
+    if (!panning) return;
+    vx = panning.vx + (ev.clientX - panning.x);
+    vy = panning.vy + (ev.clientY - panning.y);
+    applyTransform();
+  });
+  window.addEventListener('mouseup', () => { panning = null; });
+
+  // --- Search filter ---
+  searchEl.addEventListener('input', () => {
+    const q = searchEl.value.trim().toLowerCase();
+    if (!q) { nodeEls.forEach(el => el.classList.remove('dim')); edgeEls.forEach(el => el.classList.remove('dim')); return; }
+    const match = new Set();
+    nodes.forEach(n => { if (n.title.toLowerCase().includes(q) || n.subtitle.toLowerCase().includes(q)) match.add(n.id); });
+    nodeEls.forEach(el => el.classList.toggle('dim', !match.has(el.dataset.id)));
+    edges.forEach(e => e.el.classList.toggle('dim', !(match.has(e.source.id) && match.has(e.target.id))));
+  });
+
+  resetBtn.addEventListener('click', () => {
+    nodes.forEach((n, i) => {
+      const angle = (i / nodes.length) * Math.PI * 2;
+      const r = Math.min(W, H) * 0.32;
+      n.x = W / 2 + Math.cos(angle) * r;
+      n.y = H / 2 + Math.sin(angle) * r;
+      n.vx = 0; n.vy = 0;
+    });
+    alpha = 1;
+    vx = 0; vy = 0; vk = 1;
+    applyTransform();
+  });
+
+  // --- Resize ---
+  window.addEventListener('resize', () => {
+    W = rect().width;
+    H = rect().height;
+    alpha = Math.max(alpha, 0.2);
+  });
+})();
+</script>
+</body>
+</html>

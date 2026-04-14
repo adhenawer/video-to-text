@@ -468,4 +468,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/fabio-akita-flow-588.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/fabio-akita-flow-588.html"/>
   </url>
+  <url>
+    <loc>https://adhenawer.net/moc.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

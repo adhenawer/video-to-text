@@ -324,6 +324,9 @@ python3 scripts/patch_ptbr_references.py
 
 # Atualiza contagens no index.json
 python3 scripts/update_index_references.py
+
+# Regenera o mapa de conteúdo (docs/data/moc.json consumido por docs/moc.html)
+python3 scripts/build_moc.py
 ```
 
 ### Renderização
