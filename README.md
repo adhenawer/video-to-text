@@ -6,268 +6,272 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-MLX-black)](https://github.com/ml-explore/mlx)
 
-Transforma vídeos e podcasts do YouTube e Twitter/X em posts para leitura — organizados por seções e publicados como HTML estático
+> 🇧🇷 **[Leia em português brasileiro](README-pt_br.md)** · 🇺🇸 You are reading in English
+
+Turns YouTube and Twitter/X videos and podcasts into readable posts — organized by sections and published as static HTML.
 
 ---
 
-## Como funciona
+## How it works
 
-O pipeline detecta automaticamente o provider pela URL e usa a estratégia correta para obter a transcrição:
+The pipeline auto-detects the provider from the URL and uses the right strategy to fetch the transcript:
 
 ```
-URL do vídeo (YouTube, Twitter/X)
+Video URL (YouTube, Twitter/X)
     ↓
-src/providers/               — detecta provider, captura transcrição
-  ├── youtube.py                 — legendas via youtube-transcript-api
-  └── twitter.py                 — áudio via yt-dlp → transcrição via mlx-whisper
+src/providers/               — detect provider, capture transcript
+  ├── youtube.py                 — captions via youtube-transcript-api
+  └── twitter.py                 — audio via yt-dlp → transcription via mlx-whisper
     ↓
-Claude (tradução)                — traduz para PT-BR, remove timestamps/ads/ruídos,
-                                   organiza em seções temáticas
+Claude (translation)             — translates to PT-BR, strips timestamps/ads/noise,
+                                   organizes into thematic sections
     ↓
-src/build_html.py            — gera o HTML com o design system do projeto
+src/build_html.py            — generates HTML with the project's design system
     ↓
-index.html                       — card adicionado ao índice com descrição e progresso
+index.html                       — card added to the index with description + progress
     ↓
-Artigo publicado                 — acessível localmente ou via GitHub Pages
+Published article                — accessible locally or via GitHub Pages
 ```
+
+The site publishes both languages: original (English for most videos) and Brazilian Portuguese. A Cloudflare Worker serves Markdown on demand for AI agents via content negotiation — see the [Markdown for Agents](#markdown-for-agents-cloudflare-worker) section below.
 
 ---
 
-## Arquitetura multi-provider
+## Multi-provider architecture
 
-O sistema usa uma abstração de providers em `src/providers/` que permite suportar diferentes fontes de vídeo. Cada provider implementa:
+The system uses a provider abstraction in `src/providers/` that supports different video sources. Each provider implements:
 
-| Método | Descrição |
-|--------|-----------|
-| `detect(url)` | Retorna `True` se o provider reconhece a URL |
-| `extract_id(url)` | Extrai o ID único do vídeo/tweet |
-| `fetch_transcript(url)` | Retorna texto com timestamps no formato padrão |
+| Method | Description |
+|--------|-------------|
+| `detect(url)` | Returns `True` if the provider recognizes the URL |
+| `extract_id(url)` | Extracts the unique video/tweet ID |
+| `fetch_transcript(url)` | Returns text with timestamps in the standard format |
 
-### Providers disponíveis
+### Available providers
 
-| Provider | Fonte | Estratégia |
-|----------|-------|------------|
-| **YouTube** | `youtube.com`, `youtu.be` | Legendas via `youtube-transcript-api` |
-| **Twitter/X** | `x.com`, `twitter.com` | Download de áudio via `yt-dlp` + transcrição local via `mlx-whisper` (Apple Silicon) |
+| Provider | Source | Strategy |
+|----------|--------|----------|
+| **YouTube** | `youtube.com`, `youtu.be` | Captions via `youtube-transcript-api` |
+| **Twitter/X** | `x.com`, `twitter.com` | Audio download via `yt-dlp` + local transcription via `mlx-whisper` (Apple Silicon) |
 
-Para adicionar um novo provider (ex: Vimeo), basta criar um novo módulo em `src/providers/` e registrá-lo em `__init__.py`.
+To add a new provider (e.g. Vimeo), create a new module in `src/providers/` and register it in `__init__.py`.
 
 ---
 
 ## Stack
 
-| Camada | Tecnologia |
-|--------|-----------|
-| Interface | [Hermes](https://github.com/NousResearch/hermes-agent) — agente via WhatsApp/CLI |
-| Modelo | Claude (Anthropic) via Hermes |
-| Transcrição (YouTube) | [youtube-transcript-api](https://github.com/jdepoix/youtube-transcript-api) |
-| Transcrição (Twitter/X) | [yt-dlp](https://github.com/yt-dlp/yt-dlp) + [mlx-whisper](https://github.com/ml-explore/mlx-examples) |
-| Tradução / organização | Claude (LLM) ou Gemma 4 local (mlx-lm) |
-| Build | `src/build_html.py` — Python puro, sem dependências externas |
-| Frontend | HTML estático — zero frameworks, zero build steps, agora serve markdown também (via Cloudflare Worker) |
-| Hosting | GitHub Pages ou qualquer servidor estático |
-| Edge / Agentes | Cloudflare Worker (plano Free) — converte HTML→Markdown em runtime via content negotiation |
+| Layer | Technology |
+|-------|------------|
+| Interface | [Hermes](https://github.com/NousResearch/hermes-agent) — agent via WhatsApp/CLI |
+| Model | Claude (Anthropic) via Hermes |
+| Transcription (YouTube) | [youtube-transcript-api](https://github.com/jdepoix/youtube-transcript-api) |
+| Transcription (Twitter/X) | [yt-dlp](https://github.com/yt-dlp/yt-dlp) + [mlx-whisper](https://github.com/ml-explore/mlx-examples) |
+| Translation / organization | Claude (LLM) or Gemma 4 local (mlx-lm) |
+| Build | `src/build_html.py` — pure Python, no external dependencies |
+| Frontend | Static HTML — zero frameworks, zero build steps, now also serves markdown (via Cloudflare Worker) |
+| Hosting | GitHub Pages or any static server |
+| Edge / Agents | Cloudflare Worker (Free plan) — converts HTML→Markdown at runtime via content negotiation |
 
 ---
 
-## Setup completo
+## Full setup
 
-### 1. Instalar o Hermes
+### 1. Install Hermes
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/src/install.sh | bash
-source ~/.bashrc   # ou: source ~/.zshrc
-hermes             # inicia o agente no terminal
+source ~/.bashrc   # or: source ~/.zshrc
+hermes             # starts the agent in the terminal
 ```
 
-Funciona em Linux, macOS e WSL2. O instalador cuida de Python, Node.js e dependências.
+Works on Linux, macOS and WSL2. The installer handles Python, Node.js and dependencies.
 
-### 2. Configurar modelo e ferramentas
+### 2. Configure model and tools
 
 ```bash
-hermes model    # escolhe o provider e modelo (ex: anthropic:claude-sonnet-4-6)
-hermes tools    # habilita as ferramentas necessárias
+hermes model    # choose provider and model (e.g. anthropic:claude-sonnet-4-6)
+hermes tools    # enable required tools
 ```
 
-Para usar Claude, você precisa de uma chave da Anthropic em `ANTHROPIC_API_KEY`.
+To use Claude, you need an Anthropic API key in `ANTHROPIC_API_KEY`.
 
-### 3. Conectar ao WhatsApp (opcional, mas recomendado)
+### 3. Connect to WhatsApp (optional, but recommended)
 
-O Hermes pode receber mensagens direto do WhatsApp. Para configurar:
+Hermes can receive messages straight from WhatsApp. To set it up:
 
 ```bash
-hermes gateway setup    # configura as plataformas de mensagens
-hermes gateway start    # inicia o gateway
+hermes gateway setup    # configure messaging platforms
+hermes gateway start    # start the gateway
 ```
 
-Escaneie o QR code com o WhatsApp. Depois de conectado, você envia URLs direto pelo app e recebe o artigo gerado.
+Scan the QR code with WhatsApp. Once connected, you send URLs right from the app and receive the generated article.
 
-> Também funciona via Telegram, Discord, Slack ou direto no terminal com `hermes`.
+> Also works via Telegram, Discord, Slack or directly in the terminal with `hermes`.
 
-### 4. Clonar este repositório
+### 4. Clone this repo
 
 ```bash
-git clone https://github.com/<SEU-USUARIO>/video-to-text
+git clone https://github.com/<YOUR-USERNAME>/video-to-text
 cd video-to-text
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 5. Rodar o servidor local
+### 5. Run the local server
 
 ```bash
 python3 -m http.server 8080
 # http://localhost:8080
-# Rede local (celular): http://<SEU-IP-LOCAL>:8080
+# Local network (phone): http://<YOUR-LOCAL-IP>:8080
 ```
 
 ---
 
-## Uso via pipeline
+## Usage via pipeline
 
-### YouTube (Claude traduz)
+### YouTube (Claude translates)
 
 ```bash
 python3 src/pipeline.py \
   'https://youtu.be/VIDEO_ID' \
-  --title 'Título do Artigo' \
-  --subtitle 'Fonte / Canal' \
-  --slug 'slug-do-titulo'
+  --title 'Article title' \
+  --subtitle 'Source / Channel' \
+  --slug 'article-slug'
 ```
 
-### Twitter/X (Claude traduz)
+### Twitter/X (Claude translates)
 
 ```bash
 python3 src/pipeline.py \
   'https://x.com/user/status/TWEET_ID' \
-  --title 'Título do Artigo' \
-  --subtitle 'Fonte / Canal' \
-  --slug 'slug-do-titulo'
+  --title 'Article title' \
+  --subtitle 'Source / Channel' \
+  --slug 'article-slug'
 ```
 
-### Tradução local (Gemma 4)
+### Local translation (Gemma 4)
 
 ```bash
 python3 src/pipeline.py \
-  'URL_DO_VIDEO' \
-  --title 'Título' --subtitle 'Fonte' --slug 'slug' \
+  'VIDEO_URL' \
+  --title 'Title' --subtitle 'Source' --slug 'slug' \
   --local
 ```
 
-O pipeline detecta o provider automaticamente pela URL.
+The pipeline auto-detects the provider from the URL.
 
 ---
 
-## Fluxo agêntico detalhado
+## Detailed agentic flow
 
-Este é o fluxo exato que uso no dia a dia via WhatsApp:
+This is the exact flow I use daily via WhatsApp:
 
-**1. Envio a URL no chat**
+**1. Send the URL to the chat**
 ```
 https://youtu.be/owmJyKVu5f8
 ```
 
-**2. O Hermes captura a transcrição automaticamente**
+**2. Hermes captures the transcript automatically**
 ```bash
 python3 src/fetch_transcript.py 'https://youtu.be/owmJyKVu5f8' \
   --text-only --timestamps > /tmp/transcript_owmJyKVu5f8.txt
 ```
 
-Para Twitter/X, o pipeline usa `yt-dlp` para baixar o áudio e `mlx-whisper` para transcrever localmente no Apple Silicon.
+For Twitter/X, the pipeline uses `yt-dlp` to download the audio and `mlx-whisper` to transcribe locally on Apple Silicon.
 
-**3. Claude traduz e organiza**
-O agente lê a transcrição e produz um `.txt` limpo em português brasileiro, dividido em seções temáticas, sem timestamps, propagandas ou vícios de linguagem oral.
+**3. Claude translates and organizes**
+The agent reads the transcript and produces a clean `.txt` in Brazilian Portuguese, split into thematic sections, with no timestamps, ads or spoken-language filler.
 
-**4. O HTML é gerado**
+**4. HTML is generated**
 ```bash
 python3 src/build_html.py \
   owmJyKVu5f8 \
-  'Título do Artigo' \
-  'Fonte / Canal' \
+  'Article title' \
+  'Source / Channel' \
   'https://youtu.be/owmJyKVu5f8' \
   /tmp/owmJyKVu5f8_pt.txt \
-  docs/posts/pt_br/slug-do-titulo.html
+  docs/posts/pt_br/article-slug.html
 ```
 
-**5. O card é adicionado ao índice**
-O agente edita `docs/index.html` inserindo o novo card com título, descrição e link.
+**5. Card is added to the index**
+The agent edits `docs/index.html`, inserting the new card with title, description and link.
 
-**6. Commit e push**
+**6. Commit and push**
 ```bash
-git add docs/posts/pt_br/slug-do-titulo.html index.html
-git commit -m 'feat: adiciona artigo — Título do Vídeo'
+git add docs/posts/pt_br/article-slug.html index.html
+git commit -m 'feat: adds article — Video title'
 git push
 ```
 
-> Ver [CLAUDE.md](CLAUDE.md) para documentação completa do projeto.
+> See [CLAUDE.md](CLAUDE.md) for full project documentation.
 
 ---
 
 ## Markdown for Agents (Cloudflare Worker)
 
-O site serve HTML normal para humanos e **Markdown automático** para agentes de IA que fazem *content negotiation* via `Accept: text/markdown`. Inspirado na feature [Markdown for Agents](https://blog.cloudflare.com/markdown-for-agents/) da Cloudflare — que só existe em plano pago — este projeto implementa a mesma ideia usando **Cloudflare Workers no plano gratuito**.
+The site serves regular HTML for humans and **automatic Markdown** for AI agents performing *content negotiation* via `Accept: text/markdown`. Inspired by Cloudflare's [Markdown for Agents](https://blog.cloudflare.com/markdown-for-agents/) feature — which is only available on paid plans — this project implements the same idea using **Cloudflare Workers on the Free plan**.
 
-### Por que isso importa
+### Why it matters
 
-Um HTML de artigo neste site custa ~53.000 tokens para um agente ler (markup, nav, scripts, CSS). A versão Markdown do mesmo conteúdo consome **~13.000 tokens — 75% menos**. Agentes economizam contexto, custo e latência.
+An article HTML on this site costs ~53,000 tokens for an agent to read (markup, nav, scripts, CSS). The Markdown version of the same content consumes **~13,000 tokens — 75% less**. Agents save context, cost and latency.
 
-### Como funciona
+### How it works
 
 ```
-Humano (Accept: text/html)
-  → Cloudflare edge → GitHub Pages → HTML completo
+Human (Accept: text/html)
+  → Cloudflare edge → GitHub Pages → full HTML
 
-Agente (Accept: text/markdown)
-  → Cloudflare edge → Worker intercepta → fetch HTML → converte → Markdown
+Agent (Accept: text/markdown)
+  → Cloudflare edge → Worker intercepts → fetch HTML → convert → Markdown
 ```
 
-O Worker roda na edge do Cloudflare (latência ~10ms), consome o HTML do origin (GitHub Pages) e retorna Markdown limpo com frontmatter YAML contendo metadata.
+The Worker runs at Cloudflare's edge (~10ms latency), consumes the HTML from origin (GitHub Pages) and returns clean Markdown with YAML frontmatter containing metadata.
 
-### Teste rápido
+### Quick test
 
 ```bash
-# HTML normal (humano)
-curl -sI https://adhenawer.net/posts/pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html | grep -i content-type
+# Normal HTML (human)
+curl -sI https://adhenawer.net/posts/original/head-claude-code-happens-after-coding-solved.html | grep -i content-type
 # content-type: text/html; charset=utf-8
 
-# Markdown (agente)
-curl -s https://adhenawer.net/posts/pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html \
+# Markdown (agent)
+curl -s https://adhenawer.net/posts/original/head-claude-code-happens-after-coding-solved.html \
   -H "Accept: text/markdown" | head -15
 # ---
-# title: "Chefe do Claude Code: ..."
-# author: "Lenny's Podcast com Boris Cherny ..."
+# title: "The Head of Claude Code on What Happens After Coding Is Solved"
+# author: "Lenny's Podcast with Boris Cherny ..."
 # description: "..."
 # source: "https://adhenawer.net/..."
-# lang: pt-BR
+# lang: en
 # ---
 #
-# ## INTRODUÇÃO
+# ## THE PROGRAMMER WHO NO LONGER WRITES CODE
 #
-# 100% do meu código é escrito pelo Claude Code...
+# 100% of my code is written by Claude Code...
 ```
 
-Headers de resposta do Worker:
+Worker response headers:
 
-| Header | Valor |
+| Header | Value |
 |---|---|
 | `Content-Type` | `text/markdown; charset=utf-8` |
-| `x-markdown-tokens` | Estimativa de tokens do Markdown retornado |
-| `Vary` | `Accept` (para cache correto) |
+| `x-markdown-tokens` | Token estimate for the returned Markdown |
+| `Vary` | `Accept` (for correct caching) |
 | `Cache-Control` | `public, max-age=3600` |
 
-### Implementação técnica
+### Technical implementation
 
-Localização: `workers/markdown-agent/`
+Location: `workers/markdown-agent/`
 
 ```
 workers/markdown-agent/
-├── wrangler.toml       ← rotas e config do Worker
+├── wrangler.toml       ← Worker routes and config
 ├── package.json
 └── src/
-    └── index.js        ← lógica: detecta Accept → fetch HTML → converte → retorna
+    └── index.js        ← logic: detect Accept → fetch HTML → convert → return
 ```
 
-**Rotas registradas** (`wrangler.toml`):
+**Registered routes** (`wrangler.toml`):
 
 ```toml
 routes = [
@@ -279,26 +283,41 @@ routes = [
 ]
 ```
 
-**Fluxo do Worker** (`src/index.js`, resumo):
+**Worker flow** (`src/index.js`, summary):
 
-A conversão HTML→Markdown é feita com regex puro (sem dependências externas) porque os HTMLs do projeto têm estrutura previsível (`<article>` envolvendo `<h2>`, `<p>`, `<section>`, `<figure class="slide-figure">`). Evita Turndown/JSDOM que não rodam nativamente em Workers runtime.
+The HTML→Markdown conversion is done with pure regex (no external dependencies) because the project's HTMLs have predictable structure (`<article>` wrapping `<h2>`, `<p>`, `<section>`, `<figure class="slide-figure">`). This avoids Turndown/JSDOM, which don't run natively in the Workers runtime.
+
+### Cost
+
+**Zero.** Cloudflare Workers' Free plan offers **100,000 requests/day at no cost**. More than enough for a static site with moderate agent traffic.
 
 ### Deploy
 
 ```bash
 cd workers/markdown-agent
 npm install
-npx wrangler login          # primeira vez
+npx wrangler login          # first time only
 npx wrangler deploy
 ```
 
+### References
+
+- Cloudflare blog post: [Markdown for Agents](https://blog.cloudflare.com/markdown-for-agents/)
+- Feature docs (paid): [developers.cloudflare.com/fundamentals/reference/markdown-for-agents](https://developers.cloudflare.com/fundamentals/reference/markdown-for-agents/)
+
 ---
 
-## Features de leitura
+## Reading features
 
-- **3 temas**: ☀️ Sépia (padrão, estilo Kindle) · 🌤️ Claro · 🌙 Escuro
-- **Progresso por dispositivo** — cada dispositivo salva a posição independentemente
-- **Retomada automática** — banner "continuar de onde parou" ao reabrir
-- **Barra de progresso** e % lido fixos durante a rolagem
-- **Índice clicável** com todas as seções
-- Responsivo para mobile
+- **3 themes**: ☀️ Sepia (default, Kindle-style) · 🌤️ Light · 🌙 Dark
+- **Per-device progress** — each device saves its own reading position
+- **Auto-resume** — "continue where you left off" banner on reopen
+- **Progress bar** and reading % pinned while scrolling
+- **Clickable TOC** with all sections
+- Mobile-responsive
+
+---
+
+## Articles
+
+The full article index lives at [adhenawer.net](https://adhenawer.net/) (PT-BR) and [adhenawer.net/en/](https://adhenawer.net/en/) (English).
