@@ -20,7 +20,9 @@ function extractMeta(html) {
     html.match(/<meta\s+name="description"\s+content="([^"]*)"/i)?.[1] || "";
   const author =
     html.match(/<meta\s+name="author"\s+content="([^"]*)"/i)?.[1] || "";
-  return { title, description, author };
+  const lang =
+    html.match(/<html[^>]*\slang="([^"]+)"/i)?.[1] || "pt-BR";
+  return { title, description, author, lang };
 }
 
 function extractArticleHtml(html) {
@@ -146,7 +148,7 @@ export default {
     if (meta.author) lines.push(`author: "${meta.author}"`);
     if (meta.description) lines.push(`description: "${meta.description}"`);
     lines.push(`source: "${request.url}"`);
-    lines.push("lang: pt-BR");
+    lines.push(`lang: ${meta.lang}`);
     lines.push("---");
     lines.push("");
     lines.push(markdown);
