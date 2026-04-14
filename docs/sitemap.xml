@@ -74,24 +74,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/blog/markdown-for-agents-free-tier.html"/>
   </url>
   <url>
-    <loc>https://adhenawer.net/blog/show-hn-bilingual-podcast-to-article.html</loc>
-    <lastmod>2026-04-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/blog/show-hn-bilingual-podcast-to-article.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/blog/en/show-hn-bilingual-podcast-to-article.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/blog/show-hn-bilingual-podcast-to-article.html"/>
-  </url>
-  <url>
-    <loc>https://adhenawer.net/blog/en/show-hn-bilingual-podcast-to-article.html</loc>
-    <lastmod>2026-04-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/blog/show-hn-bilingual-podcast-to-article.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/blog/en/show-hn-bilingual-podcast-to-article.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/blog/show-hn-bilingual-podcast-to-article.html"/>
-  </url>
-  <url>
     <loc>https://adhenawer.net/posts/pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>

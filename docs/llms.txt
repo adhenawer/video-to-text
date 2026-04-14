@@ -77,9 +77,6 @@
 - [Markdown para Agentes no plano gratuito do Cloudflare Workers](https://adhenawer.net/blog/markdown-for-agents-free-tier.html)
   Como replicar o recurso pago Markdown for Agents da Cloudflare com um Worker no plano gratuito: content negotiation, conversão de HTML para Markdown com regex e redução de 75% de tokens para crawlers de LLMs.
 
-- [Show HN: Um pipeline bilíngue de podcast para artigo construído sobre o Claude Code](https://adhenawer.net/blog/show-hn-bilingual-podcast-to-article.html)
-  Pipeline de site estático que transforma vídeos do YouTube e Twitter/X em artigos bilíngues legíveis (PT-BR + inglês) usando Whisper local e Claude, orquestrado pelo CLI do Claude Code.
-
 ## Blog — English
 
 - [Running this project daily inside Claude Code](https://adhenawer.net/blog/en/claude-code-daily-workflow.html)
@@ -87,9 +84,6 @@
 
 - [Markdown for Agents on Free Tier Cloudflare Workers](https://adhenawer.net/blog/en/markdown-for-agents-free-tier.html)
   How to replicate Cloudflare's paid Markdown for Agents feature with a free-tier Worker: content negotiation, regex-based HTML to Markdown, and a 75% token reduction for LLM crawlers.
-
-- [Show HN: A bilingual podcast-to-article pipeline built on Claude Code](https://adhenawer.net/blog/en/show-hn-bilingual-podcast-to-article.html)
-  A static-site pipeline that turns YouTube and Twitter/X videos into readable bilingual articles (PT-BR + English) using local Whisper and Claude, driven from the Claude Code CLI.
 
 ## Articles — English
 
