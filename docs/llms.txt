@@ -69,7 +69,7 @@
 - [Trading com Order Flow — Do Mercado Global ao Chinês](https://adhenawer.net/posts/pt_br/trading-com-order-flow-mercado-global-ao-chines.html)
   Fonte: Trader Chinês · Twitter/X
 
-- [FABIO AKITA - Flow #588](https://adhenawer.net/posts/pt_br/akita-ia-prompt-fim-programador-bracal.html)
+- [FABIO AKITA - Flow #588](https://adhenawer.net/posts/pt_br/fabio-akita-flow-588.html)
   Fonte: Fabio Akita · Flow Podcast #588
 
 ## Blog — Português
@@ -81,7 +81,7 @@
   Como replicar o recurso pago Markdown for Agents da Cloudflare com um Worker no plano gratuito: content negotiation, conversão de HTML para Markdown com regex e redução de 75% de tokens para crawlers de LLMs.
 
 - [Transformando podcasts de horas em artigos que dá pra ler](https://adhenawer.net/blog/transformando-podcasts-em-artigos-bilingues.html)
-  Um pipeline bilíngue que transforma vídeos do YouTube e Twitter/X em artigos estáticos — Whisper local, Claude para organização e tradução, HTML puro, Cloudflare Worker grátis servindo Markdown para agentes.
+  Um laboratório pessoal de pipeline bilíngue que transforma vídeos do YouTube e Twitter/X em artigos estáticos — Whisper local, Claude para organização e tradução, HTML puro, Cloudflare Worker grátis servindo Markdown para agentes.
 
 ## Blog — English
 
@@ -156,5 +156,5 @@
 - [Why We Stopped Building Agents and Started Building Skills](https://adhenawer.net/posts/original/why-we-stopped-building-agents-started-building-skills.html)
   Source: Barry Zhang & Mahesh Sathiamoorthy · Anthropic
 
-- [FABIO AKITA - Flow #588](https://adhenawer.net/posts/original/akita-ai-prompts-end-of-grunt-work-programming.html)
+- [FABIO AKITA - Flow #588](https://adhenawer.net/posts/original/fabio-akita-flow-588.html)
   Source: Fabio Akita · Flow Podcast

@@ -114,6 +114,15 @@ export default {
       return Response.redirect(`${url.origin}${newPath}`, 301);
     }
 
+    // 301 redirects for renamed canonical URLs
+    const RENAMED = {
+      "/posts/pt_br/akita-ia-prompt-fim-programador-bracal.html": "/posts/pt_br/fabio-akita-flow-588.html",
+      "/posts/original/akita-ai-prompts-end-of-grunt-work-programming.html": "/posts/original/fabio-akita-flow-588.html",
+    };
+    if (RENAMED[url.pathname]) {
+      return Response.redirect(`${url.origin}${RENAMED[url.pathname]}`, 301);
+    }
+
     if (!wantsMarkdown(request)) {
       return fetch(request);
     }
