@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turning hours-long podcasts into articles you can actually read · Blog</title>
+<meta name="description" content="How I built a bilingual pipeline that turns YouTube and Twitter/X videos into static articles — local Whisper, Claude for structure and translation, plain HTML, and a free Cloudflare Worker serving Markdown to agents.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Turning hours-long podcasts into articles you can actually read">
+<meta property="og:description" content="A bilingual static site that publishes podcasts and videos as articles organized by themes.">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Readings Blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Turning hours-long podcasts into articles you can actually read">
+<meta name="twitter:description" content="Bilingual pipeline with Whisper, Claude and pure HTML. Monthly cost: zero.">
+<link rel="alternate" hreflang="pt-BR" href="../transformando-podcasts-em-artigos-bilingues.html">
+<link rel="alternate" hreflang="en" href="turning-podcasts-into-readable-articles.html">
+<link rel="alternate" hreflang="x-default" href="../transformando-podcasts-em-artigos-bilingues.html">
+<link rel="stylesheet" href="../../css/style.css">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="40c8ae3d-2e6b-4af4-a89b-f578dd3b2315"></script>
+</head>
+<body class="page-article">
+<header class="site-header">
+  <a class="site-brand" href="../../en/index.html">Readings</a>
+  <div class="lang-bar">
+    <button class="lang-btn" data-lang="pt-BR" aria-label="Português">PT</button>
+    <button class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+  </div>
+</header>
+<article class="container">
+  <a href="./" class="back-home">← Back to blog</a>
+  <header>
+    <h1>Turning hours-long podcasts into articles you can actually read</h1>
+    <p class="meta"><cite><a href="https://github.com/adhenawer" target="_blank" rel="noopener">Rodolfo Moraes</a> · 2026-04-14</cite></p>
+  </header>
+
+  <p>I don't know if you have the same reaction, but when I see a new podcast on YouTube that's 2, 3, 4 hours long, I already know: I'm not going to watch it. Not on the phone in the subway, not on the couch after work, not during lunch. The problem isn't lack of interest — it's that long video is a hostile format for almost anything other than sitting and watching start to finish.</p>
+
+  <p>Video is bad for:</p>
+  <ul>
+    <li><strong>Searching</strong>: no Ctrl+F. If you vaguely remember "that guy said something about vibe coding", good luck finding it.</li>
+    <li><strong>Quoting</strong>: sending a timestamp link is a poor workaround, and transcribing by hand is tedious.</li>
+    <li><strong>Re-reading</strong>: no visual markers, no progress, no named sections.</li>
+    <li><strong>Skimming</strong>: you can't glance at it to decide if it's worth 3 hours of your life.</li>
+  </ul>
+
+  <p>Articles solve all this. But almost no podcast has a decent written version. And YouTube auto-captions are unreadable — a wall of text with no punctuation, full of "uh, like, you know, so".</p>
+
+  <h2>What I built</h2>
+
+  <p><a href="https://adhenawer.net/en/">adhenawer.net</a> is a static site that takes YouTube or Twitter/X videos and turns them into <strong>bilingual articles organized by thematic sections</strong>. Brazilian Portuguese and English, same content, canonical URLs in each language.</p>
+
+  <p>Right now there are 20 articles published, covering people like Boris Cherny (Claude Code), Simon Willison, Steve Yegge, Andrew Ng at Stanford, Dario Amodei, Robert Shiller (Yale, on behavioral finance), Patrick Winston (MIT, that classic <em>How to Speak</em> lecture), and more.</p>
+
+  <p>Each article has:</p>
+  <ul>
+    <li>Clean title and subtitle</li>
+    <li>Clickable table of contents</li>
+    <li>Thematic sections (not chronological — reorganized by topic)</li>
+    <li>Reading progress bar</li>
+    <li>"Resume where you left off" saved per device</li>
+    <li><strong>References sidebar</strong>: books linked to Amazon, tools to official sites, people to Twitter, concepts to Wikipedia, related posts</li>
+    <li>Language switcher PT/EN in the header</li>
+  </ul>
+
+  <p>Zero framework. Static HTML served from GitHub Pages. Loads fast on anything, including a rough 3G connection.</p>
+
+  <h2>The pipeline</h2>
+
+  <pre><code>Video URL (YouTube or Twitter/X)
+  ↓
+Detects provider from URL
+  ↓
+YouTube: youtube-transcript-api (official captions when available)
+Twitter/X: yt-dlp downloads audio → mlx-whisper transcribes locally
+  ↓
+Raw transcript in English (or source language)
+  ↓
+Claude (structure): reads transcript, removes "um", "like", timestamps,
+                    sponsor reads, reorganizes into thematic sections,
+                    produces natural text in PT-BR and EN
+  ↓
+Python generates HTML with JSON-LD, Open Graph, hreflang, references sidebar
+  ↓
+Git commit + push → GitHub Pages deploys</code></pre>
+
+  <p>No CMS, no database, no frontend build step. The <code>src/build_html.py</code> script is ~400 lines of pure Python and writes semantic HTML directly:</p>
+
+  <pre><code class="language-python">return f'''&lt;!DOCTYPE html&gt;
+&lt;html lang="{html_lang}"&gt;
+&lt;head&gt;
+&lt;link rel="alternate" hreflang="pt-BR" href="{pt_href}"&gt;
+&lt;link rel="alternate" hreflang="en" href="{en_href}"&gt;
+&lt;script type="application/ld+json"&gt;{jsonld}&lt;/script&gt;
+&lt;link rel="stylesheet" href="../../css/style.css"&gt;
+&lt;/head&gt;
+&lt;body class="page-article"&gt;
+&lt;header class="site-header"&gt;...&lt;/header&gt;
+&lt;article class="container"&gt;
+  &lt;h1&gt;{title}&lt;/h1&gt;
+  &lt;nav&gt;&lt;h3&gt;Contents&lt;/h3&gt;&lt;ol&gt;{toc_html}&lt;/ol&gt;&lt;/nav&gt;
+  {body_html}
+&lt;/article&gt;
+{references_sidebar}
+&lt;/body&gt;
+&lt;/html&gt;'''</code></pre>
+
+  <h2>Local Whisper</h2>
+
+  <p>For Twitter/X videos (or YouTube when the official captions are blocked) the pipeline uses <code>mlx-whisper</code> — the MLX implementation of Whisper, natively optimized for Apple Silicon. Transcription cost: <strong>zero</strong>. Speed: ~5× real-time on an M1 Pro. A one-hour podcast transcribes in about 12 minutes.</p>
+
+  <pre><code class="language-python">import mlx_whisper
+
+result = mlx_whisper.transcribe(
+    audio_path,
+    path_or_hf_repo="mlx-community/whisper-large-v3-turbo",
+    word_timestamps=False,
+)</code></pre>
+
+  <p>If you're on Linux or Windows you can swap for <code>faster-whisper</code> (CTranslate2), same idea. The only thing that matters is not sending audio to anyone's API to save money — Whisper running locally is good enough and free.</p>
+
+  <h2>The part I most enjoyed building: Markdown for agents</h2>
+
+  <p>This is the coolest one. Cloudflare has a feature called <strong>Markdown for Agents</strong> that converts HTML to Markdown at the edge when an AI agent requests with <code>Accept: text/markdown</code>. Problem is, that feature only exists on <strong>paid</strong> plans (Pro or Business).</p>
+
+  <p>I looked at their Worker runtime and realized you can replicate it in ~150 lines of JavaScript running on the <strong>Free</strong> plan (100k requests/day). The key is that well-structured HTMLs don't need anything fancy — regex handles it:</p>
+
+  <pre><code class="language-javascript">export default {
+  async fetch(request) {
+    const accept = request.headers.get("Accept") || "";
+    if (!accept.includes("text/markdown")) {
+      return fetch(request); // pass HTML straight to humans
+    }
+
+    // Agent asked for markdown. Fetch HTML from origin and convert.
+    const response = await fetch(new Request(request.url, {
+      headers: { Accept: "text/html" }
+    }));
+    const html = await response.text();
+
+    const articleHtml = html.match(/&lt;article[^&gt;]*&gt;([\s\S]*?)&lt;\/article&gt;/i)?.[1];
+    const markdown = htmlToMarkdown(articleHtml);
+
+    return new Response(frontmatter + markdown, {
+      headers: {
+        "Content-Type": "text/markdown; charset=utf-8",
+        "x-markdown-tokens": String(Math.ceil(markdown.length / 4)),
+        "Vary": "Accept",
+      }
+    });
+  }
+};</code></pre>
+
+  <p>Result: an article HTML that costs ~53,000 tokens for an agent to parse becomes ~13,000 tokens in Markdown — <strong>75% reduction</strong>. No Turndown, no JSDOM (neither runs in the Worker runtime), just regex and some care with <code>&lt;pre&gt;</code> and <code>&lt;code&gt;</code>.</p>
+
+  <p>Try it yourself:</p>
+
+  <pre><code class="language-bash"># Humans get HTML
+curl -sI https://adhenawer.net/posts/original/state-ai-2026.html | grep -i content-type
+# content-type: text/html; charset=utf-8
+
+# Agents get Markdown
+curl -s https://adhenawer.net/posts/original/state-ai-2026.html \
+  -H "Accept: text/markdown" | head -10
+# ---
+# title: "The State of AI in 2026"
+# author: "Simon Willison · Lenny's Podcast"
+# lang: en
+# ---
+# ## THE NOVEMBER INFLECTION POINT</code></pre>
+
+  <p>Total cost to me: <strong>zero dollars</strong>. I wrote a technical post about this on the blog if you want details: <a href="markdown-for-agents-free-tier.html">Markdown for Agents on Free-Tier Cloudflare Workers</a>.</p>
+
+  <h2>References extracted automatically</h2>
+
+  <p>Each article has a fixed sidebar with references that appear in the transcript. They're organized into categories:</p>
+
+  <ul>
+    <li><strong>Books</strong> → Amazon search</li>
+    <li><strong>Tools</strong> → official site</li>
+    <li><strong>Papers</strong> → arXiv or author's blog</li>
+    <li><strong>People</strong> → Twitter/X (priority), fallback to Wikipedia</li>
+    <li><strong>Concepts</strong> → Wikipedia</li>
+    <li><strong>Companies</strong> → official site</li>
+    <li><strong>Related posts</strong> → internal cross-link to the same theme in other articles</li>
+  </ul>
+
+  <p>Extraction is done by Claude subagents in parallel — one per article, each receives the transcript and returns a structured JSON:</p>
+
+  <pre><code class="language-json">{
+  "video_id": "We7BZVKbCVw",
+  "books": [
+    {
+      "title": "Functional Programming in Scala",
+      "author": "Paul Chiusano &amp; Rúnar Bjarnason",
+      "url": "https://www.amazon.com/s?k=functional+programming+in+scala+chiusano",
+      "context": "Single best technical book I've ever read"
+    }
+  ],
+  "people": [
+    {
+      "name": "Boris Cherny",
+      "role": {"pt": "Chefe do Claude Code, Anthropic", "en": "Head of Claude Code, Anthropic"},
+      "url": "https://twitter.com/bcherny"
+    }
+  ],
+  "related_posts": [
+    {
+      "slug_pt": "estado-da-ia-2026-ponto-de-inflexao-simon-willison",
+      "slug_en": "state-ai-2026",
+      "reason": {
+        "pt": "Simon Willison sobre o mesmo momento de inflexão da IA",
+        "en": "Simon Willison on the same AI inflection moment"
+      }
+    }
+  ]
+}</code></pre>
+
+  <p>All together there are <strong>714 extracted references</strong> across 21 posts. Of the 101 <em>people</em> referenced, 53 are linked to Twitter profiles (the rest are deceased academics or historical figures who obviously don't have Twitter).</p>
+
+  <h2>Why bilingual?</h2>
+
+  <p>Two reasons:</p>
+  <ol>
+    <li><strong>Reach</strong>: most of the content I consume is in English, but I want Brazilian friends to be able to read it without the language barrier.</li>
+    <li><strong>SEO</strong>: properly configured <code>hreflang</code> alternates in sitemap + each HTML produce natural ranking in both languages.</li>
+  </ol>
+
+  <p>Canonical URLs differ on each side:</p>
+
+  <ul>
+    <li>PT: <code>/posts/pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html</code></li>
+    <li>EN: <code>/posts/original/head-claude-code-happens-after-coding-solved.html</code></li>
+  </ul>
+
+  <p>Each slug is derived from the title in the corresponding language. The language switcher in the upper right of the header uses <code>&lt;link rel="alternate" hreflang&gt;</code> as the source of truth — zero hardcoded "URL A → URL B" mappings.</p>
+
+  <h2>The daily flow inside Claude Code</h2>
+
+  <p>The project runs almost entirely inside <a href="https://claude.com/claude-code">Claude Code</a> (Anthropic's official CLI). I open the terminal, go into the repo, run <code>claude</code>, and say:</p>
+
+  <pre><code>&gt; add article from https://youtu.be/VIDEO_ID</code></pre>
+
+  <p>The agent does the rest on its own: fetches the transcript, organizes into sections, translates to PT-BR, generates the HTML, updates <code>docs/index.html</code>, updates <code>sitemap.xml</code>, extracts references, commits, and pushes. I review the diff. If something looks off, I ask it to fix.</p>
+
+  <p>This works well for two reasons:</p>
+
+  <ol>
+    <li><strong><code>CLAUDE.md</code></strong> — a markdown file at the root that contains the project's knowledge base (conventions, folder structure, slug format, etc.). That's what makes Claude Code "understand" the project without me re-explaining it each session.</li>
+    <li><strong>Subagents for parallel work</strong> — for large backfills (like generating English versions of the 20 articles that only existed in PT), the main agent spawns 20 subagents in parallel, each with isolated context, and aggregates the results. A backfill of 19 articles with ~270 thousand words of transcripts ran in 2 minutes that way. Main context stays clean.</li>
+  </ol>
+
+  <h2>Full stack</h2>
+
+  <p>Total monthly cost: <strong>$0</strong> (just the domain, which is annual).</p>
+
+  <ul>
+    <li><strong>Interface</strong>: Claude Code (CLI)</li>
+    <li><strong>Model</strong>: Claude Opus 4.6</li>
+    <li><strong>YouTube transcription</strong>: <code>youtube-transcript-api</code></li>
+    <li><strong>Twitter/X transcription</strong>: <code>yt-dlp</code> + <code>mlx-whisper</code></li>
+    <li><strong>Organization/translation</strong>: Claude</li>
+    <li><strong>HTML build</strong>: pure Python (~400 lines)</li>
+    <li><strong>Frontend</strong>: static HTML, CSS in one file</li>
+    <li><strong>Hosting</strong>: GitHub Pages</li>
+    <li><strong>Domain + CDN</strong>: Cloudflare (Free)</li>
+    <li><strong>Edge / agents</strong>: Cloudflare Worker (Free) — Markdown on demand</li>
+    <li><strong>Analytics</strong>: Umami Cloud (Free tier)</li>
+  </ul>
+
+  <h2>What's open</h2>
+
+  <p>All the code is at <a href="https://github.com/adhenawer/video-to-text">github.com/adhenawer/video-to-text</a>, MIT license. The files that matter:</p>
+
+  <ul>
+    <li><code>src/pipeline.py</code> — end-to-end orchestrator</li>
+    <li><code>src/providers/</code> — multi-provider abstraction (YouTube, Twitter/X). Easy to add Vimeo, TikTok, etc.</li>
+    <li><code>src/build_html.py</code> — HTML generation</li>
+    <li><code>workers/markdown-agent/src/index.js</code> — Cloudflare Worker</li>
+    <li><code>transcripts/</code> — original + translated transcripts + references JSONs</li>
+  </ul>
+
+  <p>If anyone wants to run it for themselves: fork, clone, <code>pip install -r requirements.txt</code>, Claude Code, and send a URL in the chat.</p>
+
+  <h2>Invitation</h2>
+
+  <p>I'm not making money from this. It's a system <strong>for myself</strong> to consume good content in the format that works for me. If it helps someone else, even better.</p>
+
+  <p>If you want to contribute a new provider (like Vimeo or podcast feeds), CSS bugs, or suggest a video to transcribe, open an issue or PR. If you just want to read, the index is at <a href="https://adhenawer.net">adhenawer.net</a> (PT) and <a href="https://adhenawer.net/en/">adhenawer.net/en/</a> (EN).</p>
+
+  <p>The initial kick came from a conversation about how Claude Code changed what "one engineer can do in a weekend." This project is, in large part, a demonstration of that. It's also an excuse to consume more good podcasts without having to spend 4 hours with headphones on.</p>
+
+  <p>If you have a similar pain — good content in a bad format — maybe the detour is worth it.</p>
+</article>
+<script src="../../js/reader.js"></script>
+<script src="../../js/lang.js"></script>
+</body>
+</html>
