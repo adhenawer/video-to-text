@@ -6,7 +6,8 @@
     "subtitle": "Lenny's Podcast com Boris Cherny (Chefe do Claude Code, Anthropic)",
     "url": "https://www.youtube.com/watch?v=We7BZVKbCVw",
     "slug": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
-    "date": "2026-04-13"
+    "date": "2026-04-13",
+    "slug_en": "head-claude-code-happens-after-coding-solved"
   },
   {
     "video_id": "2042206218752610343",
@@ -15,7 +16,8 @@
     "subtitle": "51bodila · Twitter/X",
     "url": "https://x.com/51bodila/status/2042206218752610343",
     "slug": "guia-completo-claude-iniciante-sistema-operacional-ia",
-    "date": "2026-04-13"
+    "date": "2026-04-13",
+    "slug_en": "complete-claude-guide-beginner-ai-operating-system"
   },
   {
     "video_id": "w7CWS4bmN2A",
@@ -24,7 +26,8 @@
     "subtitle": "Goju Tech Talk",
     "url": "https://www.youtube.com/watch?v=w7CWS4bmN2A",
     "slug": "claude-code-leak-what-weve-learned-so-far",
-    "date": "2026-04-13"
+    "date": "2026-04-13",
+    "slug_en": "claude-code-leak-we-have-learned-so-far"
   },
   {
     "video_id": "fzrvx_1-9_o",
@@ -33,7 +36,8 @@
     "subtitle": "Usando Claude Code — Tutorial prático",
     "url": "https://youtu.be/fzrvx_1-9_o",
     "slug": "como-construi-sistema-suporte-cliente-ia-nivel-producao",
-    "date": "2026-04-13"
+    "date": "2026-04-13",
+    "slug_en": "how-i-built-production-grade-ai-customer-support-system"
   },
   {
     "video_id": "aFsAOu2bgFk",
@@ -42,7 +46,8 @@
     "subtitle": "Steve Yegge — Sourcegraph Podcast",
     "url": "https://youtu.be/aFsAOu2bgFk",
     "slug": "de-ides-para-agentes-de-ia-steve-yegge",
-    "date": "2026-04-13"
+    "date": "2026-04-13",
+    "slug_en": "ides-ai-agents"
   },
   {
     "video_id": "eYqt8vqeSBw",
@@ -51,7 +56,8 @@
     "subtitle": "Live — Engenharia Agêntica na Prática",
     "url": "https://www.youtube.com/live/eYqt8vqeSBw",
     "slug": "do-prompt-a-producao-o-que-e-engenharia-agentica",
-    "date": "2026-04-13"
+    "date": "2026-04-13",
+    "slug_en": "prompt-production-agentic-engineering"
   },
   {
     "video_id": "l5zgfjXs6gQ",
@@ -60,7 +66,8 @@
     "subtitle": "Palestra técnica sobre Engenharia Agêntica",
     "url": "https://youtu.be/l5zgfjXs6gQ",
     "slug": "engenharia-agentica-contexto-guardrails-e-criatividade",
-    "date": "2026-04-13"
+    "date": "2026-04-13",
+    "slug_en": "agentic-engineering-context-guardrails-creativity"
   },
   {
     "video_id": "Ednpn1mjKiY",
@@ -69,7 +76,8 @@
     "subtitle": "Live — Desenvolvimento Guiado por Especificação com IA",
     "url": "https://www.youtube.com/live/Ednpn1mjKiY",
     "slug": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia",
-    "date": "2026-04-13"
+    "date": "2026-04-13",
+    "slug_en": "senior-engineer-demonstrates-spec-driven-ai-development-flow"
   },
   {
     "video_id": "wc8FBhQtdsA",
@@ -78,7 +86,8 @@
     "subtitle": "Passamos o Ponto de Inflexão e as &ldquo;Fábricas Escuras&rdquo; Estão Chegando",
     "url": "https://www.youtube.com/watch?v=wc8FBhQtdsA",
     "slug": "estado-da-ia-2026-ponto-de-inflexao-simon-willison",
-    "date": "2026-04-13"
+    "date": "2026-04-13",
+    "slug_en": "state-ai-2026"
   },
   {
     "video_id": "647pVgfV2yU",
@@ -87,7 +96,8 @@
     "subtitle": "Don Syme — Criador do F# sobre Agentes de IA",
     "url": "https://youtu.be/647pVgfV2yU",
     "slug": "fluxos-de-trabalho-agenticos-don-syme",
-    "date": "2026-04-13"
+    "date": "2026-04-13",
+    "slug_en": "agentic-workflows-don-syme"
   },
   {
     "video_id": "6WaeGfLnRvc",
@@ -96,7 +106,8 @@
     "subtitle": "Ethan Evans (ex-VP Amazon) · Ryan Peterman",
     "url": "https://www.youtube.com/watch?v=6WaeGfLnRvc",
     "slug": "politica-corporativa-tech-tudo-que-ninguem-te-conta",
-    "date": "2026-04-13"
+    "date": "2026-04-13",
+    "slug_en": "corporate-politics-tech-everything-nobody-tells"
   },
   {
     "video_id": "owmJyKVu5f8",
@@ -105,7 +116,8 @@
     "subtitle": "Simon Willison — The Pragmatic Engineer Podcast",
     "url": "https://youtu.be/owmJyKVu5f8",
     "slug": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
-    "date": "2026-04-13"
+    "date": "2026-04-13",
+    "slug_en": "engineering-practices-make-coding-agents-work"
   },
   {
     "video_id": "_kMaPZE05Yc",
@@ -114,7 +126,8 @@
     "subtitle": "Guia de carreira — AI Engineering Roadmap",
     "url": "https://youtu.be/_kMaPZE05Yc",
     "slug": "roteiro-engenheiro-ia-para-desenvolvedores-de-software",
-    "date": "2026-04-13"
+    "date": "2026-04-13",
+    "slug_en": "ai-engineer-roadmap-software-developers"
   },
   {
     "video_id": "M30gp1315Y4",
@@ -123,7 +136,8 @@
     "subtitle": "Vídeo técnico — Multi-agent Coding",
     "url": "https://youtu.be/M30gp1315Y4",
     "slug": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
-    "date": "2026-04-13"
+    "date": "2026-04-13",
+    "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code"
   },
   {
     "video_id": "2042960939969102251",
@@ -141,7 +155,8 @@
     "subtitle": "Andrew Ng & Lawrence Moroney · Stanford CS230",
     "url": "https://x.com/carverfomo/status/2042024135568629797",
     "slug": "conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford",
-    "date": "2026-04-13"
+    "date": "2026-04-13",
+    "slug_en": "ai-career-advice-andrew-ng-lawrence-moroney-stanford"
   },
   {
     "video_id": "2042489154966339811",
@@ -150,7 +165,8 @@
     "subtitle": "@ronycoder",
     "url": "https://x.com/ronycoder/status/2042489154966339811",
     "slug": "entendendo-rony-coder",
-    "date": "2026-04-13"
+    "date": "2026-04-13",
+    "slug_en": "how-speak-patrick-winston-giving-talks-matter"
   },
   {
     "video_id": "2042725242741588208",
@@ -159,7 +175,8 @@
     "subtitle": "Robert Shiller · Yale Open Courses",
     "url": "https://x.com/noisyb0y1/status/2042725242741588208",
     "slug": "financas-comportamentais-robert-shiller-yale",
-    "date": "2026-04-13"
+    "date": "2026-04-13",
+    "slug_en": "behavioral-finance-psychology-manipulation-integrity-markets"
   },
   {
     "video_id": "2041884593087803841",
@@ -168,7 +185,8 @@
     "subtitle": "Inseo Bong · Stanford Online",
     "url": "https://x.com/noisyb0y1/status/2041884593087803841",
     "slug": "ia-agentica-progressao-uso-modelos-linguagem-stanford",
-    "date": "2026-04-13"
+    "date": "2026-04-13",
+    "slug_en": "agentic-ai-progression-language-model-usage"
   },
   {
     "video_id": "2042172428127002906",
@@ -177,7 +195,8 @@
     "subtitle": "Barry Zhang & Mahesh Sathiamoorthy · Anthropic",
     "url": "https://x.com/Av1dlive/status/2042172428127002906",
     "slug": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills",
-    "date": "2026-04-13"
+    "date": "2026-04-13",
+    "slug_en": "why-we-stopped-building-agents-started-building-skills"
   },
   {
     "video_id": "2042624568880197650",
