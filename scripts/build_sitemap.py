@@ -46,6 +46,21 @@ def build_sitemap():
         },
     })
 
+    # Blog posts
+    blog_dir = os.path.join(PROJECT_DIR, "docs", "blog")
+    if os.path.isdir(blog_dir):
+        for fname in sorted(os.listdir(blog_dir)):
+            if not fname.endswith(".html"):
+                continue
+            url = f"{BASE}/blog/{fname}" if fname != "index.html" else f"{BASE}/blog/"
+            urls.append({
+                "loc": url,
+                "lastmod": TODAY,
+                "changefreq": "monthly",
+                "priority": "0.7",
+                "alternates": {"en": url, "x-default": url},
+            })
+
     for entry in index:
         pt_slug = entry["slug"]
         en_slug = entry.get("slug_en")
@@ -118,6 +133,25 @@ def build_llms_txt():
         lines.append(f"- [{title}]({BASE}/posts/pt_br/{pt_slug}.html)")
         lines.append(f"  Fonte: {subtitle}")
         lines.append("")
+
+    lines.append("## Blog")
+    lines.append("")
+    blog_dir = os.path.join(PROJECT_DIR, "docs", "blog")
+    if os.path.isdir(blog_dir):
+        import re as _re
+        for fname in sorted(os.listdir(blog_dir)):
+            if not fname.endswith(".html") or fname == "index.html":
+                continue
+            with open(os.path.join(blog_dir, fname)) as f:
+                html = f.read()
+            title = _re.search(r"<h1>([^<]+)</h1>", html)
+            title = title.group(1).strip() if title else fname
+            desc = _re.search(r'<meta name="description" content="([^"]+)"', html)
+            desc = desc.group(1).strip() if desc else ""
+            lines.append(f"- [{title}]({BASE}/blog/{fname})")
+            if desc:
+                lines.append(f"  {desc}")
+            lines.append("")
 
     lines.append("## Articles — English")
     lines.append("")

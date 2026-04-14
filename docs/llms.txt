@@ -69,6 +69,17 @@
 - [Trading com Order Flow — Do Mercado Global ao Chinês](https://adhenawer.net/posts/pt_br/trading-com-order-flow-mercado-global-ao-chines.html)
   Fonte: Trader Chinês · Twitter/X
 
+## Blog
+
+- [Running this project daily inside Claude Code](https://adhenawer.net/blog/claude-code-daily-workflow.html)
+  What it actually looks like to run video-to-text day-to-day inside Claude Code: the prompts, the subprocesses, why CLAUDE.md is load-bearing, and where subagents pay off.
+
+- [Markdown for Agents on Free Tier Cloudflare Workers](https://adhenawer.net/blog/markdown-for-agents-free-tier.html)
+  How to replicate Cloudflare's paid Markdown for Agents feature with a free-tier Worker: content negotiation, regex-based HTML to Markdown, and a 75% token reduction for LLM crawlers.
+
+- [Show HN: A bilingual podcast-to-article pipeline built on Claude Code](https://adhenawer.net/blog/show-hn-bilingual-podcast-to-article.html)
+  A static-site pipeline that turns YouTube and Twitter/X videos into readable bilingual articles (PT-BR + English) using local Whisper and Claude, driven from the Claude Code CLI.
+
 ## Articles — English
 
 - [The Head of Claude Code on What Happens After Coding Is Solved](https://adhenawer.net/posts/original/head-claude-code-happens-after-coding-solved.html)

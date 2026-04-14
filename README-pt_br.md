@@ -2,13 +2,34 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub release](https://img.shields.io/github/v/release/adhenawer/video-to-text)](https://github.com/adhenawer/video-to-text/releases)
-[![GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-blue)](https://adhenawer.net/)
+[![Demo](https://img.shields.io/badge/demo-adhenawer.net-C17C3E)](https://adhenawer.net/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-MLX-black)](https://github.com/ml-explore/mlx)
+[![Cloudflare Workers](https://img.shields.io/badge/edge-Cloudflare%20Workers-F38020)](https://workers.cloudflare.com/)
+[![Idiomas](https://img.shields.io/badge/idiomas-PT--BR%20%7C%20EN-brightgreen)](https://adhenawer.net/en/)
+[![Artigos](https://img.shields.io/badge/artigos-20%2B-blueviolet)](https://adhenawer.net/)
 
 > 🇺🇸 **[Read this in English](README.md)** · 🇧🇷 Você está lendo em português brasileiro
 
-Transforma vídeos e podcasts do YouTube e Twitter/X em posts para leitura — organizados por seções e publicados como HTML estático
+Transforma vídeos e podcasts do YouTube e Twitter/X em posts para leitura — organizados por seções e publicados como HTML estático.
+
+<p align="center">
+  <img src="docs/img/hero.svg" alt="URL → transcrição → tradução → artigo bilíngue" width="820">
+</p>
+
+---
+
+## Por que
+
+Vídeo longo é difícil de escanear, citar, pesquisar ou reler. Este projeto transforma vídeos em artigos estruturados que dá para ler de fato.
+
+- **Transcrição local** via Whisper — sem custo de API pra áudio
+- **Organização por LLM** em seções temáticas — não um muro cronológico de texto
+- **Bilíngue nativo** — PT-BR e inglês com `hreflang` alternates
+- **Compatível com agentes** — Cloudflare Worker no plano gratuito serve Markdown via content negotiation (75% menos tokens que HTML)
+- **Zero build de frontend** — HTML estático no GitHub Pages
+
+Ao vivo em [adhenawer.net](https://adhenawer.net/) · [Blog](https://adhenawer.net/blog/)
 
 ---
 

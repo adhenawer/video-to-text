@@ -2,13 +2,34 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub release](https://img.shields.io/github/v/release/adhenawer/video-to-text)](https://github.com/adhenawer/video-to-text/releases)
-[![GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-blue)](https://adhenawer.net/)
+[![Live demo](https://img.shields.io/badge/demo-adhenawer.net-C17C3E)](https://adhenawer.net/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-MLX-black)](https://github.com/ml-explore/mlx)
+[![Cloudflare Workers](https://img.shields.io/badge/edge-Cloudflare%20Workers-F38020)](https://workers.cloudflare.com/)
+[![Languages](https://img.shields.io/badge/languages-PT--BR%20%7C%20EN-brightgreen)](https://adhenawer.net/en/)
+[![Articles](https://img.shields.io/badge/articles-20%2B-blueviolet)](https://adhenawer.net/)
 
 > 🇧🇷 **[Leia em português brasileiro](README-pt_br.md)** · 🇺🇸 You are reading in English
 
 Turns YouTube and Twitter/X videos and podcasts into readable posts — organized by sections and published as static HTML.
+
+<p align="center">
+  <img src="docs/img/hero.svg" alt="URL → transcription → translation → bilingual article" width="820">
+</p>
+
+---
+
+## Why
+
+Long-form video is hard to skim, quote, search, or reread. This project turns videos into structured articles you can actually read.
+
+- **Local transcription** via Whisper — no API cost for audio
+- **LLM-organized** into thematic sections — not a chronological wall of text
+- **Bilingual** out of the box — PT-BR and English with `hreflang` alternates
+- **Agent-friendly** — Cloudflare Worker on free tier serves Markdown to AI crawlers via content negotiation (75% fewer tokens than HTML)
+- **Zero frontend build** — static HTML deployable to GitHub Pages
+
+Live at [adhenawer.net](https://adhenawer.net/) · [Blog](https://adhenawer.net/blog/)
 
 ---
 
