@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agentic Workflows with Don Syme</title>
+<meta name="description" content="I like the idea of setting the junior engineer up for success. But I also call out that in a world where you're the expert, the AI is the junior engineer with unlimited energy. So give it the toil....">
+<meta name="author" content="Don Syme — Creator of F# on AI Agents">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Agentic Workflows with Don Syme">
+<meta property="og:description" content="I like the idea of setting the junior engineer up for success. But I also call out that in a world where you're the expert, the AI is the junior engineer with unlimited energy. So give it the toil....">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Leituras — Podcasts &amp; Vídeos Traduzidos">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Agentic Workflows with Don Syme">
+<meta name="twitter:description" content="I like the idea of setting the junior engineer up for success. But I also call out that in a world where you're the expert, the AI is the junior engineer with unlimited energy. So give it the toil....">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Agentic Workflows with Don Syme", "description": "I like the idea of setting the junior engineer up for success. But I also call out that in a world where you're the expert, the AI is the junior engineer with unlimited energy. So give it the toil....", "author": {"@type": "Person", "name": "Don Syme — Creator of F# on AI Agents"}, "publisher": {"@type": "Organization", "name": "Leituras — Podcasts & Vídeos Traduzidos"}, "inLanguage": "en", "isAccessibleForFree": true, "url": "https://youtu.be/647pVgfV2yU", "articleSection": ["THE JUNIOR ENGINEER WITH UNLIMITED ENERGY", "IS THE CRAFT DYING?", "THE RING LIGHT AND THE SDLC", "EMPOWERING MAINTAINERS TO SET THE DIRECTION", "FOR LOOPS AND AMBIGUITY LOOPS", "CONTINUOUS AI: THE THIRD PILLAR", "ARE YOU SELLING AI?", "WHAT IS AN AGENTIC WORKFLOW?", "REPO ASSIST: A SUCCESS STORY FOR TECHNICAL DEBT", "REVIEWING AT SCALE AND THE OPEN-SOURCE FLOOD", "WAKING UP TO GOODNESS", "LIMITS: SETTING THE AGENT UP FOR SUCCESS", "GOALS, CONSTRAINTS, AND GUARDRAILS", "EDUCATING THE NEXT GENERATION", "QUALITY SHIPPING MATTERS MORE THAN EVER"]}
+</script>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="page-article" data-storage-key="reading_647pVgfV2yU_">
+<div class="progress" id="progress"></div>
+<div class="reading-pct" id="readingPct"></div>
+<article class="container">
+  <a href="../../index.html" class="back-home">← Back to index</a>
+  <header>
+    <h1>Agentic Workflows with Don Syme</h1>
+    <p class="meta"><cite>Don Syme — Creator of F# on AI Agents</cite></p>
+    <p class="meta"><a href="https://youtu.be/647pVgfV2yU" target="_blank" rel="noopener">🎥 Watch on YouTube</a></p>
+  </header>
+  <div class="lang-bar">
+    <a class="lang-btn " href="../pt_br/s15.html" aria-label="Português">🇧🇷 Português</a>
+    <a class="lang-btn active" href="#" aria-label="English">🇺🇸 English</a>
+  </div>
+  <div class="theme-bar">
+    <button class="theme-btn active" onclick="setTheme('light')">☀️ Sépia</button>
+    <button class="theme-btn" onclick="setTheme('cool')">🌤️ Claro</button>
+    <button class="theme-btn" onclick="setTheme('dark')">🌙 Escuro</button>
+  </div>
+  <nav aria-label="Article table of contents">
+    <h3>📑 Table of Contents</h3>
+    <ol>
+<li><a href="#s1">THE JUNIOR ENGINEER WITH UNLIMITED ENERGY</a></li>
+<li><a href="#s2">IS THE CRAFT DYING?</a></li>
+<li><a href="#s3">THE RING LIGHT AND THE SDLC</a></li>
+<li><a href="#s4">EMPOWERING MAINTAINERS TO SET THE DIRECTION</a></li>
+<li><a href="#s5">FOR LOOPS AND AMBIGUITY LOOPS</a></li>
+<li><a href="#s6">CONTINUOUS AI: THE THIRD PILLAR</a></li>
+<li><a href="#s7">ARE YOU SELLING AI?</a></li>
+<li><a href="#s8">WHAT IS AN AGENTIC WORKFLOW?</a></li>
+<li><a href="#s9">REPO ASSIST: A SUCCESS STORY FOR TECHNICAL DEBT</a></li>
+<li><a href="#s10">REVIEWING AT SCALE AND THE OPEN-SOURCE FLOOD</a></li>
+<li><a href="#s11">WAKING UP TO GOODNESS</a></li>
+<li><a href="#s12">LIMITS: SETTING THE AGENT UP FOR SUCCESS</a></li>
+<li><a href="#s13">GOALS, CONSTRAINTS, AND GUARDRAILS</a></li>
+<li><a href="#s14">EDUCATING THE NEXT GENERATION</a></li>
+<li><a href="#s15">QUALITY SHIPPING MATTERS MORE THAN EVER</a></li>
+    </ol>
+  </nav>
+<section>
+<h2 id="s1">THE JUNIOR ENGINEER WITH UNLIMITED ENERGY</h2>
+<p>I like the idea of setting the junior engineer up for success. But I also call out that in a world where you're the expert, the AI is the junior engineer with unlimited energy. So give it the toil. And in a world where you're maybe not the expert — like I don't know Rust — I think of the AI as being more senior to me, until my code smell ability meets it or exceeds it, and then I start treating it again as a junior intern with a lot of energy.</p>
+<p>A CHAOTIC AND INTERESTING MOMENT IN SOFTWARE</p>
+<p>We're in an interesting place right now. We're people of a certain age with a certain amount of history and context, at a moment in computer science where more stuff is changing than at any time I can remember. I cannot think of a time more chaotic and interesting than the one we're in right now.</p>
+<p>It's a super interesting time. One analogy I like to use is that people entering software engineering today have wizard powers in their hand. They've got the magic staff — they can bang the ground and up comes the magic construction of a piece of software using modern coding agents. It's extraordinary powers, and there's a lot to learn about how to use them well: in teams, in companies, and in understanding the ramifications of having rooms full of wizards working together. These are incredible, changing times for software development.</p>
+</section>
+<section>
+<h2 id="s2">IS THE CRAFT DYING?</h2>
+<p>Do you mourn the loss of the craft, or do you think the craft is just changing? We've been handed a power tool, and people who chop trees down with axes might be sad about the advent of the chainsaw.</p>
+<p>I'm not one to mourn. I love the craft. I've invested a lot of time in making much better experiences for developers — making software you can rely on, with strong construction guarantees. If you look at getting rid of nulls all the way through software, just making robustness in the underlying structures — that's all still relevant. Those themes are going to come back in one way or the other.</p>
+<p>As much as people are happy vibe coding up Python and the like, there is still a notion of better software. A lot of the work we're doing is about getting the best of both worlds: how do you empower the developer to be running full throttle — not necessarily in vibe coding mode, but certainly where creative vibe coding can be part of it — using task-oriented programming, Copilot in GitHub, or whatever you're using, and yet still have them be strong in their construction. You want good performance, solid software, well-tested software. You want to achieve all the notions of quality in software that we still need to be chasing after.</p>
+</section>
+<section>
+<h2 id="s3">THE RING LIGHT AND THE SDLC</h2>
+<p>One of the examples I use when teaching this stuff is a silly little trivial app: a Windows ring light. It draws a rounded square on your screen and uses the brightness of your LCD to give you a light, like a ring light. On its face, I vibe-coded a rounded white square.</p>
+<p>Someone could look at that and say, &ldquo;Well, that's trivial. That's a one-shot, one-prompt vibe-coded thing.&rdquo; But then I say it has a GitHub workflow. It has signed certificates. It has a packaging model. It has changelogs. It has tests. It has an automatic updating system. It works on this operating system and that one. There's a software development life cycle even around something as trivial as shipping a rounded square. That's important for people to remember.</p>
+<p>Absolutely. One case I came across was where the agents in a repository proactively suggested I use NuGet trusted publishing on nuget.org. I hadn't actually set up the repositories to do this before, and it was amazing because the agents proactively kick in and say, &ldquo;Hey, you can improve your engineering along this dimension.&rdquo; Of course, I've got to double check that and be in control — these are critical aspects about how to shape software and actually get it out to customers.</p>
+</section>
+<section>
+<h2 id="s4">EMPOWERING MAINTAINERS TO SET THE DIRECTION</h2>
+<p>If the corpus of material is the last 50 years of programming — or at least the last 20 or 30 years of it being online — are we at a place where AI is just going to produce the statistical mean of the software development life cycle? How do we improve things if we're training on workflows that already exist and are mediocre? Who owns best practices?</p>
+<p>Something that's really important in our current work is that we be about empowering the repository maintainers, repository owners, and core engineers who are shaping the whole direction — who can also be product managers, with stronger connections to product. We want to empower them to set the tone and the direction, and to be in control of the automation they're using in their repositories, and what goals are being chased after by that automation.</p>
+<p>It's clear we're at a point where you can specify the goals of a repository and the agent's going to chase after those goals with great vigor. But someone's got to be there setting up the right feedback loops. For example, if you're going to have it chase performance goals, it really helps to have production profiling, production telemetry data, and metrics flowing into the loops that are about self-improving the software as it goes.</p>
+</section>
+<section>
+<h2 id="s5">FOR LOOPS AND AMBIGUITY LOOPS</h2>
+<p>I call them the ambiguity loops. There are for loops, and then there are ambiguity loops. For loops are deterministic, programmatic, and clear — &ldquo;I'm doing a thing and it's unambiguous.&rdquo;</p>
+<p>But the power of an ambiguity loop is the amount of flexibility it has to make the decision it needs to, to solve the problem it faces in the moment. If something is fragile, I can either make it less fragile by making my for loop more robust — putting in error handling and checks and asserting my assumptions — or I could introduce an ambiguity loop that has a little more flexibility in its ability to change and make decisions to make the software more robust.</p>
+<p>But that ambiguity loop itself requires checks and balances, tests, and all the things that make software good — whether it be a check for cyclomatic complexity or a series of tests that indicate what success looks like. Unchecked ambiguity loops are where AI software goes off the rails, and good software engineering is what keeps it on rails.</p>
+</section>
+<section>
+<h2 id="s6">CONTINUOUS AI: THE THIRD PILLAR</h2>
+<p>The term we've been throwing around to package what's happening in the SDLC is this: we love continuous integration, we love continuous deployment — those are absolutely critical parts of the software industry going forward. But it turns out there are two pillars of a stool. There's a third leg we need to add: continuous AI.</p>
+<p>Continuous AI is about these ambiguity loops, these soft judgments that need to be made about software. For example, you have continuous documentation. When you do continuous documentation, you've got a lot of judgments to make. Do you update the docs? Did someone update the docs and you've actually got to update the code? You've got to make judgments about how to update the docs. Of course, a human needs to be there checking that the doc updates are good and guiding the process.</p>
+<p>We obviously want continuous integration and continuous delivery. I want to add a third link: continuous documentation. But it's not just that. We can be doing continuous triage. We can do continuous code simplification — why not improve your code continuously? Continuous test improvement. Continuous reporting of security analyses or other analyses over your code.</p>
+<p>This is the world we're heading to. It's really important to see that it's additive, because DevOps becomes even more important. There's a strong culture in DevOps — people are for CI and CD, and you don't want non-determinism. There's a huge culture around determinism in that space, and that's great. We love that. But you have to open your mind a little bit and say: let's also bring continuous AI into this, to allow these powerful tools to be present in the SDLC, yet still under human control. There are interesting cultural shifts that are going to happen in the whole world of DevOps and SDLC.</p>
+</section>
+<section>
+<h2 id="s7">ARE YOU SELLING AI?</h2>
+<p>I got a negative comment recently on one of my Instagrams, where I put out clips of our shows, and someone said the podcast lately had become an AI selling machine. What do you say to someone who says, &ldquo;Oh man, Don, that was my guy — I love F# and I love all the work Don's done for the last 30 years, and now he's selling AI&rdquo;? Are you selling AI, or are you meeting the software development life cycle moment and trying to meet it with integrity?</p>
+<p>You get the reactions, and there is some snake oil in the AI industry — that's true. But we have to shift the conversation about the future of software development to understand how developers can be given the power to decide how much automation they use and what kind of automation they use.</p>
+<p>That's exactly what we're doing with GitHub Agentic Workflows. Just like in CI/CD — how did we resolve that conversation about how continuous integration and continuous deployment happen? The resolution for a huge portion of the industry is found in GitHub Actions and GitHub Actions YAML: developers are given a quite powerful set of tools to decide how CI/CD happens in their repo, how builds happen, what automation means in their repositories.</p>
+<p>I'm all in favor of giving that power to teams, repository maintainers, and individual developers to say: let's solve this question the same way. I don't know how much AI you should be using in your repository. I don't know what your constraints are. You should be given the power to decide how much to use and how to guardrail it. And at the outset, we should give, by default, extremely strong guardrails to make sure whatever happens proceeds safely.</p>
+</section>
+<section>
+<h2 id="s8">WHAT IS AN AGENTIC WORKFLOW?</h2>
+<p>So, a GitHub agentic workflow. At some level, it's really simple. You've got some front matter and some markdown. You can think of this as a bit like a prompt. In fact, the markdown is going to end up in the hands of a coding agent and it's going to be run in a sandbox in the context of your repository. It's going to do all the magical things coding agents can do, except it's being run with extremely strong constraints around it.</p>
+<p>It's going to be run in read-only mode. It can't do any write actions to GitHub. It's going to hand off its results, they're going to be checked further, and then they're going to be applied.</p>
+<p>At the top of an agentic workflow, you have: here are the tools that will be available, here's what it can read from GitHub (usually limited to the repository itself), and here are the outputs it can make. We call those &ldquo;safe outputs,&rdquo; and they're an extremely guardrailed set. For example, you can say it's allowed to add a comment to an issue — but not to any issue. It's only allowed to add a comment to the issue it accepted as input. &ldquo;That's all you're allowed to do, Mr. AI Agent. You can deliver your comment.&rdquo; And we're going to check that a little more with another agent — we check that it looks safe — and then you can make the comment.</p>
+<p>An agentic workflow is sort of a pure expression of intent. It's just saying: here's the markdown, here's the intent we have. &ldquo;We'd like you to do an analysis of the issue and report back possible useful resources from the documentation sets we have for investigating this issue.&rdquo; If that's the AI automation you want in your repository, you can set up those automated responses. You can get it to write the markdown so things are collapsed and not too intrusive. You're in charge of how the automation proceeds.</p>
+<p>It differs from regular YAML because it's intent-based, and there's an implicit use of a coding agent to do the core of the work. You can mix the two. You can have an initial section that does traditional YAML to collect data — for instance, if you want to triage all issues in a repository, you can list out 500 issues, grab all the unlabeled ones as a dataset, and then have the agentic step work on that dataset and output a whole lot of labels to apply.</p>
+</section>
+<section>
+<h2 id="s9">REPO ASSIST: A SUCCESS STORY FOR TECHNICAL DEBT</h2>
+<p>Give me a success story. People might be saying this is all very squishy — tell me how I can use this today to make my life better.</p>
+<p>One use of GitHub Agentic Workflows is a workflow I put together called repo assist, looking at it from the point of view of life as a maintainer. I was in a particular repository with a fair chunk of technical debt tracked back over years — maybe 200 issues going back years that you've never been closing out. You've got this guilt as a maintainer where you say, &ldquo;I'm not taking this software forward because of all this technical debt. What do I do with this repository? I'm not properly maintaining it, and I want an assistant.&rdquo;</p>
+<p>So you install repo assist. It's dead easy to add: you run `gh aw add wizard`, then add repo assist, and it takes you through the process of setting it up. It installs one YAML workflow — one agentic workflow — into your repository under .github/workflows. By default, it runs four times a day. You can also run it in a repeat mode that blasts away for 30 days' worth of work just by passing `--repeat 30`, and you get a whole lot of assists coming through the repo.</p>
+<p>Before running it, you can configure it — it's under your control. But the default configuration chooses between different repository maintenance tasks. It can label issues (if there are unlabeled issues, that's the first thing it focuses on). It'll try to fix bugs. It'll propose engineering improvements to the repository by creating issues. If it's open to pull requests, it'll update its own pull requests. It'll also prepare releases — it won't make the release, but it'll make sure everything's in order according to guidelines for moving toward a release: release notes, whatever else needs to be done.</p>
+<p>I've used it in about seven repositories now. Take one: FSharp.Control.AsynchronousSequences. It's a piece of software very dear to my heart — one of the first ever implementations of asynchronous sequences, widely used in the F# community. We had about 50 issues in that repo, and it just either made very good comments on the issues (it was set up to be able to do that), and I was able to close out about half the issues with really good solid technical analysis.</p>
+<p>These days, if you get an issue into a repository, what's the first thing a maintainer is likely to do? Use a coding agent to help understand the issue. This automates that step. Of course, the human needs to be in control of actually checking those results. Each day you get a set of links of things you should check, comments you should check.</p>
+</section>
+<section>
+<h2 id="s10">REVIEWING AT SCALE AND THE OPEN-SOURCE FLOOD</h2>
+<p>In this world now, I'm spending 90% of my time reviewing stuff that AI has generated. We're producing artifacts faster than the community — than I — can manage as a human. If you take that combinatoric and apply it to open source: issues are coming in, pull requests are coming in, open-source maintainers are getting overwhelmed, and no one knows if a PR was AI generated or not, or if the person is a good committer. Peter Steinberger from OpenClaw is a great example — people are using their OpenClaw to make pull requests to OpenClaw. He needs to bucketize all those issues — he might have 10 PRs that all represent the same problem. Historically, that's been done manually. That seems like a perfect opportunity for an agentic workflow to step in.</p>
+<p>Absolutely. You install it and think about what problems you're having in the repository and what help you actually need. Getting an agentic opinion about how this issue relates to all the other issues in the repository, prepared and ready for the maintainer to work on — that's absolutely in the zone of what we're enabling with agentic workflows.</p>
+</section>
+<section>
+<h2 id="s11">WAKING UP TO GOODNESS</h2>
+<p>Once you crunch through the technical debt — that itself is an incredibly freeing process. You feel like you're coming alive as a maintainer again. You've got this software you love, and it's reached that stage where it's become a bit of a burden — technical debt. You crunch through that and it goes back: the agentic workflows go back over old issues from, say, 2021, find an issue where there was a real bug that hasn't been fixed, and bring you the fix. Of course you're in control — nothing gets merged, and all issue comments should be checked by a human. You get to bank that fix or close out the issue by saying, &ldquo;Actually, we don't really care about that.&rdquo; The technical debt gets crunched away through this automatic process, all in the context of GitHub and the repositories you're using today.</p>
+<p>I've absolutely adored being a maintainer again. I feel like I've come alive as a maintainer on about six or seven different repos. I find I'm collaborating better with the humans in the repository. You've got to be aligned — maintainers absolutely have to be talking to each other. The worst thing you can do as a maintainer is just bring things in against the wishes of the other active maintainers. So you've got to have good discussions. But I find it raises the level of collaboration to be much more about guidance, specification, and direction. The focus shifts more to the issues and less to the pull requests. The pull requests you've got to review closely, but the collaboration between maintainers can be much more around what we actually want for this repository and where we're going.</p>
+<p>My typical morning: I wake up on my phone and say, &ldquo;Ah, what's it done for me this morning?&rdquo; This morning I woke up and went to FSharp.Control.AsynchronousSequences. Yesterday I had dropped in an issue saying, &ldquo;Hey, since you've cleared out all the technical debt, how about working on performance — there's an issue there.&rdquo; During the night, repo assist woke up, kicked in, and did some work — it optimized three different functions in the library. It's a beautiful morning because you deliver these performance optimizations to software you care about. You're waking up to goodness, waking up to sunshine. I've got no problems in these repos anymore. It's pure happiness progressing along. It's a taste of what's ahead — of how automated AI can really counter some of the narratives about slop and AI generation, because it can clean up this stuff. It can make your software better. Set it in the right direction, and you're going to get the improvements you want.</p>
+</section>
+<section>
+<h2 id="s12">LIMITS: SETTING THE AGENT UP FOR SUCCESS</h2>
+<p>There are limits to this. There are early versions of this where we installed into repositories without talking to enough of the maintainers, and some maintainers said, &ldquo;Look, this one is wrong — this is not a good suggestion.&rdquo;</p>
+<p>I've got a blog at dsyme.net, and one post is about automatic performance engineering, with an example of a small library that benefits from semi-automatic performance engineering. If you're in a C++ library that takes 30 minutes to build and hasn't got good microbenchmarking setup, automatic performance engineering is probably not going to work out well. To do automatic performance engineering, you've got to be able to take really good microbenchmarks — like BenchmarkDotNet or whatever you're using.</p>
+<p>How well the engineering is done matters. We all know about AGENTS.md and setting up agents for success in the repository. If you're going to get it to do more advanced software engineering tasks like performance engineering or test improvement, you really need to be setting the automated coding agents up for success. That means investing in making benchmarking sweet in the repository. It might mean doing manual verification that whatever performance was measured in a GitHub Actions VM actually checks out on a real machine. There's serious engineering that needs to be done — that needs some of the best talent in the industry guiding and shaping how these agentic experiences explore the design space.</p>
+<p>It really comes down to the harness. If the ambiguity loop has no bounds, it will make stuff up. It will make slop. The slop people are experiencing is because you left it up to interpretation. Tests and performance microbenchmarks reduce or remove that up-for-interpretation moment.</p>
+</section>
+<section>
+<h2 id="s13">GOALS, CONSTRAINTS, AND GUARDRAILS</h2>
+<p>I love this question of how ambiguous a workflow should be and where the guardrailing should be. The framework I usually use is: you've got goals, you've got constraints, and you've got guardrails. That's a magic combination.</p>
+<p>I also think about setting the engineer up for success. If you think of the agent as a junior performance engineer — or probably much worse than that — they're not necessarily good at doing performance engineering, and they might lag in their results. Some of these agents do have a tendency not to reveal fully whether they, for instance, ran proper before-and-after tests on the performance of a piece of software. So you've got to set the agents up for success, and you've got to set the human reviewer up for success to correctly review the proposal the AI is coming up with.</p>
+<p>I like the idea of setting the junior engineer up for success. But in a world where you're the expert, the AI is the junior engineer with unlimited energy — so give it the toil. In a world where you're maybe not the expert — like I don't know Rust — I think of the AI as being more senior to me, until my code-smell ability meets or exceeds it, and then I start treating it again as a junior intern with a lot of energy.</p>
+</section>
+<section>
+<h2 id="s14">EDUCATING THE NEXT GENERATION</h2>
+<p>I was cautious there about using anthropomorphization language. I don't like anthropomorphization, and I want to take that back. One of the things I really love in this space is thinking about the education aspect — we can shape the education of people coming through universities and through the first part of their learning process so they can do this well.</p>
+<p>I absolutely believe they're able to be great engineers in this kind of automated or agentically assisted software engineering. I believe every university should have a course on agentically assisted or AI-assisted software development, exploring the space and the ramifications of what's happening.</p>
+<p>So all the juniors on this call: go learn what makes software great, learn what makes software good, learn what good performance engineering means, learn what good test engineering means, learn how to make great tools under the hood — because these days, tools are easier than ever to make. There's so much potential to be great at the craft of guiding software to the place it needs to be. We're all sculptors these days, or something like that — everyone uses different analogies — but you can sculpt the software, and you've got to start on that journey today.</p>
+</section>
+<section>
+<h2 id="s15">QUALITY SHIPPING MATTERS MORE THAN EVER</h2>
+<p>There's a moment here. As young people come out of school having learned computer science, software engineering — the actual practice of shipping quality software — is the skill that needs to be. Good decisions, good judgment. The toil will go away, it'll fade into the background, but being able to make and ship quality software matters more than ever before.</p>
+<p>So you're working on GitHub Agentic Workflows: automated markdown workflows, AI-powered decision making, tightly integrated with GitHub. You can use whatever AI engine you want — Copilot, Claude, Codex, whatever makes you happy — and you can learn more about continuous AI. Check out GitHub Agentic Workflows and you'll learn all about how repository automation is making Don love being an open-source maintainer again.</p>
+</section>
+</article>
+<a href="#" class="back-top" id="backTop">↑</a>
+<div class="resume-banner" id="resumeBanner">
+  <span id="resumeText">📖 Resume where you left off</span>
+  <div>
+    <button onclick="resumeReading()">Resume</button>
+    <button class="dismiss" onclick="dismissResume()">✕</button>
+  </div>
+</div>
+<script src="../../js/reader.js"></script>
+</body>
+</html>

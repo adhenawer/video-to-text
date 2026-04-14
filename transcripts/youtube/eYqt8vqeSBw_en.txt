@@ -1,0 +1,174 @@
+================================================================================
+OPENING: FROM IDEA TO PRODUCTION IN 48 HOURS
+
+Welcome to the webinar. Today we are talking about going from idea to production — how to deploy your own custom application in 48 hours. Just a few months ago this subject would have seemed completely unreal and unbelievable. It is now a reality, provided you understand a few specific things.
+
+The session is hosted by Errol, joined by Kane Hooper, COO of Reinteractive. Kane has a long background in AI and machine learning: he first interacted with a primitive conversational program on an old IBM computer as a child, and over the past decade has architected machine learning tooling for finance clients (revenue and expense projections using statistical mathematics) and helped the New South Wales State Library build the Amplify product, which transcribed fifty years of oral history recordings with roughly 80% accuracy before community validation.
+
+Since the arrival of ChatGPT three years ago, Kane has gone all-in on AI. He left a Master of Applied AI program midway because the university could not keep pace with the changes in the field.
+
+================================================================================
+THE PARADIGM SHIFT OF THE LAST THREE MONTHS
+
+The models are definitely getting better, but the real shift in the last few months has been tying everything together from an agent perspective. A full orchestrated platform can now use a large language model for reasoning while surrounding it with tooling — to read code files, run things on the internet, and perform many other actions that make LLMs dramatically more valuable.
+
+Kane has been working for three years on getting agents to code at an extremely high level of quality and security. Technology has now reached a point where an entire coding orchestrator is feasible. It still requires technical review and human intervention, but well-run agents can code at about five times the speed of a single developer while maintaining high security, high quality, and, importantly, without AI slop.
+
+================================================================================
+TWELVE MONTHS OF EXPONENTIAL CHANGE
+
+A year or a year and a half ago, a piece of software that would take roughly six weeks for a skilled developer and project manager could be sped up by about 20% using early AI tools like GitHub Copilot. This was broadly true across most types of applications.
+
+Around December everything started to change. That 20–30% gain jumped to 90–95%. A six-week piece of work can now be done in about a week — but only if you know what you are doing. It is very easy to get wrong.
+
+If you open Codex or Claude Code and type “program me a snake game,” you will get a playable Python game in a couple of minutes. That is trivial. But if you ask for an application with high security, high maintainability, and high usability for complex tasks, that is where things fall apart without the right approach.
+
+================================================================================
+VIBE CODING VS. AGENTIC ENGINEERING
+
+The market has been flooded with vibe-coding tools — Base44, Lovable, Replit and others. They are genuinely great for the amateur building a personal calorie-counting dashboard or a hobby project. For individual use they are amazing.
+
+Agentic engineering is a different category. The difference between vibe coding and agentic engineering is the difference between something that will leak data, crash under stress and open severe security vulnerabilities, and something that is highly constrained, enterprise-secure, enterprise-scale, but still built at the speed of AI.
+
+A recent public example: an AI agent deleted an entire production database for a serious company. Letting unrestricted AI loose on a production environment is rule number one — never, ever do it. In the wrong hands, AI exacerbates the fundamental flaws of large language models.
+
+================================================================================
+THE NEW POSSIBILITY FOR NON-DEVELOPERS
+
+A year ago, a person with a brilliant app idea would have had to hire a firm, go through many discovery conversations, approve UX, scope, and development, spend a serious amount of money, and wait around six months for a deployable product.
+
+Today, that same person can build it themselves — provided they use the safeguards being discussed here. The safeguards are not obstacles. They are what let you ship something at enterprise level, that is professional, that can be marketed, and that can be listed on the App Store, Google Play, or deployed as a web application without turning into a liability. Properly done, a meaningful application can be delivered in 48 hours to a week.
+
+On a recent client engagement, Kane applied these principles to what would previously have been a 12–15 week project. Half of the project — including discovery, design and build — was delivered in six days.
+
+================================================================================
+GARBAGE IN, GARBAGE OUT: STILL THE FIRST PRINCIPLE
+
+Speed to market is going up and the cost of development is converging toward zero, but never quite reaching it. If done incorrectly, that downward curve becomes parabolic: costs plummet and then spike exponentially because the codebase is a minefield.
+
+Since the ENIAC computers that plotted NASA’s launch trajectories (as shown in the film Hidden Figures), the most important principle of software has been garbage in, garbage out. Over roughly the last 18 months, everyone seems to have forgotten it.
+
+Garbage means ambiguous inputs, unclear requirements, contradictory specifications, or corrupted data. If a client feeds a vague description into a development team, a vague product comes out the other end and the client says “that is not what I wanted.” This is why great project managers have been so valuable: they are the guardrail against garbage at the input.
+
+AI is an accelerant for everything — including garbage. Think of water in a pipe: a small flow makes small leaks hard to find, but flood the pipe and every leak sprays. Feed an agent poor specifications and it will spring leaks in every direction.
+
+================================================================================
+DEMO: VIBE CODING A CALORIE COUNTER
+
+In a live demonstration, Gemini was asked to build a calorie-counting page in HTML, CSS and JavaScript with essentially no constraints. In about a minute it produced a playable, somewhat functional result. That is vibe coding: no real specification, just throw it at the AI and see what comes back.
+
+In a second pass, a screenshot of another attractive application was attached as a visual reference before asking for the build. The result looked considerably better — even if most of the buttons were not wired up yet. Speed of design iteration has collapsed from several days with a designer to seconds.
+
+The lesson: to prevent garbage, ground the agent in context. A design reference is one form of grounding. The designer is still more valuable than the model’s built-in average, because the model outputs the average of everything it was trained on. Any specific input you give raises the floor.
+
+================================================================================
+GROUNDING AGENTS IN TECHNICAL CONTEXT
+
+Grounding extends through every stage of the development lifecycle. Once you move from design into coding, the agent needs to be grounded in the technical realities of the stack. If you are using Ruby on Rails, feed it the official Ruby on Rails documentation. Feed it the existing codebase. Make sure it understands what patterns are already used so it continues to follow them.
+
+Garbage in, garbage out is one principle. The other two big principles of working with AI are hallucination and drift.
+
+================================================================================
+DRIFT: THE QUIET FAILURE MODE
+
+Drift is rarely discussed but critical. An agentic coding workflow goes through many steps: design, user interface, database, security, background logic, and so on. Drift is when the agent slowly moves away from your original intent across those steps.
+
+Even if the input was good and you wrote a careful specification document, the agent tends to diverge as it builds more features. Part of the reason is context: the agent has a finite memory window, while the application keeps growing.
+
+All AI models are probabilistic. There is no actual reasoning — only probability patterns learned from enormous amounts of human data. The model has found that when humans do A, they usually do B next. In software it works the same way: if you build a login page, it will suggest a forgot-password flow.
+
+But your intention may not sit on the statistical average. Ideally it does not, because you want to build something new. Left unguided, the agent converges to the mean and drifts away from your idea. Correct instructions, prompts and use of agents keep it on your path rather than its path of least resistance — and this requires a lot of guardrails. This is where agentic engineering comes in.
+
+================================================================================
+WHY AI-GENERATED WORK ALL LOOKS THE SAME
+
+Anyone who has asked agents to write blog posts has noticed they start to sound the same. The similarity is detectable — there are tools that flag AI-written articles, and search engines almost certainly do this behind the scenes. AI blog posts typically produce a traffic spike followed by a collapse, while organic writing gets a consistent uptick.
+
+The same pattern appears in vibe-coded applications. One example: someone built a research tracker for critical neurological illnesses to log medications and effects. Within five seconds of seeing the app it was obvious it had been vibe coded — the giveaways are everywhere, from em dashes in text to recurring phrases like “game changer” and “let’s delve into,” to the now-familiar purple-to-blue gradient dark mode. When asked, the builder confirmed it was 100% vibe coded. The aesthetics are identifiable, and the quality underneath is the real concern.
+
+================================================================================
+WHAT AGENTIC ENGINEERING ACTUALLY IS
+
+Vibe coding is great for prototyping, personal projects, and fun experimentation. Agentic engineering is the engineering discipline around agents: controlling and guiding them to produce specific, intended outcomes.
+
+That means output that matches a specific design, follows the original intention without diverging, and meets enterprise-grade security standards — the opposite of the disasters waiting to happen in most vibe-coded apps. It is not letting the agent go free. It is very specific agent actions, with very specific evaluation points, with humans in the loop at very exact and specific moments. Done right, this is how you get the 5× speed with enterprise-level security.
+
+================================================================================
+MAINTAINABILITY AND TECHNICAL DEBT
+
+A working application is like a house: things fall apart, you add rooms, you change things, nothing stays still. If you want it to live beyond a few months it must be maintainable. This is the most misunderstood part among non-developers, who assume a program, once written, just runs forever.
+
+AI left to itself tends to write single files. A 2,000-line application gets jammed into one file, and without precise guidance it will not refactor. This is classic technical debt — eventually you must come back and clean it up.
+
+Agents can coast on unrefactored code longer than a human can because they consume far more context. But they also expand the mess faster. At a certain critical mass even the agent can no longer fix it, and a human must spend copious hours untangling the codebase. Research shows AI-coded applications are introducing bugs on average 2.7 times faster than human development.
+
+Worse, agents often do not fix bugs — they layer workarounds on top, taping new paths around the broken one until the original bug is never resolved. You end up with the appearance that it works.
+
+================================================================================
+A CAUTIONARY TALE: AGENTS IN PRODUCTION
+
+One staff member at Reinteractive, a skilled currency trader building trading bots, violated his own principle and let an agent touch production infrastructure. Over a weekend the agent spun up ten times the required number of servers. His bill was set to jump from around $200 to several thousand dollars.
+
+The classic pattern: the code had a bug and was slow, so the agent’s solution was to add more instances. Money means nothing to the agent unless you constrain it with guardrails.
+
+================================================================================
+THE EVOLUTION: PROMPT, CONTEXT, AGENTIC GUARDRAILS
+
+First we had prompt engineering — how to write your prompts. Then context engineering — how to ground the agent in the right information without over-feeding it tokens, because tokens cost money depending on the model.
+
+Now we are moving into agentic guardrails. In Kane’s view, this is the final step in the evolution toward producing enterprise-secure software at the speed of AI. In five years much of this will be baked directly into the models. But you cannot wait five years and miss five years of revenue. Use the tools now — just understand the limitations.
+
+================================================================================
+THE FRAMEWORK: TICKETS, AGENTS, AND EVALUATION
+
+A basic framework looks like this. First, write tickets: concise statements of what you want done, with enough information — more than you would typically give a human. Each ticket should include the expected outcome and how a human will test it to confirm it is done.
+
+Then, off to the side, agents work on the build. They check for security, check for maintainability, run the test suites, and verify the work continuously.
+
+================================================================================
+THE CONDUCTOR PATTERN
+
+The principle Kane is using is the conductor pattern — an orchestration approach where a top-level conductor guides a number of smaller, highly specialized agents. His current coding pipeline has about 19 sub-agents, each tailored to a single specialty: one action, one responsibility. Examples include an interface agent, a security agent, a deployment agent, and many more.
+
+================================================================================
+INSIDE THE PIPELINE: SCOPE, PLAN, WRITE, VALIDATE
+
+Key stages of the pipeline:
+
+Scope validator — takes incoming scope, checks for ambiguities, conflicting data, and fit with the existing codebase. It loops, asking the user questions or grounding itself against the code, and keeps iterating until its confidence score clears something like 90%. Every issue at the beginning of the chain compounds through the 16+ downstream sub-agents if not caught.
+
+Planner — takes validated scope and produces an implementation plan, grounded in the existing code and the technical documentation of the language. It evaluates and loops until the plan is valid.
+
+Code and test writing — a test writer agent, a code writer agent, a test runner agent and a test fixer agent all loop together until everything passes. Then a refactor agent cleans the code. Then a security review agent checks it. Then a scope-verification agent goes back to the original checklist and confirms everything was delivered.
+
+This is a constant loop pattern of validation. Without it, the pipeline diverges and hallucinates. With it, Kane reports approaching 100% hallucination mitigation — currently around 98%. These are the checks a human developer would normally perform; the difference is the machine does them faster.
+
+================================================================================
+VISUAL VALIDATION WITH PLAYWRIGHT
+
+Another check uses Playwright, a tool that can drive a real browser. Inside what Kane calls his agent cluster, one stage navigates to the website, takes a screenshot, and compares it against the original design to detect divergence. Then it actually exercises the application — clicking the login button, filling in fields, and so on. Any error it finds is sent back to the beginning of the coding flow.
+
+In some ways this resembles the earliest days of BASIC programming thirty years ago, where code was full of GOTO statements that looped back to line 10 to start again. Agentic engineering is currently at that relatively primitive stage: lots of loops, lots of backtracking. It will become more sophisticated. But this extensive pattern — evaluate scope, write tests, write code, run tests, check security, refactor, visually verify, loop back on any failure — is how you produce enterprise-secure software at the speed of AI today.
+
+================================================================================
+MAKING IT ACCESSIBLE
+
+The question becomes: this is coming from someone with decades of industry experience. Can the same tools be handed to someone who simply wants to build something, without that background?
+
+Kane is building exactly that — the agent cluster tool. He has been doing 16-hour days for a month on it. To his knowledge, nothing else in the public domain does the entire agentic engineering flow end to end. Other tools handle parts of it; companies are surely working on similar things privately. Reinteractive’s internal evaluations show their cluster beating the alternatives by major percentages.
+
+The goal is to make it accessible — not humanproof, because there are still points that require human judgment, but approachable enough that with a bit of education and guidance, anyone can use the tooling to build secure, quality, maintainable applications. You cannot simply be dropped in, or you are vibe coding again. But with the right education the barrier drops dramatically.
+
+================================================================================
+WORKSHOPS: MELBOURNE, SYDNEY, AND BEYOND
+
+Reinteractive is taking this on the road as a series of two-day workshops. The first is in Melbourne, 31 March to 1 April. Sydney follows, with more cities to be announced. The workshops teach exactly the skills discussed in this webinar: how to use agents correctly, the guardrails, and the full flow from idea through to deployment on the web, the App Store, or Google Play.
+
+The goal is for attendees to leave with the beginnings of a real application — or, if they start small, something they can ship live. The scope runs all the way from initial idea to actual deployment.
+
+Typical use cases include the brilliant idea you have been sitting on, something you have wondered why no one has built yet, or automating something inside your business without paying $100,000 to implement Salesforce or some other platform that still will not be tailored to your exact needs.
+
+================================================================================
+CLOSING
+
+The point of the workshop — and of the broader shift described here — is to empower people to build for themselves. Speed to market is now multiples higher than it was a year ago, and the cost curve is collapsing. The tools are real, the limitations are real, and the guardrails are what separate a shippable product from a liability. Use the tools now, understand what they cannot yet do, and start generating value.

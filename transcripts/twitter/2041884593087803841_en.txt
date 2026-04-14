@@ -1,0 +1,241 @@
+================================================================================
+INTRODUCTION
+
+My name is Inseo. Today I'd like to cover agentic AI, agentic language models, as a progression of language model usage. Here is the outline of the talk: we'll go over an overview of language models and how we use them, their common limitations, and some of the methods that address those limitations. Then we'll transition into what an agentic language model is and its design patterns.
+
+================================================================================
+WHAT IS A LANGUAGE MODEL
+
+A language model is a machine learning model that predicts the next word given an input text. For example, if the input is "the students open their," the language model can predict the most likely next word. When trained on a large corpus, the model generates a probability distribution over the vocabulary. In this example, "books" and "laptops" have a higher probability than other words, so the completion might be "the students open their books."
+
+If you want to keep generating, you feed the output back in as input, and the model continuously generates the next word.
+
+================================================================================
+HOW LANGUAGE MODELS ARE TRAINED
+
+Language models are trained in two main stages: pre-training and post-training.
+
+In pre-training, models are trained on a large corpus of text collected from the internet, books, and other publicly available sources, using next-token or next-word prediction as the objective. After pre-training, models are fairly good at predicting the next word given an input, but this pre-trained model itself is not easy to use directly.
+
+That's where post-training comes in. Post-training includes instruction-following training and reinforcement learning with human feedback. A dataset is prepared with specific instructions or questions paired with the expected answers or outputs, so the model learns to respond as users expect and in specific styles. Alignment to human preference is then done via reinforcement learning with human feedback, using reward schemes based on human preference.
+
+================================================================================
+THE INSTRUCTION DATASET
+
+The instruction-following training phase uses a template where a specific instruction is substituted in, and the expected output is substituted in. This is fed to the model, and the model is trained only on the response part — generating the output based on the given instruction.
+
+================================================================================
+LANGUAGE MODELS IN APPLICATIONS
+
+A model trained through both pre-training and post-training is quite capable of generating text given an instruction. It carries a lot of world knowledge. These models are rapidly developing and are used in many application domains: AI coding assistants, domain-specific AI copilots, and the widely known ChatGPT-style conversational interfaces.
+
+To use these models for your applications or tools, you can make cloud-based API calls to the model provider, or host the models on your own local or even mobile machines, for models small enough to run in compute-constrained environments.
+
+================================================================================
+HOW API CALLS WORK
+
+Language models take natural-language input text and generate output text. You prepare a free-form natural-language instruction or question, format it for the model provider's API, and make the call. The provider — usually in a cloud environment — runs the model and responds with the generated output. Your software parses the output and uses it.
+
+Because the input is free-form text, how you prepare the input — known as prompting — is critical.
+
+================================================================================
+PROMPTING BEST PRACTICES
+
+There are well-known strategies for preparing prompts:
+
+Write clear, descriptive, detailed instructions so the model can generate the output you want.
+
+Include a few examples showing the form or style you expect.
+
+Provide references or context so the model relies on them rather than its own (possibly incorrect) knowledge.
+
+Give the model time to think instead of asking it to answer right away — this includes reasoning, chain of thought (CoT), and similar methods.
+
+Break down complex tasks into smaller sequential steps. Chain complex prompts.
+
+Maintain good tracing, logging, and automated evaluation from the early stages of development.
+
+================================================================================
+WRITE CLEAR AND DESCRIPTIVE INSTRUCTIONS
+
+Instead of asking a short request, describe in detail what you want. The model doesn't understand — it cannot read your mind. Describing exactly what you want the model to generate is always useful in general language-model use.
+
+================================================================================
+INCLUDE A FEW EXAMPLES
+
+Give the model example inputs and outputs. If you ask for a consistent style, show what that style looks like with example input and example output, then ask your actual question. Few-shot examples consistently help the model generate outputs closer to what you want.
+
+================================================================================
+PROVIDE CONTEXT AND REFERENCES
+
+This is helpful for cases involving factual information. LLMs can easily generate incorrect output — known as hallucination — for topics they don't know or aren't confident about. Providing context or references reduces this.
+
+A common template: instruct the model to answer only based on the article or reference provided, and to say it cannot find the answer if the reference doesn't contain it. The model will then generate answers grounded in your references. This is especially useful for retrieval-augmented generation, which we'll cover shortly.
+
+================================================================================
+GIVE MODELS TIME TO THINK
+
+Instead of asking a direct question, ask the model to think through the problem or come up with its own solution, then compare and generate the final output. This is known as chain of thought.
+
+For example, asking a medium-sized model to evaluate whether a student's solution is correct may fail if you just ask for a yes/no. But if you prepare the prompt to first have the model work out its own solution and then compare it to the student's solution, the model generates its own reasoning, attends carefully to the inputs, and arrives at the right answer more often.
+
+================================================================================
+CHAIN COMPLEX PROMPTS
+
+Instead of putting multiple tasks in one request, prepare prompts in small, simple stages. Generate the output of stage one, prepend it to the stage-two prompt, generate that output, prepend it again, and so on. You may do this manually, or — as we'll see later — have an LLM do it for you. Simple, clear tasks per request work better.
+
+================================================================================
+TRACING, LOGGING, AND EVALUATION
+
+As with any engineering application, tracing and logging help with development, debugging, and auditing. The same applies to language-model-based development.
+
+Automated evaluation from the earliest stages is essential. Prepare a question-and-answer pair — a ground-truth pair — so you can compare generated output against it. Human evaluation is costly and slow, so you can use a language model as a judge: ask an LLM to evaluate the model's output against the ground truth and score it.
+
+This matters because language models — and the methodologies and tools around them — improve rapidly. Without clear evaluation, it's hard to make forward progress or swap models. Models are also deprecated rapidly, which may force you to change the model your application uses. A solid evaluation methodology upfront makes all of this manageable.
+
+================================================================================
+PROMPT ROUTING
+
+A simple idea that helps many applications: instead of processing every input the same way, detect the intent of the input and route it to different prompt handlers — a prompt router. Based on the query type, you may use a simpler prompt together with a simpler, cheaper language model. This reduces operational cost and produces more appropriate output, since each query gets a prompt and model tuned to its type.
+
+================================================================================
+Q&A: HOW MUCH DATA FOR FINE-TUNING
+
+Is there an optimal amount of data for training? It depends on your task. If you have a dataset or text you want the model to match, build simple question-and-answer pairs or instruction-following examples. You can use a language model to generate more data synthetically.
+
+Start with around tens of data samples first, see whether the model behaves the way you expect, and based on those signals add more samples. You can also use an LLM to augment or synthesize data.
+
+================================================================================
+COMMON LIMITATIONS OF LANGUAGE MODELS
+
+Even with powerful models, limitations remain:
+
+Hallucination — models sometimes generate incorrect information, particularly around computation or specific domains.
+
+Knowledge cutoff — model providers must cut off dataset collection at some point, so the model may not know recent information or news.
+
+Lack of attribution — the model answers general world-knowledge questions but doesn't tell you which source the answer came from.
+
+Data privacy — models are trained on public data, so they have not seen your organization's proprietary data.
+
+Limited context length — while rapidly increasing, longer context comes with operational cost and higher latency.
+
+================================================================================
+RETRIEVAL-AUGMENTED GENERATION
+
+RAG addresses many of these limitations. It reduces hallucination by grounding answers in actual relevant references, it provides attribution because you know where the reference came from, and it lets you use your own proprietary data. It also makes good use of a small context window because only the relevant data is selected.
+
+How it works: pre-index your own dataset by splitting it into smaller text chunks, converting them into embeddings with an embedding model, and storing them in a database or vector database. When a query arrives, you embed the query, perform a nearest-neighbor search, select the top-K most relevant chunks, and insert them into the prompt. The prompt instructs the model to answer only based on those references.
+
+The same approach applies to AI search. Instead of an indexed dataset, you can rely on a web search or other search provider to supply the relevant information.
+
+There are many retrieval methods. Embedding-based nearest-neighbor search is common, but knowledge-graph-based retrieval — sometimes called GraphRAG — can also extract relevant information by building a knowledge graph from the source text. Pick the method that fits your use case.
+
+================================================================================
+TOOL USAGE AND FUNCTION CALLING
+
+Language models in their most common form take text in and produce text out — they don't execute code or fetch external information. Tool usage, also called function calling, fills that gap. With tool usage the model can get real-time information or perform computation by generating code.
+
+Example: a chatbot is asked "What is the weather in San Francisco?" The model doesn't know. But if you tell the model in advance that weather questions should produce a specific tool-call format, the model outputs something like "get_weather" with "San Francisco" as the argument. The surrounding software parses that output, makes a real API call to a weather provider, gets the result, feeds it back into the model, and the model produces a friendly, human-readable answer.
+
+Models can also generate code that is executed in a sandbox by the software coordinating the interaction.
+
+================================================================================
+DEFINING AGENTIC LANGUAGE MODELS
+
+In simple language-model usage, text goes in and text comes out. In agentic usage, the model interacts with an environment — generating tool calls or retrieval requests — and receives observations from that environment back as input. The whole agentic system — the model plus the surrounding software — processes these interactions and maintains a memory, including conversation history.
+
+Another way to describe this is "reason and act" — ReAct. The reasoning side is encouraged through methods like chain of thought. The acting side uses retrieval, search engines, calculators, weather APIs, or Python code executed in a sandbox. Combining reasoning with action lets the model handle far more complex tasks than simple input/output interaction allows.
+
+================================================================================
+REASONING AND ACTION IN DETAIL
+
+Instead of doing the asked task directly, you prompt the model to break down the task and plan. Rather than you chaining prompts manually, the model breaks things down and plans the actions itself. Based on that plan, the model generates actions — API calls or tool uses — to collect information from the external world. The results are stored in memory so the model knows what has happened, and the model finally produces an answer.
+
+Concrete example — a customer-support AI agent. A customer asks, "Can I get a refund for product X?" The agentic system breaks the request into: check the refund policy, check the customer information, check the product, and then decide what to do. At each step the model emits API calls to collect information. The refund-policy check queries a retrieval system indexed on company policy. Customer-order info may come from a chat back-and-forth with the customer or a system lookup, depending on the setup. Product info is gathered similarly. The model then draws a conclusion, makes the follow-up API calls, and prepares a response draft for a final approver to handle.
+
+================================================================================
+AGENT WORKFLOWS
+
+Agentic language-model systems generally work by having the LLM make iterative calls — reviewing documents or tasks and making external tool calls.
+
+Research agent example — to research some topic, the agent performs web searches or other searches, summarizes findings iteratively, and finally prepares a report.
+
+Software assistant example — a coding agent that reviews a bug or issue, collects relevant code files, proposes a fix, runs it in a sandbox, tests it, iteratively refines the fix, and finally proposes a pull request or change for the developer.
+
+The main reason agentic language-model usage is spreading: for the same underlying model, a direct request may fail, but structured as an agentic workflow the same model can complete more complex tasks. Agentic patterns push the boundary of what current models can do.
+
+================================================================================
+REAL-WORLD APPLICATIONS
+
+Software development — code generation and bug fixing are actively researched and productized.
+
+Research and analysis — agents that gather information, synthesize it, and produce summaries.
+
+Task automation — a broad area where agentic methods work well.
+
+================================================================================
+DESIGN PATTERNS: PLANNING
+
+Planning is critical. Asking the model to break a task down into simpler, clearer subtasks lets the downstream model calls make effective API or tool calls.
+
+================================================================================
+DESIGN PATTERNS: REFLECTION
+
+Reflection is quick to implement and produces noticeably better output. The model generates an initial answer, and a subsequent call criticizes that output and produces a revised version.
+
+Concrete example — refactoring code. Instead of asking the model to improve the code directly, prompt it first with "here's the code, provide constructive feedback." Then in a second prompt, supply both the code and the model's own feedback and ask it to refactor. The refactor is typically better than a one-shot attempt.
+
+================================================================================
+DESIGN PATTERNS: TOOL USAGE
+
+Ask the model to generate API call patterns so you can use the function prototype to make an actual call. For tasks involving computation or specific transformations, ask the model to generate a program as output, run it in a safe sandbox via your surrounding software, and feed the execution result back to the model so it can synthesize a final answer.
+
+================================================================================
+DESIGN PATTERNS: MULTI-AGENT COLLABORATION
+
+Split a complex task across multiple agents, each dedicated to a specific subtask. Each agent is essentially a different prompt or persona — the usual "you are a helpful AI agent" system prompt swapped for a different role. You may or may not use the same underlying model for each agent.
+
+Concrete example — a smart-home automation system with a climate-control agent, a lighting-control agent, and so on. Each agent is a prompt with a persona plus software handling external triggers. A coordinator — a prompt plus scaffolding — orchestrates the whole activity.
+
+================================================================================
+SUMMARY
+
+Agentic language-model usage is a progression and extension of existing language-model usage. The best practices for simple cases still apply. On top of those, you add retrieval, search, tool usage, and different prompt workflows. The language model becomes the reasoning core, while tool usage and retrieval connect it to the external world. Combining these lets you accomplish complex tasks that pure input/output interaction cannot.
+
+================================================================================
+Q&A: EVALUATING AGENTS
+
+LLM-as-a-judge is a common evaluation method — use an LLM to evaluate model-generated output against a ground-truth reference. A recent improvement is an agentic judging pattern using reflection: first ask one LLM call for an initial evaluation and feedback, then ask a second LLM call to play a "senior engineer" comparing the "junior engineer's" evaluation against the actual output. This reflection approach produces better evaluations than one-shot LLM-as-a-judge.
+
+There is room for more creative agent-pattern-based evaluation. Evaluation is critically important because it lets you advance quickly, change models, and change prompts with confidence.
+
+================================================================================
+Q&A: SHAPING AGENTS FOR SPECIFIC USES
+
+If a task is simple, use a simple language-model call. If the task is more involved, experiment with simple agentic patterns — even iterative language-model calls can improve output. Agentic usage can be defined many ways.
+
+Rather than hunting for tasks where you can apply language models, turn it around: ask which of your tasks can't be solved with simple usage, then try simple usage first and improve with patterns from there.
+
+The same applies to fine-tuning. Try the base model first and see whether it suffices. If not, prepare small data samples, iterate quickly, and make progress — instead of investing too much upfront.
+
+================================================================================
+Q&A: ETHICS AND HALLUCINATIONS
+
+Because generation is probabilistic by nature, hallucination is always present, and content-safety concerns exist too. Model providers check generated output across categories, and application builders should add guardrails — checking output with a small classifier or decoder model, filtering inputs at query time, or filtering outputs at the final generation stage.
+
+Input-side filtering can backfire, but for enterprise or business use the safer path is to check both inputs and outputs for safety and reasonableness. The field is evolving, but the fundamental pattern is using classifiers or decoder models to check the output.
+
+================================================================================
+Q&A: HOW TO GET STARTED
+
+Start simple, experiment, and iterate. Agentic language models sound complex, but they are a progression of language-model usage.
+
+There are many language-model and agentic frameworks available, but to start use a playground environment. Most model providers offer playgrounds where you type a prompt and see the output immediately — this lets you experiment fast. Once familiar, call the API from your program and see what happens. This builds insight and prompt-preparation skills.
+
+Once you have that foundation, you can decide whether to continue with your own codebase or adopt a widely available library. Start simple, work in a playground first, make simple API calls, then decide whether to reach for extended libraries. The same approach applies to both language-model usage and agentic language-model usage.
+
+================================================================================
+Q&A: STAYING UP TO DATE
+
+A hard question. Pick a few experts known in the field and follow them — on Twitter or YouTube — and use their updates as starting points for your own digging. Finding good starting points matters. Reference lists that include agentic-usage courses from Stanford and elsewhere are useful jumping-off points.

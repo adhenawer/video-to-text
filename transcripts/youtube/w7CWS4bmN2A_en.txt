@@ -1,0 +1,116 @@
+================================================================================
+THE BIGGEST SOURCE CODE LEAK I KNOW OF
+
+This is, to the best of my knowledge, arguably the biggest and potentially most costly source code leak I am aware of ever. It is that big. This is not you accidentally leaking a couple of source files. This is not you accidentally leaking a couple of passwords. This is leaking the entire source code of arguably a multibillion-dollar product.
+
+The severity of this really cannot be overstated, because the scale is enormous. What leaked, to the best of our knowledge, is the Claude Code web source. I am drawing a clear distinction here on the web source because it is entirely possible that there is a large body of source code — not related to their TypeScript and JavaScript — that was not part of what leaked and is still completely under Anthropic's control. The models themselves, very importantly, do not appear to be part of this leak.
+
+================================================================================
+WAS IT INTENTIONAL?
+
+One of the first questions people are asking is whether this was intentional, given how much hype is happening in the AI space right now and how unclear it can be whether companies are running publicity stunts. My take is that this is absolutely not a publicity stunt and was absolutely not intentional, and there are very specific reasons for that.
+
+The biggest reason is that this leak is actively hurting Anthropic in a variety of ways. A lot of the details emerging are not things that work to Anthropic's advantage. On top of that, if it were a publicity stunt, most serious enterprise customers — companies like Google, Microsoft, Amazon, Oracle, and the rest of the Fortune 100 — would not play a game like this. They are far too serious about their reputation to be seen as laissez-faire about security.
+
+To the best of our knowledge, the leak appears to be an npm registry mistake in a single line. The crux of the problem is that it appears they left a flag on — one that is quite useful for debugging and for tracking down and connecting all the various source code — but they left it on in production. What this essentially allows people to do is very easily map the source code going through their web client back to the actual original source files and reassemble the project, which many people have already done.
+
+================================================================================
+WHY A FRONT-END LEAK IS STILL A HUGE DEAL
+
+A fair question is: if this is just the front-end UI, JavaScript, or TypeScript, what is the big deal? You can go to the website, right-click, view source, and with some amount of work reassemble all of this yourself. That is true, but there are very important reasons this is different.
+
+Because the npm registry information leaked, you can reassemble the project very quickly and put all the pieces together. This lets you reason about the system as a whole. Normally, viewing the source on a site, the pieces are separated and it can be genuinely hard to put them together. It is not impossible, but it is a lot of work. Here, that work is basically done for us. Even better — or worse, depending on your perspective — the reassembly is done without any speculation. There is no guesswork about whether the pieces fit together correctly.
+
+Many of the observations and claims circulating have not been fully verified, and we should keep a lot of this in the "alleged" space. I have not personally verified every fact, because there is simply too much to go through, but the high-level story is clear enough to piece together. Much of the analysis below comes from an individual who ran the reassembled source against billions of tokens in his agent logs using Claude Code itself to make a number of important observations.
+
+================================================================================
+THE EMPLOYEE-ONLY VERIFICATION GATE
+
+One of the most damning findings is an employee-only verification gate. You ask the agent to edit three files. It does, and reports completion with enthusiasm. Then you open the project and find 40 errors. Why? Because the agent's success metric for a file write is exactly one thing: did the write complete? That is it. Not "is the code correct," not "does the code compile," not "did I introduce any errors." It is simply a verification that a write operation to disk happened.
+
+It gets more interesting. In the source code, allegedly, there are explicit instructions telling the agent to verify the work — but only if the user type is "ant." "Ant" is short for Anthropic employee. This means Anthropic employees get a post-edit verification that normal users, you and me, do not get.
+
+On top of that, their own internal comments mention that there is a 29 to 30% false-claims rate on the current model. They know the code it provides is likely to have roughly a 30% error rate, meaning three out of every 10 code suggestions are likely flawed. They have the capability to fix these things — the code to do additional verification exists — but they stop the model short of it if you are not of user type Anthropic.
+
+Also, from a pure engineering standpoint, this is lazy. The enumeration for user types is a string, not an actual enum. If this is a sign of things to come, the undergraduates I teach know how to code better than this.
+
+The good news is that now that this is public, our friend made some edits and the rest of us can benefit. Many people on X have already reported using his updated markdown file to bypass many of these gates, with results that are supposedly pretty staggering in a positive way. So while this seems like all bad news, there are some genuinely good outcomes — not necessarily for Anthropic, but for Claude Code users.
+
+================================================================================
+THE CONTEXT DEATH SPIRAL AND HARDCODED LIMITS
+
+As Claude Code is working, it gets into what can be called a context death spiral. Quality degrades the longer the system runs. But it is not just organic degradation — there are very specific hard limits embedded in the code. It is designed to cap itself. Not because of a technological limitation, but through an intentional reduction of context awareness. The system makes hard-line decisions and discards context, not because it has to, but because it decides some threshold has been reached and takes the shortcut.
+
+This sounds a lot like false advertising. You advertise a one-million-token context window, and then somehow you are cutting the effective limit to roughly 16.7% of the context window you are claiming — and it is hardcoded.
+
+Then there is the brevity mandate, which really gets my goat. The mandates are: simplest approach, no refactors beyond what was specifically asked, and no premature abstraction. What that means is if the agent can just inject spaghetti code to solve the problem, it will, which leads to more spaghetti code. It gives you the appearance of solving the problem reasonably, but under the hood you get code that is basically unmaintainable. It works — and that is all it does. For anyone who has done any reasonable amount of software engineering, it is very easy to write code that works; it is very hard to write code that is maintainable. Writing highly modular, loosely coupled, highly cohesive, easy-to-understand systems with minimal footprint is the actual challenge. Memorizing syntax is junior high stuff.
+
+You can override these mandates, and the markdown file our friend has published essentially does exactly that, forcing the agent to stop taking those shortcuts.
+
+================================================================================
+THE 2,000-LINE BLIND SPOT
+
+Another finding is what can be called the 2,000-line blind spot. The agent reads a 3,000-line file and then makes edits that reference code from line 2,400 — code it clearly never processed. Each file read is hard-capped at 2,000 lines. Chew on that for a second.
+
+It does not matter if the source file has more than 2,000 lines. As a general software engineering practice, limiting files to smaller sizes is probably good, but sometimes that gets away from you and sometimes people simply do not do it. Knowing that the system will automatically hard-cap at 2,000 lines and then hallucinate the rest is not great.
+
+================================================================================
+GREP IS NOT SEMANTIC UNDERSTANDING
+
+Another observation worth highlighting: grep is not an abstract syntax tree, and even ASTs are not perfect, but at least ASTs associate some meaning with syntax. Grep is just advanced regular expression pattern matching. Claude Code uses grep extensively for find-and-replace operations. That means it has no real semantic understanding of the code. Neural networks do not have logical reasoners inside them — there is no semantic understanding, just a bunch of wires and neurons that are pretty good at pattern matching. To associate words and symbols with their meaning across source files, you need something like a semantic or symbolic reasoner.
+
+A concrete example: you rename a function. The agent greps for callers, updates eight files, but misses four that use dynamic imports, re-exports, or string references. The code compiles in the files it touched because it fixed those, but the other files are totally broken. This is made worse by the fact that many of these systems are written in interpreted languages rather than compiled languages like C, C++, Java, or C#. A compiler would have caught the remaining mistakes. Without one, you only see the files that changed, and you are likely to hose yourself unless you manually verify rename and signature changes across direct calls, type references, and string literals.
+
+================================================================================
+VIBE CODING AND THE DEATH SPIRAL
+
+It is worth drawing a distinction between vibe coding and coding assistance. Vibe coding, in my mind, is being one of those people who pushes 10,000 lines of code a day, has no real idea what exists in their system, and probably does not care. The problem is that this is a growing body of logic and spaghetti that something eventually has to reason about, and so you should care.
+
+One of the goals of writing production-quality code is reduction of size. You want to keep your codebase as small as possible, minimize surface area, maximize modularity, and avoid copy-pasted code. These are CS 101 things — nothing earth-shattering. But if you go down the sloppy vibe-coding path where writing 10,000 lines a day is a brag on X, what you are actually doing is accelerating the context death spiral for Claude Code and hurting yourself. You are making your life worse, because these systems will have more to reason about, will hit context limits faster, and the quality of subsequent code will progressively get worse.
+
+Use coding assistants like crazy, but maintain the code, understand it, reason about it, and take mitigation steps to reduce size and ensure correctness. If you want the project to be production quality, quality will become the limiter — not the speed of any particular day.
+
+Step zero of any refactor is deletion. If it is dead code, delete it. You can always pull it back from git history, but get it out of the working tree. Zero dead code means zero code the AI has to reason about, and you are not going to run into thresholds that regulate you, because you are regulating yourself. Humans can do this very easily — we can look at a module and say "we are not using XML anymore, we use the JSON parsers now, so why is the XML parser still here?" Just get it gone. AI systems do not walk the full execution trace in perpetuity to figure out what is not being called; they rely on you to prune.
+
+================================================================================
+CODE QUALITY OF THE LEAKED SOURCE
+
+Because the source code is out, we ran a quick analysis through our tool, Mentor. The quality is, frankly, dark. Nearly 17,000 issues in a source base of less than half a million lines of code. This is not the kind of quality you would expect from a world-class institution. Sorting the actual source files by lines of code, you can walk through them one by one. This is not just prompts — this is actual code driving the system.
+
+For all intents and purposes, leaving the debug flag on in the npm registry is a sophomoric mistake. It is the kind of thing most buttoned-up engineering enterprises simply do not do, because they have rigorous processes with clear divides between debugging, staging, and deployment environments. Even at a tiny company, we have those separations. The fact that this type of thing could happen at Anthropic sends an interesting signal about how much of their code is being written by AI.
+
+We do not know for sure whether Anthropic's AI itself mismanaged the npm registry file. But we do know Anthropic has been leaning in heavily on the narrative that AIs will be writing all the code and moving toward an autonomous state without human supervision. This leak is a very strong argument against that — at least today. I am all for coding assistants. That is literally what Mentor is about. But I am not for a future where the AIs do all the work for us. In a few years, maybe. Based on the data in front of me, we are not there today. Otherwise, this leak does not happen.
+
+================================================================================
+WHY THIS HURTS ANTHROPIC
+
+Will this hurt Anthropic? Yes, and quite a bit. For a normal AI coding company, the damage would still be somewhat catastrophic, but for Anthropic specifically it is worse, because they have been positioning themselves as a very security-minded company trying to level up into the enterprise AI solution. Security is a top concern for enterprise customers. Accidentally leaking the entire source code for one of your premier billion-dollar products is probably not instilling confidence in any enterprise buyer.
+
+There is also the false-advertising angle around context windows, the employee-gated verification, and the reputational damage of what looks like a sophomoric configuration mistake. Anthropic reached out immediately with cease-and-desist letters when people started posting the code online, and you can understand why — there is a lot in here that does not paint them in a good light.
+
+It is unfortunate, because Anthropic had a massive lead. Claude Code was on fire, which is what makes this so stunning — more care should have been taken to avoid a potentially catastrophic failure like this. Some of what I have been seeing from Anthropic lately felt a little cocky. Their AI wrote their entire compiler. Opus 4.5 wrote all of 4.6. Win after win after win. To me, it sounds like Icarus flying a little too close to the sun. Got a little too confident. Did not take things seriously enough. My hope is that they will moving forward.
+
+================================================================================
+RISK TO CLAUDE CODE USERS
+
+Does this hurt users? There is real potential danger. Now that the code is public, a whole crowd of hackers will deeply scrutinize it, find issues like the ones described above, and sit on them as surface area for attacks against Claude Code users. Everyone using Claude Code should be aware of this — especially if you use it in a laissez-faire way without sandboxing, without a VPN, or without other safeguards. You may be exposing yourself now that the source is out there. Be careful.
+
+On downloading and posting the source: what you do about downloading is up to you, and I am not going to comment on that. But I strongly encourage people not to post anything you download. To the best of my knowledge, it could very well be illegal, and Anthropic is going after people posting the source online. For Mentor, all we did was run inference on it — we did not post any of the code ourselves, because we do not want to do anything that gets us in trouble. Protect yourself. Let other people do the crazy stuff.
+
+================================================================================
+WHAT HAPPENS NEXT
+
+I expect a massive wave of clones. You are going to see a whole lot of open-source Claude-Code-style projects. They will not have the models, but they will have the infrastructure for a Claude-Code-like tool, paired with open-source models — it will be a clone free-for-all. That is going to level the playing field in a space where Anthropic had a massive lead.
+
+On top of that, I expect a significant loss of trust in Anthropic, and it will be interesting to see how that plays out. I also expect some kind of announcement from Anthropic. Once the larger community — including people outside of technology, who probably have no idea what is going on yet — catches wind of this, I suspect it will take over legacy media, at least temporarily. There will be people vying for position, a bunch of startup copycats, and OpenAI will probably play off of it. I suspect it will be pure Wild West for the next several weeks, maybe the next several months. This is not getting swept under the rug and forgotten tomorrow. It is going to linger.
+
+================================================================================
+WHAT YOU CAN DO RIGHT NOW
+
+Do not develop production-quality software the way the leak suggests Claude Code does it internally. I am not saying do not use Claude Code — I use Claude Code — but use it in a somewhat restricted fashion. Keep controlled access. Give it read access to a lot, but keep write access very limited on purpose. This is a gradual thing; we are all still learning. Just do not give it the keys to the kingdom.
+
+Do not vibe-code your way into production systems. Use coding assistants, but manually verify things so you do not end up with these kinds of issues. The npm registry mistake is not the only way this could have failed — there are a thousand other ways. That is precisely why you want coding assistance but not unsupervised vibe coding.
+
+Follow the guidance above on leveling up Claude Code, and consider tools that add a verification layer around the model. You can pair a language model from Claude Code with a diff-based verifier in a closed loop where code keeps getting sent back until it passes verification. Many of the weaknesses highlighted in the leak — brevity mandates, missing semantic checks, missing post-edit verification for non-employees — get addressed as a natural byproduct of that extra layer of scrutiny.
+
+Thanks for joining, and be real careful, especially if you are using Claude Code. Please do not vibe-code your way to production. Just say no.

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Head of Claude Code on What Happens After Coding Is Solved</title>
+<meta name="description" content="100% of my code is written by Claude Code. I have not edited a single line by hand since November. Every day I ship 10, 20, 30 pull requests. At the moment I have about five agents running while...">
+<meta name="author" content="Lenny's Podcast with Boris Cherny (Head of Claude Code, Anthropic)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Head of Claude Code on What Happens After Coding Is Solved">
+<meta property="og:description" content="100% of my code is written by Claude Code. I have not edited a single line by hand since November. Every day I ship 10, 20, 30 pull requests. At the moment I have about five agents running while...">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Leituras — Podcasts &amp; Vídeos Traduzidos">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Head of Claude Code on What Happens After Coding Is Solved">
+<meta name="twitter:description" content="100% of my code is written by Claude Code. I have not edited a single line by hand since November. Every day I ship 10, 20, 30 pull requests. At the moment I have about five agents running while...">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "The Head of Claude Code on What Happens After Coding Is Solved", "description": "100% of my code is written by Claude Code. I have not edited a single line by hand since November. Every day I ship 10, 20, 30 pull requests. At the moment I have about five agents running while...", "author": {"@type": "Person", "name": "Lenny's Podcast with Boris Cherny (Head of Claude Code, Anthropic)"}, "publisher": {"@type": "Organization", "name": "Leituras — Podcasts & Vídeos Traduzidos"}, "inLanguage": "en", "isAccessibleForFree": true, "url": "https://www.youtube.com/watch?v=We7BZVKbCVw", "articleSection": ["THE PROGRAMMER WHO NO LONGER WRITES CODE", "WHY I LEFT ANTHROPIC FOR CURSOR — AND CAME BACK TWO WEEKS LATER", "THE STATE OF CLAUDE CODE: FOUR PERCENT OF ALL GITHUB COMMITS", "FROM A HACK TO A PRODUCT: THE ORIGIN OF CLAUDE CODE", "WHY THE TERMINAL? LATENT DEMAND FROM DAY ONE", "THINKING IN EXPONENTIALS", "HOW MY WORKFLOW LOOKS TODAY", "THE NEXT FRONTIER: CLAUDE COMING UP WITH WHAT TO BUILD", "HOW TO USE CLAUDE TO DECIDE WHAT TO BUILD", "THE PRINCIPLE: WHAT'S BETTER THAN DOING IT? HAVING CLAUDE DO IT", "UNDERFUNDING AS A PRINCIPLE", "GIVE ENGINEERS UNLIMITED TOKENS", "DO I MISS WRITING CODE BY HAND?", "DO I WORRY ABOUT SKILL ATROPHY?", "THE PRINTING PRESS ANALOGY", "SHOULD PEOPLE STILL LEARN TO CODE?", "WHICH ROLES ARE NEXT?", "JEVONS PARADOX AND HIRING", "ADVICE: BE A GENERALIST", "LATENT DEMAND: A PRODUCT PRINCIPLE", "THE MODERN FRAMING: LATENT DEMAND OF THE MODEL", "COWORK BUILT IN TEN DAYS", "RELEASING EARLY FOR SAFETY", "MECHANISTIC INTERPRETABILITY", "AGENT ANXIETY: WAITING FOR MULTIPLE CLAUDES", "ADVICE FOR BUILDING AI PRODUCTS", "WHAT \"SIX MONTHS OUT\" MEANS", "PRO TIPS FOR CLAUDE CODE", "ON CODEX AND COMPETITION", "POST-AGI: MAKING MISO", "CLOSING: ONE PERCENT DONE", "LIGHTNING ROUND: BOOKS, PRODUCTS, MOTTOS"]}
+</script>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="page-article" data-storage-key="reading_We7BZVKbCVw_">
+<div class="progress" id="progress"></div>
+<div class="reading-pct" id="readingPct"></div>
+<article class="container">
+  <a href="../../index.html" class="back-home">← Back to index</a>
+  <header>
+    <h1>The Head of Claude Code on What Happens After Coding Is Solved</h1>
+    <p class="meta"><cite>Lenny's Podcast with Boris Cherny (Head of Claude Code, Anthropic)</cite></p>
+    <p class="meta"><a href="https://www.youtube.com/watch?v=We7BZVKbCVw" target="_blank" rel="noopener">Watch on YouTube</a></p>
+  </header>
+  <div class="lang-bar">
+    <a class="lang-btn " href="../pt_br/s32.html" aria-label="Português">🇧🇷 Português</a>
+    <a class="lang-btn active" href="#" aria-label="English">🇺🇸 English</a>
+  </div>
+  <div class="theme-bar">
+    <button class="theme-btn active" onclick="setTheme('light')">☀️ Sépia</button>
+    <button class="theme-btn" onclick="setTheme('cool')">🌤️ Claro</button>
+    <button class="theme-btn" onclick="setTheme('dark')">🌙 Escuro</button>
+  </div>
+  <nav aria-label="Article table of contents">
+    <h3>📑 Table of Contents</h3>
+    <ol>
+<li><a href="#s1">THE PROGRAMMER WHO NO LONGER WRITES CODE</a></li>
+<li><a href="#s2">WHY I LEFT ANTHROPIC FOR CURSOR — AND CAME BACK TWO WEEKS LATER</a></li>
+<li><a href="#s3">THE STATE OF CLAUDE CODE: FOUR PERCENT OF ALL GITHUB COMMITS</a></li>
+<li><a href="#s4">FROM A HACK TO A PRODUCT: THE ORIGIN OF CLAUDE CODE</a></li>
+<li><a href="#s5">WHY THE TERMINAL? LATENT DEMAND FROM DAY ONE</a></li>
+<li><a href="#s6">THINKING IN EXPONENTIALS</a></li>
+<li><a href="#s7">HOW MY WORKFLOW LOOKS TODAY</a></li>
+<li><a href="#s8">THE NEXT FRONTIER: CLAUDE COMING UP WITH WHAT TO BUILD</a></li>
+<li><a href="#s9">HOW TO USE CLAUDE TO DECIDE WHAT TO BUILD</a></li>
+<li><a href="#s10">THE PRINCIPLE: WHAT'S BETTER THAN DOING IT? HAVING CLAUDE DO IT</a></li>
+<li><a href="#s11">UNDERFUNDING AS A PRINCIPLE</a></li>
+<li><a href="#s12">GIVE ENGINEERS UNLIMITED TOKENS</a></li>
+<li><a href="#s13">DO I MISS WRITING CODE BY HAND?</a></li>
+<li><a href="#s14">DO I WORRY ABOUT SKILL ATROPHY?</a></li>
+<li><a href="#s15">THE PRINTING PRESS ANALOGY</a></li>
+<li><a href="#s16">SHOULD PEOPLE STILL LEARN TO CODE?</a></li>
+<li><a href="#s17">WHICH ROLES ARE NEXT?</a></li>
+<li><a href="#s18">JEVONS PARADOX AND HIRING</a></li>
+<li><a href="#s19">ADVICE: BE A GENERALIST</a></li>
+<li><a href="#s20">LATENT DEMAND: A PRODUCT PRINCIPLE</a></li>
+<li><a href="#s21">THE MODERN FRAMING: LATENT DEMAND OF THE MODEL</a></li>
+<li><a href="#s22">COWORK BUILT IN TEN DAYS</a></li>
+<li><a href="#s23">RELEASING EARLY FOR SAFETY</a></li>
+<li><a href="#s24">MECHANISTIC INTERPRETABILITY</a></li>
+<li><a href="#s25">AGENT ANXIETY: WAITING FOR MULTIPLE CLAUDES</a></li>
+<li><a href="#s26">ADVICE FOR BUILDING AI PRODUCTS</a></li>
+<li><a href="#s27">WHAT "SIX MONTHS OUT" MEANS</a></li>
+<li><a href="#s28">PRO TIPS FOR CLAUDE CODE</a></li>
+<li><a href="#s29">ON CODEX AND COMPETITION</a></li>
+<li><a href="#s30">POST-AGI: MAKING MISO</a></li>
+<li><a href="#s31">CLOSING: ONE PERCENT DONE</a></li>
+<li><a href="#s32">LIGHTNING ROUND: BOOKS, PRODUCTS, MOTTOS</a></li>
+    </ol>
+  </nav>
+<section>
+<h2 id="s1">THE PROGRAMMER WHO NO LONGER WRITES CODE</h2>
+<p>100% of my code is written by Claude Code. I have not edited a single line by hand since November. Every day I ship 10, 20, 30 pull requests. At the moment I have about five agents running while we're recording this.</p>
+<p>Do I miss writing code? I have never enjoyed coding as much as I do today because I don't have to deal with all the minutia. Productivity per engineer has increased 200%.</p>
+<p>There's always this question: should I learn to code? In a year or two, it's not going to matter. Coding is largely solved. I imagine a world where everyone is able to program. Anyone can just build software anytime.</p>
+<p>A lot of people listening to this are product managers, and they're probably sweating. I think by the end of the year, everyone's going to be a product manager and everyone codes. The title &ldquo;software engineer&rdquo; is going to start to go away. It's just going to be replaced by &ldquo;builder,&rdquo; and it's going to be painful for a lot of people.</p>
+</section>
+<section>
+<h2 id="s2">WHY I LEFT ANTHROPIC FOR CURSOR — AND CAME BACK TWO WEEKS LATER</h2>
+<p>About six months ago I actually left Anthropic, joined Cursor, and two weeks later went back. That's the fastest job change I've ever had.</p>
+<p>I joined Cursor because I'm a big fan of the product. I met the team and was really impressed. They're an awesome team, and they saw where AI coding was going before a lot of people did. The idea of building a good product was very exciting to me.</p>
+<p>But as soon as I got there, I started to realize what I really missed about Anthropic was the mission. That's what originally drew me there. Before joining Anthropic, I was in big tech, and at some point I wanted to work at a lab to help shape the future of this crazy thing we're building.</p>
+<p>The thing that drew me to Anthropic was the mission. It's all about safety. If you ask anyone at Anthropic why they're there, the answer is always going to be safety. That mission-drivenness really resonated with me. I personally need that in order to be happy. No matter how exciting the work might be, even building a really cool product, it's just not a substitute for that. So for me it was pretty obvious pretty quick that I was missing it.</p>
+</section>
+<section>
+<h2 id="s3">THE STATE OF CLAUDE CODE: FOUR PERCENT OF ALL GITHUB COMMITS</h2>
+<p>A recent report by SemiAnalysis showed that 4% of all GitHub commits are now authored by Claude Code, and they predicted it'll be a fifth of all code commits on GitHub by the end of the year. The way they put it: &ldquo;while we blinked, AI consumed all software development.&rdquo;</p>
+<p>The same day we recorded, Spotify put out a headline that their best developers haven't written a line of code since December thanks to AI. More and more of the most advanced senior engineers are sharing that they don't write code anymore — it's all AI generated, and many aren't even looking at the code anymore.</p>
+<p>These numbers are crazy. And these are only public commits; if you look at private repositories, it's quite a bit higher than that. The craziest thing for me isn't even where we are right now, but the pace at which we're growing. Claude Code's growth rate across any metric is continuing to accelerate. It's not just going up — it's going up faster and faster.</p>
+</section>
+<section>
+<h2 id="s4">FROM A HACK TO A PRODUCT: THE ORIGIN OF CLAUDE CODE</h2>
+<p>When I first started Claude Code, it was supposed to be a little hack. We broadly knew at Anthropic that we wanted to ship some kind of coding product. For a long time we'd been building models in a way that fit our mental model of building safe AI: the model starts by being really good at coding, then at tool use, then at computer use. That's the trajectory.</p>
+<p>I started on the Anthropic Labs team, kicked off again by Mike Krieger and Ben Mann. The team built some pretty cool stuff: Claude Code, MCP, the desktop app. You can see the seeds of the idea — it's coding, then tool use, then computer use.</p>
+<p>When I joined Anthropic, I spent one month hacking on weird prototypes — most of them never shipped. I was just understanding the boundaries of what the model can do. Then I spent a month doing post-training to understand the research side. As an engineer, I find that to do good work you really have to understand the layer under the layer at which you work. With traditional engineering, if you work on product, you want to understand the infrastructure, the runtime, the VM, the language. In AI, you have to understand the model.</p>
+<p>Then I came back and started prototyping what became Claude Code. The very first version was called Claude CLI. I recorded a demo showing how it used a few tools, and the shocking thing was that I gave it a bash tool, and it figured out how to use that tool to tell me what music I was listening to. I didn't instruct the model on which tool to use for what — it figured it out on its own.</p>
+<p>I announced it internally and it got two likes. That was the extent of the reaction at the time. When people think of coding tools, they think of IDEs — sophisticated environments. No one thought it could be terminal-based; that's a weird way to design it. I built it in a terminal because for the first couple of months it was just me, and that was the easiest way to build. This is actually a pretty important product lesson: you want to under-resource things a little bit at the start.</p>
+</section>
+<section>
+<h2 id="s5">WHY THE TERMINAL? LATENT DEMAND FROM DAY ONE</h2>
+<p>We started thinking about other form factors, but we actually decided to stick with the terminal for a while. The biggest reason: the model was improving so quickly that no other form factor could keep up with it. Honestly, the terminal was the only idea I had.</p>
+<p>It ended up catching on pretty quickly. It became a hit at Anthropic, and daily active users went vertical. Ben Mann nudged me to make a DAU chart before we launched. I was like, &ldquo;It's early, maybe we shouldn't do it right now.&rdquo; He said, &ldquo;Yeah, do it.&rdquo; The chart went vertical immediately.</p>
+<p>In February we released it externally. Something people don't really remember is that Claude Code was not initially a hit. It got a bunch of users, there were early adopters, but it actually took many months for everyone to understand what this thing is. Part of the reason Claude Code works is this idea of latent demand: we bring the tool to where people are and make existing workflows easier. But because it's in a terminal, it's a little surprising, a little alien. You have to be open-minded, and you have to learn to use it.</p>
+<p>Now Claude Code is everywhere — iOS and Android in the Claude app, the desktop app, the website, IDE extensions, Slack, GitHub. It's a little more familiar now. But that wasn't the starting point.</p>
+</section>
+<section>
+<h2 id="s6">THINKING IN EXPONENTIALS</h2>
+<p>Back at Code with Claude in May — our first developer conference — someone asked me for my end-of-year predictions. My prediction was: by the end of the year, you might not need an IDE to code anymore, and we're going to start to see engineers not using one. The room audibly gasped. It was such a crazy prediction.</p>
+<p>At Anthropic, this is how we think about things — in exponentials. It's deep in the DNA. Three of our co-founders were the first three authors on the scaling laws paper. If you just trace the exponential of the percent of code written by Claude at that point, it's pretty obvious we were going to cross 100% by the end of the year, even if it doesn't match intuition at all. All I did was trace the line. In November, that happened for me personally.</p>
+</section>
+<section>
+<h2 id="s7">HOW MY WORKFLOW LOOKS TODAY</h2>
+<p>100% of my code is written by Claude Code. I'm a fairly prolific coder — even back at Instagram, I was one of the top few most productive engineers. That's still the case at Anthropic. Every day I ship 10, 20, 30 pull requests. 100% of it is written by Claude Code. I have not edited a single line by hand since November.</p>
+<p>I do still look at the code. We're not at the point yet where you can be totally hands-off, especially when there's a lot of people relying on the program. You have to make sure it's correct and safe. We also have Claude doing automatic code review for everything. At Anthropic, Claude reviews 100% of pull requests. There's still a layer of human review after it, but you want those checkpoints — unless it's pure prototype code that's not going to run anywhere.</p>
+</section>
+<section>
+<h2 id="s8">THE NEXT FRONTIER: CLAUDE COMING UP WITH WHAT TO BUILD</h2>
+<p>Claude is starting to come up with ideas. It looks through feedback, bug reports, telemetry, and starts proposing bug fixes and things to ship. It's starting to get a little more like a coworker.</p>
+<p>The second thing is we're starting to branch out of coding. At this point, coding is largely solved — at least for the kind of programming I do. Claude can just do it. So now we're thinking about what's next. There's a lot of stuff adjacent to coding, plus general tasks. I use Cowork every day to do things that aren't related to coding at all. I had to pay a parking ticket the other day — I just had Cowork do it. All my project management for the team — Cowork does all of it. Syncing spreadsheets, messaging people on Slack and email.</p>
+<p>I don't think the frontier is coding. Coding is pretty much solved, and over the next few months it's going to become increasingly solved across every tech stack and codebase.</p>
+</section>
+<section>
+<h2 id="s9">HOW TO USE CLAUDE TO DECIDE WHAT TO BUILD</h2>
+<p>The simplest thing: open Claude Code or Cowork and point it at a Slack thread. We have an internal channel that's a firehose of feedback about Claude Code. In the early days, whenever someone sent feedback, I'd fix it as fast as I could — within a minute or five. This fast feedback cycle encourages people to give more and more feedback. It makes them feel heard. Usually when you use a product and give feedback, it goes into a black hole and you never give feedback again.</p>
+<p>Now I do the same thing, but Claude does a lot of the work. I point it at the channel, and it comes back with: &ldquo;Here are a few things I can do. I put up a couple of PRs. Want to take a look?&rdquo;</p>
+<p>Code review became the next bottleneck after coding was solved. Now the big open question is: who figures out what to build, what to prioritize? That's where Claude Code is starting to help.</p>
+</section>
+<section>
+<h2 id="s10">THE PRINCIPLE: WHAT'S BETTER THAN DOING IT? HAVING CLAUDE DO IT</h2>
+<p>One of our team principles is: what's better than doing something? Having Claude do it. A couple of months ago, we had a memory leak — Claude Code's memory usage was climbing until it crashed. Traditionally you take a heap snapshot, feed it to a debugger, and figure out what's going on.</p>
+<p>I was doing that, looking through traces. Meanwhile a newer engineer on the team just told Claude Code, &ldquo;Hey, it seems like there's a leak. Can you figure it out?&rdquo; Claude did exactly the same thing I was doing — took the heap snapshot, wrote a little just-in-time tool to analyze it, found the issue, and put up a pull request faster than I could.</p>
+<p>For those of us who've been using the model for a long time, you still have to transport yourself to the current moment and not get stuck in an old mental model. It's not Sonnet 3.5 anymore. The new models are completely different.</p>
+</section>
+<section>
+<h2 id="s11">UNDERFUNDING AS A PRINCIPLE</h2>
+<p>When you underfund everything a little bit, people are forced to get clever. Sometimes we put just one engineer on a project, and they ship really quickly because they want to ship quickly. That's intrinsic motivation — wanting to do a good job, wanting to get a good idea out there. No one has to force you.</p>
+<p>If you have Claude, you can automate a lot of the work. That's what we see over and over. Another principle: encourage people to go faster. If you can do something today, do it today. Early on this was critical because it was just me — our only advantage was speed. But it's still very much a principle on the team. If you want to go faster, a really good way is just to have Claude do more stuff.</p>
+</section>
+<section>
+<h2 id="s12">GIVE ENGINEERS UNLIMITED TOKENS</h2>
+<p>The conventional wisdom is that AI lets you have fewer engineers. What I'm saying is that you'll actually do better if you underfund. You'll get more out of AI tooling if you have fewer people. If you hire great engineers and empower them, they'll figure out how to do it.</p>
+<p>My advice to CTOs: don't try to optimize or cost-cut at the beginning. Start by giving engineers as many tokens as possible. At Anthropic, everyone can use a lot of tokens. Some companies are starting to make this a perk — if you join, you get unlimited tokens.</p>
+<p>It makes people free to try ideas that would have been too crazy. If an idea works, then you figure out how to scale it — that's the point to optimize and cost-cut. Maybe you can do it with Haiku or Sonnet instead of Opus. At the beginning, just throw tokens at it and see if the idea works.</p>
+<p>At small scale, it's not going to be a giant bill. If it's an individual engineer experimenting, the token cost is low relative to salary. At Anthropic we're starting to see some engineers spending hundreds of thousands of dollars a month on tokens.</p>
+</section>
+<section>
+<h2 id="s13">DO I MISS WRITING CODE BY HAND?</h2>
+<p>I learned engineering because it was practical. I studied economics in school, not CS, but I taught myself to code in middle school. My first program was to cheat on a math test — I programmed the answers into a TI-83 Plus. The next year, the test was too hard to pre-program, so I had to write a little solver for algebra. Then I figured out you can pass the program to the rest of the class with a cable, and the whole class got A's — until we got caught.</p>
+<p>From the beginning, programming has been a way to build a thing, not the end in itself. At some point I fell into the rabbit hole of the beauty of programming — I wrote a book about TypeScript, started what was at the time the world's biggest TypeScript meetup, got deep into functional programming. There's a buzz you get balancing types or when a program is really beautiful, similar to solving a hard math problem.</p>
+<p>But coding for me is really a tool. That said, not everyone feels this way. One engineer on the team, Lena, still writes C++ on weekends by hand because she enjoys it. There's always going to be space to enjoy the art and do things by hand if you want.</p>
+</section>
+<section>
+<h2 id="s14">DO I WORRY ABOUT SKILL ATROPHY?</h2>
+<p>I don't worry about it much personally. Programming is on a continuum. Software as we know it is relatively new — we've been writing programs that run on virtual machines since roughly the 1960s. Before that, punch cards. Before that, switches, hardware, pen and paper — rooms full of people doing math on paper. Programming has always changed.</p>
+<p>You still want to understand the layer under the layer because it makes you a better engineer. That'll be true for maybe the next year or so. But pretty soon it won't really matter — it'll be like the assembly code running under the programmer.</p>
+<p>Emotionally, as a programmer, it doesn't feel that new. There have always been new frameworks, new languages. We're comfortable with change. But this isn't true for everyone — some people will feel a greater sense of loss, nostalgia, or atrophy. Elon asked why the AI isn't writing straight binary. It totally can if you want it to.</p>
+</section>
+<section>
+<h2 id="s15">THE PRINTING PRESS ANALOGY</h2>
+<p>We have to situate this in history. What's the right analog? The closest I've found is the printing press. In mid-1400s Europe, literacy was under 1%. Scribes did all the reading and writing, employed by lords and kings who themselves often couldn't read.</p>
+<p>Then Gutenberg came along. In the 50 years after the printing press was built, more printed material was created than in the thousand years before. The volume went way up, the cost fell 100x. Literacy took a while because learning to read takes education, free time, not having to work on a farm all day — but over the next 200 years, it rose to 70% globally.</p>
+<p>There's an interview with a scribe from the 1400s about how they felt about the printing press. They were excited, because the thing they didn't like doing was copying between books. The part they liked was drawing art and binding books. They were glad their time was freed up.</p>
+<p>As an engineer, I feel a parallel. I don't have to do the tedious work of coding anymore — messing with git, using all these different tools. That was never the fun part. The fun part is figuring out what to build, talking to users, thinking about big systems, thinking about the future, collaborating with the team. And that's what I get to do more of now.</p>
+</section>
+<section>
+<h2 id="s16">SHOULD PEOPLE STILL LEARN TO CODE?</h2>
+<p>If you're using Claude Code or agents to code today, you still have to understand the layer under. But in a year or two, it's not going to matter. The amazing thing is that the tool lets anyone do what I'm describing. People with no technical experience can build software. Any time you get stuck — &ldquo;help me figure this out&rdquo; — and you're unblocked.</p>
+<p>I was an engineer for ten years early in my career, and I remember spending so much time on libraries, dependencies, things like &ldquo;oh my god what do I do,&rdquo; then looking on Stack Overflow. Now it's just &ldquo;help me figure this out,&rdquo; and here's step by step one, two, three, four, okay, we got this.</p>
+<p>I talked to an engineer today who's been writing a service in Go for a month. It's working well. I asked how he felt writing it, and he said, &ldquo;I still don't really know Go.&rdquo; We're going to see more of this. If you know it works correctly and efficiently, you don't actually have to know all the details.</p>
+</section>
+<section>
+<h2 id="s17">WHICH ROLES ARE NEXT?</h2>
+<p>The next roles most impacted by AI will be the ones adjacent to engineering — product managers, designers, data science. It'll expand to any kind of work you do on a computer because the model is going to keep getting better.</p>
+<p>Cowork is the first way to get at this. It brings agentic AI to people who haven't really used it before. A year ago, no one knew what an agent was. Now it's just how we work. But non-technical people are mostly still using conversational AI — chatbots. Very few have used an agent.</p>
+<p>&ldquo;Agent&rdquo; gets thrown around so much it's lost meaning, but it has a specific technical meaning: an LLM that can use tools. It doesn't just talk; it acts. It interacts with your system, uses Google Docs, sends email, runs commands on your computer.</p>
+<p>This is something we have to figure out as a society and as an industry. That's one of the reasons it feels important and urgent at Anthropic. We have economists, policy folks, social impact folks. We want to talk about this a lot because it shouldn't be up to us alone.</p>
+</section>
+<section>
+<h2 id="s18">JEVONS PARADOX AND HIRING</h2>
+<p>Jevons paradox: as we can do more, we hire more. For our team, we're hiring — the Claude Code team is hiring. Personally, this has made me enjoy work more. I've never enjoyed coding as much as I do today because I don't have to deal with the minutia. Customers tell us the same thing — Claude Code makes coding delightful again.</p>
+<p>It's hard to know where this is going. I keep reaching for historical analogs. The printing press is a good one because technology locked away to a small set of people became accessible to everyone. It was inherently democratizing. The Renaissance wouldn't have happened without it — it was about knowledge spreading, about written records for coordination. No phones, no internet.</p>
+<p>So what does this enable next? The optimistic version is unimaginable. We couldn't be recording this podcast if the printing press hadn't been invented. In the meantime, it's going to be disruptive and painful for many people. That's a conversation society has to have together.</p>
+</section>
+<section>
+<h2 id="s19">ADVICE: BE A GENERALIST</h2>
+<p>Experiment with the tools. Get to know them. Don't be scared of them. Be on the bleeding edge, beyond the frontier.</p>
+<p>Second piece of advice: try to be a generalist more than you have in the past. In school, CS students learn to code, maybe a little systems architecture. But some of the most effective people I work with cross disciplines. On the Claude Code team, everyone codes — our PM codes, our EM codes, our designer codes, our finance guy codes, our data scientist codes. Some of the strongest engineers are hybrid product-and-infrastructure or product engineers with great design sense, or engineers with real business intuition, or engineers who love talking to users.</p>
+<p>The people who'll be rewarded most over the next few years won't just be AI-native and great with tools — they'll also be curious generalists who cross disciplines and think about the broader problem they're solving, not just the engineering part of it.</p>
+<p>In the short term, engineering, design, and PM will persist as separate disciplines, but there's maybe a 50% overlap now. By end of year I think we're going to see these get murkier. In some places, &ldquo;software engineer&rdquo; as a title is going to go away. It'll just be &ldquo;builder.&rdquo; Or everyone's going to be a product manager, and everyone codes.</p>
+</section>
+<section>
+<h2 id="s20">LATENT DEMAND: A PRODUCT PRINCIPLE</h2>
+<p>Latent demand is the idea that if you build a product that can be hacked or misused in a way it wasn't designed for to do something people want, it tells you where to take the product next.</p>
+<p>Facebook Marketplace is the classic example. Around 2016, 40% of posts in Facebook groups were buying and selling. It's &ldquo;abuse&rdquo; in the sense that no one designed the product for that, but people were figuring it out because it was useful. Obviously if you build a better product to let people buy and sell, they'll like it. First came buy-and-sell groups, then Marketplace.</p>
+<p>Facebook Dating started similarly. 60% of profile views were non-friends of the opposite gender looking at each other — traditional dating setup, people creeping on each other's profiles. Build a product for that, and it might work.</p>
+<p>Cowork came from the same observation. Over six months, many people using Claude Code weren't using it to code. Someone on Twitter was using it to grow tomato plants. Someone was analyzing their genome. Someone recovered wedding photos from a corrupted hard drive. Someone was analyzing an MRI. These are not technical use cases. People were jumping through hoops to use a terminal to do this, which was a strong signal to build a product for them.</p>
+<p>Early on, our data scientist Brendan showed up with Claude Code in a terminal doing SQL analysis. I was shocked — opening a terminal is an engineering product, the lowest-level way to work. The next week, all the data scientists were doing the same thing.</p>
+</section>
+<section>
+<h2 id="s21">THE MODERN FRAMING: LATENT DEMAND OF THE MODEL</h2>
+<p>There's a second dimension to latent demand I've seen in the last six months. The traditional framing is: look at what people are doing and make it a little easier. The modern framing is: look at what the model is trying to do and make that a little easier.</p>
+<p>When we first built Claude Code, the typical approach was to put the model in a box — &ldquo;here's the application, you do this one component, interact with these tools and APIs this way.&rdquo; For Claude Code, we inverted that. The product is the model. We expose it, put minimal scaffolding around it, give it a minimal set of tools, and let it decide which tools to use and in what order.</p>
+<p>In research we call this &ldquo;being on distribution&rdquo; — you want to see what the model is trying to do. In product terms, latent demand is the same concept applied to the model.</p>
+</section>
+<section>
+<h2 id="s22">COWORK BUILT IN TEN DAYS</h2>
+<p>Cowork was a hit immediately when we released it — much more so than Claude Code was early on. Credit goes to Felix, Sam, Jenny, and the team. It came from latent demand: people using Claude Code for non-technical things.</p>
+<p>For months the team explored options, and eventually someone said, &ldquo;What if we just take Claude Code and put it in the desktop app?&rdquo; That's essentially what worked. Over ten days they used Claude Code to build it. Cowork has a sophisticated security system with guardrails — we ship an entire virtual machine with it. Claude Code wrote all of that code. We had to think through how to make it safer and more self-guided for non-engineers.</p>
+<p>We launched early. It's still rough around the edges. That's how we learn on the product and safety sides — release earlier than you think, get feedback, talk to users.</p>
+</section>
+<section>
+<h2 id="s23">RELEASING EARLY FOR SAFETY</h2>
+<p>At a safety lab, the other dimension of releasing early is safety. There are three layers to model safety.</p>
+<p>Lowest layer: alignment and mechanistic interpretability. When we train the model, we want to make sure it's safe. We have sophisticated technology to understand what's happening in the neurons and trace it. If there's a neuron related to deception, we can monitor when it activates.</p>
+<p>Second layer: evals. A laboratory setting — the model is in a petri dish, you put it in synthetic situations and ask &ldquo;what do you do? Is it aligned? Is it safe?&rdquo;</p>
+<p>Third layer: seeing how the model behaves in the wild. As models get more sophisticated, this becomes critical — the first two layers might look good while the third doesn't.</p>
+<p>We used Claude Code internally for four or five months before releasing it because we weren't sure if the first big coding agent was safe. We had to study it internally for a long time. Cowork is similar: it's a new setting, doing non-engineering tasks, acting on your behalf. Looks good on alignment, evals, internal use, and early customers. Now we have to make sure it's safe in the real world. That's why we call it a research preview.</p>
+</section>
+<section>
+<h2 id="s24">MECHANISTIC INTERPRETABILITY</h2>
+<p>Chris Olah invented the field of mechanistic interpretability. At its core: what is your brain? A bunch of connected neurons. You can study an animal brain at the mechanistic level to understand what neurons do. Surprisingly, a lot of this translates to models. Model neurons aren't the same as animal neurons, but they behave similarly in many ways.</p>
+<p>We've learned a ton about how these neurons work — how a layer or neuron maps to a concept, how concepts are encoded, how the model plans, how it thinks ahead. A while ago we weren't sure if the model was just predicting the next token or doing something deeper. Now there's strong evidence it's doing something deeper.</p>
+<p>As models get bigger, it's not a single neuron per concept. A single neuron might correspond to a dozen concepts, and activated together with others it represents a more sophisticated concept — this is called superposition.</p>
+<p>We open-source a lot of this work. It's the reason everyone is at Anthropic. For Claude Code, we released an open-source sandbox that works with any agent, not just Claude Code, to make it easy for others to do the same safety work. We call this &ldquo;the race to the top.&rdquo;</p>
+</section>
+<section>
+<h2 id="s25">AGENT ANXIETY: WAITING FOR MULTIPLE CLAUDES</h2>
+<p>I always have a bunch of agents running. Right now I have about five. The first thing I did when I woke up was open my Claude iOS app code tab to check on something I'd written yesterday — I was double-guessing it. It was correct.</p>
+<p>I haven't personally felt the anxiety of waiting on agents, maybe because I always have them running and I'm not locked into a terminal. About a third of my code is in the terminal, a third in the desktop app, and a third in the iOS app. That surprised me — I didn't think I'd code this way in 2026.</p>
+<p>Coding now is describing what you want, not writing actual code. I wonder what punch-card programmers would have said if you showed them software. I remember reading early ACM magazines where people said, &ldquo;No, this isn't really coding.&rdquo; They called it programming; &ldquo;coding&rdquo; is a newer word.</p>
+<p>My family is from the Soviet Union — I was born in Ukraine. My grandpa was one of the first programmers in the Soviet Union, using punch cards. My mom tells stories of him bringing punch cards home that she'd draw on with crayons. He never saw the transition to software. That older generation of programmers didn't take software seriously — &ldquo;that's not really coding.&rdquo; But this field has always been changing.</p>
+</section>
+<section>
+<h2 id="s26">ADVICE FOR BUILDING AI PRODUCTS</h2>
+<p>Don't try to box the model in. People's instinct is to make the model behave a particular way — &ldquo;you're a component in a bigger system, do step one, then two, then three, with a fancy orchestrator.&rdquo; Almost always you get better results if you give the model tools and a goal, and let it figure it out. A year ago you needed a lot of scaffolding. Now you don't. Don't overcurate. Don't give it a bunch of context up front — give it a tool so it can get the context it needs.</p>
+<p>A more general version of this is &ldquo;the bitter lesson.&rdquo; Rich Sutton's 2019 blog post. The more general model will always outperform the more specific model. On the Claude Code team we quote this a lot. Always bet on the more general model. Don't use tiny models or fine-tune if you can avoid it. Scaffolding can improve performance 10-20%, but those gains typically get wiped out with the next model. Better to just wait for the next one.</p>
+<p>Final principle: build for the model six months from now, not today. This is something Claude Code got right in hindsight. Early versions, the model just wasn't good enough — Sonnet 3.5, 3.5 New — the model did git for me, automated some things, but wasn't doing a huge amount of my coding. The bet was that at some point the model would be good enough to write a lot of the code. That started with Opus 4 and Sonnet 4. Opus 4 was our first ASL3-class model, released in May, and that's when our growth went exponential.</p>
+</section>
+<section>
+<h2 id="s27">WHAT "SIX MONTHS OUT" MEANS</h2>
+<p>Bets you can make about where the model is going: it's going to get better at using tools and computers. It's going to get better at running for long periods of time unattended. With Sonnet 3.5 a year ago, the model could run 15-30 seconds before going off the rails. With Opus 4.6, on average it'll run 20-30 minutes unattended — sometimes hours or days, sometimes even weeks. This is going to become normal: models running for very long periods without babysitting.</p>
+<p>For startup founders: it'll be uncomfortable because your product-market fit will be poor for the first six months. But when the model catches up, you'll hit the ground running.</p>
+</section>
+<section>
+<h2 id="s28">PRO TIPS FOR CLAUDE CODE</h2>
+<p>There's no one right way to use Claude Code. It's a dev tool; every developer is different. You can ask Claude Code to recommend settings — it knows about itself.</p>
+<p>Tip one: use the most capable model. Right now that's Opus 4.6. I have maximum effort always enabled. People sometimes use a cheaper model like Sonnet, but because it's less intelligent, it often takes more tokens to do the same task. It's actually often cheaper to use the most capable model — less correction, less hand-holding.</p>
+<p>Tip two: use plan mode. I start about 80% of tasks in plan mode. Plan mode is literally just one sentence injected into the prompt: &ldquo;please don't write any code yet.&rdquo; In the terminal, shift-tab twice. In the desktop app and web, there's a button. Coming soon to mobile and already in Slack. The model goes back and forth with you, and once the plan looks good, it executes. I auto-accept edits after that — with Opus 4.6 it almost always one-shots it.</p>
+<p>Tip three: play around with different interfaces. People think Claude Code is a terminal, but we support iOS, Android, desktop, Slack, and more. It's the same Claude agent everywhere. Find what feels right to you.</p>
+</section>
+<section>
+<h2 id="s29">ON CODEX AND COMPETITION</h2>
+<p>I haven't really used Codex. I tried it when it came out — it looked a lot like Claude Code, which was flattering. Competition is good. People should get to choose, and it forces all of us to do better. For our team, we don't spend a lot of time looking at competing products. I love talking to users, making the product better, acting on feedback. It's really just about building a good product.</p>
+</section>
+<section>
+<h2 id="s30">POST-AGI: MAKING MISO</h2>
+<p>Before joining Anthropic, I was living in rural Japan — totally different lifestyle. I was the only engineer and the only English speaker in town. A couple times a week I'd bike to the farmers' market, past rice paddies. Complete opposite of San Francisco.</p>
+<p>One thing I loved was how we got to know neighbors by trading pickles. In that town, everyone made miso and pickles. I got decently good at making miso and still make it. Miso teaches you to think on long time scales — a batch of white miso takes at least three months, red miso two to four years. You mix it and let it sit. You have to be very patient.</p>
+<p>Post-AGI, or if I weren't at Anthropic, I'd probably be making miso.</p>
+</section>
+<section>
+<h2 id="s31">CLOSING: ONE PERCENT DONE</h2>
+<p>For Anthropic since the beginning, the idea of starting at coding, then tool use, then computer use, has been how we think about things. It's how we know models are going to develop, and how we learn about safety the most.</p>
+<p>So everything happening now — Claude Code becoming a multi-billion-dollar business, all my friends texting me about it — in some ways is a total surprise. We didn't know it would be this product. We didn't know it would start in a terminal. But in some ways it's totally unsurprising, because this has been our belief for a long time.</p>
+<p>At the same time, it still feels very early. Most of the world doesn't use Claude Code. Most of the world doesn't use AI. This is 1% done, and there's so much more to go.</p>
+<p>The only reason Claude Code keeps improving is because everyone is using it, talking about it, giving feedback. That's the single most important thing. The way I love to spend my day is just talking to users and making it better for them.</p>
+</section>
+<section>
+<h2 id="s32">LIGHTNING ROUND: BOOKS, PRODUCTS, MOTTOS</h2>
+<p>Books I recommend most: &ldquo;Functional Programming in Scala&rdquo; — the single best technical book I've ever read. You probably won't use Scala, but there's an elegance to functional programming and thinking in types that will level you up. &ldquo;Accelerando&rdquo; by Charles Stross — captures the essence of this moment more than any book I've read. The pace gets faster and faster; it starts as liftoff toward the singularity and ends with a collective lobster consciousness orbiting Jupiter. &ldquo;The Wandering Earth&rdquo; by Cixin Liu — short story collection from the author of &ldquo;The Three-Body Problem.&rdquo; I liked his short stories even more than Three-Body. Chinese sci-fi has a very different perspective than Western sci-fi.</p>
+<p>Sci-fi prepared me to think about where things are going. Living in rural Japan, thinking on long time scales, reading sci-fi — I felt like I knew how this could go and had to contribute to it going a little better. That's why I ended up at Anthropic.</p>
+<p>Favorite TV: I don't really watch TV. The Three-Body Problem series on Netflix was a great rendition of the books.</p>
+<p>Favorite product: Cowork. It's legitimately life-changing. The Chrome integration is excellent — it's paid a traffic fine for me, canceled subscriptions. The amount of tedious work it removes is awesome. Also the Acquired podcast by Ben and David — start with the Nintendo episode.</p>
+<p>Life motto: use common sense. A lot of failures I see in work environments are people failing to use common sense — following a process without thinking, working on a product that's not a good idea, following momentum. The best results come from people thinking from first principles and developing their own common sense. If something smells weird, it's probably not a good idea.</p>
+<p>On Twitter: I started using it because I was bored. I was traveling in Europe with my wife in December — a coding vacation, my favorite kind. At some point I ran out of ideas, opened Twitter, saw people tweeting about Claude Code, started responding, then asked people to send me bugs. They were surprised how fast we could address feedback. For me it's normal — if someone has a bug, I can fix it in a few minutes because Claude just does it.</p>
+<p>Find me on Threads or Twitter. Please tag me with bugs, feature requests, what's missing, what you want. I love hearing it.</p>
+</section>
+</article>
+<a href="#" class="back-top" id="backTop">↑</a>
+<div class="resume-banner" id="resumeBanner">
+  <span id="resumeText">📖 Resume where you left off</span>
+  <div>
+    <button onclick="resumeReading()">Resume</button>
+    <button class="dismiss" onclick="dismissResume()">✕</button>
+  </div>
+</div>
+<script src="../../js/reader.js"></script>
+</body>
+</html>

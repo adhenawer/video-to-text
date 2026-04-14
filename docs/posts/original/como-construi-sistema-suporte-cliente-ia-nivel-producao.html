@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How I Built a Production-Grade AI Customer Support System</title>
+<meta name="description" content="In this AI era, using AI across every kind of task — project development, learning new things, improving processes — has become essential. For anyone still thinking AI is just hype: it isn't....">
+<meta name="author" content="Using Claude Code — A Hands-On Tutorial">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How I Built a Production-Grade AI Customer Support System">
+<meta property="og:description" content="In this AI era, using AI across every kind of task — project development, learning new things, improving processes — has become essential. For anyone still thinking AI is just hype: it isn't....">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Leituras — Podcasts &amp; Vídeos Traduzidos">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How I Built a Production-Grade AI Customer Support System">
+<meta name="twitter:description" content="In this AI era, using AI across every kind of task — project development, learning new things, improving processes — has become essential. For anyone still thinking AI is just hype: it isn't....">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "How I Built a Production-Grade AI Customer Support System", "description": "In this AI era, using AI across every kind of task — project development, learning new things, improving processes — has become essential. For anyone still thinking AI is just hype: it isn't....", "author": {"@type": "Person", "name": "Using Claude Code — A Hands-On Tutorial"}, "publisher": {"@type": "Organization", "name": "Leituras — Podcasts & Vídeos Traduzidos"}, "inLanguage": "en", "isAccessibleForFree": true, "url": "https://youtu.be/fzrvx_1-9_o", "articleSection": ["WHY CLAUDE CODE MATTERS FOR DEVELOPERS", "HOW NOT TO PROMPT A COPILOT", "INSTALLING CLAUDE CODE ON WINDOWS", "BILLING REALITY: CLAUDE CODE COSTS REAL MONEY", "CONFIGURING CLAUDE CODE INSIDE VS CODE", "THE PROJECT: AI-POWERED CUSTOMER SUPPORT EMAIL AGENT", "THE AGENT FLOW, STEP BY STEP", "TECHNOLOGY STACK AND FOLDER STRUCTURE", "WHAT CLAUDE CODE CAN AND CANNOT DO FOR DEPLOYMENT", "CREATING THE PROJECT SCAFFOLD", "DEPENDENCY HELL AND PYTHON 3.14", "BUILDING THE APPLICATION FLOW", "PERMISSION MODES AND ASK-BEFORE-EDIT DISCIPLINE", "ADDING A FILE-BASED KNOWLEDGE BASE", "BUILDING THE API AND THE UI", "WHEN IT BREAKS: DEBUGGING WITH THE AGENT", "THE FINAL RESULT", "LESSONS FROM AN HOUR OF VIBE CODING"]}
+</script>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="page-article" data-storage-key="reading_fzrvx_1-9_o_">
+<div class="progress" id="progress"></div>
+<div class="reading-pct" id="readingPct"></div>
+<article class="container">
+  <a href="../../index.html" class="back-home">← Back to index</a>
+  <header>
+    <h1>How I Built a Production-Grade AI Customer Support System</h1>
+    <p class="meta"><cite>Using Claude Code — A Hands-On Tutorial</cite></p>
+    <p class="meta"><a href="https://youtu.be/fzrvx_1-9_o" target="_blank" rel="noopener">Watch on YouTube</a></p>
+  </header>
+  <div class="lang-bar">
+    <a class="lang-btn " href="../pt_br/s18.html" aria-label="Português">🇧🇷 Português</a>
+    <a class="lang-btn active" href="#" aria-label="English">🇺🇸 English</a>
+  </div>
+  <div class="theme-bar">
+    <button class="theme-btn active" onclick="setTheme('light')">☀️ Sépia</button>
+    <button class="theme-btn" onclick="setTheme('cool')">🌤️ Claro</button>
+    <button class="theme-btn" onclick="setTheme('dark')">🌙 Escuro</button>
+  </div>
+  <nav aria-label="Article table of contents">
+    <h3>📑 Table of Contents</h3>
+    <ol>
+<li><a href="#s1">WHY CLAUDE CODE MATTERS FOR DEVELOPERS</a></li>
+<li><a href="#s2">HOW NOT TO PROMPT A COPILOT</a></li>
+<li><a href="#s3">INSTALLING CLAUDE CODE ON WINDOWS</a></li>
+<li><a href="#s4">BILLING REALITY: CLAUDE CODE COSTS REAL MONEY</a></li>
+<li><a href="#s5">CONFIGURING CLAUDE CODE INSIDE VS CODE</a></li>
+<li><a href="#s6">THE PROJECT: AI-POWERED CUSTOMER SUPPORT EMAIL AGENT</a></li>
+<li><a href="#s7">THE AGENT FLOW, STEP BY STEP</a></li>
+<li><a href="#s8">TECHNOLOGY STACK AND FOLDER STRUCTURE</a></li>
+<li><a href="#s9">WHAT CLAUDE CODE CAN AND CANNOT DO FOR DEPLOYMENT</a></li>
+<li><a href="#s10">CREATING THE PROJECT SCAFFOLD</a></li>
+<li><a href="#s11">DEPENDENCY HELL AND PYTHON 3.14</a></li>
+<li><a href="#s12">BUILDING THE APPLICATION FLOW</a></li>
+<li><a href="#s13">PERMISSION MODES AND ASK-BEFORE-EDIT DISCIPLINE</a></li>
+<li><a href="#s14">ADDING A FILE-BASED KNOWLEDGE BASE</a></li>
+<li><a href="#s15">BUILDING THE API AND THE UI</a></li>
+<li><a href="#s16">WHEN IT BREAKS: DEBUGGING WITH THE AGENT</a></li>
+<li><a href="#s17">THE FINAL RESULT</a></li>
+<li><a href="#s18">LESSONS FROM AN HOUR OF VIBE CODING</a></li>
+    </ol>
+  </nav>
+<section>
+<h2 id="s1">WHY CLAUDE CODE MATTERS FOR DEVELOPERS</h2>
+<p>In this AI era, using AI across every kind of task — project development, learning new things, improving processes — has become essential. For anyone still thinking AI is just hype: it isn't. Enterprises are adopting AI coding tools aggressively, and teams that don't learn to use them will fall behind.</p>
+<p>This walkthrough shows how to build a real project using Claude Code, Anthropic's developer-focused coding product. The goal is not only to watch code appear on screen, but to understand how to set Claude Code up, how to configure it inside VS Code, and — most importantly — how to prompt it like an engineer rather than a vibe coder.</p>
+<p>Anthropic markets two main Claude products for builders: Claude Code, used directly inside a developer's system for writing and executing code, and Claude Cowork, a broader AI collaborator aimed at both developers and non-developers. Claude's models (Opus, Sonnet, Haiku) are tuned much more heavily toward coding and software engineering than toward general-purpose chat, which is exactly why they are popular inside development teams.</p>
+<p>A WARNING BEFORE YOU START: DON'T BECOME A VIBE CODER</p>
+<p>Anyone can generate code with AI today. A real engineer understands the architecture behind the system. That distinction matters more than ever.</p>
+<p>As an individual learner or hobbyist, you can build almost anything by prompting a copilot. But the moment you are working inside a company, the product you ship has real meaning — it must survive production, real users, and unexpected edge cases. If your fundamentals of programming, Python, or AI are weak, the application you ship can be a disaster.</p>
+<p>The correct order for any serious project is: understand the real-world problem statement, understand the user flow (inputs, outputs, how the user interacts), map out the complete backend flow, design the UI, and finally design the database and knowledge-base layer. Skip this ordering and you end up with random vibe-coded output that breaks in production.</p>
+<p>Companies are increasingly hiring people whose system-architecture concepts are clear. When your fundamentals are solid, vibe coding with copilots becomes an enormous productivity multiplier rather than a liability.</p>
+</section>
+<section>
+<h2 id="s2">HOW NOT TO PROMPT A COPILOT</h2>
+<p>The worst thing you can do with Claude Code is hand it a single prompt like &ldquo;Create an AI agent that handles customer support email automatically&rdquo; or &ldquo;Build a full production-grade multi-agent customer support system&rdquo; and expect a working result.</p>
+<p>When you give a copilot that kind of one-shot instruction, several things go wrong. The design of the system becomes inconsistent. Files get generated in random locations, imports break, the architecture becomes weak, and production readiness slows to a crawl. You end up debugging your copilot's choices instead of shipping.</p>
+<p>The smarter pattern is the opposite. Do not generate the entire project at once. Work module by module. Use an exact, specific prompt for each module. Verify the generated code as it appears. Run tests, and only then perform integration. Go step by step, deciding the backend flow, the UI, and the data flow before writing a line of code — even if &ldquo;writing&rdquo; means prompting.</p>
+</section>
+<section>
+<h2 id="s3">INSTALLING CLAUDE CODE ON WINDOWS</h2>
+<p>Setup on Windows follows a small, fixed sequence. Git is mandatory: Claude Code uses Git Bash under the hood to execute commands. Whatever Claude Code generates, it runs through your Git Bash in a background process. Install Git from git-scm.com — installers are available for Windows, macOS, and Linux.</p>
+<p>Next, install Claude Code itself. This can be done through a simple command in PowerShell or cmd, or by installing the ready-made desktop application that Anthropic ships for every major operating system. After installation, run the command `claude` to start it.</p>
+<p>On first launch, Claude Code prompts you to authorize the current folder and then asks you to pick a login method. Three options are offered: a Claude Pro or Max subscription, an API key, or third-party access through AWS Bedrock or Azure. Any of the three ends up loading a Claude model; which one you choose depends on what access you already have.</p>
+</section>
+<section>
+<h2 id="s4">BILLING REALITY: CLAUDE CODE COSTS REAL MONEY</h2>
+<p>Claude Code is not free, and underestimating that is a classic mistake. API-based access requires you to pre-load credits into your Anthropic account. Five dollars disappears quickly once you start building anything non-trivial. In a single session on one medium-sized project, several dollars of credit can evaporate in minutes, especially when using Sonnet or Opus.</p>
+<p>For enterprise teams the numbers scale up fast. A whole team using Claude Code inside a company can easily burn through a very large budget — think hundreds of thousands of rupees per quarter, depending on team size and usage patterns. The output quality is genuinely excellent, but it is not an expense you absorb casually.</p>
+<p>For learning, loading five or six dollars of credit is enough to get a real feel for the tool. For serious project work, ask your manager or director for an enterprise account rather than funding it yourself.</p>
+</section>
+<section>
+<h2 id="s5">CONFIGURING CLAUDE CODE INSIDE VS CODE</h2>
+<p>Claude Code can be driven from a terminal, but most developers will prefer the VS Code extension. Install the &ldquo;Claude&rdquo; extension from the VS Code marketplace. Once installed, a small Claude icon appears on the right side of the editor. Clicking it opens a dedicated Claude Code chat panel inside the IDE.</p>
+<p>The chat panel exposes several important controls. You can switch models on the fly — Haiku, Sonnet, Opus, and Opus with 1M context are all available. You can choose how Claude handles edits: ask before every edit, edit automatically, or stay in plan mode. You can attach specific files or folders as context, clear the conversation, toggle thinking mode, check memory and permissions, and inspect account usage.</p>
+<p>For practice sessions, Haiku is the right choice: it is cheap and fast enough to iterate. Sonnet and Opus produce dramatically better reasoning but will consume credit far more aggressively. Switching between them mid-session is a single click.</p>
+</section>
+<section>
+<h2 id="s6">THE PROJECT: AI-POWERED CUSTOMER SUPPORT EMAIL AGENT</h2>
+<p>The application built in this walkthrough is an AI-powered customer support email agent. Email communication is a core workflow in virtually every industry, and handling high volumes of incoming customer mail is exactly the kind of task an agent can scale far beyond what a human team can do manually.</p>
+<p>The stated goals are concrete: generate faster responses than a human, lower the cost of running customer support, and make support scalable to thousands or even hundreds of thousands of emails per month. Instead of hiring ten or fifteen support agents, a single well-designed system can front-load the work and route only the hard cases to a human.</p>
+<p>The input is straightforward — an inbound email such as &ldquo;I was charged twice for my subscription.&rdquo; The output is either a drafted reply, a classified category, or an escalation to a human. Along the way, the agent must classify intent, pull relevant information from a knowledge base, draft the response, and optionally schedule a follow-up.</p>
+</section>
+<section>
+<h2 id="s7">THE AGENT FLOW, STEP BY STEP</h2>
+<p>The complete flow is designed as an agentic pipeline. When a mail arrives, the agent triggers and reads the incoming email. It then classifies the email into one of several categories: product query, bug report, billing issue, feature request, or complex issue. Complex issues are routed directly to a human.</p>
+<p>For classified queries, the agent searches the knowledge base — documentation, SOPs, product information — for relevant context. Using that retrieved context, it drafts a response tailored to the customer's message. If the case is urgent or the agent's confidence is low, a human reviewer intervenes before the reply goes out. Otherwise the reply is sent, and the system maintains the state needed to schedule follow-ups.</p>
+</section>
+<section>
+<h2 id="s8">TECHNOLOGY STACK AND FOLDER STRUCTURE</h2>
+<p>The technology stack provided to Claude Code is deliberate: Python 3.12, FastAPI, LangGraph, LangChain, LangChain-OpenAI, Pydantic, and a vector database for knowledge-base retrieval. This exact stack is handed to Claude Code so that it generates code aligned to those libraries rather than inventing its own.</p>
+<p>A generic folder structure is defined up front as well. Whether you are building microservices or a monolith, the core files and folders look similar — an API layer, services, models, a database layer, workflow definitions, utilities, and tests. Providing this structure as a reference, while explicitly allowing Claude Code to add new files and folders as needed, gives the agent enough guardrails without over-constraining it.</p>
+<p>Defining this scaffolding matters because without it Claude Code will invent uncertain layouts. If you want real control over the project, you must specify the structure. That is exactly what separates engineer-driven vibe coding from chaotic vibe coding.</p>
+</section>
+<section>
+<h2 id="s9">WHAT CLAUDE CODE CAN AND CANNOT DO FOR DEPLOYMENT</h2>
+<p>A common misconception is that Claude Code can deploy applications to AWS by itself. It cannot. Claude Code cannot log into your AWS console, enter credentials, or click through the UI to create EC2 instances, ECS clusters, or Lambda functions.</p>
+<p>What it can do — and do well — is generate infrastructure as code. It can write Terraform, AWS CDK, or CloudFormation scripts; it can push them to GitHub; and it can wire up GitHub Actions or Jenkins pipelines that, when run, provision the required AWS services automatically. The AWS credentials themselves must be configured inside the CI/CD platform manually.</p>
+<p>This workflow has to happen under the supervision of a DevOps engineer. Letting an agent generate infrastructure code unsupervised is risky: a 0.1 percent chance of misgeneration, at cloud scale, can mean accidentally provisioning services that cost real money. Claude Code does not log into AWS, but it produces the infrastructure code that instructs AWS to create the services, and that capability must be used carefully.</p>
+</section>
+<section>
+<h2 id="s10">CREATING THE PROJECT SCAFFOLD</h2>
+<p>With setup complete, the build starts with a fresh directory: `mkdir customer-support-email-agent`, `cd` into it, and `code .` to open VS Code at that location. Inside VS Code, the Claude Code chat panel becomes the primary interface.</p>
+<p>The first prompt intentionally narrow: build a LangGraph-based customer support email agent in Python; create only the initial project scaffold, not the full implementation; use specifically Python 3.12, FastAPI, LangGraph, LangChain, LangChain-OpenAI, and Pydantic; generate a requirements.txt, a .env, and a README; take the reference folder structure as a guide but feel free to add any other files needed.</p>
+<p>Claude Code begins generating. It asks for permission before each edit — behavior controlled by the &ldquo;ask before edit&rdquo; setting. Files appear one by one: requirements.txt, .env, README.md, pyproject.toml, main.py, config.py, a logger, application entry points, email modules, graph definitions, init files, templates, utilities, helper files, and a development markdown document describing the project. All within a few minutes, none of it hand-written.</p>
+</section>
+<section>
+<h2 id="s11">DEPENDENCY HELL AND PYTHON 3.14</h2>
+<p>The first real friction arrives at install time. The system's default Python happens to be 3.14, and some dependencies — particularly Pydantic — don't have wheels ready for it yet. A virtual environment built against 3.14 fails to install the generated requirements.txt.</p>
+<p>The fix requires dropping back to Python 3.12 deliberately. Claude Code is asked to produce the correct `uv` command for creating a virtual environment pinned to Python 3.12. It does so, the environment is created, activated, and `uv pip install -r requirements.txt` starts to work — though it takes several iterations with Haiku to converge on a clean dependency resolution.</p>
+<p>This is an honest-to-life example of why the human stays in the loop. The agent can write the right requirements file, but identifying that the actual failure is a Python version mismatch — not a bad requirement — still benefits from developer judgement.</p>
+</section>
+<section>
+<h2 id="s12">BUILDING THE APPLICATION FLOW</h2>
+<p>With the scaffold and environment ready, the next prompt describes the complete flow of the application: read the incoming customer email, classify the intent, search required documents if needed, draft an appropriate response, route to human review if necessary, send the reply.</p>
+<p>Claude Code goes to work. It creates the database layer (database.py), models (models.py), service modules including an LLM service, a review service, a scheduler service, and a DB service. It builds out the LangGraph workflow itself — email retrieval, classification, context analysis, review check, response generation, and human-review routing — as distinct nodes in a state graph.</p>
+<p>More importantly, Claude Code writes a MEMORY.md for itself, maintaining its own notes about what has been built and what remains. It reports back with a structured summary listing completed layers — DB, services, workflow, response generation, review routing — and what is still outstanding, like the API routes.</p>
+</section>
+<section>
+<h2 id="s13">PERMISSION MODES AND ASK-BEFORE-EDIT DISCIPLINE</h2>
+<p>Throughout the build, the &ldquo;ask before edit&rdquo; permission mode forces Claude Code to stop at every file change and request approval. This is slow but educational: you see exactly what the agent intends to do, and you can reject or modify before it happens.</p>
+<p>Switching to &ldquo;allow all edits in this session&rdquo; lets the agent barrel through unassisted — vastly faster, but more dangerous. If something drifts, it drifts quickly. The right choice depends on your confidence in the model and how well-scoped your prompt is. For enterprise work, one-by-one approval is the only responsible option; for fast prototyping, batch approval is tempting.</p>
+<p>For production code in real teams, you should still understand the generated code line by line. Approving without verifying is how architectural weaknesses creep in undetected.</p>
+</section>
+<section>
+<h2 id="s14">ADDING A FILE-BASED KNOWLEDGE BASE</h2>
+<p>The next prompt asks Claude Code to implement a file-based knowledge base: create some dummy documents, store them on disk, build an index so the workflow can retrieve relevant information. In a production system these documents would represent real product docs, SOPs, FAQs, or support runbooks.</p>
+<p>Claude Code creates a population script (populate_knowledgebase.py) and seeds it with sample support documents and product information. It builds FAISS-based vector similarity search for semantic retrieval, all wired into the existing workflow so that classification and response-drafting nodes can pull context during execution.</p>
+<p>The result is a full RAG layer sitting inside the agent's pipeline — no manual coding, just an instruction to design it. The fundamentals of RAG still need to be clear to the developer, though, because specifying where data lives, how it is indexed, and how the agent queries it requires engineering judgement, not just prompting.</p>
+</section>
+<section>
+<h2 id="s15">BUILDING THE API AND THE UI</h2>
+<p>The final major prompt asks for an API and a UI: a web page to submit mock test emails and a second page showing the full inbox with email details and the corresponding agent output. Claude Code runs through a compact-summary planning phase, produces a detailed implementation checklist, and starts executing it.</p>
+<p>It generates a FastAPI application with well-organized routes — email routes, UI routes, a test-email endpoint, and debug views. It creates base.html, test-email.html, and inbox templates. It wires up a small SQLite database (customer_support.db) for persisting emails and their processed outputs, and it exposes API documentation automatically through FastAPI's built-in docs view.</p>
+<p>When launched on localhost, the interface is genuinely production-looking: total/pending/processing/responded/failed counters, a form to submit a test email with a category dropdown, and an inbox page listing all processed emails with classification, review status, generated response, and any failures.</p>
+</section>
+<section>
+<h2 id="s16">WHEN IT BREAKS: DEBUGGING WITH THE AGENT</h2>
+<p>The first real end-to-end test fails. The UI returns a validation error. The error is pasted straight back into Claude Code, which diagnoses it and edits the config. Next round: no classification output. The agent was using a local sentence-transformer model instead of OpenAI embeddings as intended. Claude Code reconfigures the config.py to use OpenAI embeddings only.</p>
+<p>Then the .env gets repeatedly rewritten by Claude Code when it detects what it thinks is a security exposure — wiping out the real API key while warning about &ldquo;exposed keys.&rdquo; This is a classic failure mode of a highly autonomous agent: giving it full autonomy to edit .env files means it will aggressively intervene on perceived risks, even destroying working configuration.</p>
+<p>The fix is explicit. Instruct Claude Code that the key is for local testing only and that it should stop editing the .env file. Switch the permission mode back to &ldquo;ask before edit&rdquo; for sensitive files. Manually restore the key and the model name. Restart the application.</p>
+<p>Multiple attempts later — with token usage creeping past 90 percent — the agent finally generates a real response. The email classification works, the context is retrieved, and a reply is drafted against the customer's complaint about being charged twice. The reply only fails to send because the system is not connected to a real Gmail API, which is expected and deferred for a future integration.</p>
+</section>
+<section>
+<h2 id="s17">THE FINAL RESULT</h2>
+<p>The finished application works end to end. A test email is submitted through the UI. The agent classifies it, runs the LangGraph workflow, performs the review check, generates a customer-facing response, and logs everything to the inbox page. Each email record shows the sender, subject, body, classification, review status, approved keywords, and the generated response text.</p>
+<p>The only remaining gap is the Gmail integration, which requires real Google credentials to actually send the reply. In production, that last step is trivial to wire up. The system itself — backend, workflow, RAG, API, UI, persistence — was built in roughly an hour of prompting.</p>
+</section>
+<section>
+<h2 id="s18">LESSONS FROM AN HOUR OF VIBE CODING</h2>
+<p>Several lessons stand out. First, clear fundamentals beat every prompting trick. The walkthrough worked because the technology stack, folder structure, and agent flow were specified up front. Handing the same tool to someone who couldn't describe those pieces would have produced chaos.</p>
+<p>Second, model choice matters but cost matters more. Haiku was cheap enough to iterate through a full build, including many failures, on a few dollars of credit. Sonnet or Opus would have converged faster and produced cleaner code, but would have consumed the budget in a fraction of the time. For real enterprise work the trade-off shifts the other way.</p>
+<p>Third, autonomy has sharp edges. Full auto-edit mode is thrilling until the agent starts rewriting your .env or deleting your generated indexes. &ldquo;Ask before edit&rdquo; keeps you in the loop, and in the long run it produces a better, more understandable codebase than a silent avalanche of changes.</p>
+<p>Fourth, the future is not &ldquo;AI writes everything.&rdquo; The future is engineers who know architecture, use copilots as force multipliers, and stay rigorously in control of what gets shipped. Claude Code is extraordinary in the hands of someone who understands systems. In the hands of a pure vibe coder, it is a very expensive way to generate code that will not survive production.</p>
+<p>Deployment — writing infrastructure as code, pushing it to GitHub, running CI/CD through GitHub Actions, and deploying onto AWS — is the natural next step, but was left for a follow-up session to avoid burning through more credits. The development-level build was the goal here, and the agent delivered it.</p>
+</section>
+</article>
+<a href="#" class="back-top" id="backTop">↑</a>
+<div class="resume-banner" id="resumeBanner">
+  <span id="resumeText">📖 Resume where you left off</span>
+  <div>
+    <button onclick="resumeReading()">Resume</button>
+    <button class="dismiss" onclick="dismissResume()">✕</button>
+  </div>
+</div>
+<script src="../../js/reader.js"></script>
+</body>
+</html>
