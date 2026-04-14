@@ -189,6 +189,18 @@ pre code { background: transparent; padding: 0; }
 }
 .github-link:hover { color: var(--accent); }
 
+/* ---------- Site footer (index only) ---------- */
+.site-footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 16px;
+  font-size: 0.85rem;
+}
+.site-footer a { color: var(--text-muted); text-decoration: none; }
+.site-footer a:hover { color: var(--accent); }
+
 /* ---------- References sidebar ---------- */
 /* Mobile/medium default: inline block after article. */
 .references-sidebar {
