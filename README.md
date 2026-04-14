@@ -362,17 +362,6 @@ python3 scripts/update_index_references.py  # refreshes counts in index.json
 
 ---
 
-## Reading features
-
-- **3 themes**: ☀️ Sepia (default, Kindle-style) · 🌤️ Light · 🌙 Dark
-- **Per-device progress** — each device saves its own reading position
-- **Auto-resume** — "continue where you left off" banner on reopen
-- **Progress bar** and reading % pinned while scrolling
-- **Clickable TOC** with all sections
-- Mobile-responsive
-
----
-
 ## Articles
 
 The full article index lives at [adhenawer.net](https://adhenawer.net/) (PT-BR) and [adhenawer.net/en/](https://adhenawer.net/en/) (English).
