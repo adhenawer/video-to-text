@@ -210,6 +210,159 @@ git push
 
 ---
 
+## Markdown for Agents (Cloudflare Worker)
+
+O site serve HTML normal para humanos e **Markdown automático** para agentes de IA que fazem *content negotiation* via `Accept: text/markdown`. Inspirado na feature [Markdown for Agents](https://blog.cloudflare.com/markdown-for-agents/) da Cloudflare — que só existe em plano pago — este projeto implementa a mesma ideia usando **Cloudflare Workers no plano gratuito**.
+
+### Por que isso importa
+
+Um HTML de artigo neste site custa ~53.000 tokens para um agente ler (markup, nav, scripts, CSS). A versão Markdown do mesmo conteúdo consome **~13.000 tokens — 75% menos**. Agentes economizam contexto, custo e latência.
+
+### Como funciona
+
+```
+Humano (Accept: text/html)
+  → Cloudflare edge → GitHub Pages → HTML completo
+
+Agente (Accept: text/markdown)
+  → Cloudflare edge → Worker intercepta → fetch HTML → converte → Markdown
+```
+
+O Worker roda na edge do Cloudflare (latência ~10ms), consome o HTML do origin (GitHub Pages) e retorna Markdown limpo com frontmatter YAML contendo metadata.
+
+### Teste rápido
+
+```bash
+# HTML normal (humano)
+curl -sI https://adhenawer.net/posts/pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html | grep -i content-type
+# content-type: text/html; charset=utf-8
+
+# Markdown (agente)
+curl -s https://adhenawer.net/posts/pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html \
+  -H "Accept: text/markdown" | head -15
+# ---
+# title: "Chefe do Claude Code: ..."
+# author: "Lenny's Podcast com Boris Cherny ..."
+# description: "..."
+# source: "https://adhenawer.net/..."
+# lang: pt-BR
+# ---
+#
+# ## INTRODUÇÃO
+#
+# 100% do meu código é escrito pelo Claude Code...
+```
+
+Headers de resposta do Worker:
+
+| Header | Valor |
+|---|---|
+| `Content-Type` | `text/markdown; charset=utf-8` |
+| `x-markdown-tokens` | Estimativa de tokens do Markdown retornado |
+| `Vary` | `Accept` (para cache correto) |
+| `Cache-Control` | `public, max-age=3600` |
+
+### Implementação técnica
+
+Localização: `workers/markdown-agent/`
+
+```
+workers/markdown-agent/
+├── wrangler.toml       ← rotas e config do Worker
+├── package.json
+└── src/
+    └── index.js        ← lógica: detecta Accept → fetch HTML → converte → retorna
+```
+
+**Rotas registradas** (`wrangler.toml`):
+
+```toml
+routes = [
+  { pattern = "adhenawer.net/posts/*", zone_name = "adhenawer.net" },
+  { pattern = "adhenawer.net/en/*", zone_name = "adhenawer.net" },
+  { pattern = "adhenawer.net/leituras/*", zone_name = "adhenawer.net" },
+  { pattern = "adhenawer.net/index.html", zone_name = "adhenawer.net" },
+  { pattern = "adhenawer.net/llms.txt", zone_name = "adhenawer.net" }
+]
+```
+
+**Fluxo do Worker** (`src/index.js`, resumo):
+
+```js
+export default {
+  async fetch(request) {
+    // 1. Redirect 301 de URLs legadas /leituras/ → /posts/pt_br/
+    const url = new URL(request.url);
+    if (url.pathname.startsWith("/leituras/")) {
+      return Response.redirect(
+        url.origin + url.pathname.replace("/leituras/", "/posts/pt_br/"),
+        301
+      );
+    }
+
+    // 2. Se não pediu Markdown, passa HTML direto
+    const accept = request.headers.get("Accept") || "";
+    if (!accept.includes("text/markdown")) {
+      return fetch(request);
+    }
+
+    // 3. Busca HTML do origin
+    const response = await fetch(new Request(request.url, {
+      headers: { Accept: "text/html" }
+    }));
+    const html = await response.text();
+
+    // 4. Extrai <article>, converte para Markdown via regex
+    const articleHtml = html.match(/<article[^>]*>([\s\S]*?)<\/article>/i)?.[1];
+    const markdown = htmlToMarkdown(articleHtml);
+
+    // 5. Monta frontmatter YAML + Markdown
+    const final = [
+      "---",
+      `title: "${meta.title}"`,
+      `author: "${meta.author}"`,
+      `source: "${request.url}"`,
+      "lang: pt-BR",
+      "---",
+      "",
+      markdown
+    ].join("\n");
+
+    // 6. Retorna com headers corretos
+    return new Response(final, {
+      headers: {
+        "Content-Type": "text/markdown; charset=utf-8",
+        "x-markdown-tokens": String(Math.ceil(final.length / 4)),
+        "Vary": "Accept",
+        "Cache-Control": "public, max-age=3600",
+      }
+    });
+  }
+};
+```
+
+A conversão HTML→Markdown é feita com regex puro (sem dependências externas) porque os HTMLs do projeto têm estrutura previsível (`<article>` envolvendo `<h2>`, `<p>`, `<section>`, `<figure class="slide-figure">`). Evita Turndown/JSDOM que não rodam nativamente em Workers runtime.
+
+### Custo
+
+**Zero.** O plano Free do Cloudflare Workers oferece **100.000 requests/dia gratuitos**. Para um site estático com tráfego moderado de agentes, é mais do que suficiente.
+
+### Deploy
+
+```bash
+cd workers/markdown-agent
+npm install
+npx wrangler login          # primeira vez
+npx wrangler deploy
+```
+
+### Referências
+
+- Blog post da Cloudflare: [Markdown for Agents](https://blog.cloudflare.com/markdown-for-agents/)
+- Doc da feature (pago): [developers.cloudflare.com/fundamentals/reference/markdown-for-agents](https://developers.cloudflare.com/fundamentals/reference/markdown-for-agents/)
+
+---
+
 ## Features de leitura
 
 - **3 temas**: ☀️ Sépia (padrão, estilo Kindle) · 🌤️ Claro · 🌙 Escuro
