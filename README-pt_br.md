@@ -169,8 +169,7 @@ claude
 **2. Pedir ao Claude Code para processar um vídeo**
 
 ```
-> adiciona artigo de https://youtu.be/owmJyKVu5f8 — Simon Willison no Pragmatic
-  Engineer. Slug: praticas-de-engenharia-para-agentes-de-codigo-simon-willison
+> adiciona artigo de https://youtu.be/owmJyKVu5f8
 ```
 
 O Claude Code então, sozinho:
@@ -199,8 +198,7 @@ Mesma conversa. Para vídeos do Twitter/X, garanta que fez o swap para `faster-w
 ### Fluxo Twitter/X
 
 ```
-> transcreve https://x.com/user/status/1234567890, título "Como Falar",
-  subtítulo "Patrick Winston · MIT"
+> transcreve https://x.com/user/status/1234567890
 ```
 
 Por baixo:
@@ -208,18 +206,6 @@ Por baixo:
 - `yt-dlp` baixa o áudio para `/tmp/`
 - `mlx-whisper` (macOS) ou `faster-whisper` (Windows/Linux) transcreve localmente
 - Mesma tradução + geração de HTML do YouTube
-
-### Backfill de artigos em inglês
-
-Para gerar versão em inglês de artigos existentes, peça ao Claude Code:
-
-```
-> gera a versão em inglês de docs/posts/pt_br/SLUG.html
-> use a transcrição original em transcripts/youtube/VIDEO_ID.txt
-> saída em docs/posts/original/ com slug canônico em inglês
-```
-
-O Claude Code organiza a transcrição em inglês tematicamente (mesmo formato das PT-BR), chama `build_html.py` com `lang='original'` e atualiza o sitemap.
 
 ### Documentação completa
 

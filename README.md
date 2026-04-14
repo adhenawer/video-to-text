@@ -171,8 +171,7 @@ claude
 **2. Ask Claude Code to process a video**
 
 ```
-> add article from https://youtu.be/owmJyKVu5f8 — Simon Willison on The Pragmatic
-  Engineer. Slug: praticas-de-engenharia-para-agentes-de-codigo-simon-willison
+> add article from https://youtu.be/owmJyKVu5f8
 ```
 
 Claude Code then, on its own:
@@ -201,8 +200,7 @@ Same conversation as above. For Twitter/X videos, make sure you've done the `fas
 ### Twitter/X flow
 
 ```
-> transcribe https://x.com/user/status/1234567890, title "How to Speak",
-  subtitle "Patrick Winston · MIT"
+> transcribe https://x.com/user/status/1234567890
 ```
 
 Under the hood:
@@ -210,18 +208,6 @@ Under the hood:
 - `yt-dlp` downloads the audio to `/tmp/`
 - `mlx-whisper` (macOS) or `faster-whisper` (Windows/Linux) transcribes locally
 - Same translation + HTML generation path as YouTube
-
-### English article backfill
-
-To generate English versions of existing articles, ask Claude Code:
-
-```
-> generate the English version for docs/posts/pt_br/SLUG.html
-> use the original transcript at transcripts/youtube/VIDEO_ID.txt
-> output to docs/posts/original/ with a canonical English slug
-```
-
-Claude Code organizes the English transcript thematically (same sectioned format as PT-BR), runs `build_html.py` with `lang='original'`, and updates the sitemap.
 
 ### Full project docs
 
