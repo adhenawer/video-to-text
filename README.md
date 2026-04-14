@@ -280,64 +280,7 @@ routes = [
 
 **Fluxo do Worker** (`src/index.js`, resumo):
 
-```js
-export default {
-  async fetch(request) {
-    // 1. Redirect 301 de URLs legadas /leituras/ → /posts/pt_br/
-    const url = new URL(request.url);
-    if (url.pathname.startsWith("/leituras/")) {
-      return Response.redirect(
-        url.origin + url.pathname.replace("/leituras/", "/posts/pt_br/"),
-        301
-      );
-    }
-
-    // 2. Se não pediu Markdown, passa HTML direto
-    const accept = request.headers.get("Accept") || "";
-    if (!accept.includes("text/markdown")) {
-      return fetch(request);
-    }
-
-    // 3. Busca HTML do origin
-    const response = await fetch(new Request(request.url, {
-      headers: { Accept: "text/html" }
-    }));
-    const html = await response.text();
-
-    // 4. Extrai <article>, converte para Markdown via regex
-    const articleHtml = html.match(/<article[^>]*>([\s\S]*?)<\/article>/i)?.[1];
-    const markdown = htmlToMarkdown(articleHtml);
-
-    // 5. Monta frontmatter YAML + Markdown
-    const final = [
-      "---",
-      `title: "${meta.title}"`,
-      `author: "${meta.author}"`,
-      `source: "${request.url}"`,
-      "lang: pt-BR",
-      "---",
-      "",
-      markdown
-    ].join("\n");
-
-    // 6. Retorna com headers corretos
-    return new Response(final, {
-      headers: {
-        "Content-Type": "text/markdown; charset=utf-8",
-        "x-markdown-tokens": String(Math.ceil(final.length / 4)),
-        "Vary": "Accept",
-        "Cache-Control": "public, max-age=3600",
-      }
-    });
-  }
-};
-```
-
 A conversão HTML→Markdown é feita com regex puro (sem dependências externas) porque os HTMLs do projeto têm estrutura previsível (`<article>` envolvendo `<h2>`, `<p>`, `<section>`, `<figure class="slide-figure">`). Evita Turndown/JSDOM que não rodam nativamente em Workers runtime.
-
-### Custo
-
-**Zero.** O plano Free do Cloudflare Workers oferece **100.000 requests/dia gratuitos**. Para um site estático com tráfego moderado de agentes, é mais do que suficiente.
 
 ### Deploy
 
@@ -347,11 +290,6 @@ npm install
 npx wrangler login          # primeira vez
 npx wrangler deploy
 ```
-
-### Referências
-
-- Blog post da Cloudflare: [Markdown for Agents](https://blog.cloudflare.com/markdown-for-agents/)
-- Doc da feature (pago): [developers.cloudflare.com/fundamentals/reference/markdown-for-agents](https://developers.cloudflare.com/fundamentals/reference/markdown-for-agents/)
 
 ---
 
