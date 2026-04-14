@@ -64,8 +64,9 @@ Para adicionar um novo provider (ex: Vimeo), basta criar um novo módulo em `src
 | Transcrição (Twitter/X) | [yt-dlp](https://github.com/yt-dlp/yt-dlp) + [mlx-whisper](https://github.com/ml-explore/mlx-examples) |
 | Tradução / organização | Claude (LLM) ou Gemma 4 local (mlx-lm) |
 | Build | `src/build_html.py` — Python puro, sem dependências externas |
-| Frontend | HTML estático — zero frameworks, zero build steps |
+| Frontend | HTML estático — zero frameworks, zero build steps, agora serve markdown também (via Cloudflare Worker) |
 | Hosting | GitHub Pages ou qualquer servidor estático |
+| Edge / Agentes | Cloudflare Worker (plano Free) — converte HTML→Markdown em runtime via content negotiation |
 
 ---
 
