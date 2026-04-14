@@ -69,7 +69,7 @@
 - [Trading com Order Flow — Do Mercado Global ao Chinês](https://adhenawer.net/posts/pt_br/trading-com-order-flow-mercado-global-ao-chines.html)
   Fonte: Trader Chinês · Twitter/X
 
-- [Akita: IA, prompt e o fim do programador bracal](https://adhenawer.net/posts/pt_br/akita-ia-prompt-fim-programador-bracal.html)
+- [FABIO AKITA - Flow #588](https://adhenawer.net/posts/pt_br/akita-ia-prompt-fim-programador-bracal.html)
   Fonte: Fabio Akita · Flow Podcast #588
 
 ## Blog — Português
@@ -156,5 +156,5 @@
 - [Why We Stopped Building Agents and Started Building Skills](https://adhenawer.net/posts/original/why-we-stopped-building-agents-started-building-skills.html)
   Source: Barry Zhang & Mahesh Sathiamoorthy · Anthropic
 
-- [Akita: AI, Prompts and the End of Grunt-Work Programming](https://adhenawer.net/posts/original/akita-ai-prompts-end-of-grunt-work-programming.html)
-  Source: Fabio Akita · Flow Podcast #588
+- [FABIO AKITA - Flow #588](https://adhenawer.net/posts/original/akita-ai-prompts-end-of-grunt-work-programming.html)
+  Source: Fabio Akita · Flow Podcast
