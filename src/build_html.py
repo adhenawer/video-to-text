@@ -92,9 +92,9 @@ def make_html(vid_id, title, subtitle, url, txt_path,
             ])
             if is_short and not is_paragraph_start:
                 section_id += 1
-                slug = f"s{section_id}"
-                toc_parts.append(f'<li><a href="#{slug}">{stripped}</a></li>')
-                html_parts.append(f'<h2 id="{slug}">{stripped}</h2>')
+                section_slug = f"s{section_id}"
+                toc_parts.append(f'<li><a href="#{section_slug}">{stripped}</a></li>')
+                html_parts.append(f'<h2 id="{section_slug}">{stripped}</h2>')
                 continue
             else:
                 formatted = re.sub(r'"([^"]+)"', r'&ldquo;\1&rdquo;', stripped)
