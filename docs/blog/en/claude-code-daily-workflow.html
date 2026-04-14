@@ -96,8 +96,6 @@ Commits: feat: adiciona artigo — Título / fix: ... / style: ...</code></pre>
 
   <h2>Lessons learned</h2>
 
-  <p>A year of running the project this way, a few things are clear.</p>
-
   <p><strong>Reference, don't paste.</strong> Early on I would paste a transcript into the chat. That eats the context window and produces worse translations than just saying "read <code>/tmp/transcript_abc123.txt</code>". The agent is better at pulling from disk than parsing a wall of quoted text.</p>
 
   <p><strong>Name the file, not the behavior.</strong> "Add the card" is ambiguous. "Edit <code>docs/index.html</code> to add a new card following the pattern of the last entry" is not. The <code>@docs/index.html</code> reference shorthand pins the target.</p>
