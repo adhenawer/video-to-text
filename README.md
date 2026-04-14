@@ -293,6 +293,69 @@ npx wrangler deploy
 
 ---
 
+## References sidebar
+
+Each article has a fixed sidebar (right side on wide screens, inline on mobile) with references extracted from the **original-language transcript** via LLM subagents. Categories:
+
+| Category | Icon | Link target |
+|---|---|---|
+| Books | 📖 | Amazon search (`amazon.com/s?k=...`) |
+| Tools | 🛠 | Canonical product site |
+| Papers | 📄 | arXiv / author's blog |
+| People | 👥 | Wikipedia / Twitter / personal site |
+| Concepts | 🧠 | Wikipedia / transformer-circuits.pub |
+| Companies | 🏢 | Official site |
+| Related posts | 🔗 | Internal cross-link (to the other language's canonical slug) |
+
+### How extraction works
+
+1. **Source of truth**: the raw transcript in its original language (`transcripts/{provider}/{id}.txt`)
+2. **Subagents** (one per post, run in parallel) receive the transcript plus the schema and available slug mappings
+3. Each subagent writes `transcripts/{provider}/{id}.references.json` — the **persisted subproduct**
+4. `transcripts/index.json` gets a summary per entry: `references.counts.*` and `references.total`
+5. `build_html.py` loads the JSON automatically when `provider=...` is passed and renders the sidebar
+
+### JSON schema
+
+```json
+{
+  "video_id": "We7BZVKbCVw",
+  "extracted_at": "2026-04-14",
+  "books": [{"title":"...","author":"...","url":"...","context":"..."}],
+  "tools": [{"name":"...","url":"...","context":"..."}],
+  "papers": [{"title":"...","authors":"...","url":"...","context":"..."}],
+  "people": [{"name":"...","role":"...","url":"...","context":"..."}],
+  "concepts": [{"name":"...","url":"...","context":"..."}],
+  "companies": [{"name":"...","url":"..."}],
+  "related_posts": [{"slug_pt":"...","slug_en":"...","reason":"..."}]
+}
+```
+
+### Stats as of v2
+
+- **714 references** extracted across 21 posts
+- Richest: *State of AI 2026* (Simon Willison, 61 refs) · *From IDEs to AI Agents* (Steve Yegge, 59) · *Behavioral Finance* (Shiller, 55)
+- Extracted in parallel by 20 subagents in ~2 minutes
+
+### Adding references to a new article
+
+Inside Claude Code:
+
+```
+> extract references from transcripts/youtube/{ID}.txt following the schema in CLAUDE.md
+> write to transcripts/youtube/{ID}.references.json
+```
+
+Then:
+
+```bash
+python3 scripts/regen_en_htmls.py         # rebuilds EN HTMLs with sidebar
+python3 scripts/patch_ptbr_references.py  # injects sidebar into existing PT-BR HTMLs
+python3 scripts/update_index_references.py  # refreshes counts in index.json
+```
+
+---
+
 ## Reading features
 
 - **3 themes**: ☀️ Sepia (default, Kindle-style) · 🌤️ Light · 🌙 Dark
