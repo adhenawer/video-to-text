@@ -28,7 +28,7 @@
     border: 1px solid var(--border);
     border-radius: 8px;
     overflow: hidden;
-    height: min(78vh, 780px);
+    height: min(86vh, 900px);
   }
   .moc-canvas svg { display: block; width: 100%; height: 100%; cursor: grab; }
   .moc-canvas svg:active { cursor: grabbing; }
@@ -144,12 +144,17 @@
 
   // --- Layout state ---
   const nodes = data.nodes.map((n, i) => {
-    const angle = (i / data.nodes.length) * Math.PI * 2;
-    const r = Math.min(W, H) * 0.32;
+    // start on a grid jittered a bit — scatter fills the canvas
+    const cols = Math.ceil(Math.sqrt(data.nodes.length * (W / H)));
+    const rows = Math.ceil(data.nodes.length / cols);
+    const col = i % cols;
+    const row = Math.floor(i / cols);
+    const cellW = W / (cols + 1);
+    const cellH = H / (rows + 1);
     return {
       ...n,
-      x: W / 2 + Math.cos(angle) * r,
-      y: H / 2 + Math.sin(angle) * r,
+      x: cellW * (col + 1) + (Math.random() - 0.5) * cellW * 0.5,
+      y: cellH * (row + 1) + (Math.random() - 0.5) * cellH * 0.5,
       vx: 0, vy: 0,
       degree: 0,
     };
@@ -188,8 +193,9 @@
     circle.setAttribute('r', r);
     g.appendChild(circle);
     const text = document.createElementNS(SVG_NS, 'text');
-    text.setAttribute('x', r + 6);
-    text.setAttribute('y', 3.5);
+    text.setAttribute('text-anchor', 'middle');
+    text.setAttribute('x', 0);
+    text.setAttribute('y', r + 12);
     text.textContent = n.title;
     g.appendChild(text);
 
@@ -205,6 +211,9 @@
     nodesG.appendChild(g);
     n.el = g;
     n.r = r;
+    // estimate half-width of the label (used for collision avoidance)
+    n.hw = Math.max(r, n.title.length * 3.1);
+    n.hh = r + 18;
     return g;
   });
 
@@ -229,9 +238,9 @@
 
   // --- Force simulation (Fruchterman-Reingold-ish) ---
   let alpha = 1;
-  const targetLen = 110;
-  const repel = 4200;
-  const centerPull = 0.012;
+  const targetLen = 190;
+  const repel = 11000;
+  const centerPull = 0.005;
   const damping = 0.86;
 
   function step() {
@@ -251,6 +260,21 @@
         const fy = (dy / d) * f;
         a.fx += fx; a.fy += fy;
         b.fx -= fx; b.fy -= fy;
+
+        // bounding-box collision (labels): push out if rects overlap
+        const ox = (a.hw + b.hw) - Math.abs(dx);
+        const oy = (a.hh + b.hh) - Math.abs(dy);
+        if (ox > 0 && oy > 0) {
+          const sign = dx === 0 ? (Math.random() - 0.5) : Math.sign(dx);
+          const push = Math.min(ox, 14);
+          a.fx += sign * push * 0.9;
+          b.fx -= sign * push * 0.9;
+          if (oy < ox) {
+            const sy = dy === 0 ? (Math.random() - 0.5) : Math.sign(dy);
+            a.fy += sy * oy * 0.6;
+            b.fy -= sy * oy * 0.6;
+          }
+        }
       }
     }
 
@@ -260,7 +284,7 @@
       const dx = b.x - a.x, dy = b.y - a.y;
       const d = Math.sqrt(dx * dx + dy * dy) || 1;
       const diff = d - targetLen;
-      const f = diff * 0.035;
+      const f = diff * 0.028;
       const fx = (dx / d) * f;
       const fy = (dy / d) * f;
       a.fx += fx; a.fy += fy;
@@ -381,11 +405,15 @@
   });
 
   resetBtn.addEventListener('click', () => {
+    const cols = Math.ceil(Math.sqrt(nodes.length * (W / H)));
+    const rows = Math.ceil(nodes.length / cols);
+    const cellW = W / (cols + 1);
+    const cellH = H / (rows + 1);
     nodes.forEach((n, i) => {
-      const angle = (i / nodes.length) * Math.PI * 2;
-      const r = Math.min(W, H) * 0.32;
-      n.x = W / 2 + Math.cos(angle) * r;
-      n.y = H / 2 + Math.sin(angle) * r;
+      const col = i % cols;
+      const row = Math.floor(i / cols);
+      n.x = cellW * (col + 1) + (Math.random() - 0.5) * cellW * 0.5;
+      n.y = cellH * (row + 1) + (Math.random() - 0.5) * cellH * 0.5;
       n.vx = 0; n.vy = 0;
     });
     alpha = 1;
