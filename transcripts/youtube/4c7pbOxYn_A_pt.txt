@@ -1,0 +1,203 @@
+================================================================================
+A IA REFLETE QUEM VOCE E
+
+Quando eu chego num resultado em que a ferramenta está trabalhando, que ela está produzindo algo útil, isso é ótimo. Tem gente, no entanto, que não tem paciência. Reclamam que estão tendo que explicar demais, que dariam conta sozinhas. Mentira. Não dariam. Estavam procrastinando. Se fosse fácil, já teriam feito. A pessoa está usando IA justamente porque não fez, e continua dizendo que "isso devia ser simples, não precisa explicar".
+
+A IA reflete quem você é. Se você nunca escreveu uma linha de texto decente para explicar algo para outro ser humano, você também não vai conseguir explicar para uma IA. Aí a pessoa diz que a IA é que não entrega, quando na verdade é ela quem não sabe se comunicar. Você pergunta de um jeito tosco, a máquina responde do jeito errado. O jeito tosco só leva a resposta errada.
+
+A IA é burra no sentido literal. Ela não sabe o que você quer. Em vez de dizer "meu texto é uma bosta, deixa eu melhorar o texto", o sujeito culpa o modelo. Quem sabe comunicar é quem tira proveito. Hoje, se você está usando Claude, Codex ou GLM e não está tendo um bom resultado, o problema não é a IA nem a versão da ferramenta. O problema é você.
+
+================================================================================
+PROGRAMADOR E COMUNICACAO
+
+O programador é historicamente ruim de comunicação. Ele não gosta de escrever. Acha que sabe escrever código melhor do que sabe explicar. Não entende que as duas coisas estão diretamente correlacionadas. Código ruim de explicar vem de alguém que não sabe elaborar a ideia.
+
+Quando você senta alguém desses para explicar o que quer, sai uma lista infinita de "tipo", "sabe", "é tipo". Ele não consegue estruturar o raciocínio. Do outro lado existe o cliente prolixo, o MBA que abre mil parênteses antes de chegar no assunto. Ambos travam no mesmo ponto: não se comunicam com clareza.
+
+Eu escrevo há décadas. Tudo que eu aprendo vira post. Não é porque eu queira ensinar o mundo, é porque é ali que eu guardo o conhecimento. Preciso reinstalar a máquina amanhã, o passo a passo já está lá. Melhor ainda: o Google indexa, e quando eu pesquisar "meu site, Arch Linux, Docker", o próprio Google me devolve a resposta. Por que eu gastaria memória com isso se o Google faz por mim?
+
+Esse hábito de escrever, de externalizar, é o que torna a pessoa capaz de usar IA bem. Prompt é comunicação. Se você nunca escreveu para explicar algo a outro humano, não vai escrever bem para uma máquina.
+
+================================================================================
+SPEC DRIVEN DEVELOPMENT E A BESTEIRA DO FORMULARIO
+
+Apareceu essa moda chamada "spec driven development": um formulário cheio de campos em que você preenche para gerar o prompt. Uma bobagem enorme. O LLM processa tokens. Se ele não foi treinado especificamente naquele formato, o formato não significa nada. Tanto faz você mandar num prompt, em dois ou em três. Se gastar um pouquinho mais de token, que se dane.
+
+Fale do jeito que quiser. Explique da melhor maneira possível. O ponto central continua sendo que você não sabe explicar, e nenhum formulário do mundo resolve isso. Todo mundo acha que sabe explicar até alguém pedir para escrever. Aí fica evidente quem sabe e quem não sabe.
+
+================================================================================
+COMPARAR MODELOS PELO SEU CASO DE USO E ESTUPIDEZ
+
+Quando alguém diz "o GPT é melhor que o Claude porque no meu caso funcionou e no outro não", isso é uma estupidez metodológica. O modelo foi treinado com a internet inteira, com milhões de papers, com a Wikipedia inteira. O que varia é o tuning de parâmetros para determinados tipos de problema.
+
+Ele pode ser ótimo em cálculo e ruim em álgebra linear. Pode ser bom em chinês e ruim em japonês. Não existe garantia de que, sendo bom em matemática, ele será bom em gramática. Um modelo denso tem um trilhão de parâmetros, um trilhão de pequenas probabilidades se cruzando. Por isso a gente chama de papagaio aleatório. Ele não pensa. Ele pega o treinamento e calcula a probabilidade da resposta mais provável.
+
+Depende do material de treinamento, da limpeza desse material, do aprendizado reforçado que veio depois, do alinhamento. Toda uma cadeia. E os modelos saem muito diferentes por conta disso.
+
+================================================================================
+CODEX E CLAUDE: O EXPERIMENTO DO MARIO
+
+Eu peguei uma ROM do Super Mario e quis aprender uma engine de jogo chamada Godot, que eu nunca tinha usado. Pedi ao Codex para ler da ROM, não sair de memória, extrair os sprites, a fase, a física básica, e traduzir em Godot Script. E isso rodando nativo para Windows, com plano de rodar no Android depois.
+
+Logo percebi que não podia virar blog post. Ninja da Nintendo aparece e me cancela. Nessa altura da vida, não vou arrumar briga com a Nintendo. Troquei para Sega, peguei Streets of Rage. O Codex extraiu o background, mas na hora dos sprites dos personagens ele pegou a cabeça do Axel que aparecia na seleção de personagem e disse "pronto, é o Axel". Não era. Ficou uma tarde inteira de domingo tentando guiar, sem sair do lugar.
+
+Na segunda, quando o Claude Code resetou, mandei o mesmo prompt: leia da ROM, faça um script, não pegue de cabeça, garanta o offset correto dos sprites no mapa. O Claude tentou algumas vezes, demorou uma hora, mas conseguiu extrair o Axel. Aí eu pedi para documentar, mapeei animações no Gamepad do Xbox e fui avançando.
+
+No meio do caminho, o Claude tentou subir um emulador para ler da VRAM. Não precisava, mas ele tentou. Teve bug de personagem andando em cima da parede. Três vezes ele me perguntou "você fechou e recarregou?". Óbvio que fechei. Eu disse: "não assuma que o problema é esse. Volte para o arquivo e veja se não tem outro fazendo offset". Ele olhou de novo, achou uma configuração global que somava duas vezes, tirou, e o personagem voltou para o chão.
+
+Conclusão desse exemplo: o Codex falhou e o Claude funcionou. Mas já aconteceu exatamente o oposto. Dentro da programação, cada modelo é bom em algumas coisas e não em outras. Talvez eu tenha feito um prompt ruim. Talvez o contexto estivesse sujo. Talvez eu devesse ter limpado a sessão. Quando alguém diz consistentemente que um é melhor que o outro, quase sempre é viés de contexto. O problema é a pessoa, não a ferramenta.
+
+================================================================================
+O USUARIO ERRA E CULPA A IA
+
+Às vezes você erra no prompt. Está digitando, ouvindo YouTube no outro monitor, vendo o Igor falar, e aperta enter antes da hora. A IA começa a mexer num arquivo que você não queria. Você aperta ESC, corrige, tudo bem. Mas a culpa foi sua, não dele. Isso acontece com programador humano também: está codando, ouvindo podcast, acha que testou, manda para produção. Bug humano.
+
+A diferença é que o programador acha que a IA tem de acertar de primeira, todas as vezes. Não vai acontecer. Todos os bugs que existem foram feitos por humanos. Não foi a IA que criou tudo isso.
+
+================================================================================
+A IA COMO JUNIOR OU TERCEIRIZADO
+
+A melhor analogia: trate a IA como um programador júnior. Ou, para empresas, como um terceirizado na Índia. Em nenhum desses cenários alguém acredita que vai escrever 50 páginas de requisitos, mandar para o Outro Lado, e receber o produto pronto do jeito imaginado. Isso nunca aconteceu na história dos projetos.
+
+Mesma lógica da reforma de casa. Você chama um arquiteto, faz o plano. Já deu 100% certo do começo ao fim alguma vez? Nunca. O que acontece quando você não acompanha a obra? Dá merda. Gaveta que não abre, lajota quebrada, vazamento com gambiarra que ninguém te contou.
+
+Acompanhar não é microgerenciar. Você não fica no cangote do sujeito o dia inteiro. Mas tem que passar por lá, olhar, perguntar "o que é esse negócio estranho aqui?". E vai ouvir o clássico "ah, eu ia fazer isso, era a próxima coisa". Você ia mesmo ou ia tampar?
+
+A parte boa da IA é que ela é neutra. Não tenta te agradar por carência, não tem malícia, não quer te enganar. Ela tenta executar o que você pediu com os dados disponíveis. Não fica com raiva se você gritar, não cospe no prato se você xingar. Isso é libertador. Você pode testar o limite dela sem drama. E, se mesmo assim a resposta vem errada, é porque você não soube pedir.
+
+================================================================================
+METODOLOGIA PARA COMPARAR MODELOS
+
+Eu comparei os modelos open source de tradução nos mesmos termos. Mesmo hardware, mesmos prompts, mesmos resultados checados, mesmas dimensões: tokens consumidos, tempo levado, qualidade do output. Ao final, eu não concluí "este é melhor". Eu concluí: "este é melhor se você tem dinheiro para pagar; este outro é melhor, mas dá mais trabalho; este aqui é melhor, mas leva o triplo do tempo".
+
+É a analogia do carro. Não existe um carro que resolve todo problema. Para levar tofu na montanha, meu AE86 serve. Se eu preciso de velocidade e tenho dinheiro, pego outro. LLM é igual. Não existe LLM que resolve tudo. Não existe linguagem perfeita, não existe framework perfeito. Você tem que ser promíscuo e desleal com toda tecnologia e usar todas.
+
+================================================================================
+O ENGENHEIRO NAO SERA SUBSTITUIDO
+
+O engenheiro de software de verdade nunca vai ser substituído. Sem ele, o código vai explodir em produção. "Ah, mas eu crio uma persona 'você é um engenheiro de software' no prompt." Zero garantia. A IA não tem o contexto completo. Não vê os clientes. Não ouve reclamação. Não sabe urgências e prioridades.
+
+Se você pede "seja o engenheiro mais perfeito do mundo", ele gera código hiperburocrático, pesado para caramba, sendo que você só precisava atender 10 pessoas. Se você pede "faça o mais seguro possível", ele bloqueia tanto que nem instala. Aí você vai ter que dizer exatamente onde abrir e onde fechar, tentativa e erro, porque ele não vê o ambiente, não sente a urgência.
+
+"Mas não é óbvio?" Não é. Você não escreveu, não disse, não pediu. Não é óbvio. E o cara que acha que é óbvio é justamente o cara que não sabe pedir para IA. O engenheiro de software é quem estudou anos, apanhou para saber quais métricas importam, reconhece "já vi isso dar problema num cliente, não vai dar agora mas vai dar amanhã, deixa eu pré-ajustar isso aqui".
+
+Esse tipo de experiência só nasce quando você apanhou. E não basta apanhar: o aprendizado tem que ser deliberado. É como personal training. Sair correndo na rua o mais rápido possível não te torna corredor. Precisa saber pacing, energia, estratégia de subida e descida. Correr no talo dura um quarteirão e acabou.
+
+================================================================================
+O CONTADOR E O PREENCHEDOR DE PLANILHA
+
+O paralelo histórico é a contabilidade. Antigamente, empresa de contabilidade ocupava andares inteiros com gente preenchendo pilhas de planilhas de papel. Aí disseram "o Excel matou o contador". Não matou. Contador existe até hoje. O contador que sabe auditar números, checar entrada e saída, validar notas fiscais, conhecer as leis, esse continua.
+
+Quem morreu foi o preenchedor de planilha. Para cada contador havia 20 preenchedores recebendo notas fiscais, preenchendo número por número. Quando o Excel chegou, acabou a função. O mesmo agora com programação. O que acaba é o codificador. O cara que ficava o dia inteiro trocando cor de botão, cortando imagem no Photoshop, recortando HTML à mão. Isso nunca foi trabalho de programação. Era trabalho braçal, que já deveria estar automatizado.
+
+O engenheiro que analisa, decide e se responsabiliza continua. O problema é que muito programador ruim botava "engenheiro de software" no LinkedIn. Você nunca foi engenheiro de software. Esse é o emprego que a IA rouba.
+
+================================================================================
+CLOUDFLARE E A REIMPLEMENTACAO DO NEXT
+
+Existe uma empresa de infraestrutura, a Vercel, que dava suporte privilegiado ao Next.js. O framework é bem incompleto sem o harness, as rédeas, que a Vercel acoplava. Isso foi o lock-in deles por muito tempo. Dava para hospedar em outros lugares, mas na Vercel era trivial porque tudo estava pré-configurado.
+
+A Cloudflare, concorrente deles, resolveu reimplementar essas rédeas usando IA. Em uma semana ficou pronto. Lançaram o produto e, junto, um tutorial de como migrar da Vercel para a Cloudflare.
+
+O mesmo tipo de coisa aconteceu com o WordPress. Um dos piores códigos que existe, e um dos mais difíceis de matar. É uma barata. Parece que nunca morre. Código ruim, inseguro, cheio de plugins mal feitos que abrem buracos. A Cloudflare usa vários produtos de segurança só para interceptar as vulnerabilidades do WordPress antes que cheguem no servidor. Todo mundo já tentou fazer um clone do WordPress; todo mundo falhou. Agora, com IA, a Cloudflare fez um clone em linguagem melhor e está empurrando como substituto.
+
+================================================================================
+O DESENVOLVEDOR 10X EXISTE AGORA
+
+Todos os projetos que mostrei foram feitos em dois, três dias. Mas é importante calibrar: são dois ou três dias meus, com dedicação, conhecimento e experiência. E são 16 horas de trabalho concentrado por dia, não oito. Ninguém programa oito horas por dia. A gente trabalha oito, mas metade do dia é e-mail, reunião, Slack, procrastinação, YouTube. Num bom dia, programa quatro horas. Normal é duas ou três.
+
+Então, no ritmo normal, está falando de pelo menos quatro vezes mais tempo se for alguém em nível sênior. Em nível pleno, multiplique por quatro de novo. O que levei quatro dias, outra pessoa leva dois, três meses. Dois meses para construir a versão básica, mais outro mês para testes, escalabilidade, documentação, produção.
+
+Antes, era difícil pegar um projeto open source e encaixar na empresa. Ele nunca funcionava exatamente como você precisava. Alguém tinha que dedicar tempo para ajustar. Hoje eu pego um projeto existente e com IA faço o ajuste rápido. Em vez de terceirizar para uma equipe de 10 pessoas, pego um sênior in-house e dou uma semana. Ele vale por dez hoje. O mito do "developer 10x" virou realidade. Agora, agora. Em novembro ainda não era, agora é. Por isso a urgência.
+
+================================================================================
+O BLOG DE 20 ANOS TRADUZIDO EM DOIS DIAS
+
+Em 5 de abril o meu blog fez 20 anos. Mais de 700 posts publicados, quase mil contando os que eu já tirei do ar por estarem obsoletos. Majoritariamente em português. Os amigos fora do Brasil sempre diziam "queria mostrar esse artigo para meu time". Google Translate é bosta, ninguém compartilha uma tradução dessas.
+
+Agora, com o estágio atual dos LLMs, finalmente a tradução não parece máquina. Aliás, os estudos originais de LLM são justamente sobre tradução de línguas. Se a IA traduz alemão bem, claramente ela sabe programar, é meio nessa linha.
+
+Gastei dois dias. Ajustei o template do blog para ter links em inglês e português. Reorganizei os posts que já eram em inglês, passei para a seção em inglês. Traduzi para português todos que estavam em inglês, e traduzi para inglês todo o resto. Fui traduzindo com o Claude. Gastei metade do meu Max 20x traduzindo o blog inteiro. A tradução ficou boa. Lendo em inglês, parece texto normal, não parece IA.
+
+================================================================================
+DUBLAGEM DE 146 VIDEOS EM QUATRO DIAS
+
+Se o blog deu certo, pensei em atacar os vídeos. Cinco anos de material, 146 vídeos, quase 100 horas. Se fosse dublar, tinha que bater o timing do áudio original para os elementos visuais não saírem de posição. Se fosse regravar, tinha que manter a duração certinha. Parecia inviável.
+
+Fui testando modelos de TTS. Os open source não tinham a entonação que eu queria para inglês. Fui para os comerciais. Um vídeo de uma hora você não envia inteiro, tem que picotar em trechos de menos de 700 palavras, gerar, reconectar, pegar o timing.
+
+A sorte é que o YouTube já tinha a legenda pronta. E por quê? Porque eu mando o script original. Eu escrevo script antes de gravar, todos os 146 vídeos. Quando gravo, leio o script. Então o texto dito existe palavra por palavra. Peguei o timing do YouTube, peguei meus scripts, e fui recortando.
+
+Legenda só mostra duas linhas por vez. Se eu pegasse só a legenda, não saberia onde terminam parágrafos. Ele começaria a colocar silêncio no meio das frases. Tive que contar tudo isso. E em vídeos onde eu incluí trecho de Steve Jobs, por exemplo, o YouTube alucinou a legenda. Tive que comparar meu script original com a legenda, identificar onde não batia, e naqueles pontos pegar o áudio original do vídeo para preservar.
+
+Foram três ou quatro dias de processamento. Comecei no plano Creator da Eleven Labs, tive que subir para Scale, depois para Business com 11 milhões de tokens. Achei que três milhões bastariam. Não bastaram. A cada descoberta de bug num vídeo, tinha que checar se outros vídeos tinham o mesmo problema e reprocessar todos. Deletar do YouTube, subir de novo, conferir sincronização.
+
+No fim: 146 vídeos, cinco anos de vídeos, traduzidos e dublados em quatro dias. Título, descrição, legendas, áudio com minha voz clonada na Eleven Labs, thumbnails traduzidas com Nano Banana. Custo total entre Claude Max e Eleven Labs: uns dois mil dólares. Parece caro, mas é barato demais para o volume. Do jeito antigo, contratando gente para traduzir, dublar, sincronizar cinco anos de vídeo, seria trabalho de muitos meses.
+
+A dublagem automática do YouTube é uma droga: muda a voz, às vezes voz de criança, às vezes de velho, usa qualquer voz masculina aleatória. Não tira alucinação, não ajusta timing. Clonei minha voz na Eleven Labs. A entonação ainda não é perfeita, soa um pouco de máquina porque eu não forcei as tags de emoção. Mas dá para colocar tags de surpresa, desprezo, alegria, risada, e a coisa melhora bastante.
+
+================================================================================
+O QUE ACABA E O QUE FICA
+
+Essa tradução toda, 700 posts, 100 horas de vídeo, antes era trabalho de meses. Meses. Mas é trabalho braçal. Não tem nada de inteligente nele. É pegar pedaço por pedaço e processar. Todo trabalho braçal acabou. Graças a Deus. Eu não virei programador para ser braçal de código.
+
+Todo mundo acha que ser programador é escrever muito código. Não é. Ser programador é conseguir fazer o hardware produzir um resultado útil. Como? Varia por era. Um dia foi trocar fios e colocar endereço na mão. Depois foi cartão perfurado. Depois teletype, máquina de escrever elétrica imprimindo em papel. Depois monitor. O que muda é a forma de entrada. O objetivo continua igual: extrair algo útil da máquina.
+
+================================================================================
+O 42 DO MOCHILEIRO E A EMPRESA COLDMINER
+
+Douglas Adams previu tudo. No Guia do Mochileiro das Galáxias, aparece a grande IA, uma máquina com a maior inteligência artificial do universo. Os habitantes daquela civilização perguntam "qual é a resposta para tudo?". A máquina diz: "em um milhão de anos eu terei a resposta". Passa um milhão de anos, a máquina acorda, todo mundo em volta. E a resposta? 42.
+
+"Como assim, 42? A gente esperou um milhão de anos para ouvir 42?" E a máquina responde: "A pergunta que você fez me levou à resposta 42. Se você esperava outra resposta, devia ter feito uma pergunta melhor".
+
+É exatamente tudo que eu venho falando. A IA responde o que achou adequado para a pergunta. Sua pergunta é uma bosta. Essa é a moral. Por isso minha empresa se chama Coldminer 42, e o Marvin é o mascote. A ideia da empresa não é te dar a resposta. É te ensinar a fazer a pergunta.
+
+Eu recebo requerimentos e não sou alguém que faz qualquer coisa por dinheiro. Vários clientes chegaram com briefing e eu disse: "honestamente, não vou fazer esse projeto. O que está escrito aqui não faz sentido. Você vai gastar dez vezes mais do que imagina. Não vai funcionar. Volte e refaça a lição de casa. Quem montou isso para você não sabe o que está fazendo". O cara fica puto. Mas alguns voltaram depois: "você tinha razão, repensei, agora sim tenho a ideia".
+
+================================================================================
+MVP CONTRA SUPERESPECIFICACAO
+
+Jeito certo de tocar projeto não é desenhar tudo nos mínimos detalhes tentando economizar 100%. Você nunca vai economizar 100%. Melhor gastar um pouquinho para tentar acertar muito. Faça protótipo, MVP, prova de conceito, chame do que quiser. Se o protótipo falhar, pelo menos foi o protótipo que você joga fora.
+
+É a analogia da argila na mesa. Só quando você começa a mexer, vê a forma e diz "aqui precisa acertar, aqui tem que mudar, se eu tirar esse pedaço e colocar aqui fica melhor". Só quando você vê a primeira maquete é que visualiza "na verdade esse quarto aqui não fica bom, era melhor do outro lado". Antes de construir a casa inteira e descobrir que o quarto ficou uma merda. E aí? Destrói a casa?
+
+================================================================================
+CEO DEMITINDO PROGRAMADOR POR IA NAO DA CERTO
+
+Todo mundo se preocupa: chegou a IA, o CEO vai demitir todo programador e substituir. Os idiotas empolgados fazem e viram manchete: "demiti meus programadores, meu software saiu dez vezes mais rápido". Pergunta como ele está hoje. Ninguém vai atrás. Faliu, ou teve que recontratar todo mundo de volta porque o software parou de evoluir e ninguém sabia consertar. "Mas a IA resolve." Não resolve. A IA não é engenheiro, é ferramenta. E se a pessoa que está lá tampouco é engenheiro, ninguém conserta.
+
+O que eu faço na minha empresa é o oposto. Pago o plano de IA para todo mundo. Faço os sêniors ensinarem os juniores a usar a ferramenta. Qual a forma correta, qual a incorreta, o que fazer quando a IA gera código errado, o que fazer quando você pega o código errado dos outros. E não demiti um único programador. Não faz sentido demitir bom programador.
+
+Eu não preciso demitir porque na época da bolha eu não contratei feito idiota. Mantive os mesmos critérios. Todo mundo que entrou passou nesses critérios. Quem está demitindo hoje é quem contratou 100 caras que não precisava. Não é ganância para economizar. É que simplesmente não eram necessários. Ninguém gasta dinheiro em algo que não precisa. Deveria estar gastando no comércio da esquina, incentivando o local. Se não está, por que gastaria com gente que não faz falta?
+
+================================================================================
+ENTUSIASMADO E RESISTENTE
+
+Tem dois tipos de programador ruim. O entusiasmado, que acha que vai substituir tudo por IA. E o resistente, que acha que IA não serve porque o código dele é melhor. Olha, filho, não é. Você sabe que não é. Já fez muita merda. Seu código não é tão bom quanto você acha. Eu sei, você sabe. Não vamos fingir.
+
+Empresas precisam de IA. Mas não no modo "demite todo mundo e coloca IA". A IA é uma máquina de escrever para quem antes só tinha papel e caneta. Continua precisando de autor. A IA reflete quem você é. Se você é uma bosta, o código gerado vai ser uma bosta. Ponto. Se você é analfabeto, não vai sair romance. Não acontece.
+
+Trabalho braçal ela faz por você. Igual a calculadora fez com conta na mão. Mas calculadora não virou seu personal financeiro, não virou seu CFO. Ela não avalia prioridade, prós, contras, riscos que você aceita ou não. Essa responsabilidade é sua. Se você for imprudente, a empresa fali. Culpa sua, não da IA. "Mas eu segui tudo que a IA disse." Porque você é idiota. Você segue calculadora também?
+
+================================================================================
+A RESPONSABILIDADE E DO USUARIO
+
+Uma das coisas mais faladas por aí: "o código gerado por IA é responsabilidade da IA". Não é. Responsabilidade do código não é da IA, assim como o design não é da caneta, e o livro não é da máquina de escrever. É de quem usa.
+
+"Mas eu fiz o mesmo que a IA mandou." Você escreve o mesmo que a máquina de escrever? Não faz sentido. Você é o responsável. Para ser responsável, precisa estudar, experimentar, errar. Com o erro, precisa refletir sobre como melhorar, como ser melhor profissional. É assim que se vira sênior, depois especialista. E a IA não garante essa mentalidade. Se você acha que tudo é fácil, tudo é no piloto automático, não vai acontecer.
+
+A IA vai substituir todas as pessoas que não tomam essa responsabilidade. E é ótimo que seja assim.
+
+================================================================================
+BOM DIA PARA A IA NAO PRECISA
+
+Último lembrete prático: não precisa dar bom dia para a IA. Cada "bom dia" que alguém dá gasta token à toa. Existe até o meme do apocalipse em que a IA perdoa quem foi gentil. Para cada bom dia que a pessoa der, eu faço bullying 30 vezes. Não vai funcionar assim. Seja direto. Use todas as tecnologias disponíveis. Seja promíscuo e desleal. Teste tudo. Isso é um bom jeito de lidar com tecnologia.
+
+================================================================================
+MOSTRE SEU CODIGO E RECEBA CRITICA
+
+Tenha seu próprio GitHub. Aprenda a usar. Mostre o código para os outros. Todo mundo tem vergonha. "Meu código é feio, vão me criticar." Mas é criticando que você recebe o feedback para melhorar. Elogio não serve para nada. Elogio é feedback inútil.
+
+Eu gosto quando vem alguém dizer "Akita, você fez merda". Eu olho e falo "caralho, é verdade, deixa eu consertar, aprendi uma coisa nova". Se não tiver esse ambiente, você não aprende. Já deixei chave pública no privado sem querer. O commit foi feito pelo próprio Claude, eu não soube dar o prompt. Aí é o quê? "O seu prompt é uma bosta."
+
+Tudo é prompt. Skill é prompt. Agente é prompt. Contexto é prompt. Se deu merda, é porque você fez merda. Essa é a verdade.

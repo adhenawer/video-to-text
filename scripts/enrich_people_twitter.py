@@ -74,6 +74,13 @@ KNOWN_HANDLES = {
     "fiona": None,  # too ambiguous
     "lena": None,  # too ambiguous
     "nikita beer": "nikitabier",
+    "fabio akita": "akitaonrails",
+    "steve jobs": None,  # deceased
+    "douglas adams": None,  # deceased
+    "marvin": None,  # fictional (Hitchhiker's Guide)
+    "axel stone": None,  # fictional (Streets of Rage)
+    "igor 3k": "igor3k",
+    "igor": None,  # too ambiguous without last name
     # Tech / programming figures
     "toby lütke": "tobi",
     "toby lutke": "tobi",

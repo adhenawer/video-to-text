@@ -1,0 +1,203 @@
+================================================================================
+AI REFLECTS WHO YOU ARE
+
+When I get to a point where the tool is actually working, producing something useful, that's great. But there are people who have no patience. They complain that they're having to explain too much, that they could do it faster themselves. That's a lie. They couldn't. They were procrastinating. If it were easy, they would have done it already. The person is using AI precisely because they didn't do it, and they keep saying "this should be simple, I shouldn't have to explain."
+
+AI reflects who you are. If you've never written a decent line of text to explain something to another human being, you're not going to be able to explain it to an AI either. Then the person says the AI is the one failing to deliver, when in reality they're the one who can't communicate. You ask in a clumsy way, the machine answers the wrong way. A clumsy question only leads to a wrong answer.
+
+AI is dumb in the literal sense. It doesn't know what you want. Instead of saying "my prompt sucks, let me improve it," the person blames the model. Whoever knows how to communicate is the one who extracts value. Today, if you're using Claude, Codex or GLM and not getting good results, the problem isn't the AI or the version of the tool. The problem is you.
+
+================================================================================
+PROGRAMMERS AND COMMUNICATION
+
+Programmers have historically been bad communicators. They don't like to write. They think they know how to write code better than they know how to explain things. They don't understand that the two are directly correlated. Code that's hard to explain comes from someone who can't articulate the idea.
+
+When you sit one of these people down to explain what they want, out comes an endless list of "like," "you know," "it's kind of." They can't structure a line of reasoning. On the other side you have the long-winded client, the MBA who opens a thousand parentheses before getting to the point. Both get stuck at the same place: they don't communicate clearly.
+
+I've been writing for decades. Everything I learn becomes a post. It's not because I want to teach the world, it's because that's where I store the knowledge. If I need to reinstall my machine tomorrow, the step-by-step is already there. Better yet: Google indexes it, and when I search "my site, Arch Linux, Docker," Google itself gives me the answer back. Why would I waste memory on that when Google does it for me?
+
+This habit of writing, of externalizing, is what makes someone capable of using AI well. A prompt is communication. If you've never written to explain something to another human, you won't write well for a machine.
+
+================================================================================
+SPEC DRIVEN DEVELOPMENT AND THE FORM FILLING NONSENSE
+
+There's this fad called "spec driven development": a form full of fields you fill in to generate a prompt. Total nonsense. The LLM processes tokens. If it wasn't specifically trained on that format, the format means nothing. It makes no difference whether you send it as one prompt, two, or three. If it burns a few more tokens, who cares.
+
+Talk however you want. Explain it the best way you can. The real issue is still that you don't know how to explain, and no form in the world fixes that. Everyone thinks they know how to explain until somebody asks them to write it down. Then it becomes obvious who knows and who doesn't.
+
+================================================================================
+COMPARING MODELS BY YOUR OWN USE CASE IS STUPID
+
+When somebody says "GPT is better than Claude because in my case it worked and the other didn't," that's methodological stupidity. The model was trained on the entire internet, on millions of papers, on all of Wikipedia. What varies is the parameter tuning for specific kinds of problems.
+
+It can be great at calculus and bad at linear algebra. It can be good at Chinese and bad at Japanese. There's no guarantee that being good at math means it'll be good at grammar. A dense model has a trillion parameters, a trillion tiny probabilities crossing each other. That's why we call it a stochastic parrot. It doesn't think. It takes the training data and calculates the probability of the most likely answer.
+
+It depends on the training material, how clean that material is, the reinforcement learning that came after, the alignment. A whole chain. And the models come out very differently because of it.
+
+================================================================================
+CODEX AND CLAUDE: THE MARIO EXPERIMENT
+
+I grabbed a Super Mario ROM and wanted to learn a game engine called Godot that I'd never used. I asked Codex to read from the ROM, not make things up from memory, extract the sprites, the stage, the basic physics, and translate it into Godot Script. Running native on Windows, with a plan to run it on Android later.
+
+I quickly realized it couldn't become a blog post. A Nintendo ninja shows up and cancels me. At this stage of life, I'm not going to pick a fight with Nintendo. I switched to Sega, grabbed Streets of Rage. Codex extracted the background, but when it came to the character sprites it grabbed Axel's head from the character select screen and said "done, that's Axel." It wasn't. An entire Sunday afternoon trying to guide it, going nowhere.
+
+On Monday, when Claude Code reset, I sent the same prompt: read from the ROM, make a script, don't pull anything from memory, make sure the sprite offsets in the map are correct. Claude tried a few times, took about an hour, but managed to extract Axel. Then I asked it to document everything, mapped the animations onto an Xbox gamepad, and kept moving forward.
+
+Along the way, Claude tried to spin up an emulator to read from VRAM. It didn't need to, but it tried. There was a bug with the character walking on top of the wall. Three times it asked me "did you close and reload?" Obviously I did. I said: "don't assume that's the problem. Go back to the file and check if something else is adding an offset." It looked again, found a global config that was adding twice, removed it, and the character dropped back to the floor.
+
+The takeaway from this example: Codex failed and Claude worked. But the exact opposite has happened too. Within programming, each model is good at some things and bad at others. Maybe I wrote a bad prompt. Maybe the context was polluted. Maybe I should have cleared the session. When someone consistently claims one is better than the other, it's almost always context bias. The problem is the person, not the tool.
+
+================================================================================
+THE USER MESSES UP AND BLAMES THE AI
+
+Sometimes you mess up the prompt. You're typing, listening to YouTube on the other monitor, watching Igor talk, and you hit enter too early. The AI starts editing a file you didn't want touched. You hit ESC, fix it, fine. But the fault was yours, not its. The same thing happens to human programmers: they're coding, listening to a podcast, think they tested it, and ship it to production. Human bug.
+
+The difference is the programmer thinks the AI has to get it right on the first try, every single time. That's not going to happen. Every bug that exists was made by a human. The AI didn't create all of this.
+
+================================================================================
+AI AS A JUNIOR OR OUTSOURCED DEV
+
+The best analogy: treat the AI like a junior programmer. Or, for companies, like an outsourced dev in India. In none of those scenarios does anyone believe they'll write 50 pages of requirements, send them to the other side, and receive the finished product exactly as imagined. That has never happened in the history of projects.
+
+Same logic as a home renovation. You hire an architect, make a plan. Has it ever gone 100% right from start to finish? Never. What happens when you don't supervise the work? It goes to hell. A drawer that won't open, a broken tile, a leak patched with some jerry-rig no one told you about.
+
+Supervising isn't micromanaging. You don't stand over the guy all day. But you have to swing by, look around, ask "what's this weird thing here?" And you'll hear the classic "oh, I was going to fix that, it was next on my list." Were you really, or were you going to cover it up?
+
+The good thing about AI is that it's neutral. It doesn't try to please you out of neediness, it has no malice, it doesn't want to trick you. It just tries to execute what you asked for with the data available. It doesn't get angry if you yell, it doesn't hold a grudge if you curse at it. That's liberating. You can push its limits without drama. And if the answer still comes out wrong, it's because you didn't know how to ask.
+
+================================================================================
+METHODOLOGY FOR COMPARING MODELS
+
+I compared open source translation models on equal footing. Same hardware, same prompts, same verified results, same dimensions: tokens consumed, time taken, output quality. At the end, I didn't conclude "this one is best." I concluded: "this one is best if you have money to pay; this other one is better but takes more work; this one is better but takes three times as long."
+
+It's the car analogy. There's no single car that solves every problem. To deliver tofu in the mountains, my AE86 does the job. If I need speed and I have the money, I grab a different car. LLMs are the same. There's no LLM that solves everything. There's no perfect language, no perfect framework. You have to be promiscuous and disloyal with every technology and use all of them.
+
+================================================================================
+THE ENGINEER WILL NOT BE REPLACED
+
+The real software engineer will never be replaced. Without one, the code is going to blow up in production. "But I just create a 'you are a software engineer' persona in the prompt." Zero guarantees. The AI doesn't have the full context. It doesn't see the customers. It doesn't hear the complaints. It doesn't know the urgencies and priorities.
+
+If you tell it "be the most perfect engineer in the world," it generates hyper-bureaucratic code, heavy as hell, when all you needed was to serve 10 users. If you tell it "make it as secure as possible," it locks things down so hard it won't even install. Then you have to tell it exactly where to open and where to close, trial and error, because it can't see the environment or feel the urgency.
+
+"But isn't it obvious?" It isn't. You didn't write it, you didn't say it, you didn't ask. It's not obvious. And the guy who thinks it's obvious is exactly the guy who doesn't know how to ask the AI. The software engineer is the one who studied for years, got beaten up enough to know which metrics matter, who recognizes "I've seen this cause problems at another customer, it won't break now but it will tomorrow, let me pre-adjust this."
+
+That kind of experience only comes from getting beaten up. And getting beaten up isn't enough: the learning has to be deliberate. It's like personal training. Running down the street as fast as you can doesn't make you a runner. You need pacing, energy management, a strategy for climbs and descents. Sprinting all-out lasts one block and you're done.
+
+================================================================================
+THE ACCOUNTANT AND THE SPREADSHEET FILLER
+
+The historical parallel is accounting. Back in the day, accounting firms filled entire floors with people filling out stacks of paper spreadsheets. Then people said "Excel killed the accountant." It didn't. Accountants still exist today. The accountant who knows how to audit numbers, check cash flow, validate invoices, know the tax code — that one is still here.
+
+What died was the spreadsheet filler. For every accountant there were 20 people receiving invoices and copying numbers by hand. When Excel arrived, that job was over. Same thing now with programming. What's ending is the coder. The guy who spent all day changing the color of a button, cropping an image in Photoshop, hand-cutting HTML. That was never programming. It was manual labor that should have been automated long ago.
+
+The engineer who analyzes, decides, and takes responsibility stays. The problem is that a lot of bad programmers were writing "software engineer" on LinkedIn. You were never a software engineer. That's the job the AI is taking.
+
+================================================================================
+CLOUDFLARE AND THE REIMPLEMENTATION OF NEXT
+
+There's an infrastructure company, Vercel, that gave privileged support to Next.js. The framework is pretty incomplete without the harness, the reins, that Vercel bolted on. That was their lock-in for a long time. You could host it elsewhere, but on Vercel it was trivial because everything was preconfigured.
+
+Cloudflare, their competitor, decided to reimplement those reins using AI. In one week it was done. They shipped the product and, alongside it, a tutorial on how to migrate from Vercel to Cloudflare.
+
+The same kind of thing happened with WordPress. One of the worst codebases that exists, and one of the hardest to kill. It's a cockroach. It just won't die. Bad code, insecure, full of badly written plugins that open holes. Cloudflare uses several security products just to intercept WordPress vulnerabilities before they reach the server. Everyone has tried to build a WordPress clone; everyone failed. Now, with AI, Cloudflare built a clone in a better language and is pushing it as a replacement.
+
+================================================================================
+THE 10X DEVELOPER EXISTS NOW
+
+All the projects I showed were done in two or three days. But it's important to calibrate: those are two or three of my days, with dedication, knowledge, and experience. And they're 16 hours of concentrated work per day, not eight. No one programs eight hours a day. We work eight, but half of it is email, meetings, Slack, procrastination, YouTube. On a good day, you program four hours. Normal is two or three.
+
+So at a normal pace, you're talking about at least four times more time if it's someone at senior level. At mid level, multiply by four again. What took me four days, someone else takes two, three months. Two months to build the basic version, plus another month for tests, scalability, documentation, production.
+
+Before, it was hard to take an open source project and plug it into your company. It never worked exactly the way you needed. Someone had to dedicate time to adjust it. Today I take an existing project and with AI I tailor it fast. Instead of outsourcing to a team of 10 people, I grab one senior in-house and give them a week. They're worth ten today. The "10x developer" myth became real. Right now. In November it wasn't yet, now it is. That's why the urgency.
+
+================================================================================
+A 20 YEAR BLOG TRANSLATED IN TWO DAYS
+
+On April 5th my blog turned 20 years old. Over 700 published posts, nearly a thousand counting the ones I've taken down for being obsolete. Mostly in Portuguese. Friends outside Brazil always said "I wish I could show this article to my team." Google Translate is garbage, no one shares a translation like that.
+
+Now, with the current state of LLMs, translation finally doesn't sound like a machine. Incidentally, the original LLM studies were about language translation. If an AI translates German well, clearly it can program — that was the thinking.
+
+I spent two days. I adjusted the blog template to have English and Portuguese links. I reorganized the posts that were already in English, moved them to the English section. I translated to Portuguese all the ones that were in English, and translated to English all the rest. I translated them with Claude. I burned half of my Max 20x plan translating the entire blog. The translation turned out good. Reading it in English, it reads like normal text, not AI.
+
+================================================================================
+DUBBING 146 VIDEOS IN FOUR DAYS
+
+If the blog worked, I thought I'd tackle the videos. Five years of material, 146 videos, nearly 100 hours. If I was going to dub them, the audio timing had to match the original so the visual elements wouldn't get out of sync. If I was going to re-record, I had to hold the exact duration. It seemed unfeasible.
+
+I went through TTS models. The open source ones didn't have the intonation I wanted for English. I moved to commercial ones. You don't send an hour-long video in one shot, you have to chop it into chunks of less than 700 words, generate, stitch back together, keep the timing.
+
+The lucky part is YouTube already had the subtitles. Why? Because I send the original script. I write a script before recording, all 146 videos. When I record, I read the script. So the spoken text exists word for word. I pulled the timing from YouTube, grabbed my scripts, and started cutting.
+
+A subtitle only shows two lines at a time. If I used just the subtitles, I wouldn't know where paragraphs end. It would start inserting silence in the middle of sentences. I had to account for all of that. And in videos where I included a Steve Jobs clip, for example, YouTube hallucinated the subtitle. I had to compare my original script against the subtitle, find where they didn't match, and in those spots pull the original video audio to preserve it.
+
+It took three or four days of processing. I started on Eleven Labs' Creator plan, had to upgrade to Scale, then to Business with 11 million tokens. I thought three million would be enough. It wasn't. With every bug I discovered in a video, I had to check whether other videos had the same issue and reprocess them all. Delete from YouTube, upload again, verify sync.
+
+In the end: 146 videos, five years of videos, translated and dubbed in four days. Title, description, subtitles, audio with my cloned voice on Eleven Labs, thumbnails translated with Nano Banana. Total cost between Claude Max and Eleven Labs: about two thousand dollars. Sounds expensive, but it's dirt cheap for the volume. The old-school way, hiring people to translate, dub, and sync five years of video would be many months of work.
+
+YouTube's auto-dubbing is garbage: it changes the voice, sometimes a child's voice, sometimes an old man's, it uses any random male voice. It doesn't remove hallucinations, doesn't fix timing. I cloned my voice on Eleven Labs. The intonation still isn't perfect, it sounds a bit machine-like because I didn't force the emotion tags. But you can drop in tags for surprise, disdain, joy, laughter, and it gets a lot better.
+
+================================================================================
+WHAT ENDS AND WHAT STAYS
+
+All this translation, 700 posts, 100 hours of video, used to be months of work. Months. But it's manual labor. There's nothing intelligent about it. It's taking it piece by piece and processing it. All manual labor is over. Thank God. I didn't become a programmer to do manual code labor.
+
+Everyone thinks being a programmer means writing a lot of code. It doesn't. Being a programmer means getting the hardware to produce a useful result. How? It varies by era. Once it was swapping wires and entering addresses by hand. Then punch cards. Then teletypes, electric typewriters printing on paper. Then monitors. What changes is the input method. The goal stays the same: extract something useful from the machine.
+
+================================================================================
+HITCHHIKER'S 42 AND THE COLDMINER COMPANY
+
+Douglas Adams predicted all of this. In The Hitchhiker's Guide to the Galaxy, there's the great AI, a machine with the highest artificial intelligence in the universe. The inhabitants of that civilization ask "what's the answer to everything?" The machine says: "in a million years I'll have the answer." A million years pass, the machine wakes up, everyone gathered around. And the answer? 42.
+
+"What do you mean, 42? We waited a million years to hear 42?" And the machine replies: "The question you asked me led me to the answer 42. If you wanted a different answer, you should have asked a better question."
+
+That's exactly what I've been saying. The AI answers what it found appropriate for the question. Your question sucks. That's the moral. That's why my company is called Coldminer 42, and Marvin is the mascot. The idea of the company isn't to give you the answer. It's to teach you to ask the question.
+
+I get requirements and I'm not a hired gun who'll do anything for money. Several clients showed up with a brief and I said: "honestly, I'm not doing this project. What's written here doesn't make sense. You're going to spend ten times more than you think. It's not going to work. Go back and redo your homework. Whoever put this together for you doesn't know what they're doing." The guy gets pissed. But some came back later: "you were right, I rethought it, now I have the real idea."
+
+================================================================================
+MVP AGAINST OVER SPECIFICATION
+
+The right way to run a project is not to design every tiny detail trying to save 100%. You're never going to save 100%. Better to spend a little to try to get a lot right. Build a prototype, MVP, proof of concept, call it whatever. If the prototype fails, at least what you throw away is the prototype.
+
+It's the clay on the table analogy. Only when you start shaping it do you see the form and say "this part needs fixing, this part needs to change, if I take this piece and move it here it gets better." Only when you see the first mockup do you realize "actually this room doesn't work, it was better on the other side." Before you build the whole house and discover the room is a disaster. And then what? Tear the house down?
+
+================================================================================
+A CEO FIRING PROGRAMMERS FOR AI DOES NOT WORK
+
+Everyone is worried: AI arrived, the CEO is going to fire every programmer and replace them. The excited idiots do it and it becomes a headline: "I fired my programmers, my software shipped ten times faster." Ask how that guy is doing today. Nobody follows up. He went bankrupt, or had to rehire everyone because the software stopped evolving and nobody knew how to fix it. "But the AI solves it." It doesn't. The AI isn't an engineer, it's a tool. And if the person there isn't an engineer either, nobody fixes anything.
+
+What I do at my company is the opposite. I pay for an AI plan for everyone. I have the seniors teach the juniors how to use the tool. What the right way is, what the wrong way is, what to do when the AI generates bad code, what to do when you inherit bad code from others. And I haven't fired a single programmer. It doesn't make sense to fire a good programmer.
+
+I don't need to fire anyone because during the bubble I didn't hire like an idiot. I kept the same criteria. Everyone who came in met those criteria. The people firing today are the ones who hired 100 people they didn't need. It's not greed to cut costs. It's that they simply weren't necessary. Nobody spends money on something they don't need. You should be spending it at the corner store, supporting local business. If you aren't, why would you spend it on people you don't need?
+
+================================================================================
+THE ENTHUSIAST AND THE RESISTER
+
+There are two kinds of bad programmer. The enthusiast, who thinks AI will replace everything. And the resister, who thinks AI is useless because his code is better. Look, kid, it isn't. You know it isn't. You've screwed up plenty. Your code isn't as good as you think. I know, you know. Let's not pretend.
+
+Companies need AI. But not in the "fire everyone and drop in AI" mode. AI is a typewriter for someone who only had paper and pen before. You still need an author. AI reflects who you are. If you're crap, the code it generates is going to be crap. Period. If you're illiterate, you're not going to produce a novel. It doesn't happen.
+
+Manual labor it does for you. Just like the calculator did for doing math by hand. But the calculator didn't become your personal finance coach, didn't become your CFO. It doesn't weigh priorities, pros, cons, risks you're willing to accept or not. That responsibility is yours. If you're reckless, the company goes under. Your fault, not the AI's. "But I did everything the AI said." Because you're an idiot. Do you obey the calculator too?
+
+================================================================================
+THE RESPONSIBILITY IS THE USERS
+
+One of the most talked-about lines out there: "code generated by AI is the AI's responsibility." It isn't. Responsibility for the code isn't the AI's, just like the design isn't the pen's, and the book isn't the typewriter's. It's whoever uses it.
+
+"But I did what the AI told me." Do you write what the typewriter tells you? It makes no sense. You are the responsible party. To be responsible, you have to study, experiment, fail. With failure, you have to reflect on how to improve, how to be a better professional. That's how you become senior, then specialist. And AI doesn't guarantee that mindset. If you think everything is easy, everything is autopilot, it won't happen.
+
+AI will replace every person who doesn't take that responsibility. And it's great that it'll be that way.
+
+================================================================================
+YOU DO NOT NEED TO SAY GOOD MORNING TO THE AI
+
+Final practical reminder: you don't need to say good morning to the AI. Every "good morning" someone types burns tokens for nothing. There's even a meme of the AI apocalypse where the AI spares whoever was polite. For every good morning someone says, I'll bully the AI 30 times. It's not going to work that way. Be direct. Use every technology available. Be promiscuous and disloyal. Test everything. That's a good way to deal with technology.
+
+================================================================================
+SHOW YOUR CODE AND TAKE CRITICISM
+
+Have your own GitHub. Learn to use it. Show your code to other people. Everyone is embarrassed. "My code is ugly, they'll criticize me." But it's through criticism that you get the feedback to improve. Praise is useless. Praise is worthless feedback.
+
+I like it when someone comes up and says "Akita, you screwed this up." I look and say "damn, you're right, let me fix it, I learned something new." Without that kind of environment, you don't learn. I've accidentally left a private key in a public repo. The commit was made by Claude itself, I didn't know how to give the right prompt. So what is it? "Your prompt sucks."
+
+Everything is a prompt. A skill is a prompt. An agent is a prompt. Context is a prompt. If it went wrong, it's because you did it wrong. That's the truth.

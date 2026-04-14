@@ -480,5 +480,28 @@
       },
       "total": 5
     }
+  },
+  {
+    "video_id": "4c7pbOxYn_A",
+    "provider": "youtube",
+    "title": "Akita: IA, prompt e o fim do programador bracal",
+    "subtitle": "Fabio Akita · Flow Podcast #588",
+    "url": "https://www.youtube.com/watch?v=4c7pbOxYn_A",
+    "slug": "akita-ia-prompt-fim-programador-bracal",
+    "slug_en": "akita-ai-prompts-end-of-grunt-work-programming",
+    "date": "2026-04-14",
+    "references": {
+      "path": "transcripts/youtube/4c7pbOxYn_A.references.json",
+      "counts": {
+        "books": 1,
+        "tools": 20,
+        "papers": 0,
+        "people": 6,
+        "concepts": 11,
+        "companies": 12,
+        "related_posts": 7
+      },
+      "total": 50
+    }
   }
 ]

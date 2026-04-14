@@ -1,0 +1,336 @@
+{
+  "video_id": "4c7pbOxYn_A",
+  "extracted_at": "2026-04-14",
+  "books": [
+    {
+      "title": "O Guia do Mochileiro das Galáxias",
+      "author": "Douglas Adams",
+      "url": "https://www.amazon.com/s?k=Hitchhikers+Guide+to+the+Galaxy+Douglas+Adams",
+      "context": "Akita cita a resposta '42' da máquina no livro como metáfora: a IA responde conforme a pergunta feita. Inspirou o nome da empresa Coldminer 42 e o mascote Marvin."
+    }
+  ],
+  "tools": [
+    {
+      "name": "Claude Code",
+      "url": "https://www.anthropic.com/claude-code",
+      "context": "Claude conseguiu extrair sprites da ROM de Streets of Rage onde Codex falhou; usado para traduzir o blog de 20 anos."
+    },
+    {
+      "name": "Codex",
+      "url": "https://openai.com/codex",
+      "context": "Tentou extrair sprites de ROM Super Mario e Streets of Rage; falhou ao confundir cabeça de seleção com sprite do Axel."
+    },
+    {
+      "name": "ChatGPT",
+      "url": "https://chat.openai.com",
+      "context": "Citado ao comparar modelos: 'o GPT é melhor que o Claude porque no meu caso funcionou'."
+    },
+    {
+      "name": "GLM",
+      "url": "https://chatglm.cn",
+      "context": "Citado junto com Claude e Codex como alternativas de LLM para programação."
+    },
+    {
+      "name": "Claude Max",
+      "url": "https://www.anthropic.com/pricing",
+      "context": "Plano Max 20x consumido pela metade ao traduzir o blog inteiro."
+    },
+    {
+      "name": "Godot",
+      "url": "https://godotengine.org",
+      "context": "Engine de jogos que Akita nunca tinha usado; pediu ao Codex para traduzir ROM para Godot Script."
+    },
+    {
+      "name": "Cloudflare",
+      "url": "https://www.cloudflare.com",
+      "context": "Reimplementou com IA as 'rédeas' do Next.js em uma semana, lançou migração da Vercel; também desenvolveu um clone de WordPress chamado M-dash."
+    },
+    {
+      "name": "Next.js",
+      "url": "https://nextjs.org",
+      "context": "Framework 'incompleto sem o harness' da Vercel; Cloudflare reimplementou esse harness com IA."
+    },
+    {
+      "name": "Vercel",
+      "url": "https://vercel.com",
+      "context": "Dava suporte privilegiado ao Next.js, criando lock-in; perdeu vantagem quando Cloudflare reimplementou o harness com IA."
+    },
+    {
+      "name": "WordPress",
+      "url": "https://wordpress.org",
+      "context": "Citado como 'um dos piores códigos que existe', inseguro; Cloudflare fez clone chamado M-dash."
+    },
+    {
+      "name": "Eleven Labs",
+      "url": "https://elevenlabs.io",
+      "context": "Usado para clonar a voz de Akita e dublar 146 vídeos em 4 dias; escalou do plano Creator até Business com 11 milhões de tokens."
+    },
+    {
+      "name": "Nano Banana",
+      "url": "https://deepmind.google/technologies/gemini/",
+      "context": "Usado para traduzir thumbnails dos 146 vídeos."
+    },
+    {
+      "name": "Google Translate",
+      "url": "https://translate.google.com",
+      "context": "Citado como insuficiente: 'é bosta, ninguém compartilha uma tradução dessas'."
+    },
+    {
+      "name": "YouTube",
+      "url": "https://www.youtube.com",
+      "context": "Legendas automáticas usadas como base para timing da dublagem; dublagem automática do YouTube é criticada como 'uma droga'."
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com",
+      "context": "'Tenha seu próprio GitHub. Aprenda a usar. Mostre o código para os outros.'"
+    },
+    {
+      "name": "Excel",
+      "url": "https://www.microsoft.com/excel",
+      "context": "Analogia histórica: matou o preenchedor de planilha, não o contador."
+    },
+    {
+      "name": "Arch Linux",
+      "url": "https://archlinux.org",
+      "context": "Exemplo de conhecimento guardado em posts do blog para reinstalar a máquina."
+    },
+    {
+      "name": "Docker",
+      "url": "https://www.docker.com",
+      "context": "Citado no exemplo de busca: 'meu site, Arch Linux, Docker'."
+    },
+    {
+      "name": "Photoshop",
+      "url": "https://www.adobe.com/products/photoshop.html",
+      "context": "Citado como exemplo de trabalho braçal do 'codificador' que a IA substitui."
+    },
+    {
+      "name": "Slack",
+      "url": "https://slack.com",
+      "context": "Citado entre distrações que consomem o dia do programador."
+    }
+  ],
+  "papers": [],
+  "people": [
+    {
+      "name": "Fabio Akita",
+      "role": {
+        "pt": "Desenvolvedor e CEO da Coldminer 42",
+        "en": "Developer and CEO of Coldminer 42"
+      },
+      "url": "https://twitter.com/akitaonrails",
+      "context": "Autor do discurso; detalha suas experiências com IA, tradução de blog de 20 anos e dublagem de 146 vídeos."
+    },
+    {
+      "name": "Douglas Adams",
+      "role": {
+        "pt": "Autor de ficção científica",
+        "en": "Science fiction author"
+      },
+      "url": "https://en.wikipedia.org/wiki/Douglas_Adams",
+      "context": "Autor do Guia do Mochileiro das Galáxias; inspirou o nome Coldminer 42."
+    },
+    {
+      "name": "Marvin",
+      "role": {
+        "pt": "Mascote da Coldminer 42 (personagem do Guia do Mochileiro)",
+        "en": "Mascot of Coldminer 42 (character from Hitchhiker's Guide)"
+      },
+      "url": "https://en.wikipedia.org/wiki/Marvin_the_Paranoid_Android",
+      "context": "Robô paranoico do Guia do Mochileiro, adotado como mascote da empresa."
+    },
+    {
+      "name": "Steve Jobs",
+      "role": {
+        "pt": "Cofundador da Apple",
+        "en": "Apple co-founder"
+      },
+      "url": "https://en.wikipedia.org/wiki/Steve_Jobs",
+      "context": "Mencionado em vídeos onde trechos de Steve Jobs confundiram a legenda automática do YouTube."
+    },
+    {
+      "name": "Igor",
+      "role": {
+        "pt": "Entrevistador / host",
+        "en": "Interviewer / host"
+      },
+      "url": "",
+      "context": "Mencionado como 'ouvindo o Igor falar' no outro monitor durante o uso de IA."
+    },
+    {
+      "name": "Axel Stone",
+      "role": {
+        "pt": "Personagem de Streets of Rage",
+        "en": "Streets of Rage character"
+      },
+      "url": "https://en.wikipedia.org/wiki/Streets_of_Rage",
+      "context": "Sprite que o Codex falhou em extrair e o Claude conseguiu."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Spec Driven Development",
+      "url": "https://en.wikipedia.org/wiki/Specification_by_example",
+      "context": "Akita critica a moda do formulário: 'uma bobagem enorme. O LLM processa tokens'."
+    },
+    {
+      "name": "MVP (Minimum Viable Product)",
+      "url": "https://en.wikipedia.org/wiki/Minimum_viable_product",
+      "context": "Melhor gastar um pouquinho para acertar muito; faça protótipo ou prova de conceito."
+    },
+    {
+      "name": "Desenvolvedor 10x",
+      "url": "https://en.wikipedia.org/wiki/Programmer#10x_programmer",
+      "context": "'O mito do developer 10x virou realidade. Agora, agora. Em novembro ainda não era, agora é.'"
+    },
+    {
+      "name": "Papagaio Estocástico",
+      "url": "https://en.wikipedia.org/wiki/Stochastic_parrot",
+      "context": "'Por isso a gente chama de papagaio aleatório. Ele não pensa. Calcula a probabilidade da resposta mais provável.'"
+    },
+    {
+      "name": "Reinforcement Learning from Human Feedback (RLHF)",
+      "url": "https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback",
+      "context": "Citado como parte da cadeia: 'aprendizado reforçado que veio depois, do alinhamento'."
+    },
+    {
+      "name": "Large Language Model",
+      "url": "https://en.wikipedia.org/wiki/Large_language_model",
+      "context": "'Um modelo denso tem um trilhão de parâmetros.' Estudos originais de LLM são sobre tradução de línguas."
+    },
+    {
+      "name": "Text-to-Speech",
+      "url": "https://en.wikipedia.org/wiki/Speech_synthesis",
+      "context": "'Fui testando modelos de TTS. Os open source não tinham a entonação que eu queria para inglês.'"
+    },
+    {
+      "name": "Vendor Lock-in",
+      "url": "https://en.wikipedia.org/wiki/Vendor_lock-in",
+      "context": "'Isso foi o lock-in deles por muito tempo' — Vercel com Next.js."
+    },
+    {
+      "name": "Toyota AE86",
+      "url": "https://en.wikipedia.org/wiki/Toyota_AE86",
+      "context": "Analogia do carro: 'Para levar tofu na montanha, meu AE86 serve.' — não existe LLM que resolve tudo."
+    },
+    {
+      "name": "Super Mario",
+      "url": "https://en.wikipedia.org/wiki/Super_Mario",
+      "context": "ROM usada no primeiro experimento de extração com Codex; abortado por medo de processo da Nintendo."
+    },
+    {
+      "name": "Streets of Rage",
+      "url": "https://en.wikipedia.org/wiki/Streets_of_Rage",
+      "context": "Jogo da Sega usado no experimento de extração de sprites comparando Codex e Claude."
+    }
+  ],
+  "companies": [
+    {
+      "name": "Coldminer 42",
+      "url": ""
+    },
+    {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com"
+    },
+    {
+      "name": "OpenAI",
+      "url": "https://openai.com"
+    },
+    {
+      "name": "Cloudflare",
+      "url": "https://www.cloudflare.com"
+    },
+    {
+      "name": "Vercel",
+      "url": "https://vercel.com"
+    },
+    {
+      "name": "Eleven Labs",
+      "url": "https://elevenlabs.io"
+    },
+    {
+      "name": "Nintendo",
+      "url": "https://www.nintendo.com"
+    },
+    {
+      "name": "Sega",
+      "url": "https://www.sega.com"
+    },
+    {
+      "name": "Google",
+      "url": "https://www.google.com"
+    },
+    {
+      "name": "Microsoft (Xbox)",
+      "url": "https://www.xbox.com"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://www.youtube.com"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com"
+    }
+  ],
+  "related_posts": [
+    {
+      "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
+      "slug_en": "agentic-engineering-context-guardrails-creativity",
+      "reason": {
+        "pt": "Reforça o ponto de Akita sobre contexto e prompt bem feito como base para resultados de IA.",
+        "en": "Reinforces Akita's point that context and well-crafted prompts are the foundation of good AI results."
+      }
+    },
+    {
+      "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
+      "slug_en": "prompt-production-agentic-engineering",
+      "reason": {
+        "pt": "Detalha a transição do prompt ao código em produção — o que Akita chama de responsabilidade do engenheiro.",
+        "en": "Details the transition from prompt to production code — what Akita calls the engineer's responsibility."
+      }
+    },
+    {
+      "slug_pt": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia",
+      "slug_en": "senior-engineer-demonstrates-spec-driven-ai-development-flow",
+      "reason": {
+        "pt": "Contrapõe a crítica de Akita ao spec-driven development mostrando como um sênior realmente usa.",
+        "en": "Counters Akita's critique of spec-driven development by showing how a senior engineer actually applies it."
+      }
+    },
+    {
+      "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
+      "slug_en": "engineering-practices-make-coding-agents-work",
+      "reason": {
+        "pt": "Práticas concretas alinhadas à visão de Akita: tratar IA como júnior e validar cada passo.",
+        "en": "Concrete practices aligned with Akita's view: treat AI as a junior and validate every step."
+      }
+    },
+    {
+      "slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
+      "slug_en": "head-claude-code-happens-after-coding-solved",
+      "reason": {
+        "pt": "Continua o debate sobre o futuro do programador que Akita levanta ao falar do 'developer 10x'.",
+        "en": "Continues the debate about the programmer's future that Akita raises when discussing the '10x developer'."
+      }
+    },
+    {
+      "slug_pt": "estado-da-ia-2026-ponto-de-inflexao-simon-willison",
+      "slug_en": "state-ai-2026",
+      "reason": {
+        "pt": "Panorama do ponto de inflexão que Akita também enxerga: 'em novembro ainda não era, agora é'.",
+        "en": "Overview of the inflection point Akita also identifies: 'in November it wasn't, now it is'."
+      }
+    },
+    {
+      "slug_pt": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills",
+      "slug_en": "why-we-stopped-building-agents-started-building-skills",
+      "reason": {
+        "pt": "Ressoa com a tese de Akita: 'tudo é prompt. Skill é prompt. Agente é prompt.'",
+        "en": "Resonates with Akita's thesis: 'everything is a prompt. Skill is a prompt. Agent is a prompt.'"
+      }
+    }
+  ]
+}
