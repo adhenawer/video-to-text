@@ -3,45 +3,166 @@
   "extracted_at": "2026-04-14",
   "books": [],
   "tools": [
-    {"name": "Claude Code", "url": "https://claude.com/claude-code", "context": "Um dos dois principais agentes de codificação mencionados"},
-    {"name": "Codex", "url": "https://openai.com/codex", "context": "Agente de codificação mencionado junto com Claude Code"},
-    {"name": "GitHub Copilot", "url": "https://github.com/features/copilot", "context": "Ferramenta que trouxe ganhos de ~20% em produtividade em 2024"},
-    {"name": "Google Gemini", "url": "https://gemini.google.com", "context": "Usado em demo com Canvas para prototipar app de contagem de calorias"},
-    {"name": "Base44", "url": "https://base44.com", "context": "Ferramenta de vibe coding citada como boa para protótipos pessoais"},
-    {"name": "Lovable", "url": "https://lovable.dev", "context": "Ferramenta de vibe coding mencionada ao lado de Base44 e Replit"},
-    {"name": "Replit", "url": "https://replit.com", "context": "Plataforma de vibe coding para protótipos"},
-    {"name": "Playwright", "url": "https://playwright.dev", "context": "Usado pelo agent cluster para rodar browser, tirar screenshots e testar fluxos visualmente"},
-    {"name": "Salesforce", "url": "https://salesforce.com", "context": "Citado como exemplo de plataforma cara de $100k que customização com IA pode evitar"}
+    {
+      "name": "Claude Code",
+      "url": "https://claude.com/claude-code",
+      "context": "Um dos dois principais agentes de codificação mencionados"
+    },
+    {
+      "name": "Codex",
+      "url": "https://openai.com/codex",
+      "context": "Agente de codificação mencionado junto com Claude Code"
+    },
+    {
+      "name": "GitHub Copilot",
+      "url": "https://github.com/features/copilot",
+      "context": "Ferramenta que trouxe ganhos de ~20% em produtividade em 2024"
+    },
+    {
+      "name": "Google Gemini",
+      "url": "https://gemini.google.com",
+      "context": "Usado em demo com Canvas para prototipar app de contagem de calorias"
+    },
+    {
+      "name": "Base44",
+      "url": "https://base44.com",
+      "context": "Ferramenta de vibe coding citada como boa para protótipos pessoais"
+    },
+    {
+      "name": "Lovable",
+      "url": "https://lovable.dev",
+      "context": "Ferramenta de vibe coding mencionada ao lado de Base44 e Replit"
+    },
+    {
+      "name": "Replit",
+      "url": "https://replit.com",
+      "context": "Plataforma de vibe coding para protótipos"
+    },
+    {
+      "name": "Playwright",
+      "url": "https://playwright.dev",
+      "context": "Usado pelo agent cluster para rodar browser, tirar screenshots e testar fluxos visualmente"
+    },
+    {
+      "name": "Salesforce",
+      "url": "https://salesforce.com",
+      "context": "Citado como exemplo de plataforma cara de $100k que customização com IA pode evitar"
+    }
   ],
   "papers": [],
   "people": [
-    {"name": "Kane Hooper", "role": "COO da Reinteractive, especialista em agentic engineering", "url": "https://www.linkedin.com/in/kanehooper", "context": "Convidado principal; há 3 anos trabalhando em agentic engineering, construiu o agent cluster"},
-    {"name": "Errol", "role": "Apresentador do webinar (Reinteractive)", "url": "", "context": "Host que entrevista Kane Hooper"}
+    {
+      "name": "Kane Hooper",
+      "role": "COO da Reinteractive, especialista em agentic engineering",
+      "url": "https://twitter.com/kanehooper",
+      "context": "Convidado principal; há 3 anos trabalhando em agentic engineering, construiu o agent cluster"
+    },
+    {
+      "name": "Errol",
+      "role": "Apresentador do webinar (Reinteractive)",
+      "url": "",
+      "context": "Host que entrevista Kane Hooper"
+    }
   ],
   "concepts": [
-    {"name": "Vibe coding", "url": "https://en.wikipedia.org/wiki/Vibe_coding", "context": "Jogar ideia no agente sem restrições; bom para protótipos, ruim para produção"},
-    {"name": "Agentic engineering", "url": "", "context": "Controle e guardrails de agentes para produzir código enterprise com 5x velocidade"},
-    {"name": "Garbage in, garbage out", "url": "https://en.wikipedia.org/wiki/Garbage_in,_garbage_out", "context": "Princípio axiomático desde IBM ENIAC; IA exacerba entradas ruins"},
-    {"name": "Hallucination (AI)", "url": "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)", "context": "Kane relata mitigar ~98% via loops de validação"},
-    {"name": "Context drift", "url": "", "context": "Agente se afasta da intenção original ao longo de múltiplos passos, convergindo para a média"},
-    {"name": "Technical debt", "url": "https://en.wikipedia.org/wiki/Technical_debt", "context": "IA gera dívida técnica 2.7x mais rápido sem refactoring explícito"},
-    {"name": "Conductor/orchestration pattern", "url": "", "context": "Conductor principal guia 19 sub-agentes especializados no agent cluster"},
-    {"name": "Prompt engineering", "url": "https://en.wikipedia.org/wiki/Prompt_engineering", "context": "Primeira evolução antes de context engineering e agentic guardrails"},
-    {"name": "Context engineering", "url": "", "context": "Grounding do agente com docs técnicos, código existente e design"},
-    {"name": "Probabilistic model", "url": "https://en.wikipedia.org/wiki/Probabilistic_classification", "context": "LLMs não raciocinam; seguem padrões probabilísticos treinados"}
+    {
+      "name": "Vibe coding",
+      "url": "https://en.wikipedia.org/wiki/Vibe_coding",
+      "context": "Jogar ideia no agente sem restrições; bom para protótipos, ruim para produção"
+    },
+    {
+      "name": "Agentic engineering",
+      "url": "",
+      "context": "Controle e guardrails de agentes para produzir código enterprise com 5x velocidade"
+    },
+    {
+      "name": "Garbage in, garbage out",
+      "url": "https://en.wikipedia.org/wiki/Garbage_in,_garbage_out",
+      "context": "Princípio axiomático desde IBM ENIAC; IA exacerba entradas ruins"
+    },
+    {
+      "name": "Hallucination (AI)",
+      "url": "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)",
+      "context": "Kane relata mitigar ~98% via loops de validação"
+    },
+    {
+      "name": "Context drift",
+      "url": "",
+      "context": "Agente se afasta da intenção original ao longo de múltiplos passos, convergindo para a média"
+    },
+    {
+      "name": "Technical debt",
+      "url": "https://en.wikipedia.org/wiki/Technical_debt",
+      "context": "IA gera dívida técnica 2.7x mais rápido sem refactoring explícito"
+    },
+    {
+      "name": "Conductor/orchestration pattern",
+      "url": "",
+      "context": "Conductor principal guia 19 sub-agentes especializados no agent cluster"
+    },
+    {
+      "name": "Prompt engineering",
+      "url": "https://en.wikipedia.org/wiki/Prompt_engineering",
+      "context": "Primeira evolução antes de context engineering e agentic guardrails"
+    },
+    {
+      "name": "Context engineering",
+      "url": "",
+      "context": "Grounding do agente com docs técnicos, código existente e design"
+    },
+    {
+      "name": "Probabilistic model",
+      "url": "https://en.wikipedia.org/wiki/Probabilistic_classification",
+      "context": "LLMs não raciocinam; seguem padrões probabilísticos treinados"
+    }
   ],
   "companies": [
-    {"name": "Reinteractive", "url": "https://reinteractive.com"},
-    {"name": "State Library of New South Wales", "url": "https://www.sl.nsw.gov.au"},
-    {"name": "NASA", "url": "https://www.nasa.gov"},
-    {"name": "IBM", "url": "https://www.ibm.com"},
-    {"name": "Google", "url": "https://www.google.com"}
+    {
+      "name": "Reinteractive",
+      "url": "https://reinteractive.com"
+    },
+    {
+      "name": "State Library of New South Wales",
+      "url": "https://www.sl.nsw.gov.au"
+    },
+    {
+      "name": "NASA",
+      "url": "https://www.nasa.gov"
+    },
+    {
+      "name": "IBM",
+      "url": "https://www.ibm.com"
+    },
+    {
+      "name": "Google",
+      "url": "https://www.google.com"
+    }
   ],
   "related_posts": [
-    {"slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade", "slug_en": "agentic-engineering-context-guardrails-creativity", "reason": "Tema central idêntico: agentic engineering com guardrails vs vibe coding"},
-    {"slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code", "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code", "reason": "Padrão conductor + múltiplos sub-agentes especializados discutido no vídeo"},
-    {"slug_pt": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia", "slug_en": "senior-engineer-demonstrates-spec-driven-ai-development-flow", "reason": "Ênfase em specs claras (scope validator) para evitar garbage in/out"},
-    {"slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison", "slug_en": "engineering-practices-make-coding-agents-work", "reason": "Práticas de engenharia aplicadas a agentes de código em produção"},
-    {"slug_pt": "fluxos-de-trabalho-agenticos-don-syme", "slug_en": "agentic-workflows-don-syme", "reason": "Loops de avaliação e workflows agênticos multi-step"}
+    {
+      "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
+      "slug_en": "agentic-engineering-context-guardrails-creativity",
+      "reason": "Tema central idêntico: agentic engineering com guardrails vs vibe coding"
+    },
+    {
+      "slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
+      "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code",
+      "reason": "Padrão conductor + múltiplos sub-agentes especializados discutido no vídeo"
+    },
+    {
+      "slug_pt": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia",
+      "slug_en": "senior-engineer-demonstrates-spec-driven-ai-development-flow",
+      "reason": "Ênfase em specs claras (scope validator) para evitar garbage in/out"
+    },
+    {
+      "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
+      "slug_en": "engineering-practices-make-coding-agents-work",
+      "reason": "Práticas de engenharia aplicadas a agentes de código em produção"
+    },
+    {
+      "slug_pt": "fluxos-de-trabalho-agenticos-don-syme",
+      "slug_en": "agentic-workflows-don-syme",
+      "reason": "Loops de avaliação e workflows agênticos multi-step"
+    }
   ]
 }

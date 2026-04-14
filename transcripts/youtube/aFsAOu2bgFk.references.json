@@ -113,31 +113,31 @@
     {
       "name": "Steve Yegge",
       "role": "Engenheiro de software há 40 anos, ex-Amazon, ex-Google, criador do Gas Town, co-autor de Vibe Coding",
-      "url": "https://steve-yegge.medium.com",
+      "url": "https://twitter.com/Steve_Yegge",
       "context": "Convidado principal do episódio"
     },
     {
       "name": "Gergely Orosz",
       "role": "Host do The Pragmatic Engineer",
-      "url": "https://www.pragmaticengineer.com",
+      "url": "https://twitter.com/GergelyOrosz",
       "context": "Entrevistador"
     },
     {
       "name": "Gene Kim",
       "role": "Autor e pesquisador de DevOps",
-      "url": "https://itrevolution.com/author/genek/",
+      "url": "https://twitter.com/RealGeneKim",
       "context": "Co-autor do livro Vibe Coding com Steve"
     },
     {
       "name": "Erik Meijer",
       "role": "Cientista da computação, contribuidor de C#, Haskell, Visual Basic, LINQ",
-      "url": "https://en.wikipedia.org/wiki/Erik_Meijer_(computer_scientist)",
+      "url": "https://twitter.com/headinthebox",
       "context": "Quem disse 'os dias de codar à mão acabaram', citação que abre o livro Vibe Coding"
     },
     {
       "name": "Richard Sutton",
       "role": "Pesquisador de aprendizado por reforço, autor de The Bitter Lesson",
-      "url": "https://en.wikipedia.org/wiki/Richard_S._Sutton",
+      "url": "https://twitter.com/RichardSSutton",
       "context": "Autor do ensaio The Bitter Lesson citado por Steve"
     },
     {
@@ -149,13 +149,13 @@
     {
       "name": "Nathan Sobo",
       "role": "Co-fundador da Zed",
-      "url": "https://github.com/nathansobo",
+      "url": "https://twitter.com/nathansobo",
       "context": "Debateu com Steve sobre o futuro das IDEs"
     },
     {
       "name": "Boris Cherny",
       "role": "Engenheiro do Claude Code na Anthropic",
-      "url": "https://github.com/bcherny",
+      "url": "https://twitter.com/bcherny",
       "context": "Citado por construir 20 protótipos funcionais em 2 dias usando IA"
     },
     {
@@ -167,25 +167,25 @@
     {
       "name": "Jeff Huntley",
       "role": "Desenvolvedor, criador do Ralph Wiggum (loop de Claude Code)",
-      "url": "https://ghuntley.com",
+      "url": "https://twitter.com/jhuntley",
       "context": "Citado por receber atenção de VCs ao lançar Ralph"
     },
     {
       "name": "Jeffrey Emanuel",
       "role": "Desenvolvedor, forkou o projeto Beads",
-      "url": "https://github.com/Dicklesworthstone",
+      "url": "https://twitter.com/doodlestein",
       "context": "Forkou o Beads de Steve e foi elogiado por isso"
     },
     {
       "name": "Dario Amodei",
       "role": "CEO da Anthropic",
-      "url": "https://en.wikipedia.org/wiki/Dario_Amodei",
+      "url": "https://twitter.com/DarioAmodei",
       "context": "Mencionou ideia de compensar funcionários mesmo após saída pela valor criado"
     },
     {
       "name": "Andy Jassy",
       "role": "CEO da Amazon",
-      "url": "https://en.wikipedia.org/wiki/Andy_Jassy",
+      "url": "https://twitter.com/ajassy",
       "context": "Citado por declarar que Amazon fará o mesmo com menos pessoas"
     },
     {
@@ -215,7 +215,7 @@
     {
       "name": "Swyx (Shawn Wang)",
       "role": "Organizador da AI Engineer Summit",
-      "url": "https://www.swyx.io",
+      "url": "https://twitter.com/swyx",
       "context": "Mencionado pela conferência AI Engineer em Nova York"
     }
   ],
@@ -262,20 +262,62 @@
     }
   ],
   "companies": [
-    {"name": "Anthropic", "url": "https://www.anthropic.com"},
-    {"name": "Google", "url": "https://www.google.com"},
-    {"name": "Amazon", "url": "https://www.amazon.com"},
-    {"name": "OpenAI", "url": "https://openai.com"},
-    {"name": "Apple", "url": "https://www.apple.com"},
-    {"name": "Microsoft", "url": "https://www.microsoft.com"},
-    {"name": "Meta (Facebook)", "url": "https://about.meta.com"},
-    {"name": "Uber", "url": "https://www.uber.com"},
-    {"name": "Zendesk", "url": "https://www.zendesk.com"},
-    {"name": "Notion", "url": "https://www.notion.com"},
-    {"name": "Atlassian", "url": "https://www.atlassian.com"},
-    {"name": "Brex", "url": "https://www.brex.com"},
-    {"name": "GeoWorks", "url": "https://en.wikipedia.org/wiki/GEOS_(16-bit_operating_system)"},
-    {"name": "Sun Microsystems", "url": "https://en.wikipedia.org/wiki/Sun_Microsystems"}
+    {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com"
+    },
+    {
+      "name": "Google",
+      "url": "https://www.google.com"
+    },
+    {
+      "name": "Amazon",
+      "url": "https://www.amazon.com"
+    },
+    {
+      "name": "OpenAI",
+      "url": "https://openai.com"
+    },
+    {
+      "name": "Apple",
+      "url": "https://www.apple.com"
+    },
+    {
+      "name": "Microsoft",
+      "url": "https://www.microsoft.com"
+    },
+    {
+      "name": "Meta (Facebook)",
+      "url": "https://about.meta.com"
+    },
+    {
+      "name": "Uber",
+      "url": "https://www.uber.com"
+    },
+    {
+      "name": "Zendesk",
+      "url": "https://www.zendesk.com"
+    },
+    {
+      "name": "Notion",
+      "url": "https://www.notion.com"
+    },
+    {
+      "name": "Atlassian",
+      "url": "https://www.atlassian.com"
+    },
+    {
+      "name": "Brex",
+      "url": "https://www.brex.com"
+    },
+    {
+      "name": "GeoWorks",
+      "url": "https://en.wikipedia.org/wiki/GEOS_(16-bit_operating_system)"
+    },
+    {
+      "name": "Sun Microsystems",
+      "url": "https://en.wikipedia.org/wiki/Sun_Microsystems"
+    }
   ],
   "related_posts": [
     {

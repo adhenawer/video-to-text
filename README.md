@@ -302,7 +302,7 @@ Each article has a fixed sidebar (right side on wide screens, inline on mobile) 
 | Books | 📖 | Amazon search (`amazon.com/s?k=...`) |
 | Tools | 🛠 | Canonical product site |
 | Papers | 📄 | arXiv / author's blog |
-| People | 👥 | Wikipedia / Twitter / personal site |
+| People | 👥 | **Twitter/X preferred**, fallback to LinkedIn / personal site / Wikipedia |
 | Concepts | 🧠 | Wikipedia / transformer-circuits.pub |
 | Companies | 🏢 | Official site |
 | Related posts | 🔗 | Internal cross-link (to the other language's canonical slug) |
@@ -330,6 +330,12 @@ Each article has a fixed sidebar (right side on wide screens, inline on mobile) 
   "related_posts": [{"slug_pt":"...","slug_en":"...","reason":"..."}]
 }
 ```
+
+### People priority: Twitter first
+
+The `people[]` URL field follows a strict order: **Twitter/X handle first**, then LinkedIn, then personal site/blog, and Wikipedia only as last resort. The extraction subagents try to derive the handle from the person's public profile. For historical figures or deceased academics who never had Twitter, the field is left empty or points to Wikipedia.
+
+Enrichment is idempotent: running `scripts/enrich_people_twitter.py` applies a curated handle table across all references JSONs without overwriting existing Twitter URLs.
 
 ### Stats as of v2
 

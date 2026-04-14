@@ -3,69 +3,285 @@
   "extracted_at": "2026-04-14",
   "books": [],
   "tools": [
-    {"name": "Intent", "url": "https://augmentcode.com/intent", "context": "App agentica da Augment para orquestrar coordinator/implementer/verifier"},
-    {"name": "Auggie CLI", "url": "https://augmentcode.com", "context": "CLI da Augment usada pelo Sam para tarefas rapidas e em servidores"},
-    {"name": "Augment Code", "url": "https://augmentcode.com", "context": "Plataforma/empresa por tras do Intent e Auggie"},
-    {"name": "Figma", "url": "https://figma.com", "context": "Design comp usado como fonte via Figma MCP (modo developer, shift+D)"},
-    {"name": "Figma MCP", "url": "https://help.figma.com/hc/en-us/articles/32132100833559", "context": "Servidor MCP local em localhost:3845/mcp para puxar contexto do Figma"},
-    {"name": "Vercel", "url": "https://vercel.com", "context": "Outro MCP custom configurado no workspace"},
-    {"name": "Astro", "url": "https://astro.build", "context": "Framework escolhido para o site estatico gerado"},
-    {"name": "Tailwind CSS", "url": "https://tailwindcss.com", "context": "Usado com config v4 para tokens e cores extraidas do Figma"},
-    {"name": "shadcn/ui", "url": "https://ui.shadcn.com", "context": "Citado como o 'tell' de IA (gradientes roxos copiados do repo)"},
-    {"name": "Sentry", "url": "https://sentry.io", "context": "Error tracking; Sam usa MCP e Sentry CLI para alimentar contexto de bugs no Intent"},
-    {"name": "Sentry CLI", "url": "https://docs.sentry.io/cli/", "context": "Alternativa pro Sam puxar issues do Sentry rapido"},
-    {"name": "GitHub", "url": "https://github.com", "context": "Conectado via OAuth para PR Shepard e code review"},
-    {"name": "Augment Code Review", "url": "https://augmentcode.com", "context": "Bot de review que o PR Shepard usa para fechar PRs verdes"},
-    {"name": "Git worktree", "url": "https://git-scm.com/docs/git-worktree", "context": "Base dos workspaces isolados do Intent; disponivel no git desde 2015"},
-    {"name": "Claude (Anthropic)", "url": "https://www.anthropic.com/claude", "context": "Modelo go-to do Sam ha ~2 anos; Sonnet 3.5 marcou tool calling bom o suficiente"},
-    {"name": "Claude Opus 4.6", "url": "https://www.anthropic.com/claude", "context": "Marco de dezembro/2025 para step change em qualidade agentica"},
-    {"name": "GPT-5.4", "url": "https://openai.com", "context": "Oferecido gratis no Intent/produtos Augment por tempo limitado"},
-    {"name": "Codex 5.1", "url": "https://openai.com/codex", "context": "Modelo OpenAI citado como opcao medium thinking"},
-    {"name": "Claude Code", "url": "https://www.anthropic.com/claude-code", "context": "Referencia de fluxo multi-agent (gas town) que inspirou o Intent"},
-    {"name": "OpenCode", "url": "https://opencode.ai", "context": "Opcao com inferencia local onde sandboxing seria mais relevante"},
-    {"name": "tmux", "url": "https://github.com/tmux/tmux", "context": "Workflow original com 6 split panes rodando Auggie CLI"},
-    {"name": "VS Code", "url": "https://code.visualstudio.com", "context": "Hotkeys Cmd+J/Cmd+B reaproveitados no Intent"},
-    {"name": "skills.sh", "url": "https://skills.sh", "context": "Ecossistema de skills citado como melhor que escrever prompt do zero"},
-    {"name": "pnpm", "url": "https://pnpm.io", "context": "Usado nos setup scripts de worktree"},
-    {"name": "Vim", "url": "https://www.vim.org", "context": "Citado na dicotomia Vim vs Emacs"},
-    {"name": "Emacs", "url": "https://www.gnu.org/software/emacs/", "context": "Citado na dicotomia Vim vs Emacs"}
+    {
+      "name": "Intent",
+      "url": "https://augmentcode.com/intent",
+      "context": "App agentica da Augment para orquestrar coordinator/implementer/verifier"
+    },
+    {
+      "name": "Auggie CLI",
+      "url": "https://augmentcode.com",
+      "context": "CLI da Augment usada pelo Sam para tarefas rapidas e em servidores"
+    },
+    {
+      "name": "Augment Code",
+      "url": "https://augmentcode.com",
+      "context": "Plataforma/empresa por tras do Intent e Auggie"
+    },
+    {
+      "name": "Figma",
+      "url": "https://figma.com",
+      "context": "Design comp usado como fonte via Figma MCP (modo developer, shift+D)"
+    },
+    {
+      "name": "Figma MCP",
+      "url": "https://help.figma.com/hc/en-us/articles/32132100833559",
+      "context": "Servidor MCP local em localhost:3845/mcp para puxar contexto do Figma"
+    },
+    {
+      "name": "Vercel",
+      "url": "https://vercel.com",
+      "context": "Outro MCP custom configurado no workspace"
+    },
+    {
+      "name": "Astro",
+      "url": "https://astro.build",
+      "context": "Framework escolhido para o site estatico gerado"
+    },
+    {
+      "name": "Tailwind CSS",
+      "url": "https://tailwindcss.com",
+      "context": "Usado com config v4 para tokens e cores extraidas do Figma"
+    },
+    {
+      "name": "shadcn/ui",
+      "url": "https://ui.shadcn.com",
+      "context": "Citado como o 'tell' de IA (gradientes roxos copiados do repo)"
+    },
+    {
+      "name": "Sentry",
+      "url": "https://sentry.io",
+      "context": "Error tracking; Sam usa MCP e Sentry CLI para alimentar contexto de bugs no Intent"
+    },
+    {
+      "name": "Sentry CLI",
+      "url": "https://docs.sentry.io/cli/",
+      "context": "Alternativa pro Sam puxar issues do Sentry rapido"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com",
+      "context": "Conectado via OAuth para PR Shepard e code review"
+    },
+    {
+      "name": "Augment Code Review",
+      "url": "https://augmentcode.com",
+      "context": "Bot de review que o PR Shepard usa para fechar PRs verdes"
+    },
+    {
+      "name": "Git worktree",
+      "url": "https://git-scm.com/docs/git-worktree",
+      "context": "Base dos workspaces isolados do Intent; disponivel no git desde 2015"
+    },
+    {
+      "name": "Claude (Anthropic)",
+      "url": "https://www.anthropic.com/claude",
+      "context": "Modelo go-to do Sam ha ~2 anos; Sonnet 3.5 marcou tool calling bom o suficiente"
+    },
+    {
+      "name": "Claude Opus 4.6",
+      "url": "https://www.anthropic.com/claude",
+      "context": "Marco de dezembro/2025 para step change em qualidade agentica"
+    },
+    {
+      "name": "GPT-5.4",
+      "url": "https://openai.com",
+      "context": "Oferecido gratis no Intent/produtos Augment por tempo limitado"
+    },
+    {
+      "name": "Codex 5.1",
+      "url": "https://openai.com/codex",
+      "context": "Modelo OpenAI citado como opcao medium thinking"
+    },
+    {
+      "name": "Claude Code",
+      "url": "https://www.anthropic.com/claude-code",
+      "context": "Referencia de fluxo multi-agent (gas town) que inspirou o Intent"
+    },
+    {
+      "name": "OpenCode",
+      "url": "https://opencode.ai",
+      "context": "Opcao com inferencia local onde sandboxing seria mais relevante"
+    },
+    {
+      "name": "tmux",
+      "url": "https://github.com/tmux/tmux",
+      "context": "Workflow original com 6 split panes rodando Auggie CLI"
+    },
+    {
+      "name": "VS Code",
+      "url": "https://code.visualstudio.com",
+      "context": "Hotkeys Cmd+J/Cmd+B reaproveitados no Intent"
+    },
+    {
+      "name": "skills.sh",
+      "url": "https://skills.sh",
+      "context": "Ecossistema de skills citado como melhor que escrever prompt do zero"
+    },
+    {
+      "name": "pnpm",
+      "url": "https://pnpm.io",
+      "context": "Usado nos setup scripts de worktree"
+    },
+    {
+      "name": "Vim",
+      "url": "https://www.vim.org",
+      "context": "Citado na dicotomia Vim vs Emacs"
+    },
+    {
+      "name": "Emacs",
+      "url": "https://www.gnu.org/software/emacs/",
+      "context": "Citado na dicotomia Vim vs Emacs"
+    }
   ],
   "papers": [],
   "people": [
-    {"name": "Sam Breed", "role": "Partner na Sutter Hill Ventures, lead engineer do Intent, ex-senior staff Credit Karma", "url": "https://twitter.com/sambreed", "context": "Convidado principal mostrando fluxo Figma to Astro com Intent"},
-    {"name": "AJ", "role": "Technical Content Lead na Augment", "url": "https://augmentcode.com", "context": "Host da serie de lives com engenheiros senior"},
-    {"name": "Igor (Eigor)", "role": "Co-founder da Augment Code", "url": "https://augmentcode.com", "context": "Sam trabalhou com ele quando Augment ainda era so o Igor"},
-    {"name": "Amelia", "role": "Engenheira na Augment", "url": "https://augmentcode.com", "context": "Escreveu o prompt do UI designer specialist"},
-    {"name": "Sarah Connor", "role": "Personagem Terminator", "url": "https://en.wikipedia.org/wiki/Sarah_Connor_(Terminator)", "context": "Metafora do PR Shepard cacando PR verde como terminator"}
+    {
+      "name": "Sam Breed",
+      "role": "Partner na Sutter Hill Ventures, lead engineer do Intent, ex-senior staff Credit Karma",
+      "url": "https://twitter.com/sambreed",
+      "context": "Convidado principal mostrando fluxo Figma to Astro com Intent"
+    },
+    {
+      "name": "AJ",
+      "role": "Technical Content Lead na Augment",
+      "url": "https://augmentcode.com",
+      "context": "Host da serie de lives com engenheiros senior"
+    },
+    {
+      "name": "Igor (Eigor)",
+      "role": "Co-founder da Augment Code",
+      "url": "https://augmentcode.com",
+      "context": "Sam trabalhou com ele quando Augment ainda era so o Igor"
+    },
+    {
+      "name": "Amelia",
+      "role": "Engenheira na Augment",
+      "url": "https://augmentcode.com",
+      "context": "Escreveu o prompt do UI designer specialist"
+    },
+    {
+      "name": "Sarah Connor",
+      "role": "Personagem Terminator",
+      "url": "https://en.wikipedia.org/wiki/Sarah_Connor_(Terminator)",
+      "context": "Metafora do PR Shepard cacando PR verde como terminator"
+    }
   ],
   "concepts": [
-    {"name": "Agent orchestration (coordinator/implementer/verifier)", "url": "https://augmentcode.com/intent", "context": "Time default do Intent: coordinator planeja, implementer executa, verifier valida"},
-    {"name": "Spec-driven development", "url": "https://augmentcode.com/intent", "context": "Coordinator escreve spec em arquivo, iteracao acontece sobre assumptions"},
-    {"name": "Git worktrees", "url": "https://git-scm.com/docs/git-worktree", "context": "Isolamento de cada task agentica em checkout separado"},
-    {"name": "PR Shepard", "url": "https://augmentcode.com/intent", "context": "Specialist que faz long-poll em comments e dirige PR ate verde"},
-    {"name": "Rapid fire mode", "url": "https://augmentcode.com/intent", "context": "Cria workspace em background e deixa agente iterar autonomo"},
-    {"name": "YOLO mode / dangerously skip permissions", "url": "https://docs.anthropic.com/en/docs/claude-code", "context": "Sam defende como default por usar modelos frontier bem promptados"},
-    {"name": "Squash commits", "url": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges", "context": "Preferencia do Sam para limpar merges feios de branches longas"},
-    {"name": "Context engine / monorepo support", "url": "https://augmentcode.com", "context": "Augment context engine brilha em monorepos grandes"},
-    {"name": "AGENTS.md / rules files", "url": "https://agents.md", "context": "Padrao citado para injetar standards internos em todo contexto"},
-    {"name": "Tool calling", "url": "https://docs.anthropic.com/en/docs/build-with-claude/tool-use", "context": "Sonnet 3.5 foi marco quando tool calling ficou bom o suficiente para agentes"}
+    {
+      "name": "Agent orchestration (coordinator/implementer/verifier)",
+      "url": "https://augmentcode.com/intent",
+      "context": "Time default do Intent: coordinator planeja, implementer executa, verifier valida"
+    },
+    {
+      "name": "Spec-driven development",
+      "url": "https://augmentcode.com/intent",
+      "context": "Coordinator escreve spec em arquivo, iteracao acontece sobre assumptions"
+    },
+    {
+      "name": "Git worktrees",
+      "url": "https://git-scm.com/docs/git-worktree",
+      "context": "Isolamento de cada task agentica em checkout separado"
+    },
+    {
+      "name": "PR Shepard",
+      "url": "https://augmentcode.com/intent",
+      "context": "Specialist que faz long-poll em comments e dirige PR ate verde"
+    },
+    {
+      "name": "Rapid fire mode",
+      "url": "https://augmentcode.com/intent",
+      "context": "Cria workspace em background e deixa agente iterar autonomo"
+    },
+    {
+      "name": "YOLO mode / dangerously skip permissions",
+      "url": "https://docs.anthropic.com/en/docs/claude-code",
+      "context": "Sam defende como default por usar modelos frontier bem promptados"
+    },
+    {
+      "name": "Squash commits",
+      "url": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges",
+      "context": "Preferencia do Sam para limpar merges feios de branches longas"
+    },
+    {
+      "name": "Context engine / monorepo support",
+      "url": "https://augmentcode.com",
+      "context": "Augment context engine brilha em monorepos grandes"
+    },
+    {
+      "name": "AGENTS.md / rules files",
+      "url": "https://agents.md",
+      "context": "Padrao citado para injetar standards internos em todo contexto"
+    },
+    {
+      "name": "Tool calling",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/tool-use",
+      "context": "Sonnet 3.5 foi marco quando tool calling ficou bom o suficiente para agentes"
+    }
   ],
   "companies": [
-    {"name": "Augment Code", "url": "https://augmentcode.com"},
-    {"name": "Sutter Hill Ventures", "url": "https://www.shv.com"},
-    {"name": "Credit Karma", "url": "https://www.creditkarma.com"},
-    {"name": "Sentry", "url": "https://sentry.io"},
-    {"name": "Figma", "url": "https://figma.com"},
-    {"name": "Vercel", "url": "https://vercel.com"},
-    {"name": "Anthropic", "url": "https://www.anthropic.com"},
-    {"name": "OpenAI", "url": "https://openai.com"},
-    {"name": "GitHub", "url": "https://github.com"}
+    {
+      "name": "Augment Code",
+      "url": "https://augmentcode.com"
+    },
+    {
+      "name": "Sutter Hill Ventures",
+      "url": "https://www.shv.com"
+    },
+    {
+      "name": "Credit Karma",
+      "url": "https://www.creditkarma.com"
+    },
+    {
+      "name": "Sentry",
+      "url": "https://sentry.io"
+    },
+    {
+      "name": "Figma",
+      "url": "https://figma.com"
+    },
+    {
+      "name": "Vercel",
+      "url": "https://vercel.com"
+    },
+    {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com"
+    },
+    {
+      "name": "OpenAI",
+      "url": "https://openai.com"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com"
+    }
   ],
   "related_posts": [
-    {"slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code", "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code", "reason": "Intent orquestra time de agentes (coordinator/implementer/verifier) alem do modelo single-agent do Claude Code"},
-    {"slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade", "slug_en": "agentic-engineering-context-guardrails-creativity", "reason": "Sam fala muito sobre gestao de contexto, MCPs com moderacao e guardrails via verifier"},
-    {"slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica", "slug_en": "prompt-production-agentic-engineering", "reason": "Demo de engenharia agentica real: de comp Figma a site Astro em producao"},
-    {"slug_pt": "fluxos-de-trabalho-agenticos-don-syme", "slug_en": "agentic-workflows-don-syme", "reason": "Workflow multi-workspace paralelo descrito por Sam ecoa padroes de fluxos agenticos"},
-    {"slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison", "slug_en": "engineering-practices-make-coding-agents-work", "reason": "Praticas de verificacao, review e setup scripts que fazem agentes realmente funcionarem"}
+    {
+      "slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
+      "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code",
+      "reason": "Intent orquestra time de agentes (coordinator/implementer/verifier) alem do modelo single-agent do Claude Code"
+    },
+    {
+      "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
+      "slug_en": "agentic-engineering-context-guardrails-creativity",
+      "reason": "Sam fala muito sobre gestao de contexto, MCPs com moderacao e guardrails via verifier"
+    },
+    {
+      "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
+      "slug_en": "prompt-production-agentic-engineering",
+      "reason": "Demo de engenharia agentica real: de comp Figma a site Astro em producao"
+    },
+    {
+      "slug_pt": "fluxos-de-trabalho-agenticos-don-syme",
+      "slug_en": "agentic-workflows-don-syme",
+      "reason": "Workflow multi-workspace paralelo descrito por Sam ecoa padroes de fluxos agenticos"
+    },
+    {
+      "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
+      "slug_en": "engineering-practices-make-coding-agents-work",
+      "reason": "Praticas de verificacao, review e setup scripts que fazem agentes realmente funcionarem"
+    }
   ]
 }

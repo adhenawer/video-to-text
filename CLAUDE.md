@@ -268,7 +268,20 @@ Após adicionar um novo artigo, atualizar `sitemap.xml` adicionando:
 
 ## Referências (sidebar fixa)
 
-Cada artigo tem uma sidebar fixa com referências extraídas da transcrição original: livros (Amazon search), ferramentas (site oficial), papers (arXiv), pessoas (Wikipedia/Twitter), conceitos (Wikipedia), empresas e **posts relacionados** dentro do próprio site.
+Cada artigo tem uma sidebar fixa com referências extraídas da transcrição original: livros (Amazon search), ferramentas (site oficial), papers (arXiv), pessoas (**Twitter prioritário**), conceitos (Wikipedia), empresas e **posts relacionados** dentro do próprio site.
+
+### Regra de prioridade para `people`
+
+**Ordem preferencial do campo `url`:**
+1. **Twitter/X** (`https://twitter.com/handle` ou `https://x.com/handle`) — PRIMEIRA ESCOLHA. Tente descobrir o handle:
+   - Buscando no perfil do LinkedIn/Wikipedia/blog pessoal se a pessoa linka o Twitter lá
+   - Inferindo handles óbvios quando a pessoa é conhecida (ex: Simon Willison → `simonw`, Boris Cherny → `bcherny`)
+   - Usando o handle mencionado na própria transcrição se houver
+2. LinkedIn se for figura executiva/corporativa e sem Twitter público
+3. Site pessoal / blog oficial (colah.github.io, simonwillison.net, etc.)
+4. Wikipedia apenas como fallback final
+
+Nunca invente um handle Twitter; se não conseguir confirmar, use o próximo tier da lista.
 
 ### Arquivos
 

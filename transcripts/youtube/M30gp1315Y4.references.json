@@ -3,41 +3,148 @@
   "extracted_at": "2026-04-14",
   "books": [],
   "tools": [
-    {"name": "Claude Code", "url": "https://claude.com/claude-code", "context": "Referenciado como fronteira atual de ferramentas de coding agent, ponto de comparação para o sistema multi-team."},
-    {"name": "PI (Principal AI) agent harness", "url": "https://principal.ai", "context": "Harness de agente customizável usado para construir o sistema multi-team (alternativa ao Claude Code)."},
-    {"name": "scikit-learn", "url": "https://scikit-learn.org", "context": "Biblioteca usada no codebase de exemplo (prompt complexity classifier) com LinearSVC, CalibratedClassifierCV, ComplementNB, SGDClassifier."},
-    {"name": "just", "url": "https://github.com/casey/just", "context": "Command runner usado via alias 'j' para executar comandos rápidos (just predict, just train both, just prompt both)."},
-    {"name": "Claude Opus 4.6", "url": "https://www.anthropic.com/claude", "context": "Modelo de alta inteligência usado para orchestrator e leads no sistema."},
-    {"name": "Claude Sonnet 4.6", "url": "https://www.anthropic.com/claude", "context": "Modelo de média inteligência usado para workers no sistema multi-team."},
-    {"name": "Claude Haiku", "url": "https://www.anthropic.com/claude", "context": "Modelo barato citado como exemplo de tier baixo no prompt router."}
+    {
+      "name": "Claude Code",
+      "url": "https://claude.com/claude-code",
+      "context": "Referenciado como fronteira atual de ferramentas de coding agent, ponto de comparação para o sistema multi-team."
+    },
+    {
+      "name": "PI (Principal AI) agent harness",
+      "url": "https://principal.ai",
+      "context": "Harness de agente customizável usado para construir o sistema multi-team (alternativa ao Claude Code)."
+    },
+    {
+      "name": "scikit-learn",
+      "url": "https://scikit-learn.org",
+      "context": "Biblioteca usada no codebase de exemplo (prompt complexity classifier) com LinearSVC, CalibratedClassifierCV, ComplementNB, SGDClassifier."
+    },
+    {
+      "name": "just",
+      "url": "https://github.com/casey/just",
+      "context": "Command runner usado via alias 'j' para executar comandos rápidos (just predict, just train both, just prompt both)."
+    },
+    {
+      "name": "Claude Opus 4.6",
+      "url": "https://www.anthropic.com/claude",
+      "context": "Modelo de alta inteligência usado para orchestrator e leads no sistema."
+    },
+    {
+      "name": "Claude Sonnet 4.6",
+      "url": "https://www.anthropic.com/claude",
+      "context": "Modelo de média inteligência usado para workers no sistema multi-team."
+    },
+    {
+      "name": "Claude Haiku",
+      "url": "https://www.anthropic.com/claude",
+      "context": "Modelo barato citado como exemplo de tier baixo no prompt router."
+    }
   ],
   "papers": [],
   "people": [
-    {"name": "IndyDevDan", "role": "Criador do canal e autor do sistema multi-team agentic coding", "url": "https://www.youtube.com/@indydevdan", "context": "Apresentador do vídeo, ex-lead data scientist, criador dos cursos Tactical Agentic Coding e Agentic Horizon."}
+    {
+      "name": "IndyDevDan",
+      "role": "Criador do canal e autor do sistema multi-team agentic coding",
+      "url": "https://twitter.com/indydevdan",
+      "context": "Apresentador do vídeo, ex-lead data scientist, criador dos cursos Tactical Agentic Coding e Agentic Horizon."
+    }
   ],
   "concepts": [
-    {"name": "Multi-agent orchestration", "url": "https://en.wikipedia.org/wiki/Multi-agent_system", "context": "Arquitetura central do vídeo: orchestrator → leads → workers em três tiers."},
-    {"name": "Agentic engineering", "url": "https://en.wikipedia.org/wiki/Software_agent", "context": "Evolução além de AI coding e vibe coding — construir sistemas que constroem sistemas."},
-    {"name": "Prompt routing / complexity classifier", "url": "https://en.wikipedia.org/wiki/Statistical_classification", "context": "Problema de roteamento de prompts para modelos de diferentes tiers (low/medium/high) para economia."},
-    {"name": "Context window (1M tokens)", "url": "https://en.wikipedia.org/wiki/Large_language_model", "context": "Janela de 1M tokens do Claude permite carregar expertise e mental models extensos por agente."},
-    {"name": "Mental model (agent memory)", "url": "https://en.wikipedia.org/wiki/Mental_model", "context": "Cada agente mantém arquivo de expertise atualizável que acumula conhecimento entre sessões."},
-    {"name": "Delegation pattern", "url": "https://en.wikipedia.org/wiki/Delegation_pattern", "context": "Orchestrator delega a team leads, que delegam a workers — zero micromanagement."},
-    {"name": "Domain locking / access control", "url": "https://en.wikipedia.org/wiki/Access_control", "context": "Restrição de leitura/escrita por agente a diretórios específicos (frontend, backend, DevOps)."},
-    {"name": "Agent skills", "url": "https://en.wikipedia.org/wiki/Software_agent", "context": "Capacidades reutilizáveis compartilhadas entre agentes (zero micromanagement, conversational response, active listener, mental model)."}
+    {
+      "name": "Multi-agent orchestration",
+      "url": "https://en.wikipedia.org/wiki/Multi-agent_system",
+      "context": "Arquitetura central do vídeo: orchestrator → leads → workers em três tiers."
+    },
+    {
+      "name": "Agentic engineering",
+      "url": "https://en.wikipedia.org/wiki/Software_agent",
+      "context": "Evolução além de AI coding e vibe coding — construir sistemas que constroem sistemas."
+    },
+    {
+      "name": "Prompt routing / complexity classifier",
+      "url": "https://en.wikipedia.org/wiki/Statistical_classification",
+      "context": "Problema de roteamento de prompts para modelos de diferentes tiers (low/medium/high) para economia."
+    },
+    {
+      "name": "Context window (1M tokens)",
+      "url": "https://en.wikipedia.org/wiki/Large_language_model",
+      "context": "Janela de 1M tokens do Claude permite carregar expertise e mental models extensos por agente."
+    },
+    {
+      "name": "Mental model (agent memory)",
+      "url": "https://en.wikipedia.org/wiki/Mental_model",
+      "context": "Cada agente mantém arquivo de expertise atualizável que acumula conhecimento entre sessões."
+    },
+    {
+      "name": "Delegation pattern",
+      "url": "https://en.wikipedia.org/wiki/Delegation_pattern",
+      "context": "Orchestrator delega a team leads, que delegam a workers — zero micromanagement."
+    },
+    {
+      "name": "Domain locking / access control",
+      "url": "https://en.wikipedia.org/wiki/Access_control",
+      "context": "Restrição de leitura/escrita por agente a diretórios específicos (frontend, backend, DevOps)."
+    },
+    {
+      "name": "Agent skills",
+      "url": "https://en.wikipedia.org/wiki/Software_agent",
+      "context": "Capacidades reutilizáveis compartilhadas entre agentes (zero micromanagement, conversational response, active listener, mental model)."
+    }
   ],
   "companies": [
-    {"name": "Anthropic", "url": "https://www.anthropic.com"},
-    {"name": "Principal AI (PI)", "url": "https://principal.ai"}
+    {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com"
+    },
+    {
+      "name": "Principal AI (PI)",
+      "url": "https://principal.ai"
+    }
   ],
   "related_posts": [
-    {"slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida", "slug_en": "head-claude-code-happens-after-coding-solved", "reason": "Discute o futuro do coding com agentes, contexto direto para multi-team agentic coding."},
-    {"slug_pt": "claude-code-leak-what-weve-learned-so-far", "slug_en": "claude-code-leak-we-have-learned-so-far", "reason": "Claude Code é referenciado como a fronteira atual que este sistema busca superar."},
-    {"slug_pt": "de-ides-para-agentes-de-ia-steve-yegge", "slug_en": "ides-ai-agents", "reason": "Transição de IDEs para agentes — base conceitual do agent harness customizado."},
-    {"slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica", "slug_en": "prompt-production-agentic-engineering", "reason": "Define engenharia agêntica, termo central do vídeo."},
-    {"slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade", "slug_en": "agentic-engineering-context-guardrails-creativity", "reason": "Contexto, guardrails (domain locking) e criatividade são pilares aplicados no sistema multi-team."},
-    {"slug_pt": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia", "slug_en": "senior-engineer-demonstrates-spec-driven-ai-development-flow", "reason": "Fluxo plan → engineer → validate é exatamente o workflow usado pelos times no vídeo."},
-    {"slug_pt": "fluxos-de-trabalho-agenticos-don-syme", "slug_en": "agentic-workflows-don-syme", "reason": "Workflows agênticos e orquestração multi-agente."},
-    {"slug_pt": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills", "slug_en": "why-we-stopped-building-agents-started-building-skills", "reason": "Skills compartilhadas entre agentes são componente central do sistema."},
-    {"slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison", "slug_en": "engineering-practices-make-coding-agents-work", "reason": "Práticas de engenharia para fazer agentes funcionarem em produção."}
+    {
+      "slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
+      "slug_en": "head-claude-code-happens-after-coding-solved",
+      "reason": "Discute o futuro do coding com agentes, contexto direto para multi-team agentic coding."
+    },
+    {
+      "slug_pt": "claude-code-leak-what-weve-learned-so-far",
+      "slug_en": "claude-code-leak-we-have-learned-so-far",
+      "reason": "Claude Code é referenciado como a fronteira atual que este sistema busca superar."
+    },
+    {
+      "slug_pt": "de-ides-para-agentes-de-ia-steve-yegge",
+      "slug_en": "ides-ai-agents",
+      "reason": "Transição de IDEs para agentes — base conceitual do agent harness customizado."
+    },
+    {
+      "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
+      "slug_en": "prompt-production-agentic-engineering",
+      "reason": "Define engenharia agêntica, termo central do vídeo."
+    },
+    {
+      "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
+      "slug_en": "agentic-engineering-context-guardrails-creativity",
+      "reason": "Contexto, guardrails (domain locking) e criatividade são pilares aplicados no sistema multi-team."
+    },
+    {
+      "slug_pt": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia",
+      "slug_en": "senior-engineer-demonstrates-spec-driven-ai-development-flow",
+      "reason": "Fluxo plan → engineer → validate é exatamente o workflow usado pelos times no vídeo."
+    },
+    {
+      "slug_pt": "fluxos-de-trabalho-agenticos-don-syme",
+      "slug_en": "agentic-workflows-don-syme",
+      "reason": "Workflows agênticos e orquestração multi-agente."
+    },
+    {
+      "slug_pt": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills",
+      "slug_en": "why-we-stopped-building-agents-started-building-skills",
+      "reason": "Skills compartilhadas entre agentes são componente central do sistema."
+    },
+    {
+      "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
+      "slug_en": "engineering-practices-make-coding-agents-work",
+      "reason": "Práticas de engenharia para fazer agentes funcionarem em produção."
+    }
   ]
 }

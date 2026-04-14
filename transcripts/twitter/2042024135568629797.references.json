@@ -16,18 +16,66 @@
     }
   ],
   "tools": [
-    {"name": "Claude Code", "url": "https://www.anthropic.com/claude-code", "context": "Ferramenta favorita de AI coding de Andrew Ng nos ultimos meses"},
-    {"name": "OpenAI Codex", "url": "https://openai.com/codex", "context": "Ng menciona progresso enorme desde o lancamento do GPT-5"},
-    {"name": "Gemini 3", "url": "https://deepmind.google/technologies/gemini/", "context": "Lancado na manha da palestra, salto gigante segundo Ng"},
-    {"name": "TensorFlow", "url": "https://www.tensorflow.org/", "context": "Moroney trabalhou como lead advocate no Google divulgando TensorFlow"},
-    {"name": "PyTorch", "url": "https://pytorch.org/", "context": "Moroney escreveu livro introdutorio sobre PyTorch"},
-    {"name": "Google Colab", "url": "https://colab.research.google.com/", "context": "Moroney mostrou a pesquisador em Gales como ter GPU na nuvem gratis"},
-    {"name": "Veo", "url": "https://deepmind.google/technologies/veo/", "context": "Modelo text-to-video do Google usado por Moroney em projeto de filme"},
-    {"name": "Replit", "url": "https://replit.com/", "context": "Citado como ferramenta de vibe coding para prototipos"},
-    {"name": "Xcode", "url": "https://developer.apple.com/xcode/", "context": "Moroney construindo app macOS SwiftUI com prompting"},
-    {"name": "SwiftUI", "url": "https://developer.apple.com/xcode/swiftui/", "context": "Linguagem default da Apple para macOS/iOS, com pouco dado de treino p/ macOS"},
-    {"name": "ChatGPT", "url": "https://chatgpt.com/", "context": "Usado por amigo de Moroney (ex-jogador de hockey) para relatorios de nonprofit"},
-    {"name": "Coursera", "url": "https://www.coursera.org/", "context": "Plataforma onde Ng e Moroney publicaram as TensorFlow Specializations"}
+    {
+      "name": "Claude Code",
+      "url": "https://www.anthropic.com/claude-code",
+      "context": "Ferramenta favorita de AI coding de Andrew Ng nos ultimos meses"
+    },
+    {
+      "name": "OpenAI Codex",
+      "url": "https://openai.com/codex",
+      "context": "Ng menciona progresso enorme desde o lancamento do GPT-5"
+    },
+    {
+      "name": "Gemini 3",
+      "url": "https://deepmind.google/technologies/gemini/",
+      "context": "Lancado na manha da palestra, salto gigante segundo Ng"
+    },
+    {
+      "name": "TensorFlow",
+      "url": "https://www.tensorflow.org/",
+      "context": "Moroney trabalhou como lead advocate no Google divulgando TensorFlow"
+    },
+    {
+      "name": "PyTorch",
+      "url": "https://pytorch.org/",
+      "context": "Moroney escreveu livro introdutorio sobre PyTorch"
+    },
+    {
+      "name": "Google Colab",
+      "url": "https://colab.research.google.com/",
+      "context": "Moroney mostrou a pesquisador em Gales como ter GPU na nuvem gratis"
+    },
+    {
+      "name": "Veo",
+      "url": "https://deepmind.google/technologies/veo/",
+      "context": "Modelo text-to-video do Google usado por Moroney em projeto de filme"
+    },
+    {
+      "name": "Replit",
+      "url": "https://replit.com/",
+      "context": "Citado como ferramenta de vibe coding para prototipos"
+    },
+    {
+      "name": "Xcode",
+      "url": "https://developer.apple.com/xcode/",
+      "context": "Moroney construindo app macOS SwiftUI com prompting"
+    },
+    {
+      "name": "SwiftUI",
+      "url": "https://developer.apple.com/xcode/swiftui/",
+      "context": "Linguagem default da Apple para macOS/iOS, com pouco dado de treino p/ macOS"
+    },
+    {
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com/",
+      "context": "Usado por amigo de Moroney (ex-jogador de hockey) para relatorios de nonprofit"
+    },
+    {
+      "name": "Coursera",
+      "url": "https://www.coursera.org/",
+      "context": "Plataforma onde Ng e Moroney publicaram as TensorFlow Specializations"
+    }
   ],
   "papers": [
     {
@@ -38,44 +86,162 @@
     }
   ],
   "people": [
-    {"name": "Andrew Ng", "role": "Fundador DeepLearning.AI, professor adjunto em Stanford", "url": "https://en.wikipedia.org/wiki/Andrew_Ng", "context": "Apresentador principal da aula CS230 em Stanford"},
-    {"name": "Laurence Moroney", "role": "Lidera grupo na Arm, ex-AI Advocate Lead no Google", "url": "https://www.linkedin.com/in/laurencemoroney/", "context": "Convidado por Ng para falar sobre mercado de trabalho em IA"},
-    {"name": "James Cameron", "role": "Diretor de cinema (Avatar)", "url": "https://en.wikipedia.org/wiki/James_Cameron", "context": "Citado no exemplo de protecao rigorosa de IP em Hollywood"}
+    {
+      "name": "Andrew Ng",
+      "role": "Fundador DeepLearning.AI, professor adjunto em Stanford",
+      "url": "https://twitter.com/AndrewYNg",
+      "context": "Apresentador principal da aula CS230 em Stanford"
+    },
+    {
+      "name": "Laurence Moroney",
+      "role": "Lidera grupo na Arm, ex-AI Advocate Lead no Google",
+      "url": "https://twitter.com/lmoroney",
+      "context": "Convidado por Ng para falar sobre mercado de trabalho em IA"
+    },
+    {
+      "name": "James Cameron",
+      "role": "Diretor de cinema (Avatar)",
+      "url": "https://en.wikipedia.org/wiki/James_Cameron",
+      "context": "Citado no exemplo de protecao rigorosa de IP em Hollywood"
+    }
   ],
   "concepts": [
-    {"name": "Agentic AI", "url": "https://en.wikipedia.org/wiki/Intelligent_agent", "context": "Fluxo em 4 passos: entender intent, planejar, executar com ferramentas, refletir"},
-    {"name": "Technical Debt", "url": "https://en.wikipedia.org/wiki/Technical_debt", "context": "Framework de Moroney para avaliar vibe coding responsavel"},
-    {"name": "Vibe Coding", "url": "https://en.wikipedia.org/wiki/Vibe_coding", "context": "Gerar codigo via prompting; Moroney discute prós e contras"},
-    {"name": "Product Management Bottleneck", "url": "https://en.wikipedia.org/wiki/Product_management", "context": "Ng argumenta que engenharia acelerou mas PM nao, mudando ratio eng-PM"},
-    {"name": "Responsible AI", "url": "https://en.wikipedia.org/wiki/AI_safety", "context": "Evoluindo de questoes fluffy sociais para protecao de reputacao de negocio"},
-    {"name": "Scalable Matrix Extensions (SME)", "url": "https://en.wikipedia.org/wiki/ARM_architecture_family", "context": "Tecnologia Arm para rodar cargas de IA em CPUs mobile"},
-    {"name": "Small Language Models", "url": "https://en.wikipedia.org/wiki/Large_language_model", "context": "Modelos self-hosted/open-weight para privacidade e edge"},
-    {"name": "Dot-com Bubble", "url": "https://en.wikipedia.org/wiki/Dot-com_bubble", "context": "Analogia de Moroney para projetar bolha de IA vindoura"}
+    {
+      "name": "Agentic AI",
+      "url": "https://en.wikipedia.org/wiki/Intelligent_agent",
+      "context": "Fluxo em 4 passos: entender intent, planejar, executar com ferramentas, refletir"
+    },
+    {
+      "name": "Technical Debt",
+      "url": "https://en.wikipedia.org/wiki/Technical_debt",
+      "context": "Framework de Moroney para avaliar vibe coding responsavel"
+    },
+    {
+      "name": "Vibe Coding",
+      "url": "https://en.wikipedia.org/wiki/Vibe_coding",
+      "context": "Gerar codigo via prompting; Moroney discute prós e contras"
+    },
+    {
+      "name": "Product Management Bottleneck",
+      "url": "https://en.wikipedia.org/wiki/Product_management",
+      "context": "Ng argumenta que engenharia acelerou mas PM nao, mudando ratio eng-PM"
+    },
+    {
+      "name": "Responsible AI",
+      "url": "https://en.wikipedia.org/wiki/AI_safety",
+      "context": "Evoluindo de questoes fluffy sociais para protecao de reputacao de negocio"
+    },
+    {
+      "name": "Scalable Matrix Extensions (SME)",
+      "url": "https://en.wikipedia.org/wiki/ARM_architecture_family",
+      "context": "Tecnologia Arm para rodar cargas de IA em CPUs mobile"
+    },
+    {
+      "name": "Small Language Models",
+      "url": "https://en.wikipedia.org/wiki/Large_language_model",
+      "context": "Modelos self-hosted/open-weight para privacidade e edge"
+    },
+    {
+      "name": "Dot-com Bubble",
+      "url": "https://en.wikipedia.org/wiki/Dot-com_bubble",
+      "context": "Analogia de Moroney para projetar bolha de IA vindoura"
+    }
   ],
   "companies": [
-    {"name": "Stanford University", "url": "https://www.stanford.edu/"},
-    {"name": "Arm", "url": "https://www.arm.com/"},
-    {"name": "Google", "url": "https://www.google.com/"},
-    {"name": "Microsoft", "url": "https://www.microsoft.com/"},
-    {"name": "Meta", "url": "https://www.meta.com/"},
-    {"name": "Amazon", "url": "https://www.amazon.com/"},
-    {"name": "Apple", "url": "https://www.apple.com/"},
-    {"name": "NVIDIA", "url": "https://www.nvidia.com/"},
-    {"name": "Anthropic", "url": "https://www.anthropic.com/"},
-    {"name": "OpenAI", "url": "https://openai.com/"},
-    {"name": "Vivo", "url": "https://www.vivo.com/"},
-    {"name": "Oppo", "url": "https://www.oppo.com/"},
-    {"name": "Alipay", "url": "https://www.alipay.com/"},
-    {"name": "Y Combinator", "url": "https://www.ycombinator.com/"},
-    {"name": "McKinsey", "url": "https://www.mckinsey.com/"},
-    {"name": "Reuters", "url": "https://www.reuters.com/"},
-    {"name": "DeepLearning.AI", "url": "https://www.deeplearning.ai/"}
+    {
+      "name": "Stanford University",
+      "url": "https://www.stanford.edu/"
+    },
+    {
+      "name": "Arm",
+      "url": "https://www.arm.com/"
+    },
+    {
+      "name": "Google",
+      "url": "https://www.google.com/"
+    },
+    {
+      "name": "Microsoft",
+      "url": "https://www.microsoft.com/"
+    },
+    {
+      "name": "Meta",
+      "url": "https://www.meta.com/"
+    },
+    {
+      "name": "Amazon",
+      "url": "https://www.amazon.com/"
+    },
+    {
+      "name": "Apple",
+      "url": "https://www.apple.com/"
+    },
+    {
+      "name": "NVIDIA",
+      "url": "https://www.nvidia.com/"
+    },
+    {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com/"
+    },
+    {
+      "name": "OpenAI",
+      "url": "https://openai.com/"
+    },
+    {
+      "name": "Vivo",
+      "url": "https://www.vivo.com/"
+    },
+    {
+      "name": "Oppo",
+      "url": "https://www.oppo.com/"
+    },
+    {
+      "name": "Alipay",
+      "url": "https://www.alipay.com/"
+    },
+    {
+      "name": "Y Combinator",
+      "url": "https://www.ycombinator.com/"
+    },
+    {
+      "name": "McKinsey",
+      "url": "https://www.mckinsey.com/"
+    },
+    {
+      "name": "Reuters",
+      "url": "https://www.reuters.com/"
+    },
+    {
+      "name": "DeepLearning.AI",
+      "url": "https://www.deeplearning.ai/"
+    }
   ],
   "related_posts": [
-    {"slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida", "slug_en": "head-claude-code-happens-after-coding-solved", "reason": "Ambos discutem futuro da programacao com IA e papel do engenheiro"},
-    {"slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica", "slug_en": "prompt-production-agentic-engineering", "reason": "Moroney detalha fluxo agentico em 4 passos alinhado com engenharia agentica"},
-    {"slug_pt": "estado-da-ia-2026-ponto-de-inflexao-simon-willison", "slug_en": "state-ai-2026", "reason": "Ambos avaliam landscape atual de IA, hype e bolha iminente"},
-    {"slug_pt": "ia-agentica-progressao-uso-modelos-linguagem-stanford", "slug_en": "agentic-ai-progression-language-model-usage", "reason": "Ambas palestras Stanford sobre progressao e uso pratico de LLMs/agentes"},
-    {"slug_pt": "roteiro-engenheiro-ia-para-desenvolvedores-de-software", "slug_en": "ai-engineer-roadmap-software-developers", "reason": "Conselhos de carreira para engenheiros entrando em IA"}
+    {
+      "slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
+      "slug_en": "head-claude-code-happens-after-coding-solved",
+      "reason": "Ambos discutem futuro da programacao com IA e papel do engenheiro"
+    },
+    {
+      "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
+      "slug_en": "prompt-production-agentic-engineering",
+      "reason": "Moroney detalha fluxo agentico em 4 passos alinhado com engenharia agentica"
+    },
+    {
+      "slug_pt": "estado-da-ia-2026-ponto-de-inflexao-simon-willison",
+      "slug_en": "state-ai-2026",
+      "reason": "Ambos avaliam landscape atual de IA, hype e bolha iminente"
+    },
+    {
+      "slug_pt": "ia-agentica-progressao-uso-modelos-linguagem-stanford",
+      "slug_en": "agentic-ai-progression-language-model-usage",
+      "reason": "Ambas palestras Stanford sobre progressao e uso pratico de LLMs/agentes"
+    },
+    {
+      "slug_pt": "roteiro-engenheiro-ia-para-desenvolvedores-de-software",
+      "slug_en": "ai-engineer-roadmap-software-developers",
+      "reason": "Conselhos de carreira para engenheiros entrando em IA"
+    }
   ]
 }

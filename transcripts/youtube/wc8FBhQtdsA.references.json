@@ -3,83 +3,353 @@
   "extracted_at": "2026-04-14",
   "books": [],
   "tools": [
-    {"name": "Claude Code", "url": "https://www.anthropic.com/claude-code", "context": "Principal ferramenta usada por Simon; menciona Claude Code para web (hospedado) e desktop"},
-    {"name": "Claude Code for Web", "url": "https://www.anthropic.com/claude-code", "context": "Versão hospedada do Claude Code usada via app no iPhone"},
-    {"name": "OpenAI Codex", "url": "https://openai.com/codex", "context": "Comparado ao Claude Code como quase indistinguíveis"},
-    {"name": "ChatGPT", "url": "https://chatgpt.com", "context": "Usado para brainstorm, busca e prototipagem de UI"},
-    {"name": "Gemini", "url": "https://gemini.google.com", "context": "App usado para buscas e geração de imagens via Nano Banana"},
-    {"name": "Nano Banana", "url": "https://deepmind.google/technologies/gemini/", "context": "Gerador de imagens do Gemini usado para diversão"},
-    {"name": "Django", "url": "https://www.djangoproject.com", "context": "Framework co-criado por Simon Willison"},
-    {"name": "Datasette", "url": "https://datasette.io", "context": "Ferramenta de análise de dados criada por Simon para jornalismo investigativo"},
-    {"name": "Playwright", "url": "https://playwright.dev", "context": "Usado por subagentes para simular navegador em testes"},
-    {"name": "Tesseract", "url": "https://github.com/tesseract-ocr/tesseract", "context": "Biblioteca OCR em JavaScript para rodar no navegador"},
-    {"name": "PDF.js", "url": "https://mozilla.github.io/pdf.js/", "context": "Biblioteca Mozilla para renderizar PDFs em JavaScript"},
-    {"name": "OpenClaw", "url": "https://github.com/Open-Claw", "context": "Assistente digital pessoal vibecoded que vazou dados; Simon critica mas respeita"},
-    {"name": "GPT-5.1", "url": "https://openai.com", "context": "Modelo da OpenAI lançado em novembro, ponto de inflexão do coding"},
-    {"name": "GPT-5.4", "url": "https://openai.com", "context": "Modelo OpenAI comparável ao Claude Opus 4.6"},
-    {"name": "Claude Opus 4.5", "url": "https://www.anthropic.com", "context": "Modelo Anthropic do inflection point de novembro"},
-    {"name": "Claude Opus 4.6", "url": "https://www.anthropic.com", "context": "Modelo mais recente mencionado por Simon"},
-    {"name": "Gemini 3.1", "url": "https://deepmind.google", "context": "Modelo Google que desenhou pelicano animado no anúncio"},
-    {"name": "Hacker News", "url": "https://news.ycombinator.com", "context": "Simon passa muito tempo lá; observa diferenças culturais EUA vs Europa"},
-    {"name": "simonw/tools", "url": "https://github.com/simonw/tools", "context": "Repositório com ~193 ferramentas HTML/JS construídas por/com Claude"},
-    {"name": "simonw/research", "url": "https://github.com/simonw/research", "context": "Repositório de pesquisas AI-driven em markdown"},
-    {"name": "AppleScript", "url": "https://en.wikipedia.org/wiki/AppleScript", "context": "Simon usa agora porque Claude sabe AppleScript"}
+    {
+      "name": "Claude Code",
+      "url": "https://www.anthropic.com/claude-code",
+      "context": "Principal ferramenta usada por Simon; menciona Claude Code para web (hospedado) e desktop"
+    },
+    {
+      "name": "Claude Code for Web",
+      "url": "https://www.anthropic.com/claude-code",
+      "context": "Versão hospedada do Claude Code usada via app no iPhone"
+    },
+    {
+      "name": "OpenAI Codex",
+      "url": "https://openai.com/codex",
+      "context": "Comparado ao Claude Code como quase indistinguíveis"
+    },
+    {
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com",
+      "context": "Usado para brainstorm, busca e prototipagem de UI"
+    },
+    {
+      "name": "Gemini",
+      "url": "https://gemini.google.com",
+      "context": "App usado para buscas e geração de imagens via Nano Banana"
+    },
+    {
+      "name": "Nano Banana",
+      "url": "https://deepmind.google/technologies/gemini/",
+      "context": "Gerador de imagens do Gemini usado para diversão"
+    },
+    {
+      "name": "Django",
+      "url": "https://www.djangoproject.com",
+      "context": "Framework co-criado por Simon Willison"
+    },
+    {
+      "name": "Datasette",
+      "url": "https://datasette.io",
+      "context": "Ferramenta de análise de dados criada por Simon para jornalismo investigativo"
+    },
+    {
+      "name": "Playwright",
+      "url": "https://playwright.dev",
+      "context": "Usado por subagentes para simular navegador em testes"
+    },
+    {
+      "name": "Tesseract",
+      "url": "https://github.com/tesseract-ocr/tesseract",
+      "context": "Biblioteca OCR em JavaScript para rodar no navegador"
+    },
+    {
+      "name": "PDF.js",
+      "url": "https://mozilla.github.io/pdf.js/",
+      "context": "Biblioteca Mozilla para renderizar PDFs em JavaScript"
+    },
+    {
+      "name": "OpenClaw",
+      "url": "https://github.com/Open-Claw",
+      "context": "Assistente digital pessoal vibecoded que vazou dados; Simon critica mas respeita"
+    },
+    {
+      "name": "GPT-5.1",
+      "url": "https://openai.com",
+      "context": "Modelo da OpenAI lançado em novembro, ponto de inflexão do coding"
+    },
+    {
+      "name": "GPT-5.4",
+      "url": "https://openai.com",
+      "context": "Modelo OpenAI comparável ao Claude Opus 4.6"
+    },
+    {
+      "name": "Claude Opus 4.5",
+      "url": "https://www.anthropic.com",
+      "context": "Modelo Anthropic do inflection point de novembro"
+    },
+    {
+      "name": "Claude Opus 4.6",
+      "url": "https://www.anthropic.com",
+      "context": "Modelo mais recente mencionado por Simon"
+    },
+    {
+      "name": "Gemini 3.1",
+      "url": "https://deepmind.google",
+      "context": "Modelo Google que desenhou pelicano animado no anúncio"
+    },
+    {
+      "name": "Hacker News",
+      "url": "https://news.ycombinator.com",
+      "context": "Simon passa muito tempo lá; observa diferenças culturais EUA vs Europa"
+    },
+    {
+      "name": "simonw/tools",
+      "url": "https://github.com/simonw/tools",
+      "context": "Repositório com ~193 ferramentas HTML/JS construídas por/com Claude"
+    },
+    {
+      "name": "simonw/research",
+      "url": "https://github.com/simonw/research",
+      "context": "Repositório de pesquisas AI-driven em markdown"
+    },
+    {
+      "name": "AppleScript",
+      "url": "https://en.wikipedia.org/wiki/AppleScript",
+      "context": "Simon usa agora porque Claude sabe AppleScript"
+    }
   ],
   "papers": [
-    {"title": "The Normalization of Deviance", "authors": "Diane Vaughan", "url": "https://arxiv.org/abs/", "context": "Paper dos anos 80 sobre o desastre Challenger; Simon usa para prever a Challenger disaster da IA"},
-    {"title": "CaMeL: Defeating Prompt Injections by Design", "authors": "Google DeepMind", "url": "https://arxiv.org/abs/2503.18813", "context": "Paper que propõe separar agente privilegiado e agente quarentenado para mitigar prompt injection"}
+    {
+      "title": "The Normalization of Deviance",
+      "authors": "Diane Vaughan",
+      "url": "https://arxiv.org/abs/",
+      "context": "Paper dos anos 80 sobre o desastre Challenger; Simon usa para prever a Challenger disaster da IA"
+    },
+    {
+      "title": "CaMeL: Defeating Prompt Injections by Design",
+      "authors": "Google DeepMind",
+      "url": "https://arxiv.org/abs/2503.18813",
+      "context": "Paper que propõe separar agente privilegiado e agente quarentenado para mitigar prompt injection"
+    }
   ],
   "people": [
-    {"name": "Simon Willison", "role": "Co-criador do Django, criador do Datasette, blogueiro em simonwillison.net", "url": "https://simonwillison.net", "context": "Convidado do podcast; cunhou prompt injection e lethal trifecta"},
-    {"name": "Andrej Karpathy", "role": "Ex-OpenAI/Tesla, cunhou vibe coding", "url": "https://twitter.com/karpathy", "context": "Simon cita a definição original de vibe coding"},
-    {"name": "Lenny Rachitsky", "role": "Host do podcast", "url": "https://www.lennysnewsletter.com", "context": "Entrevistador"},
-    {"name": "Boris Cherny", "role": "Líder do Claude Code na Anthropic", "url": "https://twitter.com/bcherny", "context": "Lenny menciona entrevista anterior com Boris sobre coding no celular"},
-    {"name": "Dario Amodei", "role": "CEO da Anthropic", "url": "https://en.wikipedia.org/wiki/Dario_Amodei", "context": "Previu há 1-2 anos que 100% do código seria AI-written"},
-    {"name": "Jensen Huang", "role": "CEO da NVIDIA", "url": "https://en.wikipedia.org/wiki/Jensen_Huang", "context": "Entrevista sobre layoffs e falta de ambição das empresas"},
-    {"name": "David Placek", "role": "Expert em naming de produtos", "url": "https://www.lexicon.com", "context": "Criador da Lexicon Branding; usa três times de brainstorm para nomear"},
-    {"name": "Sander Schulhoff", "role": "Especialista em red teaming de IA", "url": "https://trigaten.github.io", "context": "Episódio anterior do podcast sobre prompt injection; recomendou CaMeL"},
-    {"name": "Alfred Molina", "role": "Ator (Doc Ock em Spider-Man 2)", "url": "https://en.wikipedia.org/wiki/Alfred_Molina", "context": "Referência às AI claws de Doc Ock"}
+    {
+      "name": "Simon Willison",
+      "role": "Co-criador do Django, criador do Datasette, blogueiro em simonwillison.net",
+      "url": "https://twitter.com/simonw",
+      "context": "Convidado do podcast; cunhou prompt injection e lethal trifecta"
+    },
+    {
+      "name": "Andrej Karpathy",
+      "role": "Ex-OpenAI/Tesla, cunhou vibe coding",
+      "url": "https://twitter.com/karpathy",
+      "context": "Simon cita a definição original de vibe coding"
+    },
+    {
+      "name": "Lenny Rachitsky",
+      "role": "Host do podcast",
+      "url": "https://twitter.com/lennysan",
+      "context": "Entrevistador"
+    },
+    {
+      "name": "Boris Cherny",
+      "role": "Líder do Claude Code na Anthropic",
+      "url": "https://twitter.com/bcherny",
+      "context": "Lenny menciona entrevista anterior com Boris sobre coding no celular"
+    },
+    {
+      "name": "Dario Amodei",
+      "role": "CEO da Anthropic",
+      "url": "https://twitter.com/DarioAmodei",
+      "context": "Previu há 1-2 anos que 100% do código seria AI-written"
+    },
+    {
+      "name": "Jensen Huang",
+      "role": "CEO da NVIDIA",
+      "url": "https://en.wikipedia.org/wiki/Jensen_Huang",
+      "context": "Entrevista sobre layoffs e falta de ambição das empresas"
+    },
+    {
+      "name": "David Placek",
+      "role": "Expert em naming de produtos",
+      "url": "https://www.lexicon.com",
+      "context": "Criador da Lexicon Branding; usa três times de brainstorm para nomear"
+    },
+    {
+      "name": "Sander Schulhoff",
+      "role": "Especialista em red teaming de IA",
+      "url": "https://twitter.com/sanderschulhoff",
+      "context": "Episódio anterior do podcast sobre prompt injection; recomendou CaMeL"
+    },
+    {
+      "name": "Alfred Molina",
+      "role": "Ator (Doc Ock em Spider-Man 2)",
+      "url": "https://en.wikipedia.org/wiki/Alfred_Molina",
+      "context": "Referência às AI claws de Doc Ock"
+    }
   ],
   "concepts": [
-    {"name": "Vibe coding", "url": "https://en.wikipedia.org/wiki/Vibe_coding", "context": "Definição de Karpathy: programar sem olhar o código"},
-    {"name": "Agentic engineering", "url": "https://simonwillison.net/tags/agentic-engineering/", "context": "Termo preferido de Simon para uso profissional de coding agents"},
-    {"name": "Prompt injection", "url": "https://en.wikipedia.org/wiki/Prompt_injection", "context": "Classe de vulnerabilidades cunhada por Simon em 2022"},
-    {"name": "Lethal trifecta", "url": "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/", "context": "Três condições: dados privados + input malicioso + exfiltração"},
-    {"name": "AI slop", "url": "https://en.wikipedia.org/wiki/AI_slop", "context": "Termo popularizado por Simon"},
-    {"name": "Dark factory / software factory", "url": "https://en.wikipedia.org/wiki/Lights_out_(manufacturing)", "context": "Padrão onde ninguém escreve nem lê código"},
-    {"name": "Test-driven development", "url": "https://en.wikipedia.org/wiki/Test-driven_development", "context": "Red/green TDD como prompt curto para coding agents"},
-    {"name": "Normalization of deviance", "url": "https://en.wikipedia.org/wiki/Normalization_of_deviance", "context": "Conceito aplicado ao risco crescente de prompt injection"},
-    {"name": "Challenger disaster", "url": "https://en.wikipedia.org/wiki/Space_Shuttle_Challenger_disaster", "context": "Analogia para prever o grande desastre AI vindouro"},
-    {"name": "SQL injection", "url": "https://en.wikipedia.org/wiki/SQL_injection", "context": "Problema resolvido de banco que inspirou o nome prompt injection"},
-    {"name": "YOLO mode / dangerously-skip-permissions", "url": "https://docs.anthropic.com/en/docs/claude-code", "context": "Modo sem pedir confirmação; OpenAI chama oficialmente de YOLO"},
-    {"name": "Pelican riding a bicycle benchmark", "url": "https://simonwillison.net/tags/pelican-riding-a-bicycle/", "context": "Benchmark humorístico de SVG criado por Simon"},
-    {"name": "Jailbreaking", "url": "https://en.wikipedia.org/wiki/Jailbreak_(prompting)", "context": "Distinto de prompt injection"},
-    {"name": "Low background steel", "url": "https://en.wikipedia.org/wiki/Low-background_steel", "context": "Metáfora para código humano pré-2022 valioso para treinar modelos"},
-    {"name": "Reasoning models", "url": "https://en.wikipedia.org/wiki/Reasoning_language_model", "context": "Grande tendência de 2025 iniciada pelo OpenAI o1"},
-    {"name": "Human in the loop", "url": "https://en.wikipedia.org/wiki/Human-in-the-loop", "context": "Estratégia para aprovar ações de alto risco em agentes"}
+    {
+      "name": "Vibe coding",
+      "url": "https://en.wikipedia.org/wiki/Vibe_coding",
+      "context": "Definição de Karpathy: programar sem olhar o código"
+    },
+    {
+      "name": "Agentic engineering",
+      "url": "https://simonwillison.net/tags/agentic-engineering/",
+      "context": "Termo preferido de Simon para uso profissional de coding agents"
+    },
+    {
+      "name": "Prompt injection",
+      "url": "https://en.wikipedia.org/wiki/Prompt_injection",
+      "context": "Classe de vulnerabilidades cunhada por Simon em 2022"
+    },
+    {
+      "name": "Lethal trifecta",
+      "url": "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/",
+      "context": "Três condições: dados privados + input malicioso + exfiltração"
+    },
+    {
+      "name": "AI slop",
+      "url": "https://en.wikipedia.org/wiki/AI_slop",
+      "context": "Termo popularizado por Simon"
+    },
+    {
+      "name": "Dark factory / software factory",
+      "url": "https://en.wikipedia.org/wiki/Lights_out_(manufacturing)",
+      "context": "Padrão onde ninguém escreve nem lê código"
+    },
+    {
+      "name": "Test-driven development",
+      "url": "https://en.wikipedia.org/wiki/Test-driven_development",
+      "context": "Red/green TDD como prompt curto para coding agents"
+    },
+    {
+      "name": "Normalization of deviance",
+      "url": "https://en.wikipedia.org/wiki/Normalization_of_deviance",
+      "context": "Conceito aplicado ao risco crescente de prompt injection"
+    },
+    {
+      "name": "Challenger disaster",
+      "url": "https://en.wikipedia.org/wiki/Space_Shuttle_Challenger_disaster",
+      "context": "Analogia para prever o grande desastre AI vindouro"
+    },
+    {
+      "name": "SQL injection",
+      "url": "https://en.wikipedia.org/wiki/SQL_injection",
+      "context": "Problema resolvido de banco que inspirou o nome prompt injection"
+    },
+    {
+      "name": "YOLO mode / dangerously-skip-permissions",
+      "url": "https://docs.anthropic.com/en/docs/claude-code",
+      "context": "Modo sem pedir confirmação; OpenAI chama oficialmente de YOLO"
+    },
+    {
+      "name": "Pelican riding a bicycle benchmark",
+      "url": "https://simonwillison.net/tags/pelican-riding-a-bicycle/",
+      "context": "Benchmark humorístico de SVG criado por Simon"
+    },
+    {
+      "name": "Jailbreaking",
+      "url": "https://en.wikipedia.org/wiki/Jailbreak_(prompting)",
+      "context": "Distinto de prompt injection"
+    },
+    {
+      "name": "Low background steel",
+      "url": "https://en.wikipedia.org/wiki/Low-background_steel",
+      "context": "Metáfora para código humano pré-2022 valioso para treinar modelos"
+    },
+    {
+      "name": "Reasoning models",
+      "url": "https://en.wikipedia.org/wiki/Reasoning_language_model",
+      "context": "Grande tendência de 2025 iniciada pelo OpenAI o1"
+    },
+    {
+      "name": "Human in the loop",
+      "url": "https://en.wikipedia.org/wiki/Human-in-the-loop",
+      "context": "Estratégia para aprovar ações de alto risco em agentes"
+    }
   ],
   "companies": [
-    {"name": "Anthropic", "url": "https://www.anthropic.com"},
-    {"name": "OpenAI", "url": "https://openai.com"},
-    {"name": "Google DeepMind", "url": "https://deepmind.google"},
-    {"name": "StrongDM", "url": "https://www.strongdm.com"},
-    {"name": "Thoughtworks", "url": "https://www.thoughtworks.com"},
-    {"name": "Cloudflare", "url": "https://www.cloudflare.com"},
-    {"name": "Shopify", "url": "https://www.shopify.com"},
-    {"name": "Mozilla", "url": "https://www.mozilla.org"},
-    {"name": "Block", "url": "https://block.xyz"},
-    {"name": "GitHub", "url": "https://github.com"},
-    {"name": "Linear", "url": "https://linear.app"},
-    {"name": "Manus", "url": "https://manus.im"},
-    {"name": "Perplexity", "url": "https://www.perplexity.ai"}
+    {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com"
+    },
+    {
+      "name": "OpenAI",
+      "url": "https://openai.com"
+    },
+    {
+      "name": "Google DeepMind",
+      "url": "https://deepmind.google"
+    },
+    {
+      "name": "StrongDM",
+      "url": "https://www.strongdm.com"
+    },
+    {
+      "name": "Thoughtworks",
+      "url": "https://www.thoughtworks.com"
+    },
+    {
+      "name": "Cloudflare",
+      "url": "https://www.cloudflare.com"
+    },
+    {
+      "name": "Shopify",
+      "url": "https://www.shopify.com"
+    },
+    {
+      "name": "Mozilla",
+      "url": "https://www.mozilla.org"
+    },
+    {
+      "name": "Block",
+      "url": "https://block.xyz"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com"
+    },
+    {
+      "name": "Linear",
+      "url": "https://linear.app"
+    },
+    {
+      "name": "Manus",
+      "url": "https://manus.im"
+    },
+    {
+      "name": "Perplexity",
+      "url": "https://www.perplexity.ai"
+    }
   ],
   "related_posts": [
-    {"slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida", "slug_en": "head-claude-code-happens-after-coding-solved", "reason": "Lenny cita entrevista com Boris Cherny, chefe do Claude Code, sobre programar no celular"},
-    {"slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica", "slug_en": "prompt-production-agentic-engineering", "reason": "Simon define e defende o termo agentic engineering durante toda a conversa"},
-    {"slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade", "slug_en": "agentic-engineering-context-guardrails-creativity", "reason": "Discussão direta sobre padrões de engenharia agêntica, contexto e limites de agentes"},
-    {"slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison", "slug_en": "engineering-practices-make-coding-agents-work", "reason": "Mesmo autor Simon Willison discutindo práticas para fazer coding agents funcionarem"},
-    {"slug_pt": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia", "slug_en": "senior-engineer-demonstrates-spec-driven-ai-development-flow", "reason": "Simon mostra fluxo de engenheiro sênior experiente usando coding agents como amplificador"},
-    {"slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code", "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code", "reason": "Simon roda 4 agentes em paralelo, discute limitação cognitiva e factory pattern"},
-    {"slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica", "slug_en": "prompt-production-agentic-engineering", "reason": "Tema central: levar código de AI a produção com responsabilidade"}
+    {
+      "slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
+      "slug_en": "head-claude-code-happens-after-coding-solved",
+      "reason": "Lenny cita entrevista com Boris Cherny, chefe do Claude Code, sobre programar no celular"
+    },
+    {
+      "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
+      "slug_en": "prompt-production-agentic-engineering",
+      "reason": "Simon define e defende o termo agentic engineering durante toda a conversa"
+    },
+    {
+      "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
+      "slug_en": "agentic-engineering-context-guardrails-creativity",
+      "reason": "Discussão direta sobre padrões de engenharia agêntica, contexto e limites de agentes"
+    },
+    {
+      "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
+      "slug_en": "engineering-practices-make-coding-agents-work",
+      "reason": "Mesmo autor Simon Willison discutindo práticas para fazer coding agents funcionarem"
+    },
+    {
+      "slug_pt": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia",
+      "slug_en": "senior-engineer-demonstrates-spec-driven-ai-development-flow",
+      "reason": "Simon mostra fluxo de engenheiro sênior experiente usando coding agents como amplificador"
+    },
+    {
+      "slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
+      "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code",
+      "reason": "Simon roda 4 agentes em paralelo, discute limitação cognitiva e factory pattern"
+    },
+    {
+      "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
+      "slug_en": "prompt-production-agentic-engineering",
+      "reason": "Tema central: levar código de AI a produção com responsabilidade"
+    }
   ]
 }

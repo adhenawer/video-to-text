@@ -293,7 +293,7 @@ Cada artigo tem uma sidebar fixa (à direita em telas largas, inline em mobile) 
 | Livros | 📖 | Busca no Amazon (`amazon.com/s?k=...`) |
 | Ferramentas | 🛠 | Site oficial do produto |
 | Papers | 📄 | arXiv / blog do autor |
-| Pessoas | 👥 | Wikipedia / Twitter / site pessoal |
+| Pessoas | 👥 | **Twitter/X prioritário**, fallback para LinkedIn / site pessoal / Wikipedia |
 | Conceitos | 🧠 | Wikipedia / transformer-circuits.pub |
 | Empresas | 🏢 | Site oficial |
 | Posts relacionados | 🔗 | Cross-link interno (para o slug canônico do outro idioma) |
@@ -321,6 +321,12 @@ Cada artigo tem uma sidebar fixa (à direita em telas largas, inline em mobile) 
   "related_posts": [{"slug_pt":"...","slug_en":"...","reason":"..."}]
 }
 ```
+
+### Prioridade em pessoas: Twitter primeiro
+
+O campo `url` do `people[]` segue uma ordem estrita: **handle do Twitter/X primeiro**, depois LinkedIn, depois site pessoal/blog, e Wikipedia apenas como último recurso. Os subagentes de extração tentam derivar o handle do perfil público da pessoa. Para figuras históricas ou acadêmicos falecidos que nunca tiveram Twitter, o campo fica vazio ou aponta para Wikipedia.
+
+O enriquecimento é idempotente: rodar `scripts/enrich_people_twitter.py` aplica uma tabela curada de handles em todos os JSONs de referências sem sobrescrever URLs do Twitter existentes.
 
 ### Estatísticas na v2
 

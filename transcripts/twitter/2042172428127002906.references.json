@@ -3,40 +3,142 @@
   "extracted_at": "2026-04-14",
   "books": [],
   "tools": [
-    {"name": "Claude Code", "url": "https://www.anthropic.com/claude-code", "context": "Anthropic's coding agent, referenced as a general-purpose agent that inspired skills"},
-    {"name": "Claude Agent SDK", "url": "https://docs.anthropic.com/en/api/agent-sdk", "context": "Production-ready agent SDK out of the box"},
-    {"name": "MCP (Model Context Protocol)", "url": "https://modelcontextprotocol.io", "context": "Standard for agent connectivity; complements skills ecosystem"},
-    {"name": "Stagehand", "url": "https://github.com/browserbase/stagehand", "context": "Browserbase's open source browser automation tooling; has a skill"},
-    {"name": "Browserbase", "url": "https://www.browserbase.com", "context": "Built a skill for Stagehand browser automation"},
-    {"name": "Notion", "url": "https://www.notion.so", "context": "Launched skills for deep research over Notion workspaces"},
-    {"name": "Git", "url": "https://git-scm.com", "context": "Skills can be versioned in Git"},
-    {"name": "Google Drive", "url": "https://drive.google.com", "context": "Skills can be stored in Google Drive"},
-    {"name": "Python", "url": "https://www.python.org", "context": "Used for analyzing data and scripts inside skills"}
+    {
+      "name": "Claude Code",
+      "url": "https://www.anthropic.com/claude-code",
+      "context": "Anthropic's coding agent, referenced as a general-purpose agent that inspired skills"
+    },
+    {
+      "name": "Claude Agent SDK",
+      "url": "https://docs.anthropic.com/en/api/agent-sdk",
+      "context": "Production-ready agent SDK out of the box"
+    },
+    {
+      "name": "MCP (Model Context Protocol)",
+      "url": "https://modelcontextprotocol.io",
+      "context": "Standard for agent connectivity; complements skills ecosystem"
+    },
+    {
+      "name": "Stagehand",
+      "url": "https://github.com/browserbase/stagehand",
+      "context": "Browserbase's open source browser automation tooling; has a skill"
+    },
+    {
+      "name": "Browserbase",
+      "url": "https://www.browserbase.com",
+      "context": "Built a skill for Stagehand browser automation"
+    },
+    {
+      "name": "Notion",
+      "url": "https://www.notion.so",
+      "context": "Launched skills for deep research over Notion workspaces"
+    },
+    {
+      "name": "Git",
+      "url": "https://git-scm.com",
+      "context": "Skills can be versioned in Git"
+    },
+    {
+      "name": "Google Drive",
+      "url": "https://drive.google.com",
+      "context": "Skills can be stored in Google Drive"
+    },
+    {
+      "name": "Python",
+      "url": "https://www.python.org",
+      "context": "Used for analyzing data and scripts inside skills"
+    }
   ],
   "papers": [],
   "people": [
-    {"name": "Barry Zhang", "role": "Anthropic — co-creator of Agent Skills", "url": "https://twitter.com/barry_zhang_", "context": "Speaker; co-created Agent Skills"},
-    {"name": "Mahesh Sathiamoorthy", "role": "Anthropic — co-creator of Agent Skills", "url": "https://twitter.com/madiator", "context": "Speaker; co-created Agent Skills"}
+    {
+      "name": "Barry Zhang",
+      "role": "Anthropic — co-creator of Agent Skills",
+      "url": "https://twitter.com/barry_zhang_",
+      "context": "Speaker; co-created Agent Skills"
+    },
+    {
+      "name": "Mahesh Sathiamoorthy",
+      "role": "Anthropic — co-creator of Agent Skills",
+      "url": "https://twitter.com/madiator",
+      "context": "Speaker; co-created Agent Skills"
+    }
   ],
   "concepts": [
-    {"name": "Agent Skills", "url": "https://www.anthropic.com/news/skills", "context": "Organized folders of composable procedural knowledge for agents"},
-    {"name": "Progressive disclosure", "url": "https://en.wikipedia.org/wiki/Progressive_disclosure", "context": "Skills only reveal metadata at runtime, loading more only when needed"},
-    {"name": "Model Context Protocol", "url": "https://modelcontextprotocol.io", "context": "Connects agents to outside world; complements skills"},
-    {"name": "In-context learning", "url": "https://en.wikipedia.org/wiki/Prompt_engineering#In-context_learning", "context": "Makes skills cost-effective for daily-changing info"},
-    {"name": "Agent loop", "url": "https://docs.anthropic.com/en/docs/agents-and-tools/agent-sdk", "context": "Manages model's internal context and tokens in/out"}
+    {
+      "name": "Agent Skills",
+      "url": "https://www.anthropic.com/news/skills",
+      "context": "Organized folders of composable procedural knowledge for agents"
+    },
+    {
+      "name": "Progressive disclosure",
+      "url": "https://en.wikipedia.org/wiki/Progressive_disclosure",
+      "context": "Skills only reveal metadata at runtime, loading more only when needed"
+    },
+    {
+      "name": "Model Context Protocol",
+      "url": "https://modelcontextprotocol.io",
+      "context": "Connects agents to outside world; complements skills"
+    },
+    {
+      "name": "In-context learning",
+      "url": "https://en.wikipedia.org/wiki/Prompt_engineering#In-context_learning",
+      "context": "Makes skills cost-effective for daily-changing info"
+    },
+    {
+      "name": "Agent loop",
+      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/agent-sdk",
+      "context": "Manages model's internal context and tokens in/out"
+    }
   ],
   "companies": [
-    {"name": "Anthropic", "url": "https://www.anthropic.com"},
-    {"name": "Cadence", "url": "https://www.cadence.com"},
-    {"name": "Browserbase", "url": "https://www.browserbase.com"},
-    {"name": "Notion", "url": "https://www.notion.so"}
+    {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com"
+    },
+    {
+      "name": "Cadence",
+      "url": "https://www.cadence.com"
+    },
+    {
+      "name": "Browserbase",
+      "url": "https://www.browserbase.com"
+    },
+    {
+      "name": "Notion",
+      "url": "https://www.notion.so"
+    }
   ],
   "related_posts": [
-    {"slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida", "slug_en": "head-claude-code-happens-after-coding-solved", "reason": "Both from Anthropic about Claude Code's evolution and general-purpose agents"},
-    {"slug_pt": "claude-code-leak-what-weve-learned-so-far", "slug_en": "claude-code-leak-we-have-learned-so-far", "reason": "Internal architecture of Claude Code, directly related to agent runtime discussed"},
-    {"slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica", "slug_en": "prompt-production-agentic-engineering", "reason": "Agentic engineering patterns overlap with skills-as-procedural-knowledge"},
-    {"slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade", "slug_en": "agentic-engineering-context-guardrails-creativity", "reason": "Context management relates to progressive disclosure of skills"},
-    {"slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code", "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code", "reason": "Extending agents with capabilities; skills as composable ecosystem"},
-    {"slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison", "slug_en": "engineering-practices-make-coding-agents-work", "reason": "Treating skills like software with testing/versioning parallels engineering practices"}
+    {
+      "slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
+      "slug_en": "head-claude-code-happens-after-coding-solved",
+      "reason": "Both from Anthropic about Claude Code's evolution and general-purpose agents"
+    },
+    {
+      "slug_pt": "claude-code-leak-what-weve-learned-so-far",
+      "slug_en": "claude-code-leak-we-have-learned-so-far",
+      "reason": "Internal architecture of Claude Code, directly related to agent runtime discussed"
+    },
+    {
+      "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
+      "slug_en": "prompt-production-agentic-engineering",
+      "reason": "Agentic engineering patterns overlap with skills-as-procedural-knowledge"
+    },
+    {
+      "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
+      "slug_en": "agentic-engineering-context-guardrails-creativity",
+      "reason": "Context management relates to progressive disclosure of skills"
+    },
+    {
+      "slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
+      "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code",
+      "reason": "Extending agents with capabilities; skills as composable ecosystem"
+    },
+    {
+      "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
+      "slug_en": "engineering-practices-make-coding-agents-work",
+      "reason": "Treating skills like software with testing/versioning parallels engineering practices"
+    }
   ]
 }

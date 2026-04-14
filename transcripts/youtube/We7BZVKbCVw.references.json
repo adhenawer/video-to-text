@@ -116,25 +116,25 @@
     {
       "name": "Mike Krieger",
       "role": "CPO Anthropic, co-founder Instagram",
-      "url": "https://en.wikipedia.org/wiki/Mike_Krieger",
+      "url": "https://twitter.com/mikeyk",
       "context": "Co-kicked off the Anthropic Labs team"
     },
     {
       "name": "Ben Mann",
       "role": "Anthropic co-founder",
-      "url": "https://en.wikipedia.org/wiki/Anthropic",
+      "url": "https://twitter.com/benjmann",
       "context": "Suggested podcast topics; early Claude Code supporter"
     },
     {
       "name": "Chris Olah",
       "role": "Mechanistic interpretability pioneer (Anthropic)",
-      "url": "https://colah.github.io/",
+      "url": "https://twitter.com/ch402",
       "context": "Boris recommends having him on a podcast"
     },
     {
       "name": "Rich Sutton",
       "role": "AI researcher",
-      "url": "http://www.incompleteideas.net/",
+      "url": "https://twitter.com/RichardSSutton",
       "context": "Author of The Bitter Lesson"
     }
   ],
@@ -166,13 +166,34 @@
     }
   ],
   "companies": [
-    {"name": "Anthropic", "url": "https://anthropic.com"},
-    {"name": "Cursor", "url": "https://cursor.com"},
-    {"name": "Meta", "url": "https://about.meta.com/"},
-    {"name": "Instagram", "url": "https://instagram.com"},
-    {"name": "OpenAI", "url": "https://openai.com"},
-    {"name": "Spotify", "url": "https://spotify.com"},
-    {"name": "Netflix", "url": "https://netflix.com"}
+    {
+      "name": "Anthropic",
+      "url": "https://anthropic.com"
+    },
+    {
+      "name": "Cursor",
+      "url": "https://cursor.com"
+    },
+    {
+      "name": "Meta",
+      "url": "https://about.meta.com/"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com"
+    },
+    {
+      "name": "OpenAI",
+      "url": "https://openai.com"
+    },
+    {
+      "name": "Spotify",
+      "url": "https://spotify.com"
+    },
+    {
+      "name": "Netflix",
+      "url": "https://netflix.com"
+    }
   ],
   "related_posts": [
     {

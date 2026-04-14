@@ -3,65 +3,265 @@
   "extracted_at": "2026-04-14",
   "books": [],
   "tools": [
-    {"name": "Groq", "url": "https://groq.com/", "context": "Free LLM API calls during learning phase"},
-    {"name": "Claude Code", "url": "https://www.anthropic.com/claude-code", "context": "Favorite AI-first coding tool"},
-    {"name": "ChatGPT", "url": "https://chatgpt.com/", "context": "Personal tutor for upskilling"},
-    {"name": "Cursor", "url": "https://cursor.com/", "context": "Vibe coding tool"},
-    {"name": "Google Antigravity", "url": "https://antigravity.google/", "context": "Vibe coding IDE"},
-    {"name": "FastAPI", "url": "https://fastapi.tiangolo.com/", "context": "Python backend framework"},
-    {"name": "OpenAI API", "url": "https://platform.openai.com/", "context": "LLM API used in examples"},
-    {"name": "ChromaDB", "url": "https://www.trychroma.com/", "context": "Open-source vector database for learning"},
-    {"name": "Qdrant", "url": "https://qdrant.tech/", "context": "Commercial vector database used in industry"},
-    {"name": "Pinecone", "url": "https://www.pinecone.io/", "context": "Commercial vector database"},
-    {"name": "LangChain", "url": "https://www.langchain.com/", "context": "General framework for RAG and agents"},
-    {"name": "LangGraph", "url": "https://www.langchain.com/langgraph", "context": "Custom multi-agent framework"},
-    {"name": "LangSmith", "url": "https://smith.langchain.com/", "context": "Observability and monitoring for AI apps"},
-    {"name": "Docling", "url": "https://github.com/docling-project/docling", "context": "Document parsing and chunking for RAG"},
-    {"name": "CrewAI", "url": "https://www.crewai.com/", "context": "Multi-agent framework"},
-    {"name": "DSPy", "url": "https://dspy.ai/", "context": "Declarative AI programming framework"},
-    {"name": "Ollama", "url": "https://ollama.com/", "context": "Run LLMs locally for private data"},
-    {"name": "Unsloth", "url": "https://unsloth.ai/", "context": "Framework for fine-tuning LLMs with LoRA/QLoRA"},
-    {"name": "AWS Bedrock AgentCore", "url": "https://aws.amazon.com/bedrock/agentcore/", "context": "Deploy agents to AWS cloud"},
-    {"name": "Hugging Face Transformers", "url": "https://github.com/huggingface/transformers", "context": "Open-source repo example for beginners contributing"},
-    {"name": "LinkedIn", "url": "https://www.linkedin.com/", "context": "Personal branding platform"},
-    {"name": "Twitter/X", "url": "https://x.com/", "context": "Primary channel for AI news and networking"},
-    {"name": "GitHub", "url": "https://github.com/", "context": "Find good-first-issue open source contributions"},
-    {"name": "Microsoft Azure", "url": "https://azure.microsoft.com/", "context": "Cloud deployment for AI"},
-    {"name": "AWS", "url": "https://aws.amazon.com/", "context": "Cloud deployment for AI"},
-    {"name": "Google AI Studio", "url": "https://aistudio.google.com/", "context": "Google cloud AI platform"},
-    {"name": "MCP (Model Context Protocol)", "url": "https://modelcontextprotocol.io/", "context": "Build MCP server assignment"}
+    {
+      "name": "Groq",
+      "url": "https://groq.com/",
+      "context": "Free LLM API calls during learning phase"
+    },
+    {
+      "name": "Claude Code",
+      "url": "https://www.anthropic.com/claude-code",
+      "context": "Favorite AI-first coding tool"
+    },
+    {
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com/",
+      "context": "Personal tutor for upskilling"
+    },
+    {
+      "name": "Cursor",
+      "url": "https://cursor.com/",
+      "context": "Vibe coding tool"
+    },
+    {
+      "name": "Google Antigravity",
+      "url": "https://antigravity.google/",
+      "context": "Vibe coding IDE"
+    },
+    {
+      "name": "FastAPI",
+      "url": "https://fastapi.tiangolo.com/",
+      "context": "Python backend framework"
+    },
+    {
+      "name": "OpenAI API",
+      "url": "https://platform.openai.com/",
+      "context": "LLM API used in examples"
+    },
+    {
+      "name": "ChromaDB",
+      "url": "https://www.trychroma.com/",
+      "context": "Open-source vector database for learning"
+    },
+    {
+      "name": "Qdrant",
+      "url": "https://qdrant.tech/",
+      "context": "Commercial vector database used in industry"
+    },
+    {
+      "name": "Pinecone",
+      "url": "https://www.pinecone.io/",
+      "context": "Commercial vector database"
+    },
+    {
+      "name": "LangChain",
+      "url": "https://www.langchain.com/",
+      "context": "General framework for RAG and agents"
+    },
+    {
+      "name": "LangGraph",
+      "url": "https://www.langchain.com/langgraph",
+      "context": "Custom multi-agent framework"
+    },
+    {
+      "name": "LangSmith",
+      "url": "https://smith.langchain.com/",
+      "context": "Observability and monitoring for AI apps"
+    },
+    {
+      "name": "Docling",
+      "url": "https://github.com/docling-project/docling",
+      "context": "Document parsing and chunking for RAG"
+    },
+    {
+      "name": "CrewAI",
+      "url": "https://www.crewai.com/",
+      "context": "Multi-agent framework"
+    },
+    {
+      "name": "DSPy",
+      "url": "https://dspy.ai/",
+      "context": "Declarative AI programming framework"
+    },
+    {
+      "name": "Ollama",
+      "url": "https://ollama.com/",
+      "context": "Run LLMs locally for private data"
+    },
+    {
+      "name": "Unsloth",
+      "url": "https://unsloth.ai/",
+      "context": "Framework for fine-tuning LLMs with LoRA/QLoRA"
+    },
+    {
+      "name": "AWS Bedrock AgentCore",
+      "url": "https://aws.amazon.com/bedrock/agentcore/",
+      "context": "Deploy agents to AWS cloud"
+    },
+    {
+      "name": "Hugging Face Transformers",
+      "url": "https://github.com/huggingface/transformers",
+      "context": "Open-source repo example for beginners contributing"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/",
+      "context": "Personal branding platform"
+    },
+    {
+      "name": "Twitter/X",
+      "url": "https://x.com/",
+      "context": "Primary channel for AI news and networking"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/",
+      "context": "Find good-first-issue open source contributions"
+    },
+    {
+      "name": "Microsoft Azure",
+      "url": "https://azure.microsoft.com/",
+      "context": "Cloud deployment for AI"
+    },
+    {
+      "name": "AWS",
+      "url": "https://aws.amazon.com/",
+      "context": "Cloud deployment for AI"
+    },
+    {
+      "name": "Google AI Studio",
+      "url": "https://aistudio.google.com/",
+      "context": "Google cloud AI platform"
+    },
+    {
+      "name": "MCP (Model Context Protocol)",
+      "url": "https://modelcontextprotocol.io/",
+      "context": "Build MCP server assignment"
+    }
   ],
   "papers": [],
   "people": [
-    {"name": "Dhaval Patel", "role": "Co-founder of Atliq AI consultancy, ex-Bloomberg/Nvidia, host", "url": "https://www.linkedin.com/in/dhavalsays/", "context": "Presenter of the AI engineering roadmap"},
-    {"name": "Andrej Karpathy", "role": "AI researcher", "url": "https://karpathy.ai/", "context": "Example AI personality to engage with on social"}
+    {
+      "name": "Dhaval Patel",
+      "role": "Co-founder of Atliq AI consultancy, ex-Bloomberg/Nvidia, host",
+      "url": "https://twitter.com/dhavalsays",
+      "context": "Presenter of the AI engineering roadmap"
+    },
+    {
+      "name": "Andrej Karpathy",
+      "role": "AI researcher",
+      "url": "https://twitter.com/karpathy",
+      "context": "Example AI personality to engage with on social"
+    }
   ],
   "concepts": [
-    {"name": "Retrieval-Augmented Generation", "url": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation", "context": "60-70% of client projects at Atliq"},
-    {"name": "ReAct (Reasoning + Action)", "url": "https://arxiv.org/abs/2210.03629", "context": "Agent loop pattern"},
-    {"name": "Vibe coding", "url": "https://en.wikipedia.org/wiki/Vibe_coding", "context": "AI-first engineering workflow"},
-    {"name": "LoRA", "url": "https://en.wikipedia.org/wiki/Low-rank_adaptation", "context": "Fine-tuning technique"},
-    {"name": "QLoRA", "url": "https://arxiv.org/abs/2305.14314", "context": "Quantized fine-tuning technique"},
-    {"name": "Context engineering", "url": "https://en.wikipedia.org/wiki/Prompt_engineering", "context": "Week 5 topic"},
-    {"name": "Guardrails", "url": "https://en.wikipedia.org/wiki/AI_safety", "context": "AI agent security"},
-    {"name": "Prompt caching", "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching", "context": "Cost optimization technique"},
-    {"name": "Declarative programming", "url": "https://en.wikipedia.org/wiki/Declarative_programming", "context": "Paradigm behind DSPy"},
-    {"name": "Multimodal RAG", "url": "https://en.wikipedia.org/wiki/Multimodal_learning", "context": "Images/video/audio in healthcare and manufacturing"},
-    {"name": "Product engineer", "url": "https://en.wikipedia.org/wiki/Product_engineering", "context": "Emerging hybrid role merging product and engineering"}
+    {
+      "name": "Retrieval-Augmented Generation",
+      "url": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation",
+      "context": "60-70% of client projects at Atliq"
+    },
+    {
+      "name": "ReAct (Reasoning + Action)",
+      "url": "https://arxiv.org/abs/2210.03629",
+      "context": "Agent loop pattern"
+    },
+    {
+      "name": "Vibe coding",
+      "url": "https://en.wikipedia.org/wiki/Vibe_coding",
+      "context": "AI-first engineering workflow"
+    },
+    {
+      "name": "LoRA",
+      "url": "https://en.wikipedia.org/wiki/Low-rank_adaptation",
+      "context": "Fine-tuning technique"
+    },
+    {
+      "name": "QLoRA",
+      "url": "https://arxiv.org/abs/2305.14314",
+      "context": "Quantized fine-tuning technique"
+    },
+    {
+      "name": "Context engineering",
+      "url": "https://en.wikipedia.org/wiki/Prompt_engineering",
+      "context": "Week 5 topic"
+    },
+    {
+      "name": "Guardrails",
+      "url": "https://en.wikipedia.org/wiki/AI_safety",
+      "context": "AI agent security"
+    },
+    {
+      "name": "Prompt caching",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching",
+      "context": "Cost optimization technique"
+    },
+    {
+      "name": "Declarative programming",
+      "url": "https://en.wikipedia.org/wiki/Declarative_programming",
+      "context": "Paradigm behind DSPy"
+    },
+    {
+      "name": "Multimodal RAG",
+      "url": "https://en.wikipedia.org/wiki/Multimodal_learning",
+      "context": "Images/video/audio in healthcare and manufacturing"
+    },
+    {
+      "name": "Product engineer",
+      "url": "https://en.wikipedia.org/wiki/Product_engineering",
+      "context": "Emerging hybrid role merging product and engineering"
+    }
   ],
   "companies": [
-    {"name": "Atliq Technologies", "url": "https://www.atliq.com/"},
-    {"name": "Bloomberg", "url": "https://www.bloomberg.com/"},
-    {"name": "Nvidia", "url": "https://www.nvidia.com/"},
-    {"name": "Anthropic", "url": "https://www.anthropic.com/"},
-    {"name": "OpenAI", "url": "https://openai.com/"},
-    {"name": "Think School", "url": "https://thinkschool.org/"}
+    {
+      "name": "Atliq Technologies",
+      "url": "https://www.atliq.com/"
+    },
+    {
+      "name": "Bloomberg",
+      "url": "https://www.bloomberg.com/"
+    },
+    {
+      "name": "Nvidia",
+      "url": "https://www.nvidia.com/"
+    },
+    {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com/"
+    },
+    {
+      "name": "OpenAI",
+      "url": "https://openai.com/"
+    },
+    {
+      "name": "Think School",
+      "url": "https://thinkschool.org/"
+    }
   ],
   "related_posts": [
-    {"slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica", "slug_en": "prompt-production-agentic-engineering", "reason": "Covers agentic engineering fundamentals aligned with this roadmap"},
-    {"slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade", "slug_en": "agentic-engineering-context-guardrails-creativity", "reason": "Expands on context engineering and guardrails touched in weeks 3 and 5"},
-    {"slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison", "slug_en": "engineering-practices-make-coding-agents-work", "reason": "Complements production AI engineering practices"},
-    {"slug_pt": "ia-agentica-progressao-uso-modelos-linguagem-stanford", "slug_en": "agentic-ai-progression-language-model-usage", "reason": "Academic progression of agentic AI parallels this practical roadmap"},
-    {"slug_pt": "conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford", "slug_en": "ai-career-advice-andrew-ng-lawrence-moroney-stanford", "reason": "Career transition into AI engineering"}
+    {
+      "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
+      "slug_en": "prompt-production-agentic-engineering",
+      "reason": "Covers agentic engineering fundamentals aligned with this roadmap"
+    },
+    {
+      "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
+      "slug_en": "agentic-engineering-context-guardrails-creativity",
+      "reason": "Expands on context engineering and guardrails touched in weeks 3 and 5"
+    },
+    {
+      "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
+      "slug_en": "engineering-practices-make-coding-agents-work",
+      "reason": "Complements production AI engineering practices"
+    },
+    {
+      "slug_pt": "ia-agentica-progressao-uso-modelos-linguagem-stanford",
+      "slug_en": "agentic-ai-progression-language-model-usage",
+      "reason": "Academic progression of agentic AI parallels this practical roadmap"
+    },
+    {
+      "slug_pt": "conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford",
+      "slug_en": "ai-career-advice-andrew-ng-lawrence-moroney-stanford",
+      "reason": "Career transition into AI engineering"
+    }
   ]
 }
