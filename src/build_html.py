@@ -168,12 +168,17 @@ def make_html(vid_id, title, subtitle, url, txt_path,
         if prev_was_sep and stripped:
             prev_was_sep = False
             is_short = len(stripped) < 100
-            is_paragraph_start = any(stripped.startswith(p) for p in [
-                'Lenny ', 'Boris ', 'Simon ', 'Steve ', 'Don ', 'Para ', 'Ele ',
-                'Ela ', 'Essa ', 'Uma ', 'O ', 'A ', 'Na ', 'No ', 'Em ', 'Como ',
-                'Isso ', 'Ao ', 'Os ', 'As ', 'Se ', 'Com ', 'Por ', 'Quando ',
-                'Durante ', 'Após ', 'Antes ', 'Nessa ', 'Nesse '
-            ])
+            letters = [c for c in stripped if c.isalpha()]
+            is_all_caps = bool(letters) and all(c.isupper() for c in letters)
+            if is_all_caps:
+                is_paragraph_start = False
+            else:
+                is_paragraph_start = any(stripped.startswith(p) for p in [
+                    'Lenny ', 'Boris ', 'Simon ', 'Steve ', 'Don ', 'Para ', 'Ele ',
+                    'Ela ', 'Essa ', 'Uma ', 'O ', 'A ', 'Na ', 'No ', 'Em ', 'Como ',
+                    'Isso ', 'Ao ', 'Os ', 'As ', 'Se ', 'Com ', 'Por ', 'Quando ',
+                    'Durante ', 'Após ', 'Antes ', 'Nessa ', 'Nesse '
+                ])
             if is_short and not is_paragraph_start:
                 section_id += 1
                 section_slug = f"s{section_id}"

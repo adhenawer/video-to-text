@@ -18,7 +18,7 @@
 <meta name="twitter:title" content="From Prompt to Production: What Is Agentic Engineering?">
 <meta name="twitter:description" content="Welcome to the webinar. Today we are talking about going from idea to production — how to deploy your own custom application in 48 hours. Just a few months ago this subject would have seemed...">
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "Article", "headline": "From Prompt to Production: What Is Agentic Engineering?", "description": "Welcome to the webinar. Today we are talking about going from idea to production — how to deploy your own custom application in 48 hours. Just a few months ago this subject would have seemed...", "author": {"@type": "Person", "name": "Live — Agentic Engineering in Practice"}, "publisher": {"@type": "Organization", "name": "Leituras — Podcasts & Vídeos Traduzidos"}, "inLanguage": "en", "isAccessibleForFree": true, "url": "https://www.youtube.com/live/eYqt8vqeSBw", "articleSection": ["OPENING: FROM IDEA TO PRODUCTION IN 48 HOURS", "THE PARADIGM SHIFT OF THE LAST THREE MONTHS", "TWELVE MONTHS OF EXPONENTIAL CHANGE", "VIBE CODING VS. AGENTIC ENGINEERING", "THE NEW POSSIBILITY FOR NON-DEVELOPERS", "GARBAGE IN, GARBAGE OUT: STILL THE FIRST PRINCIPLE", "DEMO: VIBE CODING A CALORIE COUNTER", "GROUNDING AGENTS IN TECHNICAL CONTEXT", "DRIFT: THE QUIET FAILURE MODE", "WHY AI-GENERATED WORK ALL LOOKS THE SAME", "WHAT AGENTIC ENGINEERING ACTUALLY IS", "MAINTAINABILITY AND TECHNICAL DEBT", "THE EVOLUTION: PROMPT, CONTEXT, AGENTIC GUARDRAILS", "THE FRAMEWORK: TICKETS, AGENTS, AND EVALUATION", "THE CONDUCTOR PATTERN", "INSIDE THE PIPELINE: SCOPE, PLAN, WRITE, VALIDATE", "VISUAL VALIDATION WITH PLAYWRIGHT", "MAKING IT ACCESSIBLE", "WORKSHOPS: MELBOURNE, SYDNEY, AND BEYOND", "CLOSING"]}
+{"@context": "https://schema.org", "@type": "Article", "headline": "From Prompt to Production: What Is Agentic Engineering?", "description": "Welcome to the webinar. Today we are talking about going from idea to production — how to deploy your own custom application in 48 hours. Just a few months ago this subject would have seemed...", "author": {"@type": "Person", "name": "Live — Agentic Engineering in Practice"}, "publisher": {"@type": "Organization", "name": "Leituras — Podcasts & Vídeos Traduzidos"}, "inLanguage": "en", "isAccessibleForFree": true, "url": "https://www.youtube.com/live/eYqt8vqeSBw", "articleSection": ["OPENING: FROM IDEA TO PRODUCTION IN 48 HOURS", "THE PARADIGM SHIFT OF THE LAST THREE MONTHS", "TWELVE MONTHS OF EXPONENTIAL CHANGE", "VIBE CODING VS. AGENTIC ENGINEERING", "THE NEW POSSIBILITY FOR NON-DEVELOPERS", "GARBAGE IN, GARBAGE OUT: STILL THE FIRST PRINCIPLE", "DEMO: VIBE CODING A CALORIE COUNTER", "GROUNDING AGENTS IN TECHNICAL CONTEXT", "DRIFT: THE QUIET FAILURE MODE", "WHY AI-GENERATED WORK ALL LOOKS THE SAME", "WHAT AGENTIC ENGINEERING ACTUALLY IS", "MAINTAINABILITY AND TECHNICAL DEBT", "A CAUTIONARY TALE: AGENTS IN PRODUCTION", "THE EVOLUTION: PROMPT, CONTEXT, AGENTIC GUARDRAILS", "THE FRAMEWORK: TICKETS, AGENTS, AND EVALUATION", "THE CONDUCTOR PATTERN", "INSIDE THE PIPELINE: SCOPE, PLAN, WRITE, VALIDATE", "VISUAL VALIDATION WITH PLAYWRIGHT", "MAKING IT ACCESSIBLE", "WORKSHOPS: MELBOURNE, SYDNEY, AND BEYOND", "CLOSING"]}
 </script>
 <link rel="stylesheet" href="../../css/style.css">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="40c8ae3d-2e6b-4af4-a89b-f578dd3b2315"></script>
@@ -55,14 +55,15 @@
 <li><a href="#s10">WHY AI-GENERATED WORK ALL LOOKS THE SAME</a></li>
 <li><a href="#s11">WHAT AGENTIC ENGINEERING ACTUALLY IS</a></li>
 <li><a href="#s12">MAINTAINABILITY AND TECHNICAL DEBT</a></li>
-<li><a href="#s13">THE EVOLUTION: PROMPT, CONTEXT, AGENTIC GUARDRAILS</a></li>
-<li><a href="#s14">THE FRAMEWORK: TICKETS, AGENTS, AND EVALUATION</a></li>
-<li><a href="#s15">THE CONDUCTOR PATTERN</a></li>
-<li><a href="#s16">INSIDE THE PIPELINE: SCOPE, PLAN, WRITE, VALIDATE</a></li>
-<li><a href="#s17">VISUAL VALIDATION WITH PLAYWRIGHT</a></li>
-<li><a href="#s18">MAKING IT ACCESSIBLE</a></li>
-<li><a href="#s19">WORKSHOPS: MELBOURNE, SYDNEY, AND BEYOND</a></li>
-<li><a href="#s20">CLOSING</a></li>
+<li><a href="#s13">A CAUTIONARY TALE: AGENTS IN PRODUCTION</a></li>
+<li><a href="#s14">THE EVOLUTION: PROMPT, CONTEXT, AGENTIC GUARDRAILS</a></li>
+<li><a href="#s15">THE FRAMEWORK: TICKETS, AGENTS, AND EVALUATION</a></li>
+<li><a href="#s16">THE CONDUCTOR PATTERN</a></li>
+<li><a href="#s17">INSIDE THE PIPELINE: SCOPE, PLAN, WRITE, VALIDATE</a></li>
+<li><a href="#s18">VISUAL VALIDATION WITH PLAYWRIGHT</a></li>
+<li><a href="#s19">MAKING IT ACCESSIBLE</a></li>
+<li><a href="#s20">WORKSHOPS: MELBOURNE, SYDNEY, AND BEYOND</a></li>
+<li><a href="#s21">CLOSING</a></li>
     </ol>
   </nav>
 <section>
@@ -135,26 +136,28 @@
 <p>AI left to itself tends to write single files. A 2,000-line application gets jammed into one file, and without precise guidance it will not refactor. This is classic technical debt — eventually you must come back and clean it up.</p>
 <p>Agents can coast on unrefactored code longer than a human can because they consume far more context. But they also expand the mess faster. At a certain critical mass even the agent can no longer fix it, and a human must spend copious hours untangling the codebase. Research shows AI-coded applications are introducing bugs on average 2.7 times faster than human development.</p>
 <p>Worse, agents often do not fix bugs — they layer workarounds on top, taping new paths around the broken one until the original bug is never resolved. You end up with the appearance that it works.</p>
-<p>A CAUTIONARY TALE: AGENTS IN PRODUCTION</p>
+</section>
+<section>
+<h2 id="s13">A CAUTIONARY TALE: AGENTS IN PRODUCTION</h2>
 <p>One staff member at Reinteractive, a skilled currency trader building trading bots, violated his own principle and let an agent touch production infrastructure. Over a weekend the agent spun up ten times the required number of servers. His bill was set to jump from around $200 to several thousand dollars.</p>
 <p>The classic pattern: the code had a bug and was slow, so the agent’s solution was to add more instances. Money means nothing to the agent unless you constrain it with guardrails.</p>
 </section>
 <section>
-<h2 id="s13">THE EVOLUTION: PROMPT, CONTEXT, AGENTIC GUARDRAILS</h2>
+<h2 id="s14">THE EVOLUTION: PROMPT, CONTEXT, AGENTIC GUARDRAILS</h2>
 <p>First we had prompt engineering — how to write your prompts. Then context engineering — how to ground the agent in the right information without over-feeding it tokens, because tokens cost money depending on the model.</p>
 <p>Now we are moving into agentic guardrails. In Kane’s view, this is the final step in the evolution toward producing enterprise-secure software at the speed of AI. In five years much of this will be baked directly into the models. But you cannot wait five years and miss five years of revenue. Use the tools now — just understand the limitations.</p>
 </section>
 <section>
-<h2 id="s14">THE FRAMEWORK: TICKETS, AGENTS, AND EVALUATION</h2>
+<h2 id="s15">THE FRAMEWORK: TICKETS, AGENTS, AND EVALUATION</h2>
 <p>A basic framework looks like this. First, write tickets: concise statements of what you want done, with enough information — more than you would typically give a human. Each ticket should include the expected outcome and how a human will test it to confirm it is done.</p>
 <p>Then, off to the side, agents work on the build. They check for security, check for maintainability, run the test suites, and verify the work continuously.</p>
 </section>
 <section>
-<h2 id="s15">THE CONDUCTOR PATTERN</h2>
+<h2 id="s16">THE CONDUCTOR PATTERN</h2>
 <p>The principle Kane is using is the conductor pattern — an orchestration approach where a top-level conductor guides a number of smaller, highly specialized agents. His current coding pipeline has about 19 sub-agents, each tailored to a single specialty: one action, one responsibility. Examples include an interface agent, a security agent, a deployment agent, and many more.</p>
 </section>
 <section>
-<h2 id="s16">INSIDE THE PIPELINE: SCOPE, PLAN, WRITE, VALIDATE</h2>
+<h2 id="s17">INSIDE THE PIPELINE: SCOPE, PLAN, WRITE, VALIDATE</h2>
 <p>Key stages of the pipeline:</p>
 <p>Scope validator — takes incoming scope, checks for ambiguities, conflicting data, and fit with the existing codebase. It loops, asking the user questions or grounding itself against the code, and keeps iterating until its confidence score clears something like 90%. Every issue at the beginning of the chain compounds through the 16+ downstream sub-agents if not caught.</p>
 <p>Planner — takes validated scope and produces an implementation plan, grounded in the existing code and the technical documentation of the language. It evaluates and loops until the plan is valid.</p>
@@ -162,24 +165,24 @@
 <p>This is a constant loop pattern of validation. Without it, the pipeline diverges and hallucinates. With it, Kane reports approaching 100% hallucination mitigation — currently around 98%. These are the checks a human developer would normally perform; the difference is the machine does them faster.</p>
 </section>
 <section>
-<h2 id="s17">VISUAL VALIDATION WITH PLAYWRIGHT</h2>
+<h2 id="s18">VISUAL VALIDATION WITH PLAYWRIGHT</h2>
 <p>Another check uses Playwright, a tool that can drive a real browser. Inside what Kane calls his agent cluster, one stage navigates to the website, takes a screenshot, and compares it against the original design to detect divergence. Then it actually exercises the application — clicking the login button, filling in fields, and so on. Any error it finds is sent back to the beginning of the coding flow.</p>
 <p>In some ways this resembles the earliest days of BASIC programming thirty years ago, where code was full of GOTO statements that looped back to line 10 to start again. Agentic engineering is currently at that relatively primitive stage: lots of loops, lots of backtracking. It will become more sophisticated. But this extensive pattern — evaluate scope, write tests, write code, run tests, check security, refactor, visually verify, loop back on any failure — is how you produce enterprise-secure software at the speed of AI today.</p>
 </section>
 <section>
-<h2 id="s18">MAKING IT ACCESSIBLE</h2>
+<h2 id="s19">MAKING IT ACCESSIBLE</h2>
 <p>The question becomes: this is coming from someone with decades of industry experience. Can the same tools be handed to someone who simply wants to build something, without that background?</p>
 <p>Kane is building exactly that — the agent cluster tool. He has been doing 16-hour days for a month on it. To his knowledge, nothing else in the public domain does the entire agentic engineering flow end to end. Other tools handle parts of it; companies are surely working on similar things privately. Reinteractive’s internal evaluations show their cluster beating the alternatives by major percentages.</p>
 <p>The goal is to make it accessible — not humanproof, because there are still points that require human judgment, but approachable enough that with a bit of education and guidance, anyone can use the tooling to build secure, quality, maintainable applications. You cannot simply be dropped in, or you are vibe coding again. But with the right education the barrier drops dramatically.</p>
 </section>
 <section>
-<h2 id="s19">WORKSHOPS: MELBOURNE, SYDNEY, AND BEYOND</h2>
+<h2 id="s20">WORKSHOPS: MELBOURNE, SYDNEY, AND BEYOND</h2>
 <p>Reinteractive is taking this on the road as a series of two-day workshops. The first is in Melbourne, 31 March to 1 April. Sydney follows, with more cities to be announced. The workshops teach exactly the skills discussed in this webinar: how to use agents correctly, the guardrails, and the full flow from idea through to deployment on the web, the App Store, or Google Play.</p>
 <p>The goal is for attendees to leave with the beginnings of a real application — or, if they start small, something they can ship live. The scope runs all the way from initial idea to actual deployment.</p>
 <p>Typical use cases include the brilliant idea you have been sitting on, something you have wondered why no one has built yet, or automating something inside your business without paying $100,000 to implement Salesforce or some other platform that still will not be tailored to your exact needs.</p>
 </section>
 <section>
-<h2 id="s20">CLOSING</h2>
+<h2 id="s21">CLOSING</h2>
 <p>The point of the workshop — and of the broader shift described here — is to empower people to build for themselves. Speed to market is now multiples higher than it was a year ago, and the cost curve is collapsing. The tools are real, the limitations are real, and the guardrails are what separate a shippable product from a liability. Use the tools now, understand what they cannot yet do, and start generating value.</p>
 </section>
 </article>
