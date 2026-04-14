@@ -1,0 +1,234 @@
+{
+  "video_id": "fzrvx_1-9_o",
+  "extracted_at": "2026-04-14",
+  "books": [],
+  "tools": [
+    {
+      "name": "Claude Code",
+      "url": "https://www.anthropic.com/claude-code",
+      "context": "Ferramenta principal do vídeo — CLI de desenvolvimento da Anthropic usada para construir um agente de suporte ao cliente por email."
+    },
+    {
+      "name": "Claude (chatbot)",
+      "url": "https://claude.ai",
+      "context": "Plataforma de chat da Anthropic com modelos Opus, Sonnet e Haiku apresentada no início do vídeo."
+    },
+    {
+      "name": "VS Code",
+      "url": "https://code.visualstudio.com",
+      "context": "IDE usada para configurar Claude Code via extensão durante o desenvolvimento do projeto."
+    },
+    {
+      "name": "Cursor",
+      "url": "https://cursor.com",
+      "context": "Citada como IDE alternativa onde Claude Code também pode ser configurado."
+    },
+    {
+      "name": "PyCharm",
+      "url": "https://www.jetbrains.com/pycharm/",
+      "context": "IDE da JetBrains mencionada como opção de integração para Claude Code."
+    },
+    {
+      "name": "Git",
+      "url": "https://git-scm.com",
+      "context": "Pré-requisito obrigatório no Windows; Claude Code usa Git Bash em segundo plano para executar comandos."
+    },
+    {
+      "name": "LangGraph",
+      "url": "https://www.langchain.com/langgraph",
+      "context": "Framework de orquestração de agentes escolhido para o fluxo do agente de suporte por email."
+    },
+    {
+      "name": "LangChain",
+      "url": "https://www.langchain.com",
+      "context": "Biblioteca usada junto com LangGraph no stack do projeto."
+    },
+    {
+      "name": "FastAPI",
+      "url": "https://fastapi.tiangolo.com",
+      "context": "Framework Python escolhido para a camada de API do agente."
+    },
+    {
+      "name": "Pydantic",
+      "url": "https://docs.pydantic.dev",
+      "context": "Citado no stack do projeto para validação de dados."
+    },
+    {
+      "name": "OpenAI API",
+      "url": "https://platform.openai.com",
+      "context": "Provedor de LLM e embeddings considerado no stack, incluindo embeddings da OpenAI."
+    },
+    {
+      "name": "OpenAI Codex",
+      "url": "https://openai.com/index/introducing-codex/",
+      "context": "Citado como alternativa ao Claude Code entre os copilotos de desenvolvimento."
+    },
+    {
+      "name": "GitHub Copilot",
+      "url": "https://github.com/features/copilot",
+      "context": "Comparado ao Claude Code como copiloto de IDE amplamente usado."
+    },
+    {
+      "name": "GitHub Actions",
+      "url": "https://github.com/features/actions",
+      "context": "Usado para CI/CD — Claude Code pode acionar pipelines que provisionam infraestrutura."
+    },
+    {
+      "name": "GitLab",
+      "url": "https://about.gitlab.com",
+      "context": "Plataforma de integração suportada pelo Claude Code além do GitHub."
+    },
+    {
+      "name": "Jenkins",
+      "url": "https://www.jenkins.io",
+      "context": "Pipeline de CI/CD mencionada como alternativa ao GitHub Actions."
+    },
+    {
+      "name": "Terraform",
+      "url": "https://www.terraform.io",
+      "context": "Ferramenta de infraestrutura como código que Claude Code pode gerar para provisionar AWS."
+    },
+    {
+      "name": "AWS CloudFormation",
+      "url": "https://aws.amazon.com/cloudformation/",
+      "context": "Alternativa de IaC citada para que Claude Code descreva recursos AWS."
+    },
+    {
+      "name": "AWS CDK",
+      "url": "https://aws.amazon.com/cdk/",
+      "context": "Framework IaC da AWS citado como opção para scripts gerados pelo Claude Code."
+    },
+    {
+      "name": "AWS Bedrock",
+      "url": "https://aws.amazon.com/bedrock/",
+      "context": "Opção de acesso a modelos como alternativa à assinatura/API Anthropic."
+    },
+    {
+      "name": "Azure OpenAI",
+      "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service",
+      "context": "Citado como terceiro método de autenticação para Claude Code via credenciais Azure."
+    },
+    {
+      "name": "Gmail API",
+      "url": "https://developers.google.com/gmail/api",
+      "context": "Integrado ao final para envio e leitura de emails pelo agente de suporte."
+    }
+  ],
+  "papers": [],
+  "people": [
+    {
+      "name": "Krishna Naik",
+      "role": "Apresentador do canal e educador em IA",
+      "url": "https://www.youtube.com/@krishnaik06",
+      "context": "Abre o vídeo apresentando o bootcamp e o mentor convidado."
+    },
+    {
+      "name": "Sunny Savita",
+      "role": "Mentor convidado, engenheiro na PwC",
+      "url": "https://www.youtube.com/@SunnySavita10",
+      "context": "Conduz toda a demonstração prática de Claude Code e construção do agente de suporte."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Vibe coding",
+      "url": "https://en.wikipedia.org/wiki/Vibe_coding",
+      "context": "Criticado no vídeo — autor recomenda entender a arquitetura em vez de apenas gerar código com IA."
+    },
+    {
+      "name": "Agentic AI",
+      "url": "https://en.wikipedia.org/wiki/Intelligent_agent",
+      "context": "Categoria do projeto construído: agente autônomo que lê, classifica e responde emails."
+    },
+    {
+      "name": "Retrieval-Augmented Generation (RAG)",
+      "url": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation",
+      "context": "Mencionado no syllabus do bootcamp e como técnica para consultar a base de conhecimento do agente."
+    },
+    {
+      "name": "Infrastructure as Code",
+      "url": "https://en.wikipedia.org/wiki/Infrastructure_as_code",
+      "context": "Padrão recomendado para deploy do projeto via Terraform/CloudFormation/CDK gerados pelo Claude Code."
+    },
+    {
+      "name": "CI/CD",
+      "url": "https://en.wikipedia.org/wiki/CI/CD",
+      "context": "Pipeline onde o Claude Code integra-se para automatizar build e deploy."
+    },
+    {
+      "name": "Vector database",
+      "url": "https://en.wikipedia.org/wiki/Vector_database",
+      "context": "Componente do stack para armazenar embeddings da base de conhecimento de suporte."
+    },
+    {
+      "name": "Microservices",
+      "url": "https://en.wikipedia.org/wiki/Microservices",
+      "context": "Citado como alternativa arquitetural ao monolito ao discutir estrutura de pastas do projeto."
+    }
+  ],
+  "companies": [
+    {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com"
+    },
+    {
+      "name": "PwC",
+      "url": "https://www.pwc.com"
+    },
+    {
+      "name": "OpenAI",
+      "url": "https://openai.com"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com"
+    },
+    {
+      "name": "GitLab",
+      "url": "https://about.gitlab.com"
+    },
+    {
+      "name": "JetBrains",
+      "url": "https://www.jetbrains.com"
+    },
+    {
+      "name": "Amazon Web Services",
+      "url": "https://aws.amazon.com"
+    },
+    {
+      "name": "Microsoft Azure",
+      "url": "https://azure.microsoft.com"
+    },
+    {
+      "name": "Google",
+      "url": "https://developers.google.com"
+    }
+  ],
+  "related_posts": [
+    {
+      "slug_pt": "guia-completo-claude-iniciante-sistema-operacional-ia",
+      "slug_en": "complete-claude-guide-beginner-ai-operating-system",
+      "reason": "Ambos são guias introdutórios de Claude/Claude Code voltados a iniciantes, cobrindo configuração e uso prático."
+    },
+    {
+      "slug_pt": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia",
+      "slug_en": "senior-engineer-demonstrates-spec-driven-ai-development-flow",
+      "reason": "Reforça a mensagem central do vídeo: desenvolver módulo a módulo com especificações claras em vez de um prompt único."
+    },
+    {
+      "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
+      "slug_en": "prompt-production-agentic-engineering",
+      "reason": "Cobre como sair de prompts isolados para um sistema agentico em produção — tema central do projeto de suporte por email."
+    },
+    {
+      "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
+      "slug_en": "agentic-engineering-context-guardrails-creativity",
+      "reason": "Discute contexto e guardrails, diretamente relacionado à crítica do vídeo sobre prompts grandes e falta de arquitetura."
+    },
+    {
+      "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
+      "slug_en": "engineering-practices-make-coding-agents-work",
+      "reason": "Complementa o vídeo ao tratar das práticas de engenharia necessárias para que agentes de código funcionem bem na prática."
+    }
+  ]
+}

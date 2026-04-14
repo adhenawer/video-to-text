@@ -49,9 +49,85 @@ def _slide_html(slide):
     )
 
 
+def _render_references_sidebar(refs, is_ptbr):
+    """Render the references panel as HTML. refs is the parsed references JSON."""
+    if not refs:
+        return ""
+    L = {
+        "title": "📚 Referências" if is_ptbr else "📚 References",
+        "books": "Livros" if is_ptbr else "Books",
+        "tools": "Ferramentas" if is_ptbr else "Tools",
+        "papers": "Artigos / papers" if is_ptbr else "Papers",
+        "people": "Pessoas" if is_ptbr else "People",
+        "concepts": "Conceitos" if is_ptbr else "Concepts",
+        "companies": "Empresas" if is_ptbr else "Companies",
+        "related": "Posts relacionados" if is_ptbr else "Related posts",
+    }
+    parts = [f'<aside class="references-sidebar" aria-label="{L["title"]}">']
+    parts.append(f'<h3>{L["title"]}</h3>')
+
+    def esc(s):
+        if not s: return ""
+        return (s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+                 .replace('"', "&quot;"))
+
+    def render_group(key, label, icon, items, item_fn):
+        if not items: return
+        parts.append(f'<details open><summary>{icon} {label} <span class="ref-count">({len(items)})</span></summary>')
+        parts.append("<ul>")
+        for it in items:
+            parts.append(f"<li>{item_fn(it)}</li>")
+        parts.append("</ul></details>")
+
+    render_group("books", L["books"], "📖", refs.get("books", []), lambda b:
+        f'<a href="{esc(b.get("url",""))}" target="_blank" rel="noopener">{esc(b.get("title",""))}</a>'
+        + (f'<br><small>{esc(b.get("author",""))}</small>' if b.get("author") else ""))
+    render_group("tools", L["tools"], "🛠", refs.get("tools", []), lambda t:
+        f'<a href="{esc(t.get("url",""))}" target="_blank" rel="noopener">{esc(t.get("name",""))}</a>')
+    render_group("papers", L["papers"], "📄", refs.get("papers", []), lambda p:
+        f'<a href="{esc(p.get("url",""))}" target="_blank" rel="noopener">{esc(p.get("title",""))}</a>'
+        + (f'<br><small>{esc(p.get("authors",""))}</small>' if p.get("authors") else ""))
+    render_group("people", L["people"], "👥", refs.get("people", []), lambda p:
+        (f'<a href="{esc(p.get("url",""))}" target="_blank" rel="noopener">{esc(p.get("name",""))}</a>'
+         if p.get("url") else esc(p.get("name", "")))
+        + (f'<br><small>{esc(p.get("role",""))}</small>' if p.get("role") else ""))
+    render_group("concepts", L["concepts"], "🧠", refs.get("concepts", []), lambda c:
+        f'<a href="{esc(c.get("url",""))}" target="_blank" rel="noopener">{esc(c.get("name",""))}</a>'
+        if c.get("url") else esc(c.get("name", "")))
+    render_group("companies", L["companies"], "🏢", refs.get("companies", []), lambda c:
+        f'<a href="{esc(c.get("url",""))}" target="_blank" rel="noopener">{esc(c.get("name",""))}</a>'
+        if c.get("url") else esc(c.get("name", "")))
+
+    # Related posts — pick slug by language
+    related = refs.get("related_posts", [])
+    if related:
+        parts.append(f'<details open><summary>🔗 {L["related"]} <span class="ref-count">({len(related)})</span></summary><ul>')
+        for r in related:
+            target_slug = r.get("slug_pt") if is_ptbr else r.get("slug_en")
+            if not target_slug: continue
+            folder = "pt_br" if is_ptbr else "original"
+            href = f"../{folder}/{target_slug}.html" if is_ptbr else f"../{folder}/{target_slug}.html"
+            parts.append(f'<li><a href="{esc(href)}">{esc(r.get("reason", target_slug))}</a></li>')
+        parts.append('</ul></details>')
+
+    parts.append("</aside>")
+    return "\n".join(parts)
+
+
+def _load_references(vid_id, provider):
+    """Load references JSON for a video. Returns dict or None."""
+    PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    refs_path = os.path.join(PROJECT_DIR, "transcripts", provider, f"{vid_id}.references.json")
+    if not os.path.exists(refs_path):
+        return None
+    with open(refs_path) as f:
+        return json.load(f)
+
+
 def make_html(vid_id, title, subtitle, url, txt_path,
               link_text="🎥 Assistir no YouTube", slides_json_path=None,
-              lang="pt_br", slug=None, pt_slug=None, en_slug=None):
+              lang="pt_br", slug=None, pt_slug=None, en_slug=None,
+              references=None, provider=None):
     """Read translated txt, parse sections, return full HTML string."""
     with open(txt_path, 'r') as f:
         raw = f.read()
@@ -192,6 +268,11 @@ def make_html(vid_id, title, subtitle, url, txt_path,
     pt_href = f"../pt_br/{pt_slug}.html"
     en_href = f"../original/{en_slug}.html"
 
+    # Load and render references sidebar (auto-discovers the JSON if not passed)
+    if references is None and provider:
+        references = _load_references(vid_id, provider)
+    references_sidebar = _render_references_sidebar(references, is_ptbr)
+
     return f'''<!DOCTYPE html>
 <html lang="{html_lang}">
 <head>
@@ -247,6 +328,7 @@ def make_html(vid_id, title, subtitle, url, txt_path,
   </nav>
 {body_html}
 </article>
+{references_sidebar}
 <a href="#" class="back-top" id="backTop">↑</a>
 <div class="resume-banner" id="resumeBanner">
   <span id="resumeText">{resume_text}</span>

@@ -1,0 +1,48 @@
+{
+  "video_id": "2042206218752610343",
+  "extracted_at": "2026-04-14",
+  "books": [],
+  "tools": [
+    {"name": "Claude", "url": "https://claude.com", "context": "the tool I have open more than anything else"},
+    {"name": "Claude Sonnet 4.6", "url": "https://claude.com", "context": "Sonnet is good for everyday tasks"},
+    {"name": "Claude Opus 4.6", "url": "https://claude.com", "context": "Opus is for ambitious work, better at coding"},
+    {"name": "Claude Artifacts", "url": "https://www.anthropic.com/news/artifacts", "context": "opens up an entirely new panel and builds you a fully working thing"},
+    {"name": "Claude Projects", "url": "https://www.anthropic.com/news/projects", "context": "dedicated workspaces inside of Claude that have permanent context"},
+    {"name": "Claude Skills", "url": "https://www.anthropic.com/news/skills", "context": "teach Claude how to do specific tasks in the exact way you want"},
+    {"name": "Claude Connectors", "url": "https://www.anthropic.com/news/claude-connectors", "context": "Claude talks directly to your other tools"},
+    {"name": "Google Calendar", "url": "https://calendar.google.com", "context": "connect to your actual Google Calendar"},
+    {"name": "Gmail", "url": "https://mail.google.com", "context": "draft a response to that email"},
+    {"name": "Google Drive", "url": "https://drive.google.com", "context": "find the proposal I sent last week"},
+    {"name": "Slack", "url": "https://slack.com", "context": "growing list of connectors"},
+    {"name": "GitHub", "url": "https://github.com", "context": "if you have a code base, you can upload things"},
+    {"name": "n8n", "url": "https://n8n.io", "context": "I've connected N8N, which is an automation tool"},
+    {"name": "Gamma", "url": "https://gamma.app", "context": "allows me to create presentations for videos like this"},
+    {"name": "Excalidraw", "url": "https://excalidraw.com", "context": "Excalibur diagram skill for when I want to create diagrams"},
+    {"name": "Lurdy", "url": "https://lurdy.ai", "context": "my SaaS platform, Lurdy, for agent building"}
+  ],
+  "papers": [],
+  "people": [
+    {"name": "Andy Elliott", "role": "high-ticket coaching / ex-car salesman guru", "url": "https://www.instagram.com/officialandyelliott/", "context": "research Andy Elliott's coaching offer, content strategy and sales funnel"},
+    {"name": "Drake Sirach", "role": "host / AI educator, AI Foundations founder", "url": "https://www.youtube.com/@DrakeSirach", "context": "My name is Drake Sirach. I run two businesses, an AI education company"}
+  ],
+  "concepts": [
+    {"name": "Prompt engineering", "url": "https://en.wikipedia.org/wiki/Prompt_engineering", "context": "Claude is only as good as what you give it"},
+    {"name": "GCAO framework (Goal, Context, Action, Output)", "url": "https://en.wikipedia.org/wiki/Prompt_engineering", "context": "goal, context, action, output format framework, otherwise known as GCAO"},
+    {"name": "Retrieval-augmented generation", "url": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation", "context": "projects hold your knowledge, your documents, your client info"},
+    {"name": "Computer vision", "url": "https://en.wikipedia.org/wiki/Computer_vision", "context": "Claude can actually see images"},
+    {"name": "Minimum viable product", "url": "https://en.wikipedia.org/wiki/Minimum_viable_product", "context": "great for building out MVPs"},
+    {"name": "Standard operating procedure", "url": "https://en.wikipedia.org/wiki/Standard_operating_procedure", "context": "it's like an SOP, except it's custom instructions with examples"}
+  ],
+  "companies": [
+    {"name": "Anthropic", "url": "https://www.anthropic.com"},
+    {"name": "AI Foundations", "url": "https://www.skool.com/ai-foundations"}
+  ],
+  "related_posts": [
+    {"slug_pt": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills", "slug_en": "why-we-stopped-building-agents-started-building-skills", "reason": "Deep dive on Claude Skills, the exact feature demonstrated for proposal automation"},
+    {"slug_pt": "obsidian-claude-code-pensamento", "slug_en": "obsidian-claude-code-second-brain-amplified", "reason": "Companion workflow for building a personal AI operating system with Claude"},
+    {"slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade", "slug_en": "agentic-engineering-context-guardrails-creativity", "reason": "Context engineering and guardrails, mirroring custom instructions and project context layers"},
+    {"slug_pt": "claude-code-leak-what-weve-learned-so-far", "slug_en": "claude-code-leak-we-have-learned-so-far", "reason": "More insight into how Claude works under the hood for power users"},
+    {"slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica", "slug_en": "prompt-production-agentic-engineering", "reason": "From prompting basics to production — natural progression from this beginner guide"},
+    {"slug_pt": "roteiro-engenheiro-ia-para-desenvolvedores-de-software", "slug_en": "ai-engineer-roadmap-software-developers", "reason": "Broader AI skill roadmap for those going beyond this beginner tutorial"}
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "video_id": "6WaeGfLnRvc",
+  "extracted_at": "2026-04-14",
+  "books": [
+    {
+      "title": "Leadership and Self-Deception",
+      "author": "The Arbinger Institute",
+      "url": "https://www.amazon.com/s?k=Leadership+and+Self-Deception+Arbinger+Institute",
+      "context": "Ethan recommends this book — taught him to see others not as obstacles to what you want but as human beings trying to do their best, which changes how you negotiate."
+    },
+    {
+      "title": "Extreme Ownership",
+      "author": "Jocko Willink",
+      "url": "https://www.amazon.com/s?k=Extreme+Ownership+Jocko+Willink",
+      "context": "Referenced when urging engineers to take control of their careers instead of playing victim to a bad manager."
+    },
+    {
+      "title": "What Got You Here Won't Get You There",
+      "author": "Marshall Goldsmith",
+      "url": "https://www.amazon.com/s?k=What+Got+You+Here+Won%27t+Get+You+There+Marshall+Goldsmith",
+      "context": "Classic book on leveling up: the skills that got you to one level won't take you to the next — you must let go of hard skills and learn to delegate and communicate."
+    },
+    {
+      "title": "So Good They Can't Ignore You",
+      "author": "Cal Newport",
+      "url": "https://www.amazon.com/s?k=So+Good+They+Can%27t+Ignore+You+Cal+Newport",
+      "context": "Ethan notes the irony — Newport's thesis is about technical excellence, but Newport himself has the social skills to teach at Princeton and write bestsellers. Technical skill alone is never enough."
+    }
+  ],
+  "tools": [],
+  "papers": [],
+  "people": [
+    {
+      "name": "Ethan Evans",
+      "role": "Former Amazon VP; executive coach and newsletter author",
+      "url": "https://www.linkedin.com/in/ethanevansvp/",
+      "context": "Guest of the episode — 15 years at Amazon, retired VP, now coaches engineers and managers on career navigation and corporate politics."
+    },
+    {
+      "name": "Ryan Peterman",
+      "role": "Software engineer and host of The Developing Dev podcast/newsletter",
+      "url": "https://www.linkedin.com/in/ryan-peterman/",
+      "context": "Interviewer — former Meta engineer who asks Ethan to go deep on transparency about reorgs, firings, and promotions."
+    },
+    {
+      "name": "Jeff Bezos",
+      "role": "Founder and former CEO of Amazon",
+      "url": "https://en.wikipedia.org/wiki/Jeff_Bezos",
+      "context": "Cited in story about an entry-level engineer who emailed Bezos to get his Cloud Drive proposal heard at an invite-only engineering poster session."
+    },
+    {
+      "name": "Andy Jassy",
+      "role": "CEO of Amazon (former CEO of AWS)",
+      "url": "https://en.wikipedia.org/wiki/Andy_Jassy",
+      "context": "Ethan cites Andy as one of his hardest managers — quoted on absolving AWS principal engineers from mentoring duties and accepting that some specialists have unique leverage."
+    },
+    {
+      "name": "Mike Tyson",
+      "role": "Former heavyweight boxing champion",
+      "url": "https://en.wikipedia.org/wiki/Mike_Tyson",
+      "context": "Quoted — 'Everyone has a plan until they get punched in the face' — applied to how org plans survive contact with reality."
+    },
+    {
+      "name": "Jocko Willink",
+      "role": "Former Navy SEAL officer; author and leadership speaker",
+      "url": "https://en.wikipedia.org/wiki/Jocko_Willink",
+      "context": "Cited as author of Extreme Ownership when Ethan urges engineers to take agency over their careers."
+    },
+    {
+      "name": "Cal Newport",
+      "role": "Computer science professor at Georgetown and author",
+      "url": "https://en.wikipedia.org/wiki/Cal_Newport",
+      "context": "Author of So Good They Can't Ignore You — cited as a model of combining technical depth with the social skills to communicate it. Ethan notes Newport teaches at Princeton (actually Georgetown)."
+    },
+    {
+      "name": "Marshall Goldsmith",
+      "role": "Executive coach and leadership author",
+      "url": "https://en.wikipedia.org/wiki/Marshall_Goldsmith",
+      "context": "Author of the classic What Got You Here Won't Get You There on the skill shifts required at each career level."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Empire building",
+      "url": "https://en.wikipedia.org/wiki/Empire_building",
+      "context": "Leaders pursuing raw headcount over impact because headcount is easier to measure than impact — rewarded by written thresholds like needing 80–90 reports to make director at Amazon."
+    },
+    {
+      "name": "Constructive termination (constructive dismissal)",
+      "url": "https://en.wikipedia.org/wiki/Constructive_dismissal",
+      "context": "Legal concept Ethan navigates around when having a 'maybe this isn't working out' talk — if you mention firing, any future action becomes evidence you'd already decided, creating legal risk."
+    },
+    {
+      "name": "Window seat (madogiwazoku)",
+      "url": "https://en.wikipedia.org/wiki/Madogiwa-zoku",
+      "context": "Japanese corporate concept — being given a window seat signals exile to irrelevance. Ethan uses it to explain how leaders are managed out by being given 'other' / low-status scope."
+    },
+    {
+      "name": "Plausible deniability",
+      "url": "https://en.wikipedia.org/wiki/Plausible_deniability",
+      "context": "Political term Ethan applies to slippery coworkers who keep unethical behavior ambiguous enough to deny."
+    },
+    {
+      "name": "Performance improvement plan (PIP)",
+      "url": "https://en.wikipedia.org/wiki/Performance_improvement_plan",
+      "context": "Ethan's blunt coaching — by the time a manager files a formal PIP, they've already exhausted other options and just want you gone; survival is very unlikely."
+    },
+    {
+      "name": "Executive presence",
+      "url": "https://en.wikipedia.org/wiki/Executive_presence",
+      "context": "Ethan teaches this as a skill — notes that Darth Vader and Palpatine had it in spades, so the skill itself is morally neutral and motive is what matters."
+    },
+    {
+      "name": "Magnificent Seven (stocks)",
+      "url": "https://en.wikipedia.org/wiki/Magnificent_Seven_(stocks)",
+      "context": "Referenced when noting that the largest US tech companies are now mostly flat in headcount, fueling cannibalistic scope grabs instead of new hiring."
+    },
+    {
+      "name": "Emotional intelligence (EQ)",
+      "url": "https://en.wikipedia.org/wiki/Emotional_intelligence",
+      "context": "Ethan paraphrases the common saying: IQ without EQ is a waste of IQ — engineering career progress depends on interpersonal skill as much as technical skill."
+    }
+  ],
+  "companies": [
+    {"name": "Amazon", "url": "https://www.amazon.com"},
+    {"name": "AWS", "url": "https://aws.amazon.com"},
+    {"name": "Amazon Prime Video", "url": "https://www.primevideo.com"},
+    {"name": "Amazon Kindle", "url": "https://www.amazon.com/kindle"},
+    {"name": "Amazon Fire TV", "url": "https://www.amazon.com/firetv"},
+    {"name": "Amazon S3", "url": "https://aws.amazon.com/s3/"},
+    {"name": "Amazon Cloud Drive", "url": "https://www.amazon.com/clouddrive"},
+    {"name": "Dropbox", "url": "https://www.dropbox.com"},
+    {"name": "Box", "url": "https://www.box.com"},
+    {"name": "Office Depot", "url": "https://www.officedepot.com"},
+    {"name": "Google", "url": "https://www.google.com"},
+    {"name": "Walmart", "url": "https://www.walmart.com"}
+  ],
+  "related_posts": [
+    {
+      "slug_pt": "conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford",
+      "slug_en": "ai-career-advice-andrew-ng-lawrence-moroney-stanford",
+      "reason": "Both are deep-dive career advice pieces from senior operators — this episode complements Andrew Ng and Lawrence Moroney's technical career guidance with the corporate-politics layer that actually controls promotion and scope."
+    },
+    {
+      "slug_pt": "roteiro-engenheiro-ia-para-desenvolvedores-de-software",
+      "slug_en": "ai-engineer-roadmap-software-developers",
+      "reason": "The roadmap focuses on technical skills to rise as an engineer; Ethan's transparency on reorgs, allies, and promo packets covers the non-technical skills that decide whether that roadmap actually lands you a promotion."
+    },
+    {
+      "slug_pt": "financas-comportamentais-robert-shiller-yale",
+      "slug_en": "behavioral-finance-psychology-manipulation-integrity-markets",
+      "reason": "Shiller's behavioral finance and Ethan's 'polite fiction' / narrative-over-facts insight share the same underlying thesis — humans make emotional decisions and then rationalize them, which shapes both markets and corporate politics."
+    }
+  ]
+}

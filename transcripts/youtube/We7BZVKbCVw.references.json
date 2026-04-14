@@ -1,0 +1,209 @@
+{
+  "video_id": "We7BZVKbCVw",
+  "extracted_at": "2026-04-14",
+  "books": [
+    {
+      "title": "Functional Programming in Scala",
+      "author": "Paul Chiusano & Rúnar Bjarnason",
+      "url": "https://www.amazon.com/s?k=functional+programming+in+scala+chiusano",
+      "context": "Single best technical book I've ever read"
+    },
+    {
+      "title": "Accelerando",
+      "author": "Charles Stross",
+      "url": "https://www.amazon.com/s?k=accelerando+stross",
+      "context": "Captures the essence of this moment more than any other book"
+    },
+    {
+      "title": "The Wandering Earth",
+      "author": "Cixin Liu",
+      "url": "https://www.amazon.com/s?k=wandering+earth+cixin+liu",
+      "context": "Short story collection; liked even more than Three Body Problem"
+    },
+    {
+      "title": "The Three-Body Problem",
+      "author": "Cixin Liu",
+      "url": "https://www.amazon.com/s?k=three+body+problem+cixin+liu",
+      "context": "Classic sci-fi reference"
+    },
+    {
+      "title": "A Fire Upon the Deep",
+      "author": "Vernor Vinge",
+      "url": "https://www.amazon.com/s?k=fire+upon+the+deep+vinge",
+      "context": "Recommended for AI/AGI perspective"
+    },
+    {
+      "title": "A Deepness in the Sky",
+      "author": "Vernor Vinge",
+      "url": "https://www.amazon.com/s?k=deepness+in+the+sky+vinge",
+      "context": "Companion to A Fire Upon the Deep"
+    },
+    {
+      "title": "Programming TypeScript",
+      "author": "Boris Cherny",
+      "url": "https://www.amazon.com/s?k=programming+typescript+boris+cherny",
+      "context": "Book written by the guest"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Claude Code",
+      "url": "https://claude.com/claude-code",
+      "context": "Anthropic's CLI coding agent — the product Boris runs"
+    },
+    {
+      "name": "Cursor",
+      "url": "https://cursor.com",
+      "context": "IDE Boris briefly joined before returning to Anthropic"
+    },
+    {
+      "name": "MCP (Model Context Protocol)",
+      "url": "https://modelcontextprotocol.io",
+      "context": "Protocol built by Anthropic Labs team"
+    },
+    {
+      "name": "Claude Desktop app",
+      "url": "https://claude.com/download",
+      "context": "Desktop client with code + co-work tabs"
+    },
+    {
+      "name": "Claude iOS / Android app",
+      "url": "https://claude.com/download",
+      "context": "Mobile apps where Boris runs third of his coding sessions"
+    },
+    {
+      "name": "Co-work (Anthropic)",
+      "url": "https://claude.com",
+      "context": "Agentic browser-using product built in 10 days on Claude Code"
+    },
+    {
+      "name": "OpenAI Codex",
+      "url": "https://openai.com/codex",
+      "context": "Competing coding agent; briefly discussed"
+    },
+    {
+      "name": "Node.js",
+      "url": "https://nodejs.org",
+      "context": "Brendan installed Node to run Claude Code in terminal"
+    },
+    {
+      "name": "Threads",
+      "url": "https://www.threads.net",
+      "context": "Boris used Threads before switching to Twitter/X"
+    }
+  ],
+  "papers": [
+    {
+      "title": "Scaling Laws for Neural Language Models",
+      "authors": "Kaplan et al.",
+      "url": "https://arxiv.org/abs/2001.08361",
+      "context": "Anthropic co-founders were first three authors"
+    },
+    {
+      "title": "The Bitter Lesson",
+      "authors": "Rich Sutton",
+      "url": "http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
+      "context": "General model always outperforms specific model"
+    }
+  ],
+  "people": [
+    {
+      "name": "Boris Cherny",
+      "role": "Head of Claude Code, Anthropic",
+      "url": "https://twitter.com/bcherny",
+      "context": "Guest; built Claude Code"
+    },
+    {
+      "name": "Mike Krieger",
+      "role": "CPO Anthropic, co-founder Instagram",
+      "url": "https://en.wikipedia.org/wiki/Mike_Krieger",
+      "context": "Co-kicked off the Anthropic Labs team"
+    },
+    {
+      "name": "Ben Mann",
+      "role": "Anthropic co-founder",
+      "url": "https://en.wikipedia.org/wiki/Anthropic",
+      "context": "Suggested podcast topics; early Claude Code supporter"
+    },
+    {
+      "name": "Chris Olah",
+      "role": "Mechanistic interpretability pioneer (Anthropic)",
+      "url": "https://colah.github.io/",
+      "context": "Boris recommends having him on a podcast"
+    },
+    {
+      "name": "Rich Sutton",
+      "role": "AI researcher",
+      "url": "http://www.incompleteideas.net/",
+      "context": "Author of The Bitter Lesson"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Jevons paradox",
+      "url": "https://en.wikipedia.org/wiki/Jevons_paradox",
+      "context": "As efficiency grows, demand grows faster — applied to engineering hiring"
+    },
+    {
+      "name": "Mechanistic interpretability",
+      "url": "https://transformer-circuits.pub/",
+      "context": "Understanding what neurons in models do"
+    },
+    {
+      "name": "Superposition (neural networks)",
+      "url": "https://transformer-circuits.pub/2022/toy_model/index.html",
+      "context": "A single neuron may encode multiple concepts together"
+    },
+    {
+      "name": "Gutenberg printing press",
+      "url": "https://en.wikipedia.org/wiki/Printing_press",
+      "context": "Historical analogy Boris uses for AI democratization"
+    },
+    {
+      "name": "Latent demand",
+      "url": "https://en.wikipedia.org/wiki/Latent_demand",
+      "context": "Product principle — build where users are abusing a product for new use cases"
+    }
+  ],
+  "companies": [
+    {"name": "Anthropic", "url": "https://anthropic.com"},
+    {"name": "Cursor", "url": "https://cursor.com"},
+    {"name": "Meta", "url": "https://about.meta.com/"},
+    {"name": "Instagram", "url": "https://instagram.com"},
+    {"name": "OpenAI", "url": "https://openai.com"},
+    {"name": "Spotify", "url": "https://spotify.com"},
+    {"name": "Netflix", "url": "https://netflix.com"}
+  ],
+  "related_posts": [
+    {
+      "slug_pt": "claude-code-leak-what-weve-learned-so-far",
+      "slug_en": "claude-code-leak-we-have-learned-so-far",
+      "reason": "Deep dive on Claude Code internals (leaked source)"
+    },
+    {
+      "slug_pt": "estado-da-ia-2026-ponto-de-inflexao-simon-willison",
+      "slug_en": "state-ai-2026",
+      "reason": "Simon Willison on the same AI inflection moment"
+    },
+    {
+      "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
+      "slug_en": "engineering-practices-make-coding-agents-work",
+      "reason": "Practical engineering patterns for coding agents"
+    },
+    {
+      "slug_pt": "de-ides-para-agentes-de-ia-steve-yegge",
+      "slug_en": "ides-ai-agents",
+      "reason": "From IDEs to agents — same transition Boris describes"
+    },
+    {
+      "slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
+      "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code",
+      "reason": "Multi-agent coding beyond Claude Code"
+    },
+    {
+      "slug_pt": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills",
+      "slug_en": "why-we-stopped-building-agents-started-building-skills",
+      "reason": "Anthropic's skills paradigm — connects to Boris's work"
+    }
+  ]
+}

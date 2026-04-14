@@ -1,0 +1,190 @@
+{
+  "video_id": "2041884593087803841",
+  "extracted_at": "2026-04-14",
+  "books": [],
+  "tools": [
+    {
+      "name": "ChatGPT",
+      "url": "https://chat.openai.com",
+      "context": "Cited as widely known conversational interface powered by LLMs."
+    }
+  ],
+  "papers": [
+    {
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "authors": "Shunyu Yao et al.",
+      "url": "https://arxiv.org/abs/2210.03629",
+      "context": "Foundational paper for the ReAct (reason + action) pattern discussed as core of agentic LLMs."
+    },
+    {
+      "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+      "authors": "Jason Wei et al.",
+      "url": "https://arxiv.org/abs/2201.11903",
+      "context": "Referenced when explaining giving models time to think via CoT prompting."
+    },
+    {
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "authors": "Patrick Lewis et al.",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "context": "Foundational RAG paper referenced when covering retrieval augmented generation to reduce hallucination."
+    },
+    {
+      "title": "Training Language Models to Follow Instructions with Human Feedback",
+      "authors": "Long Ouyang et al.",
+      "url": "https://arxiv.org/abs/2203.02155",
+      "context": "Referenced when discussing instruction tuning and RLHF during post-training."
+    }
+  ],
+  "people": [
+    {
+      "name": "Petra Wolf",
+      "role": "Moderator (Stanford Online)",
+      "url": "https://online.stanford.edu",
+      "context": "Moderates the Q&A session with the speaker."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Large Language Model",
+      "url": "https://en.wikipedia.org/wiki/Large_language_model",
+      "context": "Core subject: probabilistic next-token predictor trained on large corpora."
+    },
+    {
+      "name": "Pre-training",
+      "url": "https://en.wikipedia.org/wiki/Large_language_model#Pre-training",
+      "context": "First stage of LLM training on large text corpora."
+    },
+    {
+      "name": "Instruction Tuning",
+      "url": "https://en.wikipedia.org/wiki/Instruction_tuning",
+      "context": "Post-training phase using instruction-response pairs."
+    },
+    {
+      "name": "Reinforcement Learning from Human Feedback",
+      "url": "https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback",
+      "context": "Human-preference alignment via reward signals."
+    },
+    {
+      "name": "Prompt Engineering",
+      "url": "https://en.wikipedia.org/wiki/Prompt_engineering",
+      "context": "Best practices for preparing model inputs."
+    },
+    {
+      "name": "Few-Shot Learning",
+      "url": "https://en.wikipedia.org/wiki/Few-shot_learning",
+      "context": "Providing example input/output pairs in the prompt."
+    },
+    {
+      "name": "Chain-of-Thought Prompting",
+      "url": "https://en.wikipedia.org/wiki/Prompt_engineering#Chain-of-thought",
+      "context": "Giving the model time to think through steps."
+    },
+    {
+      "name": "Hallucination",
+      "url": "https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)",
+      "context": "Key limitation of LLMs generating incorrect information."
+    },
+    {
+      "name": "Retrieval-Augmented Generation",
+      "url": "https://en.wikipedia.org/wiki/Retrieval-augmented_generation",
+      "context": "Indexing text into embeddings and retrieving top-k chunks for grounded answers."
+    },
+    {
+      "name": "Vector Database",
+      "url": "https://en.wikipedia.org/wiki/Vector_database",
+      "context": "Storage for embeddings used in nearest-neighbor retrieval."
+    },
+    {
+      "name": "Word Embedding",
+      "url": "https://en.wikipedia.org/wiki/Word_embedding",
+      "context": "Embedding space used to represent text chunks."
+    },
+    {
+      "name": "Knowledge Graph",
+      "url": "https://en.wikipedia.org/wiki/Knowledge_graph",
+      "context": "Alternative retrieval method (GraphRAG)."
+    },
+    {
+      "name": "Function Calling",
+      "url": "https://en.wikipedia.org/wiki/Large_language_model#Tool_use",
+      "context": "Tool usage via model-generated API calls."
+    },
+    {
+      "name": "ReAct",
+      "url": "https://arxiv.org/abs/2210.03629",
+      "context": "Reasoning + action pattern central to agentic LLMs."
+    },
+    {
+      "name": "LLM-as-a-Judge",
+      "url": "https://arxiv.org/abs/2306.05685",
+      "context": "Method of using an LLM to evaluate model-generated outputs."
+    },
+    {
+      "name": "Multi-Agent System",
+      "url": "https://en.wikipedia.org/wiki/Multi-agent_system",
+      "context": "Design pattern splitting tasks across specialized agents."
+    },
+    {
+      "name": "AI Agent",
+      "url": "https://en.wikipedia.org/wiki/Intelligent_agent",
+      "context": "Agentic language model interacting with an environment."
+    },
+    {
+      "name": "Fine-Tuning",
+      "url": "https://en.wikipedia.org/wiki/Fine-tuning_(deep_learning)",
+      "context": "Further training of LLMs on task-specific data."
+    },
+    {
+      "name": "Guardrails",
+      "url": "https://en.wikipedia.org/wiki/AI_safety",
+      "context": "Safety filters on model inputs/outputs."
+    }
+  ],
+  "companies": [
+    {
+      "name": "Stanford Online",
+      "url": "https://online.stanford.edu"
+    },
+    {
+      "name": "Stanford University",
+      "url": "https://www.stanford.edu"
+    }
+  ],
+  "related_posts": [
+    {
+      "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
+      "slug_en": "prompt-production-agentic-engineering",
+      "reason": "Covers progression from prompting to agentic systems, same conceptual arc."
+    },
+    {
+      "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
+      "slug_en": "agentic-engineering-context-guardrails-creativity",
+      "reason": "Shares focus on context, guardrails and evaluation in agentic LLM design."
+    },
+    {
+      "slug_pt": "fluxos-de-trabalho-agenticos-don-syme",
+      "slug_en": "agentic-workflows-don-syme",
+      "reason": "Discusses agentic workflow design patterns similar to planning/reflection/tool-use here."
+    },
+    {
+      "slug_pt": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills",
+      "slug_en": "why-we-stopped-building-agents-started-building-skills",
+      "reason": "Complementary perspective on agent design patterns and alternatives."
+    },
+    {
+      "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
+      "slug_en": "engineering-practices-make-coding-agents-work",
+      "reason": "Engineering practices (tracing, evals) for coding agents match talk's recommendations."
+    },
+    {
+      "slug_pt": "roteiro-engenheiro-ia-para-desenvolvedores-de-software",
+      "slug_en": "ai-engineer-roadmap-software-developers",
+      "reason": "Entry-level roadmap aligns with the 'start simple, iterate' advice given."
+    },
+    {
+      "slug_pt": "conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford",
+      "slug_en": "ai-career-advice-andrew-ng-lawrence-moroney-stanford",
+      "reason": "Also a Stanford Online session providing foundational AI guidance."
+    }
+  ]
+}

@@ -1,0 +1,311 @@
+{
+  "video_id": "2042725242741588208",
+  "extracted_at": "2026-04-14",
+  "books": [
+    {
+      "title": "The Theory of Moral Sentiments",
+      "author": "Adam Smith",
+      "url": "https://www.amazon.com/s?k=Theory+of+Moral+Sentiments+Adam+Smith",
+      "context": "Livro de 1759 sobre psicologia e moralidade; Shiller cita o conceito de 'desejo por merecer elogios' (praiseworthiness)"
+    },
+    {
+      "title": "The Wealth of Nations",
+      "author": "Adam Smith",
+      "url": "https://www.amazon.com/s?k=Wealth+of+Nations+Adam+Smith",
+      "context": "Livro de 1776, primeiro tratado real de economia, citado como contraste com a obra psicológica de Smith"
+    },
+    {
+      "title": "Diagnostic and Statistical Manual of Mental Disorders, Edition 4 (DSM-IV)",
+      "author": "American Psychiatric Association",
+      "url": "https://www.amazon.com/s?k=DSM-IV+American+Psychiatric+Association",
+      "context": "Usado para discutir transtornos de personalidade como APD (psicopatia/sociopatia) em 3% da população masculina"
+    },
+    {
+      "title": "Searching for a Corporate Savior: The Irrational Quest for Charismatic CEOs",
+      "author": "Rakesh Khurana",
+      "url": "https://www.amazon.com/s?k=Rakesh+Khurana+Searching+for+Corporate+Savior",
+      "context": "Livro sobre a tendência de empresas buscarem CEOs-gênios como manipulação do mercado acionário"
+    },
+    {
+      "title": "Fooled by Randomness",
+      "author": "Nassim Nicholas Taleb",
+      "url": "https://www.amazon.com/s?k=Fooled+by+Randomness+Nassim+Taleb",
+      "context": "Shiller recomenda; argumenta que a maioria dos eventos de vida é acaso, não genialidade"
+    },
+    {
+      "title": "The Economics of Integrity",
+      "author": "Anna Bernasek",
+      "url": "https://www.amazon.com/s?k=Economics+of+Integrity+Anna+Bernasek",
+      "context": "Livro de jornalista sobre como integridade pessoal sustenta o sistema econômico; exemplo do leite seguro"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Ethnologue",
+      "url": "https://www.ethnologue.com/",
+      "context": "Autoridade mundial em línguas — usada no experimento de overconfidence (6.909 línguas no mundo)"
+    },
+    {
+      "name": "U.S. Census World Population Clock",
+      "url": "https://www.census.gov/popclock/",
+      "context": "Usado no experimento de intervalo de confiança de 90% sobre população mundial"
+    }
+  ],
+  "papers": [
+    {
+      "title": "Prospect Theory: An Analysis of Decision under Risk",
+      "authors": "Daniel Kahneman, Amos Tversky",
+      "url": "https://scholar.google.com/scholar?q=Prospect+Theory+Kahneman+Tversky+Econometrica+1979",
+      "context": "Artigo fundador da Econometrica (~30 anos atrás na palestra) que introduziu função de valor e função de ponderação"
+    },
+    {
+      "title": "Creating Shared Value",
+      "authors": "Michael Porter, Mark Kramer",
+      "url": "https://scholar.google.com/scholar?q=Porter+Kramer+Creating+Shared+Value+Harvard+Business+Review",
+      "context": "Artigo na Harvard Business Review sobre gestores criarem valor compartilhado com a sociedade"
+    }
+  ],
+  "people": [
+    {
+      "name": "Adam Smith",
+      "role": "Economista e filósofo moral escocês, figura central do pensamento econômico",
+      "url": "https://en.wikipedia.org/wiki/Adam_Smith",
+      "context": "Professor de filosofia moral em 1759; obras centrais da palestra"
+    },
+    {
+      "name": "Daniel Kahneman",
+      "role": "Psicólogo, Nobel de Economia, co-criador da Prospect Theory",
+      "url": "https://en.wikipedia.org/wiki/Daniel_Kahneman",
+      "context": "Co-inventor da prospect theory, weighting function, anchoring e representativeness heuristic"
+    },
+    {
+      "name": "Amos Tversky",
+      "role": "Psicólogo cognitivo israelense, co-criador da Prospect Theory",
+      "url": "https://en.wikipedia.org/wiki/Amos_Tversky",
+      "context": "Co-inventor da prospect theory junto a Kahneman"
+    },
+    {
+      "name": "Gerd Gigerenzer",
+      "role": "Psicólogo alemão, diretor do Max Planck Institute em Berlim",
+      "url": "https://en.wikipedia.org/wiki/Gerd_Gigerenzer",
+      "context": "Crítico de Kahneman-Tversky, argumenta que erros podem ser treinados"
+    },
+    {
+      "name": "Nicholas Barberis",
+      "role": "Professor de Finanças em Yale SOM, pesquisador de finanças comportamentais",
+      "url": "https://en.wikipedia.org/wiki/Nicholas_Barberis",
+      "context": "Fez seminário em Yale testando estudantes da Caltech em erros de probabilidade"
+    },
+    {
+      "name": "Leon Festinger",
+      "role": "Psicólogo social, criador da teoria da dissonância cognitiva",
+      "url": "https://en.wikipedia.org/wiki/Leon_Festinger",
+      "context": "Cunhou o termo dissonância cognitiva nos anos 1950; Shiller o conheceu pessoalmente"
+    },
+    {
+      "name": "William Goetzmann",
+      "role": "Professor na Yale School of Management",
+      "url": "https://en.wikipedia.org/wiki/William_N._Goetzmann",
+      "context": "Pesquisou investidores que mantêm fundos mútuos ruins por dissonância cognitiva"
+    },
+    {
+      "name": "Sendhil Mullainathan",
+      "role": "Professor de Economia em Harvard (depois University of Chicago)",
+      "url": "https://en.wikipedia.org/wiki/Sendhil_Mullainathan",
+      "context": "Estudo com atores procurando assessores financeiros — maioria não desafiou crenças"
+    },
+    {
+      "name": "Rakesh Khurana",
+      "role": "Professor na Harvard Business School",
+      "url": "https://en.wikipedia.org/wiki/Rakesh_Khurana",
+      "context": "Autor do livro sobre busca irracional por CEOs carismáticos"
+    },
+    {
+      "name": "Nassim Nicholas Taleb",
+      "role": "Ensaísta e ex-trader libanês-americano",
+      "url": "https://en.wikipedia.org/wiki/Nassim_Nicholas_Taleb",
+      "context": "Autor de Fooled by Randomness, recomendado por Shiller"
+    },
+    {
+      "name": "Bruce Wasserstein",
+      "role": "Banqueiro de investimentos, fundador da Wasserstein Perella, CEO da Lazard",
+      "url": "https://en.wikipedia.org/wiki/Bruce_Wasserstein",
+      "context": "Amigo de graduação de Shiller em Michigan; exemplo de 'meu amigo é gênio'"
+    },
+    {
+      "name": "Émile Durkheim",
+      "role": "Sociólogo francês, um dos fundadores da disciplina",
+      "url": "https://en.wikipedia.org/wiki/%C3%89mile_Durkheim",
+      "context": "Cunhou 'consciência coletiva' — útil para explicar comportamento de manada"
+    },
+    {
+      "name": "Michael Porter",
+      "role": "Professor na Harvard Business School, referência em estratégia",
+      "url": "https://en.wikipedia.org/wiki/Michael_Porter",
+      "context": "Co-autor do artigo 'Shared Value' na HBR"
+    },
+    {
+      "name": "Mark Kramer",
+      "role": "Co-fundador da FSG, consultoria de impacto social",
+      "url": "https://en.wikipedia.org/wiki/Mark_Kramer_(consultant)",
+      "context": "Co-autor com Porter do artigo 'Creating Shared Value'"
+    },
+    {
+      "name": "Anna Bernasek",
+      "role": "Jornalista econômica",
+      "url": "https://en.wikipedia.org/wiki/Anna_Bernasek",
+      "context": "Autora de 'The Economics of Integrity'"
+    },
+    {
+      "name": "Frank Fabozzi",
+      "role": "Professor de Finanças, autor de livros-texto",
+      "url": "https://en.wikipedia.org/wiki/Frank_J._Fabozzi",
+      "context": "Autor do livro-texto do curso — Shiller nota que não enfatiza comportamento humano"
+    },
+    {
+      "name": "John F. Kennedy",
+      "role": "35º Presidente dos Estados Unidos",
+      "url": "https://en.wikipedia.org/wiki/John_F._Kennedy",
+      "context": "Exemplo de 'gênio presumido' — Shiller questiona em retrospecto"
+    },
+    {
+      "name": "Gary Gorton",
+      "role": "Professor de Finanças em Yale",
+      "url": "https://en.wikipedia.org/wiki/Gary_Gorton",
+      "context": "Mencionado brevemente sobre seminário de erros financeiros"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Behavioral Finance",
+      "url": "https://en.wikipedia.org/wiki/Behavioral_economics",
+      "context": "Revolução dos últimos 20-30 anos trazendo psicologia à economia e finanças"
+    },
+    {
+      "name": "Prospect Theory",
+      "url": "https://en.wikipedia.org/wiki/Prospect_theory",
+      "context": "Teoria de Kahneman-Tversky sobre decisões sob incerteza, central à palestra"
+    },
+    {
+      "name": "Loss Aversion",
+      "url": "https://en.wikipedia.org/wiki/Loss_aversion",
+      "context": "Implícito na função de valor côncava para cima em perdas com 'kink' na origem"
+    },
+    {
+      "name": "Reference Point",
+      "url": "https://en.wikipedia.org/wiki/Reference_dependence",
+      "context": "Ponto zero psicológico a partir do qual ganhos e perdas são avaliados"
+    },
+    {
+      "name": "Framing Effect",
+      "url": "https://en.wikipedia.org/wiki/Framing_effect_(psychology)",
+      "context": "Apresentação altera o ponto de referência e a decisão (Kahneman-Tversky)"
+    },
+    {
+      "name": "Weighting Function",
+      "url": "https://en.wikipedia.org/wiki/Prospect_theory#Probability_weighting_function",
+      "context": "Peso psicológico dado a probabilidades; pessoas arredondam extremos"
+    },
+    {
+      "name": "Regret Theory",
+      "url": "https://en.wikipedia.org/wiki/Regret_(decision_theory)",
+      "context": "Medo da dor do arrependimento distorce decisões"
+    },
+    {
+      "name": "Overconfidence Effect",
+      "url": "https://en.wikipedia.org/wiki/Overconfidence_effect",
+      "context": "Tendência de superestimar habilidades próprias; demonstrado em intervalos de confiança"
+    },
+    {
+      "name": "Cognitive Dissonance",
+      "url": "https://en.wikipedia.org/wiki/Cognitive_dissonance",
+      "context": "Pessoas mantêm crenças antigas e evitam evidências contrárias (Festinger)"
+    },
+    {
+      "name": "Anchoring",
+      "url": "https://en.wikipedia.org/wiki/Anchoring_(cognitive_bias)",
+      "context": "Opiniões são ancoradas em números irrelevantes (experimento da roda da fortuna)"
+    },
+    {
+      "name": "Representativeness Heuristic",
+      "url": "https://en.wikipedia.org/wiki/Representativeness_heuristic",
+      "context": "Pessoas supervalorizam padrões familiares (ex.: head and shoulders em ações)"
+    },
+    {
+      "name": "Antisocial Personality Disorder",
+      "url": "https://en.wikipedia.org/wiki/Antisocial_personality_disorder",
+      "context": "3% dos homens e 1% das mulheres segundo DSM-IV; inclui psicopatia e sociopatia"
+    },
+    {
+      "name": "Herd Behavior",
+      "url": "https://en.wikipedia.org/wiki/Herd_behavior",
+      "context": "Tendência de mover-se com a manada — cria oscilações no mercado"
+    },
+    {
+      "name": "Collective Consciousness",
+      "url": "https://en.wikipedia.org/wiki/Collective_consciousness",
+      "context": "Termo de Durkheim — opiniões formadas por entendimento coletivo"
+    },
+    {
+      "name": "Zeitgeist",
+      "url": "https://en.wikipedia.org/wiki/Zeitgeist",
+      "context": "Espírito do tempo — conjunto de fatos/ideias que circulam em uma época"
+    },
+    {
+      "name": "Social Contagion",
+      "url": "https://en.wikipedia.org/wiki/Behavioral_contagion",
+      "context": "Conceito final da palestra — pessoas são interdependentes em opiniões"
+    },
+    {
+      "name": "Shared Value",
+      "url": "https://en.wikipedia.org/wiki/Creating_shared_value",
+      "context": "Princípio de Porter/Kramer — criação conjunta de valor empresa-sociedade"
+    },
+    {
+      "name": "Psychopathy",
+      "url": "https://en.wikipedia.org/wiki/Psychopathy",
+      "context": "Subtipo de APD caracterizado por falta de remorso, empatia e charme superficial"
+    },
+    {
+      "name": "Price Points",
+      "url": "https://en.wikipedia.org/wiki/Price_point",
+      "context": "Técnica de marketing $9,99 vs $10 — manipulação psicológica sutil"
+    },
+    {
+      "name": "Gambler's Anonymous",
+      "url": "https://en.wikipedia.org/wiki/Gamblers_Anonymous",
+      "context": "Organização mencionada para jogadores compulsivos"
+    }
+  ],
+  "companies": [
+    {
+      "name": "Lazard Frères",
+      "url": "https://en.wikipedia.org/wiki/Lazard"
+    },
+    {
+      "name": "Wasserstein Perella",
+      "url": "https://en.wikipedia.org/wiki/Wasserstein_Perella_%26_Co."
+    },
+    {
+      "name": "Ford Motor Company",
+      "url": "https://en.wikipedia.org/wiki/Ford_Motor_Company"
+    },
+    {
+      "name": "General Motors",
+      "url": "https://en.wikipedia.org/wiki/General_Motors"
+    },
+    {
+      "name": "Max Planck Institute",
+      "url": "https://en.wikipedia.org/wiki/Max_Planck_Society"
+    },
+    {
+      "name": "Harvard Business Review",
+      "url": "https://en.wikipedia.org/wiki/Harvard_Business_Review"
+    },
+    {
+      "name": "American Psychiatric Association",
+      "url": "https://en.wikipedia.org/wiki/American_Psychiatric_Association"
+    }
+  ],
+  "related_posts": []
+}

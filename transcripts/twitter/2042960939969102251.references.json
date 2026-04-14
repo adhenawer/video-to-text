@@ -1,0 +1,50 @@
+{
+  "video_id": "2042960939969102251",
+  "extracted_at": "2026-04-14",
+  "books": [],
+  "tools": [
+    {"name": "Obsidian", "url": "https://obsidian.md", "context": "ferramenta de second brain baseada em vault de arquivos Markdown com links bidirecionais"},
+    {"name": "Claude Code", "url": "https://claude.com/claude-code", "context": "agente CLI da Anthropic usado em conjunto com o vault do Obsidian"},
+    {"name": "Obsidian CLI", "url": "https://obsidian.md", "context": "CLI oficial do Obsidian que expõe arquivos e interrelações do vault para o Claude Code"},
+    {"name": "Open Claude (OpenCLaw)", "url": "https://claude.com/claude-code", "context": "versão autônoma do Claude que age sem prompt contínuo, lendo o vault"},
+    {"name": "MacWhisper", "url": "https://goodsnooze.gumroad.com/l/macwhisper", "context": "transcrição de áudio mencionada no pipeline pré-Obsidian do Vin"},
+    {"name": "Kanopi (Canopio)", "url": "https://kanopi.com", "context": "ferramenta de mapeamento espacial citada no sistema original de notas"},
+    {"name": "Arena (Are.na)", "url": "https://are.na", "context": "usado para armazenar fragmentos no workflow antigo"},
+    {"name": "Granola", "url": "https://granola.ai", "context": "exemplo de ferramenta de notas de reunião que pode alimentar o vault"},
+    {"name": "Gemini", "url": "https://gemini.google.com", "context": "exemplo de app que toma notas de reuniões"},
+    {"name": "ChatGPT", "url": "https://chatgpt.com", "context": "comparado por ter memória opaca, diferente de arquivos controláveis"},
+    {"name": "idea browser", "url": "https://ideabrowser.com", "context": "projeto de Greg Eisenberg que gera ideias de startup diárias"}
+  ],
+  "papers": [],
+  "people": [
+    {"name": "Greg Eisenberg", "role": "host do podcast", "url": "https://twitter.com/gregisenberg", "context": "apresentador da conversa"},
+    {"name": "Vin (Internet Vin)", "role": "convidado, criador construindo com Obsidian + Claude Code", "url": "https://twitter.com/internetvin", "context": "explica como combinar Obsidian e Claude Code como parceiro de pensamento"},
+    {"name": "Toby Lütke", "role": "fundador do Shopify", "url": "https://en.wikipedia.org/wiki/Tobias_L%C3%BCtke", "context": "mencionado como link no vault do Vin"},
+    {"name": "Steph Ango", "role": "CEO do Obsidian", "url": "https://stephango.com", "context": "sugerido pelo agente como pessoa a conversar sobre vault como lugar"},
+    {"name": "Christopher Alexander", "role": "arquiteto, autor de A Pattern Language", "url": "https://en.wikipedia.org/wiki/Christopher_Alexander", "context": "sugerido como assunto a investigar: linguagem de padrões aplicada a espaços digitais"}
+  ],
+  "concepts": [
+    {"name": "Second brain", "url": "https://en.wikipedia.org/wiki/Personal_knowledge_management", "context": "metáfora usada para descrever o vault do Obsidian"},
+    {"name": "Bidirectional linking", "url": "https://en.wikipedia.org/wiki/Backlink", "context": "interrelações entre notas no Obsidian"},
+    {"name": "Markdown", "url": "https://en.wikipedia.org/wiki/Markdown", "context": "formato base dos arquivos do vault"},
+    {"name": "A Pattern Language", "url": "https://en.wikipedia.org/wiki/A_Pattern_Language", "context": "livro de Christopher Alexander citado como referência"},
+    {"name": "Black Mountain College", "url": "https://en.wikipedia.org/wiki/Black_Mountain_College", "context": "modelo mencionado para o Stadium em Toronto"},
+    {"name": "Shenzhen hardware ecosystem", "url": "https://en.wikipedia.org/wiki/Shenzhen", "context": "tema sugerido pelo agente como assunto a investigar"}
+  ],
+  "companies": [
+    {"name": "Obsidian", "url": "https://obsidian.md"},
+    {"name": "Anthropic", "url": "https://www.anthropic.com"},
+    {"name": "OpenAI", "url": "https://openai.com"},
+    {"name": "Shopify", "url": "https://www.shopify.com"},
+    {"name": "Telegram", "url": "https://telegram.org"},
+    {"name": "Slack", "url": "https://slack.com"}
+  ],
+  "related_posts": [
+    {"slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida", "slug_en": "head-claude-code-happens-after-coding-solved", "reason": "ambos discutem o futuro do Claude Code e delegação a agentes"},
+    {"slug_pt": "claude-code-leak-what-weve-learned-so-far", "slug_en": "claude-code-leak-we-have-learned-so-far", "reason": "explora internals do Claude Code, complementar ao uso prático com Obsidian"},
+    {"slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica", "slug_en": "prompt-production-agentic-engineering", "reason": "trata de context engineering, tema central do episódio"},
+    {"slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade", "slug_en": "agentic-engineering-context-guardrails-creativity", "reason": "discute contexto e guardrails para agentes, alinhado à tese do vault como fonte de contexto"},
+    {"slug_pt": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills", "slug_en": "why-we-stopped-building-agents-started-building-skills", "reason": "skills e commands customizados são análogos aos slash commands do Vin"},
+    {"slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code", "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code", "reason": "expande a conversa sobre orquestração de múltiplos agentes além do Claude Code"}
+  ]
+}

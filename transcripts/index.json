@@ -7,7 +7,20 @@
     "url": "https://www.youtube.com/watch?v=We7BZVKbCVw",
     "slug": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
     "date": "2026-04-13",
-    "slug_en": "head-claude-code-happens-after-coding-solved"
+    "slug_en": "head-claude-code-happens-after-coding-solved",
+    "references": {
+      "path": "transcripts/youtube/We7BZVKbCVw.references.json",
+      "counts": {
+        "books": 7,
+        "tools": 9,
+        "papers": 2,
+        "people": 5,
+        "concepts": 5,
+        "companies": 7,
+        "related_posts": 6
+      },
+      "total": 35
+    }
   },
   {
     "video_id": "2042206218752610343",
@@ -17,7 +30,20 @@
     "url": "https://x.com/51bodila/status/2042206218752610343",
     "slug": "guia-completo-claude-iniciante-sistema-operacional-ia",
     "date": "2026-04-13",
-    "slug_en": "complete-claude-guide-beginner-ai-operating-system"
+    "slug_en": "complete-claude-guide-beginner-ai-operating-system",
+    "references": {
+      "path": "transcripts/twitter/2042206218752610343.references.json",
+      "counts": {
+        "books": 0,
+        "tools": 16,
+        "papers": 0,
+        "people": 2,
+        "concepts": 6,
+        "companies": 2,
+        "related_posts": 6
+      },
+      "total": 26
+    }
   },
   {
     "video_id": "w7CWS4bmN2A",
@@ -27,7 +53,20 @@
     "url": "https://www.youtube.com/watch?v=w7CWS4bmN2A",
     "slug": "claude-code-leak-what-weve-learned-so-far",
     "date": "2026-04-13",
-    "slug_en": "claude-code-leak-we-have-learned-so-far"
+    "slug_en": "claude-code-leak-we-have-learned-so-far",
+    "references": {
+      "path": "transcripts/youtube/w7CWS4bmN2A.references.json",
+      "counts": {
+        "books": 0,
+        "tools": 4,
+        "papers": 0,
+        "people": 1,
+        "concepts": 4,
+        "companies": 7,
+        "related_posts": 4
+      },
+      "total": 16
+    }
   },
   {
     "video_id": "fzrvx_1-9_o",
@@ -37,7 +76,20 @@
     "url": "https://youtu.be/fzrvx_1-9_o",
     "slug": "como-construi-sistema-suporte-cliente-ia-nivel-producao",
     "date": "2026-04-13",
-    "slug_en": "how-i-built-production-grade-ai-customer-support-system"
+    "slug_en": "how-i-built-production-grade-ai-customer-support-system",
+    "references": {
+      "path": "transcripts/youtube/fzrvx_1-9_o.references.json",
+      "counts": {
+        "books": 0,
+        "tools": 22,
+        "papers": 0,
+        "people": 2,
+        "concepts": 7,
+        "companies": 9,
+        "related_posts": 5
+      },
+      "total": 40
+    }
   },
   {
     "video_id": "aFsAOu2bgFk",
@@ -47,7 +99,20 @@
     "url": "https://youtu.be/aFsAOu2bgFk",
     "slug": "de-ides-para-agentes-de-ia-steve-yegge",
     "date": "2026-04-13",
-    "slug_en": "ides-ai-agents"
+    "slug_en": "ides-ai-agents",
+    "references": {
+      "path": "transcripts/youtube/aFsAOu2bgFk.references.json",
+      "counts": {
+        "books": 2,
+        "tools": 12,
+        "papers": 5,
+        "people": 18,
+        "concepts": 8,
+        "companies": 14,
+        "related_posts": 11
+      },
+      "total": 59
+    }
   },
   {
     "video_id": "eYqt8vqeSBw",
@@ -57,7 +122,20 @@
     "url": "https://www.youtube.com/live/eYqt8vqeSBw",
     "slug": "do-prompt-a-producao-o-que-e-engenharia-agentica",
     "date": "2026-04-13",
-    "slug_en": "prompt-production-agentic-engineering"
+    "slug_en": "prompt-production-agentic-engineering",
+    "references": {
+      "path": "transcripts/youtube/eYqt8vqeSBw.references.json",
+      "counts": {
+        "books": 0,
+        "tools": 9,
+        "papers": 0,
+        "people": 2,
+        "concepts": 10,
+        "companies": 5,
+        "related_posts": 5
+      },
+      "total": 26
+    }
   },
   {
     "video_id": "l5zgfjXs6gQ",
@@ -67,7 +145,20 @@
     "url": "https://youtu.be/l5zgfjXs6gQ",
     "slug": "engenharia-agentica-contexto-guardrails-e-criatividade",
     "date": "2026-04-13",
-    "slug_en": "agentic-engineering-context-guardrails-creativity"
+    "slug_en": "agentic-engineering-context-guardrails-creativity",
+    "references": {
+      "path": "transcripts/youtube/l5zgfjXs6gQ.references.json",
+      "counts": {
+        "books": 0,
+        "tools": 15,
+        "papers": 0,
+        "people": 2,
+        "concepts": 13,
+        "companies": 6,
+        "related_posts": 5
+      },
+      "total": 36
+    }
   },
   {
     "video_id": "Ednpn1mjKiY",
@@ -77,7 +168,20 @@
     "url": "https://www.youtube.com/live/Ednpn1mjKiY",
     "slug": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia",
     "date": "2026-04-13",
-    "slug_en": "senior-engineer-demonstrates-spec-driven-ai-development-flow"
+    "slug_en": "senior-engineer-demonstrates-spec-driven-ai-development-flow",
+    "references": {
+      "path": "transcripts/youtube/Ednpn1mjKiY.references.json",
+      "counts": {
+        "books": 0,
+        "tools": 26,
+        "papers": 0,
+        "people": 5,
+        "concepts": 10,
+        "companies": 9,
+        "related_posts": 5
+      },
+      "total": 50
+    }
   },
   {
     "video_id": "wc8FBhQtdsA",
@@ -87,7 +191,20 @@
     "url": "https://www.youtube.com/watch?v=wc8FBhQtdsA",
     "slug": "estado-da-ia-2026-ponto-de-inflexao-simon-willison",
     "date": "2026-04-13",
-    "slug_en": "state-ai-2026"
+    "slug_en": "state-ai-2026",
+    "references": {
+      "path": "transcripts/youtube/wc8FBhQtdsA.references.json",
+      "counts": {
+        "books": 0,
+        "tools": 21,
+        "papers": 2,
+        "people": 9,
+        "concepts": 16,
+        "companies": 13,
+        "related_posts": 7
+      },
+      "total": 61
+    }
   },
   {
     "video_id": "647pVgfV2yU",
@@ -97,7 +214,20 @@
     "url": "https://youtu.be/647pVgfV2yU",
     "slug": "fluxos-de-trabalho-agenticos-don-syme",
     "date": "2026-04-13",
-    "slug_en": "agentic-workflows-don-syme"
+    "slug_en": "agentic-workflows-don-syme",
+    "references": {
+      "path": "transcripts/youtube/647pVgfV2yU.references.json",
+      "counts": {
+        "books": 0,
+        "tools": 12,
+        "papers": 0,
+        "people": 3,
+        "concepts": 11,
+        "companies": 4,
+        "related_posts": 7
+      },
+      "total": 30
+    }
   },
   {
     "video_id": "6WaeGfLnRvc",
@@ -107,7 +237,20 @@
     "url": "https://www.youtube.com/watch?v=6WaeGfLnRvc",
     "slug": "politica-corporativa-tech-tudo-que-ninguem-te-conta",
     "date": "2026-04-13",
-    "slug_en": "corporate-politics-tech-everything-nobody-tells"
+    "slug_en": "corporate-politics-tech-everything-nobody-tells",
+    "references": {
+      "path": "transcripts/youtube/6WaeGfLnRvc.references.json",
+      "counts": {
+        "books": 4,
+        "tools": 0,
+        "papers": 0,
+        "people": 8,
+        "concepts": 8,
+        "companies": 12,
+        "related_posts": 3
+      },
+      "total": 32
+    }
   },
   {
     "video_id": "owmJyKVu5f8",
@@ -117,7 +260,20 @@
     "url": "https://youtu.be/owmJyKVu5f8",
     "slug": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
     "date": "2026-04-13",
-    "slug_en": "engineering-practices-make-coding-agents-work"
+    "slug_en": "engineering-practices-make-coding-agents-work",
+    "references": {
+      "path": "transcripts/youtube/owmJyKVu5f8.references.json",
+      "counts": {
+        "books": 0,
+        "tools": 24,
+        "papers": 0,
+        "people": 2,
+        "concepts": 7,
+        "companies": 10,
+        "related_posts": 7
+      },
+      "total": 43
+    }
   },
   {
     "video_id": "_kMaPZE05Yc",
@@ -127,7 +283,20 @@
     "url": "https://youtu.be/_kMaPZE05Yc",
     "slug": "roteiro-engenheiro-ia-para-desenvolvedores-de-software",
     "date": "2026-04-13",
-    "slug_en": "ai-engineer-roadmap-software-developers"
+    "slug_en": "ai-engineer-roadmap-software-developers",
+    "references": {
+      "path": "transcripts/youtube/_kMaPZE05Yc.references.json",
+      "counts": {
+        "books": 0,
+        "tools": 27,
+        "papers": 0,
+        "people": 2,
+        "concepts": 11,
+        "companies": 6,
+        "related_posts": 5
+      },
+      "total": 46
+    }
   },
   {
     "video_id": "M30gp1315Y4",
@@ -137,7 +306,20 @@
     "url": "https://youtu.be/M30gp1315Y4",
     "slug": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
     "date": "2026-04-13",
-    "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code"
+    "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code",
+    "references": {
+      "path": "transcripts/youtube/M30gp1315Y4.references.json",
+      "counts": {
+        "books": 0,
+        "tools": 7,
+        "papers": 0,
+        "people": 1,
+        "concepts": 8,
+        "companies": 2,
+        "related_posts": 9
+      },
+      "total": 18
+    }
   },
   {
     "video_id": "2042960939969102251",
@@ -147,7 +329,20 @@
     "url": "https://x.com/heyamit_/status/2042960939969102251",
     "slug": "obsidian-claude-code-pensamento",
     "date": "2026-04-13",
-    "slug_en": "obsidian-claude-code-second-brain-amplified"
+    "slug_en": "obsidian-claude-code-second-brain-amplified",
+    "references": {
+      "path": "transcripts/twitter/2042960939969102251.references.json",
+      "counts": {
+        "books": 0,
+        "tools": 11,
+        "papers": 0,
+        "people": 5,
+        "concepts": 6,
+        "companies": 6,
+        "related_posts": 6
+      },
+      "total": 28
+    }
   },
   {
     "video_id": "2042024135568629797",
@@ -157,7 +352,20 @@
     "url": "https://x.com/carverfomo/status/2042024135568629797",
     "slug": "conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford",
     "date": "2026-04-13",
-    "slug_en": "ai-career-advice-andrew-ng-lawrence-moroney-stanford"
+    "slug_en": "ai-career-advice-andrew-ng-lawrence-moroney-stanford",
+    "references": {
+      "path": "transcripts/twitter/2042024135568629797.references.json",
+      "counts": {
+        "books": 2,
+        "tools": 12,
+        "papers": 1,
+        "people": 3,
+        "concepts": 8,
+        "companies": 17,
+        "related_posts": 5
+      },
+      "total": 43
+    }
   },
   {
     "video_id": "2042489154966339811",
@@ -167,7 +375,20 @@
     "url": "https://x.com/ronycoder/status/2042489154966339811",
     "slug": "entendendo-rony-coder",
     "date": "2026-04-13",
-    "slug_en": "how-speak-patrick-winston-giving-talks-matter"
+    "slug_en": "how-speak-patrick-winston-giving-talks-matter",
+    "references": {
+      "path": "transcripts/twitter/2042489154966339811.references.json",
+      "counts": {
+        "books": 0,
+        "tools": 0,
+        "papers": 0,
+        "people": 10,
+        "concepts": 6,
+        "companies": 2,
+        "related_posts": 2
+      },
+      "total": 18
+    }
   },
   {
     "video_id": "2042725242741588208",
@@ -177,7 +398,20 @@
     "url": "https://x.com/noisyb0y1/status/2042725242741588208",
     "slug": "financas-comportamentais-robert-shiller-yale",
     "date": "2026-04-13",
-    "slug_en": "behavioral-finance-psychology-manipulation-integrity-markets"
+    "slug_en": "behavioral-finance-psychology-manipulation-integrity-markets",
+    "references": {
+      "path": "transcripts/twitter/2042725242741588208.references.json",
+      "counts": {
+        "books": 6,
+        "tools": 2,
+        "papers": 2,
+        "people": 18,
+        "concepts": 20,
+        "companies": 7,
+        "related_posts": 0
+      },
+      "total": 55
+    }
   },
   {
     "video_id": "2041884593087803841",
@@ -187,7 +421,20 @@
     "url": "https://x.com/noisyb0y1/status/2041884593087803841",
     "slug": "ia-agentica-progressao-uso-modelos-linguagem-stanford",
     "date": "2026-04-13",
-    "slug_en": "agentic-ai-progression-language-model-usage"
+    "slug_en": "agentic-ai-progression-language-model-usage",
+    "references": {
+      "path": "transcripts/twitter/2041884593087803841.references.json",
+      "counts": {
+        "books": 0,
+        "tools": 1,
+        "papers": 4,
+        "people": 1,
+        "concepts": 19,
+        "companies": 2,
+        "related_posts": 7
+      },
+      "total": 27
+    }
   },
   {
     "video_id": "2042172428127002906",
@@ -197,7 +444,20 @@
     "url": "https://x.com/Av1dlive/status/2042172428127002906",
     "slug": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills",
     "date": "2026-04-13",
-    "slug_en": "why-we-stopped-building-agents-started-building-skills"
+    "slug_en": "why-we-stopped-building-agents-started-building-skills",
+    "references": {
+      "path": "transcripts/twitter/2042172428127002906.references.json",
+      "counts": {
+        "books": 0,
+        "tools": 9,
+        "papers": 0,
+        "people": 2,
+        "concepts": 5,
+        "companies": 4,
+        "related_posts": 6
+      },
+      "total": 20
+    }
   },
   {
     "video_id": "2042624568880197650",
@@ -206,6 +466,19 @@
     "subtitle": "Trader Chinês · Twitter/X",
     "url": "https://x.com/carverfomo/status/2042624568880197650",
     "slug": "trading-com-order-flow-mercado-global-ao-chines",
-    "date": "2026-04-13"
+    "date": "2026-04-13",
+    "references": {
+      "path": "transcripts/twitter/2042624568880197650.references.json",
+      "counts": {
+        "books": 0,
+        "tools": 0,
+        "papers": 0,
+        "people": 0,
+        "concepts": 5,
+        "companies": 0,
+        "related_posts": 1
+      },
+      "total": 5
+    }
   }
 ]

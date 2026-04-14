@@ -1,0 +1,57 @@
+{
+  "video_id": "l5zgfjXs6gQ",
+  "extracted_at": "2026-04-14",
+  "books": [],
+  "tools": [
+    {"name": "Port", "url": "https://www.getport.io/", "context": "Internal developer portal used as the central control plane for AI agents, context graph, scorecards, and workflows"},
+    {"name": "GitLab", "url": "https://about.gitlab.com/", "context": "Tomas's previous company where he worked as a solutions architect in DevSecOps"},
+    {"name": "Jira", "url": "https://www.atlassian.com/software/jira", "context": "Work item tracking integrated into Port for autonomous ticket resolution"},
+    {"name": "GitHub", "url": "https://github.com/", "context": "Source control integration for Port context graph"},
+    {"name": "Azure DevOps", "url": "https://azure.microsoft.com/en-us/products/devops", "context": "ADO integration ingested into Port"},
+    {"name": "Datadog", "url": "https://www.datadoghq.com/", "context": "External MCP server used to pull observability logs during incident investigation"},
+    {"name": "New Relic", "url": "https://newrelic.com/", "context": "End-to-end tracing tool referenced for enriching incident context"},
+    {"name": "Snyk", "url": "https://snyk.io/", "context": "Example security scanning tool mentioned when discussing context"},
+    {"name": "Wiz", "url": "https://www.wiz.io/", "context": "Example security scanning tool contrasted with Snyk"},
+    {"name": "Argo CD", "url": "https://argo-cd.readthedocs.io/", "context": "Referenced for syncing applications during incident remediation"},
+    {"name": "Kubernetes", "url": "https://kubernetes.io/", "context": "Microservices architecture context referenced during incident example"},
+    {"name": "Notion", "url": "https://www.notion.so/", "context": "Unstructured data source integrated via MCP"},
+    {"name": "Slack", "url": "https://slack.com/", "context": "Data source integrated via MCP for additional context"},
+    {"name": "Claude", "url": "https://claude.ai/", "context": "Used with Port MCP connector to query Port data externally"},
+    {"name": "Model Context Protocol", "url": "https://modelcontextprotocol.io/", "context": "MCP servers connect Port to external tools like Datadog, Notion, Slack, Atlassian"}
+  ],
+  "papers": [],
+  "people": [
+    {"name": "Tomas", "role": "Product Solutions Lead at Port, based in Melbourne, ex-GitLab DevSecOps solutions architect", "url": "", "context": "Co-host of the webinar on agentic engineering"},
+    {"name": "Zach", "role": "Solutions Engineering at Port APJ, based in Sydney, DevOps background", "url": "", "context": "Co-host demonstrating autonomous workflows in Port"}
+  ],
+  "concepts": [
+    {"name": "Agentic Engineering", "url": "", "context": "Core topic of the webinar: building and controlling AI agents in engineering workflows"},
+    {"name": "Context Graph", "url": "", "context": "Port's unified model of services, repos, PRs, teams used to feed AI agents"},
+    {"name": "Guardrails", "url": "", "context": "Constraints preventing destructive agent actions, top concern in audience poll"},
+    {"name": "Autonomous Ticket Resolution", "url": "", "context": "Workflow taking a work item from Jira through PRD generation to production via AI"},
+    {"name": "Self-Healing Incidents", "url": "", "context": "AI-driven workflow from alert triage through remediation and postmortem"},
+    {"name": "Scorecards", "url": "", "context": "Port mechanism to enforce standards and governance checks on AI workflows"},
+    {"name": "Skills Registry", "url": "", "context": "Centralized store of agent skills and prompts shared across teams"},
+    {"name": "Human-in-the-loop", "url": "", "context": "Oversight pattern requiring human review at key workflow phases"},
+    {"name": "Blast Radius", "url": "", "context": "Scorecard metric used for intelligent routing between AI and human"},
+    {"name": "PRD (Product Requirements Document)", "url": "", "context": "AI-generated artifact during prep and plan stage of autonomous ticket resolution"},
+    {"name": "Root Cause Analysis", "url": "", "context": "Final incident step automated via AI postmortem generation"},
+    {"name": "MTTR", "url": "", "context": "Metric tracked in Port engineering intelligence dashboards"},
+    {"name": "Platform Engineering", "url": "", "context": "Discipline evolving to incorporate AI agents per the discussion"}
+  ],
+  "companies": [
+    {"name": "Port", "url": "https://www.getport.io/"},
+    {"name": "GitLab", "url": "https://about.gitlab.com/"},
+    {"name": "Amazon", "url": "https://www.amazon.com/"},
+    {"name": "Atlassian", "url": "https://www.atlassian.com/"},
+    {"name": "Datadog", "url": "https://www.datadoghq.com/"},
+    {"name": "New Relic", "url": "https://newrelic.com/"}
+  ],
+  "related_posts": [
+    {"slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica", "slug_en": "prompt-production-agentic-engineering", "reason": "Directly about agentic engineering foundations, same topic as this webinar"},
+    {"slug_pt": "fluxos-de-trabalho-agenticos-don-syme", "slug_en": "agentic-workflows-don-syme", "reason": "Covers agentic workflow design patterns relevant to Port's autonomous flows"},
+    {"slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code", "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code", "reason": "Discusses multi-agent coordination, aligned with Port's agent registry concept"},
+    {"slug_pt": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills", "slug_en": "why-we-stopped-building-agents-started-building-skills", "reason": "Skills registry as reusable capability directly parallels Port's skills registry"},
+    {"slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison", "slug_en": "engineering-practices-make-coding-agents-work", "reason": "Engineering guardrails and practices for agents mirror webinar's central theme"}
+  ]
+}

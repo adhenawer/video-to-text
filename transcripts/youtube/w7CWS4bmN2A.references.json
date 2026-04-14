@@ -1,0 +1,110 @@
+{
+  "video_id": "w7CWS4bmN2A",
+  "extracted_at": "2026-04-14",
+  "books": [],
+  "tools": [
+    {
+      "name": "Claude Code",
+      "url": "https://www.anthropic.com/claude-code",
+      "context": "Produto da Anthropic cujo código-fonte web vazou — tema central do vídeo"
+    },
+    {
+      "name": "Mentor (Merly)",
+      "url": "https://merly.ai",
+      "context": "Ferramenta de análise de qualidade de código usada para auditar o vazamento; oferece API de verificação via diff AI"
+    },
+    {
+      "name": "npm (Node Package Manager)",
+      "url": "https://www.npmjs.com",
+      "context": "Registry onde uma flag de debug deixada ligada em produção permitiu reassemblar o source"
+    },
+    {
+      "name": "grep",
+      "url": "https://www.gnu.org/software/grep/",
+      "context": "Cláude Code usa grep para find-and-replace, sem entendimento semântico — gera bugs em renames"
+    }
+  ],
+  "papers": [],
+  "people": [
+    {
+      "name": "Anthropic (empresa)",
+      "role": "Empresa por trás do Claude Code, alvo do vazamento",
+      "url": "https://www.anthropic.com",
+      "context": "Acusada de manter verificação pós-edição apenas para usuários com user_type=ant (funcionários)"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Vibe coding",
+      "url": "https://en.wikipedia.org/wiki/Vibe_coding",
+      "context": "Prática de gerar grandes volumes de código com IA sem revisar — acelera context death spiral"
+    },
+    {
+      "name": "Abstract Syntax Tree (AST)",
+      "url": "https://en.wikipedia.org/wiki/Abstract_syntax_tree",
+      "context": "Apresentado em contraste com grep: AST associa significado à sintaxe, grep é só regex"
+    },
+    {
+      "name": "Context window",
+      "url": "https://en.wikipedia.org/wiki/Large_language_model",
+      "context": "Apesar do modelo anunciar 1M tokens, hard caps no código limitam a ~16.7%"
+    },
+    {
+      "name": "Icarus",
+      "url": "https://en.wikipedia.org/wiki/Icarus",
+      "context": "Metáfora para a Anthropic ficando confiante demais (Opus 4.5 escreveu o 4.6) e voando perto do sol"
+    }
+  ],
+  "companies": [
+    {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com"
+    },
+    {
+      "name": "Merly",
+      "url": "https://merly.ai"
+    },
+    {
+      "name": "Google",
+      "url": "https://www.google.com"
+    },
+    {
+      "name": "Microsoft",
+      "url": "https://www.microsoft.com"
+    },
+    {
+      "name": "Amazon",
+      "url": "https://www.amazon.com"
+    },
+    {
+      "name": "Oracle",
+      "url": "https://www.oracle.com"
+    },
+    {
+      "name": "OpenAI",
+      "url": "https://openai.com"
+    }
+  ],
+  "related_posts": [
+    {
+      "slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
+      "slug_en": "head-claude-code-happens-after-coding-solved",
+      "reason": "Visão da própria liderança do Claude Code — contraste direto com a análise crítica do vazamento"
+    },
+    {
+      "slug_pt": "guia-completo-claude-iniciante-sistema-operacional-ia",
+      "slug_en": "complete-claude-guide-beginner-ai-operating-system",
+      "reason": "Guia de uso responsável do Claude — relevante diante das limitações reveladas no vazamento"
+    },
+    {
+      "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
+      "slug_en": "engineering-practices-make-coding-agents-work",
+      "reason": "Aborda boas práticas de verificação que o próprio Claude Code não aplica para usuários comuns"
+    },
+    {
+      "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
+      "slug_en": "agentic-engineering-context-guardrails-creativity",
+      "reason": "Discute guardrails e contexto — diretamente relacionado aos hard caps de 2000 linhas e brevity mandate"
+    }
+  ]
+}

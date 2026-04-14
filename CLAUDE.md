@@ -266,6 +266,61 @@ Após adicionar um novo artigo, atualizar `sitemap.xml` adicionando:
 </url>
 ```
 
+## Referências (sidebar fixa)
+
+Cada artigo tem uma sidebar fixa com referências extraídas da transcrição original: livros (Amazon search), ferramentas (site oficial), papers (arXiv), pessoas (Wikipedia/Twitter), conceitos (Wikipedia), empresas e **posts relacionados** dentro do próprio site.
+
+### Arquivos
+
+- `transcripts/{provider}/{video_id}.references.json` — JSON estruturado por post
+- `transcripts/index.json` — inclui campo `references.counts` e `.total` por entrada
+
+### Schema JSON
+
+```json
+{
+  "video_id": "...",
+  "extracted_at": "YYYY-MM-DD",
+  "books": [{"title":"...","author":"...","url":"amazon.com/s?k=...","context":"..."}],
+  "tools": [{"name":"...","url":"...","context":"..."}],
+  "papers": [{"title":"...","authors":"...","url":"arxiv.org/...","context":"..."}],
+  "people": [{"name":"...","role":"...","url":"...","context":"..."}],
+  "concepts": [{"name":"...","url":"en.wikipedia.org/...","context":"..."}],
+  "companies": [{"name":"...","url":"..."}],
+  "related_posts": [{"slug_pt":"...","slug_en":"...","reason":"..."}]
+}
+```
+
+### Extrair referências de um novo artigo
+
+Peça ao Claude Code:
+```
+> extrai referências de transcripts/{provider}/{video_id}.txt seguindo o schema em CLAUDE.md
+> (use a transcrição no idioma original)
+> escreva em transcripts/{provider}/{video_id}.references.json
+```
+
+### Regenerar HTMLs após extrair
+
+```bash
+# EN — build_html.py carrega refs automaticamente via provider
+python3 scripts/regen_en_htmls.py
+
+# PT-BR — patcher injeta a sidebar renderizada
+python3 scripts/patch_ptbr_references.py
+
+# Atualiza contagens no index.json
+python3 scripts/update_index_references.py
+```
+
+### Renderização
+
+- `src/build_html.py` → `_render_references_sidebar(refs, is_ptbr)` gera o `<aside class="references-sidebar">`
+- `build_html.make_html(..., provider=...)` — com o parâmetro `provider`, carrega automaticamente o JSON e injeta a sidebar
+- CSS: `.references-sidebar` em `docs/css/style.css` (fixa à direita em telas ≥1200px, inline no final do artigo em telas menores)
+
+---
+
 ## Analytics (Umami)
 
 **TODO HTML novo ou manualmente criado DEVE incluir o snippet do Umami dentro de `<head>`:**

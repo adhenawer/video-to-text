@@ -1,0 +1,337 @@
+{
+  "video_id": "aFsAOu2bgFk",
+  "extracted_at": "2026-04-14",
+  "books": [
+    {
+      "name": "Vibe Coding",
+      "author": "Steve Yegge & Gene Kim",
+      "url": "https://www.amazon.com/s?k=Vibe+Coding+Steve+Yegge+Gene+Kim",
+      "context": "Livro co-autorado por Steve Yegge e Gene Kim sobre programação assistida por IA"
+    },
+    {
+      "name": "Purely Functional Data Structures",
+      "author": "Chris Okasaki",
+      "url": "https://www.amazon.com/s?k=Purely+Functional+Data+Structures+Okasaki",
+      "context": "Steve menciona que Anthropic opera 'como uma estrutura de dados puramente funcional', referenciando o livro de Okasaki"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Gas Town",
+      "url": "https://github.com/steveyegge/gastown",
+      "context": "Orquestrador open source de agentes de IA construído por Steve Yegge — agentes rodando agentes"
+    },
+    {
+      "name": "Claude Code",
+      "url": "https://www.anthropic.com/claude-code",
+      "context": "Ferramenta CLI da Anthropic para programação com agentes — referência central da conversa"
+    },
+    {
+      "name": "Claude Code on the Web",
+      "url": "https://www.anthropic.com/news/claude-code-on-the-web",
+      "context": "Versão web do Claude Code, citada como 'retorno ao formato IDE'"
+    },
+    {
+      "name": "GitHub Copilot",
+      "url": "https://github.com/features/copilot",
+      "context": "Steve argumenta que quem ainda usa Copilot está ficando para trás frente a Opus 4.5"
+    },
+    {
+      "name": "Cursor",
+      "url": "https://cursor.com",
+      "context": "IDE com IA — citado como exemplo de fork bem-sucedido (do VS Code)"
+    },
+    {
+      "name": "Zed",
+      "url": "https://zed.dev",
+      "context": "Editor de código mencionado no contexto do debate com Nathan Sobo sobre o futuro das IDEs"
+    },
+    {
+      "name": "Dolt",
+      "url": "https://www.dolthub.com",
+      "context": "Banco de dados versionado com Git para o qual Steve está migrando o Gas Town"
+    },
+    {
+      "name": "MCP (Model Context Protocol)",
+      "url": "https://modelcontextprotocol.io",
+      "context": "Protocolo da Anthropic para conectar ferramentas a LLMs, discutido como camada de integração"
+    },
+    {
+      "name": "Cline",
+      "url": "https://github.com/cline/cline",
+      "context": "Agente de codificação open source mencionado como exemplo de fork (Roo Code é fork do Cline)"
+    },
+    {
+      "name": "Roo Code",
+      "url": "https://github.com/RooCodeInc/Roo-Code",
+      "context": "Fork do Cline citado por Steve como exemplo de cultura de remix em open source"
+    },
+    {
+      "name": "Tailscale",
+      "url": "https://tailscale.com",
+      "context": "Mencionado pelo uso de Peter Steinberger para acessar Claude Code do celular"
+    },
+    {
+      "name": "Beads",
+      "url": "https://github.com/steveyegge/beads",
+      "context": "Projeto de Steve Yegge — sistema git+database, forkado por Jeffrey Emanuel"
+    }
+  ],
+  "papers": [
+    {
+      "name": "The Bitter Lesson",
+      "author": "Richard Sutton",
+      "url": "http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
+      "context": "Ensaio de ~800 palavras citado como uma das melhores leituras: não tente ser mais esperto que a IA — escala vence"
+    },
+    {
+      "name": "Execution in the Kingdom of Nouns",
+      "author": "Steve Yegge",
+      "url": "https://steve-yegge.blogspot.com/2006/03/execution-in-kingdom-of-nouns.html",
+      "context": "Post próprio de Steve sobre Java — uma de suas peças favoritas dos leitores"
+    },
+    {
+      "name": "Rich Programmer Food",
+      "author": "Steve Yegge",
+      "url": "https://steve-yegge.blogspot.com/2007/06/rich-programmer-food.html",
+      "context": "Post de Steve argumentando que entender compiladores é fundamental para programadores"
+    },
+    {
+      "name": "Death of the Junior Developer",
+      "author": "Steve Yegge",
+      "url": "https://sourcegraph.com/blog/the-death-of-the-junior-developer",
+      "context": "Post escrito por Steve após experimentar Claude Code pela primeira vez"
+    },
+    {
+      "name": "The Borderlands Gun Collector Club",
+      "author": "Steve Yegge",
+      "url": "https://steve-yegge.blogspot.com/2011/08/borderlands-2-gun-collectors-club.html",
+      "context": "Ensaio de 2012 sobre gamificação e elder game mencionado por Gergely"
+    }
+  ],
+  "people": [
+    {
+      "name": "Steve Yegge",
+      "role": "Engenheiro de software há 40 anos, ex-Amazon, ex-Google, criador do Gas Town, co-autor de Vibe Coding",
+      "url": "https://steve-yegge.medium.com",
+      "context": "Convidado principal do episódio"
+    },
+    {
+      "name": "Gergely Orosz",
+      "role": "Host do The Pragmatic Engineer",
+      "url": "https://www.pragmaticengineer.com",
+      "context": "Entrevistador"
+    },
+    {
+      "name": "Gene Kim",
+      "role": "Autor e pesquisador de DevOps",
+      "url": "https://itrevolution.com/author/genek/",
+      "context": "Co-autor do livro Vibe Coding com Steve"
+    },
+    {
+      "name": "Erik Meijer",
+      "role": "Cientista da computação, contribuidor de C#, Haskell, Visual Basic, LINQ",
+      "url": "https://en.wikipedia.org/wiki/Erik_Meijer_(computer_scientist)",
+      "context": "Quem disse 'os dias de codar à mão acabaram', citação que abre o livro Vibe Coding"
+    },
+    {
+      "name": "Richard Sutton",
+      "role": "Pesquisador de aprendizado por reforço, autor de The Bitter Lesson",
+      "url": "https://en.wikipedia.org/wiki/Richard_S._Sutton",
+      "context": "Autor do ensaio The Bitter Lesson citado por Steve"
+    },
+    {
+      "name": "Chris Okasaki",
+      "role": "Cientista da computação, autor de Purely Functional Data Structures",
+      "url": "https://en.wikipedia.org/wiki/Chris_Okasaki",
+      "context": "Autor do livro referenciado para descrever a operação da Anthropic"
+    },
+    {
+      "name": "Nathan Sobo",
+      "role": "Co-fundador da Zed",
+      "url": "https://github.com/nathansobo",
+      "context": "Debateu com Steve sobre o futuro das IDEs"
+    },
+    {
+      "name": "Boris Cherny",
+      "role": "Engenheiro do Claude Code na Anthropic",
+      "url": "https://github.com/bcherny",
+      "context": "Citado por construir 20 protótipos funcionais em 2 dias usando IA"
+    },
+    {
+      "name": "Peter Steinberger",
+      "role": "Desenvolvedor independente conhecido pela alta produtividade com IA",
+      "url": "https://twitter.com/steipete",
+      "context": "Citado como exemplo de uma pessoa com produção equivalente a uma equipe de 10"
+    },
+    {
+      "name": "Jeff Huntley",
+      "role": "Desenvolvedor, criador do Ralph Wiggum (loop de Claude Code)",
+      "url": "https://ghuntley.com",
+      "context": "Citado por receber atenção de VCs ao lançar Ralph"
+    },
+    {
+      "name": "Jeffrey Emanuel",
+      "role": "Desenvolvedor, forkou o projeto Beads",
+      "url": "https://github.com/Dicklesworthstone",
+      "context": "Forkou o Beads de Steve e foi elogiado por isso"
+    },
+    {
+      "name": "Dario Amodei",
+      "role": "CEO da Anthropic",
+      "url": "https://en.wikipedia.org/wiki/Dario_Amodei",
+      "context": "Mencionou ideia de compensar funcionários mesmo após saída pela valor criado"
+    },
+    {
+      "name": "Andy Jassy",
+      "role": "CEO da Amazon",
+      "url": "https://en.wikipedia.org/wiki/Andy_Jassy",
+      "context": "Citado por declarar que Amazon fará o mesmo com menos pessoas"
+    },
+    {
+      "name": "Larry Page",
+      "role": "Co-fundador do Google",
+      "url": "https://en.wikipedia.org/wiki/Larry_Page",
+      "context": "Steve atribui a ele o motto 'mais lenha em menos flechas' que matou inovação no Google"
+    },
+    {
+      "name": "Sergey Brin",
+      "role": "Co-fundador do Google",
+      "url": "https://en.wikipedia.org/wiki/Sergey_Brin",
+      "context": "Mencionado como parte da era dourada do Google quando estava acessível na cafeteria"
+    },
+    {
+      "name": "Rich Hickey",
+      "role": "Criador do Clojure",
+      "url": "https://en.wikipedia.org/wiki/Rich_Hickey",
+      "context": "Steve teve discordância com ele sobre suporte do Clojure à JVM"
+    },
+    {
+      "name": "Larry Wall",
+      "role": "Criador do Perl",
+      "url": "https://en.wikipedia.org/wiki/Larry_Wall",
+      "context": "Citado pela frase sobre preguiça ser uma das virtudes do programador"
+    },
+    {
+      "name": "Swyx (Shawn Wang)",
+      "role": "Organizador da AI Engineer Summit",
+      "url": "https://www.swyx.io",
+      "context": "Mencionado pela conferência AI Engineer em Nova York"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Vibe Coding",
+      "url": "https://en.wikipedia.org/wiki/Vibe_coding",
+      "context": "Termo central — programação delegando código ao agente de IA, foco na conversação"
+    },
+    {
+      "name": "Bitter Lesson",
+      "url": "http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
+      "context": "Lição de Sutton: escala (mais dados, mais compute) vence engenhosidade humana"
+    },
+    {
+      "name": "Innovator's Dilemma",
+      "url": "https://en.wikipedia.org/wiki/The_Innovator%27s_Dilemma",
+      "context": "Citado para explicar por que grandes empresas não conseguem inovar com IA"
+    },
+    {
+      "name": "996 working hour system",
+      "url": "https://en.wikipedia.org/wiki/996_working_hour_system",
+      "context": "9h às 21h, 6 dias por semana — citado no contexto de burnout em startups de IA"
+    },
+    {
+      "name": "Lean Startup",
+      "url": "https://en.wikipedia.org/wiki/Lean_startup",
+      "context": "Metodologia que Steve diz estar sendo invertida pela IA — agora se lança o protótipo"
+    },
+    {
+      "name": "Overton Window",
+      "url": "https://en.wikipedia.org/wiki/Overton_window",
+      "context": "Steve menciona ter construído Gas Town para 'mover a janela de Overton' sobre orquestração"
+    },
+    {
+      "name": "Federation (computing)",
+      "url": "https://en.wikipedia.org/wiki/Federation_(information_technology)",
+      "context": "Próximo experimento de Steve: federar 100 Gas Towns"
+    },
+    {
+      "name": "S-curve",
+      "url": "https://en.wikipedia.org/wiki/Sigmoid_function",
+      "context": "Discussão sobre se a curva de capacidades dos LLMs é S-shaped ou exponencial"
+    }
+  ],
+  "companies": [
+    {"name": "Anthropic", "url": "https://www.anthropic.com"},
+    {"name": "Google", "url": "https://www.google.com"},
+    {"name": "Amazon", "url": "https://www.amazon.com"},
+    {"name": "OpenAI", "url": "https://openai.com"},
+    {"name": "Apple", "url": "https://www.apple.com"},
+    {"name": "Microsoft", "url": "https://www.microsoft.com"},
+    {"name": "Meta (Facebook)", "url": "https://about.meta.com"},
+    {"name": "Uber", "url": "https://www.uber.com"},
+    {"name": "Zendesk", "url": "https://www.zendesk.com"},
+    {"name": "Notion", "url": "https://www.notion.com"},
+    {"name": "Atlassian", "url": "https://www.atlassian.com"},
+    {"name": "Brex", "url": "https://www.brex.com"},
+    {"name": "GeoWorks", "url": "https://en.wikipedia.org/wiki/GEOS_(16-bit_operating_system)"},
+    {"name": "Sun Microsystems", "url": "https://en.wikipedia.org/wiki/Sun_Microsystems"}
+  ],
+  "related_posts": [
+    {
+      "slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
+      "slug_en": "head-claude-code-happens-after-coding-solved",
+      "reason": "Boris Cherny do Claude Code é citado nominalmente; ambos discutem o futuro pós-codificação"
+    },
+    {
+      "slug_pt": "claude-code-leak-what-weve-learned-so-far",
+      "slug_en": "claude-code-leak-we-have-learned-so-far",
+      "reason": "Steve discute extensivamente os internals e a evolução do Claude Code"
+    },
+    {
+      "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
+      "slug_en": "prompt-production-agentic-engineering",
+      "reason": "Conversa central sobre transição de vibe coding para engenharia agêntica em produção"
+    },
+    {
+      "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
+      "slug_en": "agentic-engineering-context-guardrails-creativity",
+      "reason": "Steve discute minimaxing context e os trade-offs entre minimizar e maximizar contexto"
+    },
+    {
+      "slug_pt": "fluxos-de-trabalho-agenticos-don-syme",
+      "slug_en": "agentic-workflows-don-syme",
+      "reason": "Tema paralelo sobre workflows agênticos e orquestração de múltiplos agentes"
+    },
+    {
+      "slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
+      "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code",
+      "reason": "Gas Town é exatamente sobre rodar múltiplos agentes (mayor + workers) em paralelo"
+    },
+    {
+      "slug_pt": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills",
+      "slug_en": "why-we-stopped-building-agents-started-building-skills",
+      "reason": "Discussão sobre arquitetura de agentes vs sub-agentes e patterns de orquestração"
+    },
+    {
+      "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
+      "slug_en": "engineering-practices-make-coding-agents-work",
+      "reason": "Sobreposição com práticas de engenharia para fazer agentes funcionarem em produção"
+    },
+    {
+      "slug_pt": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia",
+      "slug_en": "senior-engineer-demonstrates-spec-driven-ai-development-flow",
+      "reason": "Steve fala sobre tasks bem especificadas alimentando workers (polecats) — mesma filosofia"
+    },
+    {
+      "slug_pt": "estado-da-ia-2026-ponto-de-inflexao-simon-willison",
+      "slug_en": "state-ai-2026",
+      "reason": "Ambos falam sobre o ponto de inflexão atual, curvas exponenciais e implicações para a indústria"
+    },
+    {
+      "slug_pt": "politica-corporativa-tech-tudo-que-ninguem-te-conta",
+      "slug_en": "corporate-politics-tech-everything-nobody-tells",
+      "reason": "Steve descreve como falta de trabalho gerou política, land grabs e backstabbing no Google"
+    }
+  ]
+}

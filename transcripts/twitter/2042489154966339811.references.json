@@ -1,0 +1,35 @@
+{
+  "video_id": "2042489154966339811",
+  "extracted_at": "2026-04-14",
+  "books": [],
+  "tools": [],
+  "papers": [],
+  "people": [
+    {"name": "Patrick Winston", "role": "Professor de AI no MIT, autor da palestra", "url": "https://en.wikipedia.org/wiki/Patrick_Winston", "context": "Ministra a palestra 'How to Speak' no MIT"},
+    {"name": "Mary Lou Retton", "role": "Ginasta olímpica americana", "url": "https://en.wikipedia.org/wiki/Mary_Lou_Retton", "context": "Exemplo de que conhecimento e prática superam talento inato (esqui em Sun Valley)"},
+    {"name": "Seymour Papert", "role": "Matemático e educador do MIT", "url": "https://en.wikipedia.org/wiki/Seymour_Papert", "context": "Exemplo de uso eficaz do quadro e de props (roda de bicicleta) em aulas"},
+    {"name": "Henrik Ibsen", "role": "Dramaturgo norueguês", "url": "https://en.wikipedia.org/wiki/Henrik_Ibsen", "context": "Autor de 'Hedda Gabler', citado pelo uso magistral de props (fogão a lenha)"},
+    {"name": "Julia Child", "role": "Chef e apresentadora de TV", "url": "https://en.wikipedia.org/wiki/Julia_Child", "context": "Anedota sobre fama em evento beneficente por Veneza"},
+    {"name": "Doug Lenat", "role": "Pesquisador de IA (Cyc)", "url": "https://en.wikipedia.org/wiki/Doug_Lenat", "context": "Recomenda sempre terminar palestra com uma piada"},
+    {"name": "Chris Christie", "role": "Governador de Nova Jersey", "url": "https://en.wikipedia.org/wiki/Chris_Christie", "context": "Exemplo de discurso de encerramento (keynote Republicano)"},
+    {"name": "Bill Clinton", "role": "Ex-presidente dos EUA", "url": "https://en.wikipedia.org/wiki/Bill_Clinton", "context": "Exemplo de encerramento eficaz (keynote Democrata) sem dizer 'obrigado'"},
+    {"name": "Alan Lazarus", "role": "Professor de física do MIT (8.01)", "url": "https://en.wikipedia.org/wiki/Alan_Lightman", "context": "Demonstração do pêndulo com bola de aço para ilustrar conservação de energia"},
+    {"name": "Dolores Etter", "role": "Engenheira e ex-membro do Navy Science Board", "url": "https://en.wikipedia.org/wiki/Delores_M._Etter", "context": "Critério para contratação acadêmica: candidato precisa mostrar visão"}
+  ],
+  "concepts": [
+    {"name": "Empowerment promise", "url": "https://en.wikipedia.org/wiki/Public_speaking", "context": "Começar a palestra dizendo o que a audiência vai aprender"},
+    {"name": "Mirror neurons", "url": "https://en.wikipedia.org/wiki/Mirror_neuron", "context": "Explicação para eficácia de props e quadro (empathetic mirroring)"},
+    {"name": "Hapax legomenon", "url": "https://en.wikipedia.org/wiki/Hapax_legomenon", "context": "Slide que funciona apenas uma vez por apresentação"},
+    {"name": "Uniform Code of Military Justice", "url": "https://en.wikipedia.org/wiki/Uniform_Code_of_Military_Justice", "context": "Metáfora de abertura: enviar oficial ao combate sem arma"},
+    {"name": "Four-color theorem", "url": "https://en.wikipedia.org/wiki/Four_color_theorem", "context": "Exemplo de alocação de recursos (colorir estados dos EUA) em aula de IA"},
+    {"name": "Hedda Gabler", "url": "https://en.wikipedia.org/wiki/Hedda_Gabler", "context": "Peça de Ibsen usada como exemplo de uso dramático de props"}
+  ],
+  "companies": [
+    {"name": "MIT", "url": "https://www.mit.edu"},
+    {"name": "Microsoft (PowerPoint)", "url": "https://www.microsoft.com/powerpoint"}
+  ],
+  "related_posts": [
+    {"slug_pt": "conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford", "slug_en": "ai-career-advice-andrew-ng-lawrence-moroney-stanford", "reason": "Aborda comunicação como habilidade central para sucesso profissional, complementando as técnicas de apresentação"},
+    {"slug_pt": "politica-corporativa-tech-tudo-que-ninguem-te-conta", "slug_en": "corporate-politics-tech-everything-nobody-tells", "reason": "Ambos discutem como empacotar ideias e ser reconhecido (visibilidade profissional) em ambientes técnicos"}
+  ]
+}

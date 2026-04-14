@@ -1,0 +1,53 @@
+{
+  "video_id": "647pVgfV2yU",
+  "extracted_at": "2026-04-14",
+  "books": [],
+  "tools": [
+    {"name": "GitHub Agentic Workflows", "url": "https://github.com/githubnext/gh-aw"},
+    {"name": "GitHub Actions", "url": "https://github.com/features/actions"},
+    {"name": "GitHub Copilot", "url": "https://github.com/features/copilot"},
+    {"name": "Claude Code", "url": "https://claude.com/claude-code"},
+    {"name": "OpenAI Codex", "url": "https://openai.com/codex"},
+    {"name": "F# (F Sharp)", "url": "https://fsharp.org"},
+    {"name": ".NET", "url": "https://dotnet.microsoft.com"},
+    {"name": "NuGet", "url": "https://www.nuget.org"},
+    {"name": "NuGet Trusted Publishing", "url": "https://devblogs.microsoft.com/nuget/trusted-publishing/"},
+    {"name": "BenchmarkDotNet", "url": "https://benchmarkdotnet.org"},
+    {"name": "FSharp.Control.AsyncSeq", "url": "https://github.com/fsprojects/FSharp.Control.AsyncSeq"},
+    {"name": "repo-assist (agentic workflow)", "url": "https://github.com/githubnext/gh-aw"}
+  ],
+  "papers": [],
+  "people": [
+    {"name": "Don Syme", "url": "https://en.wikipedia.org/wiki/Don_Syme"},
+    {"name": "Scott Hanselman", "url": "https://en.wikipedia.org/wiki/Scott_Hanselman"},
+    {"name": "Peter Steinberger", "url": "https://twitter.com/steipete"}
+  ],
+  "concepts": [
+    {"name": "Agentic Workflows", "url": "https://en.wikipedia.org/wiki/AI_agent"},
+    {"name": "Continuous Integration", "url": "https://en.wikipedia.org/wiki/Continuous_integration"},
+    {"name": "Continuous Deployment", "url": "https://en.wikipedia.org/wiki/Continuous_deployment"},
+    {"name": "Continuous AI", "url": "https://githubnext.com/projects/continuous-ai/"},
+    {"name": "Software Development Life Cycle (SDLC)", "url": "https://en.wikipedia.org/wiki/Systems_development_life_cycle"},
+    {"name": "DevOps", "url": "https://en.wikipedia.org/wiki/DevOps"},
+    {"name": "Cyclomatic Complexity", "url": "https://en.wikipedia.org/wiki/Cyclomatic_complexity"},
+    {"name": "Vibe Coding", "url": "https://en.wikipedia.org/wiki/Vibe_coding"},
+    {"name": "Technical Debt", "url": "https://en.wikipedia.org/wiki/Technical_debt"},
+    {"name": "Null Safety", "url": "https://en.wikipedia.org/wiki/Void_safety"},
+    {"name": "AGENTS.md", "url": "https://agents.md"}
+  ],
+  "companies": [
+    {"name": "GitHub", "url": "https://github.com"},
+    {"name": "Microsoft", "url": "https://microsoft.com"},
+    {"name": "Anthropic", "url": "https://anthropic.com"},
+    {"name": "OpenAI", "url": "https://openai.com"}
+  ],
+  "related_posts": [
+    {"slug": "head-claude-code-happens-after-coding-solved", "reason": "future of coding with AI agents"},
+    {"slug": "prompt-production-agentic-engineering", "reason": "agentic engineering practices in production"},
+    {"slug": "agentic-engineering-context-guardrails-creativity", "reason": "guardrails and context for agentic workflows"},
+    {"slug": "senior-engineer-demonstrates-spec-driven-ai-development-flow", "reason": "spec-driven flow and maintainer oversight"},
+    {"slug": "engineering-practices-make-coding-agents-work", "reason": "engineering practices for coding agents"},
+    {"slug": "why-we-stopped-building-agents-started-building-skills", "reason": "agent constraints vs skills"},
+    {"slug": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code", "reason": "multi-agent agentic coding"}
+  ]
+}

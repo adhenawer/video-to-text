@@ -1,0 +1,19 @@
+{
+  "video_id": "2042624568880197650",
+  "extracted_at": "2026-04-14",
+  "books": [],
+  "tools": [],
+  "papers": [],
+  "people": [],
+  "concepts": [
+    {"name": "Order Flow Trading", "url": "https://en.wikipedia.org/wiki/Order_flow_trading"},
+    {"name": "Market Microstructure", "url": "https://en.wikipedia.org/wiki/Market_microstructure"},
+    {"name": "S&P 500 Futures", "url": "https://en.wikipedia.org/wiki/S%26P_500"},
+    {"name": "Nasdaq-100 Futures", "url": "https://en.wikipedia.org/wiki/NASDAQ-100"},
+    {"name": "Breakout (technical analysis)", "url": "https://en.wikipedia.org/wiki/Breakout_(technical_analysis)"}
+  ],
+  "companies": [],
+  "related_posts": [
+    {"slug": "financas-comportamentais-robert-shiller-yale", "reason": "Both discuss market behavior, probability, and trader psychology"}
+  ]
+}

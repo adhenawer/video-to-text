@@ -1,0 +1,66 @@
+{
+  "video_id": "owmJyKVu5f8",
+  "extracted_at": "2026-04-14",
+  "books": [],
+  "tools": [
+    {"name": "Claude Code", "url": "https://claude.com/product/claude-code", "context": "Simon usa Claude Code como agente principal de codificação; cita Claude Code for the Web rodando em containers Anthropic"},
+    {"name": "Claude Opus 4.5", "url": "https://www.anthropic.com/claude", "context": "Primeiro modelo que ganhou a confiança de Simon em novembro"},
+    {"name": "Claude Opus 4.6", "url": "https://www.anthropic.com/claude", "context": "Modelo mais recente que está one-shottando praticamente tudo"},
+    {"name": "GPT-5.1", "url": "https://openai.com/", "context": "Modelo OpenAI citado como inflexão em novembro"},
+    {"name": "OpenAI Codex 5.3", "url": "https://openai.com/codex", "context": "Citado junto com Opus 4.6 como ponto de inflexão"},
+    {"name": "GitHub Copilot", "url": "https://github.com/features/copilot", "context": "Ferramenta inicial em 2022 que começou a jornada de IA no desenvolvimento"},
+    {"name": "ChatGPT", "url": "https://chat.openai.com/", "context": "Interface de chat que amadureceu em 2023"},
+    {"name": "Django", "url": "https://www.djangoproject.com/", "context": "Framework web Python co-criado por Simon em 2003"},
+    {"name": "Datasette", "url": "https://datasette.io/", "context": "Projeto open source principal de Simon para jornalismo de dados"},
+    {"name": "Showboat", "url": "https://github.com/simonw/showboat", "context": "Ferramenta nova de Simon que gera markdown de testes manuais executados por agentes"},
+    {"name": "Cookiecutter", "url": "https://github.com/cookiecutter/cookiecutter", "context": "Ferramenta Python de templating usada por Simon para criar projetos com padrões consistentes"},
+    {"name": "uv", "url": "https://github.com/astral-sh/uv", "context": "Simon usa 'uv run pytest' como framework de testes atual"},
+    {"name": "pytest", "url": "https://pytest.org/", "context": "Framework de testes Python usado por Simon"},
+    {"name": "Starlette", "url": "https://www.starlette.io/", "context": "Um dos frameworks web usados como referência para construir conformance suite de uploads"},
+    {"name": "Node.js", "url": "https://nodejs.org/", "context": "Usado como referência na conformance suite de uploads multipart"},
+    {"name": "Go", "url": "https://go.dev/", "context": "Simon lançou três projetos em Go nas últimas duas semanas apesar de não ser fluente"},
+    {"name": "Docker", "url": "https://www.docker.com/", "context": "Citado como boa solução de sandboxing para agentes"},
+    {"name": "Apple Containers", "url": "https://github.com/apple/containerization", "context": "Solução de sandboxing alternativa"},
+    {"name": "Tailwind CSS", "url": "https://tailwindcss.com/", "context": "Modelo de negócio de componentes pagos colapsou com vibe coding"},
+    {"name": "curl", "url": "https://curl.se/", "context": "Simon instrui agentes a usar curl para exercitar APIs em testes manuais"},
+    {"name": "WebAssembly", "url": "https://webassembly.org/", "context": "Spec com conformance suite usada como exemplo para agentes implementarem standards"},
+    {"name": "Redis", "url": "https://redis.io/", "context": "Exemplo de tecnologia onde o primeiro uso em uma empresa vira padrão copiado"},
+    {"name": "GitHub", "url": "https://github.com/", "context": "Discussão sobre pull requests sendo inundados por contribuições de baixa qualidade"},
+    {"name": "Atom Feeds", "url": "https://en.wikipedia.org/wiki/Atom_(web_standard)", "context": "Simon adicionou atom feeds ao blog via celular durante a entrevista"}
+  ],
+  "papers": [],
+  "people": [
+    {"name": "Simon Willison", "role": "Co-criador do Django, criador do Datasette, blogger sobre IA", "url": "https://simonwillison.net/", "context": "Convidado principal da entrevista"},
+    {"name": "Eric", "role": "Líder de infraestrutura e segurança na Statsig", "url": "https://www.statsig.com/", "context": "Entrevistador"}
+  ],
+  "concepts": [
+    {"name": "Test-Driven Development (Red-Green TDD)", "url": "https://en.wikipedia.org/wiki/Test-driven_development", "context": "Trick número 1 de Simon: começar toda sessão com 'use red green TDD'"},
+    {"name": "Prompt Injection", "url": "https://en.wikipedia.org/wiki/Prompt_injection", "context": "Termo cunhado por Simon há 3,5 anos, inspirado em SQL injection"},
+    {"name": "Lethal Trifecta", "url": "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/", "context": "Segundo termo de Simon: acesso a dados privados + exposição a instruções maliciosas + vetor de exfiltração"},
+    {"name": "SQL Injection", "url": "https://en.wikipedia.org/wiki/SQL_injection", "context": "Inspiração original para o nome prompt injection"},
+    {"name": "Vibe Coding", "url": "https://en.wikipedia.org/wiki/Vibe_coding", "context": "Simon fala de ferramentas vibe coded em HTML/JavaScript onde qualidade não importa"},
+    {"name": "Conformance-Driven Development", "url": "https://simonwillison.net/", "context": "Conceito de Simon: usar test suites language-agnostic para guiar agentes a implementarem standards"},
+    {"name": "Sandboxing", "url": "https://en.wikipedia.org/wiki/Sandbox_(computer_security)", "context": "Principal defesa contra agentes com prompt injection"}
+  ],
+  "companies": [
+    {"name": "Statsig", "url": "https://www.statsig.com/"},
+    {"name": "Anthropic", "url": "https://www.anthropic.com/"},
+    {"name": "OpenAI", "url": "https://openai.com/"},
+    {"name": "StrongDM", "url": "https://www.strongdm.com/"},
+    {"name": "Eventbrite", "url": "https://www.eventbrite.com/"},
+    {"name": "Lanyrd", "url": "https://en.wikipedia.org/wiki/Lanyrd"},
+    {"name": "GitHub", "url": "https://github.com/"},
+    {"name": "Google (Gemini)", "url": "https://deepmind.google/technologies/gemini/"},
+    {"name": "Docker", "url": "https://www.docker.com/"},
+    {"name": "Apple", "url": "https://www.apple.com/"}
+  ],
+  "related_posts": [
+    {"slug_pt": "estado-da-ia-2026-ponto-de-inflexao-simon-willison", "slug_en": "state-ai-2026", "reason": "Mesmo autor (Simon Willison) discutindo inflexões e estado da IA"},
+    {"slug_pt": "claude-code-leak-what-weve-learned-so-far", "slug_en": "claude-code-leak-we-have-learned-so-far", "reason": "Simon fala extensivamente sobre Claude Code como ferramenta principal"},
+    {"slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida", "slug_en": "head-claude-code-happens-after-coding-solved", "reason": "Discussão sobre futuro da programação com Claude Code"},
+    {"slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade", "slug_en": "agentic-engineering-context-guardrails-creativity", "reason": "Simon discute guardrails, sandboxing e contexto para agentes"},
+    {"slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica", "slug_en": "prompt-production-agentic-engineering", "reason": "Fluxo de prompt a produção com TDD e agentes"},
+    {"slug_pt": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia", "slug_en": "senior-engineer-demonstrates-spec-driven-ai-development-flow", "reason": "Fluxo de desenvolvimento spec/test-driven com IA — relacionado ao conformance-driven development de Simon"},
+    {"slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code", "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code", "reason": "Simon discute rodar múltiplos agentes em paralelo em projetos diferentes"}
+  ]
+}

@@ -103,6 +103,68 @@ header h1 {
 }
 .theme-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
 
+/* --- References sidebar --- */
+.references-sidebar {
+  position: fixed;
+  right: 16px;
+  top: 68px;
+  width: 280px;
+  max-height: calc(100vh - 90px);
+  overflow-y: auto;
+  background: var(--toc-bg);
+  border: 1px solid var(--toc-border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.82em;
+  z-index: 50;
+  transition: background 0.3s, border-color 0.3s;
+}
+.references-sidebar h3 {
+  font-size: 0.95em; font-weight: 700; margin: 0 0 10px;
+  color: var(--text-heading);
+}
+.references-sidebar details { margin-bottom: 8px; }
+.references-sidebar summary {
+  cursor: pointer; font-weight: 600; padding: 4px 0;
+  color: var(--text); list-style: none;
+}
+.references-sidebar summary::-webkit-details-marker { display: none; }
+.references-sidebar summary::before {
+  content: "▸ "; font-size: 0.7em; color: var(--text-muted);
+  transition: transform 0.2s;
+}
+.references-sidebar details[open] > summary::before {
+  content: "▾ ";
+}
+.references-sidebar .ref-count {
+  color: var(--text-muted); font-weight: 400; font-size: 0.9em;
+}
+.references-sidebar ul {
+  list-style: none; margin: 4px 0 0; padding-left: 16px;
+}
+.references-sidebar li {
+  padding: 4px 0; line-height: 1.4;
+  border-bottom: 1px dashed var(--border);
+}
+.references-sidebar li:last-child { border-bottom: none; }
+.references-sidebar li a {
+  color: var(--link); text-decoration: none;
+}
+.references-sidebar li a:hover { text-decoration: underline; }
+.references-sidebar li small {
+  color: var(--text-muted); font-size: 0.88em;
+}
+@media (max-width: 1200px) {
+  .references-sidebar {
+    position: static; width: auto; max-width: 680px;
+    margin: 32px auto; max-height: none;
+  }
+}
+@media (max-width: 600px) {
+  .references-sidebar { margin: 24px 16px; font-size: 0.88em; }
+}
+
 /* --- Language switcher --- */
 .lang-bar { display: flex; justify-content: center; gap: 8px; margin: 16px 0 8px; }
 .lang-btn {

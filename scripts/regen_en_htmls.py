@@ -76,6 +76,7 @@ def main():
             lang="original",
             pt_slug=pt_slug,
             en_slug=en_slug,
+            provider=provider,
         )
         with open(html_path, "w") as f:
             f.write(html)
