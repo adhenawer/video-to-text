@@ -53,13 +53,19 @@
   "people": [
     {
       "name": "Kane Hooper",
-      "role": "COO da Reinteractive, especialista em agentic engineering",
+      "role": {
+        "pt": "COO da Reinteractive, especialista em agentic engineering",
+        "en": "COO of Reinteractive, specialist in agentic engineering"
+      },
       "url": "https://twitter.com/kanehooper",
       "context": "Convidado principal; há 3 anos trabalhando em agentic engineering, construiu o agent cluster"
     },
     {
       "name": "Errol",
-      "role": "Apresentador do webinar (Reinteractive)",
+      "role": {
+        "pt": "Apresentador do webinar (Reinteractive)",
+        "en": "Webinar host (Reinteractive)"
+      },
       "url": "",
       "context": "Host que entrevista Kane Hooper"
     }
@@ -142,27 +148,42 @@
     {
       "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
       "slug_en": "agentic-engineering-context-guardrails-creativity",
-      "reason": "Tema central idêntico: agentic engineering com guardrails vs vibe coding"
+      "reason": {
+        "pt": "Tema central idêntico: agentic engineering com guardrails vs vibe coding",
+        "en": "Identical core theme: agentic engineering with guardrails vs vibe coding"
+      }
     },
     {
       "slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
       "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code",
-      "reason": "Padrão conductor + múltiplos sub-agentes especializados discutido no vídeo"
+      "reason": {
+        "pt": "Padrão conductor + múltiplos sub-agentes especializados discutido no vídeo",
+        "en": "Conductor pattern plus multiple specialized sub-agents discussed in the video"
+      }
     },
     {
       "slug_pt": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia",
       "slug_en": "senior-engineer-demonstrates-spec-driven-ai-development-flow",
-      "reason": "Ênfase em specs claras (scope validator) para evitar garbage in/out"
+      "reason": {
+        "pt": "Ênfase em specs claras (scope validator) para evitar garbage in/out",
+        "en": "Emphasis on clear specs (scope validator) to avoid garbage in/out"
+      }
     },
     {
       "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
       "slug_en": "engineering-practices-make-coding-agents-work",
-      "reason": "Práticas de engenharia aplicadas a agentes de código em produção"
+      "reason": {
+        "pt": "Práticas de engenharia aplicadas a agentes de código em produção",
+        "en": "Engineering practices applied to coding agents in production"
+      }
     },
     {
       "slug_pt": "fluxos-de-trabalho-agenticos-don-syme",
       "slug_en": "agentic-workflows-don-syme",
-      "reason": "Loops de avaliação e workflows agênticos multi-step"
+      "reason": {
+        "pt": "Loops de avaliação e workflows agênticos multi-step",
+        "en": "Evaluation loops and multi-step agentic workflows"
+      }
     }
   ]
 }

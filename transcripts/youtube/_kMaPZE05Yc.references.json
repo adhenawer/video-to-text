@@ -143,13 +143,13 @@
   "people": [
     {
       "name": "Dhaval Patel",
-      "role": "Co-founder of Atliq AI consultancy, ex-Bloomberg/Nvidia, host",
+      "role": {"pt": "Cofundador da consultoria de IA Atliq, ex-Bloomberg/Nvidia, apresentador", "en": "Co-founder of Atliq AI consultancy, ex-Bloomberg/Nvidia, host"},
       "url": "https://twitter.com/dhavalsays",
       "context": "Presenter of the AI engineering roadmap"
     },
     {
       "name": "Andrej Karpathy",
-      "role": "AI researcher",
+      "role": {"pt": "Pesquisador de IA", "en": "AI researcher"},
       "url": "https://twitter.com/karpathy",
       "context": "Example AI personality to engage with on social"
     }
@@ -241,27 +241,27 @@
     {
       "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
       "slug_en": "prompt-production-agentic-engineering",
-      "reason": "Covers agentic engineering fundamentals aligned with this roadmap"
+      "reason": {"pt": "Cobre fundamentos de engenharia agêntica alinhados com este roadmap", "en": "Covers agentic engineering fundamentals aligned with this roadmap"}
     },
     {
       "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
       "slug_en": "agentic-engineering-context-guardrails-creativity",
-      "reason": "Expands on context engineering and guardrails touched in weeks 3 and 5"
+      "reason": {"pt": "Expande os temas de context engineering e guardrails abordados nas semanas 3 e 5", "en": "Expands on context engineering and guardrails touched in weeks 3 and 5"}
     },
     {
       "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
       "slug_en": "engineering-practices-make-coding-agents-work",
-      "reason": "Complements production AI engineering practices"
+      "reason": {"pt": "Complementa práticas de engenharia de IA em produção", "en": "Complements production AI engineering practices"}
     },
     {
       "slug_pt": "ia-agentica-progressao-uso-modelos-linguagem-stanford",
       "slug_en": "agentic-ai-progression-language-model-usage",
-      "reason": "Academic progression of agentic AI parallels this practical roadmap"
+      "reason": {"pt": "A progressão acadêmica da IA agêntica é paralela a este roadmap prático", "en": "Academic progression of agentic AI parallels this practical roadmap"}
     },
     {
       "slug_pt": "conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford",
       "slug_en": "ai-career-advice-andrew-ng-lawrence-moroney-stanford",
-      "reason": "Career transition into AI engineering"
+      "reason": {"pt": "Transição de carreira para engenharia de IA", "en": "Career transition into AI engineering"}
     }
   ]
 }

@@ -118,13 +118,19 @@
   "people": [
     {
       "name": "Krishna Naik",
-      "role": "Apresentador do canal e educador em IA",
+      "role": {
+        "pt": "Apresentador do canal e educador em IA",
+        "en": "Channel host and AI educator"
+      },
       "url": "https://www.youtube.com/@krishnaik06",
       "context": "Abre o vídeo apresentando o bootcamp e o mentor convidado."
     },
     {
       "name": "Sunny Savita",
-      "role": "Mentor convidado, engenheiro na PwC",
+      "role": {
+        "pt": "Mentor convidado, engenheiro na PwC",
+        "en": "Guest mentor, engineer at PwC"
+      },
       "url": "https://www.youtube.com/@SunnySavita10",
       "context": "Conduz toda a demonstração prática de Claude Code e construção do agente de suporte."
     }
@@ -208,27 +214,42 @@
     {
       "slug_pt": "guia-completo-claude-iniciante-sistema-operacional-ia",
       "slug_en": "complete-claude-guide-beginner-ai-operating-system",
-      "reason": "Ambos são guias introdutórios de Claude/Claude Code voltados a iniciantes, cobrindo configuração e uso prático."
+      "reason": {
+        "pt": "Ambos são guias introdutórios de Claude/Claude Code voltados a iniciantes, cobrindo configuração e uso prático.",
+        "en": "Both are introductory guides to Claude/Claude Code aimed at beginners, covering setup and practical usage."
+      }
     },
     {
       "slug_pt": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia",
       "slug_en": "senior-engineer-demonstrates-spec-driven-ai-development-flow",
-      "reason": "Reforça a mensagem central do vídeo: desenvolver módulo a módulo com especificações claras em vez de um prompt único."
+      "reason": {
+        "pt": "Reforça a mensagem central do vídeo: desenvolver módulo a módulo com especificações claras em vez de um prompt único.",
+        "en": "Reinforces the video's core message: develop module by module with clear specifications instead of a single prompt."
+      }
     },
     {
       "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
       "slug_en": "prompt-production-agentic-engineering",
-      "reason": "Cobre como sair de prompts isolados para um sistema agentico em produção — tema central do projeto de suporte por email."
+      "reason": {
+        "pt": "Cobre como sair de prompts isolados para um sistema agentico em produção — tema central do projeto de suporte por email.",
+        "en": "Covers how to move from isolated prompts to an agentic system in production — the central theme of the email support project."
+      }
     },
     {
       "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
       "slug_en": "agentic-engineering-context-guardrails-creativity",
-      "reason": "Discute contexto e guardrails, diretamente relacionado à crítica do vídeo sobre prompts grandes e falta de arquitetura."
+      "reason": {
+        "pt": "Discute contexto e guardrails, diretamente relacionado à crítica do vídeo sobre prompts grandes e falta de arquitetura.",
+        "en": "Discusses context and guardrails, directly related to the video's critique of large prompts and lack of architecture."
+      }
     },
     {
       "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
       "slug_en": "engineering-practices-make-coding-agents-work",
-      "reason": "Complementa o vídeo ao tratar das práticas de engenharia necessárias para que agentes de código funcionem bem na prática."
+      "reason": {
+        "pt": "Complementa o vídeo ao tratar das práticas de engenharia necessárias para que agentes de código funcionem bem na prática.",
+        "en": "Complements the video by addressing the engineering practices needed for coding agents to work well in practice."
+      }
     }
   ]
 }

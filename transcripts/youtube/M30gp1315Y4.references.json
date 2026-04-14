@@ -43,7 +43,10 @@
   "people": [
     {
       "name": "IndyDevDan",
-      "role": "Criador do canal e autor do sistema multi-team agentic coding",
+      "role": {
+        "pt": "Criador do canal e autor do sistema multi-team agentic coding",
+        "en": "Channel creator and author of the multi-team agentic coding system"
+      },
       "url": "https://twitter.com/indydevdan",
       "context": "Apresentador do vídeo, ex-lead data scientist, criador dos cursos Tactical Agentic Coding e Agentic Horizon."
     }
@@ -104,47 +107,74 @@
     {
       "slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
       "slug_en": "head-claude-code-happens-after-coding-solved",
-      "reason": "Discute o futuro do coding com agentes, contexto direto para multi-team agentic coding."
+      "reason": {
+        "pt": "Discute o futuro do coding com agentes, contexto direto para multi-team agentic coding.",
+        "en": "Discusses the future of coding with agents, direct context for multi-team agentic coding."
+      }
     },
     {
       "slug_pt": "claude-code-leak-what-weve-learned-so-far",
       "slug_en": "claude-code-leak-we-have-learned-so-far",
-      "reason": "Claude Code é referenciado como a fronteira atual que este sistema busca superar."
+      "reason": {
+        "pt": "Claude Code é referenciado como a fronteira atual que este sistema busca superar.",
+        "en": "Claude Code is referenced as the current frontier this system aims to surpass."
+      }
     },
     {
       "slug_pt": "de-ides-para-agentes-de-ia-steve-yegge",
       "slug_en": "ides-ai-agents",
-      "reason": "Transição de IDEs para agentes — base conceitual do agent harness customizado."
+      "reason": {
+        "pt": "Transição de IDEs para agentes — base conceitual do agent harness customizado.",
+        "en": "Transition from IDEs to agents — conceptual foundation of the custom agent harness."
+      }
     },
     {
       "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
       "slug_en": "prompt-production-agentic-engineering",
-      "reason": "Define engenharia agêntica, termo central do vídeo."
+      "reason": {
+        "pt": "Define engenharia agêntica, termo central do vídeo.",
+        "en": "Defines agentic engineering, a central term in the video."
+      }
     },
     {
       "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
       "slug_en": "agentic-engineering-context-guardrails-creativity",
-      "reason": "Contexto, guardrails (domain locking) e criatividade são pilares aplicados no sistema multi-team."
+      "reason": {
+        "pt": "Contexto, guardrails (domain locking) e criatividade são pilares aplicados no sistema multi-team.",
+        "en": "Context, guardrails (domain locking) and creativity are pillars applied in the multi-team system."
+      }
     },
     {
       "slug_pt": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia",
       "slug_en": "senior-engineer-demonstrates-spec-driven-ai-development-flow",
-      "reason": "Fluxo plan → engineer → validate é exatamente o workflow usado pelos times no vídeo."
+      "reason": {
+        "pt": "Fluxo plan → engineer → validate é exatamente o workflow usado pelos times no vídeo.",
+        "en": "The plan → engineer → validate flow is exactly the workflow used by the teams in the video."
+      }
     },
     {
       "slug_pt": "fluxos-de-trabalho-agenticos-don-syme",
       "slug_en": "agentic-workflows-don-syme",
-      "reason": "Workflows agênticos e orquestração multi-agente."
+      "reason": {
+        "pt": "Workflows agênticos e orquestração multi-agente.",
+        "en": "Agentic workflows and multi-agent orchestration."
+      }
     },
     {
       "slug_pt": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills",
       "slug_en": "why-we-stopped-building-agents-started-building-skills",
-      "reason": "Skills compartilhadas entre agentes são componente central do sistema."
+      "reason": {
+        "pt": "Skills compartilhadas entre agentes são componente central do sistema.",
+        "en": "Skills shared between agents are a central component of the system."
+      }
     },
     {
       "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
       "slug_en": "engineering-practices-make-coding-agents-work",
-      "reason": "Práticas de engenharia para fazer agentes funcionarem em produção."
+      "reason": {
+        "pt": "Práticas de engenharia para fazer agentes funcionarem em produção.",
+        "en": "Engineering practices to make agents work in production."
+      }
     }
   ]
 }

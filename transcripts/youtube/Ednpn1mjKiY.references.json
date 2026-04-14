@@ -138,31 +138,46 @@
   "people": [
     {
       "name": "Sam Breed",
-      "role": "Partner na Sutter Hill Ventures, lead engineer do Intent, ex-senior staff Credit Karma",
+      "role": {
+        "pt": "Partner na Sutter Hill Ventures, lead engineer do Intent, ex-senior staff na Credit Karma",
+        "en": "Partner at Sutter Hill Ventures, lead engineer of Intent, former senior staff at Credit Karma"
+      },
       "url": "https://twitter.com/sambreed",
       "context": "Convidado principal mostrando fluxo Figma to Astro com Intent"
     },
     {
       "name": "AJ",
-      "role": "Technical Content Lead na Augment",
+      "role": {
+        "pt": "Technical Content Lead na Augment",
+        "en": "Technical Content Lead at Augment"
+      },
       "url": "https://augmentcode.com",
       "context": "Host da serie de lives com engenheiros senior"
     },
     {
       "name": "Igor (Eigor)",
-      "role": "Co-founder da Augment Code",
+      "role": {
+        "pt": "Cofundador da Augment Code",
+        "en": "Co-founder of Augment Code"
+      },
       "url": "https://augmentcode.com",
       "context": "Sam trabalhou com ele quando Augment ainda era so o Igor"
     },
     {
       "name": "Amelia",
-      "role": "Engenheira na Augment",
+      "role": {
+        "pt": "Engenheira na Augment",
+        "en": "Engineer at Augment"
+      },
       "url": "https://augmentcode.com",
       "context": "Escreveu o prompt do UI designer specialist"
     },
     {
       "name": "Sarah Connor",
-      "role": "Personagem Terminator",
+      "role": {
+        "pt": "Personagem de Terminator",
+        "en": "Terminator character"
+      },
       "url": "https://en.wikipedia.org/wiki/Sarah_Connor_(Terminator)",
       "context": "Metafora do PR Shepard cacando PR verde como terminator"
     }
@@ -261,27 +276,42 @@
     {
       "slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
       "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code",
-      "reason": "Intent orquestra time de agentes (coordinator/implementer/verifier) alem do modelo single-agent do Claude Code"
+      "reason": {
+        "pt": "Intent orquestra time de agentes (coordinator/implementer/verifier) alem do modelo single-agent do Claude Code",
+        "en": "Intent orchestrates a team of agents (coordinator/implementer/verifier) beyond the single-agent model of Claude Code"
+      }
     },
     {
       "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
       "slug_en": "agentic-engineering-context-guardrails-creativity",
-      "reason": "Sam fala muito sobre gestao de contexto, MCPs com moderacao e guardrails via verifier"
+      "reason": {
+        "pt": "Sam fala muito sobre gestao de contexto, MCPs com moderacao e guardrails via verifier",
+        "en": "Sam talks extensively about context management, MCPs in moderation, and guardrails via verifier"
+      }
     },
     {
       "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
       "slug_en": "prompt-production-agentic-engineering",
-      "reason": "Demo de engenharia agentica real: de comp Figma a site Astro em producao"
+      "reason": {
+        "pt": "Demo de engenharia agentica real: de comp Figma a site Astro em producao",
+        "en": "Real agentic engineering demo: from Figma comp to Astro site in production"
+      }
     },
     {
       "slug_pt": "fluxos-de-trabalho-agenticos-don-syme",
       "slug_en": "agentic-workflows-don-syme",
-      "reason": "Workflow multi-workspace paralelo descrito por Sam ecoa padroes de fluxos agenticos"
+      "reason": {
+        "pt": "Workflow multi-workspace paralelo descrito por Sam ecoa padroes de fluxos agenticos",
+        "en": "The parallel multi-workspace workflow Sam describes echoes agentic workflow patterns"
+      }
     },
     {
       "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
       "slug_en": "engineering-practices-make-coding-agents-work",
-      "reason": "Praticas de verificacao, review e setup scripts que fazem agentes realmente funcionarem"
+      "reason": {
+        "pt": "Praticas de verificacao, review e setup scripts que fazem agentes realmente funcionarem",
+        "en": "Verification, review, and setup-script practices that make coding agents actually work"
+      }
     }
   ]
 }

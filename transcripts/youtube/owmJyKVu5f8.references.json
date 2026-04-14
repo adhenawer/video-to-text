@@ -128,13 +128,19 @@
   "people": [
     {
       "name": "Simon Willison",
-      "role": "Co-criador do Django, criador do Datasette, blogger sobre IA",
+      "role": {
+        "pt": "Co-criador do Django, criador do Datasette, blogger sobre IA",
+        "en": "Co-creator of Django, creator of Datasette, AI blogger"
+      },
       "url": "https://twitter.com/simonw",
       "context": "Convidado principal da entrevista"
     },
     {
       "name": "Eric",
-      "role": "Líder de infraestrutura e segurança na Statsig",
+      "role": {
+        "pt": "Líder de infraestrutura e segurança na Statsig",
+        "en": "Infrastructure and security lead at Statsig"
+      },
       "url": "https://www.statsig.com/",
       "context": "Entrevistador"
     }
@@ -222,37 +228,58 @@
     {
       "slug_pt": "estado-da-ia-2026-ponto-de-inflexao-simon-willison",
       "slug_en": "state-ai-2026",
-      "reason": "Mesmo autor (Simon Willison) discutindo inflexões e estado da IA"
+      "reason": {
+        "pt": "Mesmo autor (Simon Willison) discutindo inflexões e estado da IA",
+        "en": "Same author (Simon Willison) discussing inflections and the state of AI"
+      }
     },
     {
       "slug_pt": "claude-code-leak-what-weve-learned-so-far",
       "slug_en": "claude-code-leak-we-have-learned-so-far",
-      "reason": "Simon fala extensivamente sobre Claude Code como ferramenta principal"
+      "reason": {
+        "pt": "Simon fala extensivamente sobre Claude Code como ferramenta principal",
+        "en": "Simon talks extensively about Claude Code as his main tool"
+      }
     },
     {
       "slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
       "slug_en": "head-claude-code-happens-after-coding-solved",
-      "reason": "Discussão sobre futuro da programação com Claude Code"
+      "reason": {
+        "pt": "Discussão sobre futuro da programação com Claude Code",
+        "en": "Discussion about the future of programming with Claude Code"
+      }
     },
     {
       "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
       "slug_en": "agentic-engineering-context-guardrails-creativity",
-      "reason": "Simon discute guardrails, sandboxing e contexto para agentes"
+      "reason": {
+        "pt": "Simon discute guardrails, sandboxing e contexto para agentes",
+        "en": "Simon discusses guardrails, sandboxing and context for agents"
+      }
     },
     {
       "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
       "slug_en": "prompt-production-agentic-engineering",
-      "reason": "Fluxo de prompt a produção com TDD e agentes"
+      "reason": {
+        "pt": "Fluxo de prompt a produção com TDD e agentes",
+        "en": "Prompt-to-production flow with TDD and agents"
+      }
     },
     {
       "slug_pt": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia",
       "slug_en": "senior-engineer-demonstrates-spec-driven-ai-development-flow",
-      "reason": "Fluxo de desenvolvimento spec/test-driven com IA — relacionado ao conformance-driven development de Simon"
+      "reason": {
+        "pt": "Fluxo de desenvolvimento spec/test-driven com IA — relacionado ao conformance-driven development de Simon",
+        "en": "Spec/test-driven development flow with AI — related to Simon's conformance-driven development"
+      }
     },
     {
       "slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
       "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code",
-      "reason": "Simon discute rodar múltiplos agentes em paralelo em projetos diferentes"
+      "reason": {
+        "pt": "Simon discute rodar múltiplos agentes em paralelo em projetos diferentes",
+        "en": "Simon discusses running multiple agents in parallel across different projects"
+      }
     }
   ]
 }

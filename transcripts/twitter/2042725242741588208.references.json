@@ -68,109 +68,163 @@
   "people": [
     {
       "name": "Adam Smith",
-      "role": "Economista e filósofo moral escocês, figura central do pensamento econômico",
+      "role": {
+        "pt": "Economista e filósofo moral escocês, figura central do pensamento econômico",
+        "en": "Scottish economist and moral philosopher, a central figure in economic thought"
+      },
       "url": "https://en.wikipedia.org/wiki/Adam_Smith",
       "context": "Professor de filosofia moral em 1759; obras centrais da palestra"
     },
     {
       "name": "Daniel Kahneman",
-      "role": "Psicólogo, Nobel de Economia, co-criador da Prospect Theory",
+      "role": {
+        "pt": "Psicólogo, Nobel de Economia, co-criador da Prospect Theory",
+        "en": "Psychologist, Nobel laureate in Economics, co-creator of Prospect Theory"
+      },
       "url": "https://en.wikipedia.org/wiki/Daniel_Kahneman",
       "context": "Co-inventor da prospect theory, weighting function, anchoring e representativeness heuristic"
     },
     {
       "name": "Amos Tversky",
-      "role": "Psicólogo cognitivo israelense, co-criador da Prospect Theory",
+      "role": {
+        "pt": "Psicólogo cognitivo israelense, co-criador da Prospect Theory",
+        "en": "Israeli cognitive psychologist, co-creator of Prospect Theory"
+      },
       "url": "https://en.wikipedia.org/wiki/Amos_Tversky",
       "context": "Co-inventor da prospect theory junto a Kahneman"
     },
     {
       "name": "Gerd Gigerenzer",
-      "role": "Psicólogo alemão, diretor do Max Planck Institute em Berlim",
+      "role": {
+        "pt": "Psicólogo alemão, diretor do Max Planck Institute em Berlim",
+        "en": "German psychologist, director of the Max Planck Institute in Berlin"
+      },
       "url": "https://en.wikipedia.org/wiki/Gerd_Gigerenzer",
       "context": "Crítico de Kahneman-Tversky, argumenta que erros podem ser treinados"
     },
     {
       "name": "Nicholas Barberis",
-      "role": "Professor de Finanças em Yale SOM, pesquisador de finanças comportamentais",
+      "role": {
+        "pt": "Professor de Finanças em Yale SOM, pesquisador de finanças comportamentais",
+        "en": "Professor of Finance at Yale SOM, behavioral finance researcher"
+      },
       "url": "https://en.wikipedia.org/wiki/Nicholas_Barberis",
       "context": "Fez seminário em Yale testando estudantes da Caltech em erros de probabilidade"
     },
     {
       "name": "Leon Festinger",
-      "role": "Psicólogo social, criador da teoria da dissonância cognitiva",
+      "role": {
+        "pt": "Psicólogo social, criador da teoria da dissonância cognitiva",
+        "en": "Social psychologist, creator of cognitive dissonance theory"
+      },
       "url": "https://en.wikipedia.org/wiki/Leon_Festinger",
       "context": "Cunhou o termo dissonância cognitiva nos anos 1950; Shiller o conheceu pessoalmente"
     },
     {
       "name": "William Goetzmann",
-      "role": "Professor na Yale School of Management",
+      "role": {
+        "pt": "Professor na Yale School of Management",
+        "en": "Professor at the Yale School of Management"
+      },
       "url": "https://en.wikipedia.org/wiki/William_N._Goetzmann",
       "context": "Pesquisou investidores que mantêm fundos mútuos ruins por dissonância cognitiva"
     },
     {
       "name": "Sendhil Mullainathan",
-      "role": "Professor de Economia em Harvard (depois University of Chicago)",
+      "role": {
+        "pt": "Professor de Economia em Harvard (depois University of Chicago)",
+        "en": "Professor of Economics at Harvard (later University of Chicago)"
+      },
       "url": "https://en.wikipedia.org/wiki/Sendhil_Mullainathan",
       "context": "Estudo com atores procurando assessores financeiros — maioria não desafiou crenças"
     },
     {
       "name": "Rakesh Khurana",
-      "role": "Professor na Harvard Business School",
+      "role": {
+        "pt": "Professor na Harvard Business School",
+        "en": "Professor at Harvard Business School"
+      },
       "url": "https://en.wikipedia.org/wiki/Rakesh_Khurana",
       "context": "Autor do livro sobre busca irracional por CEOs carismáticos"
     },
     {
       "name": "Nassim Nicholas Taleb",
-      "role": "Ensaísta e ex-trader libanês-americano",
+      "role": {
+        "pt": "Ensaísta e ex-trader libanês-americano",
+        "en": "Lebanese-American essayist and former trader"
+      },
       "url": "https://twitter.com/nntaleb",
       "context": "Autor de Fooled by Randomness, recomendado por Shiller"
     },
     {
       "name": "Bruce Wasserstein",
-      "role": "Banqueiro de investimentos, fundador da Wasserstein Perella, CEO da Lazard",
+      "role": {
+        "pt": "Banqueiro de investimentos, fundador da Wasserstein Perella, CEO da Lazard",
+        "en": "Investment banker, founder of Wasserstein Perella, CEO of Lazard"
+      },
       "url": "https://en.wikipedia.org/wiki/Bruce_Wasserstein",
       "context": "Amigo de graduação de Shiller em Michigan; exemplo de 'meu amigo é gênio'"
     },
     {
       "name": "Émile Durkheim",
-      "role": "Sociólogo francês, um dos fundadores da disciplina",
+      "role": {
+        "pt": "Sociólogo francês, um dos fundadores da disciplina",
+        "en": "French sociologist, one of the founders of the discipline"
+      },
       "url": "https://en.wikipedia.org/wiki/%C3%89mile_Durkheim",
       "context": "Cunhou 'consciência coletiva' — útil para explicar comportamento de manada"
     },
     {
       "name": "Michael Porter",
-      "role": "Professor na Harvard Business School, referência em estratégia",
+      "role": {
+        "pt": "Professor na Harvard Business School, referência em estratégia",
+        "en": "Professor at Harvard Business School, a leading authority on strategy"
+      },
       "url": "https://en.wikipedia.org/wiki/Michael_Porter",
       "context": "Co-autor do artigo 'Shared Value' na HBR"
     },
     {
       "name": "Mark Kramer",
-      "role": "Co-fundador da FSG, consultoria de impacto social",
+      "role": {
+        "pt": "Co-fundador da FSG, consultoria de impacto social",
+        "en": "Co-founder of FSG, a social impact consultancy"
+      },
       "url": "https://en.wikipedia.org/wiki/Mark_Kramer_(consultant)",
       "context": "Co-autor com Porter do artigo 'Creating Shared Value'"
     },
     {
       "name": "Anna Bernasek",
-      "role": "Jornalista econômica",
+      "role": {
+        "pt": "Jornalista econômica",
+        "en": "Economics journalist"
+      },
       "url": "https://en.wikipedia.org/wiki/Anna_Bernasek",
       "context": "Autora de 'The Economics of Integrity'"
     },
     {
       "name": "Frank Fabozzi",
-      "role": "Professor de Finanças, autor de livros-texto",
+      "role": {
+        "pt": "Professor de Finanças, autor de livros-texto",
+        "en": "Professor of Finance, author of textbooks"
+      },
       "url": "https://en.wikipedia.org/wiki/Frank_J._Fabozzi",
       "context": "Autor do livro-texto do curso — Shiller nota que não enfatiza comportamento humano"
     },
     {
       "name": "John F. Kennedy",
-      "role": "35º Presidente dos Estados Unidos",
+      "role": {
+        "pt": "35º Presidente dos Estados Unidos",
+        "en": "35th President of the United States"
+      },
       "url": "https://en.wikipedia.org/wiki/John_F._Kennedy",
       "context": "Exemplo de 'gênio presumido' — Shiller questiona em retrospecto"
     },
     {
       "name": "Gary Gorton",
-      "role": "Professor de Finanças em Yale",
+      "role": {
+        "pt": "Professor de Finanças em Yale",
+        "en": "Professor of Finance at Yale"
+      },
       "url": "https://en.wikipedia.org/wiki/Gary_Gorton",
       "context": "Mencionado brevemente sobre seminário de erros financeiros"
     }

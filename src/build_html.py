@@ -71,6 +71,14 @@ def _render_references_sidebar(refs, is_ptbr):
         return (s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
                  .replace('"', "&quot;"))
 
+    def localize(value):
+        """Accept str or dict {pt, en}; return the right one for this language."""
+        if isinstance(value, dict):
+            if is_ptbr:
+                return value.get("pt") or value.get("en") or ""
+            return value.get("en") or value.get("pt") or ""
+        return value or ""
+
     def render_group(key, label, icon, items, item_fn):
         if not items: return
         parts.append(f'<details open><summary>{label} <span class="ref-count">({len(items)})</span></summary>')
@@ -90,7 +98,7 @@ def _render_references_sidebar(refs, is_ptbr):
     render_group("people", L["people"], "", refs.get("people", []), lambda p:
         (f'<a href="{esc(p.get("url",""))}" target="_blank" rel="noopener">{esc(p.get("name",""))}</a>'
          if p.get("url") else esc(p.get("name", "")))
-        + (f'<small>{esc(p.get("role",""))}</small>' if p.get("role") else ""))
+        + (f'<small>{esc(localize(p.get("role")))}</small>' if p.get("role") else ""))
     render_group("concepts", L["concepts"], "", refs.get("concepts", []), lambda c:
         f'<a href="{esc(c.get("url",""))}" target="_blank" rel="noopener">{esc(c.get("name",""))}</a>'
         if c.get("url") else esc(c.get("name", "")))
@@ -107,7 +115,7 @@ def _render_references_sidebar(refs, is_ptbr):
             if not target_slug: continue
             folder = "pt_br" if is_ptbr else "original"
             href = f"../{folder}/{target_slug}.html" if is_ptbr else f"../{folder}/{target_slug}.html"
-            parts.append(f'<li><a href="{esc(href)}">{esc(r.get("reason", target_slug))}</a></li>')
+            parts.append(f'<li><a href="{esc(href)}">{esc(localize(r.get("reason")) or target_slug)}</a></li>')
         parts.append('</ul></details>')
 
     parts.append("</aside>")

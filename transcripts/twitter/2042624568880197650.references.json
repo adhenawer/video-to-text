@@ -14,6 +14,6 @@
   ],
   "companies": [],
   "related_posts": [
-    {"slug": "financas-comportamentais-robert-shiller-yale", "reason": "Both discuss market behavior, probability, and trader psychology"}
+    {"slug": "financas-comportamentais-robert-shiller-yale", "reason": {"pt": "Ambos discutem comportamento de mercado, probabilidade e psicologia do trader", "en": "Both discuss market behavior, probability, and trader psychology"}}
   ]
 }

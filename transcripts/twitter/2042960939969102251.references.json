@@ -63,31 +63,46 @@
   "people": [
     {
       "name": "Greg Eisenberg",
-      "role": "host do podcast",
+      "role": {
+        "pt": "host do podcast",
+        "en": "podcast host"
+      },
       "url": "https://twitter.com/gregisenberg",
       "context": "apresentador da conversa"
     },
     {
       "name": "Vin (Internet Vin)",
-      "role": "convidado, criador construindo com Obsidian + Claude Code",
+      "role": {
+        "pt": "convidado, criador construindo com Obsidian + Claude Code",
+        "en": "guest, creator building with Obsidian + Claude Code"
+      },
       "url": "https://twitter.com/internetvin",
       "context": "explica como combinar Obsidian e Claude Code como parceiro de pensamento"
     },
     {
       "name": "Toby Lütke",
-      "role": "fundador do Shopify",
+      "role": {
+        "pt": "fundador do Shopify",
+        "en": "Shopify founder"
+      },
       "url": "https://twitter.com/tobi",
       "context": "mencionado como link no vault do Vin"
     },
     {
       "name": "Steph Ango",
-      "role": "CEO do Obsidian",
+      "role": {
+        "pt": "CEO do Obsidian",
+        "en": "Obsidian CEO"
+      },
       "url": "https://twitter.com/stephango",
       "context": "sugerido pelo agente como pessoa a conversar sobre vault como lugar"
     },
     {
       "name": "Christopher Alexander",
-      "role": "arquiteto, autor de A Pattern Language",
+      "role": {
+        "pt": "arquiteto, autor de A Pattern Language",
+        "en": "architect, author of A Pattern Language"
+      },
       "url": "https://en.wikipedia.org/wiki/Christopher_Alexander",
       "context": "sugerido como assunto a investigar: linguagem de padrões aplicada a espaços digitais"
     }
@@ -154,32 +169,50 @@
     {
       "slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
       "slug_en": "head-claude-code-happens-after-coding-solved",
-      "reason": "ambos discutem o futuro do Claude Code e delegação a agentes"
+      "reason": {
+        "pt": "ambos discutem o futuro do Claude Code e delegação a agentes",
+        "en": "both discuss the future of Claude Code and delegation to agents"
+      }
     },
     {
       "slug_pt": "claude-code-leak-what-weve-learned-so-far",
       "slug_en": "claude-code-leak-we-have-learned-so-far",
-      "reason": "explora internals do Claude Code, complementar ao uso prático com Obsidian"
+      "reason": {
+        "pt": "explora internals do Claude Code, complementar ao uso prático com Obsidian",
+        "en": "explores Claude Code internals, complementary to practical use with Obsidian"
+      }
     },
     {
       "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
       "slug_en": "prompt-production-agentic-engineering",
-      "reason": "trata de context engineering, tema central do episódio"
+      "reason": {
+        "pt": "trata de context engineering, tema central do episódio",
+        "en": "covers context engineering, the central theme of the episode"
+      }
     },
     {
       "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
       "slug_en": "agentic-engineering-context-guardrails-creativity",
-      "reason": "discute contexto e guardrails para agentes, alinhado à tese do vault como fonte de contexto"
+      "reason": {
+        "pt": "discute contexto e guardrails para agentes, alinhado à tese do vault como fonte de contexto",
+        "en": "discusses context and guardrails for agents, aligned with the thesis of the vault as a context source"
+      }
     },
     {
       "slug_pt": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills",
       "slug_en": "why-we-stopped-building-agents-started-building-skills",
-      "reason": "skills e commands customizados são análogos aos slash commands do Vin"
+      "reason": {
+        "pt": "skills e commands customizados são análogos aos slash commands do Vin",
+        "en": "custom skills and commands are analogous to Vin's slash commands"
+      }
     },
     {
       "slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
       "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code",
-      "reason": "expande a conversa sobre orquestração de múltiplos agentes além do Claude Code"
+      "reason": {
+        "pt": "expande a conversa sobre orquestração de múltiplos agentes além do Claude Code",
+        "en": "expands the conversation about orchestrating multiple agents beyond Claude Code"
+      }
     }
   ]
 }

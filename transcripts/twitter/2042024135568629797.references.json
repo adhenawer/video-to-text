@@ -88,19 +88,28 @@
   "people": [
     {
       "name": "Andrew Ng",
-      "role": "Fundador DeepLearning.AI, professor adjunto em Stanford",
+      "role": {
+        "pt": "Fundador da DeepLearning.AI, professor adjunto em Stanford",
+        "en": "Founder of DeepLearning.AI, adjunct professor at Stanford"
+      },
       "url": "https://twitter.com/AndrewYNg",
       "context": "Apresentador principal da aula CS230 em Stanford"
     },
     {
       "name": "Laurence Moroney",
-      "role": "Lidera grupo na Arm, ex-AI Advocate Lead no Google",
+      "role": {
+        "pt": "Lidera grupo na Arm, ex-AI Advocate Lead no Google",
+        "en": "Leads a group at Arm, former AI Advocate Lead at Google"
+      },
       "url": "https://twitter.com/lmoroney",
       "context": "Convidado por Ng para falar sobre mercado de trabalho em IA"
     },
     {
       "name": "James Cameron",
-      "role": "Diretor de cinema (Avatar)",
+      "role": {
+        "pt": "Diretor de cinema (Avatar)",
+        "en": "Film director (Avatar)"
+      },
       "url": "https://en.wikipedia.org/wiki/James_Cameron",
       "context": "Citado no exemplo de protecao rigorosa de IP em Hollywood"
     }
@@ -221,27 +230,42 @@
     {
       "slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
       "slug_en": "head-claude-code-happens-after-coding-solved",
-      "reason": "Ambos discutem futuro da programacao com IA e papel do engenheiro"
+      "reason": {
+        "pt": "Ambos discutem futuro da programacao com IA e papel do engenheiro",
+        "en": "Both discuss the future of programming with AI and the engineer's role"
+      }
     },
     {
       "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
       "slug_en": "prompt-production-agentic-engineering",
-      "reason": "Moroney detalha fluxo agentico em 4 passos alinhado com engenharia agentica"
+      "reason": {
+        "pt": "Moroney detalha fluxo agentico em 4 passos alinhado com engenharia agentica",
+        "en": "Moroney details a 4-step agentic flow aligned with agentic engineering"
+      }
     },
     {
       "slug_pt": "estado-da-ia-2026-ponto-de-inflexao-simon-willison",
       "slug_en": "state-ai-2026",
-      "reason": "Ambos avaliam landscape atual de IA, hype e bolha iminente"
+      "reason": {
+        "pt": "Ambos avaliam landscape atual de IA, hype e bolha iminente",
+        "en": "Both assess the current AI landscape, hype, and imminent bubble"
+      }
     },
     {
       "slug_pt": "ia-agentica-progressao-uso-modelos-linguagem-stanford",
       "slug_en": "agentic-ai-progression-language-model-usage",
-      "reason": "Ambas palestras Stanford sobre progressao e uso pratico de LLMs/agentes"
+      "reason": {
+        "pt": "Ambas palestras Stanford sobre progressao e uso pratico de LLMs/agentes",
+        "en": "Both Stanford talks on progression and practical use of LLMs/agents"
+      }
     },
     {
       "slug_pt": "roteiro-engenheiro-ia-para-desenvolvedores-de-software",
       "slug_en": "ai-engineer-roadmap-software-developers",
-      "reason": "Conselhos de carreira para engenheiros entrando em IA"
+      "reason": {
+        "pt": "Conselhos de carreira para engenheiros entrando em IA",
+        "en": "Career advice for engineers entering AI"
+      }
     }
   ]
 }

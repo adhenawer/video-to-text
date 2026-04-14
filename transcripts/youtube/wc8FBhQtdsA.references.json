@@ -126,55 +126,82 @@
   "people": [
     {
       "name": "Simon Willison",
-      "role": "Co-criador do Django, criador do Datasette, blogueiro em simonwillison.net",
+      "role": {
+        "pt": "Co-criador do Django, criador do Datasette, blogueiro em simonwillison.net",
+        "en": "Co-creator of Django, creator of Datasette, blogger at simonwillison.net"
+      },
       "url": "https://twitter.com/simonw",
       "context": "Convidado do podcast; cunhou prompt injection e lethal trifecta"
     },
     {
       "name": "Andrej Karpathy",
-      "role": "Ex-OpenAI/Tesla, cunhou vibe coding",
+      "role": {
+        "pt": "Ex-OpenAI/Tesla, cunhou vibe coding",
+        "en": "Former OpenAI/Tesla, coined vibe coding"
+      },
       "url": "https://twitter.com/karpathy",
       "context": "Simon cita a definição original de vibe coding"
     },
     {
       "name": "Lenny Rachitsky",
-      "role": "Host do podcast",
+      "role": {
+        "pt": "Host do podcast",
+        "en": "Podcast host"
+      },
       "url": "https://twitter.com/lennysan",
       "context": "Entrevistador"
     },
     {
       "name": "Boris Cherny",
-      "role": "Líder do Claude Code na Anthropic",
+      "role": {
+        "pt": "Líder do Claude Code na Anthropic",
+        "en": "Claude Code lead at Anthropic"
+      },
       "url": "https://twitter.com/bcherny",
       "context": "Lenny menciona entrevista anterior com Boris sobre coding no celular"
     },
     {
       "name": "Dario Amodei",
-      "role": "CEO da Anthropic",
+      "role": {
+        "pt": "CEO da Anthropic",
+        "en": "CEO of Anthropic"
+      },
       "url": "https://twitter.com/DarioAmodei",
       "context": "Previu há 1-2 anos que 100% do código seria AI-written"
     },
     {
       "name": "Jensen Huang",
-      "role": "CEO da NVIDIA",
+      "role": {
+        "pt": "CEO da NVIDIA",
+        "en": "CEO of NVIDIA"
+      },
       "url": "https://en.wikipedia.org/wiki/Jensen_Huang",
       "context": "Entrevista sobre layoffs e falta de ambição das empresas"
     },
     {
       "name": "David Placek",
-      "role": "Expert em naming de produtos",
+      "role": {
+        "pt": "Expert em naming de produtos",
+        "en": "Expert in product naming"
+      },
       "url": "https://www.lexicon.com",
       "context": "Criador da Lexicon Branding; usa três times de brainstorm para nomear"
     },
     {
       "name": "Sander Schulhoff",
-      "role": "Especialista em red teaming de IA",
+      "role": {
+        "pt": "Especialista em red teaming de IA",
+        "en": "AI red teaming specialist"
+      },
       "url": "https://twitter.com/sanderschulhoff",
       "context": "Episódio anterior do podcast sobre prompt injection; recomendou CaMeL"
     },
     {
       "name": "Alfred Molina",
-      "role": "Ator (Doc Ock em Spider-Man 2)",
+      "role": {
+        "pt": "Ator (Doc Ock em Spider-Man 2)",
+        "en": "Actor (Doc Ock in Spider-Man 2)"
+      },
       "url": "https://en.wikipedia.org/wiki/Alfred_Molina",
       "context": "Referência às AI claws de Doc Ock"
     }
@@ -319,37 +346,58 @@
     {
       "slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
       "slug_en": "head-claude-code-happens-after-coding-solved",
-      "reason": "Lenny cita entrevista com Boris Cherny, chefe do Claude Code, sobre programar no celular"
+      "reason": {
+        "pt": "Lenny cita entrevista com Boris Cherny, chefe do Claude Code, sobre programar no celular",
+        "en": "Lenny references interview with Boris Cherny, Claude Code lead, about coding on mobile"
+      }
     },
     {
       "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
       "slug_en": "prompt-production-agentic-engineering",
-      "reason": "Simon define e defende o termo agentic engineering durante toda a conversa"
+      "reason": {
+        "pt": "Simon define e defende o termo agentic engineering durante toda a conversa",
+        "en": "Simon defines and defends the term agentic engineering throughout the conversation"
+      }
     },
     {
       "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
       "slug_en": "agentic-engineering-context-guardrails-creativity",
-      "reason": "Discussão direta sobre padrões de engenharia agêntica, contexto e limites de agentes"
+      "reason": {
+        "pt": "Discussão direta sobre padrões de engenharia agêntica, contexto e limites de agentes",
+        "en": "Direct discussion on agentic engineering patterns, context, and agent boundaries"
+      }
     },
     {
       "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
       "slug_en": "engineering-practices-make-coding-agents-work",
-      "reason": "Mesmo autor Simon Willison discutindo práticas para fazer coding agents funcionarem"
+      "reason": {
+        "pt": "Mesmo autor Simon Willison discutindo práticas para fazer coding agents funcionarem",
+        "en": "Same author Simon Willison discussing practices to make coding agents work"
+      }
     },
     {
       "slug_pt": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia",
       "slug_en": "senior-engineer-demonstrates-spec-driven-ai-development-flow",
-      "reason": "Simon mostra fluxo de engenheiro sênior experiente usando coding agents como amplificador"
+      "reason": {
+        "pt": "Simon mostra fluxo de engenheiro sênior experiente usando coding agents como amplificador",
+        "en": "Simon shows experienced senior engineer flow using coding agents as amplifier"
+      }
     },
     {
       "slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
       "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code",
-      "reason": "Simon roda 4 agentes em paralelo, discute limitação cognitiva e factory pattern"
+      "reason": {
+        "pt": "Simon roda 4 agentes em paralelo, discute limitação cognitiva e factory pattern",
+        "en": "Simon runs 4 agents in parallel, discusses cognitive limits and factory pattern"
+      }
     },
     {
       "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
       "slug_en": "prompt-production-agentic-engineering",
-      "reason": "Tema central: levar código de AI a produção com responsabilidade"
+      "reason": {
+        "pt": "Tema central: levar código de AI a produção com responsabilidade",
+        "en": "Central theme: taking AI code to production responsibly"
+      }
     }
   ]
 }

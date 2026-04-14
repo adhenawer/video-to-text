@@ -53,13 +53,19 @@
   "people": [
     {
       "name": "Barry Zhang",
-      "role": "Anthropic — co-creator of Agent Skills",
+      "role": {
+        "pt": "Anthropic — cocriador do Agent Skills",
+        "en": "Anthropic — co-creator of Agent Skills"
+      },
       "url": "https://twitter.com/barry_zhang_",
       "context": "Speaker; co-created Agent Skills"
     },
     {
       "name": "Mahesh Sathiamoorthy",
-      "role": "Anthropic — co-creator of Agent Skills",
+      "role": {
+        "pt": "Anthropic — cocriador do Agent Skills",
+        "en": "Anthropic — co-creator of Agent Skills"
+      },
       "url": "https://twitter.com/madiator",
       "context": "Speaker; co-created Agent Skills"
     }
@@ -113,32 +119,50 @@
     {
       "slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
       "slug_en": "head-claude-code-happens-after-coding-solved",
-      "reason": "Both from Anthropic about Claude Code's evolution and general-purpose agents"
+      "reason": {
+        "pt": "Ambos da Anthropic sobre a evolução do Claude Code e agentes de propósito geral",
+        "en": "Both from Anthropic about Claude Code's evolution and general-purpose agents"
+      }
     },
     {
       "slug_pt": "claude-code-leak-what-weve-learned-so-far",
       "slug_en": "claude-code-leak-we-have-learned-so-far",
-      "reason": "Internal architecture of Claude Code, directly related to agent runtime discussed"
+      "reason": {
+        "pt": "Arquitetura interna do Claude Code, diretamente relacionada ao runtime de agentes discutido",
+        "en": "Internal architecture of Claude Code, directly related to agent runtime discussed"
+      }
     },
     {
       "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
       "slug_en": "prompt-production-agentic-engineering",
-      "reason": "Agentic engineering patterns overlap with skills-as-procedural-knowledge"
+      "reason": {
+        "pt": "Padrões de engenharia agêntica se sobrepõem a skills como conhecimento procedural",
+        "en": "Agentic engineering patterns overlap with skills-as-procedural-knowledge"
+      }
     },
     {
       "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
       "slug_en": "agentic-engineering-context-guardrails-creativity",
-      "reason": "Context management relates to progressive disclosure of skills"
+      "reason": {
+        "pt": "Gestão de contexto se relaciona com a revelação progressiva (progressive disclosure) das skills",
+        "en": "Context management relates to progressive disclosure of skills"
+      }
     },
     {
       "slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
       "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code",
-      "reason": "Extending agents with capabilities; skills as composable ecosystem"
+      "reason": {
+        "pt": "Estender agentes com capacidades; skills como ecossistema componível",
+        "en": "Extending agents with capabilities; skills as composable ecosystem"
+      }
     },
     {
       "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
       "slug_en": "engineering-practices-make-coding-agents-work",
-      "reason": "Treating skills like software with testing/versioning parallels engineering practices"
+      "reason": {
+        "pt": "Tratar skills como software, com testes e versionamento, espelha práticas de engenharia",
+        "en": "Treating skills like software with testing/versioning parallels engineering practices"
+      }
     }
   ]
 }

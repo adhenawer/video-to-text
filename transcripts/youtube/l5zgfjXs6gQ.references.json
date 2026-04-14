@@ -83,13 +83,19 @@
   "people": [
     {
       "name": "Tomas",
-      "role": "Product Solutions Lead at Port, based in Melbourne, ex-GitLab DevSecOps solutions architect",
+      "role": {
+        "pt": "Product Solutions Lead na Port, baseado em Melbourne, ex-arquiteto de soluções DevSecOps na GitLab",
+        "en": "Product Solutions Lead at Port, based in Melbourne, ex-GitLab DevSecOps solutions architect"
+      },
       "url": "",
       "context": "Co-host of the webinar on agentic engineering"
     },
     {
       "name": "Zach",
-      "role": "Solutions Engineering at Port APJ, based in Sydney, DevOps background",
+      "role": {
+        "pt": "Solutions Engineering na Port APJ, baseado em Sydney, com background em DevOps",
+        "en": "Solutions Engineering at Port APJ, based in Sydney, DevOps background"
+      },
       "url": "",
       "context": "Co-host demonstrating autonomous workflows in Port"
     }
@@ -191,27 +197,42 @@
     {
       "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
       "slug_en": "prompt-production-agentic-engineering",
-      "reason": "Directly about agentic engineering foundations, same topic as this webinar"
+      "reason": {
+        "pt": "Trata diretamente dos fundamentos de engenharia agêntica, mesmo tema deste webinar",
+        "en": "Directly about agentic engineering foundations, same topic as this webinar"
+      }
     },
     {
       "slug_pt": "fluxos-de-trabalho-agenticos-don-syme",
       "slug_en": "agentic-workflows-don-syme",
-      "reason": "Covers agentic workflow design patterns relevant to Port's autonomous flows"
+      "reason": {
+        "pt": "Aborda padrões de design de fluxos agênticos relevantes aos fluxos autônomos da Port",
+        "en": "Covers agentic workflow design patterns relevant to Port's autonomous flows"
+      }
     },
     {
       "slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
       "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code",
-      "reason": "Discusses multi-agent coordination, aligned with Port's agent registry concept"
+      "reason": {
+        "pt": "Discute coordenação multi-agente, alinhada com o conceito de registry de agentes da Port",
+        "en": "Discusses multi-agent coordination, aligned with Port's agent registry concept"
+      }
     },
     {
       "slug_pt": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills",
       "slug_en": "why-we-stopped-building-agents-started-building-skills",
-      "reason": "Skills registry as reusable capability directly parallels Port's skills registry"
+      "reason": {
+        "pt": "Skills registry como capacidade reutilizável tem paralelo direto com o skills registry da Port",
+        "en": "Skills registry as reusable capability directly parallels Port's skills registry"
+      }
     },
     {
       "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
       "slug_en": "engineering-practices-make-coding-agents-work",
-      "reason": "Engineering guardrails and practices for agents mirror webinar's central theme"
+      "reason": {
+        "pt": "Guardrails e práticas de engenharia para agentes espelham o tema central do webinar",
+        "en": "Engineering guardrails and practices for agents mirror webinar's central theme"
+      }
     }
   ]
 }

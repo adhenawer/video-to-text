@@ -38,7 +38,10 @@
   "people": [
     {
       "name": "Petra Wolf",
-      "role": "Moderator (Stanford Online)",
+      "role": {
+        "pt": "Moderadora (Stanford Online)",
+        "en": "Moderator (Stanford Online)"
+      },
       "url": "https://online.stanford.edu",
       "context": "Moderates the Q&A session with the speaker."
     }
@@ -154,37 +157,58 @@
     {
       "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
       "slug_en": "prompt-production-agentic-engineering",
-      "reason": "Covers progression from prompting to agentic systems, same conceptual arc."
+      "reason": {
+        "pt": "Cobre a progressão do prompting para sistemas agênticos, mesmo arco conceitual.",
+        "en": "Covers progression from prompting to agentic systems, same conceptual arc."
+      }
     },
     {
       "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
       "slug_en": "agentic-engineering-context-guardrails-creativity",
-      "reason": "Shares focus on context, guardrails and evaluation in agentic LLM design."
+      "reason": {
+        "pt": "Compartilha o foco em contexto, guardrails e avaliação no design de LLMs agênticos.",
+        "en": "Shares focus on context, guardrails and evaluation in agentic LLM design."
+      }
     },
     {
       "slug_pt": "fluxos-de-trabalho-agenticos-don-syme",
       "slug_en": "agentic-workflows-don-syme",
-      "reason": "Discusses agentic workflow design patterns similar to planning/reflection/tool-use here."
+      "reason": {
+        "pt": "Discute padrões de design de fluxos agênticos semelhantes a planejamento/reflexão/uso de ferramentas aqui.",
+        "en": "Discusses agentic workflow design patterns similar to planning/reflection/tool-use here."
+      }
     },
     {
       "slug_pt": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills",
       "slug_en": "why-we-stopped-building-agents-started-building-skills",
-      "reason": "Complementary perspective on agent design patterns and alternatives."
+      "reason": {
+        "pt": "Perspectiva complementar sobre padrões de design de agentes e alternativas.",
+        "en": "Complementary perspective on agent design patterns and alternatives."
+      }
     },
     {
       "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
       "slug_en": "engineering-practices-make-coding-agents-work",
-      "reason": "Engineering practices (tracing, evals) for coding agents match talk's recommendations."
+      "reason": {
+        "pt": "Práticas de engenharia (tracing, evals) para agentes de código combinam com as recomendações da palestra.",
+        "en": "Engineering practices (tracing, evals) for coding agents match talk's recommendations."
+      }
     },
     {
       "slug_pt": "roteiro-engenheiro-ia-para-desenvolvedores-de-software",
       "slug_en": "ai-engineer-roadmap-software-developers",
-      "reason": "Entry-level roadmap aligns with the 'start simple, iterate' advice given."
+      "reason": {
+        "pt": "Roteiro de entrada alinhado com o conselho 'comece simples, itere' dado na palestra.",
+        "en": "Entry-level roadmap aligns with the 'start simple, iterate' advice given."
+      }
     },
     {
       "slug_pt": "conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford",
       "slug_en": "ai-career-advice-andrew-ng-lawrence-moroney-stanford",
-      "reason": "Also a Stanford Online session providing foundational AI guidance."
+      "reason": {
+        "pt": "Também é uma sessão da Stanford Online oferecendo orientação fundamental sobre IA.",
+        "en": "Also a Stanford Online session providing foundational AI guidance."
+      }
     }
   ]
 }

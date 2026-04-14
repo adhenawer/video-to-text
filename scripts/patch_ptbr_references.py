@@ -67,22 +67,16 @@ def main():
             flags=re.DOTALL
         )
 
-        # Insert new sidebar right before <a class="back-top" or <a href="#" class="back-top"
+        # Insert new sidebar right after </article>
         insertion = sidebar_html + '\n'
-        if '<a href="#" class="back-top"' in html:
+        if '</article>' in html:
             html = html.replace(
-                '<a href="#" class="back-top"',
-                insertion + '<a href="#" class="back-top"',
-                1
-            )
-        elif '<a class="back-top"' in html:
-            html = html.replace(
-                '<a class="back-top"',
-                insertion + '<a class="back-top"',
+                '</article>',
+                '</article>\n' + insertion,
                 1
             )
         else:
-            print(f"  SKIP {slug} — no back-top marker")
+            print(f"  SKIP {slug} — no </article> marker")
             continue
 
         with open(html_path, "w") as f:

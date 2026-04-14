@@ -88,13 +88,13 @@
   "people": [
     {
       "name": "Andy Elliott",
-      "role": "high-ticket coaching / ex-car salesman guru",
+      "role": {"pt": "coaching de alto valor / guru ex-vendedor de carros", "en": "high-ticket coaching / ex-car salesman guru"},
       "url": "https://twitter.com/officialandyelliott",
       "context": "research Andy Elliott's coaching offer, content strategy and sales funnel"
     },
     {
       "name": "Drake Sirach",
-      "role": "host / AI educator, AI Foundations founder",
+      "role": {"pt": "apresentador / educador de IA, fundador da AI Foundations", "en": "host / AI educator, AI Foundations founder"},
       "url": "https://www.youtube.com/@DrakeSirach",
       "context": "My name is Drake Sirach. I run two businesses, an AI education company"
     }
@@ -145,32 +145,32 @@
     {
       "slug_pt": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills",
       "slug_en": "why-we-stopped-building-agents-started-building-skills",
-      "reason": "Deep dive on Claude Skills, the exact feature demonstrated for proposal automation"
+      "reason": {"pt": "Mergulho profundo em Claude Skills, o recurso exato demonstrado para automação de propostas", "en": "Deep dive on Claude Skills, the exact feature demonstrated for proposal automation"}
     },
     {
       "slug_pt": "obsidian-claude-code-pensamento",
       "slug_en": "obsidian-claude-code-second-brain-amplified",
-      "reason": "Companion workflow for building a personal AI operating system with Claude"
+      "reason": {"pt": "Workflow complementar para construir um sistema operacional pessoal de IA com Claude", "en": "Companion workflow for building a personal AI operating system with Claude"}
     },
     {
       "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
       "slug_en": "agentic-engineering-context-guardrails-creativity",
-      "reason": "Context engineering and guardrails, mirroring custom instructions and project context layers"
+      "reason": {"pt": "Engenharia de contexto e guardrails, espelhando instruções customizadas e camadas de contexto de projeto", "en": "Context engineering and guardrails, mirroring custom instructions and project context layers"}
     },
     {
       "slug_pt": "claude-code-leak-what-weve-learned-so-far",
       "slug_en": "claude-code-leak-we-have-learned-so-far",
-      "reason": "More insight into how Claude works under the hood for power users"
+      "reason": {"pt": "Mais insights sobre como o Claude funciona por baixo dos panos para power users", "en": "More insight into how Claude works under the hood for power users"}
     },
     {
       "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
       "slug_en": "prompt-production-agentic-engineering",
-      "reason": "From prompting basics to production — natural progression from this beginner guide"
+      "reason": {"pt": "Do básico do prompting à produção — progressão natural a partir deste guia para iniciantes", "en": "From prompting basics to production — natural progression from this beginner guide"}
     },
     {
       "slug_pt": "roteiro-engenheiro-ia-para-desenvolvedores-de-software",
       "slug_en": "ai-engineer-roadmap-software-developers",
-      "reason": "Broader AI skill roadmap for those going beyond this beginner tutorial"
+      "reason": {"pt": "Roadmap mais amplo de habilidades em IA para quem quer ir além deste tutorial para iniciantes", "en": "Broader AI skill roadmap for those going beyond this beginner tutorial"}
     }
   ]
 }

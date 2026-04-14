@@ -112,109 +112,163 @@
   "people": [
     {
       "name": "Steve Yegge",
-      "role": "Engenheiro de software há 40 anos, ex-Amazon, ex-Google, criador do Gas Town, co-autor de Vibe Coding",
+      "role": {
+        "pt": "Engenheiro de software há 40 anos, ex-Amazon, ex-Google, criador do Gas Town, co-autor de Vibe Coding",
+        "en": "Software engineer for 40 years, ex-Amazon, ex-Google, creator of Gas Town, co-author of Vibe Coding"
+      },
       "url": "https://twitter.com/Steve_Yegge",
       "context": "Convidado principal do episódio"
     },
     {
       "name": "Gergely Orosz",
-      "role": "Host do The Pragmatic Engineer",
+      "role": {
+        "pt": "Host do The Pragmatic Engineer",
+        "en": "Host of The Pragmatic Engineer"
+      },
       "url": "https://twitter.com/GergelyOrosz",
       "context": "Entrevistador"
     },
     {
       "name": "Gene Kim",
-      "role": "Autor e pesquisador de DevOps",
+      "role": {
+        "pt": "Autor e pesquisador de DevOps",
+        "en": "Author and DevOps researcher"
+      },
       "url": "https://twitter.com/RealGeneKim",
       "context": "Co-autor do livro Vibe Coding com Steve"
     },
     {
       "name": "Erik Meijer",
-      "role": "Cientista da computação, contribuidor de C#, Haskell, Visual Basic, LINQ",
+      "role": {
+        "pt": "Cientista da computação, contribuidor de C#, Haskell, Visual Basic, LINQ",
+        "en": "Computer scientist, contributor to C#, Haskell, Visual Basic, LINQ"
+      },
       "url": "https://twitter.com/headinthebox",
       "context": "Quem disse 'os dias de codar à mão acabaram', citação que abre o livro Vibe Coding"
     },
     {
       "name": "Richard Sutton",
-      "role": "Pesquisador de aprendizado por reforço, autor de The Bitter Lesson",
+      "role": {
+        "pt": "Pesquisador de aprendizado por reforço, autor de The Bitter Lesson",
+        "en": "Reinforcement learning researcher, author of The Bitter Lesson"
+      },
       "url": "https://twitter.com/RichardSSutton",
       "context": "Autor do ensaio The Bitter Lesson citado por Steve"
     },
     {
       "name": "Chris Okasaki",
-      "role": "Cientista da computação, autor de Purely Functional Data Structures",
+      "role": {
+        "pt": "Cientista da computação, autor de Purely Functional Data Structures",
+        "en": "Computer scientist, author of Purely Functional Data Structures"
+      },
       "url": "https://en.wikipedia.org/wiki/Chris_Okasaki",
       "context": "Autor do livro referenciado para descrever a operação da Anthropic"
     },
     {
       "name": "Nathan Sobo",
-      "role": "Co-fundador da Zed",
+      "role": {
+        "pt": "Co-fundador da Zed",
+        "en": "Co-founder of Zed"
+      },
       "url": "https://twitter.com/nathansobo",
       "context": "Debateu com Steve sobre o futuro das IDEs"
     },
     {
       "name": "Boris Cherny",
-      "role": "Engenheiro do Claude Code na Anthropic",
+      "role": {
+        "pt": "Engenheiro do Claude Code na Anthropic",
+        "en": "Claude Code engineer at Anthropic"
+      },
       "url": "https://twitter.com/bcherny",
       "context": "Citado por construir 20 protótipos funcionais em 2 dias usando IA"
     },
     {
       "name": "Peter Steinberger",
-      "role": "Desenvolvedor independente conhecido pela alta produtividade com IA",
+      "role": {
+        "pt": "Desenvolvedor independente conhecido pela alta produtividade com IA",
+        "en": "Independent developer known for high productivity with AI"
+      },
       "url": "https://twitter.com/steipete",
       "context": "Citado como exemplo de uma pessoa com produção equivalente a uma equipe de 10"
     },
     {
       "name": "Jeff Huntley",
-      "role": "Desenvolvedor, criador do Ralph Wiggum (loop de Claude Code)",
+      "role": {
+        "pt": "Desenvolvedor, criador do Ralph Wiggum (loop de Claude Code)",
+        "en": "Developer, creator of Ralph Wiggum (Claude Code loop)"
+      },
       "url": "https://twitter.com/jhuntley",
       "context": "Citado por receber atenção de VCs ao lançar Ralph"
     },
     {
       "name": "Jeffrey Emanuel",
-      "role": "Desenvolvedor, forkou o projeto Beads",
+      "role": {
+        "pt": "Desenvolvedor, forkou o projeto Beads",
+        "en": "Developer, forked the Beads project"
+      },
       "url": "https://twitter.com/doodlestein",
       "context": "Forkou o Beads de Steve e foi elogiado por isso"
     },
     {
       "name": "Dario Amodei",
-      "role": "CEO da Anthropic",
+      "role": {
+        "pt": "CEO da Anthropic",
+        "en": "CEO of Anthropic"
+      },
       "url": "https://twitter.com/DarioAmodei",
       "context": "Mencionou ideia de compensar funcionários mesmo após saída pela valor criado"
     },
     {
       "name": "Andy Jassy",
-      "role": "CEO da Amazon",
+      "role": {
+        "pt": "CEO da Amazon",
+        "en": "CEO of Amazon"
+      },
       "url": "https://twitter.com/ajassy",
       "context": "Citado por declarar que Amazon fará o mesmo com menos pessoas"
     },
     {
       "name": "Larry Page",
-      "role": "Co-fundador do Google",
+      "role": {
+        "pt": "Co-fundador do Google",
+        "en": "Co-founder of Google"
+      },
       "url": "https://en.wikipedia.org/wiki/Larry_Page",
       "context": "Steve atribui a ele o motto 'mais lenha em menos flechas' que matou inovação no Google"
     },
     {
       "name": "Sergey Brin",
-      "role": "Co-fundador do Google",
+      "role": {
+        "pt": "Co-fundador do Google",
+        "en": "Co-founder of Google"
+      },
       "url": "https://en.wikipedia.org/wiki/Sergey_Brin",
       "context": "Mencionado como parte da era dourada do Google quando estava acessível na cafeteria"
     },
     {
       "name": "Rich Hickey",
-      "role": "Criador do Clojure",
+      "role": {
+        "pt": "Criador do Clojure",
+        "en": "Creator of Clojure"
+      },
       "url": "https://en.wikipedia.org/wiki/Rich_Hickey",
       "context": "Steve teve discordância com ele sobre suporte do Clojure à JVM"
     },
     {
       "name": "Larry Wall",
-      "role": "Criador do Perl",
+      "role": {
+        "pt": "Criador do Perl",
+        "en": "Creator of Perl"
+      },
       "url": "https://en.wikipedia.org/wiki/Larry_Wall",
       "context": "Citado pela frase sobre preguiça ser uma das virtudes do programador"
     },
     {
       "name": "Swyx (Shawn Wang)",
-      "role": "Organizador da AI Engineer Summit",
+      "role": {
+        "pt": "Organizador da AI Engineer Summit",
+        "en": "Organizer of AI Engineer Summit"
+      },
       "url": "https://twitter.com/swyx",
       "context": "Mencionado pela conferência AI Engineer em Nova York"
     }
@@ -323,57 +377,90 @@
     {
       "slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
       "slug_en": "head-claude-code-happens-after-coding-solved",
-      "reason": "Boris Cherny do Claude Code é citado nominalmente; ambos discutem o futuro pós-codificação"
+      "reason": {
+        "pt": "Boris Cherny do Claude Code é citado nominalmente; ambos discutem o futuro pós-codificação",
+        "en": "Boris Cherny of Claude Code is named directly; both discuss the post-coding future"
+      }
     },
     {
       "slug_pt": "claude-code-leak-what-weve-learned-so-far",
       "slug_en": "claude-code-leak-we-have-learned-so-far",
-      "reason": "Steve discute extensivamente os internals e a evolução do Claude Code"
+      "reason": {
+        "pt": "Steve discute extensivamente os internals e a evolução do Claude Code",
+        "en": "Steve extensively discusses the internals and evolution of Claude Code"
+      }
     },
     {
       "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
       "slug_en": "prompt-production-agentic-engineering",
-      "reason": "Conversa central sobre transição de vibe coding para engenharia agêntica em produção"
+      "reason": {
+        "pt": "Conversa central sobre transição de vibe coding para engenharia agêntica em produção",
+        "en": "Central conversation about transitioning from vibe coding to agentic engineering in production"
+      }
     },
     {
       "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
       "slug_en": "agentic-engineering-context-guardrails-creativity",
-      "reason": "Steve discute minimaxing context e os trade-offs entre minimizar e maximizar contexto"
+      "reason": {
+        "pt": "Steve discute minimaxing context e os trade-offs entre minimizar e maximizar contexto",
+        "en": "Steve discusses minimaxing context and the trade-offs between minimizing and maximizing context"
+      }
     },
     {
       "slug_pt": "fluxos-de-trabalho-agenticos-don-syme",
       "slug_en": "agentic-workflows-don-syme",
-      "reason": "Tema paralelo sobre workflows agênticos e orquestração de múltiplos agentes"
+      "reason": {
+        "pt": "Tema paralelo sobre workflows agênticos e orquestração de múltiplos agentes",
+        "en": "Parallel theme about agentic workflows and orchestration of multiple agents"
+      }
     },
     {
       "slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
       "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code",
-      "reason": "Gas Town é exatamente sobre rodar múltiplos agentes (mayor + workers) em paralelo"
+      "reason": {
+        "pt": "Gas Town é exatamente sobre rodar múltiplos agentes (mayor + workers) em paralelo",
+        "en": "Gas Town is exactly about running multiple agents (mayor + workers) in parallel"
+      }
     },
     {
       "slug_pt": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills",
       "slug_en": "why-we-stopped-building-agents-started-building-skills",
-      "reason": "Discussão sobre arquitetura de agentes vs sub-agentes e patterns de orquestração"
+      "reason": {
+        "pt": "Discussão sobre arquitetura de agentes vs sub-agentes e patterns de orquestração",
+        "en": "Discussion about agent vs sub-agent architecture and orchestration patterns"
+      }
     },
     {
       "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
       "slug_en": "engineering-practices-make-coding-agents-work",
-      "reason": "Sobreposição com práticas de engenharia para fazer agentes funcionarem em produção"
+      "reason": {
+        "pt": "Sobreposição com práticas de engenharia para fazer agentes funcionarem em produção",
+        "en": "Overlap with engineering practices to make agents work in production"
+      }
     },
     {
       "slug_pt": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia",
       "slug_en": "senior-engineer-demonstrates-spec-driven-ai-development-flow",
-      "reason": "Steve fala sobre tasks bem especificadas alimentando workers (polecats) — mesma filosofia"
+      "reason": {
+        "pt": "Steve fala sobre tasks bem especificadas alimentando workers (polecats) — mesma filosofia",
+        "en": "Steve talks about well-specified tasks feeding workers (polecats) — same philosophy"
+      }
     },
     {
       "slug_pt": "estado-da-ia-2026-ponto-de-inflexao-simon-willison",
       "slug_en": "state-ai-2026",
-      "reason": "Ambos falam sobre o ponto de inflexão atual, curvas exponenciais e implicações para a indústria"
+      "reason": {
+        "pt": "Ambos falam sobre o ponto de inflexão atual, curvas exponenciais e implicações para a indústria",
+        "en": "Both discuss the current inflection point, exponential curves, and industry implications"
+      }
     },
     {
       "slug_pt": "politica-corporativa-tech-tudo-que-ninguem-te-conta",
       "slug_en": "corporate-politics-tech-everything-nobody-tells",
-      "reason": "Steve descreve como falta de trabalho gerou política, land grabs e backstabbing no Google"
+      "reason": {
+        "pt": "Steve descreve como falta de trabalho gerou política, land grabs e backstabbing no Google",
+        "en": "Steve describes how lack of work generated politics, land grabs and backstabbing at Google"
+      }
     }
   ]
 }

@@ -56,15 +56,27 @@
   "people": [
     {
       "name": "Don Syme",
-      "url": "https://twitter.com/dsyme"
+      "url": "https://twitter.com/dsyme",
+      "role": {
+        "pt": "Criador do F# e pesquisador principal na Microsoft Research",
+        "en": "Creator of F# and principal researcher at Microsoft Research"
+      }
     },
     {
       "name": "Scott Hanselman",
-      "url": "https://twitter.com/shanselman"
+      "url": "https://twitter.com/shanselman",
+      "role": {
+        "pt": "Engenheiro de software e divulgador técnico na Microsoft",
+        "en": "Software engineer and technical evangelist at Microsoft"
+      }
     },
     {
       "name": "Peter Steinberger",
-      "url": "https://twitter.com/steipete"
+      "url": "https://twitter.com/steipete",
+      "role": {
+        "pt": "Desenvolvedor independente e entusiasta de engenharia com agentes de IA",
+        "en": "Independent developer and enthusiast of AI agent engineering"
+      }
     }
   ],
   "concepts": [
@@ -134,31 +146,52 @@
   "related_posts": [
     {
       "slug": "head-claude-code-happens-after-coding-solved",
-      "reason": "future of coding with AI agents"
+      "reason": {
+        "pt": "futuro da programação com agentes de IA",
+        "en": "future of coding with AI agents"
+      }
     },
     {
       "slug": "prompt-production-agentic-engineering",
-      "reason": "agentic engineering practices in production"
+      "reason": {
+        "pt": "práticas de engenharia com agentes em produção",
+        "en": "agentic engineering practices in production"
+      }
     },
     {
       "slug": "agentic-engineering-context-guardrails-creativity",
-      "reason": "guardrails and context for agentic workflows"
+      "reason": {
+        "pt": "guardrails e contexto para fluxos com agentes",
+        "en": "guardrails and context for agentic workflows"
+      }
     },
     {
       "slug": "senior-engineer-demonstrates-spec-driven-ai-development-flow",
-      "reason": "spec-driven flow and maintainer oversight"
+      "reason": {
+        "pt": "fluxo orientado por especificação e supervisão do mantenedor",
+        "en": "spec-driven flow and maintainer oversight"
+      }
     },
     {
       "slug": "engineering-practices-make-coding-agents-work",
-      "reason": "engineering practices for coding agents"
+      "reason": {
+        "pt": "práticas de engenharia para agentes de programação",
+        "en": "engineering practices for coding agents"
+      }
     },
     {
       "slug": "why-we-stopped-building-agents-started-building-skills",
-      "reason": "agent constraints vs skills"
+      "reason": {
+        "pt": "restrições de agentes versus skills",
+        "en": "agent constraints vs skills"
+      }
     },
     {
       "slug": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code",
-      "reason": "multi-agent agentic coding"
+      "reason": {
+        "pt": "programação com múltiplos agentes",
+        "en": "multi-agent agentic coding"
+      }
     }
   ]
 }

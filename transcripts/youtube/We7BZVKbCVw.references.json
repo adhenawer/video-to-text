@@ -109,31 +109,46 @@
   "people": [
     {
       "name": "Boris Cherny",
-      "role": "Head of Claude Code, Anthropic",
+      "role": {
+        "pt": "Chefe do Claude Code, Anthropic",
+        "en": "Head of Claude Code, Anthropic"
+      },
       "url": "https://twitter.com/bcherny",
       "context": "Guest; built Claude Code"
     },
     {
       "name": "Mike Krieger",
-      "role": "CPO Anthropic, co-founder Instagram",
+      "role": {
+        "pt": "CPO da Anthropic, cofundador do Instagram",
+        "en": "CPO Anthropic, co-founder Instagram"
+      },
       "url": "https://twitter.com/mikeyk",
       "context": "Co-kicked off the Anthropic Labs team"
     },
     {
       "name": "Ben Mann",
-      "role": "Anthropic co-founder",
+      "role": {
+        "pt": "Cofundador da Anthropic",
+        "en": "Anthropic co-founder"
+      },
       "url": "https://twitter.com/benjmann",
       "context": "Suggested podcast topics; early Claude Code supporter"
     },
     {
       "name": "Chris Olah",
-      "role": "Mechanistic interpretability pioneer (Anthropic)",
+      "role": {
+        "pt": "Pioneiro em interpretabilidade mecanicista (Anthropic)",
+        "en": "Mechanistic interpretability pioneer (Anthropic)"
+      },
       "url": "https://twitter.com/ch402",
       "context": "Boris recommends having him on a podcast"
     },
     {
       "name": "Rich Sutton",
-      "role": "AI researcher",
+      "role": {
+        "pt": "Pesquisador de IA",
+        "en": "AI researcher"
+      },
       "url": "https://twitter.com/RichardSSutton",
       "context": "Author of The Bitter Lesson"
     }
@@ -199,32 +214,50 @@
     {
       "slug_pt": "claude-code-leak-what-weve-learned-so-far",
       "slug_en": "claude-code-leak-we-have-learned-so-far",
-      "reason": "Deep dive on Claude Code internals (leaked source)"
+      "reason": {
+        "pt": "Análise profunda das entranhas do Claude Code (código-fonte vazado)",
+        "en": "Deep dive on Claude Code internals (leaked source)"
+      }
     },
     {
       "slug_pt": "estado-da-ia-2026-ponto-de-inflexao-simon-willison",
       "slug_en": "state-ai-2026",
-      "reason": "Simon Willison on the same AI inflection moment"
+      "reason": {
+        "pt": "Simon Willison sobre o mesmo momento de inflexão da IA",
+        "en": "Simon Willison on the same AI inflection moment"
+      }
     },
     {
       "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
       "slug_en": "engineering-practices-make-coding-agents-work",
-      "reason": "Practical engineering patterns for coding agents"
+      "reason": {
+        "pt": "Padrões práticos de engenharia para agentes de código",
+        "en": "Practical engineering patterns for coding agents"
+      }
     },
     {
       "slug_pt": "de-ides-para-agentes-de-ia-steve-yegge",
       "slug_en": "ides-ai-agents",
-      "reason": "From IDEs to agents — same transition Boris describes"
+      "reason": {
+        "pt": "De IDEs para agentes — a mesma transição que Boris descreve",
+        "en": "From IDEs to agents — same transition Boris describes"
+      }
     },
     {
       "slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
       "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code",
-      "reason": "Multi-agent coding beyond Claude Code"
+      "reason": {
+        "pt": "Programação com múltiplos agentes além do Claude Code",
+        "en": "Multi-agent coding beyond Claude Code"
+      }
     },
     {
       "slug_pt": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills",
       "slug_en": "why-we-stopped-building-agents-started-building-skills",
-      "reason": "Anthropic's skills paradigm — connects to Boris's work"
+      "reason": {
+        "pt": "O paradigma de skills da Anthropic — conecta com o trabalho de Boris",
+        "en": "Anthropic's skills paradigm — connects to Boris's work"
+      }
     }
   ]
 }

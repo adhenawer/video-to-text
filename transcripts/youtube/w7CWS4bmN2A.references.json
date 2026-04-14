@@ -28,7 +28,10 @@
   "people": [
     {
       "name": "Anthropic (empresa)",
-      "role": "Empresa por trás do Claude Code, alvo do vazamento",
+      "role": {
+        "pt": "Empresa por trás do Claude Code, alvo do vazamento",
+        "en": "Company behind Claude Code, target of the leak"
+      },
       "url": "https://www.anthropic.com",
       "context": "Acusada de manter verificação pós-edição apenas para usuários com user_type=ant (funcionários)"
     }
@@ -89,22 +92,34 @@
     {
       "slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
       "slug_en": "head-claude-code-happens-after-coding-solved",
-      "reason": "Visão da própria liderança do Claude Code — contraste direto com a análise crítica do vazamento"
+      "reason": {
+        "pt": "Visão da própria liderança do Claude Code — contraste direto com a análise crítica do vazamento",
+        "en": "Perspective from Claude Code's own leadership — direct contrast with the critical analysis of the leak"
+      }
     },
     {
       "slug_pt": "guia-completo-claude-iniciante-sistema-operacional-ia",
       "slug_en": "complete-claude-guide-beginner-ai-operating-system",
-      "reason": "Guia de uso responsável do Claude — relevante diante das limitações reveladas no vazamento"
+      "reason": {
+        "pt": "Guia de uso responsável do Claude — relevante diante das limitações reveladas no vazamento",
+        "en": "Guide to responsible Claude usage — relevant given the limitations revealed in the leak"
+      }
     },
     {
       "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
       "slug_en": "engineering-practices-make-coding-agents-work",
-      "reason": "Aborda boas práticas de verificação que o próprio Claude Code não aplica para usuários comuns"
+      "reason": {
+        "pt": "Aborda boas práticas de verificação que o próprio Claude Code não aplica para usuários comuns",
+        "en": "Covers verification best practices that Claude Code itself doesn't apply to regular users"
+      }
     },
     {
       "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
       "slug_en": "agentic-engineering-context-guardrails-creativity",
-      "reason": "Discute guardrails e contexto — diretamente relacionado aos hard caps de 2000 linhas e brevity mandate"
+      "reason": {
+        "pt": "Discute guardrails e contexto — diretamente relacionado aos hard caps de 2000 linhas e brevity mandate",
+        "en": "Discusses guardrails and context — directly related to the 2000-line hard caps and brevity mandate"
+      }
     }
   ]
 }

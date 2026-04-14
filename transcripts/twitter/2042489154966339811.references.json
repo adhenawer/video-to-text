@@ -7,61 +7,91 @@
   "people": [
     {
       "name": "Patrick Winston",
-      "role": "Professor de AI no MIT, autor da palestra",
+      "role": {
+        "pt": "Professor de AI no MIT, autor da palestra",
+        "en": "AI professor at MIT, author of the lecture"
+      },
       "url": "https://en.wikipedia.org/wiki/Patrick_Winston",
       "context": "Ministra a palestra 'How to Speak' no MIT"
     },
     {
       "name": "Mary Lou Retton",
-      "role": "Ginasta olímpica americana",
+      "role": {
+        "pt": "Ginasta olímpica americana",
+        "en": "American Olympic gymnast"
+      },
       "url": "https://en.wikipedia.org/wiki/Mary_Lou_Retton",
       "context": "Exemplo de que conhecimento e prática superam talento inato (esqui em Sun Valley)"
     },
     {
       "name": "Seymour Papert",
-      "role": "Matemático e educador do MIT",
+      "role": {
+        "pt": "Matemático e educador do MIT",
+        "en": "Mathematician and educator at MIT"
+      },
       "url": "https://en.wikipedia.org/wiki/Seymour_Papert",
       "context": "Exemplo de uso eficaz do quadro e de props (roda de bicicleta) em aulas"
     },
     {
       "name": "Henrik Ibsen",
-      "role": "Dramaturgo norueguês",
+      "role": {
+        "pt": "Dramaturgo norueguês",
+        "en": "Norwegian playwright"
+      },
       "url": "https://en.wikipedia.org/wiki/Henrik_Ibsen",
       "context": "Autor de 'Hedda Gabler', citado pelo uso magistral de props (fogão a lenha)"
     },
     {
       "name": "Julia Child",
-      "role": "Chef e apresentadora de TV",
+      "role": {
+        "pt": "Chef e apresentadora de TV",
+        "en": "Chef and TV host"
+      },
       "url": "https://en.wikipedia.org/wiki/Julia_Child",
       "context": "Anedota sobre fama em evento beneficente por Veneza"
     },
     {
       "name": "Doug Lenat",
-      "role": "Pesquisador de IA (Cyc)",
+      "role": {
+        "pt": "Pesquisador de IA (Cyc)",
+        "en": "AI researcher (Cyc)"
+      },
       "url": "https://en.wikipedia.org/wiki/Doug_Lenat",
       "context": "Recomenda sempre terminar palestra com uma piada"
     },
     {
       "name": "Chris Christie",
-      "role": "Governador de Nova Jersey",
+      "role": {
+        "pt": "Governador de Nova Jersey",
+        "en": "Governor of New Jersey"
+      },
       "url": "https://twitter.com/ChrisChristie",
       "context": "Exemplo de discurso de encerramento (keynote Republicano)"
     },
     {
       "name": "Bill Clinton",
-      "role": "Ex-presidente dos EUA",
+      "role": {
+        "pt": "Ex-presidente dos EUA",
+        "en": "Former U.S. president"
+      },
       "url": "https://twitter.com/BillClinton",
       "context": "Exemplo de encerramento eficaz (keynote Democrata) sem dizer 'obrigado'"
     },
     {
       "name": "Alan Lazarus",
-      "role": "Professor de física do MIT (8.01)",
+      "role": {
+        "pt": "Professor de física do MIT (8.01)",
+        "en": "MIT physics professor (8.01)"
+      },
       "url": "https://en.wikipedia.org/wiki/Alan_Lightman",
       "context": "Demonstração do pêndulo com bola de aço para ilustrar conservação de energia"
     },
     {
       "name": "Dolores Etter",
-      "role": "Engenheira e ex-membro do Navy Science Board",
+      "role": {
+        "pt": "Engenheira e ex-membro do Navy Science Board",
+        "en": "Engineer and former member of the Navy Science Board"
+      },
       "url": "https://en.wikipedia.org/wiki/Delores_M._Etter",
       "context": "Critério para contratação acadêmica: candidato precisa mostrar visão"
     }
@@ -112,12 +142,18 @@
     {
       "slug_pt": "conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford",
       "slug_en": "ai-career-advice-andrew-ng-lawrence-moroney-stanford",
-      "reason": "Aborda comunicação como habilidade central para sucesso profissional, complementando as técnicas de apresentação"
+      "reason": {
+        "pt": "Aborda comunicação como habilidade central para sucesso profissional, complementando as técnicas de apresentação",
+        "en": "Addresses communication as a core skill for professional success, complementing the presentation techniques"
+      }
     },
     {
       "slug_pt": "politica-corporativa-tech-tudo-que-ninguem-te-conta",
       "slug_en": "corporate-politics-tech-everything-nobody-tells",
-      "reason": "Ambos discutem como empacotar ideias e ser reconhecido (visibilidade profissional) em ambientes técnicos"
+      "reason": {
+        "pt": "Ambos discutem como empacotar ideias e ser reconhecido (visibilidade profissional) em ambientes técnicos",
+        "en": "Both discuss how to package ideas and gain recognition (professional visibility) in technical environments"
+      }
     }
   ]
 }

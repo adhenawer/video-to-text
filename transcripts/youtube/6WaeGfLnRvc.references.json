@@ -32,49 +32,73 @@
   "people": [
     {
       "name": "Ethan Evans",
-      "role": "Former Amazon VP; executive coach and newsletter author",
+      "role": {
+        "pt": "Ex-VP da Amazon; coach executivo e autor de newsletter",
+        "en": "Former Amazon VP; executive coach and newsletter author"
+      },
       "url": "https://twitter.com/EthanEvansVP",
       "context": "Guest of the episode — 15 years at Amazon, retired VP, now coaches engineers and managers on career navigation and corporate politics."
     },
     {
       "name": "Ryan Peterman",
-      "role": "Software engineer and host of The Developing Dev podcast/newsletter",
+      "role": {
+        "pt": "Engenheiro de software e apresentador do podcast/newsletter The Developing Dev",
+        "en": "Software engineer and host of The Developing Dev podcast/newsletter"
+      },
       "url": "https://twitter.com/ryan_peterman",
       "context": "Interviewer — former Meta engineer who asks Ethan to go deep on transparency about reorgs, firings, and promotions."
     },
     {
       "name": "Jeff Bezos",
-      "role": "Founder and former CEO of Amazon",
+      "role": {
+        "pt": "Fundador e ex-CEO da Amazon",
+        "en": "Founder and former CEO of Amazon"
+      },
       "url": "https://twitter.com/JeffBezos",
       "context": "Cited in story about an entry-level engineer who emailed Bezos to get his Cloud Drive proposal heard at an invite-only engineering poster session."
     },
     {
       "name": "Andy Jassy",
-      "role": "CEO of Amazon (former CEO of AWS)",
+      "role": {
+        "pt": "CEO da Amazon (ex-CEO da AWS)",
+        "en": "CEO of Amazon (former CEO of AWS)"
+      },
       "url": "https://twitter.com/ajassy",
       "context": "Ethan cites Andy as one of his hardest managers — quoted on absolving AWS principal engineers from mentoring duties and accepting that some specialists have unique leverage."
     },
     {
       "name": "Mike Tyson",
-      "role": "Former heavyweight boxing champion",
+      "role": {
+        "pt": "Ex-campeão mundial de boxe peso-pesado",
+        "en": "Former heavyweight boxing champion"
+      },
       "url": "https://twitter.com/MikeTyson",
       "context": "Quoted — 'Everyone has a plan until they get punched in the face' — applied to how org plans survive contact with reality."
     },
     {
       "name": "Jocko Willink",
-      "role": "Former Navy SEAL officer; author and leadership speaker",
+      "role": {
+        "pt": "Ex-oficial dos Navy SEALs; autor e palestrante de liderança",
+        "en": "Former Navy SEAL officer; author and leadership speaker"
+      },
       "url": "https://twitter.com/jockowillink",
       "context": "Cited as author of Extreme Ownership when Ethan urges engineers to take agency over their careers."
     },
     {
       "name": "Cal Newport",
-      "role": "Computer science professor at Georgetown and author",
+      "role": {
+        "pt": "Professor de ciência da computação em Georgetown e autor",
+        "en": "Computer science professor at Georgetown and author"
+      },
       "url": "https://twitter.com/StudyHacks",
       "context": "Author of So Good They Can't Ignore You — cited as a model of combining technical depth with the social skills to communicate it. Ethan notes Newport teaches at Princeton (actually Georgetown)."
     },
     {
       "name": "Marshall Goldsmith",
-      "role": "Executive coach and leadership author",
+      "role": {
+        "pt": "Coach executivo e autor de liderança",
+        "en": "Executive coach and leadership author"
+      },
       "url": "https://twitter.com/coachgoldsmith",
       "context": "Author of the classic What Got You Here Won't Get You There on the skill shifts required at each career level."
     }
@@ -175,17 +199,26 @@
     {
       "slug_pt": "conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford",
       "slug_en": "ai-career-advice-andrew-ng-lawrence-moroney-stanford",
-      "reason": "Both are deep-dive career advice pieces from senior operators — this episode complements Andrew Ng and Lawrence Moroney's technical career guidance with the corporate-politics layer that actually controls promotion and scope."
+      "reason": {
+        "pt": "Ambos são conteúdos aprofundados de conselhos de carreira por operadores seniores — este episódio complementa a orientação técnica de carreira de Andrew Ng e Lawrence Moroney com a camada de política corporativa que de fato controla promoção e escopo.",
+        "en": "Both are deep-dive career advice pieces from senior operators — this episode complements Andrew Ng and Lawrence Moroney's technical career guidance with the corporate-politics layer that actually controls promotion and scope."
+      }
     },
     {
       "slug_pt": "roteiro-engenheiro-ia-para-desenvolvedores-de-software",
       "slug_en": "ai-engineer-roadmap-software-developers",
-      "reason": "The roadmap focuses on technical skills to rise as an engineer; Ethan's transparency on reorgs, allies, and promo packets covers the non-technical skills that decide whether that roadmap actually lands you a promotion."
+      "reason": {
+        "pt": "O roadmap foca nas habilidades técnicas para crescer como engenheiro; a transparência de Ethan sobre reorgs, aliados e promo packets cobre as habilidades não técnicas que decidem se esse roadmap realmente te leva à promoção.",
+        "en": "The roadmap focuses on technical skills to rise as an engineer; Ethan's transparency on reorgs, allies, and promo packets covers the non-technical skills that decide whether that roadmap actually lands you a promotion."
+      }
     },
     {
       "slug_pt": "financas-comportamentais-robert-shiller-yale",
       "slug_en": "behavioral-finance-psychology-manipulation-integrity-markets",
-      "reason": "Shiller's behavioral finance and Ethan's 'polite fiction' / narrative-over-facts insight share the same underlying thesis — humans make emotional decisions and then rationalize them, which shapes both markets and corporate politics."
+      "reason": {
+        "pt": "As finanças comportamentais de Shiller e o insight de Ethan sobre 'ficção educada' / narrativa-acima-dos-fatos compartilham a mesma tese subjacente — humanos tomam decisões emocionais e depois as racionalizam, o que molda tanto mercados quanto política corporativa.",
+        "en": "Shiller's behavioral finance and Ethan's 'polite fiction' / narrative-over-facts insight share the same underlying thesis — humans make emotional decisions and then rationalize them, which shapes both markets and corporate politics."
+      }
     }
   ]
 }
