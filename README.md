@@ -114,20 +114,15 @@ Run `claude` in any directory to start the agent. First run will prompt you to s
 ```bash
 git clone https://github.com/adhenawer/video-to-text
 cd video-to-text
-python3 -m venv .venv && source .venv/bin/activate   # macOS/Linux
-# .venv\Scripts\activate                              # Windows PowerShell
+python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
 `requirements.txt` includes `youtube-transcript-api`, `yt-dlp`, `mlx-whisper`, `mlx-vlm` and others.
 
-### 3. Install Whisper hardware dependencies
+### 3. Install Whisper (Apple Silicon)
 
-Whisper runs **locally** — no API calls, no external cost. Requirements differ by hardware:
-
-#### Apple Silicon (macOS, recommended)
-
-Uses [`mlx-whisper`](https://github.com/ml-explore/mlx-examples/tree/main/whisper) — MLX framework natively optimized for M1/M2/M3/M4 chips.
+Whisper runs **locally** — no API calls, no external cost. This project uses [`mlx-whisper`](https://github.com/ml-explore/mlx-examples/tree/main/whisper), the MLX framework natively optimized for Apple Silicon (M1/M2/M3/M4).
 
 ```bash
 # ffmpeg is needed by yt-dlp to demux audio
@@ -138,31 +133,7 @@ brew install ffmpeg
 #   mlx-community/whisper-large-v3-turbo
 ```
 
-Recommended: M1 Pro 16GB or higher. Transcription runs at ~5× real-time speed.
-
-#### Windows (CPU or CUDA GPU)
-
-`mlx-whisper` is Apple-only. On Windows, swap to [`faster-whisper`](https://github.com/SYSTRAN/faster-whisper) (CTranslate2-based):
-
-```powershell
-# Install ffmpeg (PowerShell as admin)
-winget install Gyan.FFmpeg
-
-# In your venv
-pip uninstall mlx-whisper mlx-vlm mlx-lm -y
-pip install faster-whisper
-
-# If you have an NVIDIA GPU, install CUDA-enabled PyTorch for speed:
-pip install torch --index-url https://download.pytorch.org/whl/cu121
-```
-
-You'll need to tweak `src/providers/twitter.py` to call `faster_whisper.WhisperModel` instead of `mlx_whisper.transcribe`. Claude Code can do this patch in a few seconds — ask it: *"Swap mlx-whisper for faster-whisper in src/providers/twitter.py, same interface."*
-
-GPU: NVIDIA 8GB+ VRAM for the `large-v3` model, or use `medium`/`small` for CPU-only.
-
-#### Linux (CPU or CUDA)
-
-Same as Windows — use `faster-whisper`. Install `ffmpeg` via your package manager (`apt install ffmpeg` / `dnf install ffmpeg`).
+Recommended hardware: M1 Pro 16GB or higher. Transcription runs at ~5× real-time speed.
 
 ### 4. Run the local server
 
@@ -204,18 +175,6 @@ Claude Code then, on its own:
 
 You review the diff inside Claude Code. If anything looks off, ask it to fix.
 
-### Windows example
-
-Open PowerShell, activate the venv, start Claude Code:
-
-```powershell
-cd C:\code\video-to-text
-.venv\Scripts\activate
-claude
-```
-
-Same conversation as above. For Twitter/X videos, make sure you've done the `faster-whisper` swap from the setup section — Claude Code can do this transparently when it sees the Windows environment.
-
 ### Twitter/X flow
 
 ```
@@ -225,7 +184,7 @@ Same conversation as above. For Twitter/X videos, make sure you've done the `fas
 Under the hood:
 
 - `yt-dlp` downloads the audio to `/tmp/`
-- `mlx-whisper` (macOS) or `faster-whisper` (Windows/Linux) transcribes locally
+- `mlx-whisper` transcribes locally on Apple Silicon
 - Same translation + HTML generation path as YouTube
 
 ### Full project docs
