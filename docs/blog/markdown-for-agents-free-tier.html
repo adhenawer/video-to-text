@@ -29,7 +29,7 @@
   <a href="./" class="back-home">← Voltar ao blog</a>
   <header>
     <h1>Markdown para Agentes no plano gratuito do Cloudflare Workers</h1>
-    <p class="meta"><cite>video-to-text · 2026-04-13</cite></p>
+    <p class="meta"><cite><a href="https://github.com/adhenawer" target="_blank" rel="noopener">Rodolfo Moraes</a> · 2026-04-13</cite></p>
   </header>
 
   <p>A Cloudflare oferece um recurso chamado <em>Markdown for Agents</em> que devolve uma versão limpa em Markdown de qualquer página quando o cliente envia <code>Accept: text/markdown</code>. Ele está restrito aos planos Pro e Business. Para um blog estático hospedado no GitHub Pages, pagar por um plano de edge só para ajudar crawlers a interpretarem artigos é difícil de justificar. Este post percorre um Cloudflare Worker de 170 linhas que replica o recurso no plano gratuito para <code>adhenawer.net</code> e explica os trade-offs envolvidos.</p>
