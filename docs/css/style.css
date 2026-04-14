@@ -103,66 +103,73 @@ header h1 {
 }
 .theme-btn.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
 
-/* --- References sidebar --- */
+/* --- References sidebar ---
+   Mobile-first: inline block centered below the article.
+   On wide screens (>= 1300px): becomes a fixed right-side panel. */
 .references-sidebar {
-  position: fixed;
-  right: 16px;
-  top: 68px;
-  width: 280px;
-  max-height: calc(100vh - 90px);
-  overflow-y: auto;
+  display: block;
+  box-sizing: border-box;
+  max-width: 680px;
+  margin: 32px auto 60px;
+  padding: 16px 20px;
   background: var(--toc-bg);
   border: 1px solid var(--toc-border);
-  border-radius: 8px;
-  padding: 14px 16px;
+  border-radius: 10px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 0.82em;
-  z-index: 50;
+  font-size: 0.88em;
   transition: background 0.3s, border-color 0.3s;
 }
 .references-sidebar h3 {
-  font-size: 0.95em; font-weight: 700; margin: 0 0 10px;
+  font-size: 1em; font-weight: 700; margin: 0 0 12px;
   color: var(--text-heading);
 }
 .references-sidebar details { margin-bottom: 8px; }
 .references-sidebar summary {
-  cursor: pointer; font-weight: 600; padding: 4px 0;
+  cursor: pointer; font-weight: 600; padding: 6px 0;
   color: var(--text); list-style: none;
 }
 .references-sidebar summary::-webkit-details-marker { display: none; }
 .references-sidebar summary::before {
-  content: "▸ "; font-size: 0.7em; color: var(--text-muted);
-  transition: transform 0.2s;
+  content: "▸ "; font-size: 0.75em; color: var(--text-muted);
 }
-.references-sidebar details[open] > summary::before {
-  content: "▾ ";
-}
+.references-sidebar details[open] > summary::before { content: "▾ "; }
 .references-sidebar .ref-count {
   color: var(--text-muted); font-weight: 400; font-size: 0.9em;
 }
 .references-sidebar ul {
-  list-style: none; margin: 4px 0 0; padding-left: 16px;
+  list-style: none; margin: 6px 0 0; padding-left: 14px;
 }
 .references-sidebar li {
-  padding: 4px 0; line-height: 1.4;
+  padding: 5px 0; line-height: 1.45;
   border-bottom: 1px dashed var(--border);
 }
 .references-sidebar li:last-child { border-bottom: none; }
-.references-sidebar li a {
-  color: var(--link); text-decoration: none;
-}
+.references-sidebar li a { color: var(--link); text-decoration: none; word-break: break-word; }
 .references-sidebar li a:hover { text-decoration: underline; }
 .references-sidebar li small {
-  color: var(--text-muted); font-size: 0.88em;
+  display: block; color: var(--text-muted); font-size: 0.88em;
 }
-@media (max-width: 1200px) {
+
+/* On wide screens, float fixed on the right. Width is 300px;
+   container width (680px) + gap (40px) + sidebar (300px) + right margin (20px) = 1040px minimum usable,
+   so we activate at 1300px to leave breathing room. */
+@media (min-width: 1300px) {
   .references-sidebar {
-    position: static; width: auto; max-width: 680px;
-    margin: 32px auto; max-height: none;
+    position: fixed;
+    right: 20px;
+    top: 72px;
+    width: 300px;
+    max-width: 300px;
+    max-height: calc(100vh - 96px);
+    overflow-y: auto;
+    margin: 0;
+    font-size: 0.82em;
+    z-index: 50;
   }
 }
-@media (max-width: 600px) {
-  .references-sidebar { margin: 24px 16px; font-size: 0.88em; }
+
+@media (max-width: 640px) {
+  .references-sidebar { margin: 24px 16px 60px; padding: 14px 16px; font-size: 0.86em; }
 }
 
 /* --- Language switcher --- */
