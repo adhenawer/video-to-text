@@ -511,6 +511,19 @@
     "subtitle": "Marco Fernández / X",
     "url": "https://x.com/maarcoofdezz/status/2043679971927896218",
     "slug": "curso-completo-claude-code-4-horas",
-    "date": "2026-04-15"
+    "date": "2026-04-15",
+    "references": {
+      "path": "transcripts/twitter/2043679971927896218.references.json",
+      "counts": {
+        "books": 0,
+        "tools": 17,
+        "papers": 0,
+        "people": 8,
+        "concepts": 11,
+        "companies": 9,
+        "related_posts": 7
+      },
+      "total": 45
+    }
   }
 ]

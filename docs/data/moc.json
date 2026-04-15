@@ -175,6 +175,14 @@
       "url_pt": "posts/pt_br/fabio-akita-flow-588.html",
       "url_en": "posts/original/fabio-akita-flow-588.html",
       "refs_total": 50
+    },
+    {
+      "id": "curso-completo-claude-code-4-horas",
+      "title": "Curso Completo de Claude Code — 4 Horas",
+      "subtitle": "Marco Fernández / X",
+      "url_pt": "posts/pt_br/curso-completo-claude-code-4-horas.html",
+      "url_en": "posts/original/curso-completo-claude-code-4-horas.html",
+      "refs_total": 45
     }
   ],
   "edges": [
@@ -521,6 +529,34 @@
     {
       "source": "fabio-akita-flow-588",
       "target": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills"
+    },
+    {
+      "source": "curso-completo-claude-code-4-horas",
+      "target": "guia-completo-claude-iniciante-sistema-operacional-ia"
+    },
+    {
+      "source": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
+      "target": "curso-completo-claude-code-4-horas"
+    },
+    {
+      "source": "claude-code-leak-what-weve-learned-so-far",
+      "target": "curso-completo-claude-code-4-horas"
+    },
+    {
+      "source": "curso-completo-claude-code-4-horas",
+      "target": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code"
+    },
+    {
+      "source": "curso-completo-claude-code-4-horas",
+      "target": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills"
+    },
+    {
+      "source": "curso-completo-claude-code-4-horas",
+      "target": "de-ides-para-agentes-de-ia-steve-yegge"
+    },
+    {
+      "source": "curso-completo-claude-code-4-horas",
+      "target": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison"
     }
   ]
 }

@@ -1,0 +1,320 @@
+{
+  "video_id": "2043679971927896218",
+  "extracted_at": "2026-04-15",
+  "books": [],
+  "tools": [
+    {
+      "name": "Claude Code",
+      "url": "https://www.anthropic.com/claude-code",
+      "context": "CLI agentic coding tool da Anthropic — tema central do curso de 4h"
+    },
+    {
+      "name": "Visual Studio Code",
+      "url": "https://code.visualstudio.com",
+      "context": "IDE principal demonstrada para integração com Claude Code"
+    },
+    {
+      "name": "Cursor",
+      "url": "https://cursor.com",
+      "context": "IDE AI-first apresentada como alternativa ao VSCode"
+    },
+    {
+      "name": "Antigravity (Google)",
+      "url": "https://antigravity.google",
+      "context": "IDE do Google apresentada como terceira opção — fork do VSCode com integração de IA"
+    },
+    {
+      "name": "Netlify",
+      "url": "https://www.netlify.com",
+      "context": "Plataforma de deploy de sites estáticos usada no curso para publicar o gerador de propostas"
+    },
+    {
+      "name": "Modal",
+      "url": "https://modal.com",
+      "context": "Plataforma de compute serverless para rodar webhooks e automações em produção"
+    },
+    {
+      "name": "Supabase",
+      "url": "https://supabase.com",
+      "context": "Backend (Postgres + auth) usado no app de gerador de propostas construído no curso"
+    },
+    {
+      "name": "Stripe",
+      "url": "https://stripe.com",
+      "context": "Pagamentos no app de propostas — configuração de webhooks via Claude Code"
+    },
+    {
+      "name": "Chrome DevTools MCP",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "context": "MCP descrito pelo instrutor como o mais poderoso — permite Claude interagir com navegador"
+    },
+    {
+      "name": "Gmail MCP",
+      "url": "https://modelcontextprotocol.io/servers",
+      "context": "MCP para organizar e-mails com IA — demo de criação de skill de labels"
+    },
+    {
+      "name": "ClickUp MCP",
+      "url": "https://clickup.com",
+      "context": "MCP para gestão de tarefas — demonstrado para gerenciamento de contexto"
+    },
+    {
+      "name": "PandaDoc",
+      "url": "https://www.pandadoc.com",
+      "context": "Referência para o gerador de propostas construído no curso"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com",
+      "context": "Hospedagem e versionamento de projetos Claude Code"
+    },
+    {
+      "name": "n8n",
+      "url": "https://n8n.io",
+      "context": "Ferramenta no-code comparada ao Claude Code para automações"
+    },
+    {
+      "name": "Make (Integromat)",
+      "url": "https://www.make.com",
+      "context": "Ferramenta no-code comparada ao Claude Code"
+    },
+    {
+      "name": "Zapier",
+      "url": "https://zapier.com",
+      "context": "Ferramenta no-code comparada ao Claude Code"
+    },
+    {
+      "name": "Git Worktrees",
+      "url": "https://git-scm.com/docs/git-worktree",
+      "context": "Feature do git usada para isolamento de agentes em paralelo"
+    }
+  ],
+  "papers": [],
+  "people": [
+    {
+      "name": "Nick Saraev",
+      "role": {
+        "pt": "Instrutor do curso — fundador da Left Click (agência de automação IA)",
+        "en": "Course instructor — founder of Left Click (AI automation agency)"
+      },
+      "url": "https://leftclick.ai",
+      "context": "Apresentador do curso de 4h. Usa Claude Code para rodar negócio de $4M/ano em lucro"
+    },
+    {
+      "name": "Alex Hormozi",
+      "role": {
+        "pt": "Empreendedor e investidor — referência em marketing de sites",
+        "en": "Entrepreneur and investor — marketing/website reference"
+      },
+      "url": "https://twitter.com/AlexHormozi",
+      "context": "Citado como inspiração de design — site referência para copywriting"
+    },
+    {
+      "name": "Sam Ovens",
+      "role": {
+        "pt": "Fundador do Skool — referência em copywriting e negócios digitais",
+        "en": "Founder of Skool — copywriting and digital business reference"
+      },
+      "url": "https://twitter.com/SamOvens",
+      "context": "Citado como inspiração para design de landing pages"
+    },
+    {
+      "name": "Ali Abdaal",
+      "role": {
+        "pt": "Criador de conteúdo sobre produtividade",
+        "en": "Productivity content creator"
+      },
+      "url": "https://twitter.com/AliAbdaal",
+      "context": "Mencionado como referência de design de site pessoal"
+    },
+    {
+      "name": "Dan Koe",
+      "role": {
+        "pt": "Criador de conteúdo sobre branding pessoal e escrita",
+        "en": "Personal branding and writing creator"
+      },
+      "url": "https://twitter.com/thedankoe",
+      "context": "Referência de design/branding pessoal citada no curso"
+    },
+    {
+      "name": "Justin Welsh",
+      "role": {
+        "pt": "Criador solo-preneur — referência em homepage design",
+        "en": "Solo-preneur creator — homepage design reference"
+      },
+      "url": "https://twitter.com/thejustinwelsh",
+      "context": "Citado pela \"upside down homepage\" usada como inspiração"
+    },
+    {
+      "name": "David Ogilvy",
+      "role": {
+        "pt": "Pioneiro da publicidade moderna",
+        "en": "Pioneer of modern advertising"
+      },
+      "url": "https://en.wikipedia.org/wiki/David_Ogilvy_(businessman)",
+      "context": "Princípios de copywriting citados como base para design de sites"
+    },
+    {
+      "name": "Marco Fernández",
+      "role": {
+        "pt": "Curador — compartilhou o vídeo no X",
+        "en": "Curator — shared the video on X"
+      },
+      "url": "https://twitter.com/maarcoofdezz",
+      "context": "Responsável pela difusão do curso no Twitter/X"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Claude.md (project brain)",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/memory",
+      "context": "Arquivo de instruções persistentes — o \"cérebro do projeto\" no Claude Code"
+    },
+    {
+      "name": "Model Context Protocol (MCP)",
+      "url": "https://modelcontextprotocol.io",
+      "context": "Protocolo padrão para conectar agentes a ferramentas externas"
+    },
+    {
+      "name": "Agent Skills",
+      "url": "https://www.anthropic.com/news/skills",
+      "context": "Pastas organizadas de conhecimento procedural — descrita como a feature mais economicamente valiosa"
+    },
+    {
+      "name": "Subagents",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/sub-agents",
+      "context": "Agentes isolados em contextos separados para paralelização"
+    },
+    {
+      "name": "Agent Teams",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/sub-agents",
+      "context": "Times completamente autônomos de agentes trabalhando em paralelo"
+    },
+    {
+      "name": "Hooks",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/hooks",
+      "context": "Automação de comportamentos baseada em eventos do Claude Code"
+    },
+    {
+      "name": "Plan Mode",
+      "url": "https://docs.anthropic.com/en/docs/claude-code/interactive-mode",
+      "context": "Modo de planejamento antes da execução — reduz retrabalho"
+    },
+    {
+      "name": "Extended Thinking",
+      "url": "https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking",
+      "context": "Modo de raciocínio profundo para tarefas complexas"
+    },
+    {
+      "name": "Context Window",
+      "url": "https://en.wikipedia.org/wiki/Large_language_model#Context_window",
+      "context": "Janela de contexto — central para o gerenciamento de tokens"
+    },
+    {
+      "name": "Test-Driven Development (TDD)",
+      "url": "https://en.wikipedia.org/wiki/Test-driven_development",
+      "context": "Prática recomendada para que o agente valide seus próprios resultados"
+    },
+    {
+      "name": "Screenshot Loop",
+      "url": "https://docs.anthropic.com/en/docs/claude-code",
+      "context": "Loop visual de desenvolvimento: agente gera → captura → itera"
+    }
+  ],
+  "companies": [
+    {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com"
+    },
+    {
+      "name": "Left Click",
+      "url": "https://leftclick.ai"
+    },
+    {
+      "name": "Google",
+      "url": "https://google.com"
+    },
+    {
+      "name": "Netlify",
+      "url": "https://www.netlify.com"
+    },
+    {
+      "name": "Modal Labs",
+      "url": "https://modal.com"
+    },
+    {
+      "name": "Supabase",
+      "url": "https://supabase.com"
+    },
+    {
+      "name": "Stripe",
+      "url": "https://stripe.com"
+    },
+    {
+      "name": "PandaDoc",
+      "url": "https://www.pandadoc.com"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com"
+    }
+  ],
+  "related_posts": [
+    {
+      "slug_pt": "guia-completo-claude-iniciante-sistema-operacional-ia",
+      "slug_en": "complete-claude-guide-beginner-ai-operating-system",
+      "reason": {
+        "pt": "Ambos cobrem Claude do zero para iniciantes, com foco em construção de sistema operacional de IA pessoal",
+        "en": "Both cover Claude from scratch for beginners, focused on building a personal AI operating system"
+      }
+    },
+    {
+      "slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
+      "slug_en": "head-claude-code-happens-after-coding-solved",
+      "reason": {
+        "pt": "Visão oficial do chefe do Claude Code (Boris Cherny) complementa o uso prático do instrutor",
+        "en": "Official Claude Code head's vision (Boris Cherny) complements the instructor's practical usage"
+      }
+    },
+    {
+      "slug_pt": "claude-code-leak-what-weve-learned-so-far",
+      "slug_en": "claude-code-leak-we-have-learned-so-far",
+      "reason": {
+        "pt": "Arquitetura interna do Claude Code — contrapartida técnica ao curso prático",
+        "en": "Internal Claude Code architecture — technical counterpart to the practical course"
+      }
+    },
+    {
+      "slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
+      "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code",
+      "reason": {
+        "pt": "Aprofunda o conceito de Agent Teams demonstrado no curso",
+        "en": "Deepens the Agent Teams concept demonstrated in the course"
+      }
+    },
+    {
+      "slug_pt": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills",
+      "slug_en": "why-we-stopped-building-agents-started-building-skills",
+      "reason": {
+        "pt": "Explica a filosofia por trás das Skills — central no curso como feature mais valiosa",
+        "en": "Explains the philosophy behind Skills — central in the course as the most valuable feature"
+      }
+    },
+    {
+      "slug_pt": "de-ides-para-agentes-de-ia-steve-yegge",
+      "slug_en": "ides-ai-agents",
+      "reason": {
+        "pt": "Evolução das IDEs para agentes — conecta com a comparação VSCode/Cursor/Antigravity do curso",
+        "en": "IDE evolution to agents — connects with the course's VSCode/Cursor/Antigravity comparison"
+      }
+    },
+    {
+      "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
+      "slug_en": "engineering-practices-make-coding-agents-work",
+      "reason": {
+        "pt": "Boas práticas de engenharia para agentes — espelha os padrões defendidos pelo instrutor",
+        "en": "Engineering best practices for agents — mirrors the patterns advocated by the instructor"
+      }
+    }
+  ]
+}
