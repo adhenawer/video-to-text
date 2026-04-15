@@ -510,7 +510,6 @@
     "title": "Curso Completo de Claude Code — 4 Horas",
     "subtitle": "Marco Fernández / X",
     "url": "https://x.com/maarcoofdezz/status/2043679971927896218",
-    "slug": "curso-completo-claude-code-4-horas",
     "date": "2026-04-15",
     "references": {
       "path": "transcripts/twitter/2043679971927896218.references.json",
@@ -524,6 +523,8 @@
         "related_posts": 7
       },
       "total": 45
-    }
+    },
+    "slug_en": "complete-claude-code-course-4-hours",
+    "slug": "curso-completo-claude-code-4-horas"
   }
 ]
