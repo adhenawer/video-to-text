@@ -280,6 +280,10 @@ def make_html(vid_id, title, subtitle, url, txt_path,
 
     pt_href = f"../pt_br/{pt_slug}.html"
     en_href = f"../original/{en_slug}.html"
+    canonical_url = (
+        f"https://adhenawer.net/posts/pt_br/{pt_slug}.html" if is_ptbr
+        else f"https://adhenawer.net/posts/original/{en_slug}.html"
+    )
 
     # Load and render references sidebar (auto-discovers the JSON if not passed)
     if references is None and provider:
@@ -294,6 +298,7 @@ def make_html(vid_id, title, subtitle, url, txt_path,
 <title>{title}</title>
 <meta name="description" content="{first_para}">
 <meta name="author" content="{subtitle}">
+<link rel="canonical" href="{canonical_url}">
 <link rel="alternate" hreflang="pt-BR" href="{pt_href}">
 <link rel="alternate" hreflang="en" href="{en_href}">
 <link rel="alternate" hreflang="x-default" href="{pt_href}">
@@ -359,7 +364,33 @@ if __name__ == '__main__':
     html_out = sys.argv[6]
     link_text  = sys.argv[7] if len(sys.argv) > 7 else "🎥 Assistir no YouTube"
     slides_json = sys.argv[8] if len(sys.argv) > 8 else None
-    html = make_html(vid_id, title, subtitle, url, txt_in, link_text, slides_json)
+
+    # Derive slug from html_out path + lookup cross-language slug from index.json
+    out_slug = os.path.splitext(os.path.basename(html_out))[0]
+    is_ptbr_out = "/pt_br/" in html_out or "\\pt_br\\" in html_out
+    pt_slug = out_slug if is_ptbr_out else None
+    en_slug = out_slug if not is_ptbr_out else None
+    provider = None
+    project_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    idx_path = os.path.join(project_dir, "transcripts", "index.json")
+    if os.path.exists(idx_path):
+        with open(idx_path) as f:
+            idx = json.load(f)
+        for e in idx:
+            if e.get("video_id") == vid_id:
+                provider = e.get("provider")
+                if is_ptbr_out:
+                    en_slug = e.get("slug_en")
+                else:
+                    pt_slug = e.get("slug") or e.get("slug_pt")
+                break
+
+    html = make_html(
+        vid_id, title, subtitle, url, txt_in, link_text, slides_json,
+        lang="pt_br" if is_ptbr_out else "original",
+        slug=out_slug, pt_slug=pt_slug, en_slug=en_slug,
+        provider=provider,
+    )
     with open(html_out, 'w') as f:
         f.write(html)
     print(f"OK {html_out} ({len(html):,} bytes)")
