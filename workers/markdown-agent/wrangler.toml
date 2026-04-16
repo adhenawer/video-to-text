@@ -10,3 +10,15 @@ routes = [
   { pattern = "adhenawer.net/index.html", zone_name = "adhenawer.net" },
   { pattern = "adhenawer.net/llms.txt", zone_name = "adhenawer.net" }
 ]
+
+[observability]
+enabled = true
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+invocation_logs = true
+
+[observability.traces]
+enabled = true
+head_sampling_rate = 1
