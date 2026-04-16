@@ -119,52 +119,89 @@ result = mlx_whisper.transcribe(
 
   <h2>Markdown para agentes</h2>
 
-  <p>A Cloudflare tem uma feature chamada <strong>Markdown for Agents</strong> que converte HTML em Markdown na edge quando um agente de IA faz a requisição com <code>Accept: text/markdown</code>. Essa feature só existe no plano <strong>pago</strong> (Pro ou Business).</p>
+  <p>A Cloudflare tem uma feature chamada <strong>Markdown for Agents</strong> que converte HTML em Markdown na edge quando um agente de IA faz a requisição com <code>Accept: text/markdown</code>. Essa feature só existe no plano <strong>Pro ou superior</strong> ($25/mês por zona).</p>
 
-  <p>Dá pra replicar em ~150 linhas de JavaScript rodando no plano <strong>Free</strong> (100k requests/dia) do Cloudflare Workers. HTMLs bem estruturados não precisam de nada muito sofisticado — regex resolve:</p>
+  <p>Esse projeto começou com ~150 linhas de regex JavaScript fazendo a conversão manualmente. Funcionava, mas era frágil e acoplado à estrutura HTML do site. O worker foi extraído e refatorado numa <strong>biblioteca open source</strong> que qualquer site pode usar no plano Free:</p>
 
-  <pre><code class="language-javascript">export default {
-  async fetch(request) {
-    const accept = request.headers.get("Accept") || "";
-    if (!accept.includes("text/markdown")) {
-      return fetch(request); // passa HTML direto pra humanos
-    }
+  <p><strong><a href="https://github.com/adhenawer/markdown-edge-for-agents" target="_blank" rel="noopener">markdown-edge-for-agents</a></strong> — lib + CLI scaffolder para servir markdown a agentes de IA via content negotiation em Cloudflare Workers. Compatibilidade 1:1 com os headers da feature Pro da Cloudflare.</p>
 
-    // Agente pediu markdown. Busca HTML do origin e converte.
-    const response = await fetch(new Request(request.url, {
-      headers: { Accept: "text/html" }
-    }));
-    const html = await response.text();
+  <ul>
+    <li><strong>npm (lib):</strong> <a href="https://www.npmjs.com/package/@adhenawer-pkg/markdown-edge-for-agents" target="_blank" rel="noopener">@adhenawer-pkg/markdown-edge-for-agents</a></li>
+    <li><strong>npm (CLI):</strong> <a href="https://www.npmjs.com/package/create-markdown-edge-for-agents" target="_blank" rel="noopener">create-markdown-edge-for-agents</a></li>
+    <li><strong>GitHub:</strong> <a href="https://github.com/adhenawer/markdown-edge-for-agents" target="_blank" rel="noopener">github.com/adhenawer/markdown-edge-for-agents</a></li>
+  </ul>
 
-    const articleHtml = html.match(/&lt;article[^&gt;]*&gt;([\s\S]*?)&lt;\/article&gt;/i)?.[1];
-    const markdown = htmlToMarkdown(articleHtml);
+  <h3>Por que uma lib?</h3>
 
-    return new Response(frontmatter + markdown, {
-      headers: {
-        "Content-Type": "text/markdown; charset=utf-8",
-        "x-markdown-tokens": String(Math.ceil(markdown.length / 4)),
-        "Vary": "Accept",
-      }
-    });
-  }
-};</code></pre>
+  <p>A implementação com regex funcionava, mas tinha problemas: acoplada à estrutura HTML deste site, sem testes, sem suporte a presets de frameworks. Ao extrair como biblioteca, o worker deste projeto caiu de <strong>180 linhas</strong> pra <strong>23 linhas</strong> declarativas:</p>
 
-  <p>Resultado: um HTML de artigo que custa ~53.000 tokens pra um agente parsear vira ~13.000 tokens em Markdown — <strong>redução de 75%</strong>. Sem Turndown, sem JSDOM (nenhum dos dois roda em Worker runtime), só regex e uns cuidados com <code>&lt;pre&gt;</code> e <code>&lt;code&gt;</code>.</p>
+  <pre><code class="language-typescript">import { createMarkdownWorker } from "@adhenawer-pkg/markdown-edge-for-agents";
 
-  <p>Dá pra testar:</p>
+export default createMarkdownWorker({
+  preset: "custom",
+  selector: "article",
+  strip: [
+    ".theme-bar", ".back-home", ".progress",
+    ".reading-pct", ".resume-banner", ".back-top",
+    "script", "style", "nav", "button", "header",
+  ],
+  frontmatter: ["title", "author", "description", "lang"],
+  autoDetectAiCrawlers: true,
+  redirects: {
+    "/leituras/*": "/posts/pt_br/$1",
+  },
+});</code></pre>
 
-  <pre><code class="language-bash"># Humano recebe HTML
-curl -sI https://adhenawer.net/posts/original/state-ai-2026.html | grep -i content-type
+  <p>Toda a lógica de conversão, negociação de content-type, cache headers e fallback de erros está na lib. O worker só declara a configuração do site.</p>
+
+  <h3>Detecção automática de crawlers IA</h3>
+
+  <p>A feature nativa da Cloudflare <strong>depende do crawler enviar <code>Accept: text/markdown</code></strong> no header. Na prática, quase nenhum crawler de IA faz isso — <a href="https://dri.es/markdown-llms-txt-and-ai-crawlers" target="_blank" rel="noopener">pesquisa do Dries Buytaert</a> mostrou zero requests reais de crawlers IA usando esse header.</p>
+
+  <p>A lib resolve isso com <code>autoDetectAiCrawlers: true</code> — detecta 16 bots de IA conhecidos pelo User-Agent (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Amazonbot, entre outros) e serve markdown automaticamente, sem precisar do header <code>Accept</code>. Isso é algo que a <strong>feature Pro da Cloudflare não faz</strong>.</p>
+
+  <h3>Headers compatíveis com Cloudflare</h3>
+
+  <p>A resposta inclui os mesmos headers da feature oficial, o que torna a migração pra Pro trivial (basta ligar o toggle e remover o worker):</p>
+
+  <ul>
+    <li><code>Content-Type: text/markdown; charset=utf-8</code></li>
+    <li><code>x-markdown-tokens: N</code> — contagem estimada de tokens</li>
+    <li><code>Content-Signal: ai-train=yes, search=yes, ai-input=yes</code></li>
+    <li><code>Vary: Accept</code> — cache diferencia HTML e Markdown da mesma URL</li>
+    <li><code>x-markdown-preset: custom</code> — preset ativo</li>
+  </ul>
+
+  <p>Resultado: um HTML de artigo que custaria ~53.000 tokens pra um agente parsear vira ~13.000 tokens em Markdown — <strong>redução de 75%</strong>.</p>
+
+  <h3>Scaffolder para novos projetos</h3>
+
+  <p>Pra quem quer usar em outro site, o CLI detecta o framework (Astro, Hugo ou custom) e gera o worker pronto:</p>
+
+  <pre><code class="language-bash">npx create-markdown-edge-for-agents init</code></pre>
+
+  <h3>Testando</h3>
+
+  <pre><code class="language-bash"># Humano recebe HTML (comportamento normal)
+curl -sI https://adhenawer.net/posts/original/head-claude-code-happens-after-coding-solved.html \
+  | grep -i content-type
 # content-type: text/html; charset=utf-8
 
-# Agente recebe Markdown
-curl -s https://adhenawer.net/posts/original/state-ai-2026.html \
-  -H "Accept: text/markdown" | head -10
+# Agente com Accept header recebe Markdown
+curl -s https://adhenawer.net/posts/original/head-claude-code-happens-after-coding-solved.html \
+  -H "Accept: text/markdown" | head -15
 # ---
-# title: "The State of AI in 2026"
-# lang: en
+# title: "The Head of Claude Code on What Happens After Coding Is Solved"
+# author: "Lenny's Podcast with Boris Cherny"
 # ---
-# ## THE NOVEMBER INFLECTION POINT</code></pre>
+# ## THE PROGRAMMER WHO NO LONGER WRITES CODE
+
+# GPTBot recebe Markdown automaticamente (sem Accept header)
+curl -s -A "GPTBot/1.0" \
+  https://adhenawer.net/posts/original/head-claude-code-happens-after-coding-solved.html \
+  | head -5
+# ---
+# title: "The Head of Claude Code on What Happens After Coding Is Solved"</code></pre>
 
   <h2>Referências extraídas automaticamente</h2>
 
@@ -237,7 +274,7 @@ curl -s https://adhenawer.net/posts/original/state-ai-2026.html \
       <tr><td>Frontend</td><td>HTML estático, CSS em um arquivo</td></tr>
       <tr><td>Hosting</td><td>GitHub Pages</td></tr>
       <tr><td>Domínio + CDN</td><td>Cloudflare (Free)</td></tr>
-      <tr><td>Edge / agentes</td><td>Cloudflare Worker (Free) — Markdown on demand</td></tr>
+      <tr><td>Edge / agentes</td><td><a href="https://github.com/adhenawer/markdown-edge-for-agents">markdown-edge-for-agents</a> — Cloudflare Worker (Free), auto-detect AI crawlers</td></tr>
       <tr><td>Analytics</td><td>Umami Cloud (Free tier)</td></tr>
     </tbody>
   </table>
@@ -252,7 +289,7 @@ curl -s https://adhenawer.net/posts/original/state-ai-2026.html \
     <li><code>src/pipeline.py</code> — orquestrador de ponta a ponta</li>
     <li><code>src/providers/</code> — abstração multi-provider (YouTube, Twitter/X). Adicionar um novo provider (Vimeo, TikTok) exige implementar <code>detect(url)</code>, <code>extract_id(url)</code> e <code>fetch_transcript(url)</code>.</li>
     <li><code>src/build_html.py</code> — geração de HTML</li>
-    <li><code>workers/markdown-agent/src/index.js</code> — Worker do Cloudflare</li>
+    <li><code>workers/markdown-agent/src/index.ts</code> — Worker do Cloudflare (usa <a href="https://github.com/adhenawer/markdown-edge-for-agents">markdown-edge-for-agents</a>)</li>
     <li><code>transcripts/</code> — transcrições originais + traduzidas + JSONs de referências</li>
   </ul>
 </article>
