@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Markdown para Agentes no plano gratuito do Cloudflare Workers · Blog</title>
-<meta name="description" content="Como replicar o recurso pago Markdown for Agents da Cloudflare com um Worker no plano gratuito: content negotiation, conversão de HTML para Markdown com regex e redução de 75% de tokens para crawlers de LLMs.">
+<meta name="description" content="Como servir Markdown para agentes de IA no plano gratuito do Cloudflare Workers com a lib open source markdown-edge-for-agents: content negotiation, auto-detecção de crawlers, headers compatíveis com a feature Pro da Cloudflare e redução de 75% de tokens.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Markdown para Agentes no plano gratuito do Cloudflare Workers">
-<meta property="og:description" content="Um Worker de custo zero que entrega Markdown para agentes via headers Accept, reduzindo o payload de artigos de 53k para 13k tokens.">
+<meta property="og:description" content="Da implementação com regex de 170 linhas à lib open source com presets, auto-detecção de crawlers IA e headers 1:1 com a feature Pro da Cloudflare.">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Blog de Leituras">
 <meta name="twitter:card" content="summary">
@@ -29,91 +29,273 @@
   <a href="./" class="back-home">← Voltar ao blog</a>
   <header>
     <h1>Markdown para Agentes no plano gratuito do Cloudflare Workers</h1>
-    <p class="meta"><cite><a href="https://github.com/adhenawer" target="_blank" rel="noopener">Rodolfo Moraes</a> · 2026-04-13</cite></p>
+    <p class="meta"><cite><a href="https://github.com/adhenawer" target="_blank" rel="noopener">Rodolfo Moraes</a> · 2026-04-13 · atualizado 2026-04-16</cite></p>
   </header>
 
-  <p>A Cloudflare oferece um recurso chamado <em>Markdown for Agents</em> que devolve uma versão limpa em Markdown de qualquer página quando o cliente envia <code>Accept: text/markdown</code>. Ele está restrito aos planos Pro e Business. Para um blog estático hospedado no GitHub Pages, pagar por um plano de edge só para ajudar crawlers a interpretarem artigos é difícil de justificar. Este post percorre um Cloudflare Worker de 170 linhas que replica o recurso no plano gratuito para <code>adhenawer.net</code> e explica os trade-offs envolvidos.</p>
+  <blockquote><strong>Atualização (abril 2026):</strong> O Worker de regex que este post descrevia originalmente foi extraído, refatorado e publicado como uma biblioteca open source: <a href="https://github.com/adhenawer/markdown-edge-for-agents" target="_blank" rel="noopener">markdown-edge-for-agents</a>. Este post foi reescrito para refletir a versão atual, incluindo presets, auto-detecção de crawlers IA e headers compatíveis 1:1 com a feature Pro da Cloudflare.</blockquote>
 
-  <h2>Por que servir Markdown</h2>
+  <h2>O problema</h2>
 
-  <p>Cada artigo deste site é um arquivo HTML autocontido com seletor de tema, barra de progresso, banner de retomada, JSON-LD, tags Open Graph e navegação inline. Um único artigo pesa cerca de 53.000 tokens quando um LLM ingere o HTML cru. A maior parte disso é marcação que o modelo vai descartar. Servir o mesmo conteúdo em Markdown com um frontmatter YAML reduz o mesmo artigo para aproximadamente 13.000 tokens. Isso é uma redução de 75%, o que importa para qualquer pipeline de retrieval que paga por token ou tem uma janela de contexto finita.</p>
+  <p>A Cloudflare oferece um recurso chamado <em>Markdown for Agents</em> que devolve uma versão limpa em Markdown de qualquer página quando o cliente envia <code>Accept: text/markdown</code>. Ele está restrito aos planos <strong>Pro e Business</strong> ($25/mês por zona). Para um blog estático hospedado no GitHub Pages, pagar por um plano de edge só para ajudar crawlers a interpretarem artigos é difícil de justificar.</p>
 
-  <p>O truque é content negotiation. Um navegador pede <code>text/html</code> e recebe o HTML completo. Um agente pede <code>text/markdown</code> e recebe Markdown. A URL continua a mesma. Sem endpoints separados, sem duplicação de sitemap, sem novos caminhos para indexar.</p>
+  <p>O problema é real: um artigo deste site pesa cerca de <strong>53.000 tokens</strong> quando um LLM ingere o HTML cru. A maior parte é marcação que o modelo vai descartar (seletor de tema, barra de progresso, banner de retomada, JSON-LD, Open Graph, navegação). Servir o mesmo conteúdo em Markdown com frontmatter YAML reduz para aproximadamente <strong>13.000 tokens</strong> — uma redução de 75%. Isso importa para qualquer pipeline que paga por token ou tem janela de contexto finita.</p>
 
-  <h2>O Worker em uma leitura</h2>
+  <h2>De regex a biblioteca</h2>
 
-  <p>O entry point verifica o header <code>Accept</code>. Se ele não inclui <code>text/markdown</code>, o Worker simplesmente faz proxy da requisição para a origem e devolve o que o GitHub Pages retornou. Sem transformação, sem overhead além de um <code>fetch</code>.</p>
+  <p>A primeira versão era um Worker de ~170 linhas com regex fazendo a conversão manualmente. Funcionava, mas tinha problemas reais:</p>
 
-  <pre><code class="language-js">function wantsMarkdown(request) {
-  const accept = request.headers.get("Accept") || "";
-  return accept.includes("text/markdown");
-}
+  <ul>
+    <li><strong>Acoplado</strong>: os regex conheciam classes CSS específicas do meu site (<code>.theme-bar</code>, <code>.back-home</code>, <code>.reading-pct</code>). Qualquer outro site teria que reescrever.</li>
+    <li><strong>Frágil</strong>: listas aninhadas, tabelas, blocos de código com language tags — tudo quebrava em edge cases.</li>
+    <li><strong>Sem testes</strong>: o ciclo de feedback era <code>curl</code> no terminal.</li>
+    <li><strong>Sem reuso</strong>: quem quisesse usar teria que copiar e adaptar 170 linhas.</li>
+  </ul>
 
-export default {
-  async fetch(request, env, ctx) {
-    if (!wantsMarkdown(request)) {
-      return fetch(request);
-    }
-    // ...fetch origin as HTML, transform, return Markdown
-  }
-};</code></pre>
+  <p>A solução foi extrair a lógica numa biblioteca publicada no npm. O Worker deste site caiu de 170 linhas para <strong>23 linhas declarativas</strong>:</p>
 
-  <p>Quando Markdown é solicitado, o Worker busca a mesma URL na origem forçando <code>Accept: text/html</code>, extrai o bloco <code>&lt;article&gt;</code>, remove o chrome e converte o que sobra.</p>
+  <pre><code class="language-typescript">import { createMarkdownWorker } from "@adhenawer-pkg/markdown-edge-for-agents";
 
-  <h2>Por que regex em vez de um parser</h2>
-
-  <p>O caminho óbvio para converter HTML em Markdown é usar Turndown com JSDOM. Nenhum dos dois roda bem no runtime dos Workers. O JSDOM puxa built-ins do Node que não estão disponíveis, e empacotar parsers de DOM estoura o limite de 1 MB de script do Worker no plano gratuito. A Cloudflare oferece o <code>HTMLRewriter</code>, que é rápido e streaming, mas ele foi desenhado para reescritas pontuais e não para converter a árvore inteira em texto.</p>
-
-  <p>Como o HTML de origem é gerado pelo meu próprio <code>build_html.py</code>, a estrutura é previsível. Uma sequência de passes de regex é suficiente. Isso não é um conversor de uso geral. É um conversor para exatamente o HTML que este site produz.</p>
-
-  <pre><code class="language-js">// Remove elements we don't want
-md = md.replace(/&lt;div class="theme-bar"&gt;[\s\S]*?&lt;\/div&gt;/gi, "");
-md = md.replace(/&lt;a[^&gt;]*class="back-home"[^&gt;]*&gt;[\s\S]*?&lt;\/a&gt;/gi, "");
-md = md.replace(/&lt;script[\s\S]*?&lt;\/script&gt;/gi, "");
-md = md.replace(/&lt;style[\s\S]*?&lt;\/style&gt;/gi, "");
-md = md.replace(/&lt;nav[\s\S]*?&lt;\/nav&gt;/gi, "");
-
-// Convert headings
-md = md.replace(/&lt;h2[^&gt;]*&gt;([\s\S]*?)&lt;\/h2&gt;/gi, "## $1\n\n");
-
-// Convert links
-md = md.replace(/&lt;a[^&gt;]*href="([^"]*)"[^&gt;]*&gt;([\s\S]*?)&lt;\/a&gt;/gi, "[$2]($1)");
-
-// Strip whatever tags remain
-md = md.replace(/&lt;[^&gt;]+&gt;/g, "");</code></pre>
-
-  <p>A ordem importa. Links precisam ser convertidos antes do removedor genérico de tags, senão o <code>href</code> é perdido. Headings precisam ser convertidos antes dos parágrafos, senão o texto interno é embrulhado duas vezes. Blocos de script e style precisam ser deletados primeiro porque contêm caracteres que confundiriam os regex de âncoras e atributos.</p>
-
-  <h2>Frontmatter e o header de tokens</h2>
-
-  <p>O Worker extrai <code>&lt;title&gt;</code>, <code>meta name="description"</code> e <code>meta name="author"</code> do HTML original e monta um bloco de frontmatter YAML. Ele também emite um header de resposta <code>x-markdown-tokens</code> com uma estimativa de contagem de tokens (comprimento dividido por quatro, suficiente para orçamento).</p>
-
-  <pre><code class="language-js">return new Response(finalMarkdown, {
-  status: 200,
-  headers: {
-    "Content-Type": "text/markdown; charset=utf-8",
-    "x-markdown-tokens": String(tokens),
-    "Vary": "Accept",
-    "Cache-Control": "public, max-age=3600",
-    "Access-Control-Allow-Origin": "*",
+export default createMarkdownWorker({
+  preset: "custom",
+  selector: "article",
+  strip: [
+    ".theme-bar", ".back-home", ".progress",
+    ".reading-pct", ".resume-banner", ".back-top",
+    "script", "style", "nav", "button", "header",
+  ],
+  frontmatter: ["title", "author", "description", "lang"],
+  autoDetectAiCrawlers: true,
+  redirects: {
+    "/leituras/*": "/posts/pt_br/$1",
   },
 });</code></pre>
 
-  <p>O header <code>Vary: Accept</code> não é opcional. Sem ele, qualquer cache na frente do Worker, incluindo o da própria Cloudflare, pode servir a versão HTML para um agente ou a versão Markdown para um navegador, dependendo de quem pediu primeiro. Com <code>Vary: Accept</code>, o cache chaveia pelo header e as duas variantes coexistem.</p>
+  <p>Toda a lógica de conversão, negociação de content-type, cache headers, fallback de erros e detecção de crawlers está na lib. O Worker só declara a configuração do site.</p>
+
+  <h2>A biblioteca: markdown-edge-for-agents</h2>
+
+  <p><strong><a href="https://github.com/adhenawer/markdown-edge-for-agents" target="_blank" rel="noopener">markdown-edge-for-agents</a></strong> é uma lib TypeScript + CLI scaffolder para servir Markdown a agentes de IA via content negotiation em Cloudflare Workers. Publicada no npm:</p>
+
+  <ul>
+    <li><strong>Lib:</strong> <a href="https://www.npmjs.com/package/@adhenawer-pkg/markdown-edge-for-agents" target="_blank" rel="noopener">@adhenawer-pkg/markdown-edge-for-agents</a></li>
+    <li><strong>CLI:</strong> <a href="https://www.npmjs.com/package/create-markdown-edge-for-agents" target="_blank" rel="noopener">create-markdown-edge-for-agents</a></li>
+  </ul>
+
+  <h3>Arquitetura</h3>
+
+  <p>O projeto é um monorepo com dois pacotes:</p>
+
+  <ul>
+    <li><strong><code>packages/core</code></strong>: a lib em si. Expõe <code>createMarkdownWorker(config)</code> que retorna um <code>ExportedHandler</code> pronto para Cloudflare Workers. Internamente usa a lib <a href="https://github.com/kkonstantinov/markdown-for-agents" target="_blank" rel="noopener">markdown-for-agents</a> para conversão HTML→Markdown (htmlparser2, sem JSDOM, sem Turndown) e <code>HTMLRewriter</code> nativo do CF para extração de metadados. Em runtimes sem HTMLRewriter (Node, Bun, Deno), cai automaticamente para um fallback regex.</li>
+    <li><strong><code>packages/create</code></strong>: scaffolder CLI. Detecta o framework (Astro, Hugo ou custom), gera o Worker + <code>wrangler.toml</code> + <code>package.json</code> em um comando.</li>
+  </ul>
+
+  <p>A decisão de usar uma lib externa para a conversão em vez de implementar do zero foi intencional. Converter HTML para Markdown é commodity — não faz sentido reimplementar parsers de listas aninhadas, tabelas, code fences com language detection. O valor da lib está na camada acima: config declarativa, presets por framework, headers compatíveis com a Cloudflare, e auto-detecção de crawlers.</p>
+
+  <h3>Presets</h3>
+
+  <p>Cada framework gera HTML diferente. Em vez de forçar o usuário a descobrir quais seletores CSS remover, a lib traz presets prontos:</p>
+
+  <table>
+    <thead><tr><th>Preset</th><th>Selector</th><th>Elementos removidos</th></tr></thead>
+    <tbody>
+      <tr><td><code>astro</code></td><td><code>article</code>, <code>main[data-page-type='post']</code>, <code>main.content</code></td><td>nav, header, footer, aside, script, style, [aria-hidden]</td></tr>
+      <tr><td><code>hugo</code></td><td><code>article</code>, <code>main .post-content</code>, <code>main.single</code></td><td>nav, header.site-header, footer, .post-nav, .social-share</td></tr>
+      <tr><td><code>custom</code></td><td><code>article</code></td><td>nenhum (você define)</td></tr>
+    </tbody>
+  </table>
+
+  <p>Adicionar um preset novo é um único arquivo TypeScript com um objeto plano — sem lógica, sem herança.</p>
+
+  <h2>Content negotiation</h2>
+
+  <p>O princípio é simples: mesma URL, conteúdo diferente baseado no que o cliente pede.</p>
+
+  <ul>
+    <li>Navegador pede <code>text/html</code> → recebe HTML completo (zero processamento)</li>
+    <li>Agente pede <code>text/markdown</code> → Worker busca HTML na origem, converte, devolve Markdown</li>
+    <li>Crawler IA detectado pelo User-Agent → recebe Markdown automaticamente (sem depender do header <code>Accept</code>)</li>
+  </ul>
+
+  <p>O header <code>Vary: Accept</code> é obrigatório. Sem ele, o cache da Cloudflare pode servir a versão HTML para um agente ou Markdown para um navegador, dependendo de quem pediu primeiro. Com <code>Vary: Accept</code>, as duas variantes coexistem no cache sem conflito.</p>
+
+  <h2>Auto-detecção de crawlers IA</h2>
+
+  <p>Aqui está o diferencial real sobre a feature Pro da Cloudflare.</p>
+
+  <p>A Cloudflare <strong>depende do crawler enviar <code>Accept: text/markdown</code></strong>. Na prática, quase nenhum faz isso. <a href="https://dri.es/markdown-llms-txt-and-ai-crawlers" target="_blank" rel="noopener">Pesquisa do Dries Buytaert</a> (criador do Drupal) mostrou que em um mês inteiro, <strong>zero requests reais de crawlers IA</strong> usaram o header <code>Accept: text/markdown</code>. Todas as 52 requisições que recebeu vieram de ferramentas de auditoria SEO. Os crawlers reais — GPTBot, ClaudeBot, PerplexityBot — simplesmente buscam o HTML como um navegador.</p>
+
+  <p>A lib resolve isso com <code>autoDetectAiCrawlers: true</code>. Quando ativado, o Worker identifica <strong>16 bots de IA conhecidos</strong> pelo User-Agent e serve Markdown automaticamente:</p>
+
+  <table>
+    <thead><tr><th>Provider</th><th>User-Agent patterns</th></tr></thead>
+    <tbody>
+      <tr><td>OpenAI</td><td><code>GPTBot</code>, <code>ChatGPT-User</code>, <code>OAI-SearchBot</code></td></tr>
+      <tr><td>Anthropic</td><td><code>ClaudeBot</code>, <code>Claude-Web</code>, <code>anthropic-ai</code></td></tr>
+      <tr><td>Google</td><td><code>Google-Extended</code>, <code>Googlebot-AI</code></td></tr>
+      <tr><td>Perplexity</td><td><code>PerplexityBot</code></td></tr>
+      <tr><td>Apple</td><td><code>Applebot-Extended</code></td></tr>
+      <tr><td>Cohere</td><td><code>cohere-ai</code></td></tr>
+      <tr><td>Meta</td><td><code>Meta-ExternalAgent</code>, <code>FacebookExternalHit</code></td></tr>
+      <tr><td>Amazon</td><td><code>Amazonbot</code></td></tr>
+      <tr><td>Common Crawl</td><td><code>CCBot</code></td></tr>
+      <tr><td>ByteDance</td><td><code>Bytespider</code></td></tr>
+      <tr><td>Microsoft</td><td><code>bingbot</code></td></tr>
+      <tr><td>You.com</td><td><code>YouBot</code></td></tr>
+    </tbody>
+  </table>
+
+  <p>A lista é exportada publicamente como <code>KNOWN_AI_CRAWLERS</code> para transparência. Qualquer um pode inspecionar ou estender.</p>
+
+  <h2>Headers compatíveis com Cloudflare Pro</h2>
+
+  <p>A resposta Markdown inclui os mesmos headers da feature oficial. Isso tem duas vantagens: agentes que já consomem a API da Cloudflare funcionam sem adaptação, e migrar para o plano Pro no futuro é trivial — basta ligar o toggle e remover o Worker.</p>
+
+  <table>
+    <thead><tr><th>Header</th><th>Valor</th><th>Propósito</th></tr></thead>
+    <tbody>
+      <tr><td><code>Content-Type</code></td><td><code>text/markdown; charset=utf-8</code></td><td>MIME type</td></tr>
+      <tr><td><code>x-markdown-tokens</code></td><td><code>8875</code></td><td>Estimativa de tokens</td></tr>
+      <tr><td><code>x-markdown-version</code></td><td><code>0.2.1</code></td><td>Versão da lib</td></tr>
+      <tr><td><code>x-markdown-preset</code></td><td><code>custom</code></td><td>Preset ativo</td></tr>
+      <tr><td><code>Content-Signal</code></td><td><code>ai-train=yes, search=yes, ai-input=yes</code></td><td>Sinal de opt-in para IA</td></tr>
+      <tr><td><code>Vary</code></td><td><code>Accept</code></td><td>Cache diferencia HTML e Markdown</td></tr>
+      <tr><td><code>Cache-Control</code></td><td><code>public, max-age=3600, stale-while-revalidate=86400</code></td><td>Configurável</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Comparação com a feature Pro</h2>
+
+  <table>
+    <thead><tr><th>Recurso</th><th>Cloudflare Pro ($25/mês)</th><th>markdown-edge-for-agents</th></tr></thead>
+    <tbody>
+      <tr><td>Content negotiation via <code>Accept</code></td><td>Sim</td><td>Sim</td></tr>
+      <tr><td>Auto-detecção de crawlers IA por User-Agent</td><td><strong>Não</strong></td><td><strong>Sim (16 bots)</strong></td></tr>
+      <tr><td><code>x-markdown-tokens</code></td><td>Sim</td><td>Sim</td></tr>
+      <tr><td><code>Content-Signal</code></td><td>Sim</td><td>Sim</td></tr>
+      <tr><td><code>Vary: Accept</code></td><td>Sim</td><td>Sim</td></tr>
+      <tr><td>Presets por framework</td><td>Não</td><td>Sim (Astro, Hugo, custom)</td></tr>
+      <tr><td>Customização de strip/selector</td><td>Limitada</td><td>Total</td></tr>
+      <tr><td>Custo</td><td>$25/zona/mês</td><td>Grátis (100k req/dia)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Tratamento de erros</h2>
+
+  <p>O Worker nunca deve deixar o agente sem resposta. A lib implementa fallback em cascata:</p>
+
+  <ul>
+    <li><strong>Origem retorna 404 ou 5xx</strong>: passa a resposta original intacta.</li>
+    <li><strong>HTML não tem <code>&lt;article&gt;</code></strong> (selector não bateu): retorna 404 com mensagem clara.</li>
+    <li><strong>Conversão explode</strong> por bug inesperado: devolve o HTML original com um header <code>x-markdown-error</code> descrevendo o problema. O agente continua funcionando (com mais tokens), e o owner vê o erro nos logs.</li>
+    <li><strong>Payload grande demais</strong> (>10 MB): retorna 413 antes de ler o body completo.</li>
+    <li><strong>Content-Type não é HTML</strong>: passa adiante sem tocar.</li>
+  </ul>
+
+  <h2>Runtime agnóstico</h2>
+
+  <p>A lib auto-detecta o runtime. Em Cloudflare Workers, usa <code>HTMLRewriter</code> nativo (streaming, sem deps extras) para extrair metadados e limpar HTML antes da conversão. Em Node, Bun, Deno ou browser, cai automaticamente para um fallback regex que cobre seletores de tag (<code>nav</code>, <code>script</code>), classe (<code>.theme-bar</code>) e combinações (<code>div.ad</code>).</p>
+
+  <p>Isso permite testar localmente com <code>node</code> direto, sem precisar de <code>wrangler dev</code>:</p>
+
+  <pre><code class="language-typescript">import { convertHtmlToMarkdown } from "@adhenawer-pkg/markdown-edge-for-agents";
+
+const result = await convertHtmlToMarkdown(html, {
+  selector: "article",
+  strip: ["nav", "script"],
+  frontmatter: ["title", "author"],
+});
+
+console.log(result?.markdown);
+console.log(result?.tokens);
+console.log(result?.meta);</code></pre>
+
+  <h2>Scaffolder para novos projetos</h2>
+
+  <p>Pra quem quer usar em outro site sem configurar manualmente, o CLI detecta o framework e gera tudo:</p>
+
+  <pre><code class="language-bash">npx create-markdown-edge-for-agents init</code></pre>
+
+  <p>O scaffolder identifica Astro (via <code>package.json</code>), Hugo (via <code>hugo.toml</code>/<code>hugo.yaml</code>) ou custom, pergunta zona e pattern de rotas, e cria:</p>
+
+  <ul>
+    <li><code>workers/markdown-agent/src/index.ts</code> — Worker pronto (5 linhas com preset)</li>
+    <li><code>workers/markdown-agent/wrangler.toml</code> — configurado com seu domínio</li>
+    <li><code>workers/markdown-agent/package.json</code> — com a lib como dependência</li>
+  </ul>
+
+  <p>Depois é <code>npm install && npx wrangler deploy</code>.</p>
 
   <h2>Custo e limites</h2>
 
-  <p>O plano gratuito dos Workers oferece 100.000 requisições por dia e 10 ms de CPU por requisição. O pipeline de regex em um arquivo HTML de 50 KB roda em poucos milissegundos. Um blog pequeno nunca chega perto de nenhum dos tetos. Egress é gratuito e não há cobrança pela subrequest ao GitHub Pages.</p>
+  <p>O plano gratuito dos Workers oferece 100.000 requisições por dia e 10 ms de CPU por invocação. O bundle total da lib (com <code>markdown-for-agents</code> + <code>zod</code>) gera um Worker de ~94 KB gzipped. A conversão de um artigo de 50 KB roda em poucos milissegundos. Um blog pequeno nunca chega perto de nenhum dos tetos.</p>
 
-  <p>Os trade-offs merecem ser nomeados. O conversor é frágil contra HTML para o qual não foi desenhado. Adicione um novo componente ao template sem atualizar o Worker e o Markdown resultante vai conter marcação vazada ou conteúdo ausente. Não há suíte de testes no Worker; o ciclo de feedback é um <code>curl</code> no terminal. E regex não lida bem com listas aninhadas ou tabelas. Para um blog de transcrições onde os artigos são parágrafos, headings e figuras ocasionais, tudo bem. Para um site de documentação com exemplos de código e tabelas, um parser de verdade valeria o setup extra.</p>
+  <p>O projeto tem 62 testes automatizados, CI rodando em GitHub Actions, typecheck com TypeScript strict, lint com Biome, e coverage threshold de 85%. A versão original com regex não tinha nada disso.</p>
+
+  <h2>Observabilidade</h2>
+
+  <p>O Worker suporta a observabilidade nativa da Cloudflare. No <code>wrangler.toml</code>:</p>
+
+  <pre><code class="language-toml">[observability]
+enabled = true
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+invocation_logs = true
+
+[observability.traces]
+enabled = true
+head_sampling_rate = 1</code></pre>
+
+  <p>Logs e traces aparecem no dashboard da Cloudflare em tempo real. Com <code>debug: true</code> na config do Worker, headers extras são adicionados à resposta (<code>x-markdown-debug-bytes-in</code>, <code>x-markdown-debug-bytes-out</code>, <code>x-markdown-debug-selector</code>) para debugging sem precisar abrir o dashboard.</p>
 
   <h2>Experimente</h2>
 
-  <p>O código-fonte completo está em <a href="https://github.com/adhenawer/video-to-text" rel="noopener">github.com/adhenawer/video-to-text</a> em <code>workers/markdown-agent/</code>. Para ver funcionando:</p>
+  <pre><code class="language-bash"># Navegador recebe HTML (comportamento normal)
+curl -sI https://adhenawer.net/posts/original/head-claude-code-happens-after-coding-solved.html \
+  | grep -i content-type
+# content-type: text/html; charset=utf-8
 
-  <pre><code class="language-bash">curl -H "Accept: text/markdown" https://adhenawer.net/posts/pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html</code></pre>
+# Agente com Accept header recebe Markdown
+curl -s https://adhenawer.net/posts/original/head-claude-code-happens-after-coding-solved.html \
+  -H "Accept: text/markdown" | head -15
+# ---
+# title: "The Head of Claude Code on What Happens After Coding Is Solved"
+# author: "Lenny's Podcast with Boris Cherny (Head of Claude Code, Anthropic)"
+# description: "100% of my code is written by Claude Code..."
+# source: "https://adhenawer.net/posts/original/head-claude-code-happens-after-coding-solved.html"
+# lang: en
+# ---
+# ## THE PROGRAMMER WHO NO LONGER WRITES CODE
 
-  <p>Mesma URL, <code>Accept</code> diferente, uma fração dos tokens. Nenhum upgrade de plano necessário.</p>
+# GPTBot recebe Markdown automaticamente (sem header Accept!)
+curl -s -A "GPTBot/1.0" \
+  https://adhenawer.net/posts/original/head-claude-code-happens-after-coding-solved.html \
+  -o /dev/null -w "content-type: %{content_type}\n"
+# content-type: text/markdown; charset=utf-8
+
+# Headers CF-compat
+curl -sI -H "Accept: text/markdown" \
+  https://adhenawer.net/posts/original/head-claude-code-happens-after-coding-solved.html \
+  | grep -iE "x-markdown|content-signal|vary"
+# content-signal: ai-train=yes, search=yes, ai-input=yes
+# vary: Accept
+# x-markdown-preset: custom
+# x-markdown-tokens: 8875
+# x-markdown-version: 0.2.1</code></pre>
+
+  <p>Mesma URL, <code>Accept</code> diferente (ou crawler detectado), uma fração dos tokens. Nenhum upgrade de plano necessário.</p>
+
+  <h2>Links</h2>
+
+  <ul>
+    <li><strong>GitHub:</strong> <a href="https://github.com/adhenawer/markdown-edge-for-agents" target="_blank" rel="noopener">github.com/adhenawer/markdown-edge-for-agents</a></li>
+    <li><strong>npm (lib):</strong> <a href="https://www.npmjs.com/package/@adhenawer-pkg/markdown-edge-for-agents" target="_blank" rel="noopener">@adhenawer-pkg/markdown-edge-for-agents</a></li>
+    <li><strong>npm (CLI):</strong> <a href="https://www.npmjs.com/package/create-markdown-edge-for-agents" target="_blank" rel="noopener">create-markdown-edge-for-agents</a></li>
+    <li><strong>Worker deste site:</strong> <a href="https://github.com/adhenawer/video-to-text/blob/main/workers/markdown-agent/src/index.ts" target="_blank" rel="noopener">video-to-text/workers/markdown-agent/src/index.ts</a></li>
+    <li><strong>Upstream (conversor):</strong> <a href="https://github.com/kkonstantinov/markdown-for-agents" target="_blank" rel="noopener">markdown-for-agents</a></li>
+  </ul>
 
 </article>
 <a href="#" class="back-top" id="backTop">↑</a>
