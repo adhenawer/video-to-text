@@ -80,7 +80,7 @@
 - [Markdown para Agentes no plano gratuito do Cloudflare Workers](https://adhenawer.net/blog/markdown-for-agents-free-tier.html)
   Como replicar o recurso pago Markdown for Agents da Cloudflare com um Worker no plano gratuito: content negotiation, conversão de HTML para Markdown com regex e redução de 75% de tokens para crawlers de LLMs.
 
-- [Transformando podcasts de horas em artigos que dá pra ler](https://adhenawer.net/blog/transformando-podcasts-em-artigos-bilingues.html)
+- [Transformando podcasts de horas em artigos que dá pra ler](https://adhenawer.net/blog/transformando-podcasts-de-horas-em-artigos-que-da-pra-ler.html)
   Um laboratório pessoal de pipeline bilíngue que transforma vídeos do YouTube e Twitter/X em artigos estáticos — Whisper local, Claude para organização e tradução, HTML puro, Cloudflare Worker grátis servindo Markdown para agentes.
 
 ## Blog — English
