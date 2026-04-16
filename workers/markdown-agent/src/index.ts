@@ -17,11 +17,8 @@ export default createMarkdownWorker({
     "header",
   ],
   frontmatter: ["title", "author", "description", "lang"],
+  autoDetectAiCrawlers: true,
   redirects: {
     "/leituras/*": "/posts/pt_br/$1",
-    "/posts/pt_br/akita-ia-prompt-fim-programador-bracal.html":
-      "/posts/pt_br/fabio-akita-flow-588.html",
-    "/posts/original/akita-ai-prompts-end-of-grunt-work-programming.html":
-      "/posts/original/fabio-akita-flow-588.html",
   },
 });
