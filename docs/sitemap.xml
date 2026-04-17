@@ -487,8 +487,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/curso-completo-claude-code-4-horas.html"/>
   </url>
   <url>
+    <loc>https://adhenawer.net/posts/pt_br/boris-cherny-dicas-praticas-para-usar-claude-code.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/boris-cherny-dicas-praticas-para-usar-claude-code.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/boris-cherny-dicas-praticas-para-usar-claude-code.html"/>
+  </url>
+  <url>
     <loc>https://adhenawer.net/moc.html</loc>
-    <lastmod>2026-04-14</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>

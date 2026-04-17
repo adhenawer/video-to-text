@@ -526,5 +526,27 @@
     },
     "slug_en": "complete-claude-code-course-4-hours",
     "slug": "curso-completo-claude-code-4-horas"
+  },
+  {
+    "video_id": "2044874677865357634",
+    "provider": "twitter",
+    "title": "Boris Cherny — Dicas Práticas para Usar Claude Code",
+    "subtitle": "Boris Cherny (Anthropic, criador do Claude Code)",
+    "url": "https://x.com/i/status/2044874677865357634",
+    "slug": "boris-cherny-dicas-praticas-para-usar-claude-code",
+    "date": "2026-04-17",
+    "references": {
+      "path": "transcripts/twitter/2044874677865357634.references.json",
+      "counts": {
+        "books": 0,
+        "tools": 14,
+        "papers": 0,
+        "people": 2,
+        "concepts": 7,
+        "companies": 7,
+        "related_posts": 6
+      },
+      "total": 30
+    }
   }
 ]

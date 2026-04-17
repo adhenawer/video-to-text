@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boris Cherny — Dicas Práticas para Usar Claude Code</title>
+<meta name="description" content="Olá, pessoal. Sou Boris, faço parte da equipe técnica da Anthropic e criei o Claude Code. Esta é uma conversa sobre dicas e truques práticos para usar o Claude Code. O foco aqui é ser bem prático —...">
+<meta name="author" content="Boris Cherny (Anthropic, criador do Claude Code)">
+<link rel="canonical" href="https://adhenawer.net/posts/pt_br/boris-cherny-dicas-praticas-para-usar-claude-code.html">
+<link rel="alternate" hreflang="pt-BR" href="../pt_br/boris-cherny-dicas-praticas-para-usar-claude-code.html">
+<link rel="alternate" hreflang="en" href="../original/boris-cherny-dicas-praticas-para-usar-claude-code.html">
+<link rel="alternate" hreflang="x-default" href="../pt_br/boris-cherny-dicas-praticas-para-usar-claude-code.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Boris Cherny — Dicas Práticas para Usar Claude Code">
+<meta property="og:description" content="Olá, pessoal. Sou Boris, faço parte da equipe técnica da Anthropic e criei o Claude Code. Esta é uma conversa sobre dicas e truques práticos para usar o Claude Code. O foco aqui é ser bem prático —...">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Leituras — Podcasts &amp; Vídeos Traduzidos">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Boris Cherny — Dicas Práticas para Usar Claude Code">
+<meta name="twitter:description" content="Olá, pessoal. Sou Boris, faço parte da equipe técnica da Anthropic e criei o Claude Code. Esta é uma conversa sobre dicas e truques práticos para usar o Claude Code. O foco aqui é ser bem prático —...">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Boris Cherny — Dicas Práticas para Usar Claude Code", "description": "Olá, pessoal. Sou Boris, faço parte da equipe técnica da Anthropic e criei o Claude Code. Esta é uma conversa sobre dicas e truques práticos para usar o Claude Code. O foco aqui é ser bem prático —...", "author": {"@type": "Person", "name": "Boris Cherny (Anthropic, criador do Claude Code)"}, "publisher": {"@type": "Organization", "name": "Leituras — Podcasts & Vídeos Traduzidos"}, "inLanguage": "pt-BR", "isAccessibleForFree": true, "url": "https://x.com/i/status/2044874677865357634", "articleSection": ["INTRODUÇÃO", "O QUE É O CLAUDE CODE", "CONFIGURAÇÃO INICIAL RECOMENDADA", "COMECE PELO Q&A SOBRE O CÓDIGO", "EXEMPLOS DE PERGUNTAS", "EDIÇÃO DE CÓDIGO COM FERRAMENTAS", "PEÇA UM PLANO ANTES DE ESCREVER CÓDIGO", "PLUGUE AS FERRAMENTAS DO SEU TIME", "FLUXOS COMUNS DE TRABALHO", "DANDO CONTEXTO AO CLAUDE COM CLAUDE.md", "MUITAS FORMAS DE CARREGAR CONTEXTO", "HIERARQUIA DE CONFIGURAÇÕES", "FERRAMENTAS DE GESTÃO DE MEMÓRIA", "ATALHOS DE TECLADO", "O SDK DO CLAUDE CODE", "USUÁRIOS AVANÇADOS E PARALELISMO", "ENCERRAMENTO"]}
+</script>
+<link rel="stylesheet" href="../../css/style.css">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="40c8ae3d-2e6b-4af4-a89b-f578dd3b2315"></script>
+</head>
+<body class="page-article" data-storage-key="reading_2044874677865357634_">
+<header class="site-header">
+  <a class="site-brand" href="../../index.html">Leituras</a>
+  <div class="lang-bar">
+    <button class="lang-btn" data-lang="pt-BR" aria-label="Português">PT</button>
+    <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+  </div>
+</header>
+<div class="progress" id="progress"></div>
+<div class="reading-pct" id="readingPct"></div>
+<article class="container">
+  <a href="../../index.html" class="back-home">← Voltar</a>
+  <header>
+    <h1>Boris Cherny — Dicas Práticas para Usar Claude Code</h1>
+    <p class="meta"><cite>Boris Cherny (Anthropic, criador do Claude Code)</cite></p>
+    <p class="meta"><a href="https://x.com/i/status/2044874677865357634" target="_blank" rel="noopener">🐦 Ver no Twitter/X</a></p>
+  </header>
+  <nav aria-label="Índice do artigo">
+    <h3>Conteúdo</h3>
+    <ol>
+<li><a href="#s1">INTRODUÇÃO</a></li>
+<li><a href="#s2">O QUE É O CLAUDE CODE</a></li>
+<li><a href="#s3">CONFIGURAÇÃO INICIAL RECOMENDADA</a></li>
+<li><a href="#s4">COMECE PELO Q&A SOBRE O CÓDIGO</a></li>
+<li><a href="#s5">EXEMPLOS DE PERGUNTAS</a></li>
+<li><a href="#s6">EDIÇÃO DE CÓDIGO COM FERRAMENTAS</a></li>
+<li><a href="#s7">PEÇA UM PLANO ANTES DE ESCREVER CÓDIGO</a></li>
+<li><a href="#s8">PLUGUE AS FERRAMENTAS DO SEU TIME</a></li>
+<li><a href="#s9">FLUXOS COMUNS DE TRABALHO</a></li>
+<li><a href="#s10">DANDO CONTEXTO AO CLAUDE COM CLAUDE.md</a></li>
+<li><a href="#s11">MUITAS FORMAS DE CARREGAR CONTEXTO</a></li>
+<li><a href="#s12">HIERARQUIA DE CONFIGURAÇÕES</a></li>
+<li><a href="#s13">FERRAMENTAS DE GESTÃO DE MEMÓRIA</a></li>
+<li><a href="#s14">ATALHOS DE TECLADO</a></li>
+<li><a href="#s15">O SDK DO CLAUDE CODE</a></li>
+<li><a href="#s16">USUÁRIOS AVANÇADOS E PARALELISMO</a></li>
+<li><a href="#s17">ENCERRAMENTO</a></li>
+    </ol>
+  </nav>
+<section>
+<h2 id="s1">INTRODUÇÃO</h2>
+<p>Olá, pessoal. Sou Boris, faço parte da equipe técnica da Anthropic e criei o Claude Code. Esta é uma conversa sobre dicas e truques práticos para usar o Claude Code. O foco aqui é ser bem prático — sem muita história, sem muita teoria.</p>
+<p>Antes de começar, vale um pedido rápido: quem já usou o Claude Code? Ótimo, é o que gostamos de ver. Para quem ainda não usou, dá para abrir o laptop agora e instalar o Claude Code para acompanhar o restante da apresentação. Tudo o que é preciso é Node.js — se já estiver instalado, funciona na hora.</p>
+</section>
+<section>
+<h2 id="s2">O QUE É O CLAUDE CODE</h2>
+<p>O Claude Code é um novo tipo de assistente de IA. Houve várias gerações de assistentes de IA para programação, e a maioria delas funcionava completando uma linha por vez ou poucas linhas de cada vez. O Claude Code não é isso. É totalmente agêntico. Foi feito para construir funcionalidades inteiras, escrever funções inteiras, arquivos inteiros, corrigir bugs inteiros de uma vez.</p>
+<p>Outra característica legal é que o Claude Code funciona com todas as ferramentas já usadas — não é preciso trocar o fluxo de trabalho nem substituir nada para começar. Qualquer IDE que se use — VS Code, Xcode, JetBrains — funciona. Há gente na Anthropic de quem ninguém consegue arrancar o editor das mãos, e eles continuam usando Claude Code, porque o Claude Code funciona com qualquer IDE, qualquer terminal. Roda localmente, via SSH remoto, por dentro do tmux — em qualquer ambiente, é possível usar.</p>
+<p>É de uso geral. E esse é exatamente o ponto em que fica difícil começar, caso essa seja a primeira vez usando um assistente de programação em formato livre. A pessoa abre a ferramenta, vê só uma barra de prompt e pensa: &ldquo;e agora, o que digito aqui?&rdquo;. É uma ferramenta poderosa, dá para usar para muita coisa. Mas justamente por poder tanto, a Anthropic não tenta empurrar um fluxo específico. A ideia é que cada engenheiro possa usar da forma que fizer sentido para si.</p>
+</section>
+<section>
+<h2 id="s3">CONFIGURAÇÃO INICIAL RECOMENDADA</h2>
+<p>Ao abrir o Claude Code pela primeira vez, há algumas recomendações simples para deixar o ambiente afiado.</p>
+<p>Rodar `terminal setup` habilita Shift+Enter para quebras de linha, em vez de precisar digitar contrabarras. Fica mais agradável de usar.</p>
+<p>`/theme` permite escolher modo claro, escuro ou temas adaptados para daltonismo. `/install-github-app` instala o app do GitHub — lançado recentemente —, que permite mencionar o Claude em qualquer issue ou pull request. Para instalar, basta rodar esse comando no terminal.</p>
+<p>Outra coisa útil: customizar o conjunto de ferramentas permitidas para não ser perguntado toda vez. Para comandos que aparecem com frequência, essa customização evita ter que aceitar a cada execução.</p>
+<p>Um detalhe pessoal: boa parte dos prompts não é digitada no Claude Code. No macOS, em Configurações → Acessibilidade → Ditado, dá para ativar o ditado. Depois, é só pressionar a tecla de ditado duas vezes e falar o prompt. Ajuda muito ter prompts específicos, e falar com o Claude Code como se fala com outro engenheiro elimina a necessidade de digitar muito.</p>
+</section>
+<section>
+<h2 id="s4">COMECE PELO Q&A SOBRE O CÓDIGO</h2>
+<p>Com toda essa liberdade do Claude Code, por onde começar? A recomendação principal é começar fazendo perguntas sobre o código-base. Isso é o que a Anthropic ensina para novos contratados. No primeiro dia do onboarding técnico, a pessoa aprende sobre o Claude Code, baixa, configura, e imediatamente começa a fazer perguntas sobre o código-base.</p>
+<p>No passado, o onboarding técnico taxava muito o time. É preciso perguntar para outros engenheiros, explorar o código, descobrir como usar as ferramentas — tudo isso consome tempo. Com o Claude Code, a pessoa simplesmente pergunta para o Claude Code. Ele explora o código-base, responde perguntas desse tipo, e o onboarding na Anthropic, que costumava levar de duas a três semanas para contratações técnicas, hoje leva de dois a três dias.</p>
+<p>Outro aspecto interessante do Q&A: não há indexação. Não existe banco de dados remoto com o código. Nada é enviado para fora. O código continua local. A Anthropic não treina modelos generativos com esse código. Como consequência, também não há setup. A pessoa baixa o Claude Code, abre, e já pode usar. Não tem indexação, não tem espera.</p>
+</section>
+<section>
+<h2 id="s5">EXEMPLOS DE PERGUNTAS</h2>
+<p>Esta é uma palestra técnica, então vale mostrar prompts e exemplos concretos para elevar a experiência com o Claude Code.</p>
+<p>Perguntas típicas incluem coisas como &ldquo;como esta peça específica de código é usada?&rdquo; ou &ldquo;como instancio este objeto?&rdquo;. O Claude Code não vai simplesmente fazer uma busca textual para responder. Ele costuma ir um nível mais fundo e procurar exemplos de onde aquela classe é instanciada, como ela é usada, e dar uma resposta muito mais profunda. É algo mais próximo de uma wiki ou documentação do que de um Ctrl+F.</p>
+<p>Outra pergunta frequente é sobre histórico do Git. Por exemplo: &ldquo;por que esta função tem quinze argumentos e por que os argumentos têm nomes tão estranhos?&rdquo;. Provavelmente toda base de código tem uma função ou classe assim. O Claude Code olha o histórico do Git para descobrir como esses argumentos foram introduzidos, quem os introduziu, qual era a situação, e quais issues os commits referenciam. Ele percorre tudo isso e resume. E não é preciso explicar em detalhes: basta dizer &ldquo;olhe o histórico do Git&rdquo; e o modelo sabe o que fazer.</p>
+<p>Vale um detalhe: o modelo não sabe fazer isso porque foi instruído no system prompt. Não existe instrução no system prompt dizendo para olhar o histórico do Git. Ele sabe porque o modelo é bom. Ao pedir para usar Git, o modelo entende como usar Git. É uma sorte construir em cima de um modelo tão capaz.</p>
+<p>Outra pergunta comum é sobre issues no GitHub. Usando `WebFetch`, dá para buscar issues e puxar contexto. E uma coisa que acontece toda segunda-feira, na stand-up semanal, é perguntar para o Claude Code: &ldquo;o que eu entreguei esta semana?&rdquo;. O Claude Code olha o log, sabe o nome de usuário e devolve um resumo de tudo o que foi entregue. É só colar num documento. Essa é a dica número um.</p>
+<p>Para quem ainda não usou o Claude Code, ou está mostrando para alguém pela primeira vez, ou fazendo onboarding no time, a recomendação é começar pelo Q&A sobre o código-base. Não começar com ferramentas sofisticadas. Não começar editando código. Começar fazendo perguntas sobre o código-base. Isso ensina as pessoas a fazer prompts e ensina os limites — o que o Claude Code consegue fazer sozinho, o que exige mais orientação, o que pode ser resolvido em um único turno, o que exige dois ou três turnos, o que pede modo interativo no REPL.</p>
+</section>
+<section>
+<h2 id="s6">EDIÇÃO DE CÓDIGO COM FERRAMENTAS</h2>
+<p>Depois de ficar confortável com Q&A, a próxima etapa é editar código. O legal de qualquer uso agêntico de um LLM é que basta dar ferramentas ao modelo e ele, como que por mágica, descobre como usá-las. No Claude Code, o conjunto de ferramentas é bem pequeno. Não é muita coisa: existe uma ferramenta para editar arquivos, uma para rodar comandos bash, uma para buscar arquivos. O Claude Code encadeia essas ferramentas para explorar o código, fazer brainstorm e, por fim, editar.</p>
+<p>E não é preciso instruir o modelo a usar esta ou aquela ferramenta. Basta dizer &ldquo;faça isso&rdquo; e ele descobre como, encadeando as chamadas da forma que faz sentido para o Claude Code. Há muitas formas de usar isso.</p>
+</section>
+<section>
+<h2 id="s7">PEÇA UM PLANO ANTES DE ESCREVER CÓDIGO</h2>
+<p>Algo que funciona muito bem é, antes de deixar o Claude partir para escrever código, pedir um brainstorm ou um plano. É uma prática altamente recomendada.</p>
+<p>Um erro comum: a pessoa pega o Claude Code e pede &ldquo;implemente esta funcionalidade enorme de três mil linhas&rdquo;. Às vezes ele acerta de primeira. Mas, outras vezes, o que ele constrói não tem nada a ver com o que se queria. A forma mais fácil de conseguir o resultado desejado é pedir para o modelo pensar antes: faça brainstorm de ideias, elabore um plano, apresente o plano, peça aprovação antes de escrever código. E não é preciso usar plan mode, não é preciso nenhuma ferramenta especial. Basta pedir ao Claude. &ldquo;Antes de escrever código, faça um plano.&rdquo; Só isso.</p>
+<p>Outro padrão que vale mencionar: &ldquo;commit, push, PR&rdquo;. É um encantamento comum que se digita direto. Não há nada de especial nessas palavras, mas o Claude é inteligente o bastante para interpretá-las. Ele faz o commit, cria a branch, empurra, e abre um pull request no GitHub. Não é preciso explicar nada. Ele olha o código, olha o histórico, olha o git log por conta própria para descobrir o formato de commit e todos os detalhes, e faz tudo da maneira certa. De novo: não existe system prompt dizendo para fazer isso. O modelo simplesmente sabe.</p>
+</section>
+<section>
+<h2 id="s8">PLUGUE AS FERRAMENTAS DO SEU TIME</h2>
+<p>À medida que o uso avança, vale plugar as ferramentas do time. É aí que o Claude Code realmente brilha. Existem, em geral, dois tipos de ferramentas.</p>
+<p>Uma são ferramentas em bash. Um exemplo inventado seria um tal &ldquo;burly CLI&rdquo; — não existe, é só ilustrativo. Dá para dizer: &ldquo;use esse CLI para fazer tal coisa&rdquo;. E dá para explicar para o Claude Code como o CLI funciona — por exemplo, dizendo para rodar `--help` para descobrir o uso. Isso já é eficiente. Para ferramentas usadas com frequência, dá para colocar no `CLAUDE.md`, que será comentado em seguida, para o Claude lembrar entre sessões. Esse é um padrão comum dentro da Anthropic e que clientes externos também seguem.</p>
+<p>O segundo tipo são servidores MCP. O Claude Code consegue usar ferramentas bash e ferramentas MCP. É só falar sobre as ferramentas. Adiciona-se o servidor MCP, explica-se para o Claude Code como usar, e ele começa a usar. Isso é extremamente poderoso: ao entrar em um novo código-base, dá para entregar todas as ferramentas que o time já usa, e o Claude Code passa a usá-las em nome do engenheiro.</p>
+</section>
+<section>
+<h2 id="s9">FLUXOS COMUNS DE TRABALHO</h2>
+<p>Existem alguns fluxos comuns. Um já mencionado: explorar um pouco, planejar um pouco, pedir confirmação antes de escrever código.</p>
+<p>Outros dois fluxos são extremamente poderosos. Quando o Claude tem alguma forma de checar o próprio trabalho — escrevendo testes unitários, tirando screenshots com Puppeteer, tirando screenshots do simulador do iOS — ele consegue iterar. E isso é incrível. Por exemplo, ao receber um mock e um pedido para construir uma UI web, ele acerta razoavelmente bem na primeira. Mas, deixando iterar duas ou três vezes, ele frequentemente chega perto do perfeito.</p>
+<p>O truque é entregar uma ferramenta que sirva de feedback para o modelo checar o próprio trabalho. A partir disso, ele itera sozinho e o resultado fica muito melhor. Em qualquer domínio — testes unitários, testes de integração, screenshots de apps ou web — dar uma forma de enxergar o resultado faz o modelo iterar e melhorar.</p>
+<p>Os próximos passos, então: ensinar o Claude a usar as ferramentas do time e descobrir o fluxo certo. Se a ideia é que o Claude saia escrevendo código, que faça um brainstorm, que faça um plano, que itere — ter uma noção disso ajuda a prompt-ar o Claude para fazer o que se quer.</p>
+</section>
+<section>
+<h2 id="s10">DANDO CONTEXTO AO CLAUDE COM CLAUDE.md</h2>
+<p>Indo mais fundo: além das ferramentas, vale dar mais contexto ao Claude. Quanto mais contexto, melhores as decisões. Um engenheiro que trabalha numa base de código carrega muito contexto na cabeça — sobre os sistemas, o histórico, tudo. Há diferentes formas de transferir esse contexto para o Claude, e quanto mais ele recebe, melhor ele fica.</p>
+<p>A forma mais simples é o que se chama de `CLAUDE.md`. É um nome de arquivo especial. O lugar mais simples de colocar é na raiz do projeto — o mesmo diretório de onde se inicia o Claude. Esse arquivo é lido automaticamente para o contexto no início de toda sessão. Essencialmente, o primeiro turno do usuário já inclui o `CLAUDE.md`.</p>
+<p>Também existe um `CLAUDE.md` local. Esse não costuma ser versionado. O `CLAUDE.md` principal vai para o controle de versão e é compartilhado com o time — escreve-se uma vez e todo o time se beneficia. O local fica só para o próprio engenheiro.</p>
+<p>O que entra no `CLAUDE.md`: comandos bash comuns, ferramentas MCP comuns, decisões de arquitetura, arquivos importantes, qualquer coisa que seja tipicamente necessária para trabalhar naquela base de código. Vale manter curto — se ficar longo demais, consome contexto à toa e deixa de ser tão útil. Na base de código da Anthropic, por exemplo, há comandos bash comuns, um guia de estilo, alguns arquivos principais — coisas nessa linha.</p>
+<p>Os demais `CLAUDE.md` podem ficar em subdiretórios aninhados, e o Claude os puxa sob demanda. Ou seja: o `CLAUDE.md` da raiz é puxado automaticamente, e os que estão em subdiretórios são puxados automaticamente quando o Claude trabalha naqueles diretórios.</p>
+<p>E, claro, se for uma empresa que quer um `CLAUDE.md` compartilhado entre bases de código diferentes e gerenciado centralmente, existe um caminho enterprise onde esse arquivo é puxado automaticamente para todos os usuários.</p>
+</section>
+<section>
+<h2 id="s11">MUITAS FORMAS DE CARREGAR CONTEXTO</h2>
+<p>Há várias formas de carregar contexto — montar esse slide deu trabalho, só para conseguir comunicar a variedade de opções.</p>
+<p>O `CLAUDE.md` é puxado automaticamente. Também é possível usar slash commands, em `.claude/commands/`, que podem ficar no diretório home ou ser versionados no projeto. No repositório do próprio Claude Code, quando uma issue é automaticamente rotulada, isso é exatamente esse fluxo rodando: um slash command chamado de dentro de uma GitHub Action aplicando labels nas issues para poupar tempo dos humanos.</p>
+<p>Dá para usar `@mentions` em arquivos para puxá-los para o contexto. E, como já mencionado, `CLAUDE.md` em subdiretório aninhado é puxado quando o Claude trabalha naquele diretório.</p>
+<p>Vale a pena investir tempo em ajustar esse contexto. Rodar num prompt improver, pensar em quem é o público do contexto — se é para ser puxado sempre, se é sob demanda, se é compartilhado com o time, se é preferência pessoal. Esse ajuste, bem feito, melhora a performance dramaticamente.</p>
+</section>
+<section>
+<h2 id="s12">HIERARQUIA DE CONFIGURAÇÕES</h2>
+<p>À medida que o uso amadurece, vale pensar na hierarquia de formas de puxar tudo — não só `CLAUDE.md`, mas também configurações e qualquer coisa do Claude que possa ser puxada de forma hierárquica.</p>
+<p>Projetos são específicos do repositório Git e podem ser versionados ou ficar apenas pessoais. Também existem configs globais, que valem para todos os projetos, e políticas enterprise, que são essencialmente uma config global distribuída para todos os funcionários do time.</p>
+<p>Esse slide é denso em informação, mas o ponto é: isso se aplica a muita coisa. Vale para slash commands. Vale para permissões. Por exemplo, se todo o time usa um comando de teste, dá para versionar nas políticas enterprise e, quando qualquer funcionário rodar esse comando, será auto-aprovado — muito conveniente.</p>
+<p>Também dá para bloquear comandos. Se existe uma URL que nunca deve ser acessada, basta adicionar na config e nenhum funcionário consegue sobrescrever — essa URL jamais é buscada. Útil tanto para destravar quanto para manter a base de código segura.</p>
+<p>O mesmo vale para servidores MCP. Basta ter um arquivo MCP JSON versionado na base de código. Sempre que alguém rodar o Claude Code naquela base, será avisado para instalar os servidores MCP e compartilhá-los com o time.</p>
+<p>Se houver dúvida sobre qual dessas opções usar — é uma matriz meio insana, porque muita coisa é suportada, os fluxos de engenheiros são flexíveis, cada empresa é diferente, e a Anthropic tenta suportar tudo — a recomendação para começar é: contexto de projeto compartilhado. Escreve-se uma vez e compartilha-se com o time. Surge um efeito de rede: uma pessoa faz um pouco de trabalho e o time inteiro se beneficia.</p>
+</section>
+<section>
+<h2 id="s13">FERRAMENTAS DE GESTÃO DE MEMÓRIA</h2>
+<p>Há várias ferramentas dentro do Claude para gerenciar tudo isso. Um exemplo: `/memory` mostra todos os arquivos de memória sendo puxados — a política enterprise, a memória de usuário, o `CLAUDE.md` de projeto, e eventualmente algum `CLAUDE.md` aninhado puxado em certos diretórios.</p>
+<p>Da mesma forma, `/memory` permite editar arquivos específicos de memória. Ao digitar `#` para o Claude lembrar de algo, dá para escolher em qual memória ele deve guardar.</p>
+<p>Esse é o próximo passo: investir tempo para configurar `CLAUDE.md`, servidores MCP, tudo o que o time usa — configurar uma vez e compartilhar com todo mundo.</p>
+<p>Um exemplo disso está no repositório de apps da Anthropic, onde mora o código web e de apps. Há um servidor MCP do Puppeteer compartilhado com o time, com um MCP JSON versionado. Qualquer engenheiro que trabalhe nesse repositório pode usar o Puppeteer para pilotar testes end-to-end, tirar screenshots automaticamente e iterar — sem que cada engenheiro precise instalar por conta própria.</p>
+</section>
+<section>
+<h2 id="s14">ATALHOS DE TECLADO</h2>
+<p>Esta é uma palestra sobre dicas avançadas, mas vale um intervalo rápido para atalhos que muita gente não conhece. Construir para terminal é difícil e divertido — parece redescobrir uma nova linguagem de design. Mas o terminal é extremamente minimalista e às vezes é difícil descobrir os atalhos. Segue uma referência rápida.</p>
+<p>A qualquer momento, Shift+Tab aceita edições e alterna para o modo de aceitar edições automaticamente. Comandos bash continuam exigindo aprovação, mas edições são aceitas na hora. Sempre dá para pedir para o Claude desfazer depois. Esse modo é útil quando o Claude está no rumo certo ou escrevendo e iterando em testes unitários — evita precisar aprovar cada edição.</p>
+<p>Para o Claude lembrar de algo — por exemplo, quando ele não está usando uma ferramenta corretamente e deve usar corretamente dali em diante — basta digitar `#` e dizer o que deve ser lembrado. Ele lembra e incorpora ao `CLAUDE.md` automaticamente.</p>
+<p>Para cair no modo bash e rodar um comando diretamente, basta pressionar `!` e digitar o comando. Ele roda localmente e também entra na janela de contexto, então o Claude verá no próximo turno. É útil para comandos de longa execução quando já se sabe exatamente o que se quer, ou para qualquer comando cujo output se queira trazer para o contexto. O Claude verá tanto o comando quanto o output.</p>
+<p>`@` permite mencionar arquivos e pastas. Esc interrompe o que o Claude estiver fazendo — não importa o que seja, é seguro pressionar Esc. Não corrompe a sessão, não quebra nada. Se o Claude estiver fazendo uma edição de arquivo, pressionar Esc e dizer o que mudar funciona. Se ele sugeriu uma edição de vinte linhas e dezenove estão perfeitas mas uma precisa ajuste, Esc e nova instrução resolvem. Esc duas vezes volta no histórico.</p>
+<p>Depois da sessão, `--resume` retoma aquela sessão, ou `--continue` também serve. Para ver mais output a qualquer momento, Ctrl+R mostra o output inteiro — a mesma coisa que o Claude vê na janela de contexto dele.</p>
+</section>
+<section>
+<h2 id="s15">O SDK DO CLAUDE CODE</h2>
+<p>A próxima coisa a comentar é o SDK do Claude Code. Logo depois desta palestra, Sid vai conduzir uma sessão do outro lado do corredor aprofundando o SDK.</p>
+<p>Quem já brincou com a flag `-p` no Claude já viu o SDK: é exatamente isso. Várias funcionalidades foram planejadas nas últimas semanas para torná-lo ainda melhor. Dá para construir em cima. Dá para fazer coisas legais. É exatamente o que o Claude Code usa internamente — o mesmo SDK.</p>
+<p>Por exemplo, com `claude -p`, o CLI SDK, dá para passar um prompt, passar `--allowed-tools` com comandos bash específicos, e escolher o formato — JSON, ou streaming JSON, se a ideia for processar o output de alguma forma.</p>
+<p>Isso é ótimo para construir por cima. A Anthropic usa em CI o tempo todo. Usa para resposta a incidentes. Usa em todo tipo de pipeline. Muito conveniente. A forma de pensar é como um utilitário Unix. Entra um prompt, sai um JSON. Dá para usar de qualquer jeito. Dá para pipar para dentro, pipar para fora.</p>
+<p>A parte de piping também é bem legal. Dá para rodar `git status`, pipar para dentro e usar `jq` para selecionar o resultado. As combinações são infinitas. É uma ideia nova — um utilitário Unix super inteligente. A Anthropic ainda está descobrindo como usar — basicamente arranhando a superfície.</p>
+<p>Dá para ler de um bucket do GCP: pegar um log gigante, pipar para dentro e pedir para o Claude apontar o que há de interessante nele. Dá para buscar dados do CLI do Sentry, pipar e pedir algo ao Claude. As combinações vão longe.</p>
+</section>
+<section>
+<h2 id="s16">USUÁRIOS AVANÇADOS E PARALELISMO</h2>
+<p>A última dica, e provavelmente o caso de uso mais avançado, é sobre paralelismo. No uso pessoal, o padrão é tipo &ldquo;Claude normie&rdquo;: geralmente uma única instância do Claude rodando ao mesmo tempo, talvez algumas abas de terminal para diferentes repositórios.</p>
+<p>Quando se olha para usuários avançados, dentro e fora da Anthropic, quase sempre eles estão com sessões SSH, túneis tmux para suas sessões do Claude, uma porção de checkouts do mesmo repositório para rodar várias instâncias do Claude em paralelo naquele repositório, ou usando git worktrees para ter algum tipo de isolamento enquanto fazem isso.</p>
+<p>A Anthropic está trabalhando ativamente para tornar tudo isso mais fácil. Por enquanto, essas são algumas ideias de como fazer mais trabalho em paralelo com o Claude. Dá para rodar quantas sessões se quiser — e há muita coisa que dá para entregar em paralelo.</p>
+</section>
+<section>
+<h2 id="s17">ENCERRAMENTO</h2>
+<p>É isso. A ideia também era deixar um tempo para Q&A.</p>
+<p>Uma pergunta da plateia foi sobre pesquisa em aprendizado de máquina e modelagem: o Claude Code é usado para isso também. Tanto engenheiros quanto pesquisadores da Anthropic usam Claude Code todos os dias. Cerca de 80% das pessoas técnicas na Anthropic usam Claude Code todo dia. E espera-se que isso apareça no produto — na quantidade de carinho e dogfooding investidos. Isso inclui pesquisadores que usam ferramentas como a ferramenta de notebook para editar e rodar notebooks.</p>
+</section>
+</article>
+<aside class="references-sidebar" aria-label="Referências">
+<h3>Referências</h3>
+<details open><summary>Ferramentas <span class="ref-count">(14)</span></summary>
+<ul>
+<li><a href="https://www.anthropic.com/claude-code" target="_blank" rel="noopener">Claude Code</a></li>
+<li><a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a></li>
+<li><a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Studio Code</a></li>
+<li><a href="https://developer.apple.com/xcode/" target="_blank" rel="noopener">Xcode</a></li>
+<li><a href="https://www.jetbrains.com" target="_blank" rel="noopener">JetBrains IDEs</a></li>
+<li><a href="https://github.com/tmux/tmux" target="_blank" rel="noopener">tmux</a></li>
+<li><a href="https://pptr.dev" target="_blank" rel="noopener">Puppeteer</a></li>
+<li><a href="https://modelcontextprotocol.io" target="_blank" rel="noopener">MCP (Model Context Protocol)</a></li>
+<li><a href="https://docs.claude.com/en/docs/claude-code/github-actions" target="_blank" rel="noopener">GitHub App for Claude Code</a></li>
+<li><a href="https://git-scm.com/docs/git-worktree" target="_blank" rel="noopener">git worktrees</a></li>
+<li><a href="https://jqlang.github.io/jq/" target="_blank" rel="noopener">jq</a></li>
+<li><a href="https://docs.sentry.io/cli/" target="_blank" rel="noopener">Sentry CLI</a></li>
+<li><a href="https://cloud.google.com/storage" target="_blank" rel="noopener">Google Cloud Storage (GCP)</a></li>
+<li><a href="https://docs.claude.com/en/docs/claude-code/sdk" target="_blank" rel="noopener">Claude Code SDK</a></li>
+</ul></details>
+<details open><summary>Pessoas <span class="ref-count">(2)</span></summary>
+<ul>
+<li><a href="https://twitter.com/bcherny" target="_blank" rel="noopener">Boris Cherny</a><small>Anthropic — criador do Claude Code</small></li>
+<li><a href="https://twitter.com/sidbidasaria" target="_blank" rel="noopener">Sid Bidasaria</a><small>Anthropic — palestra sobre Claude Code SDK</small></li>
+</ul></details>
+<details open><summary>Conceitos <span class="ref-count">(7)</span></summary>
+<ul>
+<li><a href="https://docs.claude.com/en/docs/claude-code/memory" target="_blank" rel="noopener">CLAUDE.md</a></li>
+<li><a href="https://docs.claude.com/en/docs/claude-code/slash-commands" target="_blank" rel="noopener">Slash commands</a></li>
+<li><a href="https://docs.claude.com/en/docs/claude-code/overview" target="_blank" rel="noopener">Plan mode</a></li>
+<li><a href="https://en.wikipedia.org/wiki/AI_agent" target="_blank" rel="noopener">Agentic AI</a></li>
+<li><a href="https://docs.anthropic.com/en/docs/agents-and-tools/agent-sdk" target="_blank" rel="noopener">Agent loop</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" target="_blank" rel="noopener">Read–Eval–Print Loop (REPL)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Eating_your_own_dog_food" target="_blank" rel="noopener">Dogfooding</a></li>
+</ul></details>
+<details open><summary>Empresas <span class="ref-count">(7)</span></summary>
+<ul>
+<li><a href="https://www.anthropic.com" target="_blank" rel="noopener">Anthropic</a></li>
+<li><a href="https://www.microsoft.com" target="_blank" rel="noopener">Microsoft</a></li>
+<li><a href="https://www.apple.com" target="_blank" rel="noopener">Apple</a></li>
+<li><a href="https://www.jetbrains.com" target="_blank" rel="noopener">JetBrains</a></li>
+<li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+<li><a href="https://cloud.google.com" target="_blank" rel="noopener">Google</a></li>
+<li><a href="https://sentry.io" target="_blank" rel="noopener">Sentry</a></li>
+</ul></details>
+<details open><summary>Relacionados <span class="ref-count">(6)</span></summary><ul>
+<li><a href="../pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html">Do mesmo autor — Boris Cherny — sobre o futuro do Claude Code e da programação</a></li>
+<li><a href="../pt_br/curso-completo-claude-code-4-horas.html">Curso completo que cobre em profundidade as funcionalidades que Boris pincela aqui</a></li>
+<li><a href="../pt_br/guia-completo-claude-iniciante-sistema-operacional-ia.html">Guia complementar sobre fluxos práticos com Claude — foca mais no uso diário além do código</a></li>
+<li><a href="../pt_br/claude-code-leak-what-weve-learned-so-far.html">Olhar técnico por dentro do Claude Code — complementa as dicas de uso de Boris</a></li>
+<li><a href="../pt_br/praticas-de-engenharia-para-agentes-de-codigo-simon-willison.html">Outra perspectiva sobre práticas diárias com agentes de código</a></li>
+<li><a href="../pt_br/obsidian-claude-code-pensamento.html">Workflow real usando CLAUDE.md e contexto, conceitos centrais desta palestra</a></li>
+</ul></details>
+</aside>
+<div class="resume-banner" id="resumeBanner">
+  <span id="resumeText">Continuar de onde parou</span>
+  <div>
+    <button onclick="resumeReading()">Continuar</button>
+    <button class="dismiss" onclick="dismissResume()">✕</button>
+  </div>
+</div>
+<script src="../../js/reader.js"></script>
+<script src="../../js/lang.js"></script>
+</body>
+</html>

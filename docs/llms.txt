@@ -6,6 +6,9 @@
 
 ## Articles — Português (PT-BR)
 
+- [Boris Cherny — Dicas Práticas para Usar Claude Code](https://adhenawer.net/posts/pt_br/boris-cherny-dicas-praticas-para-usar-claude-code.html)
+  Fonte: Boris Cherny (Anthropic, criador do Claude Code) — Code w/ Claude
+
 - [Chefe do Claude Code: O Que Acontece Depois Que a Programação For Resolvida](https://adhenawer.net/posts/pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html)
   Fonte: Lenny's Podcast com Boris Cherny (Chefe do Claude Code, Anthropic)
 

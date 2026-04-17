@@ -1,0 +1,215 @@
+{
+  "video_id": "2044874677865357634",
+  "extracted_at": "2026-04-17",
+  "books": [],
+  "tools": [
+    {
+      "name": "Claude Code",
+      "url": "https://www.anthropic.com/claude-code",
+      "context": "Assistente agêntico de programação criado por Boris; foco de toda a palestra"
+    },
+    {
+      "name": "Node.js",
+      "url": "https://nodejs.org",
+      "context": "Único requisito para instalar e rodar o Claude Code"
+    },
+    {
+      "name": "Visual Studio Code",
+      "url": "https://code.visualstudio.com",
+      "context": "IDE suportada; Claude Code funciona com qualquer IDE"
+    },
+    {
+      "name": "Xcode",
+      "url": "https://developer.apple.com/xcode/",
+      "context": "IDE da Apple — Claude Code também funciona aqui"
+    },
+    {
+      "name": "JetBrains IDEs",
+      "url": "https://www.jetbrains.com",
+      "context": "Suporte para IntelliJ, PyCharm, etc."
+    },
+    {
+      "name": "tmux",
+      "url": "https://github.com/tmux/tmux",
+      "context": "Usuários avançados rodam Claude Code dentro de túneis tmux"
+    },
+    {
+      "name": "Puppeteer",
+      "url": "https://pptr.dev",
+      "context": "Usado como MCP server para testes end-to-end e screenshots iterativos"
+    },
+    {
+      "name": "MCP (Model Context Protocol)",
+      "url": "https://modelcontextprotocol.io",
+      "context": "Servidores MCP plugam ferramentas externas no Claude Code"
+    },
+    {
+      "name": "GitHub App for Claude Code",
+      "url": "https://docs.claude.com/en/docs/claude-code/github-actions",
+      "context": "Instalado via /install-github-app; permite mencionar @claude em issues e PRs"
+    },
+    {
+      "name": "git worktrees",
+      "url": "https://git-scm.com/docs/git-worktree",
+      "context": "Usuários avançados isolam sessões paralelas do Claude com worktrees"
+    },
+    {
+      "name": "jq",
+      "url": "https://jqlang.github.io/jq/",
+      "context": "Usado em pipes com claude -p para filtrar JSON"
+    },
+    {
+      "name": "Sentry CLI",
+      "url": "https://docs.sentry.io/cli/",
+      "context": "Exemplo de ferramenta cujo output pode ser pipado para claude -p"
+    },
+    {
+      "name": "Google Cloud Storage (GCP)",
+      "url": "https://cloud.google.com/storage",
+      "context": "Exemplo: ler logs gigantes de bucket e pipar para Claude analisar"
+    },
+    {
+      "name": "Claude Code SDK",
+      "url": "https://docs.claude.com/en/docs/claude-code/sdk",
+      "context": "Mesmo SDK que o Claude Code usa internamente, exposto via flag -p"
+    }
+  ],
+  "papers": [],
+  "people": [
+    {
+      "name": "Boris Cherny",
+      "role": {
+        "pt": "Anthropic — criador do Claude Code",
+        "en": "Anthropic — creator of Claude Code"
+      },
+      "url": "https://twitter.com/bcherny",
+      "context": "Palestrante; membro da equipe técnica da Anthropic"
+    },
+    {
+      "name": "Sid Bidasaria",
+      "role": {
+        "pt": "Anthropic — palestra sobre Claude Code SDK",
+        "en": "Anthropic — Claude Code SDK talk"
+      },
+      "url": "https://twitter.com/sidbidasaria",
+      "context": "Mencionado por Boris como quem apresentaria a sessão sobre o SDK logo depois"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "CLAUDE.md",
+      "url": "https://docs.claude.com/en/docs/claude-code/memory",
+      "context": "Arquivo de contexto lido automaticamente em toda sessão; raiz, nested, local e enterprise"
+    },
+    {
+      "name": "Slash commands",
+      "url": "https://docs.claude.com/en/docs/claude-code/slash-commands",
+      "context": "Comandos customizáveis em .claude/commands/, versionados no projeto ou globais"
+    },
+    {
+      "name": "Plan mode",
+      "url": "https://docs.claude.com/en/docs/claude-code/overview",
+      "context": "Modo em que o Claude planeja antes de escrever código; Boris recomenda pedir plano mesmo sem ativar o modo"
+    },
+    {
+      "name": "Agentic AI",
+      "url": "https://en.wikipedia.org/wiki/AI_agent",
+      "context": "Paradigma em que o modelo usa ferramentas para encadear ações — fundamento do Claude Code"
+    },
+    {
+      "name": "Agent loop",
+      "url": "https://docs.anthropic.com/en/docs/agents-and-tools/agent-sdk",
+      "context": "Loop interno onde o agente escolhe e encadeia ferramentas autonomamente"
+    },
+    {
+      "name": "Read–Eval–Print Loop (REPL)",
+      "url": "https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop",
+      "context": "Modo interativo do Claude Code; contraste com one-shot via --print"
+    },
+    {
+      "name": "Dogfooding",
+      "url": "https://en.wikipedia.org/wiki/Eating_your_own_dog_food",
+      "context": "80% da equipe técnica da Anthropic usa Claude Code diariamente"
+    }
+  ],
+  "companies": [
+    {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com"
+    },
+    {
+      "name": "Microsoft",
+      "url": "https://www.microsoft.com"
+    },
+    {
+      "name": "Apple",
+      "url": "https://www.apple.com"
+    },
+    {
+      "name": "JetBrains",
+      "url": "https://www.jetbrains.com"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com"
+    },
+    {
+      "name": "Google",
+      "url": "https://cloud.google.com"
+    },
+    {
+      "name": "Sentry",
+      "url": "https://sentry.io"
+    }
+  ],
+  "related_posts": [
+    {
+      "slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
+      "slug_en": "head-claude-code-happens-after-coding-solved",
+      "reason": {
+        "pt": "Do mesmo autor — Boris Cherny — sobre o futuro do Claude Code e da programação",
+        "en": "Same author — Boris Cherny — on the future of Claude Code and programming"
+      }
+    },
+    {
+      "slug_pt": "curso-completo-claude-code-4-horas",
+      "slug_en": "complete-claude-code-course-4-hours",
+      "reason": {
+        "pt": "Curso completo que cobre em profundidade as funcionalidades que Boris pincela aqui",
+        "en": "Full course going deeper on the features Boris covers briefly here"
+      }
+    },
+    {
+      "slug_pt": "guia-completo-claude-iniciante-sistema-operacional-ia",
+      "slug_en": "complete-claude-guide-beginner-ai-operating-system",
+      "reason": {
+        "pt": "Guia complementar sobre fluxos práticos com Claude — foca mais no uso diário além do código",
+        "en": "Complementary guide about practical Claude workflows — broader than just code"
+      }
+    },
+    {
+      "slug_pt": "claude-code-leak-what-weve-learned-so-far",
+      "slug_en": "claude-code-leak-we-have-learned-so-far",
+      "reason": {
+        "pt": "Olhar técnico por dentro do Claude Code — complementa as dicas de uso de Boris",
+        "en": "Technical look inside Claude Code — complements Boris's usage tips"
+      }
+    },
+    {
+      "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
+      "slug_en": "engineering-practices-for-coding-agents-simon-willison",
+      "reason": {
+        "pt": "Outra perspectiva sobre práticas diárias com agentes de código",
+        "en": "Another perspective on daily practices with coding agents"
+      }
+    },
+    {
+      "slug_pt": "obsidian-claude-code-pensamento",
+      "slug_en": "obsidian-claude-code-thinking",
+      "reason": {
+        "pt": "Workflow real usando CLAUDE.md e contexto, conceitos centrais desta palestra",
+        "en": "Real workflow using CLAUDE.md and context, core concepts of this talk"
+      }
+    }
+  ]
+}

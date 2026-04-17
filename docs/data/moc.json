@@ -181,8 +181,16 @@
       "title": "Curso Completo de Claude Code — 4 Horas",
       "subtitle": "Marco Fernández / X",
       "url_pt": "posts/pt_br/curso-completo-claude-code-4-horas.html",
-      "url_en": "posts/original/curso-completo-claude-code-4-horas.html",
+      "url_en": "posts/original/complete-claude-code-course-4-hours.html",
       "refs_total": 45
+    },
+    {
+      "id": "boris-cherny-dicas-praticas-para-usar-claude-code",
+      "title": "Boris Cherny",
+      "subtitle": "Boris Cherny (Anthropic, criador do Claude Code)",
+      "url_pt": "posts/pt_br/boris-cherny-dicas-praticas-para-usar-claude-code.html",
+      "url_en": "posts/original/boris-cherny-dicas-praticas-para-usar-claude-code.html",
+      "refs_total": 30
     }
   ],
   "edges": [
@@ -557,6 +565,30 @@
     {
       "source": "curso-completo-claude-code-4-horas",
       "target": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison"
+    },
+    {
+      "source": "boris-cherny-dicas-praticas-para-usar-claude-code",
+      "target": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida"
+    },
+    {
+      "source": "boris-cherny-dicas-praticas-para-usar-claude-code",
+      "target": "curso-completo-claude-code-4-horas"
+    },
+    {
+      "source": "boris-cherny-dicas-praticas-para-usar-claude-code",
+      "target": "guia-completo-claude-iniciante-sistema-operacional-ia"
+    },
+    {
+      "source": "boris-cherny-dicas-praticas-para-usar-claude-code",
+      "target": "claude-code-leak-what-weve-learned-so-far"
+    },
+    {
+      "source": "boris-cherny-dicas-praticas-para-usar-claude-code",
+      "target": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison"
+    },
+    {
+      "source": "boris-cherny-dicas-praticas-para-usar-claude-code",
+      "target": "obsidian-claude-code-pensamento"
     }
   ]
 }
