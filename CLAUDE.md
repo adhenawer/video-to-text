@@ -50,6 +50,22 @@ python3 -m http.server 8899 --bind 0.0.0.0
 
 ## Adicionar novo artigo
 
+> **REGRA OBRIGATÓRIA: todo post DEVE ter versões PT e EN.**
+> O seletor de idioma (`PT`/`EN`) aparece em todas as páginas. Se uma versão faltar,
+> o botão correspondente fica desabilitado — mas o `index.json` precisa ter
+> tanto `slug` (PT) quanto `slug_en`, e os arquivos devem existir em
+> `docs/posts/pt_br/<slug>.html` **e** `docs/posts/original/<slug_en>.html`.
+> Sem isso, há risco de hreflang quebrado e 404 na troca de idioma.
+>
+> Checklist por post:
+> 1. `transcripts/{provider}/{id}.txt` — transcrição original (gerada pelo pipeline)
+> 2. `transcripts/{provider}/{id}_pt.txt` — versão PT-BR formatada
+> 3. `transcripts/{provider}/{id}_en.txt` — versão EN formatada (mesmo formato de seções)
+> 4. `docs/posts/pt_br/<slug>.html` — gerado por `build_html.py` com `lang="pt_br"`
+> 5. `docs/posts/original/<slug_en>.html` — gerado por `build_html.py` com `lang="original"`
+> 6. Entrada em `transcripts/index.json` com **ambos** `slug` e `slug_en`
+> 7. Cards adicionados em `docs/index.html` (PT) **e** `docs/en/index.html` (EN)
+
 ### Pipeline — YouTube (Claude traduz)
 
 ```bash
@@ -118,13 +134,13 @@ python3 src/fetch_transcript.py \
 
 #### 2. Traduzir
 
-**Via Claude (default):** Pedir ao Claude para ler `/tmp/transcript_VIDEO_ID.txt` e produzir um `.txt` com:
-- Português brasileiro natural
-- Seções no formato abaixo
-- Sem timestamps, sem [music], sem propagandas, sem filler words
-- Salvar em `/tmp/VIDEO_ID_pt.txt`
+**Via Claude (default):** Pedir ao Claude para ler `/tmp/transcript_VIDEO_ID.txt` e produzir **dois** `.txt`:
+- **PT-BR:** português brasileiro natural, salvar em `/tmp/VIDEO_ID_pt.txt`
+- **EN:** inglês formatado (mesmo formato de seções), salvar em `/tmp/VIDEO_ID_en.txt`
 
-**Via modelo local:** `python3 src/translate_local.py /tmp/transcript_VIDEO_ID.txt /tmp/VIDEO_ID_pt.txt`
+Ambos sem timestamps, sem `[music]`, sem propagandas, sem filler words.
+
+**Via modelo local (PT):** `python3 src/translate_local.py /tmp/transcript_VIDEO_ID.txt /tmp/VIDEO_ID_pt.txt`
 
 O output (de ambos) é um `.txt` com seções no formato:
 ```
@@ -134,9 +150,10 @@ NOME DA SEÇÃO EM MAIÚSCULO
 Parágrafo do conteúdo...
 ```
 
-#### 3. Gerar HTML
+#### 3. Gerar HTML (PT **e** EN)
 
 ```bash
+# PT-BR
 python3 src/build_html.py \
   VIDEO_ID \
   'Título do Artigo' \
@@ -144,20 +161,51 @@ python3 src/build_html.py \
   'https://youtu.be/VIDEO_ID' \
   /tmp/VIDEO_ID_pt.txt \
   docs/posts/pt_br/slug-do-titulo.html
+
+# EN (obrigatório — não pular)
+python3 src/build_html.py \
+  VIDEO_ID \
+  'English Title' \
+  'Author / Source' \
+  'https://youtu.be/VIDEO_ID' \
+  /tmp/VIDEO_ID_en.txt \
+  docs/posts/original/english-slug.html
 ```
 
-### 4. Adicionar card no docs/index.html
+Salve também as transcrições formatadas em `transcripts/{provider}/{VIDEO_ID}_pt.txt` e `{VIDEO_ID}_en.txt` para reuso por `scripts/regen_en_htmls.py`.
 
-Inserir novo `<a class="card">` em `docs/index.html` com:
-- `href="posts/pt_br/slug-do-titulo.html"`
+#### 4. Atualizar `transcripts/index.json`
+
+A entrada DEVE conter `slug` (PT) e `slug_en` (EN). Sem `slug_en`, o `build_html.py` não emite o link `hreflang="en"` e o botão EN fica desabilitado.
+
+```json
+{
+  "video_id": "VIDEO_ID",
+  "provider": "youtube",
+  "title": "Título do Artigo",
+  "subtitle": "Fonte / Canal",
+  "url": "https://youtu.be/VIDEO_ID",
+  "slug": "slug-do-titulo",
+  "slug_en": "english-slug",
+  "date": "YYYY-MM-DD"
+}
+```
+
+### 5. Adicionar card nos índices (PT **e** EN)
+
+Inserir novo `<a class="card">` em `docs/index.html` (PT) **e** `docs/en/index.html` (EN) com:
+- `href="posts/pt_br/slug-do-titulo.html"` (PT) / `href="posts/original/english-slug.html"` (EN)
 - Título, meta (fonte, autor), descrição resumida
 - `<div class="progress-info" id="p-VIDEOID"></div>`
-- No `<script>` do index.html, adicionar: `showProgress('reading_VIDEO_ID_', 'p-VIDEOID');`
+- No `<script>` de cada index, adicionar: `showProgress('reading_VIDEO_ID_', 'p-VIDEOID');`
 
-### 5. Commit
+### 6. Commit
 
 ```bash
-git add docs/posts/pt_br/slug-do-titulo.html docs/index.html
+git add docs/posts/pt_br/slug-do-titulo.html \
+        docs/posts/original/english-slug.html \
+        docs/index.html docs/en/index.html \
+        transcripts/
 git commit -m 'feat: adiciona artigo — Título do Vídeo'
 ```
 
