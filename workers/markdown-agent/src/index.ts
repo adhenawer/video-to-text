@@ -20,5 +20,7 @@ export default createMarkdownWorker({
   autoDetectAiCrawlers: true,
   redirects: {
     "/leituras/*": "/posts/pt_br/$1",
+    "/blog/transformando-podcasts-em-artigos-bilingues.html":
+      "/blog/transformando-podcasts-de-horas-em-artigos-que-da-pra-ler.html",
   },
 });
