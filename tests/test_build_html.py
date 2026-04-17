@@ -153,6 +153,33 @@ class TestTableOfContents:
 
 
 # ============================================================
+# hreflang alternates
+# ============================================================
+
+class TestHreflangAlternates:
+
+    def test_ptbr_with_no_en_omits_en_alternate(self, sample_translated_txt):
+        html = make_html("vid", "T", "S", "https://example.com", sample_translated_txt,
+                         lang="pt_br", slug="meu-slug", pt_slug="meu-slug", en_slug=None)
+        assert 'hreflang="en"' not in html
+        assert 'hreflang="pt-BR"' in html
+
+    def test_ptbr_with_en_emits_both_alternates(self, sample_translated_txt):
+        html = make_html("vid", "T", "S", "https://example.com", sample_translated_txt,
+                         lang="pt_br", slug="meu-slug", pt_slug="meu-slug", en_slug="my-slug")
+        assert 'hreflang="pt-BR"' in html
+        assert 'href="../pt_br/meu-slug.html"' in html
+        assert 'hreflang="en"' in html
+        assert 'href="../original/my-slug.html"' in html
+
+    def test_en_with_no_ptbr_omits_ptbr_alternate(self, sample_translated_txt):
+        html = make_html("vid", "T", "S", "https://example.com", sample_translated_txt,
+                         lang="original", slug="my-slug", pt_slug=None, en_slug="my-slug")
+        assert 'hreflang="pt-BR"' not in html
+        assert 'hreflang="en"' in html
+
+
+# ============================================================
 # Slide injection
 # ============================================================
 

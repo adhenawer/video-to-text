@@ -270,16 +270,30 @@ def make_html(vid_id, title, subtitle, url, txt_path,
     resume_btn = "Continuar" if is_ptbr else "Resume"
     site_brand = "Leituras" if is_ptbr else "Readings"
 
-    # Determine pt_slug and en_slug for hreflang alternates
-    # Backwards compat: if only `slug` is passed, derive the other side from it
+    # Determine pt_slug and en_slug for hreflang alternates.
+    # Only the current language's slug is auto-filled; the opposite-language slug
+    # must be provided explicitly — otherwise no hreflang link is emitted (which
+    # would 404 if the alternate file doesn't exist).
     cur_slug = slug or vid_id
-    if pt_slug is None:
-        pt_slug = cur_slug if is_ptbr else cur_slug
-    if en_slug is None:
-        en_slug = cur_slug if not is_ptbr else cur_slug
+    if is_ptbr and pt_slug is None:
+        pt_slug = cur_slug
+    if (not is_ptbr) and en_slug is None:
+        en_slug = cur_slug
 
-    pt_href = f"../pt_br/{pt_slug}.html"
-    en_href = f"../original/{en_slug}.html"
+    alt_links = []
+    if pt_slug:
+        alt_links.append(f'<link rel="alternate" hreflang="pt-BR" href="../pt_br/{pt_slug}.html">')
+    if en_slug:
+        alt_links.append(f'<link rel="alternate" hreflang="en" href="../original/{en_slug}.html">')
+    default_href = (
+        f"../pt_br/{pt_slug}.html" if pt_slug
+        else f"../original/{en_slug}.html" if en_slug
+        else None
+    )
+    if default_href:
+        alt_links.append(f'<link rel="alternate" hreflang="x-default" href="{default_href}">')
+    alternates_html = "\n".join(alt_links)
+
     canonical_url = (
         f"https://adhenawer.net/posts/pt_br/{pt_slug}.html" if is_ptbr
         else f"https://adhenawer.net/posts/original/{en_slug}.html"
@@ -299,9 +313,7 @@ def make_html(vid_id, title, subtitle, url, txt_path,
 <meta name="description" content="{first_para}">
 <meta name="author" content="{subtitle}">
 <link rel="canonical" href="{canonical_url}">
-<link rel="alternate" hreflang="pt-BR" href="{pt_href}">
-<link rel="alternate" hreflang="en" href="{en_href}">
-<link rel="alternate" hreflang="x-default" href="{pt_href}">
+{alternates_html}
 <meta property="og:type" content="article">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{first_para}">
