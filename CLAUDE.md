@@ -420,3 +420,60 @@ Para GitHub Pages (deploy automático):
 gh repo edit --enable-pages --branch main --dir /
 ```
 Site ficará em: `https://<SEU-USUARIO>.github.io/video-to-text`
+
+## Cloudflare Worker (redirects + markdown edge)
+
+O Worker em `workers/markdown-agent/` fica na frente do GitHub Pages e intercepta as rotas declaradas em `wrangler.toml` (`/blog/*`, `/posts/*`, `/en/*`, `/leituras/*`, `/index.html`, `/llms.txt`). Responsabilidades:
+
+- Serve HTML normal para navegadores
+- Serve Markdown automaticamente para crawlers de IA (`autoDetectAiCrawlers`)
+- Aplica os redirects definidos em `src/index.ts` — **HTTP 301 real** (não meta refresh)
+
+### Configurar redirects
+
+Editar `workers/markdown-agent/src/index.ts`, campo `redirects`:
+
+```ts
+redirects: {
+  "/path-antigo/*": "/path-novo/$1",         // wildcard com backreference
+  "/post-antigo.html": "/post-novo.html",    // literal (match exato)
+}
+```
+
+Ambas as formas retornam 301. Wildcard é útil pra renomear uma árvore inteira; literal pra um post específico.
+
+### Deploy
+
+Pré-requisito (uma vez por máquina) — login no Cloudflare via OAuth no browser:
+
+```bash
+cd workers/markdown-agent
+./node_modules/.bin/wrangler login
+```
+
+Depois, para publicar:
+
+```bash
+cd workers/markdown-agent
+./node_modules/.bin/wrangler deploy
+```
+
+> `npx wrangler` pode falhar em ambientes com proxies/rewrites de CLI — prefira `./node_modules/.bin/wrangler` direto.
+
+### Validar após deploy
+
+```bash
+# 301 em redirect configurado
+curl -sI https://adhenawer.net/<path-antigo> | head -5
+# esperado: HTTP/2 301 + location: <path-novo>
+
+# Markdown para agentes
+curl -s -H "Accept: text/markdown" https://adhenawer.net/blog/<slug>.html | head -20
+# esperado: frontmatter YAML + corpo em Markdown
+```
+
+### Reindexação no Google após mudar slug
+
+1. Configurar o redirect 301 no worker + deploy
+2. (Opcional) Google Search Console → Inspect URL na URL **nova** → "Request indexing" pra acelerar
+3. URL antiga sai do índice naturalmente quando o crawler do Google passar e receber o 301
