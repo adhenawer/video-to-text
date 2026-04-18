@@ -39,7 +39,7 @@
   <header>
     <h1>Curso Completo de Claude Code — 4 Horas</h1>
     <p class="meta"><cite>Marco Fernández / X</cite></p>
-    <p class="meta"><a href="https://x.com/maarcoofdezz/status/2043679971927896218" target="_blank" rel="noopener">🐦 Ver no X (Twitter)</a></p>
+    <p class="meta"><a href="https://x.com/maarcoofdezz/status/2043679971927896218" target="_blank" rel="noopener">🐦 Ver no Twitter/X</a></p>
   </header>
   <nav aria-label="Índice do artigo">
     <h3>Conteúdo</h3>
@@ -150,12 +150,12 @@
     </ol>
   </nav>
 <section>
-<h2 id="s1">INTRODUÇÃO E VISÃO GERAL DO CURSO</h2>
+<h2 id="s1">INTRODUÇÃO E VISÃO GERAL DO CURSO <span class="ts-mark" aria-label="Momento no vídeo">0:00</span></h2>
 <p>Este é o curso definitivo sobre Claude Code para iniciantes. O instrutor usa o Claude Code todos os dias para gerenciar um negócio que gera mais de 4 milhões de dólares por ano em lucro. Ele também ensina mais de 2.000 pessoas a usar o Claude Code tanto para tarefas pessoais quanto corporativas e profissionais — e é, em grande medida, o que ocupa seu dia inteiro. Uma vez que você entenda o que está prestes a ser ensinado neste curso, não é exagero dizer que o Claude Code vai amplificar sua produtividade. Você vai encontrar alavancagem em áreas que provavelmente nem sabia que tinha — tanto para engenharia de software quanto para outras partes da sua vida. O foco aqui não é software em si. Não é preciso ter formação técnica para entender o que será apresentado. O conteúdo começa devagar e constrói os conceitos de forma natural e gradual para que todo mundo esteja na mesma página.</p>
 <p>Sem rodeios, este é o roteiro completo do curso. Começa com o básico: baixar e configurar o Claude Code. Em seguida, são apresentados os ambientes de desenvolvimento integrado, ou IDEs. Há vários no mercado, e os três mais usados são apresentados para que todos estejam familiarizados. Depois disso, é mostrado como configurar o &ldquo;cérebro do projeto&rdquo;, que é o arquivo claude.md. Com isso feito, o Claude Code é usado para construir algo de verdade, porque o foco de todo o curso é na construção prática. Será desenvolvido um aplicativo web simples hospedado ao vivo na internet — aprendendo fazendo, não apenas assistindo a uma demonstração. Após isso, são cobertos o diretório .claude, a pasta de subagentes e uma série de funcionalidades que poucas pessoas conhecem. Em seguida, os vários modos do Claude Code são detalhados: o plan mode, que muitos já ouviram falar; o modo &ldquo;dangerously skip permissions&rdquo;, que ganhou alguma notoriedade recentemente; e como usá-los, além de como usá-los com segurança. Depois disso, são abordados builds complexos de projetos usando plan mode. Na sequência, vem o gerenciamento de contexto — um termo muito em voga atualmente. Serão apresentadas formas de gerenciar o contexto com eficiência, evitar a degradação de contexto e garantir que os prompts sejam construídos e estruturados de forma a maximizar o retorno. Todos os slash commands do Claude Code são percorridos e explicados. Em seguida, os hooks são abordados: scripts customizados que podem ser disparados automaticamente antes ou depois de qualquer tool call do Claude Code. Depois, as skills do Claude Code, que é basicamente como criar arquivos de skill que transformam o Claude Code em uma série de agentes especializados diferentes. A seguir, o Model Context Protocol e como configurá-lo de forma eficaz. São apresentados alguns sistemas automatizados que podem ser construídos rapidamente com Model Context Protocol, incluindo gerenciadores de email, um sistema de contabilidade próprio e muito mais. Os plugins e marketplaces do Claude Code são cobertos. A integração com o Chrome DevTools é apresentada — uma conexão muito subestimada entre o Claude Code e o Chrome que permite coletar dados de fontes que não têm APIs. É extremamente valioso aprender. Os subagentes do Claude Code com acesso controlado a ferramentas são detalhados. A nova funcionalidade de agent teams é apresentada e como usá-la produtivamente. E então, Git worktrees e mobilidade de sessão — o que essencialmente permite criar sessões paralelas do Claude sem muitas das desvantagens que ferramentas como o Claude Bot infelizmente resultaram. Por fim, é coberto escalonamento e deploy: como pegar as automações e rodá-las em produção usando Modal webhooks, GitHub Actions e Claude Code na web.</p>
 </section>
 <section>
-<h2 id="s2">INSTALAÇÃO E CONFIGURAÇÃO INICIAL DO CLAUDE CODE</h2>
+<h2 id="s2">INSTALAÇÃO E CONFIGURAÇÃO INICIAL DO CLAUDE CODE <span class="ts-mark" aria-label="Momento no vídeo">1:53</span></h2>
 <p>A primeira coisa que precisa ser feita é comprar uma assinatura do Claude Code. O motivo é que ele não está disponível no plano gratuito de zero dólares. Para ter acesso ao Claude Code, é necessário pelo menos o plano Pro para produtividade cotidiana. Esse é o plano recomendado para quem está começando. O dinheiro gasto em uma assinatura assim é tão pequeno comparado aos enormes benefícios de produtividade que, apesar de custar 17 dólares, não vale sequer questionar. Não é exagero dizer que o Claude Code provavelmente entrega benefícios de produtividade na ordem de 10.000 a 15.000 dólares por mês, porque não é apenas alguém com habilidades de desenvolvedor, o que permite construir sistemas que aliviam estresses e tensões na vida. Ele vai muito além de um desenvolvedor. É basicamente um segundo cérebro neste ponto.</p>
 <p>Após clicar em &ldquo;try Claude&rdquo;, a página leva ao login. Depois de concluído, é possível criar a conta pela primeira vez. As opções de notificações podem ser selecionadas conforme preferência — se a caixa de entrada de email já é muito movimentada, é razoável não assinar atualizações ocasionais de produto. Em seguida, há uma tela de onboarding com informações pessoais para preencher. O plano Pro custa 17 dólares, mas em outras moedas a conversão pode elevar esse valor — em dólares canadenses, por exemplo, esse valor se converte em torno de 28 dólares.</p>
 <p>Após concluir a assinatura, o que se tem é uma conta Claude. Isso é tudo que é necessário para começar. A partir daqui, a forma mais simples de começar com o Claude Code é abrir uma instância de terminal. Isso pode parecer intimidador para muitos. Então será mostrado como fazer tanto no terminal quanto na interface gráfica, que a Anthropic montou há cerca de quatro ou cinco meses.</p>
@@ -165,7 +165,7 @@
 <p>Só para estar na mesma página: tudo que foi feito até agora foi basicamente abrir uma interface de chat com um modelo de IA. É apenas que, em vez de estar em um aplicativo desktop bonito ou na web, está no terminal. O valor aqui é que, em vez de executar um modelo de IA na web ou em algum servidor de nuvem distante, o que se está fazendo agora é executá-lo localmente no computador. Isso dá a capacidade de pegar esse modelo e modificar localmente arquivos no computador, escrever scripts, escrever histórias, escrever poemas, reestruturar o organizador de arquivos, limpar o PC ou o Mac. Essa coisa está conectada ao computador local. Isso por si só já o torna extraordinariamente poderoso.</p>
 </section>
 <section>
-<h2 id="s3">ENTENDENDO A INTERFACE DO CLAUDE CODE NO TERMINAL</h2>
+<h2 id="s3">ENTENDENDO A INTERFACE DO CLAUDE CODE NO TERMINAL <span class="ts-mark" aria-label="Momento no vídeo">5:02</span></h2>
 <p>A tela do terminal pode parecer bastante intimidadora para iniciantes. A maioria das pessoas acaba usando o fluxo do terminal, não o fluxo da interface gráfica. Então vale entender o que aparece na tela.</p>
 <p>No canto superior esquerdo, há o ícone do Claude Code — parece um caranguejo ou uma água-viva, mas é adorável. Em seguida, aparece &ldquo;Claude Code&rdquo; com a versão atual. Abaixo disso, o modelo que está sendo usado — por exemplo, Opus 4.6. Depois, o plano em uso — como Claude Max, que é alguns níveis acima do plano Pro. E então, talvez o mais importante, o diretório de trabalho atual. Como mencionado, o Claude Code está trabalhando dentro do computador em uma pasta específica. No caso de uso inicial, o Claude Code está em `/users/[nome-do-usuário]`, que é basicamente a pasta home no macOS.</p>
 <p>Abaixo disso está o campo de comando anterior — por exemplo, se foi digitado `/clear` para limpar tudo e dar uma lousa em branco. Em seguida, vem onde se insere texto. Quando se digita algo, aparece aqui. Abaixo disso, o modelo é exibido novamente. Em seguida, os vários modos. O modo atual pode ser &ldquo;bypass permissions&rdquo; — um modo um tanto perigoso, um modo com o qual muitas pessoas não se sentem super confortáveis, mas que é o modo preferido para trabalho de conhecimento e tarefas intelectualmente valiosas. É possível alternar entre modos simplesmente clicando em Shift e Tab. Há também informações sobre a versão, qual a mais recente, e no lado direito, a contagem de tokens.</p>
@@ -176,7 +176,7 @@
 <p>Também se nota que no lado direito, o contador de tokens subiu significativamente. Basicamente, isso significa que com cerca de 20.000 tokens, estamos a aproximadamente 10% do caminho pelo thread de conversa inteiro disponível. O que é muito legal é que o Claude Code pega todo esse histórico e em intervalos regulares o comprime para aumentar a densidade de informação — pegando uma sequência de texto e tornando-a cada vez mais compacta. Mesmo que algo tenha sido escrito de forma verbosa, à medida que o contexto aumenta, o Claude gerencia isso automaticamente para garantir que se mantenha dentro da janela.</p>
 </section>
 <section>
-<h2 id="s4">AMBIENTES DE DESENVOLVIMENTO INTEGRADO (IDES) — VISUAL STUDIO CODE E CURSOR</h2>
+<h2 id="s4">AMBIENTES DE DESENVOLVIMENTO INTEGRADO (IDES) — VISUAL STUDIO CODE E CURSOR <span class="ts-mark" aria-label="Momento no vídeo">8:18</span></h2>
 <p>Os terminais são muito semelhantes às interfaces gráficas — apenas parecem mais intimidadores. É recomendável que as pessoas se acostumem a usar no terminal porque, ao fazer isso, se desbloqueia ainda mais funcionalidades. É possível executar vários terminais lado a lado, usar diferentes ferramentas de terminal que oferecem tempos de atualização mais rápidos e assim por diante. Mas para quem está começando, a interface gráfica também funciona muito bem.</p>
 <p>Então, o que é um ambiente de desenvolvimento integrado (IDE)? Um IDE é basicamente três coisas juntas: um organizador de pastas de arquivos, mais um editor de texto, mais um widget de chat com IA, similar ao que se obtém em chatgpt.com ou claude.ai. É como ter o Finder do Mac — onde se pode ir em finder e basicamente navegar por uma série de pastas onde se pode selecionar diferentes arquivos e abri-los — mais algo como o Bloco de Notas ou Notes, mais algo como o ChatGPT, tudo em um único lugar.</p>
 <p>Atualmente há dois IDEs principais para os quais o mercado está convergindo. O primeiro se chama Visual Studio Code. O segundo se chama Cursor. O Visual Studio Code é o original, porque o Cursor foi construído sobre ele. O VS Code foi desenvolvido há muito mais tempo pela Microsoft. É muito extensível, tem excelente suporte e é muito direto. O Cursor pode ser considerado como o Visual Studio 2.0 — não só tem a maioria das mesmas funcionalidades, algumas ainda em beta, mas também é muito mais moderno e tem um foco muito maior em IA, que é obviamente o ponto principal.</p>
@@ -190,13 +190,13 @@
 <p>À direita disso fica o arquivo que está atualmente sendo passado como contexto. Por exemplo, se há um arquivo index.html aberto, o Claude está atualmente &ldquo;olhando&rdquo; para aquele arquivo. Ao perguntar &ldquo;que arquivo você está olhando agora?&rdquo;, ele dirá que está olhando pelo index.html que está aberto no editor. Ele não leu o conteúdo ainda, porque ler um arquivo massivo consumiria bastante tokens — o que custaria dinheiro. Mas é possível pedir mudanças nele em tempo real, como mudar o título ou refatorar de modo escuro para modo claro.</p>
 </section>
 <section>
-<h2 id="s5">CONFIGURANDO O CURSOR (ANTERIORMENTE "ANTIGRAVITY")</h2>
+<h2 id="s5">CONFIGURANDO O CURSOR (ANTERIORMENTE "ANTIGRAVITY") <span class="ts-mark" aria-label="Momento no vídeo">11:57</span></h2>
 <p>Assim como esperado, o Cursor é bem similar ao VS Code. Ele tem um site em cursor.sh (anteriormente tinha branding diferente). Ao baixar e abrir, a aparência é muito parecida com o que foi visto no VS Code, porque os dois foram construídos um sobre o outro. Assim como o VS Code era um explorador de arquivos, um editor de arquivos e um gerenciador de agentes, o Cursor tem exatamente essas três ideias. No lado esquerdo ficam as pastas. No meio, o conteúdo dos arquivos. No lado direito, a conversa com agentes.</p>
 <p>A única diferença real entre o Cursor e o VS Code é o que está no lado direito. No VS Code, havia um botão dedicado para o Claude Code. No Cursor, por padrão, não há. Para acessar o Claude Code no Cursor, assegurando que a extensão já está instalada, é necessário deletar o ícone padrão (que é o Gemini do Google) e substituí-lo pelo ícone do Claude. O motivo é que o Cursor é um produto do Google, então eles tentam promover os modelos Gemini. Mas é possível usar qualquer modelo que se queira.</p>
 <p>Para deixar claro: este é um curso específico de Claude Code. Mas é possível usar qualquer modelo para qualquer propósito dentro do IDE. O tipo de modelo é menos importante do que ser muito bom em usá-lo e o fato de ele ser inteligente. Após fazer a troca, o layout fica exatamente igual ao do VS Code. Não há mais nada a cobrir sobre o Cursor especificamente — a interface é idêntica. Agora é hora de construir coisas de verdade.</p>
 </section>
 <section>
-<h2 id="s6">O ARQUIVO CLAUDE.MD — O CÉREBRO DO PROJETO</h2>
+<h2 id="s6">O ARQUIVO CLAUDE.MD — O CÉREBRO DO PROJETO <span class="ts-mark" aria-label="Momento no vídeo">13:40</span></h2>
 <p>Agora que está configurado no Cursor, a próxima coisa importante é o claude.md, que é o cérebro do workspace. Para deixar isso bem simples e direto, porque muitas pessoas entendem mal como os claude.mds funcionam, vale examinar uma conversa hipotética.</p>
 <p>Imagine que você está do lado direito da tela. O que você faz é enviar uma mensagem dizendo: &ldquo;pesquise X para mim&rdquo; — pesquise, não sei, as melhores postagens em tendência no Twitter no seu nicho, seja lá o que for. Então o que acontece depois é que o modelo — Claude, seja Opus 4.6, 4.5, Sonnet ou Haiku — vai responder dizendo &ldquo;claro, um momento&rdquo;. Após retornar o que foi pedido, você continua nessa linha. O padrão é: usuário, depois modelo, depois usuário, depois modelo.</p>
 <p>A forma como o prompt do claude.md funciona é a seguinte: bem na primeira mensagem, antes mesmo de chegar a esse ponto, o que está oculto é o fato de que existe na verdade um outro prompt. Esse prompt é injetado no topo da string de conversa antes mesmo de a primeira mensagem ser enviada. E assim, esse claude.md sendo a primeira coisa que o modelo lê e internaliza é realmente muito importante para ajudar a direcionar o output. Isso é o que se chama de &ldquo;esterçar o navio&rdquo;.</p>
@@ -207,7 +207,7 @@
 <p>Nesse arquivo, é preciso ser muito conciso, e também dar ao modelo os limites para os quais esse workspace serve. Seria possível copiar todo o conteúdo do claude.md e colá-lo diretamente no Claude Code e então se livrar do claude.md completamente. Mas o valor em ter um claude.md é não ter que fazer isso toda vez. É inicializado no topo do histórico de conversa como foi visto. E o que está no arquivo, para ser honesto, não é super importante em termos de conteúdo específico — o que importa é que ele existe e contém as instruções relevantes para o projeto.</p>
 </section>
 <section>
-<h2 id="s7">DESIGN DE WEBSITES COM CLAUDE CODE — TRÊS ABORDAGENS</h2>
+<h2 id="s7">DESIGN DE WEBSITES COM CLAUDE CODE — TRÊS ABORDAGENS <span class="ts-mark" aria-label="Momento no vídeo">15:48</span></h2>
 <p>Agora que se sabe sobre o claude.md, é hora de construir o primeiro website. Para simplificar, começa-se provavelmente com o build mais direto: uma página web completa — não apenas o hero header, que é a seção do topo, mas o site inteiro.</p>
 <p>O motivo de começar com isso é deixar todos entenderem quão bom o Claude Code e ferramentas similares ficaram em design de websites de alta qualidade. Há um site chamado godly.website que basicamente mostra designs de alta qualidade premiados. Praticamente todos esses sites, com talvez algumas exceções, são agora realizáveis em provavelmente menos de 10 minutos usando o Claude Code. Isso não é apenas conversa — é algo que foi feito pessoalmente dezenas de vezes, incluindo construir 15 sites em um dia para um projeto.</p>
 <p>Além disso, também será aprendido como o claude.md afeta os prompts, serão abordadas as três principais formas que as pessoas usam atualmente para criar sites, e haverá uma discussão rápida sobre deploy.</p>
@@ -219,7 +219,7 @@
 <p>Antes de partir para o design de verdade, é necessário entender a diferença entre construir algo e fazer o deploy. Quando se constrói algo, normalmente se está construindo localmente — rodando no computador local. Se se quer que outras pessoas possam acessá-lo, é necessário fazer o deploy, colocar na internet. Há diversas ferramentas que permitem fazer isso. Para o momento, será mostrado apenas como construir as coisas. Ao longo do curso, em módulos seguintes, serão abordadas ferramentas como Netlify, Vercel, Modal e outras que permitem colocar tanto software quanto websites e apps completos na nuvem para que outras pessoas possam acessar.</p>
 </section>
 <section>
-<h2 id="s8">LOOP DE SCREENSHOT E PROCESSO DE DESIGN ITERATIVO</h2>
+<h2 id="s8">LOOP DE SCREENSHOT E PROCESSO DE DESIGN ITERATIVO <span class="ts-mark" aria-label="Momento no vídeo">19:22</span></h2>
 <p>Para usar a abordagem de screenshot com referência visual, o primeiro passo é capturar um screenshot completo do site de inspiração. Para isso, abrir as ferramentas do desenvolvedor do Chrome usando Cmd+Shift+I ou clicando com o botão direito na página e selecionando &ldquo;Inspecionar&rdquo;. Na janela que se abre, mudar as dimensões para largura total de desktop em resolução 1920x1080 — essa é a proporção widescreen padrão. Então pressionar Cmd+Shift+P (ou Ctrl+Shift+P no Windows) para abrir a barra de comandos. Com essa barra aberta, digitar &ldquo;screenshot&rdquo; e selecionar &ldquo;Capture full size screenshot&rdquo;. Isso vai rolar pela página inteira e tirar um screenshot completo de cima a baixo. Não é algo que muita gente sabe que é possível, mas funciona muito bem.</p>
 <p>Uma vez com o screenshot, é necessário fazer mais uma coisa: reduzir o tamanho do arquivo. Se um arquivo de 20 megabytes fosse enviado para o Claude Code, primeiro consumiria enormemente o limite de tokens, e segundo a API tem um limite de tamanho de arquivo. O arquivo precisa ser significativamente menor. É possível usar um serviço como iloveimage.com para redimensionar a imagem — reduzir em 50% ou 75% para obter um arquivo com menos de 4-5 megabytes. Isso fica um pouco borrado, mas ainda tem qualidade suficiente para o propósito.</p>
 <p>Com o screenshot redimensionado, ele é adicionado ao Claude Code. No modo bypass permissions, é possível encontrar o arquivo e arrastá-lo ou copiá-lo e colá-lo diretamente no campo de entrada.</p>
@@ -229,7 +229,7 @@
 <p>A IA não vai ser perfeita na primeira vez, mas o valor da IA não está em sua capacidade de acertar 100% de primeira. O valor da IA está na velocidade: ela consegue chegar a 80% muito rapidamente, e depois a 90%, depois a 95%, depois eventualmente a 100%. E o que pensamos que é muito tempo é na verdade apenas uns 5 minutos. Em contraste com quanto tempo levaria um ser humano para fazer o mesmo, que seria algo como 5 horas — humanos tendem a ser mais precisos no primeiro go, mas não em um ou dois minutos. Então sempre deve haver um loop de tarefa, executar a tarefa, verificar os resultados, e estará tudo bem.</p>
 </section>
 <section>
-<h2 id="s9">DESENVOLVIMENTO PARALELO E MÚLTIPLAS INSTÂNCIAS</h2>
+<h2 id="s9">DESENVOLVIMENTO PARALELO E MÚLTIPLAS INSTÂNCIAS <span class="ts-mark" aria-label="Momento no vídeo">21:42</span></h2>
 <p>Uma das capacidades mais poderosas do Claude Code é executar múltiplas instâncias em paralelo. Em vez de esperar que uma instância termine antes de iniciar outra, é possível ter três, quatro, cinco ou mais instâncias trabalhando simultaneamente em projetos diferentes.</p>
 <p>Para demonstrar isso, ao mesmo tempo em que uma instância está construindo um site a partir de um screenshot de referência, uma segunda instância é aberta com um screenshot completamente diferente. O computador começa a trabalhar bem nesse ponto — dois processos de desenvolvimento de site rodando ao mesmo tempo, consumindo recursos, mas produzindo dois resultados em paralelo.</p>
 <p>Como o Claude Code pode ser executado em quantas instâncias forem suportadas pelos tokens disponíveis, é possível ter quantas abas se queira de designers de website rodando simultaneamente. E essa nem é a forma mais eficiente — há uma estrutura de gerenciamento de terminal muito mais eficaz que permite fazer cinco, dez ou vinte dessas simultaneamente.</p>
@@ -239,7 +239,7 @@
 <p>Para personalizar o site com conteúdo real, basta usar uma ferramenta de transcrição de voz para fazer um despejo de tudo que se quer mudar. Comentários sobre o logo, tipografia, botões, fotos — tudo em linguagem natural. O Claude interpreta e implementa. Por exemplo, dizer que o logo está muito grande, que a fonte do hero header está muito pesada, pedir uma fonte com serifa, que as fotos estão cortadas e precisam ser centralizadas, que o copyright precisa ser atualizado — tudo isso em um único bloco de voz.</p>
 </section>
 <section>
-<h2 id="s10">O DIRETÓRIO .CLAUDE — ESTRUTURA E FUNCIONALIDADES AVANÇADAS</h2>
+<h2 id="s10">O DIRETÓRIO .CLAUDE — ESTRUTURA E FUNCIONALIDADES AVANÇADAS <span class="ts-mark" aria-label="Momento no vídeo">24:15</span></h2>
 <p>Agora que foi feita uma construção inicial com o Claude Code e foram produzidos websites razoavelmente sólidos com apenas alguns minutos de trabalho, é hora de mergulhar mais fundo na funcionalidade avançada do Claude Code. O que será abordado aqui provavelmente menos de 10% dos usuários atuais do Claude Code entendem. Ao desbloquear o que está prestes a ser ensinado neste módulo, se terá um conhecimento significativamente maior sobre o Claude Code e também se poderá combinar cada uma dessas funcionalidades diferentes de maneiras fantásticas que trarão valor rapidamente.</p>
 <p>Então o que é o diretório .claude? Para qualquer pessoa sem background técnico, em convenção de programação, uma pasta com um ponto na frente é basicamente uma pasta oculta. Se você abrir o explorador de arquivos, não a verá. Por exemplo, no Mac, a pasta do usuário pode ter subpastas como Documents — mas se houver uma pasta chamada &ldquo;.oculta&rdquo;, o explorador de arquivos não a mostraria. É a maneira dos desenvolvedores de criar pastas que não bagunçam a organização visual.</p>
 <p>No caso do Claude Code, há um diretório com letra minúscula `.claude`. Dentro desse diretório, há suporte para cerca de 10 a 15 funcionalidades avançadas legais que, uma vez conhecidas, permitem aumentar significativamente o Claude Code além da versão básica.</p>
@@ -256,14 +256,14 @@
 <p>Para resumir, há três camadas de claude.md que se combinam: o global pessoal em `~/.claude/CLAUDE.md`, o do projeto em `.claude/CLAUDE.md` dentro do workspace atual, e o nível enterprise para licenças corporativas. Praticamente 99,9% das pessoas não terão licenças enterprise. O conceito é o mesmo — apenas mais um arquivo Markdown que existe em um nível diferente de precedência.</p>
 </section>
 <section>
-<h2 id="s11">A PASTA RULES — SEGMENTANDO O CLAUDE.MD</h2>
+<h2 id="s11">A PASTA RULES — SEGMENTANDO O CLAUDE.MD <span class="ts-mark" aria-label="Momento no vídeo">27:11</span></h2>
 <p>A pasta `rules/` dentro do `.claude` permite dividir um claude.md monolítico em diferentes arquivos de regras separados. Em vez de ter tudo em um único arquivo, é possível definir regras de alto nível que correspondem a diferentes partes de um build.</p>
 <p>Por exemplo, pode-se ter uma regra para estilo de código, uma para testes, uma para segurança, uma para frontend, e dentro do frontend uma para React e outra para estilos. A regra de estilo de código pode ser um parágrafo simples sobre como organizar o código. A segurança pode ser alguns parágrafos sobre como proteger as bases de código. Os estilos podem ser uma lista de classes Tailwind CSS ou instruções de formatação para deixar websites com uma aparência específica.</p>
 <p>Para converter um claude.md existente em rules segmentadas, basta dizer ao Claude Code: &ldquo;divida o claude.md em suas regras componentes, usando a especificação de rules do Claude Code&rdquo;. O Claude vai ler o arquivo atual, pesquisar a especificação de rules se não souber, e dividir o arquivo em três ou mais arquivos de rules dentro da pasta rules. Por exemplo, pode criar `workflow.md`, `tech-defaults.md` e `design.md` como regras separadas.</p>
 <p>O valor disso vai além da organização. É possível evoluir o workflow sem tocar as regras de design. Em geral, essa forma de segmentação pode ser muito útil especialmente quando se está trabalhando com outras pessoas — é possível dar acesso às pessoas apenas para os estilos, enquanto se mantém controle total sobre o workflow de alto nível. Também ajuda quando o claude.md é muito longo — muitas pessoas têm claude.mds com milhares de palavras. Dividi-lo assim ajuda a manter a organização e a ver áreas que não são mais necessárias.</p>
 </section>
 <section>
-<h2 id="s12">BOAS PRÁTICAS PARA O CLAUDE.MD — O QUE FAZER E O QUE EVITAR</h2>
+<h2 id="s12">BOAS PRÁTICAS PARA O CLAUDE.MD — O QUE FAZER E O QUE EVITAR <span class="ts-mark" aria-label="Momento no vídeo">28:20</span></h2>
 <p>Para simplificar, as principais recomendações compiladas para o claude.md são as seguintes:</p>
 <p>O que fazer: primeiro, executar `/init` ao trabalhar em uma nova pasta pela primeira vez. Segundo, usar bullet points e títulos curtos e tentar comprimir a informação ao máximo — escrever em estilo de alta densidade informacional. Não despejar transcrições de voz no claude.md. Se quiser escrever um claude.md usando ajuda, é recomendável fazer o despejo de voz para o Claude e então pedir que converta em um resumo muito compacto e de alta densidade de regras. Terceiro, colocar as coisas mais importantes no topo. Se há algo que absolutamente não deve ser feito — nunca deletar arquivo X, por exemplo — mencioná-lo bem no começo.</p>
 <p>Os primeiros itens que a IA aprende tendem a ser lembrados. Há o que se chama de &ldquo;viés de primazia&rdquo; — tanto os seres humanos quanto a IA se lembram muito do início, não se lembram tanto do meio, e são mais propensos a lembrar de alguma coisa do final. Isso se chama &ldquo;viés de recência&rdquo;. Então o Claude e nós somos tendenciosos a lembrar de coisas bem no começo de uma sequência e no final da sequência, mas principalmente no começo, motivo pelo qual se coloca guardrails importantes no topo.</p>
@@ -274,7 +274,7 @@
 <p>Manter o claude.md entre 200 e 500 linhas no máximo. Mais do que 500 linhas, está se despejando muito contexto. E não esquecer de adicionar rules quando o Claude continua cometendo o mesmo erro. Se estiver trabalhando com uma biblioteca ou plataforma específica que tem uma forma muito particular de fazer as coisas, toda vez que carregar uma instância nova do Claude Code, ele vai continuar cometendo aquele erro. Se ele errar mais de duas ou três vezes, dizer &ldquo;adicione isso ao seu claude.md para que funcione na próxima vez que abrir uma instância nova do Claude&rdquo;. Essa é uma das estratégias favoritas.</p>
 </section>
 <section>
-<h2 id="s13">AUTO MEMORY E O COMANDO /INIT</h2>
+<h2 id="s13">AUTO MEMORY E O COMANDO /INIT <span class="ts-mark" aria-label="Momento no vídeo">31:23</span></h2>
 <p>Além do claude.md, existe também o conceito de memória automática. Em adição ao claude.md, há um pequeno arquivo adicional que é injetado no topo de cada sessão. A Anthropic e os desenvolvedores do Claude Code fazem muito dessas injeções — não é apenas o claude.md. É o arquivo de memória também, além de muitas definições de tool calls e muita coisa a mais.</p>
 <p>A forma como a memória funciona é: se contar ao Claude algo em uma instância e pedir que ele lembre, ele vai escrever isso em um arquivo de memória. Em outra instância, ao abri-la, esse é um arquivo de memória global, e ele vai lembrar. Por exemplo, se abrir o Claude Code e perguntar &ldquo;qual é o nome do meu irmão?&rdquo; — se nunca tiver dito isso ao Claude — ele vai dizer que não sabe. Mas se disser &ldquo;lembre que o nome do meu irmão é Jorge&rdquo;, o que ele vai fazer é salvar isso no arquivo de memória. E se ir a uma instância nova do Claude Code e perguntar &ldquo;qual é o nome do meu irmão?&rdquo;, desta vez ele vai responder &ldquo;Jorge&rdquo; — porque o arquivo de memória foi injetado.</p>
 <p>Na prática, a memória não é super valiosa isoladamente — o claude.md já faz muito disso. Mas é separada do claude.md. Pode-se tratá-la como as anotações pessoais do Claude — não é bem o conjunto de instruções. É uma coisa ligeiramente diferente.</p>
@@ -282,7 +282,7 @@
 <p>Por que isso é valioso se o Claude tecnicamente já tem acesso a todos os arquivos? Porque de outra forma, toda vez que uma sessão for iniciada, o Claude teria que ler todos os arquivos do zero — o contact.html, o index.html, o message.md, tudo. Em vez de consumir, digamos, 10.000 tokens por vez, estaria consumindo 100.000 porque teve que ler tudo. E duas coisas acontecem: primeiro, a qualidade do Claude em média cai porque há uma relação negativa entre o comprimento do prompt e a qualidade dos outputs. Segundo, está se pagando muito mais. O claude.md criado pelo `/init`, em adição a fornecer instruções e orientação, também é um mecanismo pelo qual se pode reduzir significativamente o uso de tokens e aumentar a qualidade média — porque ele simplesmente já sabe tudo, especialmente ao usar o `/init` antes de realmente ter que ler os arquivos.</p>
 </section>
 <section>
-<h2 id="s14">MODOS DE PERMISSÃO — CONTROLE DETALHADO DE ACESSO</h2>
+<h2 id="s14">MODOS DE PERMISSÃO — CONTROLE DETALHADO DE ACESSO <span class="ts-mark" aria-label="Momento no vídeo">32:55</span></h2>
 <p>Os modos de permissão controlam como os agentes lidam com permissões. O modo de permissão atual é também passado para quaisquer subagentes que forem criados. Eles tendem a herdar o contexto de permissão da conversa principal, mas há situações em que é possível substituir o modo também.</p>
 <p>O modo padrão — &ldquo;ask before edits&rdquo; ou &ldquo;default&rdquo; — é a verificação de permissão padrão com prompts. Antes de o Claude fazer qualquer mudança em qualquer arquivo no computador, ele tem que perguntar se é aceitável. Esse modo é útil em projetos de alto risco onde cada mudança precisa ser validada.</p>
 <p>Ao tentar mudar o título de um projeto com &ldquo;ask before edits&rdquo; ativo, o que acontece é que primeiro ele olha para o arquivo específico que define o título, abre no lado direito da tela a seção exata da página que está considerando atualizar, e mostra exatamente o que vai mudar. Aparece uma mensagem perguntando se deve fazer esta edição ao arquivo específico, com três opções: sim, pressionar um; sim, permitir todas as edições desta sessão, pressionar dois; ou não, pressionar três. Essa interrupção constante pode ser muito chata quando o Claude está no meio de um trabalho intenso.</p>
@@ -292,7 +292,7 @@
 <p>O modo &ldquo;Delegate&rdquo; é um modo de coordenação para líderes de equipes de agentes. O Claude Code tem um recurso chamado &ldquo;agent teams&rdquo; onde um único agente pode delegar trabalho a vários subagentes. Esse é o modo de permissão dado ao líder da equipe de agentes, que basicamente lhe permite delegar tarefas, embora não seja permitido fazer nada além das ferramentas de gerenciamento de equipe.</p>
 </section>
 <section>
-<h2 id="s15">PLAN MODE — POR QUE PLANEJAR ANTES DE CONSTRUIR</h2>
+<h2 id="s15">PLAN MODE — POR QUE PLANEJAR ANTES DE CONSTRUIR <span class="ts-mark" aria-label="Momento no vídeo">35:20</span></h2>
 <p>O plan mode vai fazer a maior parte do que será discutido a seguir. O plan mode é exploração somente leitura — o Claude Code pode pesquisar coisas usando ferramentas web, ler todos os arquivos pré-existentes no diretório, raciocinar a partir de primeiros princípios e usar sua própria inteligência. E então pode basicamente pegar tudo isso e colocar em um documento de plano antes de apresentá-lo.</p>
 <p>O plan mode é fantástico. É usado praticamente toda vez que há qualquer tipo de build mais complicado do que um design simples. O motivo pelo qual é tão bom é que, em vez de agir — o que no mundo real leva muito tempo e energia tanto para fazer quanto para desfazer —, o plan mode apenas pesquisa todos os fatores envolvidos no build antes de fazê-lo. Se trabalhar nesse espaço teórico de planejamento em vez do espaço real do build e de todas as bibliotecas e todo o código, serão poupadas muitas, muitas horas de construção ao longo de apenas alguns dias, e provavelmente dezenas e centenas de horas ao longo de uma vida de uso dessa ferramenta. Um minuto de planejamento poupa dez minutos de construção. É simplesmente muito alavancado.</p>
 <p>Imagine dois possíveis cenários. No primeiro cenário, constrói-se algo com o Claude Code, testa-se e percebe-se que há algum problema com a abordagem. Talvez esteja se construindo um app web simples que, ao fazer login, adiciona números ou credenciais a um banco de dados. Fez-se isso, percebeu-se que está errado. O que isso significa é que, porque a abordagem está errada, basicamente o tempo gasto construindo — embora não completamente desperdiçado — uma grande parte dele foi desperdiçada. Não só foram gastos os 15 minutos para construir a coisa, não só os 5 minutos para testar, mas também é preciso reconstruir, o que pode levar mais 15 minutos multiplicado por quantas vezes for necessário testar e retestar. Isso significa que o tempo total gasto é de 35 minutos mais uma quantidade considerável de tokens.</p>
@@ -300,7 +300,7 @@
 <p>O que isso significa é que é muito melhor fazer todo o trabalho aqui — basicamente durante o planejamento da especificação. É como planejar um projeto de construção: planeja-se projetos de construção para não se chegar a uma situação em que não há materiais suficientes no canteiro de obras e tudo tem que ser parado para ir buscar mais. Melhor ir à planta e fazer as mudanças lá do que no mundo físico, onde incorrem custos reais.</p>
 </section>
 <section>
-<h2 id="s16">CONSTRUINDO UMA PLATAFORMA COMPLETA DE GERAÇÃO DE PROPOSTAS</h2>
+<h2 id="s16">CONSTRUINDO UMA PLATAFORMA COMPLETA DE GERAÇÃO DE PROPOSTAS <span class="ts-mark" aria-label="Momento no vídeo">38:12</span></h2>
 <p>O projeto prático para demonstrar o plan mode é uma plataforma de geração de propostas — basicamente reconstruindo o PandaDoc do zero. O objetivo é ser capaz de gerar automaticamente propostas de alta qualidade — documentos de vendas — que podem ser enviados a prospectos através de uma interface web. O sistema precisa ter: geração de propostas por IA, propostas como páginas estáticas públicas, login, dashboard para gerenciar propostas, templates baseados em um PDF existente, capacidade para os clientes assinarem eletronicamente, capacidade de pagamento integrado, e um design limpo estilo Apple.</p>
 <p>O primeiro passo é criar a especificação do projeto. Em vez de tentar especificar tecnicamente, basta descrever o que se quer. Usando uma ferramenta de transcrição de voz, pode-se fazer um despejo de tudo que se quer no app. Então essa transcrição é colada no Claude Code em plan mode.</p>
 <p>Ao receber a especificação em linguagem natural, o Claude Code começa a fazer perguntas de esclarecimento através de uma interface gráfica interativa: qual framework de frontend você quer usar? Quão legalmente robusto precisam ser as assinaturas eletrônicas? As propostas têm preços fixos ou variáveis? Está usando Supabase para o banco de dados? Tailwind para CSS utilitário, Shadcn UI para componentes polidos? Onde está o template de proposta?</p>
@@ -310,7 +310,7 @@
 <p>O resultado final é um app completo com login, dashboard, geração de propostas, visualização pública, assinatura e pagamento — funcionalidade equivalente ao PandaDoc, construída em menos de meia hora e hospedada de graça no Netlify. Para deploy, basta abrir o Netlify, importar o projeto do GitHub, configurar as variáveis de ambiente (copiadas do arquivo .env local) e configurar o webhook do Stripe. O app fica online e acessível publicamente em poucos minutos.</p>
 </section>
 <section>
-<h2 id="s17">SEGURANÇA EM APLICAÇÕES DESENVOLVIDAS COM CLAUDE CODE</h2>
+<h2 id="s17">SEGURANÇA EM APLICAÇÕES DESENVOLVIDAS COM CLAUDE CODE <span class="ts-mark" aria-label="Momento no vídeo">40:24</span></h2>
 <p>Com grande poder vem grande responsabilidade. Apesar de quão incrível o Claude Code é no momento, seria muito cauteloso em publicar apps completamente &ldquo;vibe coded&rdquo; na internet. Existem pessoas que estão usando o Claude Code e ferramentas similares para tentar encontrar vulnerabilidades de segurança também. E infelizmente, apesar de quão incrível o Claude Code é agora, ele não está no ponto em que garante 100% a segurança de tudo no frontend e no backend.</p>
 <p>Então há algumas precauções de segurança recomendadas:</p>
 <p>Primeiro, que a URL não seja óbvia ou básica. Não usar algo trivial como um subdomínio simples. Há serviços que escaneiam todas as faixas de DNS e todas as URLs, o que significa que quanto mais curta e simples a URL, mais arriscado é, pois mais outras pessoas terão acesso. Provavelmente já houve 30 ou 40 pessoas que acessaram o serviço de exemplo logo depois de ser criado — é simplesmente assim que funciona.</p>
@@ -318,7 +318,7 @@
 <p>O uso mais seguro e recomendado é para ferramentas internas dentro de equipes ou para clientes em contextos controlados. Não publicar essas coisas e tentar monetizá-las da internet em geral. Foram vistas histórias de horror demais com segurança em projetos vibe coded que ficaram expostos publicamente.</p>
 </section>
 <section>
-<h2 id="s18">GERENCIAMENTO DE CONTEXTO — ENTENDENDO A JANELA DE CONTEXTO</h2>
+<h2 id="s18">GERENCIAMENTO DE CONTEXTO — ENTENDENDO A JANELA DE CONTEXTO <span class="ts-mark" aria-label="Momento no vídeo">41:21</span></h2>
 <p>O gerenciamento de contexto é essencialmente como lidar com tokens em um prompt da forma mais eficaz possível. Muitas pessoas complicam isso excessivamente, então será mantido o mais simples possível.</p>
 <p>Se abrir uma nova instância do Claude Code e digitar `/context`, e então rolar para cima e dar um zoom, o Claude dirá essencialmente o que está usando atualmente a janela de contexto. Para quem não sabe, janela de contexto no domínio da IA simplesmente se refere à quantidade total ou número total de tokens que um modelo específico pode lidar de uma vez.</p>
 <p>Por exemplo, com o Claude Opus 4.6 — o modelo mais avançado disponível —, a janela de contexto é de cerca de 200.000 tokens. Existem modelos como algumas versões da série Sonnet que podem chegar a um ou dois milhões de tokens. Mas o número de tokens em uma janela de contexto não está diretamente relacionado ao desempenho do modelo. A janela de contexto é algo separado disso.</p>
@@ -330,7 +330,7 @@
 <p>De todo o contexto, 16.800 tokens são consumidos por todas essas ferramentas constantemente. E não há nada que se possa fazer para corrigir isso a menos que se queira criar uma versão própria do Claude Code. O time do Claude Code está constantemente melhorando, podando e assim por diante.</p>
 </section>
 <section>
-<h2 id="s19">MCP TOOLS, MEMÓRIA E ESTRATÉGIAS DE COMPACTAÇÃO</h2>
+<h2 id="s19">MCP TOOLS, MEMÓRIA E ESTRATÉGIAS DE COMPACTAÇÃO <span class="ts-mark" aria-label="Momento no vídeo">44:23</span></h2>
 <p>Em seguida no `/context` estão as MCP tools. Diferente das system tools — que são padrão —, as MCP tools são coisas que o usuário mesmo define. Cada uma dessas ferramentas é algo que se conectou a um servidor MCP para estender a funcionalidade do Claude Code. Basicamente, as system tools são padrão, e as MCP tools são controláveis pelo usuário.</p>
 <p>Como porcentagem do contexto total, talvez 2,8% seja gasto em customizar a própria instância do Claude e 8,4% com as ferramentas padrão. Obviamente as padrão são maiores. Mas alguns MCPs podem ser bem volumosos. Há que se ser seletivo na escolha deles. É importante selecionar servidores MCP que não consumam excessivamente o contexto.</p>
 <p>Em seguida estão os arquivos de memória. O arquivo `MEMORY.md` é muito direto, e no contexto típico são apenas 88 tokens — nem de longe um problema. É basicamente o bloco de rascunho do Claude enquanto trabalha.</p>
@@ -341,7 +341,7 @@
 <p>A auto-compactação está sendo implementada de forma cada vez mais proativa pelo time do Claude Code — os tokens mais antigos são constantemente comprimidos em resumos de maior densidade informacional em segundo plano. Isso é bastante impressionante porque os humanos simplesmente não são muito bons em permanecer realmente concisos, e isso melhora constantemente a qualidade dos outputs subsequentes, além de custar menos — o que é curioso, porque o modelo de negócio da Anthropic é monetizar o Claude. O fato de estarem fazendo isso de certa forma vai contra seus interesses diretos, o que é um dos motivos pelos quais a empresa é valorizada — claramente motivados pela qualidade do produto mais do que pela receita imediata.</p>
 </section>
 <section>
-<h2 id="s20">DICAS AVANÇADAS DE GERENCIAMENTO DE CONTEXTO</h2>
+<h2 id="s20">DICAS AVANÇADAS DE GERENCIAMENTO DE CONTEXTO <span class="ts-mark" aria-label="Momento no vídeo">47:33</span></h2>
 <p>A documentação do Claude Code tem uma seção dedicada a reduzir o uso de tokens e minimizar o que é chamado de &ldquo;context rot&rdquo; — degradação do contexto — que se acumula em uma conversa. As principais estratégias são as seguintes:</p>
 <p>Usar `/cost` para verificar o uso atual de tokens. Também é possível configurar uma linha de status para exibir isso continuamente. Para configurar a linha de status no Claude Code, usar `/status-line` no terminal (não disponível na versão GUI). Ao executar esse comando, será perguntado o que se quer exibir na linha de status. Uma boa opção é pedir uma barra de carregamento mostrando quantos tokens foram usados do contexto total.</p>
 <p>Adicionar instruções customizadas de compactação. Usando `/compact` com um prompt, é possível dizer ao Claude o que priorizar na compactação, o que pode ser muito valioso.</p>
@@ -355,7 +355,7 @@
 <p>Por fim, planejamento para tarefas complexas reduz significativamente o número total de tokens usados. Chamadas de API, servidores e páginas web carregam muitos tokens no contexto. Evitar fazer pesquisa na fase de build é muito valioso — front-load a pesquisa com plan mode e preocupar-se com o restante depois.</p>
 </section>
 <section>
-<h2 id="s21">SKILLS — A FERRAMENTA DE MAIOR VALOR ECONÔMICO DO CLAUDE CODE</h2>
+<h2 id="s21">SKILLS — A FERRAMENTA DE MAIOR VALOR ECONÔMICO DO CLAUDE CODE <span class="ts-mark" aria-label="Momento no vídeo">49:20</span></h2>
 <p>As skills — anteriormente referidas como &ldquo;custom slash commands&rdquo; — são provavelmente uma das formas economicamente mais valiosas de usar o Claude Code. Uma skill é como um documento de POP (Procedimento Operacional Padrão) — uma lista estruturada de instruções em formato Markdown que transforma o Claude Code em um especialista para uma tarefa específica e repetitiva.</p>
 <p>Se abrirmos o diretório `.claude` em um workspace bem configurado, é possível ver uma pasta de skills aninhada. Pode-se ter skills para: classificar leads, criar propostas automaticamente, encontrar outliers em um nicho, atualizar e responder automaticamente emails, editar vídeos do YouTube, fazer onboarding de novos clientes na agência, se candidatar a vagas no Upwork, monitorar e classificar posts em comunidades online.</p>
 <p>O que essa coleção representa é basicamente todas as coisas que se faz normalmente no dia a dia como parte do trabalho de conhecimento intelectualmente valioso, o que efetivamente gera renda. E o que se fez foi transformar tudo isso em checklists e dar esses checklists ao Claude.</p>
@@ -367,7 +367,7 @@
 <p>Para quem usa fast mode — o novo modelo Opus 4.6 com capacidade de rodar 2,5 vezes mais rápido por cerca de três vezes o preço — é possível pagar um pouco mais se isso significar fazer todo o trabalho de conhecimento necessário um pouco mais rapidamente.</p>
 </section>
 <section>
-<h2 id="s22">ESTRUTURA DE UMA SKILL — COMO CRIAR E REFINAR</h2>
+<h2 id="s22">ESTRUTURA DE UMA SKILL — COMO CRIAR E REFINAR <span class="ts-mark" aria-label="Momento no vídeo">52:41</span></h2>
 <p>Como se cria uma skill? A primeira coisa a entender é como a estrutura de uma skill funciona.</p>
 <p>Uma skill bem construída tem três componentes principais. Primeiro, há a pasta da skill em si — por exemplo, `scrape-leads/`. Dentro dela, há outra pasta chamada `scripts/` que executa a parte programática da skill. E então há o arquivo principal `skill.md` em Markdown.</p>
 <p>O `skill.md` deve ser tratado como o orquestrador de toda a operação. Como em uma orquestra, o maestro não é a pessoa fazendo a música — o maestro está orquestrando a produção de música de uma variedade de outras fontes. Dentro da pasta `scripts/`, temos os músicos reais — os violinistas, os celistas, os pianistas. O `skill.md` dá uma grande checklist de tarefas, fornece todas as informações de referência e tudo que o Claude precisa. E trata-o exatamente como um funcionário júnior: &ldquo;aqui está o checklist, vá fazer&rdquo;.</p>
@@ -377,7 +377,7 @@
 <p>O bom das skills é que não precisam ser perfeitas da primeira vez. Não são como um programa onde se monta algo e, no segundo que comete um erro, está acabado. É like um agente inteligente que, quando encontra um erro — como um problema com espaços em nomes de arquivo durante um upload para o Google Sheets —, percebe o problema, vai ler a documentação relevante, e corrige automaticamente. Esse loop de tentar e retestar é o que o Claude faz muito bem.</p>
 </section>
 <section>
-<h2 id="s23">SKILL EM AÇÃO — GERAÇÃO DE WEBSITES PARA DENTISTAS</h2>
+<h2 id="s23">SKILL EM AÇÃO — GERAÇÃO DE WEBSITES PARA DENTISTAS <span class="ts-mark" aria-label="Momento no vídeo">55:18</span></h2>
 <p>Um exemplo prático mais avançado de skill é a criação de websites customizados para diferentes negócios a partir de uma planilha de leads. Imagine que se tem uma planilha com 1.000 dentistas nos Estados Unidos, cada um com nome da clínica, telefone, endereço, especialidades. O objetivo é gerar um website personalizado para cada dentista em poucos segundos.</p>
 <p>A skill de geração de websites funciona assim: ela recebe uma linha da planilha com as informações da clínica. Com essas informações, faz uma pesquisa sobre a clínica (usando o Chrome DevTools MCP para navegar e colher informações). Então gera um HTML de página única com: nome da clínica, serviços oferecidos, foto de equipe (via Unsplash ou similar), informações de contato, call-to-action para agendamento, estilo visual limpo e profissional.</p>
 <p>Durante a demonstração, a skill gerou um site para uma clínica em cerca de 30 segundos. Com 10 subagentes executando em paralelo, o tempo por website cai para cerca de 3 segundos. Para uma lista de 10.000 leads: 10.000 × 3 segundos = 30.000 segundos = aproximadamente 8 horas de geração completamente automatizada.</p>
@@ -385,7 +385,7 @@
 <p>O que é realmente interessante é que, ao combinar a skill de scraping de leads com a skill de geração de websites e outra skill que automatiza a criação de campanhas no Instantly (plataforma de cold email), se constrói um sistema de crescimento quase completamente automatizado.</p>
 </section>
 <section>
-<h2 id="s24">MODEL CONTEXT PROTOCOL (MCP) — EXTENSÕES PARA O CLAUDE CODE</h2>
+<h2 id="s24">MODEL CONTEXT PROTOCOL (MCP) — EXTENSÕES PARA O CLAUDE CODE <span class="ts-mark" aria-label="Momento no vídeo">56:38</span></h2>
 <p>Agora que se entende como skills funcionam — que são basicamente funções de backend que podem executar scripts, quase como programas que usam a inteligência flexível da IA e o rigor procedural de scripts Python para fazer a mesma coisa sempre, mas com a flexibilidade de tratar erros —, é hora de falar sobre Model Context Protocol.</p>
 <p>A forma de ver o MCP é: são skills, exceto que outras pessoas fazem as skills por você. Na maioria das vezes, são equipes de desenvolvedores. A ideia é muito parecida — basicamente está se dando ao agente acesso a uma parte de software. E então, da mesma forma que ele chama suas próprias ferramentas, como web search e bash e Chrome DevTools, MCP e screenshot, tudo que já foi visto — o que se está fazendo é simplesmente chamar as ferramentas, mas outra pessoa é responsável por montá-las.</p>
 <p>Isso leva à pergunta óbvia: onde encontrar MCPs? Há sites como `mcpservers.org`, `github.com/modelcontextprotocol/servers` e `mcp.market`. Vale saber que nem todos vão ser 100% seguros ou confiáveis. São bibliotecas de terceiros que pessoas estão montando. Mas muitos desses são bem vetados nesse ponto. O importante é preferir os mais populares e revisados pela comunidade.</p>
@@ -395,7 +395,7 @@
 <p>Quando se precisa de um MCP que requer autenticação — como o Gmail MCP ou o ClickUp MCP —, o Claude vai solicitar a criação ou colagem de uma chave de API ou token de autenticação. O processo varia por serviço, mas geralmente envolve: ir às configurações do serviço, gerar um token de API, colá-lo no Claude quando solicitado, e então reiniciar a sessão do Claude Code.</p>
 </section>
 <section>
-<h2 id="s25">MCP NA PRÁTICA — GMAIL, CLICKUP E GESTÃO DE CONTEXTO</h2>
+<h2 id="s25">MCP NA PRÁTICA — GMAIL, CLICKUP E GESTÃO DE CONTEXTO <span class="ts-mark" aria-label="Momento no vídeo">58:23</span></h2>
 <p>O overhead de tokens do MCP é uma consideração importante. Ao usar o `/context` após instalar o MCP do ClickUp, pode-se ver que o overhead é significativo. A ferramenta &ldquo;ClickUp search&rdquo; consome 1.600 tokens. &ldquo;Get workspace hierarchy&rdquo; consome 419. E assim por diante. Se somarmos tudo, as ferramentas MCP do ClickUp estão consumindo quase 20.000 tokens. Isso é mais do que as system tools padrão!</p>
 <p>O que isso significa é que logo de cara, antes de enviar qualquer mensagem, já se está em algo como 35.000 tokens ou mais. Levando em conta o system prompt também, se está em 40.000. Contando arquivos de memória e skills, se está perto de 45.000. E isso é tudo antes de enviar uma única mensagem. Dado que a janela de contexto é 200.000 tokens, isso representa 22,5% da janela de contexto totalmente consumida antes de qualquer trabalho real.</p>
 <p>Em contraste, ao comparar com as skills, vê-se que &ldquo;scrape-leads&rdquo; consome apenas 63 tokens. &ldquo;School monitor&rdquo; consome 59. &ldquo;Cross niche outliers&rdquo; consome 58. Um único tool do MCP do ClickUp como &ldquo;update_task&rdquo; consome mais do que praticamente todas as skills combinadas. É como... por que diabos usaria ferramentas MCP se posso fazer uma skill?</p>
@@ -404,7 +404,7 @@
 <p>A experiência prática da demonstração com o Gmail MCP mostra isso bem. Usando o MCP do Gmail para organizar emails com labels, o processo funcionou mas levou 36 segundos para 100 emails. Após converter para uma skill com chamadas diretas à API do Gmail, o mesmo processo levou apenas 3,6 segundos para 100 emails — 10 vezes mais rápido — e consumiu uma fração dos tokens.</p>
 </section>
 <section>
-<h2 id="s26">PLUGINS DO CLAUDE CODE — VISÃO GERAL E MARKETPLACE</h2>
+<h2 id="s26">PLUGINS DO CLAUDE CODE — VISÃO GERAL E MARKETPLACE <span class="ts-mark" aria-label="Momento no vídeo">1:00:19</span></h2>
 <p>Os plugins do Claude Code são extensões que adicionam funcionalidades específicas à experiência de uso. Para acessar, usar &ldquo;Customize and Manage Plugins&rdquo; no menu do Claude Code.</p>
 <p>O único plugin instalado na demonstração é o &ldquo;claude-mem&rdquo; para macOS. É um plugin simples que basicamente adiciona todas as mensagens enviadas a qualquer instância do Claude a algum arquivo de memória, e então o Claude pode executar buscas sobre isso. Se perguntar &ldquo;o que eu perguntei há duas semanas?&rdquo;, pode responder. É marginalmente útil.</p>
 <p>O marketplace oficial fica em `github.com/anthropics/claude-code-plugins`. Alguns plugins disponíveis da Anthropic incluem: frontend design (que segundo eles melhora a qualidade do design — pessoalmente o instrutor considera o fluxo de screenshot de referência superior), Context7 (que permite buscar documentação de qualquer API de forma compacta e eficiente em tokens), Agent SDK Dev, e Code Review.</p>
@@ -412,7 +412,7 @@
 <p>A realidade é que o Claude Code vanilla funciona muito bem sem nenhum tipo de extensão ou plugin no momento. Mas conhecer o que existe é valioso. E a tendência é que as funcionalidades de plugins sejam gradualmente absorvidas pelo sistema de skills, que é mais flexível. Portanto, não se apoia muito neles.</p>
 </section>
 <section>
-<h2 id="s27">SUBAGENTES — PARALELISMO, ISOLAMENTO DE CONTEXTO E ARQUITETURA</h2>
+<h2 id="s27">SUBAGENTES — PARALELISMO, ISOLAMENTO DE CONTEXTO E ARQUITETURA <span class="ts-mark" aria-label="Momento no vídeo">1:01:39</span></h2>
 <p>Os subagentes não são necessariamente uma solução mágica. Com eles é possível fazer mais ou menos tudo que se poderia fazer com um agente normal simples. Mas subagentes aceleram as coisas um pouco e permitem paralelizar o workflow, o que pode ser muito útil em circunstâncias específicas.</p>
 <p>Um problema importante que as pessoas têm atualmente com subagentes é que eles consomem muitos tokens. E, ao fazer isso, também podem custar bastante, especialmente quando se vai para agent teams, que no momento desta gravação custam cerca de sete vezes mais tokens do que simplesmente usar um único thread do Claude, como foi feito ao longo deste curso. Mas subagentes ainda são bastante úteis de se conhecer.</p>
 <p>A lógica dos subagentes é baseada no isolamento de contexto. Quando um subagente é criado, ele começa com seu próprio contexto — não tem memória do agente pai, exceto pelo que é passado na instrução inicial. O único texto dentro do prompt do subagente é algo como &ldquo;o usuário quer saber o horário atual, por favor determine o horário e reporte de volta&rdquo;. E esse é basicamente o claude.md completo do subagente.</p>
@@ -423,7 +423,7 @@
 <p>O QA/testing sub-agent: em vez de poluir o contexto do agente principal com testes automatizados, um subagente executa os testes e retorna apenas os resultados. Para design é fácil — basta um screenshot. Para desenvolvimento de backend, é necessário determinar se a coisa que foi dita que deveria funcionar está realmente acontecendo.</p>
 </section>
 <section>
-<h2 id="s28">SUBAGENTES NA PRÁTICA — PARALELIZAÇÃO DE CLASSIFICAÇÃO DE EMAILS</h2>
+<h2 id="s28">SUBAGENTES NA PRÁTICA — PARALELIZAÇÃO DE CLASSIFICAÇÃO DE EMAILS <span class="ts-mark" aria-label="Momento no vídeo">1:03:54</span></h2>
 <p>Para demonstrar o poder real dos subagentes, o exemplo de classificação de emails é expandido de 100 emails para 1.000 emails usando 10 subagentes em paralelo.</p>
 <p>O prompt enviado ao Claude é: &ldquo;Gostaria de converter este fluxo de gmail-label em um subagente. Motivo: quero paralelizar o trabalho. Em vez de levar 36 segundos para buscar, classificar e rotular 100 emails, quero que seja possível criar 10 subagentes que façam tudo isso simultaneamente e então retornem os resultados. Gostaria de fazer isso usando a especificação de subagentes. Se não souber o que é isso, faça uma pequena pesquisa sobre subagentes — é um recurso da Anthropic e do Claude Code bem suportado pela estrutura atual do workspace. Uma vez construído o subagente usando sonnet-4.5, quero que o implante como teste e me mostre o quão mais rápido é com algum tipo de instrumentação de tempo&rdquo;.</p>
 <p>Ao abrir a aba de thinking, o Claude vai primeiro pesquisar subagentes e então construir um fluxo de gmail-label paralelizado que cria múltiplos subagentes para classificar emails simultaneamente. Vai usar sonnet-4.5 porque pode carregar muito mais contexto e processar todos os emails de forma mais eficiente.</p>
@@ -434,7 +434,7 @@
 <p>A consideração estatística é importante: se cada subagente tem 95% de chance de completar corretamente, e se rodam 10 em paralelo, a probabilidade de todos completarem corretamente é 0,95 elevado a 10 — cerca de 59%. Com 50 subagentes, cai para 7%. Por isso: manter as instruções dos subagentes simples e focadas, delegar tarefas atômicas e bem definidas, e deixar o agente principal fazer a síntese. Quanto mais simples a tarefa do subagente, maior a probabilidade individual de sucesso.</p>
 </section>
 <section>
-<h2 id="s29">AGENT TEAMS — TIMES COMPLETAMENTE AUTÔNOMOS DE AGENTES</h2>
+<h2 id="s29">AGENT TEAMS — TIMES COMPLETAMENTE AUTÔNOMOS DE AGENTES <span class="ts-mark" aria-label="Momento no vídeo">1:06:13</span></h2>
 <p>Os agent teams diferem dos subagentes de uma forma fundamental: enquanto subagentes são instâncias com contexto limitado que retornam resultados ao pai, os agent teams são instâncias completas do Claude Code — cada uma com seu próprio contexto completo, claude.md, MCPs e skills — que trabalham de forma independente e podem se comunicar uns com os outros.</p>
 <p>A analogia organizacional é precisa: há um agente líder (team lead) que coordena o trabalho, e múltiplos agentes membros que executam tarefas. Os membros podem reportar ao líder e também se comunicar diretamente entre si via um scratchpad JSON compartilhado — uma espécie de mini-fórum ou quadro de mensagens interno. Eles publicam tarefas nas quais estão trabalhando. Se têm perguntas, perguntam a pessoas específicas responsáveis por aquelas coisas. Isso pode economizar tempo significativo para cada agente individual.</p>
 <p>Sub-agentes: possuem o contexto inteiro, os resultados retornam para o agente que os chamou. Agent teams: possuem o contexto completamente, são totalmente independentes, e não precisam retornar resultados de volta ao chamador — teams podem se comunicar entre si.</p>
@@ -448,7 +448,7 @@
 <p>Uma diferença importante em relação a subagentes: como cada membro do team é uma instância completa do Claude Code, cada um pode usar seu próprio claude.md, MCPs e skills. Se houver um claude.md no workspace, todos os três membros do time terão acesso a ele. Isso permite que cada membro execute com o contexto completo de conhecimento do projeto.</p>
 </section>
 <section>
-<h2 id="s30">AGENT TEAMS NA PRÁTICA — WEBSITES E ANÁLISE DE SEGURANÇA</h2>
+<h2 id="s30">AGENT TEAMS NA PRÁTICA — WEBSITES E ANÁLISE DE SEGURANÇA <span class="ts-mark" aria-label="Momento no vídeo">1:08:14</span></h2>
 <p>Um primeiro exemplo simples de agent team é gerar três websites fundamentalmente diferentes em paralelo para comparar. O prompt: &ldquo;Estou projetando um site pessoal para Nick Sarayev, crie três agentes usando um team e crie três designs fundamentalmente diferentes, abra todos os três quando terminar, e eu vou comparar, contrastar e dar feedback. Certifique-se de que eles saibam tudo que há para saber sobre mim para que ninguém fique esperando por informações.&rdquo;</p>
 <p>Ao executar, o agente pai executa o que é chamado de &ldquo;Design Minimalist&rdquo;, &ldquo;Design Dark&rdquo; e &ldquo;Design Warm&rdquo; em paralelo. Para usar o terminal nesse contexto, que tem UX bem melhor para agent teams que a GUI, é possível fazer Shift+Seta para cima/baixo para alternar entre os agentes ativos e ver o que cada um está fazendo.</p>
 <p>Cada agente cria seu próprio website de forma independente. Quando todos terminam, os três são apresentados. Então escolhe-se o favorito e pede-se mais iterações: &ldquo;Eu realmente gostei da opção de narrativa quente. Ficou ótimo. Gostaria que agora rodasse mais três agentes. Primeiro quero que você faça pesquisa sobre princípios de design eficazes e princípios de copywriting que convertem. Uma vez feito, quero que rode um monte de agentes para iterar sobre este design e criar suas próprias versões.&rdquo;</p>
@@ -459,7 +459,7 @@
 <p>A lição principal: agent teams são como uma arma nuclear — extremamente poderosos, mas apontados diretamente para sua carteira se não forem usados com cuidado. Defina limites de gastos antes de rodar operações de grande escala.</p>
 </section>
 <section>
-<h2 id="s31">GIT WORKTREES — DESENVOLVIMENTO PARALELO SEM CONFLITOS</h2>
+<h2 id="s31">GIT WORKTREES — DESENVOLVIMENTO PARALELO SEM CONFLITOS <span class="ts-mark" aria-label="Momento no vídeo">1:10:38</span></h2>
 <p>Os Git worktrees eram basicamente o que agent teams são hoje. Essencialmente, é possível ter múltiplos agentes rodando em seus próprios &ldquo;worktrees&rdquo; individuais do GitHub — basicamente branches individuais do Git. E ao fazer isso, esses agentes podem todos trabalhar em features individuais que lhes permitem fazer o que precisam antes de eventualmente fazer o merge de volta ao branch principal.</p>
 <p>Para visualizar isso: começa-se com um job no `main` — o branch principal. E então há algum bug. Então cria-se um branch chamado `hotfix`. Isso é dado a um agente diferente. Há outro branch chamado `develop` que é dado a outro agente. E finalmente um branch chamado `feature` dado a um terceiro agente. Basicamente o que ocorre é que se tem um agente estendendo este branch, outro estendendo aquele branch, outro aquele, e então um estendendo o último. E cada um passa pelo seu próprio processo de desenvolvimento. E quando terminam, o que fazem é mesclar os resultados de volta ao branch main.</p>
 <p>Para quem não está muito familiarizado com programação, a ideia de &ldquo;merge&rdquo; pode ser difícil de entender. Mas basicamente cada branch armazena uma cópia da pasta, e essa pasta mestre é basicamente a mesma coisa que esta nova pasta de feature com apenas algumas diferenças menores — geralmente a própria nova feature. Então ao fazer o merge, o que se está fazendo é tabelar uma lista de todas as mudanças entre esses dois, e então pegar as novas mudanças do novo branch de feature e aplicá-las ao branch master. Esse processo de merge pode tipicamente ser bastante bagunçado, e ter agentes por perto para mediar os merges pode ser bastante útil.</p>
@@ -469,7 +469,7 @@
 <p>O resultado são três novas páginas (sobre, contato, serviços) desenvolvidas em paralelo, cada uma no próprio branch, e depois mergeadas limpa e automaticamente ao projeto principal.</p>
 </section>
 <section>
-<h2 id="s32">HOOKS — AUTOMATIZANDO COMPORTAMENTOS BASEADOS EM EVENTOS</h2>
+<h2 id="s32">HOOKS — AUTOMATIZANDO COMPORTAMENTOS BASEADOS EM EVENTOS <span class="ts-mark" aria-label="Momento no vídeo">1:13:00</span></h2>
 <p>Os hooks são scripts customizados que disparam automaticamente antes ou depois de qualquer tool call do Claude Code. São configurados no arquivo `settings.json` dentro do diretório `.claude` do projeto.</p>
 <p>O caso de uso mais simples e prático é um som de notificação. Quando se tem múltiplas instâncias do Claude Code abertas ao mesmo tempo e se está fazendo outras coisas enquanto espera que as instâncias terminem suas tarefas, é muito útil receber um sinal quando cada instância termina. Um hook que toca um som ao final de cada execução resolve isso perfeitamente.</p>
 <p>Pode-se definir sons diferentes para diferentes janelas. Quando o som 1 toca, sabe-se que a janela do canto superior esquerdo está pedindo mais instruções. Quando o som 2 toca, é hora de verificar outra instância. Isso elimina a necessidade de ficar monitorando constantemente todas as telas abertas.</p>
@@ -478,7 +478,7 @@
 <p>Para criar hooks, a forma mais fácil é simplesmente descrever ao Claude Code o comportamento que se quer e pedir que configure o `settings.json` automaticamente. Por exemplo: &ldquo;Configure um hook que toca um som de notificação sempre que o Claude termina de executar uma tarefa e está esperando por mais instruções&rdquo;. O Claude vai criar e configurar o hook appropriadamente.</p>
 </section>
 <section>
-<h2 id="s33">DEPLOY E PRODUÇÃO COM NETLIFY E MODAL</h2>
+<h2 id="s33">DEPLOY E PRODUÇÃO COM NETLIFY E MODAL <span class="ts-mark" aria-label="Momento no vídeo">1:15:05</span></h2>
 <p>Construir localmente é apenas o primeiro passo. Colocar o que foi construído acessível via internet — para si mesmo, para a equipe ou para clientes — é o segundo passo.</p>
 <p>Para sites estáticos (HTML/CSS/JS sem backend), o Netlify é a ferramenta mais simples. A implantação leva literalmente alguns minutos: conecte o repositório GitHub ao Netlify, configure o diretório de build e o site fica disponível em uma URL pública. O plano gratuito é suficiente para a maioria dos casos de uso pessoais e de pequenas equipes. As variáveis de ambiente (como chaves de API) são configuradas nas definições do site no Netlify.</p>
 <p>Para backends, APIs e scripts Python que precisam ficar acessíveis via URL, o Modal é a ferramenta recomendada. O Modal é descrito como &ldquo;infraestrutura de IA que desenvolvedores adoram&rdquo; — a proposta é implantar qualquer função Python como um endpoint web em segundos.</p>
@@ -489,7 +489,7 @@
 <p>Para integrações com plataformas no-code como n8n, Make.com, Zapier e Lindy, os endpoints criados no Modal funcionam como webhooks padrão. Qualquer plataforma que suporte webhooks pode disparar e receber dados de automações construídas com Claude Code. Isso cria uma ponte entre o poder do Claude Code e a facilidade de uso de plataformas no-code.</p>
 </section>
 <section>
-<h2 id="s34">CHROME DEVTOOLS MCP — O MCP MAIS PODEROSO</h2>
+<h2 id="s34">CHROME DEVTOOLS MCP — O MCP MAIS PODEROSO <span class="ts-mark" aria-label="Momento no vídeo">1:15:55</span></h2>
 <p>O Chrome DevTools MCP é o MCP mais valioso disponível atualmente e é usado constantemente — praticamente todo dia. Ele permite que o agente de código controle e inspecione um navegador Chrome ao vivo.</p>
 <p>A diferença entre o Chrome DevTools MCP e a capacidade embutida de controle de browser do Claude é enorme em termos de velocidade e versatilidade. O MCP é cerca de 100 vezes mais rápido. Não só isso, mas porque pode ser integrado em cenários baseados em skills, é possível executar coisas altamente procedurais no navegador que antes levariam muito tempo para automatizar.</p>
 <p>Para instalar, basta encontrar o JSON de configuração do repositório oficial do Chrome DevTools MCP, colá-lo no Claude Code e pedir para instalar no workspace local. É necessário abrir uma nova instância do Claude Code após a instalação para que as ferramentas sejam reconhecidas.</p>
@@ -499,7 +499,7 @@
 <p>A combinação do Chrome DevTools MCP com skills cria automações de browser extremamente poderosas que seriam impossíveis sem essa integração. É essencialmente uma API para qualquer site que não tenha uma — uma capacidade extraordinária para automações de negócios.</p>
 </section>
 <section>
-<h2 id="s35">LINHA DE STATUS E PERSONALIZAÇÃO DO TERMINAL</h2>
+<h2 id="s35">LINHA DE STATUS E PERSONALIZAÇÃO DO TERMINAL <span class="ts-mark" aria-label="Momento no vídeo">1:18:29</span></h2>
 <p>Uma das vantagens de usar o Claude Code no terminal em vez da GUI é a capacidade de personalização muito maior. A linha de status — aquela barra de informações que aparece abaixo do prompt no terminal — pode ser completamente customizada.</p>
 <p>Para configurar a linha de status, usar o comando `/status-line` no terminal (não disponível na versão GUI). O Claude vai perguntar o que se quer exibir. Uma opção popular é uma barra de carregamento mostrando a porcentagem de tokens usados do contexto total, o modelo atual e o branch Git em uso.</p>
 <p>Para ter algo útil, pode-se pedir ao Claude algo como &ldquo;atualize minha linha de status para que inclua uma barra de carregamento mostrando quantos tokens foram usados do contexto total&rdquo;. O Claude vai converter isso em um prompt de configuração usando um agente de configuração de linha de status, e depois exibirá algo como &ldquo;13% █░░░░░░░░░ claude-opus-4-6 (main)&rdquo;.</p>
@@ -508,7 +508,7 @@
 <p>Para customizar os termos divertidos que o Claude usa quando está pensando — como &ldquo;finagling&rdquo;, &ldquo;processing&rdquo;, &ldquo;considering&rdquo; —, também é possível modificar isso nas configurações. Isso pode ser feito via o settings.json, onde é possível definir termos customizados de processamento que são exibidos durante as operações.</p>
 </section>
 <section>
-<h2 id="s36">GERENCIAMENTO AVANÇADO DE CONTEXTO E COMPACTAÇÃO</h2>
+<h2 id="s36">GERENCIAMENTO AVANÇADO DE CONTEXTO E COMPACTAÇÃO <span class="ts-mark" aria-label="Momento no vídeo">1:19:48</span></h2>
 <p>Um dos maiores desafios ao trabalhar com o Claude Code em sessões longas é a degradação do contexto — o famoso &ldquo;context rot&rdquo;. À medida que uma conversa cresce, os tokens mais antigos têm menos influência, e o modelo começa a perder o fio das instruções e decisões anteriores. Gerenciar esse contexto de forma proativa é uma das habilidades mais valiosas que um usuário avançado pode desenvolver.</p>
 <p>A ferramenta principal para isso é o comando `/compact`. Quando você executa `/compact`, o Claude pega todo o histórico da conversa — cada mensagem, cada tool call, cada resultado — e comprime tudo em um resumo de alta densidade informacional. O que era milhares de tokens vira alguns centenas de tokens muito densos e bem organizados. O Claude é notavelmente bom em não perder informações críticas durante esse processo.</p>
 <p>O que é interessante é que o próprio Claude Code explica o que aconteceu após uma compactação. Ao perguntar ao Claude logo depois de compactar &ldquo;me diga o que está disponível no seu contexto agora&rdquo;, ele vai descrever cronologicamente o que foi preservado: &ldquo;O usuário abriu esse projeto, pediu isso, depois pediu aquilo, depois...&rdquo; — e isso vai ser bem mais curto do que a conversa original, tipicamente 3 a 4 vezes menos tokens.</p>
@@ -523,7 +523,7 @@
 <p>O overhead dos servidores MCP é outro fator crítico. Alguns servidores MCP têm dezenas ou centenas de ferramentas, e apenas carregar as descrições dessas ferramentas pode consumir 20.000 tokens ou mais. O Claude Code tem um mecanismo de busca automática de ferramentas (automatic tool search) que entra em ação quando as descrições de ferramentas MCP excedem 10% da janela de contexto. Em vez de carregar tudo, o Claude primeiro busca qual ferramenta precisa usando uma ferramenta de busca interna, e só então carrega essa ferramenta específica. Mas a melhor estratégia ainda é ser seletivo sobre quais MCPs você mantém ativos.</p>
 </section>
 <section>
-<h2 id="s37">SKILLS — A FERRAMENTA MAIS ECONOMICAMENTE VALIOSA</h2>
+<h2 id="s37">SKILLS — A FERRAMENTA MAIS ECONOMICAMENTE VALIOSA <span class="ts-mark" aria-label="Momento no vídeo">1:23:14</span></h2>
 <p>Skills são provavelmente o recurso mais economicamente valioso do Claude Code. A ideia é simples: qualquer processo repetitivo que você executa regularmente pode ser transformado em um &ldquo;checklist de IA&rdquo; que o Claude segue automaticamente. Em vez de explicar o processo do zero toda vez, você o documenta uma vez e depois simplesmente diz &ldquo;execute a skill X&rdquo;.</p>
 <p>A pasta `.claude/skills/` contém todas as suas skills. Cada skill é uma subpasta com dois componentes principais: um arquivo `skill.md` que atua como o orquestrador (o checklist de passos), e uma pasta `scripts/` com os programas Python ou outras ferramentas que executam tarefas específicas.</p>
 <p>A melhor analogia é uma orquestra. O `skill.md` é o maestro — não é quem toca os instrumentos, mas quem coordena todos os músicos. Dentro de `scripts/`, temos os músicos: violinistas, pianistas, cellistas. O maestro diz quando cada um entra e o que tocar, mas a execução técnica fica com os scripts especializados.</p>
@@ -539,7 +539,7 @@
 <p>A recomendação geral é: se você faz algo repetidamente, transforme em uma skill. Se você contrataria alguém para fazer essa tarefa, transforme em uma skill. O ROI (retorno sobre o investimento) de tempo para criar uma skill é altíssimo — você gasta talvez uma hora criando a skill e economiza horas toda semana a partir daí.</p>
 </section>
 <section>
-<h2 id="s38">MODEL CONTEXT PROTOCOL — MCP NA PRÁTICA</h2>
+<h2 id="s38">MODEL CONTEXT PROTOCOL — MCP NA PRÁTICA <span class="ts-mark" aria-label="Momento no vídeo">1:29:24</span></h2>
 <p>MCP (Model Context Protocol) é essencialmente o que skills são, mas criados por outras pessoas. Enquanto skills são automações que você mesmo constrói e mantém, MCPs são ferramentas desenvolvidas por equipes de desenvolvedores ou empresas que você simplesmente instala e usa. A analogia é direta: skills são como contratar um freelancer para fazer algo customizado para você; MCPs são como usar um SaaS pronto.</p>
 <p>Para descobrir MCPs disponíveis, existem alguns repositórios e diretórios centrais. Os principais são mcpservers.org, o repositório oficial model-context-protocol/servers no GitHub, e o MCP Market. É importante saber que nem todos esses MCPs são 100% seguros — são bibliotecas de terceiros, então é prudente verificar a reputação e o número de usuários antes de instalar qualquer um.</p>
 <p>Para instalar um MCP, o processo é simples. Cada MCP disponibiliza um JSON de configuração que se parece com:</p>
@@ -565,7 +565,7 @@
 <p>Para MCPs que requerem autenticação (como Gmail, Google Drive, Notion), você precisará fornecer credenciais de OAuth ou API keys. O fluxo geralmente é: o Claude detecta que precisa de autenticação, fornece uma URL para você autorizar o acesso, você autoriza, e o Claude salva as credenciais criptografadas localmente. A partir daí, o MCP funciona transparentemente.</p>
 </section>
 <section>
-<h2 id="s39">GMAIL MCP E CONSTRUÇÃO DA SKILL DE LABELS</h2>
+<h2 id="s39">GMAIL MCP E CONSTRUÇÃO DA SKILL DE LABELS <span class="ts-mark" aria-label="Momento no vídeo">1:36:58</span></h2>
 <p>O processo de transformar um MCP em uma skill — passando de protótipo para produção — fica muito claro no exemplo do Gmail MCP. O objetivo era organizar uma caixa de entrada com labels, e o caminho foi: primeiro provar que é possível com o MCP, depois construir uma solução mais eficiente como skill.</p>
 <p>A primeira etapa foi pedir ao Claude para sugerir um esquema de labels de alto ROI para uma caixa pessoal. Com o raciocínio (thinking) ativado, o Claude propõe três categorias principais: &ldquo;Action Required&rdquo; (requer ação), &ldquo;Reference&rdquo; (material de referência) e &ldquo;Waiting On&rdquo; (aguardando resposta de terceiros). Simples, prático, aplicável a quase qualquer caixa de entrada.</p>
 <p>Para instalar o Gmail MCP: buscar um repositório de Gmail MCP bem avaliado no GitHub, copiar o JSON de configuração, fornecer as credenciais OAuth (o Claude orienta o processo completo de geração de credenciais no Google Cloud Console), e instalar no workspace local. Após reiniciar o Claude Code, as ferramentas do Gmail ficam disponíveis.</p>
@@ -579,7 +579,7 @@
 <p>As possibilidades além de labels são enormes: responder automaticamente a certos tipos de emails (newsletters, notificações automáticas), priorizar emails de contatos importantes, extrair tarefas de emails e criar no ClickUp, arquivar automaticamente por categoria de assunto. Com a API do Gmail diretamente disponível via skill, qualquer automação é possível.</p>
 </section>
 <section>
-<h2 id="s40">PLUGINS DO CLAUDE CODE</h2>
+<h2 id="s40">PLUGINS DO CLAUDE CODE <span class="ts-mark" aria-label="Momento no vídeo">1:39:10</span></h2>
 <p>Os plugins do Claude Code são outra camada de extensibilidade, embora atualmente menos utilizados do que skills e MCPs. A forma mais simples de acessar plugins é ir em &ldquo;Customize&rdquo; > &ldquo;Manage plugins&rdquo; na interface do Claude Code.</p>
 <p>O único plugin instalado por padrão na configuração demonstrada é o &ldquo;claude-mem&rdquo; — um plugin simples que registra todas as mensagens enviadas em qualquer instância do Claude em um arquivo de memória, e permite ao Claude buscar nessas mensagens depois. Isso cria uma espécie de memória de longo prazo manual: &ldquo;o que eu perguntei há duas semanas?&rdquo;.</p>
 <p>A Anthropic tem seu próprio diretório de plugins em um repositório chamado &ldquo;claude-plugins-official&rdquo;. Alguns exemplos notáveis incluem:</p>
@@ -591,7 +591,7 @@
 <p>O Claude Code &ldquo;vanilla&rdquo; (sem plugins, MCPs ou skills customizadas) já é extremamente capaz para a maioria das tarefas. Plugins, MCPs e skills são multiplicadores de capacidade para casos de uso específicos, não requisitos para começar a trabalhar produtivamente.</p>
 </section>
 <section>
-<h2 id="s41">SUB-AGENTES — PARALELIZAÇÃO NA PRÁTICA</h2>
+<h2 id="s41">SUB-AGENTES — PARALELIZAÇÃO NA PRÁTICA <span class="ts-mark" aria-label="Momento no vídeo">1:40:20</span></h2>
 <p>Sub-agentes não são uma solução mágica nem uma revolução na forma de trabalhar. São uma ferramenta específica para um problema específico: quando você tem tarefas que podem ser executadas simultaneamente e independentemente, sub-agentes permitem que isso aconteça. Para a maioria das tarefas do dia-a-dia, um agente único é mais eficiente e suficiente.</p>
 <p>Um sub-agente é essencialmente uma instância separada do Claude, iniciada pelo agente pai para executar uma tarefa específica. O sub-agente tem sua própria janela de contexto isolada — ele só sabe o que o agente pai lhe contou. Quando termina, retorna os resultados para o agente pai, e seu contexto é descartado. É efêmero por design.</p>
 <p>A forma mais simples de entender sub-agentes é pensar na diferença entre trabalho serial e paralelo. No trabalho serial, se você tem três tarefas que levam 1 minuto cada, você espera 3 minutos no total. Com três sub-agentes rodando em paralelo, você espera 1 minuto no total — porque todos os três trabalham ao mesmo tempo. Esse é o valor central dos sub-agentes.</p>
@@ -609,7 +609,7 @@
 <p>A recomendação final sobre sub-agentes: use-os quando o paralelismo realmente importa (grandes volumes de dados, múltiplas pesquisas independentes, geração de múltiplos outputs simultâneos). Não use para tarefas simples onde o overhead de criar e gerenciar o sub-agente seria maior do que simplesmente fazer o agente pai executar diretamente. Um sub-agente para uma tarefa de 5 segundos não é eficiente — o tempo de inicialização do sub-agente pode ser comparável ao tempo da tarefa.</p>
 </section>
 <section>
-<h2 id="s42">AGENT TEAMS — PARALELIZAÇÃO EM ESCALA</h2>
+<h2 id="s42">AGENT TEAMS — PARALELIZAÇÃO EM ESCALA <span class="ts-mark" aria-label="Momento no vídeo">1:45:35</span></h2>
 <p>Agent Teams (equipes de agentes) é uma das funcionalidades mais comentadas e também mais mal compreendidas do Claude Code. Muitos vídeos no YouTube retratam agent teams como uma revolução que &ldquo;toma conta de toda a sua vida&rdquo; — essa é uma hipérbole. Agent teams são simplesmente sub-agentes com mais autonomia e capacidade de comunicação entre si.</p>
 <p>A diferença entre sub-agentes e agent teams é de nível hierárquico. Com sub-agentes, você tem um agente pai que spawna filhos, os filhos executam, retornam para o pai. Com agent teams, você tem um &ldquo;team lead&rdquo; agent que spawna outros agents que por sua vez podem spawnar seus próprios sub-agentes. Além disso, os agents do time podem comunicar diretamente entre si — não apenas reportar ao pai.</p>
 <p>Para visualizar a diferença: sub-agentes são como ter um gerente que delega para funcionários individuais. Agent teams são como ter uma empresa inteira operando em hierarquia, onde gerentes delegam para sub-gerentes que delegam para especialistas, e esses especialistas podem colaborar horizontalmente entre eles.</p>
@@ -634,7 +634,7 @@
 <p>A recomendação estratégica é reservar agent teams para situações onde: (a) você tem um grande volume de trabalho que pode ser paralelizado significativamente, (b) o custo em dinheiro é justificado pela economia de tempo, e (c) você precisa de iteração criativa rápida em múltiplas direções simultaneamente. Para desenvolvimento de software rotineiro, sub-agentes ou mesmo um único agente pai são mais eficientes.</p>
 </section>
 <section>
-<h2 id="s43">GIT WORKTREES — DESENVOLVIMENTO PARALELO SEM CONFLITOS</h2>
+<h2 id="s43">GIT WORKTREES — DESENVOLVIMENTO PARALELO SEM CONFLITOS <span class="ts-mark" aria-label="Momento no vídeo">1:45:38</span></h2>
 <p>Git Worktrees eram, antes do lançamento dos agent teams, a forma principal de parallelizar o trabalho de desenvolvimento com o Claude Code. E mesmo com agent teams disponíveis, worktrees ainda têm seu lugar — especialmente quando você precisa de isolamento total entre branches de desenvolvimento.</p>
 <p>A ideia central de git worktrees é simples: em vez de ter uma única pasta de projeto onde todos os agents trabalham (arriscando pisarem nos pés uns dos outros), você cria pastas separadas para cada branch de desenvolvimento. Cada pasta é uma cópia completa do projeto vinculada ao mesmo histórico git, mas trabalhando em um branch diferente. Os agents em cada pasta trabalham de forma completamente isolada.</p>
 <p>Para visualizar: você tem um repositório main com sua base de código. Você quer adicionar três novas páginas ao site — about, contact, e services. Em vez de um único agent trabalhar nas três páginas sequencialmente, você cria três worktrees:</p>
@@ -651,7 +651,7 @@
 <p>A diferença prática entre worktrees e agent teams para desenvolvimento paralelo é sutil mas importante: agent teams usam a infraestrutura do Claude Code para comunicação entre agents e compartilham o mesmo diretório de trabalho (com risco de conflitos). Git worktrees criam isolamento total no nível do sistema de arquivos, eliminando qualquer possibilidade de conflito. Para funcionalidades completamente independentes (como páginas separadas de um site), worktrees com agent teams ou sub-agentes são a combinação mais robusta.</p>
 </section>
 <section>
-<h2 id="s44">DEPLOY COM NETLIFY E MODAL — PUBLICANDO NA INTERNET</h2>
+<h2 id="s44">DEPLOY COM NETLIFY E MODAL — PUBLICANDO NA INTERNET <span class="ts-mark" aria-label="Momento no vídeo">1:46:54</span></h2>
 <p>Construir localmente é apenas metade do caminho. Para que o que você construiu seja utilizável por outros, por clientes, ou integrado em automações, precisa estar acessível na internet. O Claude Code facilita enormemente o processo de deploy graças a integrações com serviços modernos de hospedagem.</p>
 <p>Para sites estáticos (HTML, CSS, JavaScript sem backend), o Netlify é o serviço mais recomendado. O processo é simples ao ponto de ser quase instantâneo: conecte um repositório GitHub ao Netlify, configure qual pasta contém os arquivos do site, e em minutos o site está ao vivo em uma URL pública. O plano gratuito do Netlify é suficiente para a grande maioria dos casos de uso pessoais e de pequenas equipes.</p>
 <p>O fluxo completo com o Claude Code é: (1) construir o site localmente com o Claude; (2) criar um repositório no GitHub; (3) fazer push do código para o GitHub; (4) conectar o repositório ao Netlify; (5) o Netlify detecta automaticamente o tipo de projeto e faz o build; (6) a URL pública fica disponível. Passos 2 a 6 podem ser delegados completamente ao Claude Code.</p>
@@ -665,7 +665,7 @@
 <p>Um padrão de negócio valioso: construa a automação com Claude Code (que tem a inteligência para lidar com casos complexos), faça o deploy no Modal, e então conecte via webhook em uma plataforma no-code para orquestração de fluxo mais visual. Você obtém o melhor dos dois mundos: a inteligência do Claude Code e a facilidade de conexão do no-code.</p>
 </section>
 <section>
-<h2 id="s45">HOOKS — AUTOMAÇÃO DE EVENTOS E VALIDAÇÃO</h2>
+<h2 id="s45">HOOKS — AUTOMAÇÃO DE EVENTOS E VALIDAÇÃO <span class="ts-mark" aria-label="Momento no vídeo">1:51:59</span></h2>
 <p>Hooks são um recurso poderoso do Claude Code que permite executar scripts automaticamente em resposta a eventos específicos dentro do workflow do agente. São gatilhos: quando X acontece, execute Y automaticamente.</p>
 <p>Os quatro hooks principais do Claude Code são:</p>
 <p>**PreToolUse**: executado antes de qualquer tool call. Permite validar ou modificar o que o Claude está prestes a fazer. Por exemplo: antes de o Claude executar qualquer comando bash, verifique se o comando contém operações destrutivas (rm -rf, drop table) e bloqueie ou peça confirmação se contiver.</p>
@@ -698,7 +698,7 @@
 <p>A configuração de hooks pode ser local (no `settings.json` do workspace) ou global (no arquivo de configuração do usuário). Hooks locais são ideais para regras específicas do projeto; hooks globais para convenções pessoais que você quer em todos os projetos.</p>
 </section>
 <section>
-<h2 id="s46">SELEÇÃO DE MODELOS E EXTENDED THINKING</h2>
+<h2 id="s46">SELEÇÃO DE MODELOS E EXTENDED THINKING <span class="ts-mark" aria-label="Momento no vídeo">1:52:33</span></h2>
 <p>Uma das configurações mais impactantes no Claude Code é a escolha do modelo. O Claude Code suporta múltiplos modelos da Anthropic com diferentes capacidades, velocidades, e preços. Fazer a escolha certa pode significar a diferença entre uma sessão de trabalho eficiente e cara versus uma que seja mais lenta mas mais econômica.</p>
 <p>Para trocar de modelo, use o comando `/model` no Claude Code. Você verá uma lista dos modelos disponíveis. Os principais são:</p>
 <p>**Claude Opus** (o modelo mais capaz): maior inteligência, melhor raciocínio complexo, mais adequado para tarefas que exigem julgamento sofisticado. Também o mais caro por token. Ideal para: planejamento arquitetural, debugging de problemas complexos, tarefas criativas que exigem nuance.</p>
@@ -713,7 +713,7 @@
 <p>Para verificar qual modelo está sendo usado em qualquer momento, olhe para a linha de status no terminal (se configurada) — ela exibe o modelo atual continuamente. Alternativamente, use `/model` para ver e trocar.</p>
 </section>
 <section>
-<h2 id="s47">FLUXO DE TRABALHO COMPLETO — DO CONCEITO AO DEPLOY</h2>
+<h2 id="s47">FLUXO DE TRABALHO COMPLETO — DO CONCEITO AO DEPLOY <span class="ts-mark" aria-label="Momento no vídeo">1:54:55</span></h2>
 <p>Depois de aprender todos os componentes individuais, é útil ver como eles se encaixam em um fluxo de trabalho completo. Um projeto típico vai desde a ideia inicial até o produto funcionando na internet, e cada etapa pode ser assistida pelo Claude Code de formas específicas.</p>
 <p>**Fase 1: Exploração e Design (com screenshot loop)**</p>
 <p>O ponto de partida não é código — é visão. Use o loop de screenshots descrito anteriormente: abra sites de referência, tire screenshots, cole no Claude com a instrução &ldquo;quero algo com esse visual e sensação, mas para [meu caso de uso]&rdquo;. O Claude cria protótipos visuais rapidamente, você dá feedback visual, e em 5-10 iterações você tem um design que realmente agrada.</p>
@@ -732,7 +732,7 @@
 <p>Esse fluxo não é rígido — cada projeto tem suas particularidades. Mas entender os componentes e quando aplicar cada um é o que separa usuários básicos de usuários avançados do Claude Code. A chave é não tentar usar todos os recursos em todos os projetos: use o que o projeto realmente precisa, nada mais.</p>
 </section>
 <section>
-<h2 id="s48">CASOS DE USO DE NEGÓCIO E APLICAÇÕES PRÁTICAS</h2>
+<h2 id="s48">CASOS DE USO DE NEGÓCIO E APLICAÇÕES PRÁTICAS <span class="ts-mark" aria-label="Momento no vídeo">1:57:11</span></h2>
 <p>O valor do Claude Code vai muito além de programação. Para empreendedores, freelancers e profissionais que não são desenvolvedores, as possibilidades são extensas. A pergunta mais útil é: &ldquo;o que eu faço repetidamente que consome meu tempo e poderia ser automatizado?&rdquo;</p>
 <p>**Cold email e prospecção**: o fluxo completo de scraping de leads, enriquecimento, personalização de emails e upload para plataformas de cold email pode ser transformado em um sistema semi-automatizado. A skill de scraping coleta os leads. Uma segunda skill ou endpoint Modal enriquece com informações adicionais da empresa. Uma terceira faz a personalização do email com base nas características de cada lead. O resultado sai pronto para ser importado no Instantly, Lemlist, ou similar.</p>
 <p>**Pesquisa e análise**: para qualquer tarefa que envolva ler muito material e extrair insights — seja monitorar concorrentes, pesquisar um nicho antes de lançar um produto, ou preparar para uma reunião com um cliente potencial — a skill de literatura research ou um sub-agente de pesquisa pode fazer esse trabalho em minutos. Você define as fontes confiáveis, o Claude coleta e sintetiza.</p>
@@ -744,7 +744,7 @@
 <p>A mentalidade certa para identificar oportunidades de automação com Claude Code é: pense em termos de conhecimento que você tem e que poderia ser documentado como um checklist. Qualquer processo que você consegue explicar passo a passo para um assistente humano, você consegue transformar em uma skill. A grande vantagem é que a skill executa consistentemente, sem variação de qualidade entre diferentes dias ou diferentes executores.</p>
 </section>
 <section>
-<h2 id="s49">MODO PLANO E ESTRATÉGIA DE DESENVOLVIMENTO</h2>
+<h2 id="s49">MODO PLANO E ESTRATÉGIA DE DESENVOLVIMENTO <span class="ts-mark" aria-label="Momento no vídeo">1:59:14</span></h2>
 <p>O modo plano (plan mode) é um dos recursos mais subestimados do Claude Code para desenvolvimento de software. A ideia é simples: antes de escrever qualquer código, o Claude apresenta um plano detalhado do que vai fazer, e você aprova ou ajusta esse plano antes que qualquer mudança seja feita.</p>
 <p>Para ativar o modo plano, use a combinação de teclas Shift+Tab no terminal, ou escreva explicitamente &ldquo;use plan mode&rdquo; na instrução. No modo plano, o Claude está em um estado de leitura: ele pode ler arquivos, analisar o código-base, pesquisar informações, mas não faz nenhuma modificação até você aprovar.</p>
 <p>O output do modo plano é um documento estruturado que tipicamente inclui: (1) entendimento do problema; (2) arquivos que precisam ser modificados; (3) novos arquivos que serão criados; (4) a sequência de mudanças; (5) dependências e riscos potenciais. Para tarefas complexas, esse documento pode ter 10-20 itens detalhados.</p>
@@ -763,7 +763,7 @@
 <p>A proposta de projeto gerada pelo Claude pode ser usada diretamente como base para uma conversa com um cliente ou stakeholder. Com linguagem clara e estrutura profissional, ela comunica o que será construído, como, e por quê — sem exigir que o desenvolvedor (você) escreva esse documento manualmente.</p>
 </section>
 <section>
-<h2 id="s50">SEGURANÇA E MELHORES PRÁTICAS</h2>
+<h2 id="s50">SEGURANÇA E MELHORES PRÁTICAS <span class="ts-mark" aria-label="Momento no vídeo">2:01:44</span></h2>
 <p>Trabalhar com um agente que tem acesso a arquivos, terminal, browser e APIs externas exige atenção à segurança. Não é para deixar você paralisado, mas para usar o poder disponível de forma consciente e responsável.</p>
 <p>O princípio mais importante é o do menor privilégio: dê ao Claude apenas o acesso que ele realmente precisa para a tarefa em questão. Se está construindo um site estático, não é necessário ter MCPs de Gmail e ClickUp ativos — cada ferramenta adicional é uma superfície de risco adicional.</p>
 <p>Os modos de permissão oferecem controle granular:</p>
@@ -782,7 +782,7 @@
 <p>Logs e auditoria: para uso em negócios, considere configurar hooks que registrem todas as operações do Claude em um arquivo de log. Isso cria um registro de auditoria de tudo que foi feito, útil tanto para debugging quanto para compliance.</p>
 </section>
 <section>
-<h2 id="s51">RESUMO E PRÓXIMOS PASSOS</h2>
+<h2 id="s51">RESUMO E PRÓXIMOS PASSOS <span class="ts-mark" aria-label="Momento no vídeo">2:03:36</span></h2>
 <p>Este curso cobriu o Claude Code do zero ao avançado. Se você começou sem nenhum conhecimento de programação e acompanhou até aqui, agora tem todas as bases necessárias para começar a usar o Claude Code de forma produtiva para projetos pessoais, profissionais e de negócios.</p>
 <p>Os conceitos fundamentais que merecem ser revisitados e praticados:</p>
 <p>**Interface e configuração**: entender a diferença entre a GUI e o terminal, quando usar cada um, e como configurar o ambiente de desenvolvimento (VS Code, Cursor, ou qualquer IDE com integração ao Claude Code).</p>
@@ -799,7 +799,7 @@
 <p>Bom trabalho chegando até aqui. Agora é hora de construir.</p>
 </section>
 <section>
-<h2 id="s52">INSTALAÇÃO E CONFIGURAÇÃO INICIAL</h2>
+<h2 id="s52">INSTALAÇÃO E CONFIGURAÇÃO INICIAL <span class="ts-mark" aria-label="Momento no vídeo">2:05:28</span></h2>
 <p>Para começar a usar o Claude Code, o primeiro passo é ter uma conta na Anthropic com um plano pago. O Claude Code não está disponível no plano gratuito — é necessário o plano Pro ($17/mês nos EUA, aproximadamente $28 CAD) no mínimo. Para uso profissional intenso, os planos Pro, Max, Team ou Enterprise são todos adequados.</p>
 <p>Após criar a conta em claude.ai, a instalação do Claude Code no computador é feita via linha de comando. Na documentação oficial em code.anthropic.com/docs, você encontra o comando de instalação específico para cada sistema operacional. Para macOS/Linux, é um comando `curl` que você cola no terminal. Para Windows PowerShell ou CMD, há variantes específicas.</p>
 <p>O processo no macOS: abra o Terminal (pesquise &ldquo;Terminal&rdquo; no Spotlight ou Applications > Utilities), cole o comando de instalação, e pressione enter. A instalação demora alguns minutos. Quando concluída, o Claude Code está disponível globalmente no sistema — basta digitar `claude` em qualquer terminal para abrir.</p>
@@ -813,7 +813,7 @@
 <p>Para verificar se a instalação foi bem-sucedida, abra um terminal em qualquer pasta e digite `claude --version`. Você deve ver a versão instalada. Se aparecer um erro &ldquo;command not found&rdquo;, pode ser necessário adicionar o caminho de instalação ao PATH do sistema — a documentação da Anthropic tem instruções específicas para cada sistema operacional.</p>
 </section>
 <section>
-<h2 id="s53">INTERFACE DO TERMINAL — ANATOMIA COMPLETA</h2>
+<h2 id="s53">INTERFACE DO TERMINAL — ANATOMIA COMPLETA <span class="ts-mark" aria-label="Momento no vídeo">2:09:00</span></h2>
 <p>O terminal do Claude Code tem uma anatomia específica que vale entender bem, mesmo que pareça intimidador no início. Uma vez familiarizado com cada elemento, a interface se torna extremamente intuitiva.</p>
 <p>No canto superior esquerdo, fica o logo do Claude Code — um ícone que parece um caranguejo ou uma água-viva, dependendo de quem olha. Ao lado, o nome &ldquo;Claude Code&rdquo; e o número da versão atual. Abaixo, o modelo ativo (como &ldquo;claude-opus-4-6&rdquo;) e o plano da conta.</p>
 <p>A informação mais importante na tela inicial é o diretório de trabalho atual. O Claude Code funciona dentro de um contexto específico de pasta — ele &ldquo;vive&rdquo; nessa pasta. Todos os arquivos que ele cria, lê ou modifica são por padrão relativos a essa pasta. Se você abrir o Claude Code na pasta `/Users/nick/projetos/meu-site/`, é aí que ele vai trabalhar.</p>
@@ -831,7 +831,7 @@
 <p>Comandos de barra (slash commands) são acessados digitando `/` — uma lista de todos os comandos disponíveis aparece automaticamente. Os mais importantes são: `/clear`, `/compact`, `/model`, `/cost`, `/context`, `/status-line`, `/memory`. Cada um tem sua função específica no gerenciamento da sessão.</p>
 </section>
 <section>
-<h2 id="s54">TRÊS ABORDAGENS PARA DESIGN DE SITES E APPS</h2>
+<h2 id="s54">TRÊS ABORDAGENS PARA DESIGN DE SITES E APPS <span class="ts-mark" aria-label="Momento no vídeo">2:11:42</span></h2>
 <p>Antes de construir qualquer coisa, é importante entender que existem três abordagens principais para o design de sites e aplicações com o Claude Code. Cada uma tem seus pontos fortes e é adequada para diferentes situações.</p>
 <p>**Abordagem 1: Screenshot Loop (a mais recomendada)**</p>
 <p>A abordagem de screenshot loop é a mais eficiente para criar designs visualmente atraentes. O processo: encontre um site de referência com um design que você ama (sites como godly.website, Awwwards, Dribbble são ótimas fontes de inspiração), tire um screenshot completo do site, forneça esse screenshot ao Claude Code junto com o CSS do site de referência, e peça para criar algo no mesmo estilo com o seu conteúdo.</p>
@@ -852,7 +852,7 @@
 <p>Dito isso, a melhor abordagem é a que funciona para você no projeto específico. Experimente as três e decida com base nos resultados que cada uma produz para o seu caso de uso.</p>
 </section>
 <section>
-<h2 id="s55">FILOSOFIA DE TRABALHO COM O CLAUDE CODE — O LOOP CORRETO</h2>
+<h2 id="s55">FILOSOFIA DE TRABALHO COM O CLAUDE CODE — O LOOP CORRETO <span class="ts-mark" aria-label="Momento no vídeo">2:14:47</span></h2>
 <p>Uma das razões mais comuns pelas quais pessoas ficam insatisfeitas com o Claude Code é porque estão usando o loop errado. Entender a filosofia correta de trabalho transforma completamente os resultados que você obtém.</p>
 <p>O loop incorreto (o que a maioria faz): instrução > execução > instrução > execução. Cada ciclo é apenas &ldquo;me dê algo novo&rdquo; sem permitir que o Claude verifique e melhore o próprio trabalho. O resultado é uma cadeia de mudanças incrementais onde o Claude nunca tem a chance de avaliar se o que produziu está realmente correto ou adequado.</p>
 <p>O loop correto: instrução > execução > verificação > iteração. Após executar uma tarefa, o Claude deve ser capaz de tomar um screenshot (para trabalho visual), ler a saída, comparar com o objetivo, identificar gaps, e fazer melhorias automaticamente. Esse ciclo de auto-avaliação é o que separa o Claude Code básico do Claude Code avançado.</p>
@@ -864,7 +864,7 @@
 <p>A balança ideal é: específico o suficiente para guiar a qualidade, mas aberto o suficiente para permitir que o Claude use sua criatividade e capacidades. Microgerenciar cada pixel é tão ineficiente quanto instruções vagas demais.</p>
 </section>
 <section>
-<h2 id="s56">DESENVOLVIMENTO PARALELO — MÚLTIPLOS AGENTES SIMULTÂNEOS</h2>
+<h2 id="s56">DESENVOLVIMENTO PARALELO — MÚLTIPLOS AGENTES SIMULTÂNEOS <span class="ts-mark" aria-label="Momento no vídeo">2:16:27</span></h2>
 <p>Uma das técnicas mais poderosas (e subutilizadas) do Claude Code é rodar múltiplas instâncias simultaneamente. Como o Claude Code opera dentro de uma janela do terminal ou aba da IDE, você pode literalmente abrir quantas abas quiser — cada uma com seu próprio Claude Code trabalhando em uma tarefa diferente ao mesmo tempo.</p>
 <p>A mecânica é simples: abra uma segunda janela do terminal, navegue para o mesmo diretório de projeto (ou um diferente), e abra o Claude Code. Agora você tem dois agentes trabalhando em paralelo. Um pode estar refinando o design da página home enquanto o outro desenvolve a página sobre. Ambos progridem simultaneamente sem precisar que você fique alternando instruções.</p>
 <p>O número ideal de instâncias simultâneas depende de dois fatores: sua capacidade de monitoramento e a natureza das tarefas. Para tarefas de design visual (onde você precisa avaliar screenshots periodicamente), 2-3 instâncias é o limite prático antes de você não conseguir acompanhar tudo. Para tarefas mais autônomas (como processamento de dados ou pesquisa), você pode ter mais instâncias já que elas precisam de menos supervisão.</p>
@@ -874,7 +874,7 @@
 <p>Outro padrão de desenvolvimento paralelo é usar uma instância para construção e outra para revisão. Enquanto instância A constrói uma nova funcionalidade, instância B está revisando e testando o que foi construído anteriormente. Esse pipeline de &ldquo;build + review em paralelo&rdquo; é muito mais eficiente que o ciclo serial de build > esperar > review > build.</p>
 </section>
 <section>
-<h2 id="s57">A PASTA .CLAUDE — ESTRUTURA AVANÇADA DO WORKSPACE</h2>
+<h2 id="s57">A PASTA .CLAUDE — ESTRUTURA AVANÇADA DO WORKSPACE <span class="ts-mark" aria-label="Momento no vídeo">2:19:15</span></h2>
 <p>A pasta `.claude` (com ponto na frente) é o centro nervoso do seu setup avançado do Claude Code. Em sistemas Unix (macOS, Linux), pastas que começam com ponto são ocultas por padrão no explorador de arquivos — você não as vê a menos que ative a visualização de arquivos ocultos. Isso é intencional: são arquivos de configuração que não devem poluir a visualização do projeto.</p>
 <p>Dentro da pasta `.claude` de um workspace totalmente configurado, você encontra:</p>
 <p>**`settings.json`**: arquivo de configurações gerais do projeto, incluindo permissões de hooks e outras configurações de comportamento. Por exemplo, aqui você configura quais hooks devem ser executados em quais eventos.</p>
@@ -907,7 +907,7 @@
 <p>- Não cole documentação de APIs inteiras — referencie a documentação quando necessário</p>
 </section>
 <section>
-<h2 id="s58">REGRAS E MEMÓRIA AUTOMÁTICA</h2>
+<h2 id="s58">REGRAS E MEMÓRIA AUTOMÁTICA <span class="ts-mark" aria-label="Momento no vídeo">2:22:20</span></h2>
 <p>Além do CLAUDE.md e das regras em `/rules/`, o Claude Code tem um sistema de memória que pode ser usado para armazenar contexto persistente de forma mais granular.</p>
 <p>O comando `/memory` abre a interface de gerenciamento de memória. A memória do Claude Code se divide em dois tipos:</p>
 <p>**Memória de sessão**: existe apenas durante a conversa atual. Qualquer informação que você fornecer ao Claude nesta sessão fica disponível até você usar `/clear` ou fechar o terminal.</p>
@@ -921,7 +921,7 @@
 <p>O limite de memória é prático: não sobrecarregue o sistema com memorias longas e detalhadas. A memória deve ser concisa — algumas frases por item, não parágrafos inteiros. O objetivo é fornecer context o suficiente para o Claude conectar os pontos, não dumpar toda a documentação do projeto.</p>
 </section>
 <section>
-<h2 id="s59">CONSTRUINDO APLICAÇÕES COMPLEXAS — GERADOR DE PROPOSTAS</h2>
+<h2 id="s59">CONSTRUINDO APLICAÇÕES COMPLEXAS — GERADOR DE PROPOSTAS <span class="ts-mark" aria-label="Momento no vídeo">2:23:58</span></h2>
 <p>Para demonstrar o poder do Claude Code em projetos mais complexos, o curso mostra a construção de um gerador automático de propostas de negócio. Esse projeto vai além de um site estático — envolve backend, integração com APIs externas, e lógica de negócio real.</p>
 <p>O problema que o gerador de propostas resolve: criar propostas personalizadas para clientes potenciais é um processo que costuma levar horas. Você precisa pesquisar sobre a empresa, entender o nicho, calcular preços, escrever o documento, formatar tudo. Com uma skill ou aplicação automatizada, esse processo pode ser reduzido para alguns minutos.</p>
 <p>O fluxo do gerador de propostas é:</p>
@@ -937,7 +937,7 @@
 <p>O produto final — depois de algumas horas de desenvolvimento assistido por IA — é uma ferramenta que a equipe comercial pode usar diariamente, que personaliza propostas de forma convincente, e que economiza horas de trabalho por semana. E o código todo foi escrito pelo Claude Code, não por um desenvolvedor humano.</p>
 </section>
 <section>
-<h2 id="s60">COMANDOS SLASH — REFERÊNCIA COMPLETA</h2>
+<h2 id="s60">COMANDOS SLASH — REFERÊNCIA COMPLETA <span class="ts-mark" aria-label="Momento no vídeo">2:25:13</span></h2>
 <p>O Claude Code tem um sistema abrangente de comandos slash que cobrem todas as funcionalidades de gerenciamento de sessão. Digitar `/` abre uma lista interativa de todos os comandos disponíveis. Aqui está uma referência dos mais importantes:</p>
 <p>**/clear**: limpa completamente o histórico da conversa atual. Útil quando você quer começar uma nova tarefa completamente não relacionada. Após um `/clear`, o contexto volta para praticamente zero tokens — apenas os arquivos de configuração base são mantidos.</p>
 <p>**/compact**: comprime o histórico da conversa em um resumo de alta densidade informacional. Diferente do `/clear`, o `/compact` preserva o contexto mas de forma mais eficiente em tokens. Use quando o contexto está ficando longo mas você ainda precisa das informações da sessão.</p>
@@ -955,7 +955,7 @@
 <p>Para navegar pelo histórico de sessões: nas configurações do Claude Code, há uma opção para ver todas as sessões anteriores. Você pode retomar qualquer sessão anterior — o contexto é preservado exatamente como estava quando a sessão terminou.</p>
 </section>
 <section>
-<h2 id="s61">MODOS DE PERMISSÃO — DO MAIS SEGURO AO MAIS PODEROSO</h2>
+<h2 id="s61">MODOS DE PERMISSÃO — DO MAIS SEGURO AO MAIS PODEROSO <span class="ts-mark" aria-label="Momento no vídeo">2:27:06</span></h2>
 <p>O Claude Code opera em diferentes modos de permissão que determinam o quanto ele pode fazer autonomamente. Entender cada modo e quando usar cada um é fundamental para trabalhar com eficiência e segurança.</p>
 <p>**Modo Default — &ldquo;Ask before edits&rdquo;**: o modo mais conservador. Antes de fazer qualquer modificação em arquivos, o Claude pede confirmação explícita. Você vê exatamente o que ele quer fazer e pode aprovar, rejeitar, ou pedir modificações. O ícone de limite da sessão fica em azul claro na GUI.</p>
 <p>Quando usar: quando você está explorando um novo codebase pela primeira vez, quando está aprendendo como o Claude funciona, ou quando está trabalhando em código crítico de produção onde você quer supervisionar cada mudança.</p>
@@ -969,7 +969,7 @@
 <p>A configuração de modos pode ser feita via CLAUDE.md para estabelecer um comportamento padrão. Por exemplo, você pode especificar: &ldquo;sempre use plan mode para qualquer tarefa que envolva modificar mais de 3 arquivos&rdquo; ou &ldquo;para tarefas de refatoração, sempre peça confirmação antes de deletar código existente&rdquo;.</p>
 </section>
 <section>
-<h2 id="s62">DESENVOLVIMENTO DE PRODUTO COM IA — ESTRATÉGIAS AVANÇADAS</h2>
+<h2 id="s62">DESENVOLVIMENTO DE PRODUTO COM IA — ESTRATÉGIAS AVANÇADAS <span class="ts-mark" aria-label="Momento no vídeo">2:29:30</span></h2>
 <p>Quando o objetivo vai além de &ldquo;fazer um site&rdquo; e entra em &ldquo;construir um produto real com backend, banco de dados, e lógica de negócio complexa&rdquo;, o Claude Code mostra seu verdadeiro potencial — mas também requer uma abordagem mais estratégica.</p>
 <p>**Começando com a arquitetura correta**</p>
 <p>O maior erro em projetos de produto com Claude Code é começar a codificar antes de ter uma arquitetura clara. Uma sessão de 30 minutos de planejamento no início economiza dias de retrabalho. Use o modo plano para uma sessão dedicada de arquitetura: &ldquo;Quero construir um sistema de [descrição do produto]. Me ajude a definir a arquitetura, escolher as tecnologias, e identificar os principais componentes antes de escrever qualquer código.&rdquo;</p>
@@ -987,7 +987,7 @@
 <p>Para qualquer projeto que lida com dados de usuários reais, configure desde o início: variáveis de ambiente para credenciais (nunca hardcoded), validação de entrada em todas as APIs, autenticação antes de qualquer operação de escrita, e backups regulares. Peça ao Claude para implementar esses controles explicitamente: &ldquo;antes de implementar o endpoint de criação de usuário, me dê um checklist de segurança que devemos seguir e implemente cada item&rdquo;.</p>
 </section>
 <section>
-<h2 id="s63">DICAS AVANÇADAS DE CONTEXTO E TOKENS — GUIA COMPLETO</h2>
+<h2 id="s63">DICAS AVANÇADAS DE CONTEXTO E TOKENS — GUIA COMPLETO <span class="ts-mark" aria-label="Momento no vídeo">2:31:26</span></h2>
 <p>A gestão de contexto e tokens é provavelmente o skill mais importante para uso avançado do Claude Code. Aqui está um guia consolidado com as principais estratégias, reunindo as melhores práticas documentadas pela Anthropic e descobertas pela comunidade.</p>
 <p>**Estratégia 1 — RAG (Retrieval Augmented Generation)**</p>
 <p>RAG é a técnica de buscar informações relevantes antes de fazer uma pergunta, em vez de carregar todas as informações no contexto. Em vez de colocar 10 arquivos inteiros no CLAUDE.md, você mantém um índice e usa scripts de busca para encontrar e carregar apenas os trechos relevantes para cada tarefa.</p>
@@ -1018,7 +1018,7 @@
 <p>Sessões longas acumulam contexto de decisões e erros anteriores que podem enviesar respostas futuras. Para projetos longos, prefira múltiplas sessões curtas focadas em um componente cada, com um CLAUDE.md que preserve o contexto de decisões arquiteturais importantes.</p>
 </section>
 <section>
-<h2 id="s64">CASO DE ESTUDO — AGÊNCIA DE AUTOMAÇÃO DE IA</h2>
+<h2 id="s64">CASO DE ESTUDO — AGÊNCIA DE AUTOMAÇÃO DE IA <span class="ts-mark" aria-label="Momento no vídeo">2:34:24</span></h2>
 <p>Para contextualizar tudo que foi abordado no curso, é útil ver como todas essas ferramentas se combinam em um negócio real. O instrutor gerencia múltiplas empresas com faturamento conjunto superior a $4 milhões anuais usando principalmente Claude Code. Aqui está uma visão de como isso funciona na prática.</p>
 <p>**O modelo de negócio**</p>
 <p>A Left Click é uma agência de automação de IA que instala sistemas de crescimento em empresas B2B. Os clientes são agências, empresas de SaaS, e negócios de serviços profissionais que querem automatizar aquisição de clientes, processos internos, ou ambos.</p>
@@ -1034,7 +1034,7 @@
 <p>Você não precisa de uma equipe de 10 pessoas para executar o trabalho que antes exigia 10 pessoas. Você precisa de boas habilidades de pensamento, experiência na área em que você atua, e domínio das ferramentas que o Claude Code oferece. As pessoas que entenderem isso cedo têm uma vantagem enorme nos próximos anos.</p>
 </section>
 <section>
-<h2 id="s65">ANÁLISE DO TRANSCRIPT ORIGINAL — O QUE FOI ABORDADO NO CURSO</h2>
+<h2 id="s65">ANÁLISE DO TRANSCRIPT ORIGINAL — O QUE FOI ABORDADO NO CURSO <span class="ts-mark" aria-label="Momento no vídeo">2:36:43</span></h2>
 <p>Este é um curso de 4 horas sobre Claude Code criado por Marco Fernández (Nick Sarayev), um empreendedor canadense que usa Claude Code para gerenciar negócios gerando mais de $4 milhões anuais em lucro. O curso foi originalmente gravado em inglês e é voltado tanto para iniciantes absolutos quanto para usuários intermediários que querem dominar funcionalidades avançadas.</p>
 <p>A progressão do curso segue uma estrutura lógica de fundamentos para avançado:</p>
 <p>**Parte 1 — Fundamentos (0:00 - 1:00)**</p>
@@ -1084,7 +1084,7 @@
 <p>O curso é notável pela quantidade de demonstrações ao vivo em tempo real. Ao longo das 4 horas, o instrutor não apenas explica os conceitos mas os executa em frente à câmera, mostrando tanto os sucessos quanto os problemas que surgem no caminho. Isso torna o conteúdo muito mais aplicável do que tutoriais teóricos.</p>
 </section>
 <section>
-<h2 id="s66">PERGUNTAS FREQUENTES E DÚVIDAS COMUNS</h2>
+<h2 id="s66">PERGUNTAS FREQUENTES E DÚVIDAS COMUNS <span class="ts-mark" aria-label="Momento no vídeo">2:39:12</span></h2>
 <p>Após ensinar Claude Code para mais de 2.000 alunos, o instrutor identifica padrões de dúvidas que surgem repetidamente. Aqui estão as mais comuns com respostas diretas.</p>
 <p>**P: Preciso saber programar para usar Claude Code?**</p>
 <p>R: Não. O curso demonstra isso explicitamente — sites completos, backends funcionais, e automações de negócio foram construídos em frente à câmera sem que o instrutor escrevesse uma única linha de código manualmente. O que você precisa é de clareza sobre o que quer construir e comunicação clara com o Claude. Ter noções básicas de lógica (if/then, loops, funções) ajuda a entender o que o Claude está fazendo, mas não é requisito.</p>
@@ -1104,7 +1104,7 @@
 <p>R: As skills têm um mecanismo de auto-atualização: quando o Claude detecta que uma parte da skill falhou por uma mudança na API ou ferramenta, ele corrige o script e atualiza a skill para que a próxima execução não tenha o mesmo problema. Para mudanças maiores, você pode pedir ao Claude para revisar e atualizar uma skill específica.</p>
 </section>
 <section>
-<h2 id="s67">CONSTRUINDO O GERADOR DE PROPOSTAS — PASSO A PASSO DETALHADO</h2>
+<h2 id="s67">CONSTRUINDO O GERADOR DE PROPOSTAS — PASSO A PASSO DETALHADO <span class="ts-mark" aria-label="Momento no vídeo">2:41:20</span></h2>
 <p>O gerador de propostas é o projeto mais complexo demonstrado no curso. É uma aplicação web completa com: autenticação de usuários, dashboard, integração com IA para geração de conteúdo, assinatura eletrônica, processamento de pagamentos via Stripe, e banco de dados na nuvem (Supabase). Construir isso de forma tradicional levaria semanas ou meses. Com Claude Code em modo plano + bypass permissions, levou cerca de 30-40 minutos.</p>
 <p>**A especificação inicial**</p>
 <p>O processo começa não com código, mas com uma especificação em linguagem natural criada via narração de voz. A especificação foi narrada em tempo real e incluiu:</p>
@@ -1146,7 +1146,7 @@
 <p>A terceira lição: o Claude lida bem com o ambiente imperfeito. Credenciais faltando, SQLs que precisam ser rodados manualmente, configurações de webhook — cada obstáculo foi detectado e comunicado claramente, com instruções específicas de como resolver.</p>
 </section>
 <section>
-<h2 id="s68">DEPLOY DO GERADOR DE PROPOSTAS — DO LOCAL AO LIVE</h2>
+<h2 id="s68">DEPLOY DO GERADOR DE PROPOSTAS — DO LOCAL AO LIVE <span class="ts-mark" aria-label="Momento no vídeo">2:45:41</span></h2>
 <p>Depois de ter o projeto rodando localmente e validado, o próximo passo é publicar na internet. Para o gerador de propostas (uma aplicação Next.js com Supabase), o deploy foi feito no Netlify.</p>
 <p>O processo de deploy com Claude Code:</p>
 <p>1. **Preparação do repositório**: o Claude Code verifica se o projeto tem um `.gitignore` adequado (para garantir que credenciais e arquivos temporários não sejam commitados), inicializa o git se necessário, e faz o primeiro commit com uma mensagem descritiva.</p>
@@ -1159,7 +1159,7 @@
 <p>O custo operacional do sistema em produção é baixo: Supabase tem plano gratuito generoso (500MB de banco de dados, 50.000 usuários ativos por mês), Netlify tem plano gratuito para sites estáticos e projetos pequenos, e Stripe cobra apenas quando há transações (2.9% + $0.30 por transação nos EUA). O único custo fixo é o uso da API do Claude para geração de propostas.</p>
 </section>
 <section>
-<h2 id="s69">ENTENDENDO O /CONTEXT — ANATOMIA DO USO DE TOKENS</h2>
+<h2 id="s69">ENTENDENDO O /CONTEXT — ANATOMIA DO USO DE TOKENS <span class="ts-mark" aria-label="Momento no vídeo">2:46:39</span></h2>
 <p>Um dos recursos mais reveladores do Claude Code é o comando `/context`. Executá-lo mostra exatamente onde cada token do seu contexto está sendo usado. Para a maioria dos usuários, o resultado é surpreendente.</p>
 <p>Em uma sessão recém-iniciada onde a única instrução dada foi `/context`, já havia 26.400 tokens consumidos — 13% do contexto total do Opus 4.6 (200.000 tokens). De onde vieram esses tokens?</p>
 <p>O breakdown típico de uma sessão mostra:</p>
@@ -1175,7 +1175,7 @@
 <p>A estratégia de minimização: mantenha o CLAUDE.md global conciso (idealmente abaixo de 500 linhas), remova MCPs que não usa, use skills em vez de MCPs para operações repetitivas, e faça `/compact` periodicamente em sessões longas.</p>
 </section>
 <section>
-<h2 id="s70">CRIAÇÃO DE SKILLS — PROCESSO DETALHADO</h2>
+<h2 id="s70">CRIAÇÃO DE SKILLS — PROCESSO DETALHADO <span class="ts-mark" aria-label="Momento no vídeo">2:48:14</span></h2>
 <p>A criação de skills é um processo iterativo que combina documentação, scripts, e aprendizado contínuo. Aqui está o processo detalhado de como criar uma skill do zero.</p>
 <p>**Passo 1: Identificar o processo a automatizar**</p>
 <p>Antes de criar uma skill, documente o processo que você executa manualmente. Anote: o objetivo final, os inputs necessários, as etapas em ordem, as possíveis falhas e como tratá-las, e os outputs esperados. Quanto mais detalhado esse documento, melhor será a skill.</p>
@@ -1213,7 +1213,7 @@
 <p>A estrutura da skill inclui: um script Python que faz queries no PubMed via API, um script que extrai o texto completo dos artigos mais relevantes, e o skill.md que orquestra tudo isso e define como formatar o relatório final.</p>
 </section>
 <section>
-<h2 id="s71">FERRAMENTAS NATIVAS DO CLAUDE CODE — LISTA COMPLETA</h2>
+<h2 id="s71">FERRAMENTAS NATIVAS DO CLAUDE CODE — LISTA COMPLETA <span class="ts-mark" aria-label="Momento no vídeo">2:51:43</span></h2>
 <p>O Claude Code vem com um conjunto de ferramentas nativas que consomem tokens mesmo antes de você digitar qualquer mensagem. Entender essas ferramentas explica por que uma sessão recém-iniciada já tem 16.000+ tokens consumidos.</p>
 <p>Quando você digita `/context` e scroll para &ldquo;system tools&rdquo;, você vê todas as ferramentas disponíveis e o custo em tokens de cada descrição. As principais são:</p>
 <p>**task**: a ferramenta que cria sub-agentes. Toda vez que o Claude spawna um sub-agente, é esse tool que é chamado.</p>
@@ -1236,7 +1236,7 @@
 <p>O auto compact buffer é um espaço reservado no final da janela de contexto. Quando o uso de tokens atinge o limite (deixando apenas ~33.000 tokens livres), o sistema automático de compactação entra em ação e comprime o histórico da conversa, mantendo espaço para novas interações. Isso acontece transparentemente — você verá uma nota no chat indicando que houve compactação automática.</p>
 </section>
 <section>
-<h2 id="s72">SEGURANÇA EM APLICAÇÕES — AVISO IMPORTANTE</h2>
+<h2 id="s72">SEGURANÇA EM APLICAÇÕES — AVISO IMPORTANTE <span class="ts-mark" aria-label="Momento no vídeo">2:53:35</span></h2>
 <p>O Claude Code é uma ferramenta extraordinariamente poderosa, e com grande poder vem grande responsabilidade. Especialmente para aplicações que lidam com dados de usuários reais, há precauções importantes que não devem ser ignoradas.</p>
 <p>**O risco real do &ldquo;vibe coding&rdquo;**</p>
 <p>Aplicações construídas puramente por IA sem revisão de segurança têm riscos reais. O caso mais famoso citado no curso foi o do CloudBot (depois OpenClaw), que sofreu múltiplas vulnerabilidades de segurança graves incluindo prompt injection — onde usuários conseguiam manipular o comportamento do agente inserindo instruções maliciosas nos inputs.</p>
@@ -1256,7 +1256,7 @@
 <p>Use Claude Code para construir o produto e iterar rapidamente. Quando o produto estiver validado e antes de escalar, invista em uma revisão de segurança por um profissional. O código gerado pelo Claude Code é um excelente ponto de partida — limpo, bem estruturado, com padrões modernos. Mas precisa de olhos humanos especializados antes de proteger dados de pessoas reais.</p>
 </section>
 <section>
-<h2 id="s73">SKILLS AVANÇADAS — DEMONSTRAÇÃO COMPLETA COM LEAD SCRAPING</h2>
+<h2 id="s73">SKILLS AVANÇADAS — DEMONSTRAÇÃO COMPLETA COM LEAD SCRAPING <span class="ts-mark" aria-label="Momento no vídeo">2:55:06</span></h2>
 <p>Vamos ver uma demonstração completa de como as skills funcionam na prática. O instrutor tem uma skill chamada &ldquo;Scrape Leads&rdquo; que extrai e verifica leads de negócios, classifica com um modelo de linguagem, enriquece os e-mails e salva tudo numa planilha do Google. A skill é acionada quando você pede para encontrar leads, fazer scraping de empresas, gerar listas de prospects ou construir bases de dados para qualquer nicho ou localização.</p>
 <p>A estrutura da skill inclui um objetivo principal no topo (fazer scraping usando uma fonte específica), uma lista de inputs necessários, alguns scripts prontos para execução e um checklist de processos detalhado: começar com um scrape de teste, depois verificação, depois scrape completo, classificação por LLM, upload para o Google Sheets, enriquecimento de e-mails faltantes, e assim por diante.</p>
 <p>Quando o usuário executa o comando &ldquo;raspe 1000 dentistas nos Estados Unidos&rdquo;, o Claude carrega a skill automaticamente. Ele inicia com um scrape de teste de 25 dentistas para verificar a qualidade. Encontra automaticamente os filtros corretos e começa a trabalhar. Segundo o processo definido na skill, o Claude vai:</p>
@@ -1268,7 +1268,7 @@
 <p>O resultado final vai direto para o Instantly ou outra plataforma de cold email para iniciar campanhas imediatamente. Em termos de impacto econômico: um processo que consumia mais de 30 minutos de trabalho manual agora leva menos de 2 minutos, e o custo de API é uma fração do que custaria contratar alguém para fazer o mesmo.</p>
 </section>
 <section>
-<h2 id="s74">ESTRUTURA INTERNA DAS SKILLS — ORQUESTRADOR E SCRIPTS</h2>
+<h2 id="s74">ESTRUTURA INTERNA DAS SKILLS — ORQUESTRADOR E SCRIPTS <span class="ts-mark" aria-label="Momento no vídeo">2:56:56</span></h2>
 <p>Para entender como skills funcionam internamente, é preciso compreender a separação entre duas camadas: o skill.md e a pasta scripts/.</p>
 <p>O skill.md funciona como o orquestrador — é como um maestro que não toca os instrumentos mas coordena quem toca o quê e quando. Ele contém a lógica, o checklist de passos e as referências. A pasta scripts/ contém os músicos: os scripts Python reais que executam cada ação específica.</p>
 <p>Quando o Claude recebe um pedido como &ldquo;raspe 1000 leads&rdquo;, ele:</p>
@@ -1284,7 +1284,7 @@
 <p>Por que usar isso em vez de simplesmente pedir ao Claude para buscar a informação? Porque na skill você já definiu com antecedência: quais bancos de dados consultar, como paralelizar as queries, quais modelos usar (às vezes um modelo menor mas com janela de contexto maior é mais eficiente para processar muitos artigos), e qual formato de output esperar. Você transforma seu conhecimento operacional em um sistema repetível.</p>
 </section>
 <section>
-<h2 id="s75">CRIANDO UMA SKILL DO ZERO — GERADOR DE SITES PARA PROSPECTS</h2>
+<h2 id="s75">CRIANDO UMA SKILL DO ZERO — GERADOR DE SITES PARA PROSPECTS <span class="ts-mark" aria-label="Momento no vídeo">2:59:40</span></h2>
 <p>A demonstração mais detalhada de criação de skill ao vivo envolve construir um sistema que gera sites personalizados para prospects de uma agência. A ideia: receber uma planilha do Google com informações sobre um prospect e gerar automaticamente um site bonito e personalizado para ele, que serve como isca de captação ou apresentação de proposta.</p>
 <p>O processo de criação começa com uma mensagem detalhada descrevendo o que a skill deve fazer:</p>
 <p>- Receber informações de um prospect via URL de planilha do Google</p>
@@ -1304,7 +1304,7 @@
 <p>O instrutor então mostra o poder de escalar isso: com sub-agentes (que ele vai mostrar depois), você pode rodar 10 dessas skills em paralelo. Em vez de 30 segundos por site, você gera 10 sites a cada 30 segundos — 3 segundos por site. Para uma lista de 10.000 leads, isso seria cerca de 500 minutos, ou 8 horas de processamento totalmente autônomo. Combinado com a skill de scraping de leads e uma ferramenta de cold email, você tem um sistema completo de prospecção rodando sozinho.</p>
 </section>
 <section>
-<h2 id="s76">MCPs — MODEL CONTEXT PROTOCOL NA PRÁTICA</h2>
+<h2 id="s76">MCPs — MODEL CONTEXT PROTOCOL NA PRÁTICA <span class="ts-mark" aria-label="Momento no vídeo">3:02:09</span></h2>
 <p>Agora que entendemos skills, o instrutor explica MCPs (Model Context Protocol) com uma definição direta: são basicamente skills que outras pessoas criaram para você. Em vez de você ter que construir o script de integração com o ClickUp ou o Gmail, alguém já fez esse trabalho e disponibilizou como um MCP server que você pode instalar em segundos.</p>
 <p>Existem três lugares principais para encontrar MCPs:</p>
 <p>- **mcpservers.org**: diretório geral com centenas de servidores</p>
@@ -1343,7 +1343,7 @@
 <p>Isso leva a uma estratégia prática: use MCPs para prototipagem e testes rápidos. Quando encontrar um workflow que funciona, converta para uma skill que faz as mesmas chamadas de API diretamente, sem o overhead do MCP server. Você fica com o melhor dos dois mundos: velocidade de setup do MCP + eficiência de tokens da skill.</p>
 </section>
 <section>
-<h2 id="s77">GMAIL MCP — ORGANIZAÇÃO DE E-MAILS COM IA</h2>
+<h2 id="s77">GMAIL MCP — ORGANIZAÇÃO DE E-MAILS COM IA <span class="ts-mark" aria-label="Momento no vídeo">3:04:23</span></h2>
 <p>Uma demonstração prática de ciclo completo MCP → Skill envolve a organização de e-mails por labels. O objetivo: usar o Gmail MCP para prototipar a solução, verificar que funciona, e depois converter para uma skill que faz o mesmo com muito menos tokens.</p>
 <p>**Fase 1: Planejamento com o Claude**</p>
 <p>Antes de qualquer código, o instrutor pede ao Claude que sugira um esquema de labels de alto ROI para uma caixa pessoal. Com o modo thinking ativado, o Claude sugere um esquema baseado em ações:</p>
@@ -1374,7 +1374,7 @@
 <p>O instrutor observa que poderia ainda ir além: com sub-agentes (próximo tópico), seria possível paralelizar a classificação, dividindo os 1000 e-mails em 10 chunks de 100, processados simultaneamente. Em vez de processar sequencialmente em cerca de 6 minutos, processaria tudo em menos de 40 segundos.</p>
 </section>
 <section>
-<h2 id="s78">PLUGINS DO CLAUDE CODE — VISÃO GERAL</h2>
+<h2 id="s78">PLUGINS DO CLAUDE CODE — VISÃO GERAL <span class="ts-mark" aria-label="Momento no vídeo">3:07:38</span></h2>
 <p>Antes de entrar em sub-agentes, o instrutor faz uma parada rápida para cobrir os plugins do Claude Code. A distinção entre plugins e MCPs pode ser confusa, então aqui vai a simplificação:</p>
 <p>- **MCPs**: integrações com serviços externos (ClickUp, Gmail, etc.) — ferramentas que o Claude usa para fazer coisas</p>
 <p>- **Plugins**: extensões que modificam o comportamento do próprio Claude Code — geralmente adicionam instruções, conhecimento ou capacidades ao agente</p>
@@ -1388,7 +1388,7 @@
 <p>O instrutor acredita que plugins são uma categoria que vai ser absorvida por skills no futuro próximo. A distinção entre &ldquo;plugin&rdquo; e &ldquo;skill&rdquo; está se tornando cada vez mais tênue. Não recomenda gastar muito tempo explorando plugins agora — foque em entender skills profundamente, que é onde o valor real está.</p>
 </section>
 <section>
-<h2 id="s79">SUB-AGENTES — COMO FUNCIONAM E QUANDO USAR</h2>
+<h2 id="s79">SUB-AGENTES — COMO FUNCIONAM E QUANDO USAR <span class="ts-mark" aria-label="Momento no vídeo">3:08:49</span></h2>
 <p>Sub-agentes são uma das funcionalidades mais comentadas do Claude Code, mas o instrutor abre esta seção com uma dose de realismo: &ldquo;sub-agentes não são uma solução mágica. Você pode fazer praticamente tudo com um agente normal. Sub-agentes são úteis para paralelização — e só.&rdquo;</p>
 <p>**O que são sub-agentes**</p>
 <p>Quando você faz uma tarefa no Claude Code normalmente, há um único thread de execução: o agente faz a coisa A, depois a coisa B, depois a coisa C, sequencialmente. Com sub-agentes, o agente principal pode dividir uma tarefa em partes e delegar cada parte para um agente filho que executa em paralelo.</p>
@@ -1422,7 +1422,7 @@
 <p>4. **Use modelos menores para sub-agentes**: Sonnet ou Haiku são ideais. São mais baratos, têm janelas de contexto maiores, e para tarefas específicas e bem definidas, são tão bons quanto o Opus.</p>
 </section>
 <section>
-<h2 id="s80">OS TRÊS SUB-AGENTES MAIS ÚTEIS</h2>
+<h2 id="s80">OS TRÊS SUB-AGENTES MAIS ÚTEIS <span class="ts-mark" aria-label="Momento no vídeo">3:12:19</span></h2>
 <p>O instrutor constrói ao vivo três sub-agentes que considera essencialmente úteis para qualquer desenvolvedor usando o Claude Code em projetos sérios: Code Reviewer, QA e Researcher. Eles ficam na pasta `.claude/agents/` e são referenciados no claude.md.</p>
 <p>**Agente: Code Reviewer**</p>
 <p>Responsabilidade: revisar código modificado em busca de problemas de segurança, legibilidade e boas práticas. Recebe os arquivos alterados como input, retorna uma lista de issues categorizadas por severidade (bloqueante, sugestão, cosmético) e recomendações de melhoria específicas.</p>
@@ -1444,7 +1444,7 @@
 <p>O instrutor é honesto: para projetos pessoais e uso interno, esse nível de rigor provavelmente não é necessário. Mas para código empresarial, sistemas críticos ou qualquer coisa que vai para produção com usuários reais, ter esses agentes de revisão e QA pode ser a diferença entre um sistema confiável e um que quebra em produção.</p>
 </section>
 <section>
-<h2 id="s81">AGENT TEAMS — TIMES DE AGENTES EM DETALHES</h2>
+<h2 id="s81">AGENT TEAMS — TIMES DE AGENTES EM DETALHES <span class="ts-mark" aria-label="Momento no vídeo">3:14:11</span></h2>
 <p>Agent teams são uma extensão mais avançada do conceito de sub-agentes. Se sub-agentes permitem que um agente pai spawne filhos para paralelizar trabalho, os agent teams permitem uma estrutura ainda mais complexa: múltiplos agentes totalmente independentes, cada um com seu próprio Claude Code completo, que podem se comunicar entre si e com um agente líder.</p>
 <p>**A diferença fundamental**</p>
 <p>Sub-agentes:</p>
@@ -1507,7 +1507,7 @@
 <p>- Agent teams brilham em exploração de espaço de possibilidades: designs diferentes, abordagens diferentes, perspectivas diferentes</p>
 </section>
 <section>
-<h2 id="s82">AGENT TEAMS — ANÁLISE DE SEGURANÇA EM CODEBASE REAL</h2>
+<h2 id="s82">AGENT TEAMS — ANÁLISE DE SEGURANÇA EM CODEBASE REAL <span class="ts-mark" aria-label="Momento no vídeo">3:17:48</span></h2>
 <p>A demonstração mais impressionante do curso usa agent teams para analisar um repositório real de código aberto em busca de vulnerabilidades de segurança. O instrutor escolhe o repositório OpenClaw — um projeto open source relacionado ao Claude — para a demonstração.</p>
 <p>O processo começa com o clone do repositório:</p>
 <p>```bash</p>
@@ -1540,7 +1540,7 @@
 <p>Antes de criar um agent team, pergunte: isso realmente requer múltiplos agentes trabalhando colaborativamente, ou um único agente com boas instruções faz o mesmo trabalho? Na maioria dos casos, a resposta é &ldquo;um único agente é suficiente&rdquo;.</p>
 </section>
 <section>
-<h2 id="s83">GIT WORKTREES — DESENVOLVIMENTO PARALELO COM ISOLAMENTO</h2>
+<h2 id="s83">GIT WORKTREES — DESENVOLVIMENTO PARALELO COM ISOLAMENTO <span class="ts-mark" aria-label="Momento no vídeo">3:21:43</span></h2>
 <p>Git worktrees eram a forma principal de fazer desenvolvimento paralelo com Claude Code antes dos agent teams existirem. Mesmo agora, continuam sendo úteis como uma camada adicional de isolamento quando múltiplos agentes trabalham no mesmo repositório.</p>
 <p>**O problema que worktrees resolvem**</p>
 <p>Quando você tem múltiplos agentes trabalhando no mesmo codebase simultaneamente, eles inevitavelmente vão editar alguns dos mesmos arquivos. Mesmo que cada agente esteja trabalhando em uma feature diferente, há sempre arquivos compartilhados: configurações, utilitários, tipos base. Quando dois agentes editam o mesmo arquivo simultaneamente, você tem um conflito.</p>
@@ -1575,7 +1575,7 @@
 <p>Com esse contexto no claude.md, o Claude sabe exatamente o que fazer quando você pede &ldquo;use o workflow de git worktrees para desenvolver estas três páginas em paralelo&rdquo;.</p>
 </section>
 <section>
-<h2 id="s84">DEPLOY COM MODAL — PUBLICANDO FUNCIONALIDADES NA INTERNET</h2>
+<h2 id="s84">DEPLOY COM MODAL — PUBLICANDO FUNCIONALIDADES NA INTERNET <span class="ts-mark" aria-label="Momento no vídeo">3:24:04</span></h2>
 <p>A última parte do curso técnico cobre algo que o instrutor chama de &ldquo;a ponte entre o que você construiu localmente e o mundo&rdquo;: como publicar suas skills, scripts e APIs na internet de forma rápida e acessível, mesmo sem ser um desenvolvedor web experiente.</p>
 <p>O serviço recomendado é o **Modal** (modal.com) — &ldquo;infraestrutura de IA que desenvolvedores amam&rdquo;. A promessa: você consegue colocar código Python rodando na nuvem com uma URL acessível publicamente em questão de minutos, não horas ou dias.</p>
 <p>**Por que Modal?**</p>
@@ -1615,7 +1615,7 @@
 <p>Para não-programadores que querem usar suas skills em automações mais complexas, Modal é a peça que faltava. Você não precisa entender servidores, containerização ou infraestrutura de nuvem — o Claude Code + Modal cuida de tudo, e você fica com a URL que faz o que você precisa.</p>
 </section>
 <section>
-<h2 id="s85">EXTENDED THINKING — MODO DE RACIOCÍNIO PROFUNDO</h2>
+<h2 id="s85">EXTENDED THINKING — MODO DE RACIOCÍNIO PROFUNDO <span class="ts-mark" aria-label="Momento no vídeo">3:27:34</span></h2>
 <p>Um tópico importante que foi abordado ao longo do curso mas merece uma seção dedicada é o Extended Thinking (pensamento estendido). Esta funcionalidade altera fundamentalmente como o Claude processa problemas complexos.</p>
 <p>**O que é Extended Thinking**</p>
 <p>Por padrão, o Claude pensa e escreve ao mesmo tempo — você vê o output crescendo progressivamente. Com Extended Thinking ativado, o Claude primeiro dedica um orçamento de tokens exclusivo para raciocinar sobre o problema, e só depois produz o output final.</p>
@@ -1638,7 +1638,7 @@
 <p>O resultado: o Claude pensa profundamente (tokens de thinking), mas o output que entra no contexto permanente da conversa é mínimo. Isso maximiza a qualidade do raciocínio sem explodir a janela de contexto com respostas verbosas.</p>
 </section>
 <section>
-<h2 id="s86">GESTÃO AVANÇADA DE CONTEXTO — TODAS AS ESTRATÉGIAS</h2>
+<h2 id="s86">GESTÃO AVANÇADA DE CONTEXTO — TODAS AS ESTRATÉGIAS <span class="ts-mark" aria-label="Momento no vídeo">3:28:32</span></h2>
 <p>O contexto é o recurso mais precioso e mais limitado quando se trabalha com Claude Code em sessões longas. O instrutor dedicou uma seção específica do curso à gestão de contexto, compilando as recomendações da própria documentação da Anthropic com suas próprias descobertas.</p>
 <p>**Verificando o estado do contexto**</p>
 <p>- `/cost`: mostra o custo atual da sessão em dólares e tokens</p>
@@ -1672,7 +1672,7 @@
 <p>Para um uso normal do dia a dia — desenvolvimento de projetos pessoais, skills de automação, análises — os custos são muito menores. Ele estima gastar entre 50 e 200 dólares por mês no Claude Code como parte central de suas operações de negócio, comparando isso ao salário de um desenvolvedor freelancer que faria a mesma quantidade de trabalho por 3.000 a 10.000 dólares por mês.</p>
 </section>
 <section>
-<h2 id="s87">FAST MODE E MODELOS DISPONÍVEIS</h2>
+<h2 id="s87">FAST MODE E MODELOS DISPONÍVEIS <span class="ts-mark" aria-label="Momento no vídeo">3:32:15</span></h2>
 <p>Durante todo o curso, o instrutor menciona repetidamente o &ldquo;fast mode&rdquo;. Esta seção consolida o que foi dito sobre modelos e velocidade.</p>
 <p>**Os modelos principais**</p>
 <p>À época da gravação, a linha de modelos da Anthropic inclui:</p>
@@ -1700,7 +1700,7 @@
 <p>Na GUI, há um seletor de modelo visível na interface principal.</p>
 </section>
 <section>
-<h2 id="s88">APLICAÇÃO PRÁTICA — RESUMO DE CASOS DE USO REAIS</h2>
+<h2 id="s88">APLICAÇÃO PRÁTICA — RESUMO DE CASOS DE USO REAIS <span class="ts-mark" aria-label="Momento no vídeo">3:33:41</span></h2>
 <p>O instrutor é dono de múltiplos negócios que coletivamente geram mais de 300.000 dólares por mês em lucro, e usa o Claude Code como infraestrutura central de operações. Esta seção consolida os casos de uso reais que ele demonstra ou menciona ao longo do curso.</p>
 <p>**Negócio de dental marketing**</p>
 <p>- Scraping de leads de dentistas nos EUA (skill scrape-leads)</p>
@@ -1729,7 +1729,7 @@
 <p>Ele não está romantizando isso nem sugerindo que IA é superior a humanos em tudo. Para trabalho criativo complexo, estratégia de alto nível e relacionamento com clientes, humanos ainda ganham. Mas para o trabalho operacional repetitivo que consome a maior parte do tempo de uma empresa em crescimento, a IA é uma alavancagem enorme.</p>
 </section>
 <section>
-<h2 id="s89">CONFIGURAÇÕES AVANÇADAS DO CLAUDE CODE</h2>
+<h2 id="s89">CONFIGURAÇÕES AVANÇADAS DO CLAUDE CODE <span class="ts-mark" aria-label="Momento no vídeo">3:35:07</span></h2>
 <p>Esta seção compila as configurações menos óbvias mas muito úteis do Claude Code que foram mencionadas ao longo do curso.</p>
 <p>**O arquivo settings.json**</p>
 <p>Localizado em `.claude/settings.json` no seu workspace (ou globalmente), este arquivo controla comportamentos específicos do Claude Code. Algumas configurações úteis:</p>
@@ -1767,7 +1767,7 @@
 <p>Para evitar poluir memórias de projetos diferentes, seja específico sobre onde salvar cada tipo de informação.</p>
 </section>
 <section>
-<h2 id="s90">BOAS PRÁTICAS — DICAS FINAIS DO INSTRUTOR</h2>
+<h2 id="s90">BOAS PRÁTICAS — DICAS FINAIS DO INSTRUTOR <span class="ts-mark" aria-label="Momento no vídeo">3:37:18</span></h2>
 <p>Consolidando os conselhos práticos que o instrutor distribui ao longo do curso, esta seção funciona como um checklist de boas práticas para qualquer pessoa que queira usar o Claude Code de forma profissional e eficiente.</p>
 <p>**Sobre configuração inicial**</p>
 <p>1. Invista tempo no seu claude.md — ele define a &ldquo;personalidade&rdquo; e as capacidades do seu agente. Um bom claude.md economiza horas de retrabalho em cada projeto.</p>
@@ -1796,7 +1796,7 @@
 <p>20. Documente o que funciona. Quando você encontrar um prompt que produziu um resultado excelente, salve como skill ou como nota no claude.md. Você vai querer reusar.</p>
 </section>
 <section>
-<h2 id="s91">O FLUXO COMPLETO — DA IDEIA AO PRODUTO EM PRODUÇÃO</h2>
+<h2 id="s91">O FLUXO COMPLETO — DA IDEIA AO PRODUTO EM PRODUÇÃO <span class="ts-mark" aria-label="Momento no vídeo">3:40:00</span></h2>
 <p>Para consolidar tudo que foi aprendido no curso, vale a pena percorrer o fluxo completo de um projeto real do início ao fim. O instrutor demonstrou isso várias vezes, mas esta seção vai explicitar cada etapa com clareza.</p>
 <p>**Etapa 1: Definir o problema com precisão**</p>
 <p>Antes de abrir o Claude Code, responda: O que precisa existir que não existe? Quem vai usar? Como vão usar? Quais são os critérios de sucesso?</p>
@@ -1834,7 +1834,7 @@
 <p>Sistemas de IA não são &ldquo;build once, forget forever&rdquo;. O que funciona hoje pode precisar de ajustes amanhã quando os dados ou requisitos mudam. Mantenha um registro de como suas skills e sistemas estão performando.</p>
 </section>
 <section>
-<h2 id="s92">CONSTRUINDO UM NEGÓCIO COM CLAUDE CODE — A VISÃO DO INSTRUTOR</h2>
+<h2 id="s92">CONSTRUINDO UM NEGÓCIO COM CLAUDE CODE — A VISÃO DO INSTRUTOR <span class="ts-mark" aria-label="Momento no vídeo">3:41:38</span></h2>
 <p>Nos momentos mais pessoais do curso, o instrutor compartilha reflexões mais amplas sobre o impacto do Claude Code em sua vida profissional e nos negócios que opera.</p>
 <p>**&ldquo;Por que eu não contrato mais funcionários&rdquo;**</p>
 <p>Essa frase resume muito da filosofia do instrutor. Ele construiu um portfólio de negócios que gera mais de 300.000 dólares por mês em lucro sem uma equipe grande. As funções que antes exigiam contratações específicas — pesquisador, desenvolvedor de ferramentas, operador de leads, gestor de e-mails — são agora executadas por sistemas de IA que ele mesmo construiu.</p>
@@ -1853,7 +1853,7 @@
 <p>&ldquo;Se tiver dúvidas sobre qualquer coisa que mostrei no vídeo, deixe nos comentários. Terei um bom dia, e até o próximo curso.&rdquo;</p>
 </section>
 <section>
-<h2 id="s93">REFERÊNCIA RÁPIDA — COMANDOS E ATALHOS DO CLAUDE CODE</h2>
+<h2 id="s93">REFERÊNCIA RÁPIDA — COMANDOS E ATALHOS DO CLAUDE CODE <span class="ts-mark" aria-label="Momento no vídeo">3:43:51</span></h2>
 <p>Um guia de referência rápida para todos os comandos e atalhos mencionados ao longo do curso.</p>
 <p>**Comandos de barra (/)**</p>
 <p>| Comando | O que faz |</p>
@@ -1907,7 +1907,7 @@
 <p>```</p>
 </section>
 <section>
-<h2 id="s94">PERGUNTAS FREQUENTES — DÚVIDAS COMUNS DE INICIANTES</h2>
+<h2 id="s94">PERGUNTAS FREQUENTES — DÚVIDAS COMUNS DE INICIANTES <span class="ts-mark" aria-label="Momento no vídeo">3:45:36</span></h2>
 <p>Ao longo do curso, o instrutor antecipa e responde diversas dúvidas que iniciantes costumam ter. Esta seção compila as mais importantes.</p>
 <p>**&ldquo;Preciso saber programar para usar o Claude Code?&rdquo;**</p>
 <p>Não. O instrutor é explícito sobre isso desde o início. Você vai escrever código ao trabalhar com o Claude Code, mas você não precisa escrever esse código — o Claude escreve por você. O que você precisa é descrever claramente o que quer que o sistema faça.</p>
@@ -1952,7 +1952,7 @@
 <p>Para automatizações no Mac, scripts AppleScript e Shell também funcionam. Para integração com Microsoft Office, VBA scripts são possíveis. A skill.md é a cola que conecta tudo — os scripts em si podem ser escritos no idioma que faz mais sentido para cada tarefa.</p>
 </section>
 <section>
-<h2 id="s95">TOMADA DE SCREENSHOTS — LOOP VISUAL DE DESENVOLVIMENTO</h2>
+<h2 id="s95">TOMADA DE SCREENSHOTS — LOOP VISUAL DE DESENVOLVIMENTO <span class="ts-mark" aria-label="Momento no vídeo">3:48:52</span></h2>
 <p>Uma técnica central no workflow de desenvolvimento com Claude Code é o uso sistemático de screenshots para feedback visual. O instrutor demonstra isso repetidamente e vale a pena entender em profundidade como funciona.</p>
 <p>**Por que screenshots são tão poderosos**</p>
 <p>Quando você está construindo uma interface visual — site, app, dashboard — texto descrevendo &ldquo;o botão está um pouco para a esquerda&rdquo; é impreciso e sujeito a interpretação. Uma screenshot elimina toda ambiguidade: o Claude vê exatamente o que você está vendo.</p>
@@ -2000,7 +2000,7 @@
 <p>- Quando a interface estiver quase certa, use descrições textuais para os últimos ajustes finos em vez de mais screenshots</p>
 </section>
 <section>
-<h2 id="s96">INTEGRAÇÃO COM FERRAMENTAS NO-CODE — N8N, MAKE E ZAPIER</h2>
+<h2 id="s96">INTEGRAÇÃO COM FERRAMENTAS NO-CODE — N8N, MAKE E ZAPIER <span class="ts-mark" aria-label="Momento no vídeo">3:51:03</span></h2>
 <p>Um tema que aparece no final do curso mas merece atenção especial é como o Claude Code se integra com plataformas de automação no-code. Isso abre um novo nível de possibilidades para empreendedores que já usam essas ferramentas.</p>
 <p>**A ponte: webhooks e URLs públicas**</p>
 <p>Plataformas como n8n, Make.com, Zapier e Lindy se comunicam com o mundo externo principalmente via webhooks — URLs que recebem dados quando um evento acontece, ou que você chama para disparar uma ação.</p>
@@ -2029,7 +2029,7 @@
 <p>O Claude Code pode construir um endpoint com todas essas características em poucos minutos, dado um prompt bem descrito.</p>
 </section>
 <section>
-<h2 id="s97">NETLIFY — PUBLICANDO SITES ESTÁTICOS INSTANTANEAMENTE</h2>
+<h2 id="s97">NETLIFY — PUBLICANDO SITES ESTÁTICOS INSTANTANEAMENTE <span class="ts-mark" aria-label="Momento no vídeo">3:54:07</span></h2>
 <p>Para sites e aplicações que não precisam de backend dinâmico (HTML, CSS, JavaScript puro), o Netlify é a solução mais rápida e simples que o instrutor recomenda.</p>
 <p>**O que é o Netlify**</p>
 <p>Netlify é uma plataforma de hospedagem que permite publicar sites estáticos gratuitamente com uma URL pública. O plano gratuito é generoso o suficiente para a maioria dos projetos pessoais e até alguns profissionais.</p>
@@ -2053,7 +2053,7 @@
 <p>Para projetos complexos, você pode usar ambos: Netlify para o frontend, Modal para as APIs que o frontend consome.</p>
 </section>
 <section>
-<h2 id="s98">MODOS DE OPERAÇÃO — INTERATIVO VS HEADLESS</h2>
+<h2 id="s98">MODOS DE OPERAÇÃO — INTERATIVO VS HEADLESS <span class="ts-mark" aria-label="Momento no vídeo">3:55:56</span></h2>
 <p>Uma distinção importante que o instrutor menciona brevemente mas é valiosa entender é a diferença entre os modos de operação do Claude Code.</p>
 <p>**Modo interativo (padrão)**</p>
 <p>O modo padrão que usamos ao longo de todo o curso. Você abre o Claude Code, digita mensagens, e o Claude responde e executa ações. Há um loop de conversa onde você fornece direcionamento e feedback.</p>
@@ -2081,7 +2081,7 @@
 <p>Isso fecha o ciclo: você constrói com o Claude Code interativamente, extrai o workflow como skill, e depois disponibiliza essa skill como serviço via Modal. O resultado é um sistema que executa a inteligência do Claude de forma autônoma, sem nenhuma interação humana no loop.</p>
 </section>
 <section>
-<h2 id="s99">CONSTRUINDO O APP DE PROPOSTAS — PASSO A PASSO DETALHADO</h2>
+<h2 id="s99">CONSTRUINDO O APP DE PROPOSTAS — PASSO A PASSO DETALHADO <span class="ts-mark" aria-label="Momento no vídeo">3:56:44</span></h2>
 <p>Esta seção reconstrói o fluxo completo da demonstração mais longa do curso: o app de geração de propostas comerciais. Este é o projeto que melhor ilustra o processo completo de desenvolvimento com Claude Code.</p>
 <p>**O problema a resolver**</p>
 <p>O instrutor precisa de um sistema onde, dado o nome ou URL de um prospect, o sistema pesquisa informações sobre a empresa e gera automaticamente uma proposta comercial personalizada em formato HTML profissional.</p>
@@ -2126,7 +2126,7 @@
 <p>O processo demonstra que o valor não está apenas no produto final, mas na velocidade com que você pode iterá-lo. Quando você pode testar uma ideia em 2 horas ao invés de 2 semanas, você se permite explorar muito mais possibilidades. A maioria das ideias de produto morre não porque são ruins, mas porque o custo de testar é alto demais. O Claude Code remove esse obstáculo.</p>
 </section>
 <section>
-<h2 id="s100">PARALELIZAÇÃO — O PRINCÍPIO FUNDAMENTAL</h2>
+<h2 id="s100">PARALELIZAÇÃO — O PRINCÍPIO FUNDAMENTAL <span class="ts-mark" aria-label="Momento no vídeo">4:00:52</span></h2>
 <p>Um conceito que permeia todo o curso — de sub-agentes a agent teams a git worktrees — é a paralelização. O instrutor volta a ele várias vezes de diferentes ângulos porque entender quando e como paralelizar determina muito do valor que você extrai do Claude Code.</p>
 <p>**O problema do trabalho serial**</p>
 <p>Imagine que você tem três tarefas que precisam ser feitas: pesquisar o mercado, construir um protótipo e escrever o pitch. Feitas em série:</p>
@@ -2163,7 +2163,7 @@
 <p>Para um empreendedor cujo tempo vale 100 dólares por hora, economizar 5 horas de trabalho por 50 dólares em tokens extras é um excelente ROI. Para um estudante usando o Claude Code para aprender, talvez não faça sentido gastar mais em tokens quando tempo não é tão escasso.</p>
 </section>
 <section>
-<h2 id="s101">GESTÃO DE ERROS E DEBUGGING COM CLAUDE CODE</h2>
+<h2 id="s101">GESTÃO DE ERROS E DEBUGGING COM CLAUDE CODE <span class="ts-mark" aria-label="Momento no vídeo">4:02:47</span></h2>
 <p>Uma das situações que todo usuário do Claude Code vai enfrentar é o agente encontrando erros durante a execução. Entender como o Claude lida com erros — e como você pode ajudar quando ele trava — é fundamental para projetos complexos.</p>
 <p>**O comportamento padrão do Claude diante de erros**</p>
 <p>Quando um script falha ou um comando retorna um erro, o comportamento padrão do Claude é tentar resolver automaticamente:</p>
@@ -2202,7 +2202,7 @@
 <p>O Claude atualiza o skill.md automaticamente quando encontra um erro recorrente — mas só se você pedir explicitamente ou se houver uma instrução no claude.md para fazer isso.</p>
 </section>
 <section>
-<h2 id="s102">A FILOSOFIA POR TRÁS DO CLAUDE CODE — REFLEXÕES DO INSTRUTOR</h2>
+<h2 id="s102">A FILOSOFIA POR TRÁS DO CLAUDE CODE — REFLEXÕES DO INSTRUTOR <span class="ts-mark" aria-label="Momento no vídeo">4:05:38</span></h2>
 <p>Além dos aspectos técnicos, o instrutor distribui ao longo do curso reflexões mais filosóficas sobre o papel do Claude Code, o futuro do trabalho e a relação humano-IA.</p>
 <p>**&ldquo;O que é inteligência mesmo?&rdquo;**</p>
 <p>Uma passagem reveladora do curso acontece durante a demonstração dos agent teams, quando os agentes geram sites criativos inspirados em diferentes estilos. Alguém poderia argumentar que &ldquo;IA não é criativa — só combina coisas existentes.&rdquo;</p>
@@ -2224,7 +2224,7 @@
 <p>Esta reflexão ressoa com a audiência do curso, que está decidindo se vai investir tempo aprendendo essa ferramenta. Uma empresa que constrói com esse mindset provavelmente vai continuar inovando no interesse dos usuários.</p>
 </section>
 <section>
-<h2 id="s103">RECURSOS ADICIONAIS E PRÓXIMOS PASSOS</h2>
+<h2 id="s103">RECURSOS ADICIONAIS E PRÓXIMOS PASSOS <span class="ts-mark" aria-label="Momento no vídeo">4:08:20</span></h2>
 <p>Para continuar aprendendo além do que foi coberto neste curso, o instrutor aponta alguns recursos e direções para aprofundamento.</p>
 <p>**Documentação oficial**</p>
 <p>O site de documentação da Anthropic para o Claude Code é atualizado constantemente e contém as informações mais atualizadas sobre:</p>

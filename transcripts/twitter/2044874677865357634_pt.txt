@@ -1,5 +1,5 @@
 ================================================================================
-INTRODUÇÃO
+[0:00] INTRODUÇÃO
 
 Olá, pessoal. Sou Boris, faço parte da equipe técnica da Anthropic e criei o Claude Code. Esta é uma conversa sobre dicas e truques práticos para usar o Claude Code. O foco aqui é ser bem prático — sem muita história, sem muita teoria.
 
@@ -7,7 +7,7 @@ Antes de começar, vale um pedido rápido: quem já usou o Claude Code? Ótimo, 
 
 
 ================================================================================
-O QUE É O CLAUDE CODE
+[1:27] O QUE É O CLAUDE CODE
 
 O Claude Code é um novo tipo de assistente de IA. Houve várias gerações de assistentes de IA para programação, e a maioria delas funcionava completando uma linha por vez ou poucas linhas de cada vez. O Claude Code não é isso. É totalmente agêntico. Foi feito para construir funcionalidades inteiras, escrever funções inteiras, arquivos inteiros, corrigir bugs inteiros de uma vez.
 
@@ -17,7 +17,7 @@ Outra característica legal é que o Claude Code funciona com todas as ferrament
 
 
 ================================================================================
-CONFIGURAÇÃO INICIAL RECOMENDADA
+[3:04] CONFIGURAÇÃO INICIAL RECOMENDADA
 
 Ao abrir o Claude Code pela primeira vez, há algumas recomendações simples para deixar o ambiente afiado.
 
@@ -31,7 +31,7 @@ Um detalhe pessoal: boa parte dos prompts não é digitada no Claude Code. No ma
 
 
 ================================================================================
-COMECE PELO Q&A SOBRE O CÓDIGO
+[4:19] COMECE PELO Q&A SOBRE O CÓDIGO
 
 Com toda essa liberdade do Claude Code, por onde começar? A recomendação principal é começar fazendo perguntas sobre o código-base. Isso é o que a Anthropic ensina para novos contratados. No primeiro dia do onboarding técnico, a pessoa aprende sobre o Claude Code, baixa, configura, e imediatamente começa a fazer perguntas sobre o código-base.
 
@@ -41,7 +41,7 @@ Outro aspecto interessante do Q&A: não há indexação. Não existe banco de da
 
 
 ================================================================================
-EXEMPLOS DE PERGUNTAS
+[4:46] EXEMPLOS DE PERGUNTAS
 
 Esta é uma palestra técnica, então vale mostrar prompts e exemplos concretos para elevar a experiência com o Claude Code.
 
@@ -57,7 +57,7 @@ Para quem ainda não usou o Claude Code, ou está mostrando para alguém pela pr
 
 
 ================================================================================
-EDIÇÃO DE CÓDIGO COM FERRAMENTAS
+[7:14] EDIÇÃO DE CÓDIGO COM FERRAMENTAS
 
 Depois de ficar confortável com Q&A, a próxima etapa é editar código. O legal de qualquer uso agêntico de um LLM é que basta dar ferramentas ao modelo e ele, como que por mágica, descobre como usá-las. No Claude Code, o conjunto de ferramentas é bem pequeno. Não é muita coisa: existe uma ferramenta para editar arquivos, uma para rodar comandos bash, uma para buscar arquivos. O Claude Code encadeia essas ferramentas para explorar o código, fazer brainstorm e, por fim, editar.
 
@@ -65,7 +65,7 @@ E não é preciso instruir o modelo a usar esta ou aquela ferramenta. Basta dize
 
 
 ================================================================================
-PEÇA UM PLANO ANTES DE ESCREVER CÓDIGO
+[8:29] PEÇA UM PLANO ANTES DE ESCREVER CÓDIGO
 
 Algo que funciona muito bem é, antes de deixar o Claude partir para escrever código, pedir um brainstorm ou um plano. É uma prática altamente recomendada.
 
@@ -75,7 +75,7 @@ Outro padrão que vale mencionar: "commit, push, PR". É um encantamento comum q
 
 
 ================================================================================
-PLUGUE AS FERRAMENTAS DO SEU TIME
+[8:31] PLUGUE AS FERRAMENTAS DO SEU TIME
 
 À medida que o uso avança, vale plugar as ferramentas do time. É aí que o Claude Code realmente brilha. Existem, em geral, dois tipos de ferramentas.
 
@@ -85,7 +85,7 @@ O segundo tipo são servidores MCP. O Claude Code consegue usar ferramentas bash
 
 
 ================================================================================
-FLUXOS COMUNS DE TRABALHO
+[11:05] FLUXOS COMUNS DE TRABALHO
 
 Existem alguns fluxos comuns. Um já mencionado: explorar um pouco, planejar um pouco, pedir confirmação antes de escrever código.
 
@@ -97,7 +97,7 @@ Os próximos passos, então: ensinar o Claude a usar as ferramentas do time e de
 
 
 ================================================================================
-DANDO CONTEXTO AO CLAUDE COM CLAUDE.md
+[14:03] DANDO CONTEXTO AO CLAUDE COM CLAUDE.md
 
 Indo mais fundo: além das ferramentas, vale dar mais contexto ao Claude. Quanto mais contexto, melhores as decisões. Um engenheiro que trabalha numa base de código carrega muito contexto na cabeça — sobre os sistemas, o histórico, tudo. Há diferentes formas de transferir esse contexto para o Claude, e quanto mais ele recebe, melhor ele fica.
 
@@ -113,7 +113,7 @@ E, claro, se for uma empresa que quer um `CLAUDE.md` compartilhado entre bases d
 
 
 ================================================================================
-MUITAS FORMAS DE CARREGAR CONTEXTO
+[14:07] MUITAS FORMAS DE CARREGAR CONTEXTO
 
 Há várias formas de carregar contexto — montar esse slide deu trabalho, só para conseguir comunicar a variedade de opções.
 
@@ -125,7 +125,7 @@ Vale a pena investir tempo em ajustar esse contexto. Rodar num prompt improver, 
 
 
 ================================================================================
-HIERARQUIA DE CONFIGURAÇÕES
+[19:29] HIERARQUIA DE CONFIGURAÇÕES
 
 À medida que o uso amadurece, vale pensar na hierarquia de formas de puxar tudo — não só `CLAUDE.md`, mas também configurações e qualquer coisa do Claude que possa ser puxada de forma hierárquica.
 
@@ -141,7 +141,7 @@ Se houver dúvida sobre qual dessas opções usar — é uma matriz meio insana,
 
 
 ================================================================================
-FERRAMENTAS DE GESTÃO DE MEMÓRIA
+[19:37] FERRAMENTAS DE GESTÃO DE MEMÓRIA
 
 Há várias ferramentas dentro do Claude para gerenciar tudo isso. Um exemplo: `/memory` mostra todos os arquivos de memória sendo puxados — a política enterprise, a memória de usuário, o `CLAUDE.md` de projeto, e eventualmente algum `CLAUDE.md` aninhado puxado em certos diretórios.
 
@@ -153,7 +153,7 @@ Um exemplo disso está no repositório de apps da Anthropic, onde mora o código
 
 
 ================================================================================
-ATALHOS DE TECLADO
+[22:08] ATALHOS DE TECLADO
 
 Esta é uma palestra sobre dicas avançadas, mas vale um intervalo rápido para atalhos que muita gente não conhece. Construir para terminal é difícil e divertido — parece redescobrir uma nova linguagem de design. Mas o terminal é extremamente minimalista e às vezes é difícil descobrir os atalhos. Segue uma referência rápida.
 
@@ -169,7 +169,7 @@ Depois da sessão, `--resume` retoma aquela sessão, ou `--continue` também ser
 
 
 ================================================================================
-O SDK DO CLAUDE CODE
+[22:16] O SDK DO CLAUDE CODE
 
 A próxima coisa a comentar é o SDK do Claude Code. Logo depois desta palestra, Sid vai conduzir uma sessão do outro lado do corredor aprofundando o SDK.
 
@@ -185,7 +185,7 @@ Dá para ler de um bucket do GCP: pegar um log gigante, pipar para dentro e pedi
 
 
 ================================================================================
-USUÁRIOS AVANÇADOS E PARALELISMO
+[22:19] USUÁRIOS AVANÇADOS E PARALELISMO
 
 A última dica, e provavelmente o caso de uso mais avançado, é sobre paralelismo. No uso pessoal, o padrão é tipo "Claude normie": geralmente uma única instância do Claude rodando ao mesmo tempo, talvez algumas abas de terminal para diferentes repositórios.
 
@@ -195,7 +195,7 @@ A Anthropic está trabalhando ativamente para tornar tudo isso mais fácil. Por 
 
 
 ================================================================================
-ENCERRAMENTO
+[22:30] ENCERRAMENTO
 
 É isso. A ideia também era deixar um tempo para Q&A.
 

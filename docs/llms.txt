@@ -162,7 +162,7 @@
 - [Behavioral Finance: Psychology, Manipulation, and Integrity in Markets](https://adhenawer.net/posts/original/behavioral-finance-psychology-manipulation-integrity-markets.html)
   Source: Robert Shiller · Yale Open Courses
 
-- [Agentic AI: The Progression of Language Model Usage](https://adhenawer.net/posts/original/agentic-ai-progression-language-model-usage.html)
+- [Agentic AI: Progression of Language Model Usage](https://adhenawer.net/posts/original/agentic-ai-progression-language-model-usage.html)
   Source: Inseo Bong · Stanford Online
 
 - [Why We Stopped Building Agents and Started Building Skills](https://adhenawer.net/posts/original/why-we-stopped-building-agents-started-building-skills.html)
@@ -171,5 +171,5 @@
 - [FABIO AKITA - Flow #588](https://adhenawer.net/posts/original/fabio-akita-flow-588.html)
   Source: Fabio Akita · Flow Podcast
 
-- [The Complete Claude Code Course — 4 Hours](https://adhenawer.net/posts/original/complete-claude-code-course-4-hours.html)
-  Source: Nick Saraev
+- [Complete Claude Code Course — 4 Hours](https://adhenawer.net/posts/original/complete-claude-code-course-4-hours.html)
+  Source: Marco Fernández · Twitter/X

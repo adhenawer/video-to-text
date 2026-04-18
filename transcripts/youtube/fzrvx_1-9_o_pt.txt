@@ -1,0 +1,74 @@
+================================================================================
+[5:28] INTRODUÇÃO
+
+Este tutorial mostra na prática como usar o Claude Code para construir um sistema de suporte ao cliente por e-mail — do zero até uma aplicação funcionando localmente, em tempo real, sem cortes. O instrutor é Sunnonni Savvita, mentor de tecnologia na PwC.
+
+O projeto escolhido é um agente de e-mail inteligente: recebe mensagens, classifica por tipo e urgência, gera respostas automáticas usando IA e exibe tudo numa interface web com inbox e API docs. Um sistema completo, não um tutorial simplificado.
+
+================================================================================
+[15:47] CONFIGURANDO O CLAUDE CODE
+
+O Claude Code pode ser instalado de quatro formas: via terminal/CLI (comando npm install -g @anthropic-ai/claude-code), via extensão do VS Code, via aplicativo desktop (disponível para Windows, Mac e Linux), ou pela versão web. O tutorial cobre as duas primeiras opções.
+
+Para Windows, há um requisito importante: o Git precisa estar instalado antes do Claude Code, porque ele usa o Git Bash internamente para executar comandos em background. Sem o Git, o Claude Code não consegue executar os scripts que gera.
+
+Após a instalação, você roda o comando claude e escolhe o método de autenticação: pelo plano Pro (claude.ai) ou por API Key. O tutorial usa API Key, que dá mais controle sobre custos mas exige configurar o billing no console da Anthropic.
+
+A ABORDAGEM: MÓDULO A MÓDULO
+
+A estratégia recomendada para projetos maiores: não pedir ao Claude Code para construir tudo de uma vez. Em vez disso, abrir a pasta do projeto e instruir o agente a inspecionar o projeto e trabalhar módulo a módulo.
+
+O fluxo típico: abrir a pasta do projeto no terminal, rodar claude, descrever o que quer construir em alto nível, e depois iterar por partes. O agente lê os arquivos existentes antes de escrever código novo — o que garante consistência com o que já existe.
+
+Para este projeto, o prompt inicial descreve o sistema de suporte ao cliente: classificar e-mails por categoria e urgência, gerar respostas automáticas, criar banco de dados para histórico, interface web com inbox e formulário de teste.
+
+O QUE O CLAUDE CODE CONSTRUIU
+
+Em cerca de 1 hora de sessão (consumindo 100% do limite de tokens), o Claude Code criou:
+
+Estrutura do projeto: diretório src com módulos separados — main.py (rotas Flask), models.py (modelos de dados), workflow.py (orquestração do agente), config.py (configurações), database.py (SQLite), e schema de banco de dados.
+
+Sistema de classificação: classificador de e-mails que determina categoria (suporte técnico, cobrança, cancelamento, etc.) e prioridade (alta, média, baixa), com análise de keywords críticas.
+
+Knowledge base: sistema RAG básico com documentos de suporte, usando embeddings para busca semântica. Inicialmente gerou com sentence-transformers (modelo local) mas foi reconfigurado para usar embeddings da OpenAI.
+
+Interface web: três páginas — formulário para testar e-mails com campos de remetente, assunto e corpo; inbox mostrando todos os e-mails processados com status e metadados; e documentação interativa das APIs (Swagger-style).
+
+API completa: rotas para submeter e-mail, consultar inbox, verificar status de processamento, e acessar os logs do agente.
+
+================================================================================
+[38:37] ERROS E DEBUGGING NA PRÁTICA
+
+O tutorial não corta os erros — e isso é valioso para entender o que esperar do vibe coding na prática.
+
+Problema com o arquivo .env: o agente gerou o código referenciando variáveis de ambiente com nomes diferentes dos que o usuário tinha configurado. O agente ficou editando o .env automaticamente (porque o modo “auto-accept” estava ativado), o que causou confusão — a chave da API sendo sobrescrita repetidamente.
+
+Problema com o modelo OpenAI: o agente configurou inicialmente com sentence-transformers para embeddings. Quando o usuário pediu para mudar para OpenAI, o agente precisou de algumas iterações para acertar o nome correto do modelo (`gpt-4-turbo-preview` vs variantes).
+
+A lição explícita do tutorial: quando você dá autonomia total ao agente para editar arquivos, ele vai editar o .env também. Para valores sensíveis como chaves de API, é mais seguro usar o modo “ask before edit” em vez de “auto-accept”.
+
+================================================================================
+[1:07:47] RESULTADO FINAL
+
+Depois de resolver as questões de configuração e API key, o sistema funcionou como esperado:
+
+- E-mails submetidos pelo formulário são classificados por categoria e urgência
+
+- O agente gera uma resposta personalizada usando o LLM
+
+- Toda a conversa fica logada no inbox com detalhes: remetente, assunto, corpo, classificação, keywords identificadas, resposta gerada, status de envio
+
+- A parte de envio real de e-mail falhou (esperado — precisaria das credenciais da API Gmail), mas o fluxo completo de processamento e geração de resposta funcionou
+
+O que ficou de fora para o próximo vídeo: deploy na AWS com infraestrutura como código e CI/CD via GitHub Actions.
+
+================================================================================
+[1:41:03] LIÇÕES DO PROCESSO
+
+Plano sobre execução: antes de aprovar um plano que o Claude Code gera, leia com atenção. Se algo estiver claramente errado, corrija antes de apertar “approve”. Uma vez que começa a executar, o agente segue o plano — e corrigir no meio custa mais tokens do que ajustar o plano antes.
+
+Compact mode: quando o contexto fica grande e você está perto do limite de tokens, ativar o “compact” faz o agente criar um resumo comprimido do trabalho feito, liberando espaço para continuar. Útil para projetos longos.
+
+Limites de tokens são reais: o agente consumiu 100% do limite numa sessão de 2 horas construindo um sistema moderadamente complexo. Para projetos maiores, considere dividir em múltiplas sessões ou usar planos com limites maiores.
+
+Vibe coding tem limites: o instructor mostra honestamente que código gerado sem especificação precisa — especialmente para integração com serviços externos como Gmail API ou configurações de variáveis de ambiente — vai precisar de ajuste manual. Quanto mais específico e técnico for o domínio, mais você precisa guiar o agente com detalhes.

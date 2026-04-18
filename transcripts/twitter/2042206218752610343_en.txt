@@ -1,5 +1,5 @@
 ================================================================================
-INTRODUCTION
+[0:00] INTRODUCTION
 
 In this video, I’m going to walk you through every single feature in Claude, from the basics all the way up to the more advanced techniques like creating automations that do the heavy lifting for you. I’m also going to show you how to build your AI operating system — the setup that turns Claude into your executive assistant.
 
@@ -8,7 +8,7 @@ I use Claude every single day. Researching, scripting, strategy, brainstorming, 
 This is the full Claude guide. Let’s get right into it.
 
 ================================================================================
-ACCOUNT SETUP AND CHOOSING THE RIGHT PLAN
+[0:36] ACCOUNT SETUP AND CHOOSING THE RIGHT PLAN
 
 If you don’t have a Claude account yet, signup takes about two minutes. If you already have one, you can skip ahead — but even then I recommend sticking around for the plan breakdown, because most people are on the wrong plan for what they’re actually trying to do.
 
@@ -19,7 +19,7 @@ What I recommend to every person wanting to actually get into AI is to get some 
 Once you click “Try Claude” and sign up with Apple or Google, you’re in. You’ll see the prompt bar in the middle of the screen, the model selector (I’m usually on Opus 4.6 or Sonnet 4.6 — Sonnet for everyday tasks, Opus for more ambitious work), a voice mode, and a plus button for features. On the left you create new chats, open the sidebar to view past conversations, and navigate your workspace. You can star, rename, and attach chats to projects.
 
 ================================================================================
-HOW TO TALK TO CLAUDE — THE GCAO FRAMEWORK
+[3:26] HOW TO TALK TO CLAUDE — THE GCAO FRAMEWORK
 
 Before any features, one thing decides whether Claude is useful to you: how you talk to it. Most people write something vague like “write me an email” or “give me a business plan,” get something generic back, and conclude that’s just how AI works. It’s not. Claude is only as good as what you give it. The more context and specificity, the dramatically better the output gets.
 
@@ -37,7 +37,7 @@ Sent with the exact same model, this prompt returns specific content angles for 
 Most people stop at the first answer, but iteration is where the value compounds. Keep talking to the model until you get what you want. “Give me six more variations of number two.” There have been times I’ve sat with Claude for seven or eight hours straight until I got the answer I was satisfied with. Don’t be scared — ask anything, no matter how dumb the question seems, until you figure out what you want.
 
 ================================================================================
-WEB SEARCH — LIVE RESEARCH AT YOUR FINGERTIPS
+[9:20] WEB SEARCH — LIVE RESEARCH AT YOUR FINGERTIPS
 
 Claude isn’t just a chat window where you type in and type out. It can see images and search the internet in real time, which turns it from a glorified Google search into a full research and analysis tool.
 
@@ -50,7 +50,7 @@ As an example: “Use web search to research Andy Elliott’s coaching offer, co
 You can do the same with current events, market info, tool documentation, or have it create content informed by live research.
 
 ================================================================================
-VISION — CLAUDE CAN SEE
+[12:41] VISION — CLAUDE CAN SEE
 
 Vision is one of those features that if you’re not using it, you need to start. Claude can actually see images — screenshots, photos, documents — analyze them, and give you feedback.
 
@@ -59,7 +59,7 @@ Think about this in business terms. Take a screenshot of your website and ask, �
 As a demo, I uploaded a YouTube thumbnail of mine — “Sellable AI Systems Under 20 Minutes” — and asked for feedback to increase click-through rate. Claude came back with honest critique: the title has a framing problem (“sellable AI systems” is insider language compared to something like “How I build AI systems clients pay 5K for”); the face is too passive (“hand on chin is thoughtful, not excited or authoritative”). It can read images well enough to tear your thumbnails apart — and once you accept that, ideas for how this fits into your own work start jogging through your mind.
 
 ================================================================================
-ARTIFACTS — BUILDING REAL TOOLS IN MINUTES
+[14:40] ARTIFACTS — BUILDING REAL TOOLS IN MINUTES
 
 Artifacts is the feature that blows people’s minds the first time they see it. You can ask Claude to create something substantial — a tool, calculator, dashboard, form, or interactive document — and instead of text, it opens an entirely new panel and builds you a fully working thing right there in the conversation, without any code or technical knowledge on your part.
 
@@ -70,7 +70,7 @@ Example prompt: “Build an interactive ROI calculator for business owners consi
 For this kind of task, Opus 4.6 is better — it codes better and builds these things more reliably. The result is a one-shot prompt: a mini app with dynamic inputs, live calculation of annual cost of manual work, and a simple ROI output. From the top-right corner you can download it, publish it, and copy a public link. Great for MVPs, mini animations, visual explainers, and internal tools.
 
 ================================================================================
-CUSTOM INSTRUCTIONS — THE FOUNDATION OF YOUR AI OS
+[18:41] CUSTOM INSTRUCTIONS — THE FOUNDATION OF YOUR AI OS
 
 Everything so far works with zero setup in a blank conversation. But Claude has a place to give it permanent instructions — rules it follows every time you talk to it. This is called custom instructions, and it’s where Claude goes from a good tool to something that works for you specifically.
 
@@ -81,7 +81,7 @@ A silly demo first: I told Claude, “When I say pirate mode, answer like a pira
 Now imagine instead of writing backwards, you tell Claude your name, role, business, communication style, and preferred response format. Instead of re-explaining yourself every conversation, you tell it once and it remembers forever.
 
 ================================================================================
-BUILDING YOUR AI OPERATING SYSTEM
+[23:08] BUILDING YOUR AI OPERATING SYSTEM
 
 To make custom instructions truly useful, use a structured template built around five sections. This is how you build an AI operating system — not just prompts, but a thinking partner that already understands you.
 
@@ -100,7 +100,7 @@ Quick demos after saving: “What is my YT channel at?” — “300K subs.” �
 This is what puts you in the top 1% of users — because nobody is doing this. Fifteen minutes once, and it works forever.
 
 ================================================================================
-PROJECTS — DEDICATED WORKSPACES WITH CONTEXT
+[28:38] PROJECTS — DEDICATED WORKSPACES WITH CONTEXT
 
 Custom instructions are the personal layer. Projects build on top of that.
 
@@ -117,7 +117,7 @@ Now when I ask, “I want to create a video script for how to use Claude for beg
 You can invite teams to projects. That matters: if everyone’s using their own improvised model, how do you know it isn’t validating the wrong idea? Getting people into a shared project keeps the team aligned on the same system.
 
 ================================================================================
-SKILLS — TEACHING CLAUDE HOW TO DO REPEATABLE TASKS
+[35:19] SKILLS — TEACHING CLAUDE HOW TO DO REPEATABLE TASKS
 
 Skills are where things really get powerful. Custom instructions are the foundation, projects are the workspace, and skills teach Claude how to do specific tasks exactly the way you want them done.
 
@@ -140,7 +140,7 @@ Picture this for a service business. My dad’s in construction — he gets home
 Quick clarification, because people ask: what’s the difference between projects and skills? Projects are context — they hold your knowledge, documents, client info. Skills are processes — they know how to do a specific task the same way every time. One holds knowledge; the other holds instructions. They work together.
 
 ================================================================================
-CONNECTORS — PLUGGING CLAUDE INTO YOUR REAL TOOLS
+[43:22] CONNECTORS — PLUGGING CLAUDE INTO YOUR REAL TOOLS
 
 Connectors take Claude from a standalone tool to something that plugs into what you already use for work. They let Claude talk directly to Google Calendar, Gmail, Google Drive, Slack, GitHub, and a growing list of others — new ones added every week.
 
@@ -157,7 +157,7 @@ Once connected: “What events do I have coming up next week?” Claude searches
 The real power: connectors can pull from multiple sources and synthesize one response — calendar, email, and your personalized context together. That’s when Claude isn’t just writing text anymore. It’s pulling from your actual tools, combining the information, and giving you something you can act on immediately.
 
 ================================================================================
-THE FULL STACK — HOW IT ALL FITS TOGETHER
+[47:26] THE FULL STACK — HOW IT ALL FITS TOGETHER
 
 Let me pull everything together so you can see how the features work as one system, not a bunch of individual tricks.
 
@@ -172,7 +172,7 @@ Finally, connectors tie it to your real tools — calendar, email, Google Drive,
 Personal instructions, project context, trained skills, connected tools. Most people are typing questions into a blank chat bar — that’s level one. Now you know what level five looks like.
 
 ================================================================================
-CLOSING — START WHERE YOU ARE
+[48:45] CLOSING — START WHERE YOU ARE
 
 Honestly, this didn’t happen to me overnight. I’ve been using AI for three years and I started exactly where you are — one conversation, one decent prompt. Then I’d templatize prompts so I could reuse them. Then I realized you could save those as instructions. Then I started building projects, then skills. It stacks over time.
 

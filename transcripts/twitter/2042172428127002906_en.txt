@@ -1,5 +1,5 @@
 ================================================================================
-INTRODUCTION
+[0:03] INTRODUCTION
 
 I'm Barry, this is Mahesh. We created Agent Skills. In this talk, we'll show you why we stopped building agents and started building skills instead.
 
@@ -8,7 +8,7 @@ A lot of things have changed since our last talk. MCP became the standard for ag
 Put simply, we think code is all we need.
 
 ================================================================================
-CODE AS A UNIVERSAL INTERFACE
+[0:17] CODE AS A UNIVERSAL INTERFACE
 
 We used to think agents in different domains would look very different. Each one would need its own tools and scaffolding, which meant a separate agent for each use case in each domain. While customization is still important, the agent underneath is actually more universal than we thought.
 
@@ -17,7 +17,7 @@ What we realized is that code is not just a use case, but a universal interface 
 Think about generating a financial report. The model can call an API to pull in data and do research. It can organize that data in the file system. It can analyze with Python and then synthesize the insight in any file format — all through code. The core scaffolding can suddenly become as thin as just bash and the file system, which is great and really scalable. But we very quickly ran into a different problem.
 
 ================================================================================
-THE DOMAIN EXPERTISE PROBLEM
+[1:35] THE DOMAIN EXPERTISE PROBLEM
 
 That problem is domain expertise. Who do you want to do your taxes? Is it going to be Mahesh, the 300-IQ mathematical genius? Or Barry, an experienced tax professional? I would pick Barry every time. I don't want Mahesh to figure out the 2025 tax code from first principles. I need consistent execution from a domain expert.
 
@@ -26,7 +26,7 @@ Agents today are a lot like Mahesh. They're brilliant, but they lack expertise. 
 That's why we created Agent Skills.
 
 ================================================================================
-WHAT SKILLS ARE
+[1:57] WHAT SKILLS ARE
 
 Skills are organized collections of files that package composable procedural knowledge for agents. In other words, they're folders. This simplicity is deliberate. We want something that anyone — human or agent — can create and use, as long as they have a computer.
 
@@ -39,7 +39,7 @@ Code solves some of these issues. It's self-documenting, modifiable, and can liv
 Here's an example: we kept seeing Claude write the same Python script over and over to apply styling to slides. So we asked Claude to save it inside a skill as a tool for its future self. Now we can just run the script, and that makes everything more consistent and efficient.
 
 ================================================================================
-PROGRESSIVE DISCLOSURE
+[3:39] PROGRESSIVE DISCLOSURE
 
 At this point, skills can contain a lot of information. We want to protect the context window so we can fit in hundreds of skills and make them truly composable. That's why skills are progressively disclosed.
 
@@ -48,7 +48,7 @@ At runtime, only metadata is shown to the model — just to indicate that it has
 So that's all skills are. They're organized folders with scripts as tools.
 
 ================================================================================
-ECOSYSTEM GROWTH
+[4:09] ECOSYSTEM GROWTH
 
 Since our launch five weeks ago, this very simple design has translated into a quickly growing ecosystem of thousands of skills. We've seen this split across a couple of different types.
 
@@ -63,7 +63,7 @@ Where I've seen the most excitement and traction is within large enterprises —
 What all these have in common: anyone can create them, and they give agents new capabilities they didn't have before.
 
 ================================================================================
-EMERGING TRENDS
+[6:31] EMERGING TRENDS
 
 As the ecosystem has grown, we've started to observe a few interesting trends.
 
@@ -74,7 +74,7 @@ Second, this ecosystem complements the existing ecosystem of MCP servers. Develo
 Third — and most exciting to me personally — we're seeing skills built by non-technical people. People in finance, recruiting, accounting, legal, and more. This is early validation of our initial idea: skills help people who aren't coding extend these general agents. They make agents more accessible for day-to-day work.
 
 ================================================================================
-THE EMERGING AGENT ARCHITECTURE
+[7:36] THE EMERGING AGENT ARCHITECTURE
 
 Tying this together, the architecture of general agents is converging on a few things.
 
@@ -83,7 +83,7 @@ First is the agent loop that manages the model's internal context and what token
 Today, giving an agent a new capability in a new domain might just involve equipping it with the right set of MCP servers and the right library of skills. This emerging pattern is already helping us at Anthropic deploy Claude to new verticals. Just after launching skills five weeks ago, we launched new offerings in financial services and life sciences, each with a set of MCP servers and skills that immediately make Claude more effective for professionals in those domains.
 
 ================================================================================
-OPEN QUESTIONS AND FUTURE DIRECTIONS
+[9:05] OPEN QUESTIONS AND FUTURE DIRECTIONS
 
 We're starting to think about open questions and areas to focus on for how skills evolve.
 
@@ -94,7 +94,7 @@ We'd also like to focus on versioning. As a skill evolves and the resulting agen
 Finally, we want to explore skills that can explicitly depend on and refer to other skills, MCP servers, and packages within the agent's environment. This will make agents more predictable across runtime environments. The composability of multiple skills will help agents elicit more complex and relevant behavior.
 
 ================================================================================
-SHARING AND CONTINUOUS LEARNING
+[11:03] SHARING AND CONTINUOUS LEARNING
 
 A huge part of the value of skills comes from sharing and distribution.
 
@@ -111,7 +111,7 @@ As you build up context, skills make the concept of memory more tangible. They d
 Our goal: Claude on day 30 of working with you is a lot better than Claude on day one. Claude can already create skills for you today using our skill creator skill, and we'll continue pushing in that direction.
 
 ================================================================================
-THE ANALOGY: MODELS, OS, AND APPLICATIONS
+[13:24] THE ANALOGY: MODELS, OS, AND APPLICATIONS
 
 We'll conclude by comparing the agent stack to what we've seen in computing.
 
@@ -124,7 +124,7 @@ But once we have a platform, the real value comes from applications. A few compa
 This is where we get creative and solve concrete problems — for ourselves, for each other, and for the world — just by putting stuff in a folder.
 
 ================================================================================
-CONCLUSION
+[14:10] CONCLUSION
 
 Skills are just the starting point.
 

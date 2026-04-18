@@ -1,5 +1,5 @@
 ================================================================================
-WHY SOFTWARE ENGINEERS ARE THE BEST FIT FOR AI ENGINEERING
+[0:00] WHY SOFTWARE ENGINEERS ARE THE BEST FIT FOR AI ENGINEERING
 
 Software engineers are the most suited group to become AI engineers, because an AI engineer is essentially a software engineer with strong backend skills plus an understanding of LLMs and AI models plus AI system design. Many software engineers today want to transition into AI engineering roles because that is where the future is heading.
 
@@ -8,7 +8,7 @@ The typical path is to start as an integrator — calling LLM APIs to build AI f
 This roadmap is built exclusively for software engineers with a minimum of two years of development experience. It is a fast-paced two-month program based entirely on free resources, assuming four to five hours of study, five to six days a week. The exact time will vary depending on learning speed and dedication. It covers both technical and soft skills, because in the AI era soft skills are equally important.
 
 ================================================================================
-WEEK 1 — AI AND PYTHON FUNDAMENTALS
+[1:47] WEEK 1 — AI AND PYTHON FUNDAMENTALS
 
 Python is the programming language for AI — there is no doubt about it. You need to know the fundamentals: data types, functions, exceptions, loops, control flow. As a software engineer, you already understand if-statements, for-loops, and object-oriented programming in another language like Java, so use transfer learning and map those concepts to Python. That makes the ramp-up extremely fast.
 
@@ -23,7 +23,7 @@ You also need the generative AI basics: what generative AI is, what agents are, 
 Throughout this upskilling journey, use Claude Code or ChatGPT as your personal tutor. The assignments for this week are: build a simple FastAPI server that returns a motivational quote, build a simple search engine using Chroma or Qdrant, and build a professional-looking LinkedIn and X profile.
 
 ================================================================================
-THE RISING IMPORTANCE OF SOFT SKILLS
+[6:57] THE RISING IMPORTANCE OF SOFT SKILLS
 
 In the previous era, when we wrote all our code by hand, technical skills mattered above everything else. You would see geeky programmers who could barely hold a conversation and still thrive on 100% technical skill. In the age of Claude Code, those people are going to lose their jobs — there is no doubt about it.
 
@@ -32,7 +32,7 @@ The importance of raw technical skills is actually decreasing, and the importanc
 The core soft skills are stakeholder management, communication (which underpins everything else), presentation, and personal branding. Claude Code can handle coding and architecture, so the question becomes: what value are you adding on top?
 
 ================================================================================
-PERSONAL BRANDING ON LINKEDIN AND X
+[9:45] PERSONAL BRANDING ON LINKEDIN AND X
 
 LinkedIn is the tool through which you stream your credibility. You build credibility elsewhere — by shipping open-source projects, competing in tech competitions, or speaking at conferences — and then broadcast it through LinkedIn and Twitter. Twitter is arguably even more important than LinkedIn, because most AI news and conversation happens there.
 
@@ -43,7 +43,7 @@ Think of it like a samosa shop. You may make excellent samosas, but if your shop
 Creating a profile is not enough. Follow prominent AI figures like Andrej Karpathy and engage thoughtfully on their posts. These people have huge AI-industry audiences, and a thoughtful comment gets noticed — sometimes even by the author. Over time you are building micro-relationships that will help when you transition into an AI engineering role, switch jobs, or start your own business. Online presence is the new résumé. The old approach of firing off résumés into job portals is no longer effective.
 
 ================================================================================
-WEEK 2 — RAG FUNDAMENTALS AND LANGCHAIN
+[11:50] WEEK 2 — RAG FUNDAMENTALS AND LANGCHAIN
 
 In 60 to 70% of the projects we have delivered at Atliq Technologies, the work has been RAG — retrieval augmented generation — where you point an LLM at your internal organizational knowledge base and let it operate on that data.
 
@@ -52,14 +52,14 @@ This week you learn the theoretical foundation: what RAG is, how to build a RAG 
 The assignment is to code a RAG pipeline in pure Python. Frameworks like LangChain keep releasing updates, so building one from scratch makes you understand the fundamentals. You can use Claude Code for this — that is fine — but try to understand the code in case the AI makes mistakes. After that, build a simple LangChain RAG chatbot for healthcare or finance, leave meaningful comments on at least ten AI-related LinkedIn or X posts, and take notes on three Think School or similar business-school case studies.
 
 ================================================================================
-BUSINESS FUNDAMENTALS AND THE PRODUCT ENGINEER
+[15:24] BUSINESS FUNDAMENTALS AND THE PRODUCT ENGINEER
 
 For business fundamentals, follow resources that help you build domain knowledge. At Bloomberg we had many data analysts with CFA or other domain-specific degrees. Pursuing a domain degree in finance or healthcare makes total sense today.
 
 A new role is emerging — and it is already happening, not in the future — called product engineer. A product engineer is roughly 50% technical skills and 50% product skills, combining what software engineers and product owners or business managers do today. The role of product owner, business manager, and software engineer is merging. Being effective here requires soft skills first and domain knowledge second.
 
 ================================================================================
-WEEK 3 — AGENTIC AI FUNDAMENTALS
+[17:20] WEEK 3 — AGENTIC AI FUNDAMENTALS
 
 This week covers what AI agents are, the ReAct (reasoning plus action) loop, building agents with LangChain, and routing inside AI agents. Routing matters because real systems — like an AI-enabled customer-care chatbot — must detect the user's intent (technical, pricing, and so on) and route accordingly. Routing also happens by task complexity: a simple task goes to a cheap model, while a deep thinking question might go to Opus 4.6 with thinking enabled.
 
@@ -68,7 +68,7 @@ AI agent security is critical. Every single client we onboard asks the same firs
 You also need to evaluate your AI systems. AI systems are probabilistic by nature — not deterministic like regular software. Traditional unit tests assert exact outputs, but if you ask ChatGPT the same question five times you will get five different answers. That requires a different evaluation paradigm, and this week introduces the techniques.
 
 ================================================================================
-PRESENTATION AND STAKEHOLDER EDUCATION
+[19:19] PRESENTATION AND STAKEHOLDER EDUCATION
 
 The majority of software engineers are not good at presentation. If you ask them to present, they will bore the audience to death. Watch the talk "Death by PowerPoint" — it outlines simple techniques for making presentations effective and compelling. Tell a story, engage the audience, and do not dump boring technical diagrams onto slides.
 
@@ -79,7 +79,7 @@ We have seen this play out directly. On one project, a business-side client came
 The assignments reinforce this: continue the engagement work and write two meaningful posts on an AI tech topic.
 
 ================================================================================
-WEEK 4 — OBSERVABILITY, DEPLOYMENT, AND OPEN SOURCE
+[21:50] WEEK 4 — OBSERVABILITY, DEPLOYMENT, AND OPEN SOURCE
 
 The LangChain ecosystem includes LangChain as a general framework, LangGraph for building highly customized agents, and LangSmith for observability and monitoring. LangSmith lets you track execution, traces, runs, threads, and cost.
 
@@ -90,7 +90,7 @@ Start contributing to open source this week — it adds to your online credibili
 Contributing is easier than ever. Use ChatGPT and Claude Code as your assistants. Go to a repository like Hugging Face's Transformers, which has more than a thousand open issues, and filter by the "good first issue" or "good second issue" labels — these are beginner-friendly bugs you can fix. You do not need to be an expert; you just need to know how to use AI tools.
 
 ================================================================================
-WEEK 5 — MULTI-AGENT SYSTEMS AND CONTEXT ENGINEERING
+[24:40] WEEK 5 — MULTI-AGENT SYSTEMS AND CONTEXT ENGINEERING
 
 After four weeks of building single agents, it is time for multi-agent systems. LangGraph gives you deep, custom control — like shooting a DSLR camera in manual mode while LangChain is the auto mode. For serious multi-agent work you want that control. CrewAI is another framework in this space.
 
@@ -99,7 +99,7 @@ You will also cover context engineering. The listed resources have high views, h
 The assignments are to build a multi-agent system that automates marketing tasks, and to build an MCP server for a public API.
 
 ================================================================================
-WEEK 6 — ADVANCED AI ENGINEERING: COST, MULTIMODAL, FINE-TUNING, LOCAL MODELS
+[25:58] WEEK 6 — ADVANCED AI ENGINEERING: COST, MULTIMODAL, FINE-TUNING, LOCAL MODELS
 
 This week covers advanced topics: optimizing the cost of AI applications via rate limiting, model selection and cascading, and response caching. If you call the OpenAI or Claude API on every iteration, your bill will blow up. We see this constantly — a client insists on using the best model, we deploy to production, and the end-of-month bill shocks them. It is like AWS: a black box until the invoice arrives. Optimize token cost from day one.
 
@@ -110,19 +110,19 @@ Sometimes RAG alone is not enough and you must fine-tune the LLM using LoRA, QLo
 Running models locally is also important. We have clients in the UAE who require everything to run locally — the data must never leave their infrastructure. These organizations are happy to buy servers and GPUs in-house but will not send data out. Ollama is one of the frameworks that makes local inference straightforward.
 
 ================================================================================
-WEEK 7 — DECLARATIVE AI WITH DSPY
+[28:36] WEEK 7 — DECLARATIVE AI WITH DSPY
 
 DSPy is a framework for building AI applications using a declarative approach. If you already understand declarative programming as a software engineer, this is the same idea applied to AI. The roadmap lists all the relevant learning resources and assignments for this week.
 
 ================================================================================
-WEEK 8 — DEPLOYING TO PRODUCTION ON THE CLOUD
+[29:10] WEEK 8 — DEPLOYING TO PRODUCTION ON THE CLOUD
 
 In the final week you learn how to deploy your models to production using Azure and AWS — the two most prominent clouds for AI solutions. Google AI Studio and GCP matter too.
 
 My view on clouds: once you learn one, the others become much easier. You do not need to learn all three. Start with Azure, which is very popular, and pick up AWS or GCP later. Nail the fundamentals — resource groups, subscriptions, regions, storage, IAM — and then use transfer learning when you move to another cloud. The same concepts exist there under different names.
 
 ================================================================================
-TIPS FOR EFFECTIVE LEARNING
+[30:38] TIPS FOR EFFECTIVE LEARNING
 
 You already have software engineer friends talking over coffee about what is going to happen to their jobs. Many of them want to learn AI too. Form a study group. Weekly check-ins, mutual accountability, and shared learning make the journey dramatically easier. Learning yoga alone is hard; learning in a group is easy.
 

@@ -1,0 +1,93 @@
+================================================================================
+[0:01] INTRODUÇÃO
+
+Kane Hooper é COO da Reinteractive e trabalha com IA desde os anos 90 — começando com chatbots declarativos em computadores IBM antigos. Nos últimos três anos, ele mergulhou de cabeça na questão central: como fazer agentes escreverem código de nível enterprise, com segurança, qualidade e sem o “AI slop” genérico que domina o mercado.
+
+Neste webinar com Errol, ele apresenta a diferença entre vibe coding e engenharia agêntica — e por que essa diferença importa demais para quem quer levar uma aplicação a produção.
+
+A EVOLUÇÃO DA VELOCIDADE DE DESENVOLVIMENTO
+
+Há um ano e meio, um projeto de seis semanas era... um projeto de seis semanas. Com as primeiras ferramentas de IA como o GitHub Copilot, era possível ganhar cerca de 20% de eficiência. Bom, mas não transformador.
+
+A mudança começou em dezembro do ano passado. De 20-30% de ganho, pulou para 90-95%. Um projeto de seis semanas agora pode ser feito em uma semana — mas só se você souber o que está fazendo. Kane estava trabalhando num projeto recente onde o equivalente a 12-15 semanas de desenvolvimento tradicional foi entregue pela metade em seis dias, incluindo entendimento do cliente, design e implementação.
+
+O potencial declarado de Kane para agentes bem configurados: 5x a velocidade de um desenvolvedor sênior, mantendo alta qualidade de código, segurança enterprise e sem AI slop.
+
+================================================================================
+[8:20] GARBAGE IN, GARBAGE OUT: O PRINCÍPIO ESQUECIDO
+
+Desde os primeiros computadores, o princípio mais fundamental de software sempre foi “garbage in, garbage out” — se você alimenta o sistema com dados ruins, receberá resultados ruins. Esse princípio foi completamente esquecido pelos entusiastas de vibe coding.
+
+O que “garbage” significa em contexto de IA: especificações vagas, requisitos ambíguos, dados contraditórios, contexto insuficiente. O problema com IA é que ela funciona como acelerador — amplifica tudo, inclusive os problemas. Kane usa a metáfora de uma cano com vazamento: com pouca água, você mal percebe. Com muita água, os vazamentos se tornam jatos.
+
+Gerentes de projeto sempre foram tão valorizados justamente porque eram o guardião contra esse garbage inicial — garantindo que o projeto estivesse bem especificado antes de chegar aos desenvolvedores. Com agentes, essa responsabilidade passa para quem está promovendo o trabalho.
+
+================================================================================
+[23:40] VIBE CODING VERSUS ENGENHARIA AGÊNTICA
+
+Vibe coding é: jogar uma ideia vaga no agente e ver o que sai. É ótimo para protótipos, projetos pessoais, dashboards internos que só você vai usar. Não há nada de errado com isso para esses casos.
+
+O problema é quando vibe coding é usado para construir software de produção. Os sinais são fáceis de identificar — Kane consegue detectar um app vibe-coded em 5 segundos: os padrões de design são genéricos (o gradiente roxo-para-azul do modo escuro), o texto tem os clichês de IA (“game changer”, “let's delve into”), a estrutura de código é monolítica.
+
+Mais grave: código vibe-coded tem vulnerabilidades de segurança severas, vai vazar dados, vai crashar sob carga. Já houve casos reais de agentes deletando bancos de dados de produção e de infraestrutura AWS sendo multiplicada 10x ao longo de um fim de semana porque um bug fez o agente “resolver” adicionando mais instâncias.
+
+Engenharia agêntica é o oposto: controle preciso dos agentes para produzir resultados específicos e exatos, com pontos de avaliação em cada etapa, humano no loop nas decisões críticas, segurança enterprise por padrão.
+
+================================================================================
+[30:30] OS TRÊS PROBLEMAS FUNDAMENTAIS DOS LLMs
+
+Kane identifica três limitações fundamentais que todo desenvolvedor que trabalha com agentes precisa entender:
+
+Garbage in, garbage out: já discutido — contexto ruim gera código ruim.
+
+Alucinação: os modelos inventam coisas. Kane está chegando a 98% de mitigação com sua pipeline, mas nunca 100%. O truque é ter loops de validação frequentes que detectem desvios antes que se propaguem.
+
+Drift: com o tempo e múltiplos passos, o agente diverge da intenção original. Isso acontece por dois motivos — janela de contexto limitada (o agente “esquece” o início da conversa conforme o projeto cresce) e o fato de que modelos são probabilísticos e convergem para a média de tudo com que foram treinados. Sua ideia específica pode divergir do caminho de menor resistência do modelo. Sem reforço constante de contexto e validação, o agente vai em direção à média, não à sua visão.
+
+A PIPELINE DE ENGENHARIA AGÊNTICA
+
+Kane desenvolveu o que chama de “cluster de agentes” — uma pipeline de 19 sub-agentes especializados guiados por um condutor. O princípio: cada agente faz uma coisa, faz bem, e tem loops de validação.
+
+A sequência simplificada:
+
+Validador de escopo: recebe os requisitos e verifica ambiguidades, contradições e consistência com o código existente. Faz loop até atingir 90%+ de confiança.
+
+Agente de planejamento: cria o plano de implementação, ancorado na documentação técnica da linguagem e no código existente. Loop até validar.
+
+Agente de testes (test writer): escreve os testes automatizados primeiro.
+
+Agente de código (code writer): implementa o código para passar nos testes.
+
+Agente de execução de testes (test runner): roda os testes.
+
+Agente de correção de testes (test fixer): corrige o que falhou.
+
+Agente de refatoração: limpa a estrutura do código, separa em módulos, reduz dívida técnica.
+
+Agente de revisão de segurança: audita o código contra vulnerabilidades.
+
+Agente de conformidade: verifica se tudo o que foi especificado foi realmente entregue.
+
+Playwright para testes visuais e funcionais: o agente navega no site, tira screenshots, compara com o design original, clica nos botões, preenche formulários — e se encontrar problemas, retorna ao início da pipeline de codificação.
+
+É um padrão de loops dentro de loops, como os antigos GOTO statements do BASIC — primitivo comparado ao que virá, mas eficaz agora.
+
+================================================================================
+[36:43] DÍVIDA TÉCNICA E O PONTO DE INFLEXÃO
+
+Um problema específico do código gerado por IA: sem guidance explícita, o agente vai tentar colocar tudo num único arquivo. 2.000 linhas num único arquivo, sem modularização, sem abstrações adequadas.
+
+Humanos chegam ao limite do que conseguem manter mais rápido. Agentes conseguem lidar com código confuso por mais tempo — mas há um ponto de inflexão onde até o agente começa a ter dificuldade de fazer mudanças sem introduzir novos bugs. Pesquisas mostram que aplicações codificadas por IA introduzem bugs 2,7 vezes mais rápido que desenvolvimento humano quando não há controle adequado.
+
+Quando o código chega a esse ponto crítico, a situação piora ainda mais: em vez de corrigir o bug original, o agente às vezes adiciona uma camada de workaround que faz parecer que funcionou sem realmente resolver o problema. A dívida técnica acumula silenciosamente.
+
+A solução é incluir um agente de refatoração como etapa obrigatória do ciclo, não como afterthought.
+
+================================================================================
+[41:01] PARA QUEM QUER COMEÇAR
+
+O ponto central da apresentação: você não precisa de décadas de experiência para usar engenharia agêntica. Mas precisa de educação específica sobre como essas ferramentas funcionam — suas capacidades, suas limitações e os guardrails necessários.
+
+Com o conhecimento certo, qualquer pessoa com uma ideia pode construir uma aplicação segura, mantida e pronta para produção em um tempo drasticamente menor do que antes. Kane está construindo ferramentas que abstraem toda essa complexidade — um sistema que qualquer pessoa educada minimamente pode usar para produzir código de qualidade enterprise.
+
+A mensagem final: não espere que a IA fique melhor para começar. Com as ferramentas de hoje, você já pode construir 5x mais rápido do que antes, desde que entenda os guardrails. Quem esperar o “perfeito” vai continuar esperando enquanto outros chegam ao mercado.

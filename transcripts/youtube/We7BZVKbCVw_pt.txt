@@ -1,0 +1,429 @@
+================================================================================
+[0:00] INTRODUÇÃO
+
+100% do meu código é escrito pelo Claude Code. Eu não editei uma única linha à mão desde novembro. Todo dia eu envio 10, 20, 30 pull requests. Neste momento, tenho uns cinco agentes rodando enquanto estamos gravando isso.
+
+Lenny pergunta: “Você sente falta de escrever código?”
+
+Boris responde: “Eu nunca gostei tanto de programar quanto hoje, porque não preciso lidar com todas as minúcias. A produtividade por engenheiro aumentou 200%.”
+
+Sempre existe aquela pergunta: devo aprender a programar? Em um ou dois anos, isso não vai mais importar. A programação está amplamente resolvida. Imagino um mundo onde todos conseguem programar. Qualquer pessoa pode simplesmente construir software a qualquer momento.
+
+E qual é a próxima grande mudança na forma como o software é escrito? O Claude está começando a ter ideias próprias. Ele analisa feedback, relatórios de bugs, telemetria, sugerindo correções e coisas para entregar — um pouco mais como um colega de trabalho.
+
+Muita gente que ouve este podcast são gerentes de produto, e provavelmente estão suando. Acho que até o final do ano, todo mundo vai ser gerente de produto e todo mundo vai programar. O título “engenheiro de software” vai começar a desaparecer. Vai ser substituído simplesmente por “builder” — e isso vai ser doloroso para muita gente.
+
+================================================================================
+[3:59] BORIS CHERNY E O IMPACTO DO CLAUDE CODE
+
+Lenny apresenta seu convidado: Boris Cherny, chefe do Claude Code na Anthropic. É difícil descrever o impacto que o Claude Code teve no mundo. Por volta da época em que este episódio vai ao ar, será o aniversário de um ano do Claude Code. E nesse curto período, ele transformou completamente o trabalho do engenheiro de software — e agora está começando a transformar os trabalhos de muitas outras funções em tecnologia.
+
+O Claude Code também é um enorme motor de crescimento geral da Anthropic no último ano. A empresa acabou de levantar uma rodada avaliada em mais de 350 bilhões de dólares. E como Boris menciona, o crescimento do Claude Code continua acelerando. Só no último mês, o número de usuários ativos diários dobrou.
+
+================================================================================
+[5:53] DA CURSOR DE VOLTA PARA A ANTHROPIC
+
+Lenny começa com uma pergunta provocadora: cerca de seis meses atrás, Boris na verdade saiu da Anthropic. Ele foi para a Cursor e, duas semanas depois, voltou para a Anthropic. O que aconteceu?
+
+Boris ri e explica: “É a mudança de emprego mais rápida que eu já tive. Eu fui para a Cursor porque sou um grande fã do produto e, honestamente, conheci a equipe e fiquei muito impressionado. Eles são uma equipe incrível. Ainda acho que são incríveis e estão construindo coisas muito legais. Eles viram para onde a programação com IA estava indo antes de muita gente. Então, a ideia de construir um bom produto era muito empolgante para mim.”
+
+“Acho que assim que cheguei lá, comecei a perceber que o que eu realmente sentia falta da Anthropic era a missão. E foi na verdade o que originalmente me atraiu para lá também. Antes de entrar na Anthropic, eu estava trabalhando em big tech e em algum momento quis trabalhar em um laboratório para ajudar a moldar o futuro dessa coisa maluca que estamos construindo de alguma forma.”
+
+“O que me atraiu para a Anthropic foi a missão. É tudo sobre segurança. Quando você conversa com as pessoas na Anthropic, para qualquer pessoa que encontrar no corredor, se perguntar por que estão ali, a resposta sempre vai ser segurança. Essa orientação pela missão realmente ressoou comigo. E eu pessoalmente sei que é algo de que preciso para ser feliz. Descobri que, seja qual for o trabalho, não importa quão empolgante seja, mesmo que seja construir um produto muito legal, simplesmente não é um substituto para isso. Para mim, foi na verdade bem óbvio que eu estava sentindo essa falta muito rápido.”
+
+A ORIGEM DO CLAUDE CODE
+
+Lenny faz uma retrospectiva do primeiro ano do Claude Code. Um relatório recente da Semi Analysis mostrou que 4% de todos os commits no GitHub são autorados pelo Claude Code agora, com previsão de chegar a um quinto de todos os commits até o final do ano. Como eles colocaram: “enquanto piscávamos, a IA consumiu todo o desenvolvimento de software.”
+
+No dia da gravação, o Spotify publicou uma manchete dizendo que seus melhores desenvolvedores não escrevem uma linha de código desde dezembro, graças à IA.
+
+Boris reflete: “Esses números são simplesmente loucos. 4% de todos os commits no mundo é muito mais do que eu imaginava, e ainda parece ser apenas o ponto de partida. Esses são apenas commits públicos. Acreditamos que se olharmos para repositórios privados, é consideravelmente mais alto. E a coisa mais louca para mim não é nem o número atual, mas o ritmo em que estamos crescendo — porque se você olhar a taxa de crescimento do Claude Code em qualquer métrica, ela continua acelerando. Não está apenas subindo, está subindo cada vez mais rápido.”
+
+Quando Boris começou o Claude Code, era para ser apenas um pequeno hack. Na Anthropic, sabiam de forma ampla que queriam lançar algum tipo de produto de codificação. Por muito tempo, vinham construindo os modelos de uma forma que se encaixava no modelo mental de como construir IA segura: o modelo começa sendo muito bom em programação, depois fica muito bom em uso de ferramentas, depois fica muito bom em uso de computador — essa era a trajetória.
+
+Boris conta que a equipe em que começou se chamava Anthropic Labs. Essa equipe construiu coisas muito legais: o Claude Code, o MCP e o aplicativo desktop. Dá para ver as sementes dessa ideia — primeiro programação, depois uso de ferramentas, depois uso de computador. E a razão pela qual isso importa para a Anthropic é por causa da segurança: a IA está ficando cada vez mais poderosa e capaz.
+
+“Quando entrei na Anthropic, passei um mês hackeando e construí um monte de protótipos estranhos. A maioria não foi lançada e nem chegou perto de ser lançada. Era apenas para entender os limites do que o modelo conseguia fazer. Depois, passei um mês fazendo pós-treinamento para entender o lado de pesquisa. Honestamente, como engenheiro, acredito que para fazer um bom trabalho você realmente tem que entender a camada abaixo da camada em que você trabalha.”
+
+“Então voltei e comecei a prototipar o que eventualmente se tornou o Claude Code. A primeira versão — eu tenho uma gravação de vídeo do verão — se chamava Claude CLI. Eu mostrei como ele usava algumas ferramentas, e o chocante para mim foi que dei a ele uma ferramenta bash e ele simplesmente conseguiu usá-la para escrever código e me dizer qual música eu estava ouvindo quando perguntei. Isso é a coisa mais louca, porque eu não instruí o modelo a usar essa ferramenta para isso. O modelo recebeu a ferramenta e descobriu como usá-la para responder uma pergunta que eu nem tinha certeza se podia ser respondida.”
+
+================================================================================
+[7:16] DE DOIS LIKES A UM FENÔMENO GLOBAL
+
+Boris continua: “Fiz um post sobre isso e anunciei internamente. Recebeu dois likes. Essa foi a extensão da reação na época, porque acho que internamente as pessoas pensavam em ferramentas de codificação como IDEs e ambientes sofisticados. Ninguém achava que essa coisa poderia ser baseada em terminal. É uma forma meio estranha de projetar, e essa não era realmente a intenção. Mas desde o início eu construí no terminal porque nos primeiros meses era só eu, então era simplesmente a forma mais fácil de construir.”
+
+“Para mim, essa é uma lição de produto muito importante: você quer sub-investir nas coisas um pouco no começo.”
+
+A equipe começou a pensar em outros formatos, mas decidiu ficar com o terminal por um tempo. O maior motivo era que o modelo estava melhorando tão rápido que sentiam que não havia outro formato que pudesse acompanhar.
+
+“O modelo continua melhorando. O que fazemos? Como conseguimos acompanhar? O terminal foi honestamente a única ideia que eu tive.”
+
+E acabou pegando. Depois do lançamento, rapidamente se tornou um sucesso na Anthropic, e os usuários ativos diários dispararam verticalmente. Antes mesmo do lançamento, Ben Man incentivou Boris a criar um gráfico de DAU. Boris hesitou, achando que era cedo demais, mas Ben insistiu — e o gráfico simplesmente disparou imediatamente.
+
+Em fevereiro, lançaram externamente. Algo que as pessoas não lembram é que o Claude Code não foi um sucesso imediato quando lançado. Conseguiu um bom número de usuários e houve muitos early adopters, mas na verdade levou muitos meses para todo mundo realmente entender o que era aquilo. É simplesmente muito diferente.
+
+“Parte da razão pela qual o Claude Code funciona é essa ideia de demanda latente — trazemos a ferramenta para onde as pessoas estão e tornamos os fluxos de trabalho existentes um pouco mais fáceis. Mas também, por estar em um terminal, é um pouco surpreendente, um pouco alienígena. Então você precisa ter a mente aberta e precisa aprender a usá-lo.”
+
+Hoje, o Claude Code está disponível no app iOS e Android, no aplicativo desktop, no site, como extensões de IDE, no Slack e no GitHub — em todos os lugares onde os engenheiros estão. Mas esse não foi o ponto de partida.
+
+================================================================================
+[10:44] PENSANDO EM EXPONENCIAIS
+
+Lenny observa como é incrível a velocidade com que tudo pode mudar no mundo de hoje. O Claude Code foi lançado há um ano e, nesse período, toda a profissão de engenharia de software mudou dramaticamente.
+
+Boris conta que no Code with Claude, em maio — a primeira conferência de desenvolvedores da Anthropic — ele fez uma palestra e, na sessão de perguntas e respostas, fizeram previsões para o fim do ano. A previsão de Boris em maio de 2025 foi: “até o final do ano, talvez você não precise mais de uma IDE para programar, e vamos começar a ver engenheiros não fazendo isso.” A sala audívelmente ficou chocada. Era uma previsão tão maluca.
+
+“Na Anthropic, a forma como pensamos sobre as coisas é em exponenciais, e isso está muito profundo no DNA. Três dos nossos cofundadores foram os três primeiros autores do paper sobre leis de escala. Então realmente pensamos em exponenciais. Se você olhar a exponencial da porcentagem de código escrita pelo Claude naquele ponto e simplesmente traçar a linha, é bem óbvio que vamos cruzar 100% até o final do ano, mesmo que isso não corresponda à intuição de forma alguma. Tudo que fiz foi traçar a linha, e em novembro isso aconteceu para mim pessoalmente.”
+
+================================================================================
+[13:59] INOVAÇÃO E SEGURANÇA PSICOLÓGICA
+
+Boris reflete sobre o processo de inovação: “O negócio da inovação é que você não pode forçá-la. Não existe roadmap para inovação. Você só precisa dar espaço às pessoas. Talvez a palavra seja segurança — segurança psicológica de que está tudo bem falhar, está tudo bem se 80% das ideias forem ruins. Você também precisa cobrar um pouco. Se a ideia for ruim, você corta as perdas e segue para a próxima ideia, em vez de investir mais.”
+
+“Nos primeiros dias do Claude Code, eu não tinha ideia de que isso seria útil. Mesmo em fevereiro quando lançamos, ele estava escrevendo talvez 20% do meu código, não mais. Em maio, talvez 30%. Eu ainda usava o Cursor para a maior parte do meu código. Só cruzou 100% em novembro. Então demorou. Mas desde o primeiro dia, parecia que eu tinha encontrado algo. Eu passava todas as noites, todos os finais de semana hackeando nisso. E felizmente minha esposa foi muito solidária. Simplesmente parecia que era algo. Não era óbvio o quê. E às vezes você encontra um fio e simplesmente tem que puxar.”
+
+================================================================================
+[16:17] 100% DO CÓDIGO ESCRITO POR IA
+
+Lenny pergunta: neste ponto, 100% do seu código é escrito pelo Claude Code?
+
+Boris confirma: “Sim. 100% do meu código é escrito pelo Claude Code. Eu sou um programador bastante prolífico. E isso era verdade mesmo quando trabalhava no Instagram — eu era um dos poucos engenheiros mais produtivos. E isso ainda é o caso aqui na Anthropic.”
+
+Lenny se impressiona: “Mesmo sendo o chefe da equipe?”
+
+“Sim. Ainda faço muita programação. Todo dia eu envio 10, 20, 30 pull requests. Todo dia. 100% escritos pelo Claude Code. Eu não editei uma única linha à mão desde novembro.”
+
+“Eu olho o código. Acho que ainda não estamos no ponto onde dá para ser totalmente hands-off, especialmente quando tem muita gente usando. Você precisa garantir que está correto, que é seguro. E temos o Claude fazendo code review automático para tudo. Aqui na Anthropic, o Claude revisa 100% dos pull requests. Ainda tem uma camada de revisão humana depois, mas você ainda quer esses checkpoints — ainda quer um humano olhando o código, a menos que seja puro código de protótipo.”
+
+A PRÓXIMA FRONTEIRA: ALÉM DA PROGRAMAÇÃO
+
+Lenny pergunta: qual é a próxima fronteira?
+
+Boris responde: “Acho que algo que está acontecendo agora é que o Claude está começando a ter ideias. Ele olha o feedback, os relatórios de bugs, a telemetria, e começa a sugerir ideias para correções e coisas para entregar. Está ficando um pouco mais como um colega de trabalho.”
+
+“A segunda coisa é que estamos começando a ir além da programação. Acho que neste ponto é seguro dizer que a programação está amplamente resolvida. Pelo menos para o tipo de programação que eu faço, é simplesmente um problema resolvido porque o Claude consegue fazer. Então agora estamos pensando: o que vem depois?”
+
+“Eu uso o Computer Use todo dia agora para fazer todo tipo de coisa que não tem nada a ver com programação. Por exemplo, tive que pagar uma multa de estacionamento outro dia — simplesmente mandei o Computer Use fazer. Todo o meu gerenciamento de projetos da equipe — o Computer Use faz tudo. Sincronizar coisas entre planilhas, mandar mensagens no Slack e email, todo esse tipo de coisa.”
+
+“Acho que a fronteira é algo assim. E não acho que seja programação, porque programação está basicamente resolvida. Nos próximos meses, acho que vamos ver isso se tornar cada vez mais resolvido em toda a indústria, para todo tipo de codebase e stack de tecnologia.”
+
+================================================================================
+[18:03] CLAUDE COMO GERENTE DE PRODUTO
+
+Lenny observa que essa ideia de ajudar a descobrir o que trabalhar é muito interessante — e que muitos ouvintes são gerentes de produto que provavelmente estão preocupados.
+
+Boris explica: “Honestamente, a coisa mais simples é abrir o Claude Code ou o Computer Use e apontar para uma thread no Slack. Para nós, temos esse canal com todo o feedback interno sobre o Claude Code. Desde que lançamos, mesmo em 2024 internamente, tem sido uma enxurrada de feedback.”
+
+“Nos primeiros dias, o que eu fazia era: toda vez que alguém enviava feedback, eu entrava e corrigia cada coisa o mais rápido possível. Em um minuto, em cinco minutos. Esse ciclo de feedback muito rápido incentiva as pessoas a darem mais e mais feedback. É tão importante porque faz elas se sentirem ouvidas. Normalmente quando você usa um produto e dá feedback, ele vai para um buraco negro e você nunca mais dá feedback. Mas se você faz as pessoas se sentirem ouvidas, elas querem contribuir e ajudar a melhorar a coisa.”
+
+“Agora faço a mesma coisa, mas o Claude honestamente faz muito do trabalho. Aponto para o canal e ele diz: 'Ok, aqui estão algumas coisas que posso fazer. Acabei de abrir alguns PRs. Quer dar uma olhada?'”
+
+================================================================================
+[19:37] GANHOS DE PRODUTIVIDADE INSANOS
+
+Boris compartilha dados impressionantes: “Na Anthropic, desde que introduzimos o Claude Code, provavelmente quadruplicamos a equipe de engenharia, mas a produtividade por engenheiro aumentou 200% em termos de pull requests.”
+
+“Esse número é simplesmente insano para qualquer um que realmente trabalha na área de produtividade de desenvolvedores. Numa vida anterior, eu estava na Meta e uma das minhas responsabilidades era qualidade de código para a empresa — todos os nossos codebases, Facebook, Instagram, WhatsApp, tudo. Muito disso era sobre produtividade, porque se você torna o código de maior qualidade, os engenheiros são mais produtivos. O que víamos era que em um ano, com centenas de engenheiros trabalhando nisso, você via um ganho de alguns pontos percentuais de produtividade. Então hoje, ver esses ganhos de centenas de pontos percentuais é absolutamente insano.”
+
+“O que também é insano é como tudo isso se normalizou. Ouvimos esses números e pensamos 'claro que a IA está fazendo isso'. Mas é tão sem precedentes a quantidade de mudança que está acontecendo no desenvolvimento de software. É muito fácil se acostumar. Mas é importante reconhecer: isso é louco.”
+
+A MENTALIDADE QUE PRECISA MUDAR
+
+Boris conta uma história reveladora: “Há um aspecto negativo porque o modelo muda tão frequentemente que às vezes fico preso numa forma antiga de pensar. Até percebo que pessoas novas na equipe ou até recém-formados fazem coisas de uma forma mais orientada para AGI do que eu.”
+
+“Por exemplo, uns dois meses atrás, tinha um memory leak — o uso de memória do Claude Code ia subindo e em algum momento ele crashava. É um problema de engenharia muito comum que todo engenheiro já debugou mil vezes. Tradicionalmente, você tira um heap snapshot, coloca num debugger especial, analisa o que está acontecendo. E eu estava fazendo exatamente isso, olhando traces e tentando descobrir o que estava acontecendo.”
+
+“Um engenheiro mais novo na equipe simplesmente pediu para o Claude Code fazer. 'Ei Claude, parece que tem um leak. Consegue descobrir?' E o Claude Code fez exatamente a mesma coisa que eu estava fazendo — tirou o heap snapshot, escreveu uma pequena ferramenta para si mesmo analisar, um programa just-in-time, encontrou o problema e abriu um pull request mais rápido do que eu conseguiria.”
+
+“Para aqueles de nós que usam o modelo há muito tempo, ainda é preciso se transportar para o momento atual e não ficar preso num modelo antigo. Não é mais o Sonnet 3.5. Os novos modelos são completamente diferentes.”
+
+================================================================================
+[24:04] PRINCÍPIOS DA EQUIPE: SUB-INVESTIR E VELOCIDADE
+
+Boris compartilha os princípios que guiam sua equipe:
+
+Primeiro: sub-investir um pouco. “Acontece algo interessante quando você sub-financia tudo um pouquinho — as pessoas são forçadas a usar o Claude. Às vezes colocamos um único engenheiro em um projeto, e a forma como conseguem entregar rápido é usando o Claude para automatizar muito do trabalho.”
+
+Segundo: encorajar a velocidade. “Se você pode fazer algo hoje, deveria fazer hoje. Isso é algo que realmente encorajamos na equipe. No começo era muito importante porque era só eu, e nossa única vantagem era velocidade. Era a única forma de competir nesse mercado de codificação tão concorrido.”
+
+Lenny observa que essa ideia de sub-investir é fascinante: não é apenas que a IA pode te tornar mais rápido — é que você vai extrair mais das ferramentas de IA se tiver menos pessoas trabalhando em algo.
+
+Boris concorda: “Se você contratar ótimos engenheiros, eles vão descobrir como fazer. Especialmente se você empoderar eles para isso.”
+
+================================================================================
+[24:35] TOKENS COMO INVESTIMENTO
+
+Boris compartilha um conselho que dá frequentemente para CTOs: “Não tente otimizar. Não tente cortar custos no começo. Comece dando aos engenheiros o máximo de tokens possível. Estamos começando a ver isso aparecer como benefício em algumas empresas — se você entrar, ganha tokens ilimitados.”
+
+“Eu encorajo muito isso porque libera as pessoas para experimentar ideias que seriam loucas demais de outra forma. Se uma ideia funcionar, aí você descobre como escalar, e esse é o momento de otimizar e cortar custos — talvez dê para fazer com Haiku ou Sonnet em vez de Opus. Mas no começo, você só quer jogar muitos tokens no problema e ver se a ideia funciona.”
+
+Lenny pondera que alguns podem pensar: “claro que ele trabalha na Anthropic, quer que usemos mais tokens.” Mas Boris insiste que o custo de tokens para um engenheiro individual experimentando ainda é relativamente baixo em relação ao salário ou outros custos do negócio. O momento de otimizar é quando algo funciona e escala, não antes.
+
+Lenny pergunta se Boris já viu empresas onde o custo de tokens é maior que salários. Boris responde: “Na Anthropic, estamos começando a ver alguns engenheiros que gastam centenas de milhares por mês em tokens. Então estamos começando a ver isso um pouco.”
+
+================================================================================
+[25:43] VOCÊ SENTE FALTA DE ESCREVER CÓDIGO?
+
+Lenny pergunta se Boris sente falta de escrever código, se está triste que isso não é mais algo que fará como engenheiro de software.
+
+Boris responde: “É engraçado. Para mim, quando aprendi engenharia, foi muito prático. Aprendi para poder construir coisas. Fui autodidata — estudei economia na faculdade, não ciência da computação, mas me ensinei engenharia desde cedo. Estava programando desde o ensino fundamental.”
+
+“Na verdade, aprendi a programar para colar numa prova de matemática. Esse foi o primeiro motivo. Tínhamos aquelas calculadoras gráficas TI-83 Plus e eu programei as respostas nela. No ano seguinte, era difícil demais programar todas as respostas porque eu não sabia quais seriam as perguntas. Então tive que escrever um pequeno solver — um programa que resolvia questões de álgebra. Depois descobri que dava para pegar um cabinho, passar o programa para o resto da turma, e todo mundo tirava A. Mas aí fomos pegos e a professora mandou parar.”
+
+“Desde o começo, sempre foi muito prático para mim. Programação é uma forma de construir algo. Não é o fim em si mesmo.”
+
+“Em algum momento, pessoalmente, caí na toca do coelho da beleza da programação. Escrevi um livro sobre TypeScript. Comecei o que na época era o maior meetup de TypeScript do mundo, simplesmente porque me apaixonei pela linguagem em si.”
+
+A BELEZA DA PROGRAMAÇÃO E O FUTURO DAS HABILIDADES TÉCNICAS
+
+Boris compartilha que sempre se apaixonou pela linguagem da programação em si. Mergulhou fundo em programação funcional e sistemas de tipos. “Acho que muitos programadores se distraem com isso. Para mim, sempre houve uma beleza na programação, especialmente na programação funcional. Existe uma beleza nos sistemas de tipos. Há uma certa empolgação que você sente quando resolve um problema matemático realmente complicado — é parecido quando você equilibra os tipos ou quando o programa fica realmente elegante.”
+
+No entanto, Boris enfatiza que programação é, acima de tudo, uma ferramenta. “Para mim, programação é muito mais um instrumento, um meio de fazer coisas.” Ao mesmo tempo, reconhece que nem todos pensam assim. Cita o exemplo de Lena, uma engenheira da equipe que ainda escreve C++ à mão nos fins de semana simplesmente porque gosta. “Cada pessoa é diferente e acho que, mesmo com todas as mudanças nessa área, sempre haverá espaço para apreciar a arte e fazer as coisas manualmente, se você quiser.”
+
+================================================================================
+[28:07] ATROFIA DE HABILIDADES: A PROGRAMAÇÃO COMO UM CONTINUUM
+
+Lenny pergunta se Boris se preocupa com a atrofia de suas habilidades como engenheiro. Boris responde que não se preocupa muito. “Para mim, programação está num continuum. Lá atrás, software é algo relativamente novo. Se você olhar como programas são escritos hoje — usando software rodando em máquinas virtuais — isso existe desde mais ou menos os anos 1960, ou seja, cerca de 60 anos. Antes disso eram cartões perfurados. Antes disso, interruptores. Antes disso, hardware. E antes disso era literalmente caneta e papel — uma sala cheia de pessoas fazendo matemática no papel.”
+
+Boris explica que a programação sempre mudou dessa forma. “De certo modo, você ainda quer entender a camada abaixo da camada, porque isso te ajuda a ser um engenheiro melhor. Acho que isso será o caso talvez pelo próximo ano ou algo assim. Mas logo não vai mais importar. Vai ser como o código assembly rodando por baixo do programa.”
+
+No nível emocional, Boris diz que sempre teve que aprender coisas novas. “Como programador, não parece tão diferente porque sempre há novos frameworks, sempre há novas linguagens. É algo com que estamos bastante confortáveis nessa área.” Porém, reconhece que isso não vale para todos. “Para algumas pessoas, vai haver um sentimento maior de perda, nostalgia ou atrofia.”
+
+Boris menciona a provocação de Elon Musk sobre por que a IA não escreve direto em binário — qual seria o sentido de toda essa abstração de programação? Lenny concorda que, tecnicamente, a IA poderia fazer isso.
+
+A ANALOGIA DA PRENSA DE GUTENBERG
+
+Lenny reflete sobre qual seria a melhor analogia histórica para essa transição. “A coisa que mais se aproxima para mim é a prensa de Gutenberg.”
+
+Boris desenvolve a analogia: na Europa de meados dos anos 1400, a taxa de alfabetização era muito baixa — menos de 1% da população. Eram os escribas que faziam toda a leitura e escrita, empregados por senhores e reis que frequentemente nem eram letrados. Quando Gutenberg e a prensa chegaram, nos 50 anos seguintes foi produzido mais material impresso do que nos mil anos anteriores. O custo caiu cerca de 100 vezes em 50 anos. A alfabetização levou mais tempo para crescer — porque aprender a ler e escrever exige um sistema educacional, tempo livre e não precisar trabalhar o dia todo na lavoura — mas em 200 anos chegou a 70% globalmente.
+
+Boris conta que existe um documento histórico fascinante: uma entrevista com um escriba dos anos 1400 sobre como ele se sentia em relação à prensa. “O escriba estava na verdade muito animado, porque disse: 'a coisa que eu não gosto de fazer é copiar entre livros. O que eu gosto de fazer é desenhar a arte nos livros e fazer a encadernação. E estou muito feliz que agora meu tempo está liberado para isso.'”
+
+Boris traça o paralelo direto: “Como engenheiro, senti algo parecido. Não preciso mais fazer o trabalho tedioso de programar — os detalhes, mexer com git, usar todas essas ferramentas diferentes. Essa nunca foi a parte divertida. A parte divertida é descobrir o que construir. É conversar com usuários. É pensar em grandes sistemas. É pensar no futuro. É colaborar com outras pessoas da equipe. E é isso que consigo fazer mais agora.”
+
+Lenny complementa que a ferramenta que Boris está construindo permite que qualquer pessoa faça isso — pessoas sem experiência técnica conseguem fazer exatamente o que ele descreve. Lenny recorda seus próprios 10 anos como engenheiro, gastando tempo enorme com bibliotecas, dependências e buscando soluções no Stack Overflow. “Agora é só pedir 'me ajude a resolver isso' e você recebe o passo a passo.”
+
+Boris confirma com uma história: “Estava conversando com um engenheiro hoje cedo. Ele está escrevendo um serviço em Go há um mês, funciona muito bem. Perguntei como ele se sente escrevendo. Ele disse: 'Sabe, eu ainda não sei Go de verdade.'” Boris acredita que veremos cada vez mais isso — se você sabe que o código funciona corretamente e de forma eficiente, não precisa necessariamente conhecer todos os detalhes.
+
+================================================================================
+[30:56] QUAIS PROFISSÕES SERÃO IMPACTADAS A SEGUIR
+
+Lenny pergunta qual será o próximo papel mais impactado pela IA. Boris responde que serão os papéis adjacentes à engenharia — product managers, designers, cientistas de dados. “Vai se expandir para praticamente qualquer tipo de trabalho que você faz no computador, porque o modelo vai ficar cada vez melhor nisso.”
+
+Boris explica que o Claude Code e produtos como o Co-Work são a primeira forma de trazer IA agêntica para pessoas que nunca usaram antes. “Quando penso em engenharia há um ano, ninguém realmente sabia o que era um agente. Ninguém realmente usava. Mas hoje em dia, é simplesmente a forma como fazemos nosso trabalho.”
+
+Ele observa que, fora do mundo técnico, as pessoas ainda usam IA conversacional — chatbots — mas ninguém realmente usou um agente antes. “A palavra 'agente' é jogada o tempo todo e perdeu todo o significado, mas agente tem uma definição técnica muito específica: é um LLM capaz de usar ferramentas. Ele não apenas conversa, ele pode agir e interagir com seu sistema — pode usar seus Google Docs, enviar e-mails, rodar comandos no seu computador.”
+
+Boris enfatiza que essa é uma questão que precisamos resolver como sociedade e como indústria. Na Anthropic, levam isso muito a sério, contando com economistas, profissionais de políticas públicas e impacto social. “Não deveria depender apenas de nós decidir.”
+
+================================================================================
+[33:17] EMPREGOS, PARADOXO DE JEVONS E CONTRATAÇÕES
+
+Lenny levanta a grande questão dos empregos e da perda de empregos, mencionando o Paradoxo de Jevons — a ideia de que quanto mais conseguimos fazer, mais contratamos, e não é tão assustador quanto parece. Boris responde que a equipe do Claude Code está contratando.
+
+No nível pessoal, Boris diz: “Tudo isso só me fez gostar mais do meu trabalho. Nunca gostei tanto de programar quanto hoje, porque não preciso lidar com todas as minúcias.” Isso é algo que ouvem de muitos clientes — eles amam o Claude Code porque torna a programação prazerosa novamente.
+
+Porém, Boris é honesto sobre a incerteza: “É difícil saber para onde isso vai. Recorro novamente à analogia da prensa de Gutenberg — uma tecnologia que estava trancada para um pequeno grupo de pessoas, como saber ler e escrever, se tornou acessível a todos. Foi inerentemente democratizante. Se não fosse assim, algo como o Renascimento jamais teria acontecido, porque grande parte dele era sobre disseminação de conhecimento e registros escritos.”
+
+Boris imagina um mundo daqui a alguns anos onde todos possam programar. “O que isso desbloqueia? Qualquer pessoa pode criar software a qualquer momento. Não faço ideia do que vem depois. Da mesma forma que nos anos 1400 ninguém poderia ter previsto o que aconteceria.” Mas reconhece que, no meio do caminho, “vai ser muito disruptivo e doloroso para muitas pessoas. Como sociedade, essa é uma conversa que precisamos ter.”
+
+================================================================================
+[47:25] CONSELHOS PARA SE MANTER RELEVANTE: SEJA GENERALISTA
+
+Lenny pede conselhos para quem quer se destacar nesse cenário de transformação. Boris oferece duas recomendações principais.
+
+Primeiro: “Experimente as ferramentas, conheça-as, não tenha medo delas. Mergulhe, teste, esteja na fronteira.”
+
+Segundo: “Tente ser mais generalista do que você tem sido. Por exemplo, na faculdade, muitas pessoas que estudam ciência da computação aprendem a programar e não aprendem muito mais. Mas alguns dos engenheiros mais eficazes com quem trabalho todos os dias cruzam disciplinas.”
+
+Boris dá exemplos concretos da equipe do Claude Code: “Todo mundo programa. Nosso product manager programa, nosso gerente de engenharia programa, nosso designer programa, nosso cara de finanças programa, nosso cientista de dados programa.” Além disso, os engenheiros mais fortes são híbridos — engenheiros de produto com excelente senso de design, engenheiros com bom entendimento do negócio, engenheiros que adoram conversar com usuários.
+
+“Acho que as pessoas que serão mais recompensadas nos próximos anos não serão apenas nativas de IA e não apenas saberão usar bem essas ferramentas — elas serão curiosas, generalistas, cruzarão múltiplas disciplinas e conseguirão pensar no problema mais amplo que estão resolvendo, não apenas na parte de engenharia.”
+
+Sobre a pergunta se as três disciplinas tradicionais — engenharia, design e produto — vão persistir, Boris diz: “No curto prazo, sim. Mas estamos começando a ver uma sobreposição de talvez 50% nesses papéis. Acredito que até o final do ano, esses limites vão ficar ainda mais nebulosos. Em alguns lugares, o título 'engenheiro de software' vai começar a desaparecer e será substituído por 'builder', ou talvez todo mundo seja um product manager que também programa.”
+
+================================================================================
+[52:43] PESQUISA: PROFISSIONAIS ESTÃO MAIS FELIZES COM IA?
+
+Lenny compartilha uma pesquisa informal que fez no Twitter com três enquetes separadas perguntando a engenheiros, PMs e designers se estão gostando mais ou menos do trabalho desde que adotaram ferramentas de IA.
+
+Os resultados: entre engenheiros e PMs, 70% disseram que estão gostando mais do trabalho e apenas 10% disseram que estão gostando menos. Entre designers, apenas 55% disseram gostar mais e 20% disseram gostar menos.
+
+Boris acha fascinante e quer entender melhor ambos os grupos. Na Anthropic, os designers são bastante técnicos — isso é algo que avaliam nas entrevistas, mesmo para funções não-técnicas. “Nossos designers em grande parte programam. Para eles, tem sido positivo, pelo que vi, porque agora em vez de incomodar engenheiros, podem simplesmente ir lá e programar. Alguns designers que não programavam antes começaram a fazer isso e, para eles, é ótimo porque conseguem se desbloquear sozinhos.”
+
+Boris menciona que diferentes perfis usam diferentes ferramentas. Os designers, por exemplo, usam mais o aplicativo de desktop do Claude, que tem uma aba de código que é essencialmente o mesmo Claude Code. “Você pode rodar quantas sessões em paralelo quiser. Chamamos isso de multi-Claude.”
+
+Boris explica a filosofia por trás: “Isso é levar o produto até onde as pessoas estão. Você não quer forçar as pessoas a usar um fluxo de trabalho diferente. Você não quer fazer com que saiam do caminho delas para aprender algo novo. Se você pode tornar o que elas já fazem um pouco mais fácil, isso vai ser um produto muito melhor. E isso é esse princípio de demanda latente, que eu acho que é o princípio mais importante em produto.”
+
+================================================================================
+[53:05] DEMANDA LATENTE: O PRINCÍPIO MAIS IMPORTANTE EM PRODUTO
+
+Lenny pede a Boris para explicar o conceito de demanda latente. Boris define: “Demanda latente é a ideia de que se você constrói um produto de um jeito que pode ser hackeado ou usado de maneiras para as quais não foi projetado, isso te ajuda como construtor a aprender para onde levar o produto em seguida.”
+
+Boris dá o exemplo do Facebook Marketplace: “A gestora do time, Fiona, foi a fundadora da equipe do Marketplace. Começou com a observação, por volta de 2016, de que 40% dos posts em grupos do Facebook eram de compra e venda. As pessoas estavam abusando do produto de grupos para comprar e vender. Não era abuso no sentido de segurança — ninguém projetou o produto para isso, mas as pessoas estavam descobrindo um jeito porque era muito útil. Foi bem óbvio que se você construísse um produto melhor para compra e venda, as pessoas iam gostar.”
+
+Outro exemplo: o Facebook Dating surgiu da observação de que 60% das visualizações de perfil eram de pessoas que não eram amigas entre si e de gêneros opostos.
+
+Boris conecta isso diretamente ao Co-Work: “Nos últimos 6 meses, muitas pessoas usando Claude Code não estavam usando para programar. Tinha alguém no Twitter usando para cultivar tomates. Outro analisando seu genoma. Alguém recuperando fotos de um HD corrompido — fotos de casamento. Alguém analisando uma ressonância magnética. Eram todos esses casos de uso nada técnicos.”
+
+Conta uma história marcante: “Em maio do ano passado, entrei no escritório e nosso cientista de dados, Brendan, estava com o Claude Code aberto no computador, num terminal. Fiquei chocado. 'Brendan, o que você está fazendo? Você descobriu como abrir o terminal?' — que é um produto muito de engenharia. Ele tinha baixado o Node.js, baixado o Claude Code e estava fazendo análise SQL no terminal. Na semana seguinte, todos os cientistas de dados estavam fazendo a mesma coisa.”
+
+Boris introduz então uma segunda dimensão moderna da demanda latente: “A formulação tradicional é: observe o que as pessoas estão fazendo e facilite um pouco. A formulação moderna é: observe o que o modelo está tentando fazer e facilite isso.”
+
+Ele explica: “Quando começamos a construir o Claude Code, muita gente abordava o design com LLMs colocando o modelo numa caixa — 'aqui está o que eu quero construir, modelo, você vai fazer esse componente.' No Claude Code, invertemos isso. Dissemos: o produto é o modelo. Queremos expô-lo, colocar o mínimo de estrutura ao redor, dar o conjunto mínimo de ferramentas para que ele possa decidir quais usar e em que ordem.” Em pesquisa, isso se chama estar “on distribution” — observar o que o modelo quer fazer. Em termos de produto, demanda latente é exatamente o mesmo conceito, aplicado ao modelo.
+
+================================================================================
+[59:38] CO-WORK: CONSTRUÍDO EM 10 DIAS COM CLAUDE CODE
+
+Lenny menciona que o Co-Work foi construído em apenas 10 dias. Boris conta a história: o Claude Code, quando lançado, não foi um sucesso imediato. Teve pontos de inflexão — um com o Opus 4, outro em novembro — e o crescimento continua acelerando. “Nos primeiros meses não foi um hit. As pessoas usavam, mas muitas não sabiam para que servia. O modelo ainda não era muito bom.”
+
+Já o Co-Work foi um sucesso imediato. “O crédito vai honestamente para o Felix, Sam, Jenny e a equipe que construiu. É um time incrivelmente forte.” A origem foi a demanda latente — pessoas usando Claude Code para coisas não-técnicas. “Por alguns meses, a equipe explorou, tentou várias opções diferentes. No final, alguém disse: 'e se a gente simplesmente pegar o Claude Code e colocar no aplicativo de desktop?' E foi essencialmente isso que funcionou.”
+
+Em 10 dias, usaram completamente o Claude Code para construir o Co-Work, incluindo um sistema de segurança sofisticado com uma máquina virtual embarcada e guard rails para garantir que o modelo faça a coisa certa. “O Claude Code escreveu todo esse código. Só precisamos pensar em como tornar isso um pouco mais seguro e mais auto-guiado para pessoas que não são engenheiras.”
+
+Boris enfatiza a filosofia de lançar cedo: “Lançamos cedo. Ainda era bem cru nas bordas. Mas é assim que aprendemos — tanto no lado de produto quanto no de segurança. Precisamos lançar coisas um pouco antes do que gostaríamos para obter feedback, conversar com usuários, entender o que as pessoas querem e deixar isso moldar o futuro do produto.”
+
+================================================================================
+[1:03:36] SEGURANÇA DA IA: TRÊS CAMADAS DE PROTEÇÃO
+
+Boris explica as três camadas de segurança dos modelos na Anthropic.
+
+A primeira camada é alinhamento e interpretabilidade mecanística: “Quando treinamos o modelo, queremos ter certeza de que ele é seguro. Neste ponto, temos tecnologia bastante sofisticada para entender o que está acontecendo nos neurônios, rastreá-los. Por exemplo, se existe um neurônio relacionado a engano, estamos chegando ao ponto onde podemos monitorá-lo e entender quando ele está sendo ativado.”
+
+A segunda camada são as avaliações (evals): um ambiente de laboratório onde o modelo é colocado em situações sintéticas. “O modelo está numa placa de Petri. Você o coloca numa situação e pergunta: 'modelo, o que você faz?' Está fazendo a coisa certa? Está alinhado? É seguro?”
+
+A terceira camada é observar como o modelo se comporta no mundo real. “Conforme o modelo fica mais sofisticado, isso se torna crucial, porque pode parecer muito bom nas duas primeiras camadas, mas não ser ótimo na terceira.”
+
+Boris revela que o Claude Code foi usado internamente na Anthropic por quatro ou cinco meses antes do lançamento público. “Não tínhamos certeza se era seguro — era o primeiro grande agente que alguém tinha lançado naquele momento, definitivamente o primeiro agente de programação que se tornou amplamente usado. Tivemos que estudá-lo internamente por muito tempo antes de nos sentirmos confortáveis.”
+
+O Co-Work seguiu uma abordagem semelhante: avaliação em alinhamento, evals, testes internos e com alguns clientes. “É por isso que lançamos cedo, chamamos de research preview.”
+
+Boris menciona Chris Olah como o inventor do campo de interpretabilidade mecanística e recomenda que Lenny o entreviste. Explica que neurônios de modelos não são iguais a neurônios animais, mas se comportam de maneira similar em muitos aspectos. “Conforme os modelos ficam maiores, não é apenas um único neurônio que corresponde a um conceito. Um único neurônio pode corresponder a uma dúzia de conceitos. Quando ativado junto com outros neurônios — isso se chama superposição — representa um conceito mais sofisticado.”
+
+Boris conclui enfatizando a missão da Anthropic: “Fazer isso de um jeito que seja seguro e bom para o mundo — essa é a razão pela qual existimos. É a razão pela qual todos estão na Anthropic. Muito desse trabalho nós publicamos em código aberto, publicamos livremente para inspirar outros laboratórios que trabalham em coisas semelhantes.”
+
+================================================================================
+[1:05:42] SEGURANÇA E A CORRIDA PARA O TOPO
+
+Boris explica que a Anthropic lançou um sandbox de código aberto para o Claude Code — um ambiente isolado onde o agente pode rodar com limites claros, sem acessar tudo no sistema do usuário. O sandbox foi feito open source e funciona com qualquer agente, não apenas com o Claude Code. A ideia é facilitar para que outros desenvolvedores adotem as mesmas práticas de segurança.
+
+Internamente, a equipe chama isso de “corrida para o topo”. A filosofia é simples: se a Anthropic tem uma alavanca para fazer com que a IA avance de forma segura, ela quer usar essa alavanca — e torná-la acessível a todos.
+
+A ANSIEDADE DOS AGENTES PARADOS
+
+Lenny levanta uma observação interessante: muitos engenheiros e gerentes de produto sentem uma ansiedade quando seus agentes não estão funcionando. É aquela sensação de “preciso responder a pergunta do agente”, “ele travou em algo” ou “estou perdendo produtividade”.
+
+Boris diz que pessoalmente não sente tanto essa ansiedade, justamente porque sempre tem vários agentes rodando ao mesmo tempo. No momento da entrevista, ele tinha cinco agentes ativos. Ele conta que a primeira coisa que fez ao acordar naquele dia foi abrir o app do Claude no iOS para verificar um código que havia escrito na noite anterior.
+
+Boris revela algo surpreendente sobre como programa hoje: cerca de um terço do seu trabalho acontece no terminal, um terço no app desktop e um terço no app do celular. “Eu não imaginava que seria assim que eu programaria em 2026”, admite.
+
+Lenny acha fascinante que Boris ainda chame isso de “programar” — quando na prática é descrever o que você quer, e não escrever código diretamente. Boris responde com uma reflexão histórica: será que os programadores que usavam cartões perfurados teriam dito a mesma coisa sobre quem programa com software? Ele lembra de ter lido publicações antigas da ACM onde as pessoas diziam que “isso não é de verdade programação”.
+
+A HISTÓRIA DO AVÔ PROGRAMADOR
+
+Boris compartilha uma história pessoal: sua família é da União Soviética — ele nasceu na Ucrânia — e seu avô foi um dos primeiros programadores da URSS, trabalhando com cartões perfurados. Sua mãe contava que, quando criança, ele trazia pilhas de cartões perfurados para casa, e ela desenhava sobre eles com giz de cera.
+
+O avô nunca viveu para ver a transição para software, mas Boris observa que provavelmente existiu uma geração inteira de programadores que não levou o software a sério no início. “Esse é um campo que sempre mudou dessa forma”, conclui.
+
+Nesse momento, Lenny revela que também nasceu na Ucrânia — de Odessa. Boris fica surpreso: ele também é de Odessa. Um momento genuíno de conexão entre os dois. A família de Boris emigrou em 1988, a de Lenny em 1995. Boris comenta que se sente muito sortudo por ter crescido nos Estados Unidos, e Lenny brinca que sua família brinda “à América” diante de qualquer coisa boa — mas que o brinde ainda é com vodka.
+
+================================================================================
+[1:05:51] CONSELHOS PARA CONSTRUIR PRODUTOS COM IA
+
+Lenny pede mais dicas para quem está construindo produtos de IA, além das já mencionadas (dar tokens ilimitados à equipe e construir para o modelo do futuro, não o de hoje). Boris compartilha três princípios:
+
+1. Não tente encaixotar o modelo. Muitas pessoas tentam forçar o modelo a seguir workflows rígidos — “faça o passo 1, depois o passo 2, depois o passo 3” — com orquestradores complexos. Quase sempre, os melhores resultados vêm de dar ferramentas ao modelo, definir um objetivo e deixá-lo descobrir o caminho. Um ano atrás, esse tipo de scaffolding era necessário; hoje, não mais.
+
+2. A Lição Amarga (The Bitter Lesson). Boris cita o famoso post de Rich Sutton: o modelo mais geral sempre supera o mais específico com o tempo. A implicação prática é clara: aposte no modelo mais geral. Não tente usar modelos pequenos, não tente fazer fine-tuning se não for realmente necessário. Scaffolding pode melhorar a performance em 10-20%, mas esses ganhos geralmente são eliminados pelo próximo modelo.
+
+3. Construa para o modelo de daqui a seis meses. Desde o início, o Claude Code foi projetado pensando no modelo futuro, não no atual. Nas primeiras versões, com o Sonnet 3.5, o modelo escrevia muito pouco código porque ainda não era confiável. A aposta era que, em algum momento, o modelo ficaria bom o suficiente. Isso aconteceu com o Opus 4 e o Sonnet 4 — foi quando o crescimento do Claude Code disparou. “Vai ser desconfortável porque seu product-market fit não vai ser muito bom nos primeiros seis meses”, avisa Boris, “mas quando aquele modelo sair, você vai sair correndo.”
+
+O QUE ESPERAR DOS MODELOS FUTUROS
+
+Lenny pergunta: quando Boris diz “construa para o modelo de seis meses”, o que exatamente pode-se assumir que vai melhorar?
+
+Boris responde que, trabalhando dentro de um laboratório de IA, ele tem a vantagem de ver como os modelos evoluem. Mas compartilha duas apostas seguras: os modelos vão ficar cada vez melhores em usar ferramentas e computadores, e vão conseguir rodar por períodos cada vez mais longos sem supervisão.
+
+Para ilustrar a evolução: com o Sonnet 3.5, há um ano, o modelo conseguia funcionar talvez 15 a 30 segundos antes de começar a descarrilar. Hoje, com o Opus 4.6, ele roda em média de 10 a 30 minutos sem atenção, podendo funcionar por horas ou até dias. Há exemplos de agentes que rodaram por semanas.
+
+================================================================================
+[1:05:53] DICAS PARA USAR O CLAUDE CODE
+
+Lenny pede dicas práticas para quem está começando ou quer melhorar no uso do Claude Code. Boris faz uma ressalva importante: não existe uma única forma certa de usar a ferramenta. Cada desenvolvedor é diferente, tem preferências e ambientes distintos. Dito isso, compartilha três dicas:
+
+1. Use o modelo mais capaz. Atualmente, o Opus 4.6 com esforço máximo. Às vezes, usar um modelo mais barato como o Sonnet acaba sendo mais caro, porque ele precisa de mais tokens e mais correções para completar a mesma tarefa.
+
+2. Use o modo plano (plan mode). Boris começa cerca de 80% das suas tarefas no modo plano. Tecnicamente, é muito simples: apenas uma frase injetada no prompt dizendo “por favor, não escreva código ainda”. O modelo vai e volta com você refinando o plano. Quando o plano fica bom, você deixa o modelo executar — e com o Opus 4.6, ele geralmente acerta de primeira.
+
+3. Experimente diferentes interfaces. Muita gente pensa no Claude Code apenas como terminal, mas há apps para iOS, Android, desktop, integração com Slack, e mais. Cada engenheiro é diferente — encontre o que funciona melhor para você. O mesmo agente roda em todas as plataformas.
+
+================================================================================
+[1:11:07] SOBRE A CONCORRÊNCIA: CODEX E OUTROS
+
+Lenny pergunta sobre o Codex, da OpenAI. Boris diz que não usou muito, mas achou que parecia bastante com o Claude Code quando foi lançado — o que ele considera lisonjeiro. Ele acredita que competição é positiva porque força todos a melhorarem.
+
+No entanto, a equipe do Claude Code não gasta muito tempo analisando concorrentes. O foco é resolver os problemas dos usuários. “Eu adoro conversar com usuários. Adoro melhorar o produto. Adoro agir com base no feedback”, diz Boris. “É realmente só sobre construir um bom produto.”
+
+================================================================================
+[1:11:41] PLANOS PÓS-AGI: A ARTE DO MISO
+
+Lenny conta que o cofundador da Anthropic, Dario Amodei, sugeriu perguntar a Boris sobre seus planos pós-AGI.
+
+Boris conta que antes de entrar na Anthropic, vivia no Japão rural. Era o único engenheiro e o único falante de inglês da cidade. Algumas vezes por semana, pedalava até a feira de produtores, passando por arrozais. Um ritmo completamente oposto ao de San Francisco.
+
+Uma das formas como ele e sua esposa fizeram amizade com os vizinhos foi trocando conservas e picles. Naquela cidade, todos faziam missô e conservas. Boris ficou razoavelmente bom em fazer missô — e ainda faz até hoje. O que ele ama no processo é que ensina a pensar em escalas longas de tempo: um missô branco leva pelo menos três meses; um missô vermelho pode levar de 2 a 4 anos. É preciso muita paciência.
+
+“Se não estivesse na Anthropic, provavelmente estaria fazendo missô”, conclui Boris com humor.
+
+================================================================================
+[1:12:04] AINDA PARECE SER APENAS O COMEÇO
+
+Boris ressalta que, desde o início da Anthropic, a visão sempre foi progredir de codificação para uso de ferramentas e então para uso de computadores. É assim que eles sabem que os modelos vão se desenvolver, e é assim que aprendem sobre segurança.
+
+Tudo o que está acontecendo agora — o Claude Code se tornando um negócio de bilhões de dólares, todos os amigos de Boris usando o produto — é ao mesmo tempo surpreendente e previsível. Surpreendente porque não sabiam que seria exatamente esse produto, começando num terminal. Previsível porque sempre foi a crença da empresa.
+
+“Ao mesmo tempo, parece que ainda estamos muito no início”, diz Boris. “A maior parte do mundo ainda não usa Claude Code. A maior parte do mundo ainda não usa IA. Parece que fizemos 1% e há muito mais pela frente.”
+
+Lenny observa os números impressionantes: a Anthropic levantou uma rodada enorme, o Claude Code sozinho gera cerca de 2 bilhões de dólares em receita, e a empresa toda está em torno de 15 bilhões.
+
+Boris atribui o crescimento contínuo aos próprios usuários: eles usam o produto, se apaixonam, reportam problemas, pedem funcionalidades. “A única razão pela qual continua melhorando é porque todo mundo está usando, todo mundo está falando sobre, todo mundo está dando feedback.”
+
+================================================================================
+[1:15:42] RODADA RELÂMPAGO: LIVROS FAVORITOS
+
+Boris recomenda três livros:
+
+1. Programação Funcional em Scala — “O melhor livro técnico que já li.” Ele reconhece que provavelmente ninguém vai usar Scala, mas diz que há uma elegância na programação funcional e no pensamento com tipos que moldou fundamentalmente sua forma de programar.
+
+2. Accelerando, de Charles Stross — Ficção científica que captura a essência do momento atual como nenhum outro livro. O ritmo acelera constantemente, começando com o início de uma decolagem tecnológica e terminando com uma consciência coletiva de lagostas orbitando Júpiter. Tudo acontece em poucas décadas.
+
+3. A Terra Errante, de Liu Cixin — O autor de O Problema dos Três Corpos. Boris acha os contos de Cixin ainda melhores que a trilogia principal. Destaca a perspectiva diferente da ficção científica chinesa em relação à ocidental.
+
+Boris reflete sobre como a ficção científica criou modelos mentais que nos preparam para pensar sobre o futuro. Foi justamente isso, combinado com a vida no Japão rural e o pensamento em escalas longas de tempo, que o levou a entrar na Anthropic. “Eu sabia como essa coisa podia se desenrolar, e senti que precisava contribuir para que fosse um pouco melhor.”
+
+Lenny recomenda de volta o livro “A Fire Upon the Deep”, de Vernor Vinge, que ambos apreciam, junto com “A Deepness in the Sky”.
+
+================================================================================
+[1:19:56] RODADA RELÂMPAGO: FILME, PRODUTO E LEMA DE VIDA
+
+Filme ou série favorita: Boris admite que não tem muito tempo para TV ou filmes, mas gostou muito da adaptação de O Problema dos Três Corpos na Netflix.
+
+Produto favorito: Co-work, da própria Anthropic. Boris diz que é o produto que mais mudou sua vida. Ele o usa constantemente — já pagou uma multa de trânsito, cancelou assinaturas, responde emails e até faz gestão de projetos da equipe. Toda segunda-feira, o Co-work verifica uma planilha da equipe e manda mensagem no Slack para cada engenheiro que não preencheu seu status semanal.
+
+Boris também recomenda o podcast Acquired, de Ben e David, começando pelo episódio sobre a Nintendo.
+
+Lenny menciona que seu próprio post com “50 usos não-técnicos do Claude” foi usado como benchmark pela equipe da Anthropic para avaliar o Co-work antes do lançamento. Quando o Co-work conseguiu fazer 48 dos 50 casos, decidiram que estava pronto.
+
+Lema de vida: “Use o bom senso.” Boris observa que muitas falhas no ambiente de trabalho acontecem porque as pessoas seguem processos sem pensar, trabalham em produtos que não fazem sentido e seguem a inércia em vez de raciocinarem por conta própria. Os melhores resultados vêm de pensar a partir de primeiros princípios.
+
+================================================================================
+[1:22:24] COMO BORIS DESCOBRIU O TWITTER
+
+Por muito tempo, Boris usava apenas o Threads, em parte porque ajudou a construir o produto. Em dezembro, enquanto viajava pela Europa com a esposa — o que ele descreve como “férias de programação”, passando os dias codando —, ficou entediado por algumas horas e abriu o Twitter.
+
+Viu pessoas comentando sobre o Claude Code, começou a responder, e depois passou a procurar ativamente bugs e feedback dos usuários. As pessoas ficaram surpresas com a velocidade com que ele resolvia problemas: como ele usa o próprio Claude Code para corrigir bugs, muitas vezes consegue resolver em minutos. “Para mim é normal”, diz Boris. “Abro um Claude, dou a descrição do bug, ele vai lá e resolve, e eu passo para o próximo.”
+
+================================================================================
+[1:23:14] ONDE ENCONTRAR BORIS
+
+Boris pode ser encontrado no Threads e no Twitter/X. Ele pede que as pessoas o marquem com bugs, pedidos de funcionalidades e feedback sobre os produtos. “Eu adoro ouvir isso”, finaliza.

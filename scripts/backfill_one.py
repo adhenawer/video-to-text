@@ -57,14 +57,19 @@ def _section_count_in_txt(txt_path):
 
 
 def _propose_pt_timestamps_from_en(en_ts_list, n_pt_sections):
-    """When PT has fewer sections than EN, distribute EN timestamps coarsely."""
+    """Map EN timestamps to PT section count (works for PT < EN, ==, or > EN)."""
     if not en_ts_list:
         return []
-    if n_pt_sections >= len(en_ts_list):
-        return en_ts_list[:n_pt_sections]
-    # Pick every (len(en) / n_pt)th timestamp
-    step = len(en_ts_list) / n_pt_sections
-    return [en_ts_list[min(int(i * step), len(en_ts_list) - 1)] for i in range(n_pt_sections)]
+    # Linearly map PT index -> EN index, clamped
+    n_en = len(en_ts_list)
+    out = []
+    for i in range(n_pt_sections):
+        if n_pt_sections == 1:
+            j = 0
+        else:
+            j = round(i * (n_en - 1) / (n_pt_sections - 1))
+        out.append(en_ts_list[max(0, min(j, n_en - 1))])
+    return out
 
 
 def main():

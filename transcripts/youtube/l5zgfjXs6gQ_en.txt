@@ -1,5 +1,5 @@
 ================================================================================
-INTRODUCTION: THE STATE OF AGENTIC ENGINEERING
+[0:12] INTRODUCTION: THE STATE OF AGENTIC ENGINEERING
 
 Welcome to this webinar about agentic engineering — context, guardrails, and creativity. I’m Tomas, product solutions lead at Port, with a background in DevSecOps and prior experience as a solutions architect at GitLab helping organizations build DevSecOps platforms. I’m based in Melbourne. Joining me is Zach, from solutions engineering at Port for APJ, based in Sydney, with a DevOps background.
 
@@ -8,7 +8,7 @@ Before we dive in, we wanted to learn the current state of agentic engineering i
 The concern about destructive actions is legitimate. Recent incidents — such as Amazon accidentally deleting part of a codebase through an AI agent — show that guardrails to prevent destructive actions are the most pressing issue in the industry today.
 
 ================================================================================
-THE PROBLEM: AGENTIC CHAOS
+[4:03] THE PROBLEM: AGENTIC CHAOS
 
 Even if you take agents out of the equation, the chaos and sprawl of tooling and documentation rings true — especially in 2026. Over the last ten to fifteen years, we’ve tried to solve these issues through DevOps, SRE, and platform engineering, all aiming to simplify and give people an easier platform to interact with. Now we’re adding AI agents on top of that, and the complexity keeps growing.
 
@@ -22,7 +22,7 @@ When you look at why the complexity exists and what the key challenges are in ge
 In the DevSecOps space, I used to see this pattern constantly. Every team was bringing agents into the organization in very different ways, and there was no centralized place where you could see what agents existed or how they were being used.
 
 ================================================================================
-USE CASES UNLOCKED WHEN YOU SOLVE AGENTIC CHAOS
+[5:47] USE CASES UNLOCKED WHEN YOU SOLVE AGENTIC CHAOS
 
 If we solve this agentic chaos and gain real control, the landscape opens up. We’re seeing many use cases accelerate: auto incident resolution, self-healing incidents, autonomous ticket delivery, security remediation, compliance checks, and more.
 
@@ -35,14 +35,14 @@ To make these workflows trustworthy, a few things are essential:
 - **Human oversight**: the agent is not a black box of inputs and outputs. A human can see and review how it arrived at a decision.
 
 ================================================================================
-WHAT CONTEXT MEANS FOR AN AI AGENT
+[8:53] WHAT CONTEXT MEANS FOR AN AI AGENT
 
 When you feed something to an AI agent and say “I want to build X, Y and Z,” it has zero context about your architecture, your language stack, your tool choices (Snyk versus Wiz, for example). At Port, when we talk about a context graph, we mean all the data an engineer would expect to have when building something — services, how they are built, repositories, pull requests, pipelines, and how they relate to each other.
 
 Better and more accurate context produces better AI responses. Context is what transforms a generic AI into something useful for your specific environment.
 
 ================================================================================
-ADDRESSING AGENTIC CHAOS: THE CENTRAL AGENT REGISTRY
+[11:44] ADDRESSING AGENTIC CHAOS: THE CENTRAL AGENT REGISTRY
 
 Before building an agentic workflow, the first question is: where do I store and control my agents? You need a central repository for the tools and agents your workflows rely on. Whether an agent is built by your team or adopted from elsewhere, you want to register it, share it across teams, and track it.
 
@@ -64,7 +64,7 @@ A skills registry sits alongside this. As you give AI agents the ability to do v
 Think of this like a Docker registry, or centralized CI pipelines: the platform team centralizes and provides them for consumption by other teams. Avoid rework. Consume what has already been built and proven.
 
 ================================================================================
-WORKFLOW ONE: AUTONOMOUS TICKET RESOLUTION
+[15:13] WORKFLOW ONE: AUTONOMOUS TICKET RESOLUTION
 
 The first workflow takes a work item — a bug, a feature — and pushes it through an end-to-end flow: product planning, PRD generation, development, code and security review, and deployment. It can be triggered manually or automatically when a work item arrives.
 
@@ -92,7 +92,7 @@ You aren’t jumping between Jira, an agent somewhere else, and another tool. Th
 Workflows are fully configurable. The steps shown (fetch work item, generate PRD, develop, review) are a high-level template. You can rename stages, add stages, or reshape the workflow to fit your organization. There is also intelligent routing: rules determine whether an item goes to an AI agent or a human. For a non-mission-critical, customer-facing wish list feature with low blast radius, an agent is suitable. For high-risk changes, a human handles it.
 
 ================================================================================
-WORKFLOW TWO: SELF-HEALING INCIDENTS
+[27:48] WORKFLOW TWO: SELF-HEALING INCIDENTS
 
 This is the exciting one for anyone who has worked as a cloud engineer or DevOps practitioner. Getting up at 2 a.m. to handle a P2 incident while half asleep is the dream use case for AI: let it do the triage, investigation, and most of the remediation work.
 
@@ -124,7 +124,7 @@ Remediation and resolution close the loop. Port combines agent assessments with 
 The RCA angle is particularly valuable: out of 100 incidents, perhaps 90 share the same root cause. Because that data lives in Port, AI agents can make recommendations and remediations consistent across related incidents. For low-priority P4 incidents, Port can recognize that a similar issue has been seen before and recommend the previous remediation — not just as an ITSM lookup, but enriched with the full context of the affected service and trends.
 
 ================================================================================
-MEASURING ROI: HOW DO YOU KNOW IT’S WORKING?
+[29:01] MEASURING ROI: HOW DO YOU KNOW IT’S WORKING?
 
 Different personas care about different metrics. Some examples:
 
@@ -135,7 +135,7 @@ Different personas care about different metrics. Some examples:
 One critical recommendation: define a baseline before introducing agents. How long does it take today to deliver a ticket to production — from the moment the Jira is opened to the moment it is resolved? Measure what you currently have, then compare after the AI agents are introduced. The delta is your ROI.
 
 ================================================================================
-IS THE AGENT DOING A GOOD JOB?
+[41:04] IS THE AGENT DOING A GOOD JOB?
 
 Numbers can go up without really meaning anything. Better signals:
 
@@ -143,28 +143,28 @@ Numbers can go up without really meaning anything. Better signals:
 - **Self-healing incidents**: the total number of incidents should decrease as self-healing usage grows. Why? Because the AI agents help across the full lifecycle — understanding who is involved, how to remediate based on past RCAs, and applying fixes before incidents recur.
 
 ================================================================================
-THE END-TO-END FEEDBACK LOOP
+[45:31] THE END-TO-END FEEDBACK LOOP
 
 This is the piece I love most in Port: all data flows into a context graph that the AI agents can rely on as a trusted source. Metrics and ROI are surfaced, but the same platform can trigger workflows based on thresholds.
 
 Example: if the PR throughput or lead time for a specific team starts dropping, that condition can trigger an agentic workflow automatically. The improvements loop back into the platform, and you can see them reflected in the metrics. Data in, workflows out, improvement visible, loop repeats.
 
 ================================================================================
-EXTERNAL DATA: MCP CONNECTORS
+[46:39] EXTERNAL DATA: MCP CONNECTORS
 
 A common customer ask: “We ingest a lot into Port, but we have other unstructured data — maybe in Notion, maybe in Slack. Can agents use that too?”
 
 Yes. Beyond traditional integrations (AWS, GCP, GitHub, Bitbucket, Jira, ADO), Port supports MCP servers. You can enable MCP for Atlassian, Notion, Datadog, CloudWatch, and others. Agents can then query multiple data sources when investigating an incident or triaging a ticket. Port remains the control plane and context graph, while MCP connectors give agents the ability to enrich workflows with context from external tools — like Slack conversations during an incident.
 
 ================================================================================
-ACCESSING PORT DATA FROM OUTSIDE
+[49:12] ACCESSING PORT DATA FROM OUTSIDE
 
 The reverse is also supported. Port exposes its own MCP server. From a tool like Claude, you can connect the Port MCP and query blueprints, services, workflows, and trigger automations. This is especially useful for ROI dashboards and ad hoc questions — for example, asking about relationships between services and users, or understanding adoption of agentic workflows without leaving your AI tool.
 
 The webinar theme is context, guardrails, and creativity. Creativity is a big part of this: with the context graph, there are plenty of great use cases and automations waiting to be built. You can show value to different teams, identify gaps, and discover what is and isn’t working.
 
 ================================================================================
-HOW TO GET AGENTIC ENGINEERING RIGHT: SUMMARY
+[51:20] HOW TO GET AGENTIC ENGINEERING RIGHT: SUMMARY
 
 Three workflows were demonstrated: autonomous ticket resolution, self-healing incidents, and measuring the impact through engineering intelligence.
 
@@ -178,7 +178,7 @@ Getting agentic engineering right comes down to trust — trust in the AI, and t
 Reuse drives control, trust, and a higher ROI because teams deploy agentic workflows with confidence and push them toward a true end-to-end experience.
 
 ================================================================================
-CALL TO ACTION AND AUDIENCE Q&A
+[52:30] CALL TO ACTION AND AUDIENCE Q&A
 
 You can build this yourself. Create an environment in Port, start ingesting your data, and follow the many guides — whether for security, engineering intelligence, or autonomous ticket resolution. Creativity matters: build something cool for your own use case. Reach out if you need a mapping session to translate your engineering reality into agentic workflows.
 

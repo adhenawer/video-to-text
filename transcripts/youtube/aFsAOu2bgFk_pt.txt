@@ -1,0 +1,88 @@
+================================================================================
+[0:37] INTRODUÇÃO
+
+Steve Yegge é engenheiro de software há 40 anos. Passou décadas na Amazon e no Google, ficou famoso por seus textos brutalmente honestos sobre a indústria — e por acertar muito. Recentemente construiu o GassTown, um orquestrador open source de agentes de IA, e coescreveu o livro “Vibe Coding” com Jean Kim.
+
+Nesta conversa com Gergely Orosz, do The Pragmatic Engineer, Steve fala sobre os oito níveis de adoção de IA para engenheiros, por que 70% dos desenvolvedores ainda estão nos níveis mais baixos, e o que realmente está mudando na indústria — incluindo o que ele chama de “efeito vampiro” da IA no trabalho dos desenvolvedores.
+
+A ESCADA DE ABSTRAÇÃO DA ENGENHARIA DE SOFTWARE
+
+Steve acompanha a evolução da tecnologia há décadas, desde assembly language até linguagens de alto nível, e enxerga tudo como um movimento constante de subir a escada de abstração. Em 1992, ele aprendia a calcular onde cada pixel ficava numa linha para renderizar triângulos. Dois anos depois, o mesmo curso ensinava animação.
+
+Na área de computação gráfica, a escada foi da manipulação de bits para device drivers, depois para engines de jogo com física e mundos virtuais. Em software engineering, o último salto grande foram sistemas distribuídos e cloud nos anos 2010. Depois disso, um período de estagnação relativa — muitas migrações, novas versões de frameworks, mas sem uma reinvenção fundamental. Até a IA chegar.
+
+================================================================================
+[11:01] DA CETICISMO AO ENTENDIMENTO DOS MODELOS
+
+Quando o ChatGPT 3.5 surgiu em dezembro de 2022, Steve ficou impressionado que ele conseguia escrever funções Emacs Lisp razoavelmente coerentes — numa linguagem incomum, janky, mas funcional. Para quem tinha amigos pesquisadores de IA há 20 anos dizendo “qualquer dia agora”, aquele momento foi diferente.
+
+Mesmo assim, Steve foi cético como todos. Quando surgiram rumores de que a Anthropic tinha uma ferramenta interna de linha de comando que escrevia código, ele simplesmente descartou: “Não, isso não está acontecendo.” Até usar e pensar: “Ah, entendi. Estamos todos ferrados.” Logo depois escreveu “Death of the Junior Developer”.
+
+O que mudou sua perspectiva foi o GPT-4: quando o modelo conseguiu escrever mil linhas de código, Steve percebeu que isso significa edições críveis na maior parte do código do mundo, já que a maioria dos arquivos tem menos de mil linhas. A partir daí, ficou óbvio para ele que estavam numa curva exponencial, não num platô.
+
+================================================================================
+[18:54] OS OITO NÍVEIS DE ADOÇÃO DE IA
+
+Steve desenvolveu um framework de oito níveis para descrever onde os engenheiros estão em sua relação com IA:
+
+Nível 1 — sem IA nenhuma. Nível 2 — usando IA para perguntas pontuais de sim ou não no IDE. Os níveis intermediários envolvem uso progressivo do autocompletar, geração de trechos de código, e pedidos de ajuda para funções específicas. No nível 6, você está entediado porque o seu agente está ocupado processando. Nos níveis mais altos, você está orquestrando múltiplos agentes em paralelo — o que Steve chama de Gas Town mode.
+
+Cerca de 70% dos engenheiros ainda estão nos níveis mais baixos. Muitos usam o GitHub Copilot como se fosse estado da arte, quando ele ficou para trás. Numa reunião de AI tinkerers, alguém perguntou quem usava Copilot. Alguém levantou a mão. A próxima pergunta foi “você é obrigado?” — e todo mundo riu. A marca simplemente despencou.
+
+O EFEITO VAMPIRO: EXAUSTÃO E PRODUTIVIDADE
+
+Há um fenômeno que Steve chama de “efeito vampiro”: a IA te deixa excitado e você trabalha intensamente. Mas depois de três horas de sessão gerenciando agentes em paralelo, você está mentalmente exausto. Ele descobriu que tira sonecas durante o dia — e os amigos em startups relatam o mesmo.
+
+A ironia é que as empresas ainda não estão vendo o aumento de output que seria esperado. O esgotamento acontece antes. A questão da captura de valor também é central: se você é 100x mais produtivo trabalhando 8 horas, a empresa capturou tudo. Se você faz o mesmo trabalho em 10 minutos, você capturou o valor — mas a empresa ficou sem. Nenhum extremo é sustentável, e ainda não temos normas culturais para lidar com isso.
+
+================================================================================
+[41:40] GAS TOWN: O ORQUESTRADOR DE AGENTES
+
+GassTown é o projeto open source que Steve construiu: um orquestrador de agentes. A ideia central é que, se você pode completar um chat, pode colocar agentes em loop — isso é tudo que um orquestrador faz. É agentes rodando agentes.
+
+Steve lançou o GassTown cedo, assim que estava minimamente funcional, e pediu ajuda da comunidade. Resultado: mais de 100 pull requests nos primeiros dias, bugs corrigidos, e uma descoberta importante sobre a necessidade de um banco de dados para adultos (o “adult database”) que mudou a direção do projeto. O modelo tradicional de encontrar product-market fit em segredo e só então lançar estava morto para ele.
+
+A lição: num mundo onde as coisas se movem tão rápido que uma feature pedida 2 horas atrás já está obsoleta, você precisa ser extremamente transparente e vocal sobre o que está fazendo em tempo real. O GassTown já está recebendo atenção de VCs — mas Steve não se apega a ele, porque acredita que será superado por algo melhor em seis meses.
+
+================================================================================
+[1:02:37] GRANDES EMPRESAS VERSUS PEQUENAS EQUIPES
+
+Uma das previsões mais ousadas de Steve é que a inovação em grandes empresas está essencialmente morta. O que está acontecendo é que a inovação vem de indivíduos e startups de 2 a 20 pessoas — e elas vão rivalizar com o output das grandes empresas em breve.
+
+Ele está conversando com startups de 2, 5, 20 pessoas e está impressionado com o que vê. Uma dinâmica nova: em equipes que usam IA intensamente, a transparência se torna obrigatória. Cada pessoa precisa ser extremamente clara sobre o que está fazendo para que ninguém duplique esforço ou construa algo conflitante. O código pode sair em horas, mas a coordenação humana precisa ser instantânea.
+
+Steve acredita que Opus 4.5 foi o momento em que a IA passou de problema de pesquisa para problema de engenharia. Não precisamos de modelos mais inteligentes para construir coisas incríveis — o que temos já é suficiente para “comer montanhas”. É como fire ou steam: uma força que empacotamos em camadas de engenharia.
+
+O FUTURO DO DEBUGGING E DAS LINGUAGENS
+
+Steve foi obcecado por debuggers desde o início da carreira. Sua primeira empresa, GeoWorks, tinha o melhor debugger que ele já viu — chamado SWAT, com time machine e tudo. Ele próprio construiu um debugger para JVM chamado Ganja.
+
+Quando vê agentes debugando código, eles usam printfs. Pode ser que nunca foram treinados para usar debuggers formais, ou pode ser que simplesmente não precisem mais. Steve não tem certeza.
+
+Em relação a linguagens de programação, a fronteira relevante vai desaparecer — todos os idiomas funcionarão igualmente bem para os agentes eventualmente. A exceção seria linguagens especializadas para otimização extrema de performance ou energia. Para uso do dia a dia, a linguagem simplesmente vai deixar de importar.
+
+================================================================================
+[1:14:24] CONSELHOS PARA ENGENHEIROS QUE AINDA USAM COPILOT
+
+Para engenheiros em empresas que distribuíram o Copilot como se fosse uma iniciativa de IA avançada: existe uma horda de equipes usando Claude Opus que vai destruir seus produtos mais cedo ou mais tarde. O que você precisa fazer é reservar meia hora por dia para explorar o Claude Code e começar a construir.
+
+O que vai importar daqui para frente não é o currículo, mas o “proof of work” — o trabalho real que você fez, que precisa ser visível. Software proprietário está sendo ameaçado porque é fácil demais forkar, clonar e contornar.
+
+O melhor argumento de Steve para quem tem medo de apostar tudo em IA e ela não evoluir mais: mesmo que os modelos parassem onde estão agora, com Opus 4.5 você já tem o suficiente para resolver problemas de engenharia de qualquer escala. É uma força como o fogo ou o vapor — vamos colocar camadas em volta dela e ela vai fazer toda a engenharia a partir de agora.
+
+O PROCESSO DE LUTO E O OUTRO LADO
+
+Steve passou 40 anos construindo sua identidade em torno de compiladores, debuggers e código elegante. E então, num período de alguns meses, foi riscando da lista as coisas que o faziam especial — que já não importavam mais. Sentiu o mundo ficar monocromático, como num processo de luto real.
+
+O pico durou cerca de uma semana. Do outro lado, ele percebeu que estava escrevendo 10 vezes mais código do que antes e se divertindo mais. O paralelo com a área de gráficos é perfeito: quando os compiladores finalmente ficaram melhores do que escrever em assembly, os programadores ficaram tristes — e então ficaram muito mais felizes com o que puderam construir.
+
+Para Steve, a mudança é simplesmente parte da vida em tecnologia. O que muda é o ritmo. E agora você tem agentes para ajudar nessa transição — então pare de reclamar e vá em frente.
+
+================================================================================
+[1:30:28] PREVISÕES PARA O FUTURO
+
+Steve prevê que sua esposa — que não é desenvolvedora — será a maior contribuidora do videogame que eles estão desenvolvendo juntos. Sua visão é que programação será para todos: as pessoas que sempre dissemos que programar era divertido vão finalmente poder experimentar isso.
+
+O próximo problema grande não será criar conteúdo — será descobrir conteúdo. Quando todo mundo puder criar software e experiências, vamos precisar de agregadores e mecanismos de busca para o novo mundo de agentes, assim como precisamos de search engines quando a internet explodiu. Steve vê aí uma oportunidade enorme para engenheiros que queiram construir negócios grandes: criar agentes que saibam navegar e curar o que está por vir.
+
+O que não pode ser clonado são as conexões humanas. Paradoxalmente, quanto mais automatizado fica o mundo, mais as pessoas vão querer que um humano faça certas coisas para elas. Essa é a vantagem que permanece.

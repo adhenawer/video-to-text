@@ -1,5 +1,5 @@
 ================================================================================
-INTRODUCTION — A SENIOR ENGINEER SHOWS HIS REAL WORKFLOW
+[0:01] INTRODUCTION — A SENIOR ENGINEER SHOWS HIS REAL WORKFLOW
 
 Hello everyone. I’m AJ, technical content lead at Augment, and we’re starting a series where we bring on real senior and staff engineers to show how they’re actually coding with AI. It’s a chance to see how they work and ask them questions directly.
 
@@ -8,7 +8,7 @@ Today I’m joined by Sam Breed. Sam was previously a senior staff engineer at C
 Sam: “Happy to be here. We’re going to have some fun and build some websites.”
 
 ================================================================================
-THE TASK — TURNING A FIGMA COMP INTO A REAL WEBSITE
+[1:24] THE TASK — TURNING A FIGMA COMP INTO A REAL WEBSITE
 
 This is a real-world task I did in the last week or so. We’re taking a design a designer made, fully comped out in Figma. It’s about ten pages, with a design system, custom colors, gradients, reusable components, and full content for seven or eight pages of a website.
 
@@ -17,7 +17,7 @@ Using the Figma MCP integration inside Intent, we’re going to pull content dir
 Honestly, if I were doing this by hand — writing all the markup, getting it responsive, pulling all the assets out, handling the looping videos and carousels — I could probably do it in a day or two if I’m fast and already know the stack. It’s a lot more if you’re learning a framework while building. With Intent, I was able to rip through it in about 45 minutes and get to roughly 95% fidelity. The designer now has Intent too and is iterating the last 5% himself — and this is a person who had never used Git before.
 
 ================================================================================
-SETTING UP THE FIGMA MCP INTEGRATION
+[2:32] SETTING UP THE FIGMA MCP INTEGRATION
 
 The Figma MCP is already connected. If you’re curious how it works, go into workspace setup and turn on custom MCP servers. I have two configured: one for Vercel and one for Figma.
 
@@ -26,7 +26,7 @@ Figma makes the URL really hard to find — you have to search their docs for it
 To bring context in, I go into Figma, right-click on frames, and copy links to the selections. That’s the current way to pipe artboards or layers from Figma into the MCP integration. In the future, hopefully you’ll just say what you want. For now there’s a bit of manual shoveling back and forth.
 
 ================================================================================
-OPENING MOVES — SEEDING THE PROJECT YOURSELF
+[4:01] OPENING MOVES — SEEDING THE PROJECT YOURSELF
 
 For things like this, one technique I really like is to do the opening moves myself. I have an idea of how I want to build this — Astro, Tailwind, a few other choices — and I tend to run those init commands first.
 
@@ -35,7 +35,7 @@ Two reasons. One, the init commands are good generators; they give you the lates
 Once the project has a little starter content and the Astro server runs, Intent has already been pulling context from Figma in the background. It found the design system layer, pulled a bunch of custom colors, noticed it’s Tailwind v4 — so it’s not going to write a Tailwind v3 config — and wrote a small spec to add the custom colors to the Tailwind config.
 
 ================================================================================
-ON AGENT SAFETY AND SANDBOXING
+[6:42] ON AGENT SAFETY AND SANDBOXING
 
 Someone asked how I prevent an agent from silently editing files outside the workspace.
 
@@ -44,28 +44,28 @@ Honestly, I’ve never seen that happen. For context: I’ve been using AI for c
 As a practical matter, in several years of writing code with AI in basically every conceivable way, I’ve never had sandboxing problems. I’m team YOLO. The “dangerously skip permissions” thing should just be on by default. In Auggie there’s no safety net — you’re playing with live rounds.
 
 ================================================================================
-ISOLATED WORKSPACES VS. WORKING DIRECTLY ON A BRANCH
+[12:50] ISOLATED WORKSPACES VS. WORKING DIRECTLY ON A BRANCH
 
 Someone asked if the isolated workspaces feature is optional. Yes — on the home screen, when you click your main branch, there’s a checkbox at the bottom of the menu that says “work directly on the branch.” It also works for other branches in the repository. It says “no work tree” when you’re doing this.
 
 Arguably there should be a bigger, more prominent setting to turn work tree mode off entirely, but for now it’s in that submenu. It’s actually quite useful when you tee something up, get it good, and then want to make minor edits directly.
 
 ================================================================================
-STORING SPECS IN GIT
+[13:30] STORING SPECS IN GIT
 
 Can Intent store the spec in Git? Yes. The spec files end up on disk — click the “open in” menu to open them in Finder or your editor of choice. They live in the home/intent directory. If you want the spec to be a long-term, durable object, you’d need to move the files into your repo. The sub-items are separate files with the subspecs.
 
 You could potentially symlink to have it live in both places — I’d want to test that first. You could type it in the box and see if it goes.
 
 ================================================================================
-THE FIGMA COMP — WHAT THE DESIGNER HANDED OVER
+[16:19] THE FIGMA COMP — WHAT THE DESIGNER HANDED OVER
 
 Let me show the Figma comp I’m pulling from. It’s in developer mode — shift+D in Figma to flip back and forth. Developer mode mutes a bunch of features so you don’t accidentally change stuff or rotate a thing when you’re trying to grab its corner. Classic foibles developers run into.
 
 The first frame has spacing conventions, custom colors, custom gradients, specific type annotations with a licensed font, some reusable components common across pages, and a grid system. Plus a lot of actual content — this is a landing page with real copy, looping videos, a carousel, mobile views, all of it.
 
 ================================================================================
-ITERATING ON PLANS AND ASSUMPTIONS
+[18:38] ITERATING ON PLANS AND ASSUMPTIONS
 
 How do you iterate on the spec and artifacts?
 
@@ -76,7 +76,7 @@ There are two ways to adjust. You can re-engage the coordinator — “hey, ther
 You fall into one of two camps: you either read the plans, or you hit go and see what they do. I’m more of a “let’s go” person. Sometimes I spot something glaringly wrong in the plan and ask the coordinator to change it.
 
 ================================================================================
-WHERE INTENT SHINES — PR-SIZED TASKS
+[19:37] WHERE INTENT SHINES — PR-SIZED TASKS
 
 Intent really shines on tasks that are roughly the size of a PR — a single pull request to a repository. You can do ambitious PRs that change hundreds of files and tens of thousands of lines, but those are much harder to evaluate and need a lot more planning.
 
@@ -87,7 +87,7 @@ If you’ve been working with large language models for a long time, you develop
 Models keep getting better, but keeping things on track and being fast matters. These models attend to everything in their context. A smaller, more relevant context gives you faster responses and less opportunity for the model to wander off the path.
 
 ================================================================================
-MODEL CHOICE — OPUS, CODEX, AND THE TRIBAL DEBATES
+[21:50] MODEL CHOICE — OPUS, CODEX, AND THE TRIBAL DEBATES
 
 Do I always use Opus?
 
@@ -98,7 +98,7 @@ Personally, I’ve used Claude as my go-to for about two years. The work Claude 
 That said, I try everything. When new models come out it’s really useful to try them. GPT-5.4 is genuinely good. I’ve been playing with it this week as we pre-flight it for Intent. If you’ve been using OpenAI models and like them, more good stuff is coming. Competition is only going to drive this forward faster.
 
 ================================================================================
-MIXING FAST AND SMART MODELS — A FADING PATTERN
+[28:24] MIXING FAST AND SMART MODELS — A FADING PATTERN
 
 People used to ask a lot about switching between Haiku, Sonnet, and Opus or between GPT tiers.
 
@@ -107,7 +107,7 @@ In earlier runs of this kind of app, before Opus 4.6 in December 2025 — a pret
 When a better model generation comes along, a lot of those concerns evaporate. A model like GPT-5.4 or Opus 4.6 is just good at this stuff. They can go fast, they can go far, they can drive specs really well. Just staying in those models is the sweet spot now. Different strokes for different folks, though — you can get this done a lot of different ways.
 
 ================================================================================
-SPECIALISTS — PR SHEPHERD, UI DESIGNER, AND THE PROMPT ECOSYSTEM
+[32:41] SPECIALISTS — PR SHEPHERD, UI DESIGNER, AND THE PROMPT ECOSYSTEM
 
 On specialized agents: I’m team “don’t mess with it.” That’s part of why I use Intent — these things are built in and exceptionally well-prompted.
 
@@ -120,7 +120,7 @@ There’s also a UI Designer specialist that Amelia wrote — more on that later
 The fun thing about prompts, and why the skills ecosystem is exploding, is that the best prompt is the one you didn’t have to write yourself. Be a discerning user — spend enough time thinking about prompts, but don’t over-index. The difference between a pretty good prompt and a perfect prompt is limiting. More inference is probably the better way to reach better code than spending lots of time specifying the perfect prompt.
 
 ================================================================================
-HIDDEN FEATURES AND NAVIGATION
+[41:23] HIDDEN FEATURES AND NAVIGATION
 
 A few keyboard and UI features people often miss. All your VS Code muscle memory works: cmd+J to dismiss the terminal, cmd+B to dismiss the sidebar — especially when you want to look at a browser side by side.
 
@@ -129,14 +129,14 @@ There are views that show you a tile of all the agents that have launched in you
 The coordinator is the boss. It’s the best person to talk to.
 
 ================================================================================
-RUNNING THINGS IN PARALLEL — QUEUEING TASKS
+[42:50] RUNNING THINGS IN PARALLEL — QUEUEING TASKS
 
 Next up: breaking out the header and footer into reusable components, then building the rest of the pages, then a verification pass against Figma.
 
 The magic of working in an agent orchestration workspace like Intent is that you can do a bunch of things in parallel — especially when they’re not writing over the same lines in the same file. I go back to Figma, grab a link from a comp, full-send. Then I queue up the next prompt. You can add tasks and let them fire in sequence.
 
 ================================================================================
-REVIEWING CODE — INFORMED READING VS. VALIDATION
+[45:05] REVIEWING CODE — INFORMED READING VS. VALIDATION
 
 Do you still review code? Yes — a lot.
 
@@ -149,7 +149,7 @@ For Intent itself, which we dog-food aggressively, every PR I pull down locally 
 For lighter web-dev tasks, it’s more vibes-based: content coming in, looks good, dev server already running, I run lint and formatting. Direct integration with npm or node scripts, Makefiles, and the like is coming soon, so you’ll get one-click affordances instead of coming into the terminal like a caveman.
 
 ================================================================================
-WORK TREES — SETUP SCRIPTS AND MENTAL MODEL
+[45:38] WORK TREES — SETUP SCRIPTS AND MENTAL MODEL
 
 On setup scripts for work trees: when you spin up a fresh work tree, it doesn’t have node_modules or binaries installed. We have a bunch of pre-canned templates. On the home page, when you launch a project, there’s a button to choose the script. The default is to copy config files — if you have `.env` or other common culprits, you can copy them recursively. There are scripts that copy config and then run pnpm install, npm, yarn, pip, etc. You can write your own or generate them from the repo.
 
@@ -164,14 +164,14 @@ Work trees aren’t meant to be super long-lived in my mind. If they live for mu
 Cleanup: Intent has two modes. Archive is a soft deletion — the work tree stays on disk but doesn’t show in Intent. Delete removes the files. Either way, the branch remains in Git, so you’re free to check it out wherever.
 
 ================================================================================
-THE OLD WORKFLOW — THREE CHECKOUTS AND DIFFERENT VS CODE THEMES
+[49:29] THE OLD WORKFLOW — THREE CHECKOUTS AND DIFFERENT VS CODE THEMES
 
 Funny story: before I knew what work trees were, I was on a really busy project doing maybe 20 to 30 PRs a day, reviewing some and working on multiple features at the same time. I had three checkouts of the project, moving between them manually, using different VS Code themes so I’d know which one I was in — this one is main for reviewing PRs, that one is the feature branch.
 
 It was a lot to keep in my head. That mode of working — Intent makes it ten times easier.
 
 ================================================================================
-CODE QUALITY — DUPLICATION, CIRCULAR DEPENDENCIES, AND VERIFICATION
+[49:32] CODE QUALITY — DUPLICATION, CIRCULAR DEPENDENCIES, AND VERIFICATION
 
 Do I do anything special for code duplication, circular dependencies, or style violations?
 
@@ -182,7 +182,7 @@ Part of the reason Intent runs in a multi-phase process — plan, spec, delegate
 One workflow that works well: create a workspace, tell it “go find duplicate code in this repo, look at utils, make sure things are abstracted, make sure things are reasonably DRY.” Most big codebases will have some duplication, and you can usually come back with something worth cleaning up.
 
 ================================================================================
-SENTRY TO PR — THE ERROR-TO-FIX LOOP
+[53:30] SENTRY TO PR — THE ERROR-TO-FIX LOOP
 
 Sentry is super cool. Every website, application, mobile app, or game throws more errors in production than you ever see in dev mode, no matter how rigorously you test. I’ve got a lot of history with Sentry — was an early customer in 2014 and did open-source work with them in 2014 and 2015, back when they were four or five people. They’re a huge company now, and I think they’re best-in-class for error tracing.
 
@@ -195,7 +195,7 @@ If you talk to the models with the big-dog lingo, they’ll occasionally throw y
 For this kind of thing I use rapid-fire mode — it creates a workspace in the background so I can walk away and keep hitting check as many times as I need.
 
 ================================================================================
-THE TEAM — COORDINATOR, IMPLEMENTER, VERIFIER, DEVELOPER
+[53:33] THE TEAM — COORDINATOR, IMPLEMENTER, VERIFIER, DEVELOPER
 
 A high-level picture of the default team:
 
@@ -210,7 +210,7 @@ The developer is essentially a combination of coordinator and implementer. It wr
 Agents are jokingly stochastic parrots — they do things a little differently each time, with some smear in their distribution. You steer them through in-context learning and prompting. There’s no big hidden system prompt beyond “this is your intent, you’re an agent, this is the time, this is the model, this is the working directory,” and then the specialist prompts for coordinator and implementer.
 
 ================================================================================
-CUSTOM SPECIALISTS AND TRIGGERING THEM
+[56:28] CUSTOM SPECIALISTS AND TRIGGERING THEM
 
 Specialists are detected and dispatched automatically — the coordinator is prompted to dispatch implementers and verifiers. But you can manually trigger a specialist through prompting. Live example: “Hey bro, let’s use the UI Designer specialist to do a separate pass at this. Thanks, dog.”
 
@@ -221,7 +221,7 @@ The UI Designer was one Amelia wrote. It does design token extraction, among oth
 If you have something very specific you need regularly, you can write your own custom specialists.
 
 ================================================================================
-PRO TIPS AND FINAL THOUGHTS
+[58:15] PRO TIPS AND FINAL THOUGHTS
 
 A few things I didn’t get to show:
 

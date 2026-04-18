@@ -1,0 +1,68 @@
+================================================================================
+[0:00] INTRODUÇÃO
+
+Se você já trabalhou com agentes de código e foi empurrando os limites do que eles conseguem fazer, chegou a uma conclusão: um agente não é suficiente. Este vídeo apresenta uma arquitetura de codificação com múltiplas equipes de agentes especializados — uma evolução significativa em relação ao uso de um único agente no terminal.
+
+O sistema demonstrado aqui usa três camadas: um orquestrador, líderes de equipe e trabalhadores — cada um com memória persistente, domínio restrito e especialização acumulada ao longo das sessões.
+
+O PROBLEMA DO ROTEAMENTO DE PROMPTS
+
+O caso de uso demonstrado é um classificador de complexidade de prompts — um problema real em aplicações LLM de produção. A ideia é simples: quando você tem milhares de usuários acionando um modelo, não faz sentido mandar prompts simples para o modelo mais caro. Um classificador detecta se o prompt precisa de alta, média ou baixa inteligência e roteia para o modelo adequado.
+
+Modelos de alto custo são necessários para raciocínio complexo. Modelos intermediários lidam bem com a maioria das consultas. Modelos baratos são suficientes para tarefas triviais. O classificador vai além: é melhor errar para cima (mandar para um modelo mais potente quando não precisaria) do que errar para baixo (mandar para um modelo fraco quando precisava de inteligência alta), porque a segunda opção prejudica diretamente a experiência do usuário.
+
+================================================================================
+[4:25] ARQUITETURA DE TRÊS CAMADAS
+
+O sistema opera em três níveis:
+
+O Orquestrador é o único ponto de contato do desenvolvedor. Você fala com o orquestrador e ele delega para as equipes. Ele usa o modelo mais inteligente disponível porque precisa coordenar tudo corretamente.
+
+Os Líderes de Equipe recebem trabalho do orquestrador e podem delegar para os trabalhadores. Os líderes são planejadores e coordenadores — eles não tocam em arquivos diretamente (exceto seus próprios arquivos de expertise). Um líder de planejamento, por exemplo, tem acesso de leitura em tudo, mas só pode escrever no diretório de specs via delegação.
+
+Os Trabalhadores executam. O desenvolvedor backend só escreve no diretório backend. O desenvolvedor frontend só escreve no frontend. Ambos podem ler qualquer arquivo para entender o contexto, mas estão restritos em escrita. Isso cria isolamento natural e evita que agentes pisem no trabalho uns dos outros.
+
+================================================================================
+[8:30] AGENTES COM MEMÓRIA E ESPECIALIZAÇÃO ACUMULADA
+
+O diferencial central do sistema é que cada agente mantém um “modelo mental” — um arquivo de expertise que persiste entre sessões. Toda vez que o agente boots, ele carrega esse arquivo antes de começar. Toda vez que ele termina uma sessão, atualiza o arquivo com o que aprendeu.
+
+O arquivo de expertise do desenvolvedor backend, por exemplo, contém informações sobre a base de código com que trabalhou, padrões que identificou, riscos de segurança conhecidos, estrutura de testes, infraestrutura ausente — tudo em alto nível, sem detalhes desnecessários, num arquivo de cerca de 5.000 tokens.
+
+Isso significa que cada sessão começa melhor do que a anterior. As equipes acumulam conhecimento sobre o projeto de forma composta ao longo do tempo. Essa não é a memória genérica do Claude sobre “tudo que você já disse” — é especialização específica ao domínio que cresce de forma controlada.
+
+Uma regra importante: não interfira demais nos modelos mentais. Você define as diretrizes de como eles devem estruturar o conhecimento (num skill de ~77 linhas), mas deixa os agentes atualizarem e manterem esses arquivos de forma autônoma.
+
+================================================================================
+[12:37] PERSPECTIVAS MÚLTIPLAS: O VALOR DO CONSENSO
+
+Uma das vantagens imediatas do sistema multi-equipe é que a mesma pergunta pode ser vista por times com perspectivas diferentes simultaneamente. No exemplo do vídeo, ao perguntar quais classificadores adicionar, o time de planejamento, engenharia e validação respondem de forma independente.
+
+O resultado: consenso forte em algumas escolhas (o LinearSVC calibrado foi escolha unânime entre os três times) e divergências interessantes em outros aspectos — como o time de engenharia preferindo o SGD classifier enquanto outros preferem o ComplementNB. Esse tipo de perspectiva múltipla é difícil de obter com um único agente.
+
+================================================================================
+[23:24] CONFIGURAÇÃO E CUSTOMIZAÇÃO
+
+Todo o sistema é configurado via arquivo YAML. Você define o orquestrador, as equipes, os membros, e os caminhos para os prompts de sistema de cada um. Para mudar a estrutura da equipe — adicionar um agente de DevOps, remover a equipe de validação para um projeto menor — basta editar o YAML e reiniciar.
+
+As skills (prompts reutilizáveis) são arquivos separados que múltiplos agentes podem compartilhar. A skill de “zero micromanagement” é compartilhada entre orquestrador e todos os líderes: delegue, nunca execute. A skill de “resposta conversacional” é compartilhada entre líderes e orquestrador, mas não entre os trabalhadores — que precisam ser verbosos e detalhados. A skill de “active listener” faz cada agente ler o log de conversa antes de responder, mantendo todos cientes do contexto.
+
+O log de conversa é um arquivo JSONL compartilhado onde todos os agentes registram o que aconteceu — incluindo chamadas de ferramentas. Qualquer agente pode consultar qualquer parte da conversa histórica.
+
+================================================================================
+[29:26] ESCALABILIDADE E CUSTO
+
+O argumento central sobre custo: tokens estão ficando mais baratos e contextos estão crescendo. Um backend dev que usou 100k tokens numa sessão pode em breve ter um contexto de 1 milhão de tokens disponível ao mesmo custo. O sistema foi construído pensando nesse futuro, não nos preços de hoje.
+
+Os líderes usam modelos mais poderosos (Opus) porque são planejadores — precisam de inteligência máxima para coordenar bem. Os trabalhadores usam modelos intermediários (Sonnet) porque precisam principalmente seguir instruções e executar. Se você quiser gastar mais, coloca tudo no modelo mais forte. Mas o padrão inteligente é: use inteligência máxima onde o raciocínio importa, e economize onde é só execução.
+
+O custo de “tokens desperdiçados” em comunicação entre agentes é um pensamento de curto prazo. O valor gerado por equipes especializadas que se lembram do seu codebase supera em muito o custo de alguns dólares por sessão.
+
+================================================================================
+[33:06] PRÓXIMOS PASSOS: META-AGENTES E EXPERTISE BLOQUEADA
+
+Uma das ideias mais avançadas é criar um meta-agente ou meta-equipe cuja função é ajudar a fine-tunar e melhorar as próprias equipes. Você ensina os agentes a construir e manter seus modelos mentais — e então cria um agente que revisa e melhora esses processos.
+
+Para casos de uso com conhecimento muito específico e crítico — um agente de billing, um agente de migrações de banco de dados, um agente de DevOps — você pode criar arquivos de expertise somente leitura que são carregados no contexto do agente mas nunca atualizados por ele. Isso garante que conhecimento crítico (como as regras de uma integração de pagamento específica) nunca seja corrompido ou esquecido pela atualização do modelo mental.
+
+O princípio final: agentes especialistas sempre vão superar agentes genéricos. Assim como você confia mais num engenheiro que fez aquele tipo de trabalho 50 vezes do que num generalista que fez uma vez, agentes com expertise acumulada específica entregam resultados consistentemente melhores.

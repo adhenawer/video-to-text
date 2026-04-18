@@ -1,0 +1,78 @@
+================================================================================
+[0:01] INTRODUÇÃO
+
+Sam Breed é ex-engenheiro staff sênior no Credit Karma e atualmente sócio na Sutter Hill Ventures. Ele é um dos engenheiros principais construindo o app Intent e participou do início da Augment quando ela ainda se chamava Eigor. Nesta live com AJ, lead de conteúdo técnico da Augment, Sam demonstra ao vivo como um engenheiro sênior realmente trabalha com IA em 2025 — construindo um site completo a partir de um design Figma usando o Intent e o MCP do Figma.
+
+O PROJETO: DE FIGMA PARA SITE EM TEMPO REAL
+
+O exercício proposto é um speedrun real: pegar um arquivo Figma totalmente especificado com cerca de 10 páginas, sistema de design, tipografia customizada, componentes reutilizáveis e grade — e construir um site funcional a partir disso usando o Intent com integração MCP do Figma.
+
+Sam já fez esse processo alguns dias antes e chegou a 95% de fidelidade ao design em aproximadamente 45 minutos. Um trabalho que ele estima que levaria um a dois dias de codificação manual intensa de um desenvolvedor experiente. O designer do projeto nunca tinha usado Git antes — e agora usa o Intent para iterar sozinho nos últimos 5%.
+
+A FILOSOFIA DAS PRIMEIRAS JOGADAS
+
+Uma prática central de Sam é fazer as “primeiras jogadas” do projeto manualmente: inicializar os frameworks que quer usar (neste caso, Astro e Tailwind CSS) antes de passar o controle ao agente.
+
+O motivo é prático: o training data dos modelos pode ter meses de defasagem. Para garantir que você está usando as versões mais recentes de frameworks sem escolhas enterradas no modelo há seis meses, vale a pena rodar os init commands você mesmo. Isso também “planta” as preferências do desenvolvedor no projeto — o agente vai então seguir os padrões que você estabeleceu, não os defaults genéricos que ele escolheria sozinho.
+
+================================================================================
+[4:01] INTEGRAÇÃO FIGMA MCP NA PRÁTICA
+
+A integração do Figma com o Intent via MCP funciona através de um servidor local na porta 3845. O fluxo atual exige um pouco de trabalho manual: você precisa ir ao Figma, usar o modo desenvolvedor (Shift+D), clicar com o botão direito nos frames e copiar os links diretos para os artboards que quer incluir no contexto.
+
+Com esses links, o Intent consegue ler diretamente o design system, extrair cores customizadas, tokens de tipografia, espaçamentos, gradientes e estrutura das páginas. O agente reconhece automaticamente a versão do Tailwind (v4 vs v3) e gera os arquivos de configuração corretos.
+
+A sugestão é não exagerar na quantidade de servidores MCP ativos simultaneamente. Cada servidor adiciona definições de ferramentas ao system prompt, consumindo contexto. Dois ou três servidores bem escolhidos funcionam muito melhor do que uma “árvore de Natal” com onze ao mesmo tempo.
+
+================================================================================
+[13:30] ARQUITETURA DO TIME DE AGENTES
+
+O Intent opera com uma equipe de agentes especializados:
+
+O Coordenador é o ponto de partida padrão e o modo de uso mais recomendado. Você dá a ele um objetivo de alto nível — mesmo algo vago como “olha esse problema e arruma” — e ele escreve um spec detalhado com sub-tarefas. Você pode revisar o plano antes de aprovar ou simplesmente mandar executar.
+
+O Implementador recebe as tarefas delegadas pelo Coordenador e executa o trabalho de codificação em paralelo. Múltiplos implementadores podem rodar ao mesmo tempo para partes independentes do projeto.
+
+O Verificador faz um passo de revisão ao final, checando o que foi feito contra os requisitos — no caso do Figma, literalmente comparando o site gerado com os artboards originais.
+
+O Desenvolvedor é um agente híbrido que combina planejamento e execução em thread única — mais adequado para tarefas simples e diretas que não precisam de paralelismo.
+
+Você também pode criar especialistas customizados. O UI Designer specialist, por exemplo, foi criado para fazer um passo específico de extração de design tokens — porque os agentes genéricos têm tendência a usar valores inline de Tailwind (pixels hardcoded) em vez dos tokens do sistema de design, especialmente se encontrarem esse padrão em algum lugar do código existente.
+
+================================================================================
+[19:37] WORK TREES: O MODELO MENTAL CERTO
+
+Git work trees existem desde 2015, mas a maioria dos desenvolvedores não sabia que eram uma coisa até recentemente. Sam só descobriu no ano passado — mesmo usando Git desde 2008.
+
+A ideia é simples: work trees permitem ter múltiplos branches do mesmo repositório em disco ao mesmo tempo, em diretórios separados. O Intent usa isso para criar workspaces isolados para cada tarefa, onde o agente pode trabalhar sem interferir no seu código principal.
+
+O mental model correto é tratar work trees como objetos temporários. Eles nascem, ficam vivos enquanto a tarefa está em progresso, e somem quando você faz o merge. Se um work tree vive por dias ou semanas, você provavelmente vai precisar fazer merge do main de volta nele periodicamente pelo terminal. Você não pode fazer checkout do mesmo branch que está aberto num work tree — se quiser ver o código em outra branch, precisa fazer merge.
+
+O Intent facilita isso colocando o terminal como cidadão de primeira classe na interface e tornando o caminho dos work trees facilmente acessível. Você pode trabalhar diretamente num branch sem work tree ativando a opção “Work directly on this branch” na tela inicial.
+
+================================================================================
+[41:23] VERIFICAÇÃO E QUALIDADE DO CÓDIGO
+
+Para verificar o trabalho gerado sem executar testes formais, Sam usa uma abordagem baseada em vibes para tarefas de webdev mais leves: o servidor de desenvolvimento está rodando, ele olha o resultado visualmente, passa linting e formatação, e confia na etapa de verificação do agente para pegar o resto.
+
+Para duplicação de código — um problema real com agentes — a solução mais eficaz que ele encontrou é criar um workspace dedicado com a instrução de “encontrar código duplicado no repo, verificar utilitários, garantir que as abstrações estão certas”. A maioria dos codebases grandes vai ter alguma duplicação e uma pesquisa ativa geralmente encontra algo.
+
+O Sentry é um dos fluxos favoritos de Sam para tarefas cotidianas. Conectar o Sentry ao Intent permite dizer “big dog, corrije esse erro” com link para o issue — e o agente vai resolver. O modo “rapid fire” cria um workspace em background e você pode checar o progresso quando quiser.
+
+================================================================================
+[45:38] MÚLTIPLAS JANELAS E FLUXO DE TRABALHO
+
+Uma dica importante que Sam não conseguiu demonstrar na live por limitações de screen sharing: ele normalmente tem quatro ou cinco janelas do Intent abertas ao mesmo tempo, cada uma com um workspace ou work tree diferente.
+
+O atalho Command+Shift+N para abrir nova janela está “tatuado no cérebro” dele. Isso permite monitorar múltiplos agentes trabalhando em paralelo em diferentes partes do projeto.
+
+O Intent não substitui a IDE — Sam ainda abre o VS Code para revisar código, especialmente quando vai escrever código manualmente. A CLI do Augment também é muito usada para perguntas rápidas sobre o codebase e tarefas diretas e bem definidas. O Intent adiciona a camada de orquestração, planejamento e paralelismo que a CLI não tem.
+
+================================================================================
+[53:30] SUPORTE A MONOREPOS E CUSTOMIZAÇÃO CORPORATIVA
+
+Para empresas que querem customizar o comportamento dos agentes com frameworks internos, padrões de código e conhecimento de domínio específico: o padrão é usar arquivos de regras (tipo AGENTS.md ou equivalentes). Esses arquivos são sempre incluídos no contexto do agente.
+
+Monorepos funcionam muito bem com o Augment — o motor de contexto foi construído para lidar com repositórios grandes e complexos com múltiplos projetos e documentação interna. Se o monorepo tem padrões de codificação e documentação, os agentes vão usá-los.
+
+Os prompts dos agentes são visíveis e editáveis dentro do próprio Intent. Não há system prompt secreto — você pode ver exatamente como cada especialista está configurado, modificar o comportamento, e resetar para os defaults se quiser.

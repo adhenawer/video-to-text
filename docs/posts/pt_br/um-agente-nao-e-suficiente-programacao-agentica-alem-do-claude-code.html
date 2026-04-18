@@ -6,21 +6,21 @@
 <title>Um Agente Não É Suficiente: Programação Agêntica Além do Claude Code</title>
 <meta name="description" content="Se você já trabalhou com agentes de código e foi empurrando os limites do que eles conseguem fazer, chegou a uma conclusão: um agente não é suficiente. Este vídeo apresenta uma arquitetura de...">
 <meta name="author" content="Vídeo técnico — Multi-agent Coding">
+<link rel="canonical" href="https://adhenawer.net/posts/pt_br/um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code.html">
+<link rel="alternate" hreflang="pt-BR" href="../pt_br/um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code.html">
+<link rel="alternate" hreflang="en" href="../original/one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code.html">
+<link rel="alternate" hreflang="x-default" href="../pt_br/um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Um Agente Não É Suficiente: Programação Agêntica Além do Claude Code">
 <meta property="og:description" content="Se você já trabalhou com agentes de código e foi empurrando os limites do que eles conseguem fazer, chegou a uma conclusão: um agente não é suficiente. Este vídeo apresenta uma arquitetura de...">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:site_name" content="Leituras  Podcasts &amp; Vdeos Traduzidos">
+<meta property="og:site_name" content="Leituras — Podcasts &amp; Vídeos Traduzidos">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Um Agente Não É Suficiente: Programação Agêntica Além do Claude Code">
 <meta name="twitter:description" content="Se você já trabalhou com agentes de código e foi empurrando os limites do que eles conseguem fazer, chegou a uma conclusão: um agente não é suficiente. Este vídeo apresenta uma arquitetura de...">
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "Article", "headline": "Um Agente Não É Suficiente: Programação Agêntica Além do Claude Code", "description": "Se você já trabalhou com agentes de código e foi empurrando os limites do que eles conseguem fazer, chegou a uma conclusão: um agente não é suficiente. Este vídeo apresenta uma arquitetura de...", "author": {"@type": "Person", "name": "Vídeo técnico — Multi-agent Coding"}, "publisher": {"@type": "Organization", "name": "Leituras — Podcasts & Vídeos Traduzidos"}, "inLanguage": "pt-BR", "isAccessibleForFree": true, "url": "https://youtu.be/M30gp1315Y4", "articleSection": ["INTRODUÇÃO", "ARQUITETURA DE TRÊS CAMADAS", "AGENTES COM MEMÓRIA E ESPECIALIZAÇÃO ACUMULADA", "PERSPECTIVAS MÚLTIPLAS: O VALOR DO CONSENSO", "CONFIGURAÇÃO E CUSTOMIZAÇÃO", "ESCALABILIDADE E CUSTO", "PRÓXIMOS PASSOS: META-AGENTES E EXPERTISE BLOQUEADA"]}
 </script>
-<link rel="canonical" href="https://adhenawer.net/posts/pt_br/um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code.html">
-<link rel="alternate" hreflang="pt-BR" href="../pt_br/um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code.html">
-<link rel="alternate" hreflang="en" href="../original/one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code.html">
-<link rel="alternate" hreflang="x-default" href="../pt_br/um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code.html">
 <link rel="stylesheet" href="../../css/style.css">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="40c8ae3d-2e6b-4af4-a89b-f578dd3b2315"></script>
 </head>
@@ -28,11 +28,10 @@
 <header class="site-header">
   <a class="site-brand" href="../../index.html">Leituras</a>
   <div class="lang-bar">
-    <button class="lang-btn active" data-lang="pt-BR" aria-label="Português">PT</button>
+    <button class="lang-btn" data-lang="pt-BR" aria-label="Português">PT</button>
     <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
   </div>
 </header>
-
 <div class="progress" id="progress"></div>
 <div class="reading-pct" id="readingPct"></div>
 <article class="container">
@@ -43,7 +42,6 @@
     <p class="meta"><a href="https://youtu.be/M30gp1315Y4" target="_blank" rel="noopener">🎥 Assistir no YouTube</a></p>
   </header>
   <nav aria-label="Índice do artigo">
-
     <h3>Conteúdo</h3>
     <ol>
 <li><a href="#s1">INTRODUÇÃO</a></li>
@@ -54,10 +52,9 @@
 <li><a href="#s6">ESCALABILIDADE E CUSTO</a></li>
 <li><a href="#s7">PRÓXIMOS PASSOS: META-AGENTES E EXPERTISE BLOQUEADA</a></li>
     </ol>
-  
   </nav>
 <section>
-<h2 id="s1">INTRODUÇÃO</h2>
+<h2 id="s1">INTRODUÇÃO <a class="ts-link" href="https://youtu.be/M30gp1315Y4?t=0" target="_blank" rel="noopener" aria-label="Pular para 0:00 no vídeo">0:00</a></h2>
 <p>Se você já trabalhou com agentes de código e foi empurrando os limites do que eles conseguem fazer, chegou a uma conclusão: um agente não é suficiente. Este vídeo apresenta uma arquitetura de codificação com múltiplas equipes de agentes especializados — uma evolução significativa em relação ao uso de um único agente no terminal.</p>
 <p>O sistema demonstrado aqui usa três camadas: um orquestrador, líderes de equipe e trabalhadores — cada um com memória persistente, domínio restrito e especialização acumulada ao longo das sessões.</p>
 <p>O PROBLEMA DO ROTEAMENTO DE PROMPTS</p>
@@ -65,38 +62,38 @@
 <p>Modelos de alto custo são necessários para raciocínio complexo. Modelos intermediários lidam bem com a maioria das consultas. Modelos baratos são suficientes para tarefas triviais. O classificador vai além: é melhor errar para cima (mandar para um modelo mais potente quando não precisaria) do que errar para baixo (mandar para um modelo fraco quando precisava de inteligência alta), porque a segunda opção prejudica diretamente a experiência do usuário.</p>
 </section>
 <section>
-<h2 id="s2">ARQUITETURA DE TRÊS CAMADAS</h2>
+<h2 id="s2">ARQUITETURA DE TRÊS CAMADAS <a class="ts-link" href="https://youtu.be/M30gp1315Y4?t=265" target="_blank" rel="noopener" aria-label="Pular para 4:25 no vídeo">4:25</a></h2>
 <p>O sistema opera em três níveis:</p>
 <p>O Orquestrador é o único ponto de contato do desenvolvedor. Você fala com o orquestrador e ele delega para as equipes. Ele usa o modelo mais inteligente disponível porque precisa coordenar tudo corretamente.</p>
 <p>Os Líderes de Equipe recebem trabalho do orquestrador e podem delegar para os trabalhadores. Os líderes são planejadores e coordenadores — eles não tocam em arquivos diretamente (exceto seus próprios arquivos de expertise). Um líder de planejamento, por exemplo, tem acesso de leitura em tudo, mas só pode escrever no diretório de specs via delegação.</p>
 <p>Os Trabalhadores executam. O desenvolvedor backend só escreve no diretório backend. O desenvolvedor frontend só escreve no frontend. Ambos podem ler qualquer arquivo para entender o contexto, mas estão restritos em escrita. Isso cria isolamento natural e evita que agentes pisem no trabalho uns dos outros.</p>
 </section>
 <section>
-<h2 id="s3">AGENTES COM MEMÓRIA E ESPECIALIZAÇÃO ACUMULADA</h2>
-<p>O diferencial central do sistema é que cada agente mantém um &ldquo;modelo mental&rdquo; — um arquivo de expertise que persiste entre sessões. Toda vez que o agente boots, ele carrega esse arquivo antes de começar. Toda vez que ele termina uma sessão, atualiza o arquivo com o que aprendeu.</p>
+<h2 id="s3">AGENTES COM MEMÓRIA E ESPECIALIZAÇÃO ACUMULADA <a class="ts-link" href="https://youtu.be/M30gp1315Y4?t=510" target="_blank" rel="noopener" aria-label="Pular para 8:30 no vídeo">8:30</a></h2>
+<p>O diferencial central do sistema é que cada agente mantém um “modelo mental” — um arquivo de expertise que persiste entre sessões. Toda vez que o agente boots, ele carrega esse arquivo antes de começar. Toda vez que ele termina uma sessão, atualiza o arquivo com o que aprendeu.</p>
 <p>O arquivo de expertise do desenvolvedor backend, por exemplo, contém informações sobre a base de código com que trabalhou, padrões que identificou, riscos de segurança conhecidos, estrutura de testes, infraestrutura ausente — tudo em alto nível, sem detalhes desnecessários, num arquivo de cerca de 5.000 tokens.</p>
-<p>Isso significa que cada sessão começa melhor do que a anterior. As equipes acumulam conhecimento sobre o projeto de forma composta ao longo do tempo. Essa não é a memória genérica do Claude sobre &ldquo;tudo que você já disse&rdquo; — é especialização específica ao domínio que cresce de forma controlada.</p>
+<p>Isso significa que cada sessão começa melhor do que a anterior. As equipes acumulam conhecimento sobre o projeto de forma composta ao longo do tempo. Essa não é a memória genérica do Claude sobre “tudo que você já disse” — é especialização específica ao domínio que cresce de forma controlada.</p>
 <p>Uma regra importante: não interfira demais nos modelos mentais. Você define as diretrizes de como eles devem estruturar o conhecimento (num skill de ~77 linhas), mas deixa os agentes atualizarem e manterem esses arquivos de forma autônoma.</p>
 </section>
 <section>
-<h2 id="s4">PERSPECTIVAS MÚLTIPLAS: O VALOR DO CONSENSO</h2>
+<h2 id="s4">PERSPECTIVAS MÚLTIPLAS: O VALOR DO CONSENSO <a class="ts-link" href="https://youtu.be/M30gp1315Y4?t=757" target="_blank" rel="noopener" aria-label="Pular para 12:37 no vídeo">12:37</a></h2>
 <p>Uma das vantagens imediatas do sistema multi-equipe é que a mesma pergunta pode ser vista por times com perspectivas diferentes simultaneamente. No exemplo do vídeo, ao perguntar quais classificadores adicionar, o time de planejamento, engenharia e validação respondem de forma independente.</p>
 <p>O resultado: consenso forte em algumas escolhas (o LinearSVC calibrado foi escolha unânime entre os três times) e divergências interessantes em outros aspectos — como o time de engenharia preferindo o SGD classifier enquanto outros preferem o ComplementNB. Esse tipo de perspectiva múltipla é difícil de obter com um único agente.</p>
 </section>
 <section>
-<h2 id="s5">CONFIGURAÇÃO E CUSTOMIZAÇÃO</h2>
+<h2 id="s5">CONFIGURAÇÃO E CUSTOMIZAÇÃO <a class="ts-link" href="https://youtu.be/M30gp1315Y4?t=1404" target="_blank" rel="noopener" aria-label="Pular para 23:24 no vídeo">23:24</a></h2>
 <p>Todo o sistema é configurado via arquivo YAML. Você define o orquestrador, as equipes, os membros, e os caminhos para os prompts de sistema de cada um. Para mudar a estrutura da equipe — adicionar um agente de DevOps, remover a equipe de validação para um projeto menor — basta editar o YAML e reiniciar.</p>
-<p>As skills (prompts reutilizáveis) são arquivos separados que múltiplos agentes podem compartilhar. A skill de &ldquo;zero micromanagement&rdquo; é compartilhada entre orquestrador e todos os líderes: delegue, nunca execute. A skill de &ldquo;resposta conversacional&rdquo; é compartilhada entre líderes e orquestrador, mas não entre os trabalhadores — que precisam ser verbosos e detalhados. A skill de &ldquo;active listener&rdquo; faz cada agente ler o log de conversa antes de responder, mantendo todos cientes do contexto.</p>
+<p>As skills (prompts reutilizáveis) são arquivos separados que múltiplos agentes podem compartilhar. A skill de “zero micromanagement” é compartilhada entre orquestrador e todos os líderes: delegue, nunca execute. A skill de “resposta conversacional” é compartilhada entre líderes e orquestrador, mas não entre os trabalhadores — que precisam ser verbosos e detalhados. A skill de “active listener” faz cada agente ler o log de conversa antes de responder, mantendo todos cientes do contexto.</p>
 <p>O log de conversa é um arquivo JSONL compartilhado onde todos os agentes registram o que aconteceu — incluindo chamadas de ferramentas. Qualquer agente pode consultar qualquer parte da conversa histórica.</p>
 </section>
 <section>
-<h2 id="s6">ESCALABILIDADE E CUSTO</h2>
+<h2 id="s6">ESCALABILIDADE E CUSTO <a class="ts-link" href="https://youtu.be/M30gp1315Y4?t=1766" target="_blank" rel="noopener" aria-label="Pular para 29:26 no vídeo">29:26</a></h2>
 <p>O argumento central sobre custo: tokens estão ficando mais baratos e contextos estão crescendo. Um backend dev que usou 100k tokens numa sessão pode em breve ter um contexto de 1 milhão de tokens disponível ao mesmo custo. O sistema foi construído pensando nesse futuro, não nos preços de hoje.</p>
 <p>Os líderes usam modelos mais poderosos (Opus) porque são planejadores — precisam de inteligência máxima para coordenar bem. Os trabalhadores usam modelos intermediários (Sonnet) porque precisam principalmente seguir instruções e executar. Se você quiser gastar mais, coloca tudo no modelo mais forte. Mas o padrão inteligente é: use inteligência máxima onde o raciocínio importa, e economize onde é só execução.</p>
-<p>O custo de &ldquo;tokens desperdiçados&rdquo; em comunicação entre agentes é um pensamento de curto prazo. O valor gerado por equipes especializadas que se lembram do seu codebase supera em muito o custo de alguns dólares por sessão.</p>
+<p>O custo de “tokens desperdiçados” em comunicação entre agentes é um pensamento de curto prazo. O valor gerado por equipes especializadas que se lembram do seu codebase supera em muito o custo de alguns dólares por sessão.</p>
 </section>
 <section>
-<h2 id="s7">PRÓXIMOS PASSOS: META-AGENTES E EXPERTISE BLOQUEADA</h2>
+<h2 id="s7">PRÓXIMOS PASSOS: META-AGENTES E EXPERTISE BLOQUEADA <a class="ts-link" href="https://youtu.be/M30gp1315Y4?t=1986" target="_blank" rel="noopener" aria-label="Pular para 33:06 no vídeo">33:06</a></h2>
 <p>Uma das ideias mais avançadas é criar um meta-agente ou meta-equipe cuja função é ajudar a fine-tunar e melhorar as próprias equipes. Você ensina os agentes a construir e manter seus modelos mentais — e então cria um agente que revisa e melhora esses processos.</p>
 <p>Para casos de uso com conhecimento muito específico e crítico — um agente de billing, um agente de migrações de banco de dados, um agente de DevOps — você pode criar arquivos de expertise somente leitura que são carregados no contexto do agente mas nunca atualizados por ele. Isso garante que conhecimento crítico (como as regras de uma integração de pagamento específica) nunca seja corrompido ou esquecido pela atualização do modelo mental.</p>
 <p>O princípio final: agentes especialistas sempre vão superar agentes genéricos. Assim como você confia mais num engenheiro que fez aquele tipo de trabalho 50 vezes do que num generalista que fez uma vez, agentes com expertise acumulada específica entregam resultados consistentemente melhores.</p>
@@ -146,7 +143,6 @@
 <li><a href="../pt_br/praticas-de-engenharia-para-agentes-de-codigo-simon-willison.html">Práticas de engenharia para fazer agentes funcionarem em produção.</a></li>
 </ul></details>
 </aside>
-
 <div class="resume-banner" id="resumeBanner">
   <span id="resumeText">Continuar de onde parou</span>
   <div>

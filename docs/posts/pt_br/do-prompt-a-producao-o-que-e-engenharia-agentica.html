@@ -6,21 +6,21 @@
 <title>Do Prompt à Produção: O Que É Engenharia Agêntica?</title>
 <meta name="description" content="Kane Hooper é COO da Reinteractive e trabalha com IA desde os anos 90 — começando com chatbots declarativos em computadores IBM antigos. Nos últimos três anos, ele mergulhou de cabeça na questão...">
 <meta name="author" content="Live — Engenharia Agêntica na Prática">
+<link rel="canonical" href="https://adhenawer.net/posts/pt_br/do-prompt-a-producao-o-que-e-engenharia-agentica.html">
+<link rel="alternate" hreflang="pt-BR" href="../pt_br/do-prompt-a-producao-o-que-e-engenharia-agentica.html">
+<link rel="alternate" hreflang="en" href="../original/prompt-production-agentic-engineering.html">
+<link rel="alternate" hreflang="x-default" href="../pt_br/do-prompt-a-producao-o-que-e-engenharia-agentica.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Do Prompt à Produção: O Que É Engenharia Agêntica?">
 <meta property="og:description" content="Kane Hooper é COO da Reinteractive e trabalha com IA desde os anos 90 — começando com chatbots declarativos em computadores IBM antigos. Nos últimos três anos, ele mergulhou de cabeça na questão...">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:site_name" content="Leituras  Podcasts &amp; Vdeos Traduzidos">
+<meta property="og:site_name" content="Leituras — Podcasts &amp; Vídeos Traduzidos">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Do Prompt à Produção: O Que É Engenharia Agêntica?">
 <meta name="twitter:description" content="Kane Hooper é COO da Reinteractive e trabalha com IA desde os anos 90 — começando com chatbots declarativos em computadores IBM antigos. Nos últimos três anos, ele mergulhou de cabeça na questão...">
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "Article", "headline": "Do Prompt à Produção: O Que É Engenharia Agêntica?", "description": "Kane Hooper é COO da Reinteractive e trabalha com IA desde os anos 90 — começando com chatbots declarativos em computadores IBM antigos. Nos últimos três anos, ele mergulhou de cabeça na questão...", "author": {"@type": "Person", "name": "Live — Engenharia Agêntica na Prática"}, "publisher": {"@type": "Organization", "name": "Leituras — Podcasts & Vídeos Traduzidos"}, "inLanguage": "pt-BR", "isAccessibleForFree": true, "url": "https://www.youtube.com/live/eYqt8vqeSBw", "articleSection": ["INTRODUÇÃO", "GARBAGE IN, GARBAGE OUT: O PRINCÍPIO ESQUECIDO", "VIBE CODING VERSUS ENGENHARIA AGÊNTICA", "OS TRÊS PROBLEMAS FUNDAMENTAIS DOS LLMs", "DÍVIDA TÉCNICA E O PONTO DE INFLEXÃO", "PARA QUEM QUER COMEÇAR"]}
 </script>
-<link rel="canonical" href="https://adhenawer.net/posts/pt_br/do-prompt-a-producao-o-que-e-engenharia-agentica.html">
-<link rel="alternate" hreflang="pt-BR" href="../pt_br/do-prompt-a-producao-o-que-e-engenharia-agentica.html">
-<link rel="alternate" hreflang="en" href="../original/prompt-production-agentic-engineering.html">
-<link rel="alternate" hreflang="x-default" href="../pt_br/do-prompt-a-producao-o-que-e-engenharia-agentica.html">
 <link rel="stylesheet" href="../../css/style.css">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="40c8ae3d-2e6b-4af4-a89b-f578dd3b2315"></script>
 </head>
@@ -28,11 +28,10 @@
 <header class="site-header">
   <a class="site-brand" href="../../index.html">Leituras</a>
   <div class="lang-bar">
-    <button class="lang-btn active" data-lang="pt-BR" aria-label="Português">PT</button>
+    <button class="lang-btn" data-lang="pt-BR" aria-label="Português">PT</button>
     <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
   </div>
 </header>
-
 <div class="progress" id="progress"></div>
 <div class="reading-pct" id="readingPct"></div>
 <article class="container">
@@ -43,7 +42,6 @@
     <p class="meta"><a href="https://www.youtube.com/live/eYqt8vqeSBw" target="_blank" rel="noopener">🎥 Assistir no YouTube</a></p>
   </header>
   <nav aria-label="Índice do artigo">
-
     <h3>Conteúdo</h3>
     <ol>
 <li><a href="#s1">INTRODUÇÃO</a></li>
@@ -53,11 +51,10 @@
 <li><a href="#s5">DÍVIDA TÉCNICA E O PONTO DE INFLEXÃO</a></li>
 <li><a href="#s6">PARA QUEM QUER COMEÇAR</a></li>
     </ol>
-  
   </nav>
 <section>
-<h2 id="s1">INTRODUÇÃO</h2>
-<p>Kane Hooper é COO da Reinteractive e trabalha com IA desde os anos 90 — começando com chatbots declarativos em computadores IBM antigos. Nos últimos três anos, ele mergulhou de cabeça na questão central: como fazer agentes escreverem código de nível enterprise, com segurança, qualidade e sem o &ldquo;AI slop&rdquo; genérico que domina o mercado.</p>
+<h2 id="s1">INTRODUÇÃO <a class="ts-link" href="https://www.youtube.com/live/eYqt8vqeSBw?t=1" target="_blank" rel="noopener" aria-label="Pular para 0:01 no vídeo">0:01</a></h2>
+<p>Kane Hooper é COO da Reinteractive e trabalha com IA desde os anos 90 — começando com chatbots declarativos em computadores IBM antigos. Nos últimos três anos, ele mergulhou de cabeça na questão central: como fazer agentes escreverem código de nível enterprise, com segurança, qualidade e sem o “AI slop” genérico que domina o mercado.</p>
 <p>Neste webinar com Errol, ele apresenta a diferença entre vibe coding e engenharia agêntica — e por que essa diferença importa demais para quem quer levar uma aplicação a produção.</p>
 <p>A EVOLUÇÃO DA VELOCIDADE DE DESENVOLVIMENTO</p>
 <p>Há um ano e meio, um projeto de seis semanas era... um projeto de seis semanas. Com as primeiras ferramentas de IA como o GitHub Copilot, era possível ganhar cerca de 20% de eficiência. Bom, mas não transformador.</p>
@@ -65,26 +62,26 @@
 <p>O potencial declarado de Kane para agentes bem configurados: 5x a velocidade de um desenvolvedor sênior, mantendo alta qualidade de código, segurança enterprise e sem AI slop.</p>
 </section>
 <section>
-<h2 id="s2">GARBAGE IN, GARBAGE OUT: O PRINCÍPIO ESQUECIDO</h2>
-<p>Desde os primeiros computadores, o princípio mais fundamental de software sempre foi &ldquo;garbage in, garbage out&rdquo; — se você alimenta o sistema com dados ruins, receberá resultados ruins. Esse princípio foi completamente esquecido pelos entusiastas de vibe coding.</p>
-<p>O que &ldquo;garbage&rdquo; significa em contexto de IA: especificações vagas, requisitos ambíguos, dados contraditórios, contexto insuficiente. O problema com IA é que ela funciona como acelerador — amplifica tudo, inclusive os problemas. Kane usa a metáfora de uma cano com vazamento: com pouca água, você mal percebe. Com muita água, os vazamentos se tornam jatos.</p>
+<h2 id="s2">GARBAGE IN, GARBAGE OUT: O PRINCÍPIO ESQUECIDO <a class="ts-link" href="https://www.youtube.com/live/eYqt8vqeSBw?t=500" target="_blank" rel="noopener" aria-label="Pular para 8:20 no vídeo">8:20</a></h2>
+<p>Desde os primeiros computadores, o princípio mais fundamental de software sempre foi “garbage in, garbage out” — se você alimenta o sistema com dados ruins, receberá resultados ruins. Esse princípio foi completamente esquecido pelos entusiastas de vibe coding.</p>
+<p>O que “garbage” significa em contexto de IA: especificações vagas, requisitos ambíguos, dados contraditórios, contexto insuficiente. O problema com IA é que ela funciona como acelerador — amplifica tudo, inclusive os problemas. Kane usa a metáfora de uma cano com vazamento: com pouca água, você mal percebe. Com muita água, os vazamentos se tornam jatos.</p>
 <p>Gerentes de projeto sempre foram tão valorizados justamente porque eram o guardião contra esse garbage inicial — garantindo que o projeto estivesse bem especificado antes de chegar aos desenvolvedores. Com agentes, essa responsabilidade passa para quem está promovendo o trabalho.</p>
 </section>
 <section>
-<h2 id="s3">VIBE CODING VERSUS ENGENHARIA AGÊNTICA</h2>
+<h2 id="s3">VIBE CODING VERSUS ENGENHARIA AGÊNTICA <a class="ts-link" href="https://www.youtube.com/live/eYqt8vqeSBw?t=1420" target="_blank" rel="noopener" aria-label="Pular para 23:40 no vídeo">23:40</a></h2>
 <p>Vibe coding é: jogar uma ideia vaga no agente e ver o que sai. É ótimo para protótipos, projetos pessoais, dashboards internos que só você vai usar. Não há nada de errado com isso para esses casos.</p>
-<p>O problema é quando vibe coding é usado para construir software de produção. Os sinais são fáceis de identificar — Kane consegue detectar um app vibe-coded em 5 segundos: os padrões de design são genéricos (o gradiente roxo-para-azul do modo escuro), o texto tem os clichês de IA (&ldquo;game changer&rdquo;, &ldquo;let's delve into&rdquo;), a estrutura de código é monolítica.</p>
-<p>Mais grave: código vibe-coded tem vulnerabilidades de segurança severas, vai vazar dados, vai crashar sob carga. Já houve casos reais de agentes deletando bancos de dados de produção e de infraestrutura AWS sendo multiplicada 10x ao longo de um fim de semana porque um bug fez o agente &ldquo;resolver&rdquo; adicionando mais instâncias.</p>
+<p>O problema é quando vibe coding é usado para construir software de produção. Os sinais são fáceis de identificar — Kane consegue detectar um app vibe-coded em 5 segundos: os padrões de design são genéricos (o gradiente roxo-para-azul do modo escuro), o texto tem os clichês de IA (“game changer”, “let's delve into”), a estrutura de código é monolítica.</p>
+<p>Mais grave: código vibe-coded tem vulnerabilidades de segurança severas, vai vazar dados, vai crashar sob carga. Já houve casos reais de agentes deletando bancos de dados de produção e de infraestrutura AWS sendo multiplicada 10x ao longo de um fim de semana porque um bug fez o agente “resolver” adicionando mais instâncias.</p>
 <p>Engenharia agêntica é o oposto: controle preciso dos agentes para produzir resultados específicos e exatos, com pontos de avaliação em cada etapa, humano no loop nas decisões críticas, segurança enterprise por padrão.</p>
 </section>
 <section>
-<h2 id="s4">OS TRÊS PROBLEMAS FUNDAMENTAIS DOS LLMs</h2>
+<h2 id="s4">OS TRÊS PROBLEMAS FUNDAMENTAIS DOS LLMs <a class="ts-link" href="https://www.youtube.com/live/eYqt8vqeSBw?t=1830" target="_blank" rel="noopener" aria-label="Pular para 30:30 no vídeo">30:30</a></h2>
 <p>Kane identifica três limitações fundamentais que todo desenvolvedor que trabalha com agentes precisa entender:</p>
 <p>Garbage in, garbage out: já discutido — contexto ruim gera código ruim.</p>
 <p>Alucinação: os modelos inventam coisas. Kane está chegando a 98% de mitigação com sua pipeline, mas nunca 100%. O truque é ter loops de validação frequentes que detectem desvios antes que se propaguem.</p>
-<p>Drift: com o tempo e múltiplos passos, o agente diverge da intenção original. Isso acontece por dois motivos — janela de contexto limitada (o agente &ldquo;esquece&rdquo; o início da conversa conforme o projeto cresce) e o fato de que modelos são probabilísticos e convergem para a média de tudo com que foram treinados. Sua ideia específica pode divergir do caminho de menor resistência do modelo. Sem reforço constante de contexto e validação, o agente vai em direção à média, não à sua visão.</p>
+<p>Drift: com o tempo e múltiplos passos, o agente diverge da intenção original. Isso acontece por dois motivos — janela de contexto limitada (o agente “esquece” o início da conversa conforme o projeto cresce) e o fato de que modelos são probabilísticos e convergem para a média de tudo com que foram treinados. Sua ideia específica pode divergir do caminho de menor resistência do modelo. Sem reforço constante de contexto e validação, o agente vai em direção à média, não à sua visão.</p>
 <p>A PIPELINE DE ENGENHARIA AGÊNTICA</p>
-<p>Kane desenvolveu o que chama de &ldquo;cluster de agentes&rdquo; — uma pipeline de 19 sub-agentes especializados guiados por um condutor. O princípio: cada agente faz uma coisa, faz bem, e tem loops de validação.</p>
+<p>Kane desenvolveu o que chama de “cluster de agentes” — uma pipeline de 19 sub-agentes especializados guiados por um condutor. O princípio: cada agente faz uma coisa, faz bem, e tem loops de validação.</p>
 <p>A sequência simplificada:</p>
 <p>Validador de escopo: recebe os requisitos e verifica ambiguidades, contradições e consistência com o código existente. Faz loop até atingir 90%+ de confiança.</p>
 <p>Agente de planejamento: cria o plano de implementação, ancorado na documentação técnica da linguagem e no código existente. Loop até validar.</p>
@@ -99,17 +96,17 @@
 <p>É um padrão de loops dentro de loops, como os antigos GOTO statements do BASIC — primitivo comparado ao que virá, mas eficaz agora.</p>
 </section>
 <section>
-<h2 id="s5">DÍVIDA TÉCNICA E O PONTO DE INFLEXÃO</h2>
+<h2 id="s5">DÍVIDA TÉCNICA E O PONTO DE INFLEXÃO <a class="ts-link" href="https://www.youtube.com/live/eYqt8vqeSBw?t=2203" target="_blank" rel="noopener" aria-label="Pular para 36:43 no vídeo">36:43</a></h2>
 <p>Um problema específico do código gerado por IA: sem guidance explícita, o agente vai tentar colocar tudo num único arquivo. 2.000 linhas num único arquivo, sem modularização, sem abstrações adequadas.</p>
 <p>Humanos chegam ao limite do que conseguem manter mais rápido. Agentes conseguem lidar com código confuso por mais tempo — mas há um ponto de inflexão onde até o agente começa a ter dificuldade de fazer mudanças sem introduzir novos bugs. Pesquisas mostram que aplicações codificadas por IA introduzem bugs 2,7 vezes mais rápido que desenvolvimento humano quando não há controle adequado.</p>
 <p>Quando o código chega a esse ponto crítico, a situação piora ainda mais: em vez de corrigir o bug original, o agente às vezes adiciona uma camada de workaround que faz parecer que funcionou sem realmente resolver o problema. A dívida técnica acumula silenciosamente.</p>
 <p>A solução é incluir um agente de refatoração como etapa obrigatória do ciclo, não como afterthought.</p>
 </section>
 <section>
-<h2 id="s6">PARA QUEM QUER COMEÇAR</h2>
+<h2 id="s6">PARA QUEM QUER COMEÇAR <a class="ts-link" href="https://www.youtube.com/live/eYqt8vqeSBw?t=2461" target="_blank" rel="noopener" aria-label="Pular para 41:01 no vídeo">41:01</a></h2>
 <p>O ponto central da apresentação: você não precisa de décadas de experiência para usar engenharia agêntica. Mas precisa de educação específica sobre como essas ferramentas funcionam — suas capacidades, suas limitações e os guardrails necessários.</p>
 <p>Com o conhecimento certo, qualquer pessoa com uma ideia pode construir uma aplicação segura, mantida e pronta para produção em um tempo drasticamente menor do que antes. Kane está construindo ferramentas que abstraem toda essa complexidade — um sistema que qualquer pessoa educada minimamente pode usar para produzir código de qualidade enterprise.</p>
-<p>A mensagem final: não espere que a IA fique melhor para começar. Com as ferramentas de hoje, você já pode construir 5x mais rápido do que antes, desde que entenda os guardrails. Quem esperar o &ldquo;perfeito&rdquo; vai continuar esperando enquanto outros chegam ao mercado.</p>
+<p>A mensagem final: não espere que a IA fique melhor para começar. Com as ferramentas de hoje, você já pode construir 5x mais rápido do que antes, desde que entenda os guardrails. Quem esperar o “perfeito” vai continuar esperando enquanto outros chegam ao mercado.</p>
 </section>
 </article>
 <aside class="references-sidebar" aria-label="Referências">
@@ -160,7 +157,6 @@
 <li><a href="../pt_br/fluxos-de-trabalho-agenticos-don-syme.html">Loops de avaliação e workflows agênticos multi-step</a></li>
 </ul></details>
 </aside>
-
 <div class="resume-banner" id="resumeBanner">
   <span id="resumeText">Continuar de onde parou</span>
   <div>

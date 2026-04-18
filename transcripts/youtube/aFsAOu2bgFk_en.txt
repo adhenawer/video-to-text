@@ -1,5 +1,5 @@
 ================================================================================
-THE EIGHT LEVELS OF AI ADOPTION
+[0:37] THE EIGHT LEVELS OF AI ADOPTION
 
 Steve Yegge sketched out this spectrum on a whiteboard in Australia because he kept meeting engineers scattered across wildly different points on the AI adoption curve. Level one is no AI at all. Level two is the timid yes-or-no question to your IDE: “Can you do this thing?” Level three is YOLO mode — “just do your thing” — where trust starts climbing. Level four is when you stop scrutinizing diffs and start focusing on the conversation with the agent itself.
 
@@ -8,7 +8,7 @@ Level five is when the IDE becomes an afterthought. You let the agent write the 
 Level seven is “oh my god, I made a mess.” You texted the wrong agent, it built an entire project inside another project, and now you are cleaning up chaos. That is the moment Steve started asking the natural next question: what if Claude Code could run Claude Code? That question pulled him toward orchestration and, eventually, toward building Gastown.
 
 ================================================================================
-WHAT YOU NEED TO KNOW KEEPS MOVING
+[5:52] WHAT YOU NEED TO KNOW KEEPS MOVING
 
 Steve has been programming for forty years, and he insists that the goalposts for what makes a “real” software engineer have never stopped moving. In the 1980s you needed assembly. In the 1990s you needed to understand compilers. He and his friends once prided themselves on bit-manipulation questions with XORs — until they realized candidates had never seen a bit. They did some soul-searching in the 2010s and concluded, depressingly, that the old fundamentals simply were not useful anymore.
 
@@ -17,7 +17,7 @@ Graphics is the clearest preview of what is coming for software at large. In 199
 Software engineering, by contrast, has been unusually stable since the arrival of mobile and cloud. The last genuinely new hard problem, Steve argues, was distributed systems in the early 2010s. Since then, much of what engineers have called “progress” has been migrations — new React versions, Android deprecations, Apple throwing a screwdriver in the wheels every year — combined with a hiring market so hot that three-month bootcamp graduates were landing offers. Then AI arrived.
 
 ================================================================================
-THE ARC FROM SKEPTIC TO BELIEVER
+[11:01] THE ARC FROM SKEPTIC TO BELIEVER
 
 Steve was blown away the first time ChatGPT could write a fairly coherent Emacs Lisp function in December 2022. It was janky, but it was writing code in a weird language, and that was the moment he thought, “okay, I see now.” Still, he remained a skeptic. When rumors of Claude Code first leaked in early 2024 — an internal Anthropic tool writing code from the command line — he rejected it along with everyone else. Flat out. Not happening.
 
@@ -26,21 +26,21 @@ Then he used it, and his reaction was simply: “Oh, we are all doomed.” He wr
 The back cover of his book Vibe Coding, co-authored with Gene Kim, declares that “the days of coding by hand are over.” That line is not Steve's — it belongs to Dr. Eric Meijer, a compiler luminary who contributed to Visual Basic, C#, Haskell, LINQ, and more. The inventor of tools for developers saying developers will not write code anymore is what pushed Steve and Gene to take the curves seriously.
 
 ================================================================================
-THE CURVES AND THE UNBELIEVERS
+[16:49] THE CURVES AND THE UNBELIEVERS
 
 The world, Steve says, is full of people who believe the curve is an S — that it goes up, flattens, and that we are already at the hump. They thought this when GPT-3.5 came out. They thought it when GPT-4 came out. They still love GPT-4 and cannot imagine anything better, even though Opus 4.5 is already two months old and most of them have never tried it.
 
 The half-life between model drops from Anthropic has compressed from about four months at the start of last year to roughly two months now. Every new model folds in all the bugs and complaints about the previous one as training signal. And time itself does not stop — there will be models three and five years from now. The S-curve believers are technically correct, Steve concedes: eventually we run out of resources and the curve flattens. But he estimates there are at least two more cycles left, which means models sixteen times smarter than today. That is enough to subsume all of knowledge work.
 
 ================================================================================
-THE LAYOFFS NOBODY HAS A PLAN FOR
+[18:05] THE LAYOFFS NOBODY HAS A PLAN FOR
 
 Steve is mad at Amazon — and he will say so. Laying off sixteen thousand people and blaming AI without an actual AI strategy is, in his view, indefensible. Those people are largely not going to find equivalent jobs, and they are the first wave of many. Nobody has a plan for this.
 
 His uncomfortable framing is that every company has a dial from zero to a hundred, representing what percentage of engineers to cut so the remaining ones can afford the tokens to be maximally productive. Most companies are quietly setting that dial to fifty. Meanwhile, roughly half of engineers do not want to prompt and are ready to leave anyway. The arithmetic is brutal: big companies are about to lose half their engineering workforce, and the cuts will dwarf anything seen during the 2022-2023 correction.
 
 ================================================================================
-THE VAMPIRIC EFFECT
+[18:54] THE VAMPIRIC EFFECT
 
 There is something happening that the industry is not talking about honestly, Steve says. AI creates a vampiric effect. It gets you excited, you work incredibly hard, and you capture enormous value — but it drains you. Steve finds himself napping during the day. His friends at startups are napping during the day. They joke about loading each other up with enough context to force the other person into a nap, like a compassion grenade.
 
@@ -49,14 +49,14 @@ The mechanism is simple. The easy work is being automated away, so every hour yo
 Companies are built to extract value until you snap. That is not new. What is new is that the equation has changed so dramatically that old cultural expectations — show up, grind, push through — point in exactly the wrong direction. Engineers need to get very good at saying no, very fast.
 
 ================================================================================
-WHO CAPTURES THE VALUE
+[24:08] WHO CAPTURES THE VALUE
 
 If an engineer becomes a hundred times more productive and still works eight hours a day, the company captures all of that value. That is not a fair exchange. On the other extreme, if the engineer works ten minutes, produces the old level of output, and tells nobody, they have captured all the value themselves. Neither extreme scales to healthy teams.
 
 Six months ago the discourse was about 996 at AI startups — nine-to-nine, six days a week — with founders posting photos of the office at 3 a.m. That is one pole: maximum extraction. The opposite pole is invisible: the hyperproductive engineer who stopped telling anyone what they really do. Between those two is the new work-life balance problem, and there is no cultural template for it. Dario Amodei has floated the idea that Anthropic staff might be compensated even after leaving the company for the value they created — a genuinely unheard-of suggestion, and a sign that thoughtful leaders already see the scale of the imbalance.
 
 ================================================================================
-BIG COMPANIES ARE QUIETLY DEAD
+[26:37] BIG COMPANIES ARE QUIETLY DEAD
 
 Steve's provocative claim: innovation at large companies is dead, and we are looking at dead companies that just do not know it yet. Hyperproductive engineers exist inside big corporations, but the organization itself cannot absorb their output. Bottlenecks choke the downstream flow, the engineers get frustrated, and the engineers quit.
 
@@ -65,14 +65,14 @@ He traces the pattern at Google. In the early days it was a hive mind — you ra
 Anthropic, by contrast, sits at a frontier with infinite work to do. Everyone there is slightly oversubscribed, which is the same condition Steve's friends report at Amazon and Apple. Oversubscription is not a bug. It is what keeps the politics from metastasizing.
 
 ================================================================================
-THE RISE OF SMALL TEAMS
+[41:40] THE RISE OF SMALL TEAMS
 
 The flip side of the big-company extinction is the mad rush of innovation happening at the edges. Engineers who believe the curves, paired with non-programmers who can now build software for the first time, are forming groups of two, five, ten, twenty, thirty people — and producing output that rivals the lumbering giants. Facebook was one kid in a dorm. Steve can genuinely imagine a future where Amazon is not a thing anymore because software itself has become distributed in a way we do not yet have words for.
 
 Venture capital has noticed. Steve says VCs are finding him everywhere. When Jeff Huntley released Ralph Wiggum, the VCs descended. There is a lot of money sniffing around because it senses something big, and it is searching for entry points in the microeconomies springing up around agents. The catch: whatever you build probably has a very short shelf life. Steve is not attached to Gastown at all, because he expects it to be supplanted within six months.
 
 ================================================================================
-GASTOWN: AGENTS RUNNING AGENTS
+[53:28] GASTOWN: AGENTS RUNNING AGENTS
 
 In 2023 the product was code completion. In 2024 it was chat. In 2025 it was agents. The next logical step was obvious: if chat is completions in a loop, and agents are chat in a loop, then orchestrators are agents in a loop. Steve built Gastown as his own vision of that pattern.
 
@@ -81,7 +81,7 @@ The architecture is a town. One mayor — the entity you actually talk to — di
 Steve built both. Crews are the maximalists: you feed them a hard design problem and say, “read all these docs, then we'll talk.” Polecats are the minimalists: small, self-contained tasks handed off to focused workers. Polecats behave like sub-agents but are more first-class — they have their own identity, their own inbox, you can compute skill vectors from their performance over time, and, crucially, you can watch them. Gastown does not try to get out of your way; it is deliberately in your way, because visibility is the point.
 
 ================================================================================
-GASTOWN AS A BET AGAINST THE BITTER LESSON
+[57:28] GASTOWN AS A BET AGAINST THE BITTER LESSON
 
 Steve is candid that Gastown does not really work. The models were never trained to be factory workers. A lot of Gastown is elaborate scaffolding to make Opus 4.5 behave like a reliable worker, which the Anthropic team finds a little embarrassing — it is a pile of workarounds for gaps in their model.
 
@@ -92,7 +92,7 @@ Much of Gastown is on the wrong side of Richard Sutton's bitter lesson: do not t
 The ceiling on what orchestrators can productively build is rising. Gastown can currently hold together something between half a million and five million lines of code before it dissolves into mess. The next model drop will likely push that to a few million. That is still nothing compared to enterprise codebases with hundreds of millions or billions of lines, which means one thing: if you are a monolith, you are hosed. You will never fit in the context window. Your only real options are to break it up or rewrite from scratch — and rewriting is increasingly the faster path.
 
 ================================================================================
-HERESIES IN VIBE-CODED CODEBASES
+[1:02:37] HERESIES IN VIBE-CODED CODEBASES
 
 Steve has discovered a phenomenon he calls a heresy. In a vibe-coded codebase that you are not actively reading, an incorrect idea — a wrong architecture, wrong data flow, wrong assumption — can take root among the agents. It is invisible. Your product starts breaking along the edges and you do not know why. You have the agents dig in and discover a fault line: two complete databases, both live, both randomly selected between.
 
@@ -101,7 +101,7 @@ You try to weed the heresy out, but it grows back. Some agent picks up on a left
 Steve has another heresy in Gastown: his agents all think they should open PRs. He is the sole maintainer. He wants them to push to main or to a branch. They keep insisting on PRs, polluting the PR space. He could hack around it, but he recognizes that fighting the bitter lesson is pointless. Opus 5 will simply understand when he says he does not want PRs.
 
 ================================================================================
-MOST PEOPLE CANNOT READ
+[1:08:06] MOST PEOPLE CANNOT READ
 
 Steve has a contentious observation delivered at full volume: most people cannot read. They read slowly. Five paragraphs feels like an essay. And Claude Code makes you read a lot — waterfalls of text. Until the UIs catch up, everybody who cannot read comfortably is at a severe disadvantage in the vibe-coding era.
 
@@ -110,14 +110,14 @@ This is partly why Gastown is painful to use. It is a factory full of workers, b
 His bold prediction for the end of this year: most people will be programming by talking to a face. A screen. Your Gastown mayor will be a fox that listens, dispatches workers, and reports back to you in conversation. Voice-first, visual, agent-driven. That, Steve thinks, is the only form factor that will work for the general population. The IDE is not dying so much as returning — Claude Code on Web is the early signal — but the returned form is something you steer by conversation, not by typing code.
 
 ================================================================================
-TOKEN BURN IS THE NEW PRODUCTIVITY METRIC
+[1:12:19] TOKEN BURN IS THE NEW PRODUCTIVITY METRIC
 
 The single most important proxy metric a company can track today is token burn. High token burn means your engineers — or your non-engineers — are trying things. They are failing. They are learning. They are surfacing organizational bottlenecks early. They are leveling up on Steve's eight-level spectrum.
 
 It does not matter which tool they use. It does not matter what they try. What matters is that they try. The only way to lose is to not try — or worse, to give them Copilot. Steve is blunt: Copilot was the best tool four years ago. Today, on the lineup from best to worst, Copilot does not even know where the line is. If your company gave you Copilot and thinks that means they are moving faster, a barbarian horde of engineers using Opus 4.5 will eat you sooner or later. Find half an hour a day to play with Claude Code. Make your token burn as high as investors will tolerate. That is your practice, your sorting, your survival.
 
 ================================================================================
-THE NEW PRODUCT PLAYBOOK AT ANTHROPIC
+[1:14:24] THE NEW PRODUCT PLAYBOOK AT ANTHROPIC
 
 Anthropic, Steve says, is unlike any company on Earth right now. They operate in a fragile space and protect it fiercely. From the outside, they look like they are running the company as a pure functional data structure à la Okasaki — never mutating, just appending. Improv. “Yes, and.” Vibes.
 
@@ -126,21 +126,21 @@ The old product playbook was a spec, an implementation, complaints, a ship. Wate
 Claude Code on Web reportedly went from prototype to launch in ten days. Boris Cherny told Steve that he built twenty different working prototypes of a Claude Code task-list feature in two days, thanks to AI — what Steve calls slot-machine programming. Twenty working prototypes would have been two weeks of work before, and realistically you would have stopped at three. This is the “O” in the FAFO framework from Vibe Coding: optionality. The ability to create so many prototypes that you can defer your decision until you actually know the answer. That is cheating. Of course everyone will do it. And it will reshape how companies are run this year.
 
 ================================================================================
-TRANSPARENCY OR DISAPPEARANCE
+[1:16:04] TRANSPARENCY OR DISAPPEARANCE
 
 In the new small-startup world Steve sees emerging, everything must be either fully transparent or deliberately hidden for a reason. There is no middle ground. If you do not want people to see what you are doing, simply do not show them — and they will never see it. But if you do want them to see it, you must get it in front of them instantly, as it happens, because the pace is so fast that anything not broadcast becomes invisible.
 
 He tells a story of a startup teammate who got yelled at for implementing a feature the team had asked for two hours earlier. Two hours was too long. Everything had changed. The defense is extreme, loud, intentional narration of what you are doing, so that anyone working on the same thing can stop you, and anyone who needs to integrate can slot in immediately. The old wisdom of “find product-market fit in secret, then launch” is dead. Steve launched Gastown the moment it sort of worked, because he knew he could not find product-market fit alone. He got over a hundred PRs in the first days and learned about the Dolt database that way.
 
 ================================================================================
-FORKING, REMIXING, AND THE NEW OPEN SOURCE
+[1:18:26] FORKING, REMIXING, AND THE NEW OPEN SOURCE
 
 In the old days, forking someone's project was a declaration of war. Now it is Tuesday. Roo forked Cline, someone else forked Roo Code. Cursor is a fork. Maintaining a fork used to mean painful merges back to upstream. AI makes that trivial. Everyone will be forking. Steve sees it as the natural consequence of everybody being able to write code — just as everyone can take a photograph now, even though that was not true fifty years ago.
 
 People are remixing open-source projects constantly: take this project, take that thing, have the AI stitch them together, publish the result. Often no one reads the result. But the remix layer itself is becoming the new form of contribution. Open source is getting wider and stranger.
 
 ================================================================================
-PERSONAL SOFTWARE AND THE BUILDING BLOCKS TO BUILD NOW
+[1:30:28] PERSONAL SOFTWARE AND THE BUILDING BLOCKS TO BUILD NOW
 
 Programming is about to become something everyone does. Steve predicts his wife will be the top contributor to their video game by summer of next year, and she is not a developer. His whole family might get in on it. The same way the internet let everyone publish web pages and thereby created the need for aggregators and search engines, the coming wave of everyone-writes-software will create demand for agents that can find the software you would actually like. The work-pile for experiences.
 
@@ -149,7 +149,7 @@ For engineers looking for an idea, Steve's suggestion is to go build the reliabl
 Zendesk-style platforms that refuse to expose real APIs because they want to charge extraordinary sums to host your AI on their platform are, in Steve's view, producting themselves out of existence. The new default expectation is an open API that an agent can call directly.
 
 ================================================================================
-THE FIVE STAGES OF GRIEF FOR ENGINEERS
+[1:30:38] THE FIVE STAGES OF GRIEF FOR ENGINEERS
 
 Steve went through genuine grief when he realized what AI meant. For six or seven intense days, surrounded by a few months of it on either side, the world went monochrome. He felt reality disconnect. He ticked off, one by one, the things that no longer mattered that he had once cared about deeply: his memorization, his compiler knowledge, his ability to write code at a certain level. Those things had made him special. Now they did not.
 
@@ -158,7 +158,7 @@ Then he came out the other side and realized he was writing ten times more code 
 His encouragement to anyone still frozen: if the curves flatten tomorrow and Opus 4.5 turns out to be the peak, you will still be exactly where you need to be. The damage is done. Opus 4.5 already made this officially an engineering problem rather than an AI research problem. You can take a town-sized bite out of the mountain now. Layers of engineering will wrap around whatever model we end up with, the way we wrapped layers around fire and steam and nuclear reactors. It is safe to jump into the pool.
 
 ================================================================================
-WHAT IS STILL A MOAT
+[1:30:44] WHAT IS STILL A MOAT
 
 If any software can be trivially cloned, what survives as a moat? Steve's answer is human connection. Counterintuitively, as software does more and more for us automatically, people will increasingly insist on human-curated, human-delivered, human-sourced things. Humans themselves will be the moat. The goods a drone can drop at your door will lose to the goods a person hands to you. The aggregator that understands you personally will beat the generic recommendation. Human taste, human relationships, human judgment — those become scarce and therefore valuable.
 

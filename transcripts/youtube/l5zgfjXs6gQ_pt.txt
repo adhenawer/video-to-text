@@ -1,0 +1,92 @@
+================================================================================
+[0:12] INTRODUÇÃO
+
+Este webinar da Port reúne Tomas (product solutions lead, background em DevSecOps e GitLab) e Zach (solution engineer para APJ, background em DevOps) para falar sobre engenharia agêntica na prática: como dar contexto adequado aos agentes, implementar guardrails que previnem ações destrutivas, e medir o ROI dessas iniciativas.
+
+A pergunta inicial feita ao público — “quando um agente de IA toma uma ação no seu workflow de engenharia, qual é sua maior preocupação?” — teve dois grandes vencedores: “não há guardrails suficientes para prevenir ações destrutivas” e “ainda não temos agentes de IA no nosso workflow.”
+
+O CAOS DOS AGENTES E POR QUE ACONTECE
+
+Nos últimos 10-15 anos, a indústria passou por DevOps, depois Platform Engineering — todas tentativas de simplificar e padronizar. Agora, com a adição de agentes de IA por cima dessa complexidade já existente, o caos cresce ainda mais rápido.
+
+Os quatro problemas centrais identificados pelas equipes ao tentar colocar agentes em produção: falta de visibilidade sobre o que os agentes estão fazendo, ausência de controle e supervisão humana, duplicação de trabalho entre engenheiros e agentes, e falta de guardrails reais.
+
+O problema adicional com o caos de agentes em organizações maiores é a fragmentação: cada time cria seus próprios agentes, cada um funciona de forma diferente, e não há um lugar centralizado onde você possa ver tudo. Um agente de triage construído por um time não pode ser reutilizado pelo próximo time — todo mundo reinventa a roda.
+
+================================================================================
+[5:47] CONTEXTO: O QUE É E POR QUE É FUNDAMENTAL
+
+Quando você pede para um agente de IA fazer algo, ele parte com contexto zero. Ele não sabe qual é o seu stack de tecnologia, qual linguagem de programação você usa, quais ferramentas estão integradas, quem é o dono de cada serviço, quando foi o último deploy. Um prompt como “implemente X” sem contexto vai produzir um resultado genérico que pode ou não funcionar no seu ambiente.
+
+Contexto, nesse sentido, é tudo que um engenheiro experiente na sua empresa já saberia: a estrutura dos seus serviços, onde estão os repositórios, como os pull requests se relacionam com os serviços, quais são as convenções da organização, a topologia do sistema. Com contexto rico e preciso, você obtém respostas muito melhores dos agentes.
+
+A plataforma Port funciona como um “plano de controle” que agrega esse contexto de múltiplas fontes — Jira, GitHub, ferramentas de monitoramento, documentação — num “context graph” que os agentes podem consultar.
+
+================================================================================
+[11:44] WORKFLOW 1: RESOLUÇÃO AUTÔNOMA DE TICKETS
+
+O primeiro caso de uso demonstrado é levar um item de trabalho da criação até a produção com automação agêntica. O processo inclui:
+
+Enriquecimento de contexto: quando um ticket chega, o sistema automaticamente busca todos os serviços relacionados, repositórios, pull requests históricos e pipelines relevantes. O item de trabalho não existe em isolamento — ele pertence a um serviço, que tem uma stack específica, um time responsável, um histórico de deploys.
+
+Geração de PRD: um agente usa esse contexto enriquecido para gerar um Product Requirements Document estruturado.
+
+Geração de spec técnica: outro agente transforma o PRD numa especificação técnica de implementação.
+
+Execução via coding agent: a spec técnica é passada para um agente de código (Claude Code ou similar) para implementação.
+
+Review e deploy: o código gerado passa por revisão e segue para deploy.
+
+O trigger pode ser manual ou automático — assim que um ticket entra, o workflow começa.
+
+================================================================================
+[27:48] WORKFLOW 2: RESOLUÇÃO DE INCIDENTES COM SELF-HEALING
+
+O segundo caso de uso é a gestão de incidentes — da emissão do alerta até a análise de causa raiz e postmortem. Tomas descreveu um incidente real onde um cluster Kubernetes afetou 20 microserviços com 20 donos diferentes. A pergunta crítica era: como reunir as pessoas certas rapidamente?
+
+Com o workflow de self-healing:
+
+Triage automática: ao receber um alerta, o agente busca contexto sobre o incidente — serviços impactados, último deploy, upstream/downstream dependencies, business impact.
+
+Investigação: o agente usa skills específicas (da skills registry) para investigar o incidente da forma que a organização padronizou. Pode consultar servidores MCP externos (DataDog, CloudWatch, etc.) para dados de logs e traces.
+
+Roteamento: o agente determina se precisa escalar para um humano ou se consegue resolver autonomamente.
+
+Remediação: o agente pode executar ações como rollback de deployment ou sincronização via Argo CD.
+
+Postmortem automático: ao final, um agente de postmortem compila todos os dados do incidente, o triage, o que foi feito na remediação, e gera um documento de análise de causa raiz — economizando horas de trabalho chato, especialmente às 2 da manhã.
+
+Um insight importante: se 90 incidentes entre 100 têm a mesma causa raiz, os RCAs acumulados no Port permitem que o agente identifique isso e sugira melhorias sistêmicas, não apenas correções pontuais.
+
+================================================================================
+[41:04] GUARDRAILS E CONTROLE
+
+A resposta para o medo de “agentes fazendo ações destrutivas” está em três camadas:
+
+Controle de contexto: ao controlar precisamente quais dados o agente pode acessar, você limita o espaço de ações possíveis. Um agente que só vê o ambiente de desenvolvimento não pode afetar produção.
+
+RBAC (controle de acesso baseado em papéis): a plataforma implementa permissões específicas para cada agente — este agente pode fazer deploy para dev, aquele pode fazer deploy para produção, nenhum pode acessar dados de clientes.
+
+Scorecards e compliance: é possível definir critérios obrigatórios para que certas ações sejam executadas. Um pull request só pode seguir para produção se passar por code scan, ter cobertura de código acima de 85%, e ter os unit tests passando. Os agentes operam dentro dessas restrições.
+
+Humano no loop: o workflow pode ser configurado para pausar e esperar aprovação humana em pontos críticos. Não é uma caixa preta — você consegue ver como o agente chegou a cada decisão.
+
+================================================================================
+[46:39] MEDINDO O ROI
+
+A primeira recomendação é estabelecer uma baseline antes de implementar agentes. Meça agora: qual é o lead time médio de um ticket do Jira até produção? Quantas horas leva a resolução de incidentes? Quando você introduzir os agentes, a diferença entre o antes e o depois é o ROI demonstrável.
+
+Métricas de impacto para liderança: percentual de tickets resolvidos autonomamente (no exemplo do webinar, 64%), horas economizadas pelo workflow de ticket autônomo (17.000 horas no exemplo), número de incidentes resolvidos pelo agente de self-healing, redução do backlog de tickets de baixa prioridade (dívida técnica).
+
+Uma métrica mais sutil mas importante: se o número de incidentes resolvidos está caindo conforme o uso do self-healing aumenta, isso indica que o sistema está aprendendo e prevenindo problemas recorrentes, não apenas remediando.
+
+Para acessar os dados do Port de fora da plataforma (dashboards, relatórios para liderança), o Port oferece um servidor MCP que permite queries via Claude ou outros agentes usando linguagem natural — o que facilita criar relatórios sob demanda sem precisar de SQL ou APIs customizadas.
+
+================================================================================
+[51:20] REUTILIZAÇÃO DE AGENTES E SKILLS REGISTRY
+
+Um dos problemas centrais do “agent chaos” é cada time reinventar agentes similares. A solução é uma skills registry centralizada — um repositório de agentes, prompts reutilizáveis e workflows padronizados que qualquer time pode consumir.
+
+É análogo a um Docker Registry para agentes: você registra o agente de triage, documenta o que ele faz, quais ferramentas ele usa, qual prompt base é utilizado. Outro time que precisa de triage não precisa construir do zero — consome o que já foi validado.
+
+A mesma lógica se aplica a workflows mais complexos: o workflow de segurança, o workflow de resolução de incidentes, o workflow de code review — todos podem ser versionados, compartilhados e refinados colaborativamente, garantindo que as boas práticas da organização sejam aplicadas consistentemente.

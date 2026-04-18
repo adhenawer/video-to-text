@@ -1,5 +1,5 @@
 ================================================================================
-OPENING THE DARK SIDE
+[0:00] OPENING THE DARK SIDE
 
 I've seen things that make me want to close my eyes. You want to talk about the dark side, and that's okay. I hope no one would do this, but I know people do. That's my opening gambit for "I want to take it over." After this conversation, I'm a little more cynical.
 
@@ -8,7 +8,7 @@ This is Ethan Evans, former Amazon VP, back for a second time because I knew he 
 I'm comfortable with the fact that I'm not a perfect person. Sometimes some of the stuff I did, I wish I had done differently. So I can share what I did and what I saw others do because I'm comfortable with that. And frankly, I'm retired. So I'm immune. There's no boss over me who's going to say, "You told Ryan what?" I'm free from that.
 
 ================================================================================
-EMPIRE BUILDING: WHY COUNTING HEADS RULES
+[2:37] EMPIRE BUILDING: WHY COUNTING HEADS RULES
 
 Empire building is a bad thing because it focuses more on the raw number of people than on what you're doing or the impact you're having. Why does it exist? Because it's rewarded. And it's rewarded because counting people is the easiest thing to do. When leaders decide who's ready for promotion, how much impact you had is subjective. One person thinks the project was hard, another thinks it was easy. But no one can debate that Ethan has forty-two people and Ryan has seventeen. Ethan is the bigger leader — that's the conclusion they're making.
 
@@ -19,7 +19,7 @@ At Amazon, those thresholds did not exist while I was there. They existed in whi
 I've talked to leaders whose boss, trying to get them across the threshold, said, "We're going to put these people under you for six months, check the box, and give them back to the person we took them from." That's the game they have to play if they want to reward someone on their team. It's insanity — we're moving people around and changing their lives just to hit a number.
 
 ================================================================================
-THE HIDDEN CHESS OF REORGS
+[13:10] THE HIDDEN CHESS OF REORGS
 
 The triggering condition for a reorg is usually a change in the business. Something has changed and the organization isn't set up to address it — a new market, an acquisition, a new project. The second reason is somebody else quit or got moved, so reorgs come due to cascades.
 
@@ -32,7 +32,7 @@ When I think about reorgs I've done, they're very much about retention. People d
 There's a hidden chess going on. You're aware of multiple things, and aware of the messenger: this is what this person wants to hear, and here are the things I'm trying to achieve. What pieces can I sell to make the reorg happen? That turns off a lot of engineers. They say, "I don't want to manage all these things, I just want to say it as it is." But you can certainly work around it — you can do a reorg purely on business goals without any concern for people, but that's probably going to cost you people.
 
 ================================================================================
-THE SQUEAKY WHEEL GETS THE GREASE
+[16:51] THE SQUEAKY WHEEL GETS THE GREASE
 
 Sometimes two people perform roughly equally, but one of them has made clear they're thinking about leaving. A lot of managers will think: Ryan's this great guy, always sticks with us. He'll wait another six months, and I can use those six months to save this other guy. It's not that I mean to screw you. I'm focused on saving this other person and I know you'll put up with it. So you can end up behind just because you're such a nice guy.
 
@@ -41,7 +41,7 @@ I often tell my coaching clients: "You are a very nice person." And what they do
 In a reorg, what's inevitable is I have some people who've been more vocal about what they want than others. Perhaps I'm arranging the reorg knowing what some people want, assuming the quiet ones will be fine. That's the benign version. The less benign is I know some are pushy and some aren't, so I'm serving the pushy people because then I get to keep my whole team.
 
 ================================================================================
-"MY CAREER IS VERY IMPORTANT TO ME"
+[21:13] "MY CAREER IS VERY IMPORTANT TO ME"
 
 I wanted to tell my manager Neil that I really expected to be promoted, but diplomatically. I was a senior manager at Amazon. I went to him and said, "Neil, I need to understand how important my career is to Amazon, because my career is very important to me."
 
@@ -52,7 +52,7 @@ That's a statement no one can argue with. No one can say your career shouldn't b
 There's always a way to say things in that middle ground that makes clear what you want and that you're willing to consider your other options, without being a threatening jerk. You have to tune your message to the workplace. That message would be offensive in some workplaces, and it was totally not offensive at Amazon because there were people pounding the table. Find a place where you look like a wonderful sweet person in the mix.
 
 ================================================================================
-THE ART OF MAKING DEALS
+[25:24] THE ART OF MAKING DEALS
 
 The great thing about really demanding people is if they're bothering you to the point where they're a net negative, you just tell them no — they will quit. They are so driven that if you deny them, your problem will go away shortly. They'll even leave for a lesser job.
 
@@ -63,7 +63,7 @@ My manager gave me a requirement I didn't like. He said, "Your team is too expen
 There's also the forward-looking slate. HR in big companies tracks, by halves, who's in six months, twelve months, eighteen months, maybe as far as twenty-four. There was a sense of whose turn it was. I understand at Google today there's a strict quota — this quarter, two people can get from L8 to L9. Someone I coach said, "I think I'm number four, I'm not going to make it." That can be toxic, but people understand the idea of a line. Things get more quota-based when positions are rare and expensive. Principal and distinguished engineers cost a million dollars apiece. We don't just hand them out like popcorn.
 
 ================================================================================
-PIRATES IN YOUR OWN ORGANIZATION
+[33:05] PIRATES IN YOUR OWN ORGANIZATION
 
 This has become more common as growth has slowed. When Amazon was growing very quickly, you saw less of this — it's easier to go get new people than to fight with someone. Now that companies are flat, there's a lot more of what I'd call cannibalism. Since I can't get new, I'm going to eat what's here.
 
@@ -76,7 +76,7 @@ Instead of saying "give me this," tell your manager: "I want what's best for the
 When a reorg comes, they're like, "Oh right — Ryan said he'd stay. Perfect. Ryan just became most qualified, not because he's best, but because he's most reliable." And that is best, in my situation.
 
 ================================================================================
-SAYING YES: BUILDING THE GARBAGE-CAN EMPIRE
+[37:59] SAYING YES: BUILDING THE GARBAGE-CAN EMPIRE
 
 When I was a director working toward VP, I was put under a VP who had no other engineering leaders, but they kept giving him more engineering stuff. I was the first, I built trust with him, and he automatically came to me with everything. "They handed me this, can you take it?" At one point I was managing eight different functions.
 
@@ -85,21 +85,21 @@ I led the technical team for reverse logistics — when people traded in video g
 Someone I really respect, now a senior VP at Walmart, was taught by a senior VP at Amazon: "The simple way to get promoted is, solve problems for your boss." If you need to get it down to five words: solve problems for your boss. If you're solving their problems, they will value you. Most people are not helping — they're punching the clock or fighting for their own things. Even a bad boss will often take care of someone who's helping them. Even if I'm evil and only care about myself, who do I want to keep? The ones that are helping me.
 
 ================================================================================
-THE INVENTOR PATH: AMAZON T-SHIRTS
+[42:02] THE INVENTOR PATH: AMAZON T-SHIRTS
 
 I also recommend being the inventor. Amazon now sells over a billion dollars a year of custom-printed funny t-shirts. I helped start that business. My manager said, "Hey, you run Amazon's app store. What does that have to do with t-shirt printing?" I said, "Well, I think there's a big business here. I need ten people and I have eight hundred. If you're telling me I can't spend basically 1% of my resources on this thing I believe in, we have another discussion, because you're micromanaging me."
 
 He said, "Fine, I disagree, but go do your thing." It turned into a big business. I'm simplifying a ton — there were years of work in that phrase. But I was always thinking about what else I could do with my own resources or lightweight approval. I think there are multiple paths to the top. I tried them all. Be the helpful person, but also be the inventor.
 
 ================================================================================
-THE GARBAGE CAN AND THE WINDOW SEAT
+[45:52] THE GARBAGE CAN AND THE WINDOW SEAT
 
 If I wanted to get rid of a pushy, overly ambitious person, I'd just give them "other." Six weeks later, that's a vacancy. When I first joined Amazon, there were a few groups: one person would own what became Prime Video, another Prime Music, another the Kindle. Then there was one more leader who got given database maintenance, quality assurance, and a couple small things. Even he joked, "Well, my group is 'other.' It's the garbage can." Our VP said, "Don't call it that. What about the people in it?" But as far as I know, that guy is still at Amazon twenty years later because he was one of those calm, nice guys willing to do what was needed.
 
 This isn't an Amazon thing. In Japanese culture, there's a concept called the "window seat." You want to be in the center of the building, close to the CEO and close to the action. Being on a window means you're not that important. What Americans would see as a great corner office is, in Japan, a signal that you've been moved as far from what's happening as possible — exiled to the land of irrelevance, where you don't even have co-workers on one side. That would signal your career here is over.
 
 ================================================================================
-MUTINY: NEVER GO ALONE
+[52:50] MUTINY: NEVER GO ALONE
 
 If you have a low-performing manager, the natural thought is to go to their manager — your skip. You could consider this as mutiny.
 
@@ -108,7 +108,7 @@ When people come to me about a weakness in my employee, there's a subconscious p
 Never mutiny alone. If you really want to say "this manager is bad," take two or three people, or send them in sequence. I had a leader who was treating the women on his team badly. It took a long time for different rumors to bubble up. Had any one of them come to me alone, I probably wouldn't have listened. But when several reports came up, I realized I'd been missing something. Even in Zelda — it's dangerous to go alone. Take this.
 
 ================================================================================
-GETTING OUT FROM UNDER A BAD BOSS
+[57:22] GETTING OUT FROM UNDER A BAD BOSS
 
 There's a better approach than mutiny. Don't even bring up the manager. Say, "Hey, I was looking at this other role and I think I could do so much more for you over there because of A, B, and C." Try that first. If it works, you never have to bring it up.
 
@@ -119,7 +119,7 @@ He understood he would never break his word to an SVP. The moment I gave my word
 I was careful not to make it threatening. I didn't say "unless you give me what I want." I said, "once I give my word, I can't go back on that." I tap into the manager feeling like, "Okay, I don't like it, but I get it."
 
 ================================================================================
-THE POLITE FICTION
+[1:02:13] THE POLITE FICTION
 
 A mistake people make is not thinking through their wording before they're in the room. Most of these conversations are not spur of the moment — they're on the calendar, or you know they're coming. Spend the time to have that key phrase ready so you can deliver it with true sincerity.
 
@@ -130,7 +130,7 @@ When I put the screws to that other boss long ago — "I'm gonna have to conside
 Some engineers hate this. I hear you, but this is human nature. You're dealing with humans, with their emotions, defensiveness, and stress. Do yourself a favor and get good at this. It's all through your life. Any negotiation, any deal making.
 
 ================================================================================
-INTERPERSONALLY WARM, PROFESSIONALLY FIRM
+[1:05:05] INTERPERSONALLY WARM, PROFESSIONALLY FIRM
 
 I call it being interpersonally warm: friendly, smiling, not getting agitated, while being professionally firm — saying what I need about what I really want, but not bringing anger or "you versus me" into it.
 
@@ -143,7 +143,7 @@ We objectify others. As an engineer, you do this all the time: "I just need them
 Nothing works 100% of the time. I was debating politics with my college roommate and decided I'd use all my influence skills. I failed. Nobody left angry, but I got nowhere. Sometimes their motives just can't be aligned with yours. These techniques will get you way more success — but they're not a magic recipe.
 
 ================================================================================
-INFLUENCE, POLITICS, AND MOTIVE
+[1:12:22] INFLUENCE, POLITICS, AND MOTIVE
 
 People ask me: what's the difference between influence and politics, between influence and manipulation? The skill sets are the same. It's about motive.
 
@@ -154,7 +154,7 @@ There are three cases. People whose motive is to do good — easy, great. People
 If you could separate from an unethical person, great. But at work we don't always get to choose our teammates. Sometimes you need a team run by a terrible or self-serving person. Learn to work with them. With slippery people: they love to be slippery in the dark. Bring allies so it looks like "everyone thinks this." They usually can't afford to have everyone know they're unethical. There's a phrase from politics: "plausibly deniable." Put them in a situation where it's easier to go along with you than fight you. "I'd rather stab Ethan in the back, but there are a lot of witnesses."
 
 ================================================================================
-BE A PORCUPINE: ORG VS ORG
+[1:20:30] BE A PORCUPINE: ORG VS ORG
 
 A very smart engineering leader once said: "Respect between two engineering teams is inversely proportional to their distance." The further apart they are, the more they belittle each other because they can't see the work. I've heard Amazon S3 described as "just a big disc drive." Of course, at some level it is — but that's so dismissive. The closer you get, the more you see the edge cases: "Oh, actually that is complicated."
 
@@ -167,7 +167,7 @@ Where you're vulnerable is if your work is behind, not making money, performing 
 People love to think facts make decisions. But people come to an emotional conclusion and then rationalize it. If I'm a better storyteller, I give you a narrative that feels emotionally right. I help you wrap your own story around it. Once it's your story, it's very hard to shake. Be the better storyteller.
 
 ================================================================================
-ATTACKER TACTICS AND THE "I WANT TO HELP" GAMBIT
+[1:27:20] ATTACKER TACTICS AND THE "I WANT TO HELP" GAMBIT
 
 What are the attacker tactics? The best attack — which isn't even necessarily an attack — is a real story of how merging creates more value. "This group puts out one release a year, I can get it to two. Here's how."
 
@@ -176,7 +176,7 @@ Slightly less good arguments are about efficiency: I can save costs, consolidate
 I hope no one would do this, but I know people do: go highlight flaws in the other org. Show they have turnover, high cost, a recent outage. You're basically trying to say "it's a dumpster fire, let me put it out." But what if it is a dumpster fire? Then the way to do it is not to say "I should take over." Go to the common boss and say, "Hey, I can't help but notice you're having trouble here. Is there anything I can do to help?" That's my opening gambit for "I want to take it over." I go in and start helping. Later they're saying, "Wow, it's so much better under Ethan's leadership." Then I can casually mention, "If it would really help you, we could just consolidate. Now that I'm here, I see all these efficiencies."
 
 ================================================================================
-DEALING WITH TOXIC PEOPLE IN OTHER ORGS
+[1:30:26] DEALING WITH TOXIC PEOPLE IN OTHER ORGS
 
 When there's a person in another org who is well-liked there but is a major problem for your org: one of my managers called it a "meat shield." He would put someone in a position and say, "Your job is to keep them off of us. It's going to be a terrible job, but I'll reward you later." Go be a meat shield until this project is over.
 
@@ -189,7 +189,7 @@ My external narrative would be: "Dear peer, this person is really making things 
 You didn't bluster. You didn't threaten. Just by circumstance: if you don't comply, your life will be harder. Most leaders at a certain level understand unspoken messages. They know I'm giving them a chance to collaborate but there's a stick up my sleeve.
 
 ================================================================================
-UMBRELLA MANAGERS VS FUNNEL MANAGERS
+[1:36:52] UMBRELLA MANAGERS VS FUNNEL MANAGERS
 
 A lot of people don't know how to be socially skilled, so they can only say hard things once they let themselves get angry. "Ryan, you've missed three dates in a row." I can only do that once I get internally angry. Some people need anger as fuel to be ready to fight back. You want a manager who can stand their ground because they believe in it and are willing to have confrontation without needing anger.
 
@@ -200,7 +200,7 @@ You have to change the balance of safety. Help them feel safe pushing back on th
 The wrong time to start this is while the request is in hand. Do it Tuesday or Wednesday, after the weekend and before the next crisis. If you're not willing to have the manager say "If you don't like it, quit," you can't say anything. You have to have enough confidence that if it comes to that, you're okay leaving. Good engineers are valuable. Teams that are turnover factories aren't effective. If you're at a place where you can't create value, the right answer is to get out. There's always more jobs. One of my beliefs is: to work less, you often have to work more first. To get to the place where you can coast, you have to do some ugly digging first.
 
 ================================================================================
-BACK CHANNELING
+[1:46:47] BACK CHANNELING
 
 I think of back channeling in two ways. Manipulative back channeling is where I'm trying to do something I wouldn't be willing to say in public — undermining, painting the other leader negatively.
 
@@ -213,7 +213,7 @@ The negative version is the backroom deal — the kickback. "You support this an
 Some people are up for that. Some people look at the world and say: I paid my dues, I got screwed over when I was weak, now that I'm strong it's my right to take all I didn't get. They always tell themselves a story. It's not "I'm screwing those people," it's "I'm getting what I'm owed, this is only fair." When you're dealing with someone vicious, realize their story to themselves is not that they're evil. If you can figure out their story, you have a better chance to redirect it.
 
 ================================================================================
-OUTSIZED INFLUENCE FROM IDEAS
+[1:52:38] OUTSIZED INFLUENCE FROM IDEAS
 
 I've seen soft power come from ideas. Amazon built a product called Cloud Drive, a storage system like Dropbox. That proposal came from an entry-level new college graduate engineer. He did two things. Amazon had an invite-only engineering conference. He fought his way in by making a proposal. Then he knew Jeff Bezos came to review an idea poster session. He emailed Jeff: "I have this idea, I'll be at the poster session. Could you stop by?" A very small ask of the CEO.
 
@@ -224,7 +224,7 @@ I worked with a slightly more senior person who helped put forward the proposal 
 Influence can come from anywhere. It usually begins with a good story based on real fact. Told with enthusiasm, repeatedly, specifically — to people with the power to do it. "Wouldn't it be great if we had a cloud storage system? Wouldn't it be great if we had a low-cost living room device where people could watch Prime Video?" An understandable soundbite story everyone agreed with on the surface.
 
 ================================================================================
-WHY PEOPLE REALLY GET FIRED
+[1:55:41] WHY PEOPLE REALLY GET FIRED
 
 There are a lot of rules about when you can and can't fire someone, so almost always the public story is performance. That's the one thing that's allowed.
 
@@ -235,7 +235,7 @@ One of the most blatant harassment cases I saw was an executive hired at chief l
 How did he get hired? We didn't have legal proof. We had many people saying it happened, we believed them, but never took it to court. If I name him and say "don't ever hire Fred Smith, he harasses women," Fred can sue me — I have no legal proof. So when someone calls asking about Fred, I refer them to HR, and HR says "Fred was employed from this date to that date." That's how these people keep getting hired. I looked him up on LinkedIn — the fact he ever worked at Amazon isn't on his resume. He just deleted it. Moved on.
 
 ================================================================================
-FIRING MANAGERS IS HARDER
+[2:05:57] FIRING MANAGERS IS HARDER
 
 It is harder to fire managers. Three reasons. One: they're more experienced. They don't have obvious bad performance — the first person I let go stopped coming to work. Managers don't make mistakes at that level. Two: a manager's work is hard to measure. Did they hire? Did features ship on time? Bug count? It's a "he said, she said" problem. Three: managers are part of the system. They know what termination looks like — they get spidey sense and start positioning themselves to be hard to get rid of.
 
@@ -248,7 +248,7 @@ I never used the word "fired" or "performance," because that creates something l
 The other path is classic performance management — document goals, document they missed them. Almost all managers will quit before that completes. They know "this is going to take ninety days, I have ninety days to find a new job."
 
 ================================================================================
-YOUR LEVERAGE WHEN BEING FIRED
+[2:12:31] YOUR LEVERAGE WHEN BEING FIRED
 
 I'm a little more cynical. They're paying severance for something. What's the leverage?
 
@@ -267,7 +267,7 @@ People come to me: "Ethan, I've just been put on a performance improvement plan.
 A softer phrasing for you: "This is such a hard message, and I have so many friends on this team. I don't want them to think badly of me. I don't want them to think this is an unfair environment. Can you work with me so this is a graceful exit?" Later: "For it to feel good, I need enough security to get to my next thing. I know you want that. I know you don't want anyone to suffer."
 
 ================================================================================
-GETTING UNSTUCK AT STAFF ENGINEER
+[2:24:37] GETTING UNSTUCK AT STAFF ENGINEER
 
 What gets people stuck is they're not learning the new skill of the next level. They're doing the current skill harder. What gets you promoted early is hard effective work — delivery, shipping, building. But as you get further, you need different skills: delegate, communicate, let go of your hard skills. If you micromanage — "write it this way, build it that way" — you'll drive away your good people.
 
@@ -278,7 +278,7 @@ Getting advice is better than getting feedback. If I ask you for feedback, I'm a
 I see so many people working brutally hard but ineffectively.
 
 ================================================================================
-HOW TO WIN AGAINST AN EQUAL PEER
+[2:27:36] HOW TO WIN AGAINST AN EQUAL PEER
 
 Assume you're both equally qualified. You're not going to win on skill. So: relationship and trust.
 
@@ -293,7 +293,7 @@ Bezos put it: when you come into the room, do you suck all the oxygen out of it?
 I know a lot of engineers get pissed off by this. I'm not here because you'll like me — I'm here to get you where you want to go. I'm not here to apologize for the way the world works. The way the world works sucks, but it does work that way.
 
 ================================================================================
-GETTING CHAMPIONS FOR PROMO PACKETS
+[2:32:54] GETTING CHAMPIONS FOR PROMO PACKETS
 
 For senior promotions, you need champions or allies — people at that level or higher who'll vouch for you.
 
@@ -308,7 +308,7 @@ VPs know this is how the system works. They need your VP's help with their own p
 I've never seen an engineer get promoted over their manager's objection. I can't promote you if the manager doesn't agree — I'd just be creating a mess, telling the manager they're wrong. Engineers envision: "I'll do such incredible work that I'll be recognized even though my manager is a bozo." It's not going to happen. You either get your manager on board or get out from under them.
 
 ================================================================================
-AVOIDING POLITICS: LEVERAGE AND GROWTH
+[2:44:02] AVOIDING POLITICS: LEVERAGE AND GROWTH
 
 Can you avoid politics? First: choose your leader. Find someone who shares your disdain for politics — maybe with a tech background — and wants to reward work. Second: go work on the hardest area where expertise will matter. Stand out.
 
@@ -321,7 +321,7 @@ You have to have leverage. Live up to Cal Newport's "So Good They Can't Ignore Y
 Growth changes everything. It's not twenty-five people wanting one promotion, it's lots of opportunity. My extreme example is the post office — the only roles are "carry the mail" or "be the postmaster." There's one postmaster. Until that person leaves or dies, you don't get that job. In fifteen years at Amazon, the company grew from 14,000 to 1.4 million people. A hundredfold. My first team was six people. Nine years later I had 800. That growth opens doors that in a normal company growing 5% or 10% a year will never happen. Find high growth.
 
 ================================================================================
-THE ONE THING HE WISHES HE KNEW EARLY
+[2:48:23] THE ONE THING HE WISHES HE KNEW EARLY
 
 What would I tell early me? That it's not just being right. Not just being technically astute. There's all this other stuff going on — wake up to it. I was blind or deprioritized it. I thought, "That's management stuff." Even as an individual contributor, understand: management stuff does control the world. I wish I had been more aware.
 

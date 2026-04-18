@@ -1,0 +1,87 @@
+================================================================================
+[0:00] INTRODUÇÃO
+
+Don Syme é o designer e arquiteto da linguagem de programação F#. Neste episódio do Hansel Minutes com Scott Hanselman, ele fala sobre algo um pouco diferente do seu trabalho habitual: workflows agênticos no GitHub e o que significa para a engenharia de software ter automação de IA integrada ao ciclo de vida do desenvolvimento.
+
+A conversa começa com uma metáfora que Don usa para entender a IA: num domínio onde você é expert, a IA é o estagiário júnior com energia infinita — dê a ela o trabalho tedioso. Num domínio onde você não é expert (como Rust para Don), trate a IA como mais sênior do que você até que sua capacidade de “sentir código” alcance ou supere a dela.
+
+O CRAFT DA ENGENHARIA E A CHEGADA DA IA
+
+Scott pergunta se Don lamenta a possível morte do craft de programação. Don não lamenta. Ele investiu muito tempo tornando o desenvolvimento de software melhor — eliminando nulls, garantias de construção robustas, software confiável. Esses princípios continuam relevantes.
+
+A questão central para Don não é “a IA vai substituir o craft?” mas sim “como conseguimos o melhor dos dois mundos?” Como você empowera um desenvolvedor a trabalhar em modo criativo — usando vibe coding, GitHub Copilot, agentes de código — mas ainda produzindo software sólido, performático e bem testado?
+
+Scott ilustra isso com um exemplo: ele vibecoded um simples ring light para Windows — um quadrado branco arredondado na tela. Parece trivial. Mas quando você olha de perto, tem GitHub Actions, certificados assinados, modelo de packaging, changelogs, testes, sistema de atualização automática, suporte a múltiplos sistemas operacionais. Existe um ciclo de vida de software mesmo em torno de algo aparentemente trivial.
+
+================================================================================
+[2:02] LOOPS DE AMBIGUIDADE VERSUS LOOPS DETERMINÍSTICOS
+
+Scott introduz o conceito de “ambiguity loops” (loops de ambiguidade) em contraste com for loops tradicionais. For loops são determinísticos, programáticos, sem surpresas. Loops de ambiguidade têm flexibilidade para tomar decisões no momento — o que os torna poderosos, mas também perigosos se não tiverem controles.
+
+O ponto crítico: loops de ambiguidade sem limites produzem slop. Testes, benchmarks e especificações claras são o que transforma um loop de ambiguidade problemático num loop útil. A IA sem constraints vai produzir a média estatística de todo o código que já viu. Boa engenharia de software é o que mantém o agente nos trilhos.
+
+Isso leva ao conceito central que Don e a equipe do GitHub estão desenvolvendo: “Continuous AI” (IA contínua) como uma terceira perna do banco de CI/CD. CI e CD existem. Falta o CA — automação de IA contínua para as tarefas que exigem julgamento: documentação contínua, triagem contínua, simplificação contínua de código, melhoria contínua de testes, relatórios de segurança contínuos.
+
+================================================================================
+[6:45] GITHUB AGENTIC WORKFLOWS NA PRÁTICA
+
+Um GitHub agentic workflow é conceitualmente simples: é um arquivo com front matter (configuração) e markdown (a instrução/prompt). O markdown vai para um agente de código, que roda em sandbox no contexto do seu repositório, faz as análises que pode fazer, e entrega resultados para verificação.
+
+Por padrão, os agentic workflows são extremamente conservadores:
+
+- Rodam em modo somente-leitura do GitHub
+
+- Os “safe outputs” são explicitamente definidos — por exemplo, o agente pode comentar no issue específico que recebeu como input, e nada mais
+
+- Os resultados passam por uma segunda verificação de segurança antes de serem aplicados
+
+Você também pode combinar a parte determinística (YAML tradicional do GitHub Actions) com a parte agêntica. Por exemplo: use YAML para listar 500 issues não-rotuladas do repositório, depois passe esse dataset para o agente processar e sugerir labels para cada uma.
+
+================================================================================
+[13:54] CASO DE USO REAL: REPO ASSIST
+
+Don descreve o workflow que chama de “repo assist” — que instalou em sete repositórios seus. O processo de instalação é direto: `gh aw add wizard`, então `add repo assist`. Instala um único arquivo YAML de workflow agêntico no repositório.
+
+Por padrão, o repo assist roda quatro vezes por dia. Você pode configurar para rodar em modo intensivo — `--repeat 30` para simular 30 dias de trabalho.
+
+O que o workflow faz automaticamente (configurável):
+
+- Rotular issues sem label
+
+- Tentar corrigir bugs simples
+
+- Propor melhorias de engenharia criando issues
+
+- Atualizar pull requests abertos pelo próprio agente
+
+- Preparar releases (notas de release, verificação de checklist)
+
+Don testou no repositório F# Control.AsyncSeq — um dos primeiros implementações de sequências assíncronas para F#. O repositório tinha cerca de 50 issues acumuladas. O repo assist processou todas, fez comentários técnicos de qualidade, e Don conseguiu fechar metade com análises sólidas.
+
+A sensação que ele descreve: acordar de manhã, checar o repositório no celular, e ver que durante a noite o agente otimizou três funções em resposta a uma issue de performance que ele tinha aberto no dia anterior. “É como acordar para o sol. Sem problemas nesses repos. Só progressão.”
+
+================================================================================
+[20:40] MANUTENÇÃO DE OPEN SOURCE TRANSFORMADA
+
+Scott levanta um problema real: PR spam gerado por IA. Open source maintainers sendo inundados com pull requests, muitos gerados por IA, muitos duplicados. O exemplo do Peter Steinberger do OpenClaw: pessoas usando Claude Code para criar PRs para o próprio repositório do Claude.
+
+Don vê aí exatamente o caso de uso para agentic workflows: ajudar maintainers a triagem. Um agente pode analisar 10 PRs e identificar que todos representam o mesmo problema subjacente. Isso historicamente foi feito manualmente e consome horas.
+
+A mudança de paradigma para maintainers: em vez de passar 90% do tempo revisando código, você passa mais tempo em guidance e specification — decidindo onde o repositório deve ir. O foco muda das pull requests (código) para as issues (intenção e direção). Você precisa alinhar com os outros maintainers sobre o que a automação deveria estar fazendo — introduzir um agentic workflow sem consultar os co-maintainers foi um dos erros que Don menciona ter cometido no início.
+
+================================================================================
+[28:34] LIMITES E COMO PREPARAR O AGENTE PARA O SUCESSO
+
+Don é direto sobre os limites: para performance engineering automático funcionar, você precisa de microbenchmarks configurados corretamente. Uma biblioteca C++ com 30 minutos de build e sem benchmarking não vai se beneficiar de “automatic performance engineering”. O agente precisa ser capaz de rodar benchmarks antes e depois para validar qualquer mudança de performance.
+
+A metáfora que fica: “Unchecked ambiguity loops produce slop.” O slop que as pessoas experimentam acontece quando deixaram tudo a cargo da interpretação do agente. Testes e benchmarks reduzem ou eliminam esse espaço de interpretação.
+
+O framework que Don usa para calibrar um workflow: você tem goals (objetivos), constraints (restrições) e guardrails. Essa combinação é o que transforma automação agêntica em algo útil. Se os guardrails forem defaults excessivamente permissivos, você vai ter problemas. Por isso os agentic workflows do GitHub começam com defaults extremamente conservadores.
+
+O QUE OS NOVOS ENGENHEIROS PRECISAM APRENDER
+
+Don acredita que toda universidade deveria ter um curso sobre desenvolvimento de software assistido por IA. O que os novos engenheiros precisam aprender não mudou em essência, mas a prioridade ficou mais clara: o que faz software ser bom, o que é boa engenharia de testes, o que é boa engenharia de performance, como fazer grandes ferramentas.
+
+O trabalho tedioso vai sumir. O julgamento e a capacidade de tomar boas decisões sobre software vão importar mais do que nunca. Somos todos escultores agora — a habilidade crítica é saber guiar o software para onde ele precisa chegar.
+
+Para Scott, a mensagem final é direta: a prática de fazer e entregar software de qualidade é a habilidade que mais importa nesse momento. Mais do que nunca.

@@ -6,21 +6,21 @@
 <title>Fluxos de Trabalho Agênticos com Don Syme</title>
 <meta name="description" content="Don Syme é o designer e arquiteto da linguagem de programação F#. Neste episódio do Hansel Minutes com Scott Hanselman, ele fala sobre algo um pouco diferente do seu trabalho habitual: workflows...">
 <meta name="author" content="Don Syme — Criador do F# sobre Agentes de IA">
+<link rel="canonical" href="https://adhenawer.net/posts/pt_br/fluxos-de-trabalho-agenticos-don-syme.html">
+<link rel="alternate" hreflang="pt-BR" href="../pt_br/fluxos-de-trabalho-agenticos-don-syme.html">
+<link rel="alternate" hreflang="en" href="../original/agentic-workflows-don-syme.html">
+<link rel="alternate" hreflang="x-default" href="../pt_br/fluxos-de-trabalho-agenticos-don-syme.html">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Fluxos de Trabalho Agênticos com Don Syme">
 <meta property="og:description" content="Don Syme é o designer e arquiteto da linguagem de programação F#. Neste episódio do Hansel Minutes com Scott Hanselman, ele fala sobre algo um pouco diferente do seu trabalho habitual: workflows...">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:site_name" content="Leituras  Podcasts &amp; Vdeos Traduzidos">
+<meta property="og:site_name" content="Leituras — Podcasts &amp; Vídeos Traduzidos">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Fluxos de Trabalho Agênticos com Don Syme">
 <meta name="twitter:description" content="Don Syme é o designer e arquiteto da linguagem de programação F#. Neste episódio do Hansel Minutes com Scott Hanselman, ele fala sobre algo um pouco diferente do seu trabalho habitual: workflows...">
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "Article", "headline": "Fluxos de Trabalho Agênticos com Don Syme", "description": "Don Syme é o designer e arquiteto da linguagem de programação F#. Neste episódio do Hansel Minutes com Scott Hanselman, ele fala sobre algo um pouco diferente do seu trabalho habitual: workflows...", "author": {"@type": "Person", "name": "Don Syme — Criador do F# sobre Agentes de IA"}, "publisher": {"@type": "Organization", "name": "Leituras — Podcasts & Vídeos Traduzidos"}, "inLanguage": "pt-BR", "isAccessibleForFree": true, "url": "https://youtu.be/647pVgfV2yU", "articleSection": ["INTRODUÇÃO", "LOOPS DE AMBIGUIDADE VERSUS LOOPS DETERMINÍSTICOS", "GITHUB AGENTIC WORKFLOWS NA PRÁTICA", "CASO DE USO REAL: REPO ASSIST", "MANUTENÇÃO DE OPEN SOURCE TRANSFORMADA", "LIMITES E COMO PREPARAR O AGENTE PARA O SUCESSO"]}
 </script>
-<link rel="canonical" href="https://adhenawer.net/posts/pt_br/fluxos-de-trabalho-agenticos-don-syme.html">
-<link rel="alternate" hreflang="pt-BR" href="../pt_br/fluxos-de-trabalho-agenticos-don-syme.html">
-<link rel="alternate" hreflang="en" href="../original/agentic-workflows-don-syme.html">
-<link rel="alternate" hreflang="x-default" href="../pt_br/fluxos-de-trabalho-agenticos-don-syme.html">
 <link rel="stylesheet" href="../../css/style.css">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="40c8ae3d-2e6b-4af4-a89b-f578dd3b2315"></script>
 </head>
@@ -28,11 +28,10 @@
 <header class="site-header">
   <a class="site-brand" href="../../index.html">Leituras</a>
   <div class="lang-bar">
-    <button class="lang-btn active" data-lang="pt-BR" aria-label="Português">PT</button>
+    <button class="lang-btn" data-lang="pt-BR" aria-label="Português">PT</button>
     <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
   </div>
 </header>
-
 <div class="progress" id="progress"></div>
 <div class="reading-pct" id="readingPct"></div>
 <article class="container">
@@ -43,7 +42,6 @@
     <p class="meta"><a href="https://youtu.be/647pVgfV2yU" target="_blank" rel="noopener">🎥 Assistir no YouTube</a></p>
   </header>
   <nav aria-label="Índice do artigo">
-
     <h3>Conteúdo</h3>
     <ol>
 <li><a href="#s1">INTRODUÇÃO</a></li>
@@ -53,35 +51,34 @@
 <li><a href="#s5">MANUTENÇÃO DE OPEN SOURCE TRANSFORMADA</a></li>
 <li><a href="#s6">LIMITES E COMO PREPARAR O AGENTE PARA O SUCESSO</a></li>
     </ol>
-  
   </nav>
 <section>
-<h2 id="s1">INTRODUÇÃO</h2>
+<h2 id="s1">INTRODUÇÃO <a class="ts-link" href="https://youtu.be/647pVgfV2yU?t=0" target="_blank" rel="noopener" aria-label="Pular para 0:00 no vídeo">0:00</a></h2>
 <p>Don Syme é o designer e arquiteto da linguagem de programação F#. Neste episódio do Hansel Minutes com Scott Hanselman, ele fala sobre algo um pouco diferente do seu trabalho habitual: workflows agênticos no GitHub e o que significa para a engenharia de software ter automação de IA integrada ao ciclo de vida do desenvolvimento.</p>
-<p>A conversa começa com uma metáfora que Don usa para entender a IA: num domínio onde você é expert, a IA é o estagiário júnior com energia infinita — dê a ela o trabalho tedioso. Num domínio onde você não é expert (como Rust para Don), trate a IA como mais sênior do que você até que sua capacidade de &ldquo;sentir código&rdquo; alcance ou supere a dela.</p>
+<p>A conversa começa com uma metáfora que Don usa para entender a IA: num domínio onde você é expert, a IA é o estagiário júnior com energia infinita — dê a ela o trabalho tedioso. Num domínio onde você não é expert (como Rust para Don), trate a IA como mais sênior do que você até que sua capacidade de “sentir código” alcance ou supere a dela.</p>
 <p>O CRAFT DA ENGENHARIA E A CHEGADA DA IA</p>
 <p>Scott pergunta se Don lamenta a possível morte do craft de programação. Don não lamenta. Ele investiu muito tempo tornando o desenvolvimento de software melhor — eliminando nulls, garantias de construção robustas, software confiável. Esses princípios continuam relevantes.</p>
-<p>A questão central para Don não é &ldquo;a IA vai substituir o craft?&rdquo; mas sim &ldquo;como conseguimos o melhor dos dois mundos?&rdquo; Como você empowera um desenvolvedor a trabalhar em modo criativo — usando vibe coding, GitHub Copilot, agentes de código — mas ainda produzindo software sólido, performático e bem testado?</p>
+<p>A questão central para Don não é “a IA vai substituir o craft?” mas sim “como conseguimos o melhor dos dois mundos?” Como você empowera um desenvolvedor a trabalhar em modo criativo — usando vibe coding, GitHub Copilot, agentes de código — mas ainda produzindo software sólido, performático e bem testado?</p>
 <p>Scott ilustra isso com um exemplo: ele vibecoded um simples ring light para Windows — um quadrado branco arredondado na tela. Parece trivial. Mas quando você olha de perto, tem GitHub Actions, certificados assinados, modelo de packaging, changelogs, testes, sistema de atualização automática, suporte a múltiplos sistemas operacionais. Existe um ciclo de vida de software mesmo em torno de algo aparentemente trivial.</p>
 </section>
 <section>
-<h2 id="s2">LOOPS DE AMBIGUIDADE VERSUS LOOPS DETERMINÍSTICOS</h2>
-<p>Scott introduz o conceito de &ldquo;ambiguity loops&rdquo; (loops de ambiguidade) em contraste com for loops tradicionais. For loops são determinísticos, programáticos, sem surpresas. Loops de ambiguidade têm flexibilidade para tomar decisões no momento — o que os torna poderosos, mas também perigosos se não tiverem controles.</p>
+<h2 id="s2">LOOPS DE AMBIGUIDADE VERSUS LOOPS DETERMINÍSTICOS <a class="ts-link" href="https://youtu.be/647pVgfV2yU?t=122" target="_blank" rel="noopener" aria-label="Pular para 2:02 no vídeo">2:02</a></h2>
+<p>Scott introduz o conceito de “ambiguity loops” (loops de ambiguidade) em contraste com for loops tradicionais. For loops são determinísticos, programáticos, sem surpresas. Loops de ambiguidade têm flexibilidade para tomar decisões no momento — o que os torna poderosos, mas também perigosos se não tiverem controles.</p>
 <p>O ponto crítico: loops de ambiguidade sem limites produzem slop. Testes, benchmarks e especificações claras são o que transforma um loop de ambiguidade problemático num loop útil. A IA sem constraints vai produzir a média estatística de todo o código que já viu. Boa engenharia de software é o que mantém o agente nos trilhos.</p>
-<p>Isso leva ao conceito central que Don e a equipe do GitHub estão desenvolvendo: &ldquo;Continuous AI&rdquo; (IA contínua) como uma terceira perna do banco de CI/CD. CI e CD existem. Falta o CA — automação de IA contínua para as tarefas que exigem julgamento: documentação contínua, triagem contínua, simplificação contínua de código, melhoria contínua de testes, relatórios de segurança contínuos.</p>
+<p>Isso leva ao conceito central que Don e a equipe do GitHub estão desenvolvendo: “Continuous AI” (IA contínua) como uma terceira perna do banco de CI/CD. CI e CD existem. Falta o CA — automação de IA contínua para as tarefas que exigem julgamento: documentação contínua, triagem contínua, simplificação contínua de código, melhoria contínua de testes, relatórios de segurança contínuos.</p>
 </section>
 <section>
-<h2 id="s3">GITHUB AGENTIC WORKFLOWS NA PRÁTICA</h2>
+<h2 id="s3">GITHUB AGENTIC WORKFLOWS NA PRÁTICA <a class="ts-link" href="https://youtu.be/647pVgfV2yU?t=405" target="_blank" rel="noopener" aria-label="Pular para 6:45 no vídeo">6:45</a></h2>
 <p>Um GitHub agentic workflow é conceitualmente simples: é um arquivo com front matter (configuração) e markdown (a instrução/prompt). O markdown vai para um agente de código, que roda em sandbox no contexto do seu repositório, faz as análises que pode fazer, e entrega resultados para verificação.</p>
 <p>Por padrão, os agentic workflows são extremamente conservadores:</p>
 <p>- Rodam em modo somente-leitura do GitHub</p>
-<p>- Os &ldquo;safe outputs&rdquo; são explicitamente definidos — por exemplo, o agente pode comentar no issue específico que recebeu como input, e nada mais</p>
+<p>- Os “safe outputs” são explicitamente definidos — por exemplo, o agente pode comentar no issue específico que recebeu como input, e nada mais</p>
 <p>- Os resultados passam por uma segunda verificação de segurança antes de serem aplicados</p>
 <p>Você também pode combinar a parte determinística (YAML tradicional do GitHub Actions) com a parte agêntica. Por exemplo: use YAML para listar 500 issues não-rotuladas do repositório, depois passe esse dataset para o agente processar e sugerir labels para cada uma.</p>
 </section>
 <section>
-<h2 id="s4">CASO DE USO REAL: REPO ASSIST</h2>
-<p>Don descreve o workflow que chama de &ldquo;repo assist&rdquo; — que instalou em sete repositórios seus. O processo de instalação é direto: `gh aw add wizard`, então `add repo assist`. Instala um único arquivo YAML de workflow agêntico no repositório.</p>
+<h2 id="s4">CASO DE USO REAL: REPO ASSIST <a class="ts-link" href="https://youtu.be/647pVgfV2yU?t=834" target="_blank" rel="noopener" aria-label="Pular para 13:54 no vídeo">13:54</a></h2>
+<p>Don descreve o workflow que chama de “repo assist” — que instalou em sete repositórios seus. O processo de instalação é direto: `gh aw add wizard`, então `add repo assist`. Instala um único arquivo YAML de workflow agêntico no repositório.</p>
 <p>Por padrão, o repo assist roda quatro vezes por dia. Você pode configurar para rodar em modo intensivo — `--repeat 30` para simular 30 dias de trabalho.</p>
 <p>O que o workflow faz automaticamente (configurável):</p>
 <p>- Rotular issues sem label</p>
@@ -90,18 +87,18 @@
 <p>- Atualizar pull requests abertos pelo próprio agente</p>
 <p>- Preparar releases (notas de release, verificação de checklist)</p>
 <p>Don testou no repositório F# Control.AsyncSeq — um dos primeiros implementações de sequências assíncronas para F#. O repositório tinha cerca de 50 issues acumuladas. O repo assist processou todas, fez comentários técnicos de qualidade, e Don conseguiu fechar metade com análises sólidas.</p>
-<p>A sensação que ele descreve: acordar de manhã, checar o repositório no celular, e ver que durante a noite o agente otimizou três funções em resposta a uma issue de performance que ele tinha aberto no dia anterior. &ldquo;É como acordar para o sol. Sem problemas nesses repos. Só progressão.&rdquo;</p>
+<p>A sensação que ele descreve: acordar de manhã, checar o repositório no celular, e ver que durante a noite o agente otimizou três funções em resposta a uma issue de performance que ele tinha aberto no dia anterior. “É como acordar para o sol. Sem problemas nesses repos. Só progressão.”</p>
 </section>
 <section>
-<h2 id="s5">MANUTENÇÃO DE OPEN SOURCE TRANSFORMADA</h2>
+<h2 id="s5">MANUTENÇÃO DE OPEN SOURCE TRANSFORMADA <a class="ts-link" href="https://youtu.be/647pVgfV2yU?t=1240" target="_blank" rel="noopener" aria-label="Pular para 20:40 no vídeo">20:40</a></h2>
 <p>Scott levanta um problema real: PR spam gerado por IA. Open source maintainers sendo inundados com pull requests, muitos gerados por IA, muitos duplicados. O exemplo do Peter Steinberger do OpenClaw: pessoas usando Claude Code para criar PRs para o próprio repositório do Claude.</p>
 <p>Don vê aí exatamente o caso de uso para agentic workflows: ajudar maintainers a triagem. Um agente pode analisar 10 PRs e identificar que todos representam o mesmo problema subjacente. Isso historicamente foi feito manualmente e consome horas.</p>
 <p>A mudança de paradigma para maintainers: em vez de passar 90% do tempo revisando código, você passa mais tempo em guidance e specification — decidindo onde o repositório deve ir. O foco muda das pull requests (código) para as issues (intenção e direção). Você precisa alinhar com os outros maintainers sobre o que a automação deveria estar fazendo — introduzir um agentic workflow sem consultar os co-maintainers foi um dos erros que Don menciona ter cometido no início.</p>
 </section>
 <section>
-<h2 id="s6">LIMITES E COMO PREPARAR O AGENTE PARA O SUCESSO</h2>
-<p>Don é direto sobre os limites: para performance engineering automático funcionar, você precisa de microbenchmarks configurados corretamente. Uma biblioteca C++ com 30 minutos de build e sem benchmarking não vai se beneficiar de &ldquo;automatic performance engineering&rdquo;. O agente precisa ser capaz de rodar benchmarks antes e depois para validar qualquer mudança de performance.</p>
-<p>A metáfora que fica: &ldquo;Unchecked ambiguity loops produce slop.&rdquo; O slop que as pessoas experimentam acontece quando deixaram tudo a cargo da interpretação do agente. Testes e benchmarks reduzem ou eliminam esse espaço de interpretação.</p>
+<h2 id="s6">LIMITES E COMO PREPARAR O AGENTE PARA O SUCESSO <a class="ts-link" href="https://youtu.be/647pVgfV2yU?t=1714" target="_blank" rel="noopener" aria-label="Pular para 28:34 no vídeo">28:34</a></h2>
+<p>Don é direto sobre os limites: para performance engineering automático funcionar, você precisa de microbenchmarks configurados corretamente. Uma biblioteca C++ com 30 minutos de build e sem benchmarking não vai se beneficiar de “automatic performance engineering”. O agente precisa ser capaz de rodar benchmarks antes e depois para validar qualquer mudança de performance.</p>
+<p>A metáfora que fica: “Unchecked ambiguity loops produce slop.” O slop que as pessoas experimentam acontece quando deixaram tudo a cargo da interpretação do agente. Testes e benchmarks reduzem ou eliminam esse espaço de interpretação.</p>
 <p>O framework que Don usa para calibrar um workflow: você tem goals (objetivos), constraints (restrições) e guardrails. Essa combinação é o que transforma automação agêntica em algo útil. Se os guardrails forem defaults excessivamente permissivos, você vai ter problemas. Por isso os agentic workflows do GitHub começam com defaults extremamente conservadores.</p>
 <p>O QUE OS NOVOS ENGENHEIROS PRECISAM APRENDER</p>
 <p>Don acredita que toda universidade deveria ter um curso sobre desenvolvimento de software assistido por IA. O que os novos engenheiros precisam aprender não mudou em essência, mas a prioridade ficou mais clara: o que faz software ser bom, o que é boa engenharia de testes, o que é boa engenharia de performance, como fazer grandes ferramentas.</p>
@@ -156,7 +153,6 @@
 <details open><summary>Relacionados <span class="ref-count">(7)</span></summary><ul>
 </ul></details>
 </aside>
-
 <div class="resume-banner" id="resumeBanner">
   <span id="resumeText">Continuar de onde parou</span>
   <div>

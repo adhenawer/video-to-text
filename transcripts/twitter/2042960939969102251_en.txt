@@ -1,5 +1,5 @@
 ================================================================================
-INTRODUCTION: A GAME-CHANGING PAIRING
+[0:00] INTRODUCTION: A GAME-CHANGING PAIRING
 
 This is Obsidian, a little tool that people are using as their second brain. What is really cool about it is that they are pairing it with Claude Code and getting crazy results. It is literally a game changer.
 
@@ -10,7 +10,7 @@ People who understand how to use Obsidian and Claude Code together are going to 
 By the end of this conversation, you will understand how to use Claude Code and Obsidian as a thinking partner, how to stop having to explain things to agents over and over again by simply passing specific files in, and how to use these tools to notice things about the way you think that you would not have noticed on your own.
 
 ================================================================================
-WHAT CLAUDE CODE IS, AND WHY CONTEXT IS THE WHOLE GAME
+[9:58] WHAT CLAUDE CODE IS, AND WHY CONTEXT IS THE WHOLE GAME
 
 Claude Code is an agent you use in a command line interface. It is a tool that can control your computer through natural language. You can say "make a file on my desktop that says hello Greg in plain text," and it goes and does it. Before this, you had to go to the desktop, open a text editor, and create the file manually.
 
@@ -25,7 +25,7 @@ The solution is a file. If I write a project description, save it on my desktop,
 This is the problem a lot of people face with Claude Code. They say it is "okay, not game changing." The issue is they are not feeding the right context at the right time.
 
 ================================================================================
-WHAT OBSIDIAN IS: A GRAPH ON TOP OF MARKDOWN
+[10:09] WHAT OBSIDIAN IS: A GRAPH ON TOP OF MARKDOWN
 
 Obsidian is an interface that sits on top of a collection of Markdown files. A daily note is just a Markdown file. A note on a concept is just a Markdown file. The whole collection is called a vault.
 
@@ -36,7 +36,7 @@ It gets really interesting when you keep making connections over time. In the gr
 The reason people love Obsidian is because it works more the way your brain works. Your brain connects patterns all the time.
 
 ================================================================================
-THE OBSIDIAN CLI: GIVING CLAUDE CODE YOUR SECOND BRAIN
+[10:14] THE OBSIDIAN CLI: GIVING CLAUDE CODE YOUR SECOND BRAIN
 
 Obsidian released a new tool called Obsidian CLI. It lets Claude Code read all the files in your vault, and crucially, it also gives Claude Code information about the interrelationships between those files.
 
@@ -47,7 +47,7 @@ It can start to surface patterns about what you are thinking about that you are 
 Seeing that for the first time can be like a huge light bulb. It can cause huge progressions in your learning, your understanding, your point of view on the world, and in what you are working on.
 
 ================================================================================
-CUSTOM COMMANDS: LOADING CONTEXT IN ONE KEYSTROKE
+[12:25] CUSTOM COMMANDS: LOADING CONTEXT IN ONE KEYSTROKE
 
 I have a set of slash commands I created. You do not need to be afraid of them. I run them from a terminal tab inside Obsidian, but you can run them from any terminal. You can also ask Claude Code to create these commands for you, just by describing what you want.
 
@@ -60,7 +60,7 @@ I have a set of slash commands I created. You do not need to be afraid of them. 
 These are daily operational commands. What I use Obsidian for the most is thinking tools.
 
 ================================================================================
-THINKING TOOLS: USING THE LLM AS A THINKING PARTNER
+[14:51] THINKING TOOLS: USING THE LLM AS A THINKING PARTNER
 
 I really like using LLMs as a thinking partner. That is my favorite way to use them. Some people use agents to build things; I like to think alongside them.
 
@@ -77,7 +77,7 @@ I really like using LLMs as a thinking partner. That is my favorite way to use t
 /trace — Tracks how an idea has evolved over time across the vault.
 
 ================================================================================
-AN EXAMPLE OF TRACE: WATCHING AN IDEA EVOLVE
+[18:14] AN EXAMPLE OF TRACE: WATCHING AN IDEA EVOLVE
 
 I ran "/trace" on my own relationship with Obsidian. The agent said: "I will trace how your relationship with Obsidian has evolved. Let me start by building a vocabulary map and searching across the vault." It read files, followed links, and produced a full evolution trace.
 
@@ -92,7 +92,7 @@ Phase four, January 2026, a month of explosive building. "Everything still requi
 This is a pattern I would not be able to see on my own, or this fast. A computer can have this much information about me and surface these patterns. I could do this with startups, a project, foods, relationships, a hobby, parenting, anything.
 
 ================================================================================
-MAKING REFLECTION A HABIT
+[22:52] MAKING REFLECTION A HABIT
 
 Part of getting good at Obsidian is inserting reflection into your everyday life. A lot of people move from meeting to meeting, busy, parents, and as we get older we actually write and reflect less.
 
@@ -103,7 +103,7 @@ Second, there is a functional reason. Writing is how I generate ideas. When I si
 Writing is also how you delegate to agents. That is a whole new aspect. If you develop a writing habit, you have much more context to pass to an agent, which dramatically increases what you can delegate and what you can build.
 
 ================================================================================
-FROM MANUAL PROMPTING TO AUTONOMOUS AGENTS
+[25:50] FROM MANUAL PROMPTING TO AUTONOMOUS AGENTS
 
 OpenCloud is an autonomous agent that can go and do things without you prompting every time. It makes decisions and builds things on its own.
 
@@ -114,7 +114,7 @@ An autonomous agent can do the same thing on its own. It can read my vault, find
 The scary part: if Obsidian is really your second brain, giving an autonomous agent access to it is scary. I have purposely given Claude Code access to a lot of personal information, because I want to understand what these things are and how our relationship with computers is changing. But you have to think carefully about how much you are sharing. Even for this demo, I had to create demo versions of every command so they would not reveal too much personal information on screen. Privacy as a concept is going to evolve in interesting ways.
 
 ================================================================================
-CONNECT: BRIDGING DISTANT DOMAINS
+[29:12] CONNECT: BRIDGING DISTANT DOMAINS
 
 /connect — Takes two domains and connects them using the vault's link graph. I tested it with "filmmaking" and "world-building."
 
@@ -127,7 +127,7 @@ Bridge two: always-on documentary equals continuous world-building. A creative s
 I could connect shawarma and startups if I wanted to. The depth depends on what you are writing about. And none of it requires explaining anything to the LLM. I just type "/connect filmmaking world-building."
 
 ================================================================================
-USING THE VAULT FOR MEETINGS AND EXTERNAL INPUT
+[32:00] USING THE VAULT FOR MEETINGS AND EXTERNAL INPUT
 
 You can use vaults however you want. If you want to drop Granola meeting transcripts in, create a "Meetings" folder, then a file for "Meeting Greg Eisenberg plus Vin," paste the transcript. Now it is in the vault. You can pass it to the agent, or the agent will discover it, especially if you tag it back to a podcast or project. The agent now knows the transcript is related to that other file.
 
@@ -138,7 +138,7 @@ For me, I use LLMs to increase my own level of understanding, so I use it for a 
 That said, AI is very good at going to the internet, finding information based on trends, distilling it the way you want, and putting it in your world. That is also interesting. If you ask Claude Code to go through your vault and generate ideas for tools you should build, you can say, "Great, now build the tool."
 
 ================================================================================
-FROM REFLECTION TO BUILDING: THE IDEAS COMMAND
+[35:31] FROM REFLECTION TO BUILDING: THE IDEAS COMMAND
 
 To move out of the realm of reflection and into building, I ran /ideas. These commands take a while because they read so many files. A big difference when using Claude Code with Obsidian access is that requests take longer, because it is pulling from way more material.
 
@@ -151,7 +151,7 @@ The quality of information the agent has entirely determines what it can do for 
 What this is doing, at its core, is connecting the dots. It is quite difficult, as a business owner or in personal life, to connect your own dots. That is why people go to coaches and therapists. In therapy you do most of the talking, and the therapist guides you toward connections. Obsidian plus Claude Code does something similar: it helps you uncover what your dots are and how to connect them.
 
 ================================================================================
-THE IDEA REPORT: A CONCRETE OUTPUT
+[41:47] THE IDEA REPORT: A CONCRETE OUTPUT
 
 The /ideas report came back with structural highlights, working patterns, tools to build, tools to use, systems to implement, subjects to investigate, things to write, and conversations to have.
 
@@ -172,7 +172,7 @@ Conversations to have: real people it surfaced from my notes. The workshop host 
 The fact that this is plain text, with no images, is kind of the point. I like the stripped-down aesthetic. If you prefer, you can say "turn this into a beautiful HTML file on my desktop," and it will do it.
 
 ================================================================================
-AGENT-SUGGESTED COMMANDS: MOVING UP IN ABSTRACTION
+[47:16] AGENT-SUGGESTED COMMANDS: MOVING UP IN ABSTRACTION
 
 I started by building commands myself. Then I asked the agent, "What commands do you think would be interesting?" Another pattern I like is moving up in abstraction: instead of saying "make a command that tells me what to focus on each day," I say, "Based on my Obsidian vault and what you know about me, form an understanding of my skill level and the projects I am working on, and suggest commands that would take me from where I am to a higher level."
 
@@ -183,7 +183,7 @@ All of that text hits differently for me, because I know I am writing a lot abou
 I am going about making notes, and in parallel an agent is looking at my notes and giving me ideas on how to improve my workflow and my life. It can not only suggest, it can build.
 
 ================================================================================
-WHY MARKDOWN IS THE OXYGEN
+[50:29] WHY MARKDOWN IS THE OXYGEN
 
 If I were OpenAI or Anthropic, I would buy Obsidian. It is the missing link.
 
@@ -196,7 +196,7 @@ A file is essentially a perfect memory. Human memory is unreliable. You can reme
 People think tokens are the oxygen. They are not. Markdown files are the oxygen. They are the memories. What is a human being, the energy of it, or the memories? A bit of both, but in today's computer experience, MD files are severely underrated.
 
 ================================================================================
-A FUNDAMENTAL SHIFT, AND THE ALPHA
+[53:43] A FUNDAMENTAL SHIFT, AND THE ALPHA
 
 There is something going on here, some fundamental shift. None of us have the right vocabulary yet to explain it. We are figuring it out in real time.
 

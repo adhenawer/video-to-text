@@ -1,17 +1,17 @@
 ================================================================================
-THE JUNIOR ENGINEER WITH UNLIMITED ENERGY
+[0:00] THE JUNIOR ENGINEER WITH UNLIMITED ENERGY
 
 I like the idea of setting the junior engineer up for success. But I also call out that in a world where you're the expert, the AI is the junior engineer with unlimited energy. So give it the toil. And in a world where you're maybe not the expert — like I don't know Rust — I think of the AI as being more senior to me, until my code smell ability meets it or exceeds it, and then I start treating it again as a junior intern with a lot of energy.
 
 ================================================================================
-A CHAOTIC AND INTERESTING MOMENT IN SOFTWARE
+[0:50] A CHAOTIC AND INTERESTING MOMENT IN SOFTWARE
 
 We're in an interesting place right now. We're people of a certain age with a certain amount of history and context, at a moment in computer science where more stuff is changing than at any time I can remember. I cannot think of a time more chaotic and interesting than the one we're in right now.
 
 It's a super interesting time. One analogy I like to use is that people entering software engineering today have wizard powers in their hand. They've got the magic staff — they can bang the ground and up comes the magic construction of a piece of software using modern coding agents. It's extraordinary powers, and there's a lot to learn about how to use them well: in teams, in companies, and in understanding the ramifications of having rooms full of wizards working together. These are incredible, changing times for software development.
 
 ================================================================================
-IS THE CRAFT DYING?
+[2:02] IS THE CRAFT DYING?
 
 Do you mourn the loss of the craft, or do you think the craft is just changing? We've been handed a power tool, and people who chop trees down with axes might be sad about the advent of the chainsaw.
 
@@ -20,7 +20,7 @@ I'm not one to mourn. I love the craft. I've invested a lot of time in making mu
 As much as people are happy vibe coding up Python and the like, there is still a notion of better software. A lot of the work we're doing is about getting the best of both worlds: how do you empower the developer to be running full throttle — not necessarily in vibe coding mode, but certainly where creative vibe coding can be part of it — using task-oriented programming, Copilot in GitHub, or whatever you're using, and yet still have them be strong in their construction. You want good performance, solid software, well-tested software. You want to achieve all the notions of quality in software that we still need to be chasing after.
 
 ================================================================================
-THE RING LIGHT AND THE SDLC
+[3:40] THE RING LIGHT AND THE SDLC
 
 One of the examples I use when teaching this stuff is a silly little trivial app: a Windows ring light. It draws a rounded square on your screen and uses the brightness of your LCD to give you a light, like a ring light. On its face, I vibe-coded a rounded white square.
 
@@ -29,7 +29,7 @@ Someone could look at that and say, "Well, that's trivial. That's a one-shot, on
 Absolutely. One case I came across was where the agents in a repository proactively suggested I use NuGet trusted publishing on nuget.org. I hadn't actually set up the repositories to do this before, and it was amazing because the agents proactively kick in and say, "Hey, you can improve your engineering along this dimension." Of course, I've got to double check that and be in control — these are critical aspects about how to shape software and actually get it out to customers.
 
 ================================================================================
-EMPOWERING MAINTAINERS TO SET THE DIRECTION
+[5:22] EMPOWERING MAINTAINERS TO SET THE DIRECTION
 
 If the corpus of material is the last 50 years of programming — or at least the last 20 or 30 years of it being online — are we at a place where AI is just going to produce the statistical mean of the software development life cycle? How do we improve things if we're training on workflows that already exist and are mediocre? Who owns best practices?
 
@@ -38,7 +38,7 @@ Something that's really important in our current work is that we be about empowe
 It's clear we're at a point where you can specify the goals of a repository and the agent's going to chase after those goals with great vigor. But someone's got to be there setting up the right feedback loops. For example, if you're going to have it chase performance goals, it really helps to have production profiling, production telemetry data, and metrics flowing into the loops that are about self-improving the software as it goes.
 
 ================================================================================
-FOR LOOPS AND AMBIGUITY LOOPS
+[6:45] FOR LOOPS AND AMBIGUITY LOOPS
 
 I call them the ambiguity loops. There are for loops, and then there are ambiguity loops. For loops are deterministic, programmatic, and clear — "I'm doing a thing and it's unambiguous."
 
@@ -47,7 +47,7 @@ But the power of an ambiguity loop is the amount of flexibility it has to make t
 But that ambiguity loop itself requires checks and balances, tests, and all the things that make software good — whether it be a check for cyclomatic complexity or a series of tests that indicate what success looks like. Unchecked ambiguity loops are where AI software goes off the rails, and good software engineering is what keeps it on rails.
 
 ================================================================================
-CONTINUOUS AI: THE THIRD PILLAR
+[8:03] CONTINUOUS AI: THE THIRD PILLAR
 
 The term we've been throwing around to package what's happening in the SDLC is this: we love continuous integration, we love continuous deployment — those are absolutely critical parts of the software industry going forward. But it turns out there are two pillars of a stool. There's a third leg we need to add: continuous AI.
 
@@ -58,7 +58,7 @@ We obviously want continuous integration and continuous delivery. I want to add 
 This is the world we're heading to. It's really important to see that it's additive, because DevOps becomes even more important. There's a strong culture in DevOps — people are for CI and CD, and you don't want non-determinism. There's a huge culture around determinism in that space, and that's great. We love that. But you have to open your mind a little bit and say: let's also bring continuous AI into this, to allow these powerful tools to be present in the SDLC, yet still under human control. There are interesting cultural shifts that are going to happen in the whole world of DevOps and SDLC.
 
 ================================================================================
-ARE YOU SELLING AI?
+[10:25] ARE YOU SELLING AI?
 
 I got a negative comment recently on one of my Instagrams, where I put out clips of our shows, and someone said the podcast lately had become an AI selling machine. What do you say to someone who says, "Oh man, Don, that was my guy — I love F# and I love all the work Don's done for the last 30 years, and now he's selling AI"? Are you selling AI, or are you meeting the software development life cycle moment and trying to meet it with integrity?
 
@@ -69,7 +69,7 @@ That's exactly what we're doing with GitHub Agentic Workflows. Just like in CI/C
 I'm all in favor of giving that power to teams, repository maintainers, and individual developers to say: let's solve this question the same way. I don't know how much AI you should be using in your repository. I don't know what your constraints are. You should be given the power to decide how much to use and how to guardrail it. And at the outset, we should give, by default, extremely strong guardrails to make sure whatever happens proceeds safely.
 
 ================================================================================
-WHAT IS AN AGENTIC WORKFLOW?
+[13:54] WHAT IS AN AGENTIC WORKFLOW?
 
 So, a GitHub agentic workflow. At some level, it's really simple. You've got some front matter and some markdown. You can think of this as a bit like a prompt. In fact, the markdown is going to end up in the hands of a coding agent and it's going to be run in a sandbox in the context of your repository. It's going to do all the magical things coding agents can do, except it's being run with extremely strong constraints around it.
 
@@ -82,7 +82,7 @@ An agentic workflow is sort of a pure expression of intent. It's just saying: he
 It differs from regular YAML because it's intent-based, and there's an implicit use of a coding agent to do the core of the work. You can mix the two. You can have an initial section that does traditional YAML to collect data — for instance, if you want to triage all issues in a repository, you can list out 500 issues, grab all the unlabeled ones as a dataset, and then have the agentic step work on that dataset and output a whole lot of labels to apply.
 
 ================================================================================
-REPO ASSIST: A SUCCESS STORY FOR TECHNICAL DEBT
+[17:42] REPO ASSIST: A SUCCESS STORY FOR TECHNICAL DEBT
 
 Give me a success story. People might be saying this is all very squishy — tell me how I can use this today to make my life better.
 
@@ -97,14 +97,14 @@ I've used it in about seven repositories now. Take one: FSharp.Control.Asynchron
 These days, if you get an issue into a repository, what's the first thing a maintainer is likely to do? Use a coding agent to help understand the issue. This automates that step. Of course, the human needs to be in control of actually checking those results. Each day you get a set of links of things you should check, comments you should check.
 
 ================================================================================
-REVIEWING AT SCALE AND THE OPEN-SOURCE FLOOD
+[20:40] REVIEWING AT SCALE AND THE OPEN-SOURCE FLOOD
 
 In this world now, I'm spending 90% of my time reviewing stuff that AI has generated. We're producing artifacts faster than the community — than I — can manage as a human. If you take that combinatoric and apply it to open source: issues are coming in, pull requests are coming in, open-source maintainers are getting overwhelmed, and no one knows if a PR was AI generated or not, or if the person is a good committer. Peter Steinberger from OpenClaw is a great example — people are using their OpenClaw to make pull requests to OpenClaw. He needs to bucketize all those issues — he might have 10 PRs that all represent the same problem. Historically, that's been done manually. That seems like a perfect opportunity for an agentic workflow to step in.
 
 Absolutely. You install it and think about what problems you're having in the repository and what help you actually need. Getting an agentic opinion about how this issue relates to all the other issues in the repository, prepared and ready for the maintainer to work on — that's absolutely in the zone of what we're enabling with agentic workflows.
 
 ================================================================================
-WAKING UP TO GOODNESS
+[21:54] WAKING UP TO GOODNESS
 
 Once you crunch through the technical debt — that itself is an incredibly freeing process. You feel like you're coming alive as a maintainer again. You've got this software you love, and it's reached that stage where it's become a bit of a burden — technical debt. You crunch through that and it goes back: the agentic workflows go back over old issues from, say, 2021, find an issue where there was a real bug that hasn't been fixed, and bring you the fix. Of course you're in control — nothing gets merged, and all issue comments should be checked by a human. You get to bank that fix or close out the issue by saying, "Actually, we don't really care about that." The technical debt gets crunched away through this automatic process, all in the context of GitHub and the repositories you're using today.
 
@@ -113,7 +113,7 @@ I've absolutely adored being a maintainer again. I feel like I've come alive as 
 My typical morning: I wake up on my phone and say, "Ah, what's it done for me this morning?" This morning I woke up and went to FSharp.Control.AsynchronousSequences. Yesterday I had dropped in an issue saying, "Hey, since you've cleared out all the technical debt, how about working on performance — there's an issue there." During the night, repo assist woke up, kicked in, and did some work — it optimized three different functions in the library. It's a beautiful morning because you deliver these performance optimizations to software you care about. You're waking up to goodness, waking up to sunshine. I've got no problems in these repos anymore. It's pure happiness progressing along. It's a taste of what's ahead — of how automated AI can really counter some of the narratives about slop and AI generation, because it can clean up this stuff. It can make your software better. Set it in the right direction, and you're going to get the improvements you want.
 
 ================================================================================
-LIMITS: SETTING THE AGENT UP FOR SUCCESS
+[26:11] LIMITS: SETTING THE AGENT UP FOR SUCCESS
 
 There are limits to this. There are early versions of this where we installed into repositories without talking to enough of the maintainers, and some maintainers said, "Look, this one is wrong — this is not a good suggestion."
 
@@ -124,7 +124,7 @@ How well the engineering is done matters. We all know about AGENTS.md and settin
 It really comes down to the harness. If the ambiguity loop has no bounds, it will make stuff up. It will make slop. The slop people are experiencing is because you left it up to interpretation. Tests and performance microbenchmarks reduce or remove that up-for-interpretation moment.
 
 ================================================================================
-GOALS, CONSTRAINTS, AND GUARDRAILS
+[28:34] GOALS, CONSTRAINTS, AND GUARDRAILS
 
 I love this question of how ambiguous a workflow should be and where the guardrailing should be. The framework I usually use is: you've got goals, you've got constraints, and you've got guardrails. That's a magic combination.
 
@@ -133,7 +133,7 @@ I also think about setting the engineer up for success. If you think of the agen
 I like the idea of setting the junior engineer up for success. But in a world where you're the expert, the AI is the junior engineer with unlimited energy — so give it the toil. In a world where you're maybe not the expert — like I don't know Rust — I think of the AI as being more senior to me, until my code-smell ability meets or exceeds it, and then I start treating it again as a junior intern with a lot of energy.
 
 ================================================================================
-EDUCATING THE NEXT GENERATION
+[30:22] EDUCATING THE NEXT GENERATION
 
 I was cautious there about using anthropomorphization language. I don't like anthropomorphization, and I want to take that back. One of the things I really love in this space is thinking about the education aspect — we can shape the education of people coming through universities and through the first part of their learning process so they can do this well.
 
@@ -142,7 +142,7 @@ I absolutely believe they're able to be great engineers in this kind of automate
 So all the juniors on this call: go learn what makes software great, learn what makes software good, learn what good performance engineering means, learn what good test engineering means, learn how to make great tools under the hood — because these days, tools are easier than ever to make. There's so much potential to be great at the craft of guiding software to the place it needs to be. We're all sculptors these days, or something like that — everyone uses different analogies — but you can sculpt the software, and you've got to start on that journey today.
 
 ================================================================================
-QUALITY SHIPPING MATTERS MORE THAN EVER
+[32:08] QUALITY SHIPPING MATTERS MORE THAN EVER
 
 There's a moment here. As young people come out of school having learned computer science, software engineering — the actual practice of shipping quality software — is the skill that needs to be. Good decisions, good judgment. The toil will go away, it'll fade into the background, but being able to make and ship quality software matters more than ever before.
 
