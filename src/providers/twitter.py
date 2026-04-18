@@ -33,6 +33,10 @@ class TwitterProvider:
             return match.group(1)
         raise ValueError(f"Não foi possível extrair tweet ID de: {url}")
 
+    def build_video_url(self, url: str, seconds: int):
+        """Twitter/X has no documented timestamp deep-link for tweet videos."""
+        return None
+
     def fetch_transcript(self, url: str, timestamps: bool = True,
                          slides: bool = False, slides_dir: str = None,
                          slug: str = None) -> str:

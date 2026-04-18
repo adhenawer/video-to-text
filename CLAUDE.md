@@ -145,10 +145,12 @@ Ambos sem timestamps, sem `[music]`, sem propagandas, sem filler words.
 O output (de ambos) é um `.txt` com seções no formato:
 ```
 ================================================================================
-NOME DA SEÇÃO EM MAIÚSCULO
+[12:34] NOME DA SEÇÃO EM MAIÚSCULO
 
 Parágrafo do conteúdo...
 ```
+
+**`[mm:ss]` (ou `[hh:mm:ss]`) é obrigatório no início de cada título de seção** — marca o momento no vídeo onde aquele assunto começa. O `build_html.py` converte isso em link clicável (YouTube → `?t=N`) ou marcador de texto (Twitter, sem deep-link). Use o timestamp do primeiro segmento da transcrição original que pertence à seção. Sem o `[mm:ss]` o post ainda funciona (backward compat), mas perde o seek.
 
 #### 3. Gerar HTML (PT **e** EN)
 

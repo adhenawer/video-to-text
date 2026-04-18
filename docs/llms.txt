@@ -6,8 +6,8 @@
 
 ## Articles — Português (PT-BR)
 
-- [Boris Cherny — Dicas Práticas para Usar Claude Code](https://adhenawer.net/posts/pt_br/boris-cherny-dicas-praticas-para-usar-claude-code.html)
-  Fonte: Boris Cherny (Anthropic, criador do Claude Code) — Code w/ Claude
+- [Ryan Lopopolo — Engenharia de Harness: Como Construir Software Quando Humanos Conduzem e Agentes Executam](https://adhenawer.net/posts/pt_br/ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam.html)
+  Fonte: Ryan Lopopolo (Member of Technical Staff, OpenAI) · AI Engineer Summit Londres
 
 - [Chefe do Claude Code: O Que Acontece Depois Que a Programação For Resolvida](https://adhenawer.net/posts/pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html)
   Fonte: Lenny's Podcast com Boris Cherny (Chefe do Claude Code, Anthropic)
@@ -75,13 +75,19 @@
 - [FABIO AKITA - Flow #588](https://adhenawer.net/posts/pt_br/fabio-akita-flow-588.html)
   Fonte: Fabio Akita · Flow Podcast #588
 
+- [Curso Completo de Claude Code — 4 Horas](https://adhenawer.net/posts/pt_br/curso-completo-claude-code-4-horas.html)
+  Fonte: Marco Fernández / X
+
+- [Boris Cherny — Dicas Práticas para Usar Claude Code](https://adhenawer.net/posts/pt_br/boris-cherny-dicas-praticas-para-usar-claude-code.html)
+  Fonte: Boris Cherny (Anthropic, criador do Claude Code)
+
 ## Blog — Português
 
 - [Rodando este projeto no dia a dia dentro do Claude Code](https://adhenawer.net/blog/claude-code-daily-workflow.html)
   Como é, na prática, rodar o video-to-text no dia a dia dentro do Claude Code: os prompts, os subprocessos, por que o CLAUDE.md é load-bearing e onde os subagents compensam.
 
 - [Markdown para Agentes no plano gratuito do Cloudflare Workers](https://adhenawer.net/blog/markdown-for-agents-free-tier.html)
-  Como replicar o recurso pago Markdown for Agents da Cloudflare com um Worker no plano gratuito: content negotiation, conversão de HTML para Markdown com regex e redução de 75% de tokens para crawlers de LLMs.
+  Como servir Markdown para agentes de IA no plano gratuito do Cloudflare Workers com a lib open source markdown-edge-for-agents: content negotiation, auto-detecção de crawlers, headers compatíveis com a feature Pro da Cloudflare e redução de 75% de tokens.
 
 - [Transformando podcasts de horas em artigos que dá pra ler](https://adhenawer.net/blog/transformando-podcasts-de-horas-em-artigos-que-da-pra-ler.html)
   Um laboratório pessoal de pipeline bilíngue que transforma vídeos do YouTube e Twitter/X em artigos estáticos — Whisper local, Claude para organização e tradução, HTML puro, Cloudflare Worker grátis servindo Markdown para agentes.
@@ -98,6 +104,9 @@
   A bilingual pipeline that turns YouTube and Twitter/X videos into static articles — local Whisper, Claude for structure and translation, plain HTML, and a free Cloudflare Worker serving Markdown to agents.
 
 ## Articles — English
+
+- [Ryan Lopopolo — Harness Engineering: How to Build Software When Humans Steer and Agents Execute](https://adhenawer.net/posts/original/ryan-lopopolo-harness-engineering-when-humans-steer-and-agents-execute.html)
+  Source: Ryan Lopopolo (Member of Technical Staff, OpenAI) · AI Engineer Summit London
 
 - [The Head of Claude Code on What Happens After Coding Is Solved](https://adhenawer.net/posts/original/head-claude-code-happens-after-coding-solved.html)
   Source: Lenny's Podcast with Boris Cherny (Head of Claude Code, Anthropic)
@@ -161,3 +170,6 @@
 
 - [FABIO AKITA - Flow #588](https://adhenawer.net/posts/original/fabio-akita-flow-588.html)
   Source: Fabio Akita · Flow Podcast
+
+- [The Complete Claude Code Course — 4 Hours](https://adhenawer.net/posts/original/complete-claude-code-course-4-hours.html)
+  Source: Nick Saraev

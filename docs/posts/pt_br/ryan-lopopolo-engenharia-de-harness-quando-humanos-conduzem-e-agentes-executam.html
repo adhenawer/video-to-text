@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ryan Lopopolo — Engenharia de Harness: Como Construir Software Quando Humanos Conduzem e Agentes Executam</title>
+<meta name="description" content="Nosso próximo palestrante vem falar sobre engenharia de harness — como construir software quando humanos conduzem e agentes executam. Por favor, recebam no palco o membro do staff técnico da OpenAI,...">
+<meta name="author" content="Ryan Lopopolo (Member of Technical Staff, OpenAI) · AI Engineer Summit Londres">
+<link rel="canonical" href="https://adhenawer.net/posts/pt_br/ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam.html">
+<link rel="alternate" hreflang="pt-BR" href="../pt_br/ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam.html">
+<link rel="alternate" hreflang="en" href="../original/ryan-lopopolo-harness-engineering-when-humans-steer-and-agents-execute.html">
+<link rel="alternate" hreflang="x-default" href="../pt_br/ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ryan Lopopolo — Engenharia de Harness: Como Construir Software Quando Humanos Conduzem e Agentes Executam">
+<meta property="og:description" content="Nosso próximo palestrante vem falar sobre engenharia de harness — como construir software quando humanos conduzem e agentes executam. Por favor, recebam no palco o membro do staff técnico da OpenAI,...">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Leituras — Podcasts &amp; Vídeos Traduzidos">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ryan Lopopolo — Engenharia de Harness: Como Construir Software Quando Humanos Conduzem e Agentes Executam">
+<meta name="twitter:description" content="Nosso próximo palestrante vem falar sobre engenharia de harness — como construir software quando humanos conduzem e agentes executam. Por favor, recebam no palco o membro do staff técnico da OpenAI,...">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Ryan Lopopolo — Engenharia de Harness: Como Construir Software Quando Humanos Conduzem e Agentes Executam", "description": "Nosso próximo palestrante vem falar sobre engenharia de harness — como construir software quando humanos conduzem e agentes executam. Por favor, recebam no palco o membro do staff técnico da OpenAI,...", "author": {"@type": "Person", "name": "Ryan Lopopolo (Member of Technical Staff, OpenAI)"}, "publisher": {"@type": "Organization", "name": "Leituras — Podcasts & Vídeos Traduzidos"}, "inLanguage": "pt-BR", "isAccessibleForFree": true, "url": "https://www.youtube.com/watch?v=am_oeAoUhew", "articleSection": ["APRESENTAÇÃO", "COMEÇANDO COMO TOKEN BILIONÁRIO", "A FORMA DE CONSTRUIR SOFTWARE MUDOU", "HABILIDADES MUDAM PARA SISTEMAS E DELEGAÇÃO", "CÓDIGO É LIVRE", "VOCÊ É UM ENGENHEIRO STAFF", "OS NOVOS RECURSOS ESCASSOS", "FERRAMENTAS INTERNAS COM I18N DESDE O DIA 1", "HUMANOS NÃO PRECISAM MAIS PENSAR EM IMPLEMENTAÇÃO", "REFATORAÇÃO EM LARGA ESCALA AGORA É BARATA", "O QUE É \"FAZER UM BOM TRABALHO\"", "CADA ENGENHEIRO COMO PERSONA ESPECIALIZADA", "PROMPTS, REVIEWERS E AUTO-COMPACTAÇÃO", "TESTES E LINTS COMO PROMPTS", "MENSAGENS DE ERRO QUE INSTRUEM O MODELO", "É TUDO PROMPT", "EFEITO COMPOSTO DE LEVERAGE", "ENCERRAMENTO DA KEYNOTE", "ABERTURA DA CONVERSA", "WORKFLOW: TICKETS, SKILLS E HARNESSES", "COMO EVITAR OVER-ENGINEERING DE HARNESSES", "APROVEITANDO O HARNESS NATIVO DOS LABS", "PLATAFORMA DE COLABORAÇÃO — MARKDOWN E PRS", "POR ONDE COMEÇAR COM AGENTES DE CÓDIGO", "AGENTES NO CARRO E O AGENTE 24/7", "ESCALANDO ARQUITETURA — 750 PACOTES PNPM", "CODE REVIEW EM ALTA VELOCIDADE — GARBAGE COLLECTION DAY", "DISTRIBUIÇÃO DOS BILHÕES DE TOKENS", "CÓDIGO COMO ARTEFATO DESCARTÁVEL — LLM COMO COMPILADOR FUZZY", "O FUTURO — ORÇAMENTO DE TOKENS PARA UM TRIMESTRE", "ENCERRAMENTO"]}
+</script>
+<link rel="stylesheet" href="../../css/style.css">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="40c8ae3d-2e6b-4af4-a89b-f578dd3b2315"></script>
+</head>
+<body class="page-article" data-storage-key="reading_am_oeAoUhew_">
+<header class="site-header">
+  <a class="site-brand" href="../../index.html">Leituras</a>
+  <div class="lang-bar">
+    <button class="lang-btn" data-lang="pt-BR" aria-label="Português">PT</button>
+    <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+  </div>
+</header>
+<div class="progress" id="progress"></div>
+<div class="reading-pct" id="readingPct"></div>
+<article class="container">
+  <a href="../../index.html" class="back-home">← Voltar</a>
+  <header>
+    <h1>Ryan Lopopolo — Engenharia de Harness: Como Construir Software Quando Humanos Conduzem e Agentes Executam</h1>
+    <p class="meta"><cite>Ryan Lopopolo (Member of Technical Staff, OpenAI) · AI Engineer Summit Londres</cite></p>
+    <p class="meta"><a href="https://www.youtube.com/watch?v=am_oeAoUhew" target="_blank" rel="noopener">🎥 Assistir no YouTube</a></p>
+  </header>
+  <nav aria-label="Índice do artigo">
+    <h3>Conteúdo</h3>
+    <ol>
+<li><a href="#s1">APRESENTAÇÃO</a></li>
+<li><a href="#s2">COMEÇANDO COMO TOKEN BILIONÁRIO</a></li>
+<li><a href="#s3">A FORMA DE CONSTRUIR SOFTWARE MUDOU</a></li>
+<li><a href="#s4">HABILIDADES MUDAM PARA SISTEMAS E DELEGAÇÃO</a></li>
+<li><a href="#s5">CÓDIGO É LIVRE</a></li>
+<li><a href="#s6">VOCÊ É UM ENGENHEIRO STAFF</a></li>
+<li><a href="#s7">OS NOVOS RECURSOS ESCASSOS</a></li>
+<li><a href="#s8">FERRAMENTAS INTERNAS COM I18N DESDE O DIA 1</a></li>
+<li><a href="#s9">HUMANOS NÃO PRECISAM MAIS PENSAR EM IMPLEMENTAÇÃO</a></li>
+<li><a href="#s10">REFATORAÇÃO EM LARGA ESCALA AGORA É BARATA</a></li>
+<li><a href="#s11">O QUE É "FAZER UM BOM TRABALHO"</a></li>
+<li><a href="#s12">CADA ENGENHEIRO COMO PERSONA ESPECIALIZADA</a></li>
+<li><a href="#s13">PROMPTS, REVIEWERS E AUTO-COMPACTAÇÃO</a></li>
+<li><a href="#s14">TESTES E LINTS COMO PROMPTS</a></li>
+<li><a href="#s15">MENSAGENS DE ERRO QUE INSTRUEM O MODELO</a></li>
+<li><a href="#s16">É TUDO PROMPT</a></li>
+<li><a href="#s17">EFEITO COMPOSTO DE LEVERAGE</a></li>
+<li><a href="#s18">ENCERRAMENTO DA KEYNOTE</a></li>
+<li><a href="#s19">ABERTURA DA CONVERSA</a></li>
+<li><a href="#s20">WORKFLOW: TICKETS, SKILLS E HARNESSES</a></li>
+<li><a href="#s21">COMO EVITAR OVER-ENGINEERING DE HARNESSES</a></li>
+<li><a href="#s22">APROVEITANDO O HARNESS NATIVO DOS LABS</a></li>
+<li><a href="#s23">PLATAFORMA DE COLABORAÇÃO — MARKDOWN E PRS</a></li>
+<li><a href="#s24">POR ONDE COMEÇAR COM AGENTES DE CÓDIGO</a></li>
+<li><a href="#s25">AGENTES NO CARRO E O AGENTE 24/7</a></li>
+<li><a href="#s26">ESCALANDO ARQUITETURA — 750 PACOTES PNPM</a></li>
+<li><a href="#s27">CODE REVIEW EM ALTA VELOCIDADE — GARBAGE COLLECTION DAY</a></li>
+<li><a href="#s28">DISTRIBUIÇÃO DOS BILHÕES DE TOKENS</a></li>
+<li><a href="#s29">CÓDIGO COMO ARTEFATO DESCARTÁVEL — LLM COMO COMPILADOR FUZZY</a></li>
+<li><a href="#s30">O FUTURO — ORÇAMENTO DE TOKENS PARA UM TRIMESTRE</a></li>
+<li><a href="#s31">ENCERRAMENTO</a></li>
+    </ol>
+  </nav>
+<section>
+<h2 id="s1">APRESENTAÇÃO <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=0" target="_blank" rel="noopener" aria-label="Pular para 0:00 no vídeo">0:00</a></h2>
+<p>Nosso próximo palestrante vem falar sobre engenharia de harness — como construir software quando humanos conduzem e agentes executam. Por favor, recebam no palco o membro do staff técnico da OpenAI, Ryan Lopopolo.</p>
+</section>
+<section>
+<h2 id="s2">COMEÇANDO COMO TOKEN BILIONÁRIO <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=40" target="_blank" rel="noopener" aria-label="Pular para 0:40 no vídeo">0:40</a></h2>
+<p>Bom dia, Londres. Estou muito empolgado de estar aqui hoje. Sou Ryan Lopopolo e, nos últimos nove meses, tive o privilégio de construir software exclusivamente com agentes. Sou um token bilionário e acredito que, para chegarmos ao nosso futuro AGI, todos precisam ser token bilionários — usar os modelos para fazer o trabalho inteiro.</p>
+<p>Isso significa abraçar a ideia de que os modelos são capazes de ser engenheiros de software completos. Vivi essa experiência banindo meu time de tocar nos próprios editores: para entregar o trabalho, eles têm que passar pelos modelos. Hoje vou falar um pouco sobre o que significa abraçar isso e operacionalizar a forma como você trabalha, os ambientes de código que habita e os processos do seu time, para que os agentes façam o trabalho inteiro.</p>
+</section>
+<section>
+<h2 id="s3">A FORMA DE CONSTRUIR SOFTWARE MUDOU <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=100" target="_blank" rel="noopener" aria-label="Pular para 1:40 no vídeo">1:40</a></h2>
+<p>Acho que estou pregando para os convertidos quando digo que a forma como construímos software mudou. Nos últimos seis meses, vimos os agentes de código tomarem o mundo, e a capacidade avançou em ritmo muito acelerado — esses modelos e os harnesses em que vivem executam ações mais complexas, fazem trabalho mais complicado com mais confiabilidade e em horizontes de tempo mais longos.</p>
+<p>Chegamos a um ponto onde implementação não é mais o recurso escasso da engenharia de software. Código é de graça. Temos uma abundância de código para resolver os problemas que aparecem no dia a dia ao tocar times, construir software e atender usuários.</p>
+<p>Contratar mãos para o teclado dentro do time é limitado apenas por capacidade de GPU e orçamento de tokens. Cada engenheiro nesta sala tem acesso a 5, 50 ou 5.000 engenheiros equivalentes em capacidade, 24/7, todo dia do ano. O que precisa acontecer é nosso papel mudar para descobrir como implantar produtivamente esses recursos no código e no time para aproveitar essa nova capacidade.</p>
+</section>
+<section>
+<h2 id="s4">HABILIDADES MUDAM PARA SISTEMAS E DELEGAÇÃO <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=179" target="_blank" rel="noopener" aria-label="Pular para 2:59 no vídeo">2:59</a></h2>
+<p>Nesse mundo, o conjunto de habilidades se desloca para pensamento sistêmico, design de sistemas e delegação — para aproveitar essa capacidade abundante de produzir código e resolver problemas. Três coisas tornaram isso possível, todas em fins de 2025.</p>
+<p>Para mim, o momento mágico foi o GPT-5.2 — quando saiu, conseguia fazer o trabalho inteiro de um engenheiro de software. Os modelos chegaram a um ponto onde são isomórficos a você e a mim em capacidade de produzir código de alta qualidade que resolve problemas reais em codebases reais.</p>
+</section>
+<section>
+<h2 id="s5">CÓDIGO É LIVRE <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=219" target="_blank" rel="noopener" aria-label="Pular para 3:39 no vídeo">3:39</a></h2>
+<p>Código é de graça. Sei que pode soar assustador, porque código carrega ônus de manutenção. Mas é de graça produzir, de graça refatorar — não é mais algo para travar.</p>
+<p>Pensamos em código como ônus porque ele drena atenção síncrona dos engenheiros humanos do time. Mas os modelos são incrivelmente pacientes. São infinitamente paralelos. Então a capacidade de produzir, manter, refatorar e deletar código não é mais função forçante para alocar recursos no time de engenharia.</p>
+<p>A pílula AGI aqui é acreditar que os modelos são capazes de produzir cada linha de código que vamos precisar, descobrir quando deletar, quando refatorar, como deixar mais confiável. Seu papel como engenheiro de software é descobrir como desbloquear seu time de agentes (e de humanos guiando esses agentes) para conduzir trabalho de longo horizonte e fazer o trabalho inteiro.</p>
+</section>
+<section>
+<h2 id="s6">VOCÊ É UM ENGENHEIRO STAFF <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=284" target="_blank" rel="noopener" aria-label="Pular para 4:44 no vídeo">4:44</a></h2>
+<p>A ideia é que cada um de vocês é um engenheiro staff. Você tem tantos colegas de equipe quanto consegue conduzir simultaneamente, com tokens disponíveis. Precisa olhar para um dia, uma semana e seis meses à frente para descobrir que estruturas colocar no lugar para aproveitar produtivamente essa capacidade infinita de produzir código.</p>
+</section>
+<section>
+<h2 id="s7">OS NOVOS RECURSOS ESCASSOS <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=310" target="_blank" rel="noopener" aria-label="Pular para 5:10 no vídeo">5:10</a></h2>
+<p>Os recursos escassos hoje são três: tempo humano, atenção (humana e do modelo) e janela de contexto do modelo. Num mundo onde tempo e atenção humana são escassos, o papel é pensar para onde esse tempo está indo, descobrir formas de automatizar produtivamente e mover esse tempo síncrono para atividades de maior alavancagem.</p>
+<p>Num mundo onde tempo humano é escasso e necessário para produzir código, há uma fila de prioridades. As coisas são P0 ou P2. Os P3 nunca saem. Mas num mundo onde código é livre e infinitamente abundante, todos esses P3 são disparados imediatamente, talvez 4x em paralelo. Você pega o que resolve o problema e segue.</p>
+</section>
+<section>
+<h2 id="s8">FERRAMENTAS INTERNAS COM I18N DESDE O DIA 1 <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=366" target="_blank" rel="noopener" aria-label="Pular para 6:06 no vídeo">6:06</a></h2>
+<p>Tive o privilégio de construir muitos agentes internos na OpenAI para melhorar a produtividade dos colegas. Quando código é livre, todas essas ferramentas internas podem ter boa localização e internacionalização desde o primeiro dia. Posso fazer ferramentas que meus colegas em Londres, Dublin, Paris, Bruxelas, Zurique e Munique usam nos seus idiomas nativos, sem precisar negociar capacidade contra outros times para entregar com qualidade.</p>
+<p>Devíamos trabalhar com a hipótese de que as melhores partes da engenharia de software que conhecemos, vivemos e respiramos estão disponíveis em qualquer produto que possamos construir, o tempo todo.</p>
+</section>
+<section>
+<h2 id="s9">HUMANOS NÃO PRECISAM MAIS PENSAR EM IMPLEMENTAÇÃO <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=412" target="_blank" rel="noopener" aria-label="Pular para 6:52 no vídeo">6:52</a></h2>
+<p>Humanos não precisam mais se preocupar com implementação. O importante não é o código, é o prompt e os guardrails que levaram até ele. É por isso que deixar rastros — documentação, ADRs, documentação orientada a personas sobre o que é um bom trabalho, todos os logs históricos de tickets e code reviews — é importante. Esse é o processo que levou você e seu time ao código e produtos que têm hoje. Esse mesmo processo precisa acontecer para levar seus agentes até lá.</p>
+<p>Seu trabalho é construir sistemas, software e estruturas que permitam ao seu time ter sucesso. E para isso, precisamos torná-los legíveis para os agentes que conduzem a implementação. Estruturar de um jeito nativo ao agente. Escrever respeitando o contexto escasso. Tornar os tokens necessários previsíveis. Fazer tudo o mais parecido possível, para limitar a atenção que o modelo precisa ativar.</p>
+</section>
+<section>
+<h2 id="s10">REFATORAÇÃO EM LARGA ESCALA AGORA É BARATA <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=479" target="_blank" rel="noopener" aria-label="Pular para 7:59 no vídeo">7:59</a></h2>
+<p>Refatoração em larga escala neste mundo é de graça. Fazer tudo igual é algo que vocês todos conseguem fazer. Nunca mais vai existir uma migração que fica seis meses aberta porque você não consegue chegar nas últimas partes da codebase — basta disparar 15 agentes para terminar. É o que migração significa agora: dá pra terminar. Aplaudam.</p>
+</section>
+<section>
+<h2 id="s11">O QUE É "FAZER UM BOM TRABALHO" <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=508" target="_blank" rel="noopener" aria-label="Pular para 8:28 no vídeo">8:28</a></h2>
+<p>Há uma pergunta meta-epistemológica aqui sobre o que significa fazer um bom trabalho. Fazer um bom trabalho como engenheiro de software é difícil. Leva anos no setor para internalizar o que é escrever código de alta qualidade, manutenível e confiável, em cima do qual seus colegas conseguem construir e que acumula alavancagem na codebase.</p>
+<p>Para fazer um único patch, provavelmente são 500 pequenas decisões pelo caminho sobre requisitos não-funcionais subespecificados que entram em produzir código bom. Os modelos, durante o treinamento, viram trilhões de linhas de código que tomam todas as escolhas possíveis sobre esses requisitos não-funcionais. Então é nosso trabalho especificá-los, escrevê-los de forma que os agentes vejam: isto é o que é fazer um trabalho aceitável que vai virar patch mergeado.</p>
+<p>Se os agentes não estão fazendo isso, é nosso trabalho refinar e restringir a saída deles para que o código seja aceitável. Você pode literalmente dizer &ldquo;não produza slop, não aceite slop&rdquo; e não vai ter slop na codebase. Mas isso exige absorver perdas de velocidade no curto prazo, voltar e dar dois cliques na tarefa para entender com o que os agentes estão lutando no seu ambiente. Colocar as proteções no lugar para parar de cometer esses erros, e depois afastar-se e gastar seu tempo em atividades de maior alavancagem.</p>
+</section>
+<section>
+<h2 id="s12">CADA ENGENHEIRO COMO PERSONA ESPECIALIZADA <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=609" target="_blank" rel="noopener" aria-label="Pular para 10:09 no vídeo">10:09</a></h2>
+<p>Quando penso em empoderar meu time, cada um é especialista no que traz. Tenho um time full-stack diverso — especialistas em arquitetura front-end, escalabilidade de back-end, mentalidade de produto. Cada uma dessas personas amplia o conjunto do time, trazendo um entendimento e um conjunto de soluções diferentes para os requisitos não-funcionais.</p>
+<p>Fazer os colegas escreverem essas soluções significa que cada engenheiro guiando agentes recebe o melhor de cada pessoa do time. Eu não preciso bloquear em code review de baixo sinal para aprender o que é um bom plano de QA. Ter um engenheiro do time documentando isso de forma durável faz com que toda trajetória de agente receba um bom plano de QA. Fazemos uma vez, em alta alavancagem, e empilhamos em cima.</p>
+</section>
+<section>
+<h2 id="s13">PROMPTS, REVIEWERS E AUTO-COMPACTAÇÃO <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=665" target="_blank" rel="noopener" aria-label="Pular para 11:05 no vídeo">11:05</a></h2>
+<p>Como fazer os agentes trabalharem bem? Quais são as ferramentas e técnicas para fazer prompt injection nos nossos próprios agentes e lembrá-los continuamente das escolhas específicas que esperamos sobre requisitos não-funcionais? Há várias formas. Você pode escrever bons arquivos AGENTS.md. Mas com a auto-compactação, que continua melhorando — GPT-5.4 e Codex são fantásticos em auto-compactação — quase nunca preciso rodar /new.</p>
+<p>Tenho fotos no meu Twitter de mim prendendo o laptop no banco de trás do carro para continuar rodando inferência enquanto vou e volto do trabalho. Nesse mundo, você precisa construir esperando que o contexto vai ser despaginado com o tempo. Precisamos refrescar continuamente o contexto enquanto o agente trabalha. As formas de fazer isso incluem ter agentes revisores olhando o código pela lente do que é sucesso. Temos agentes de revisão de segurança e confiabilidade rodando em todo push e CI, que olham para a documentação e o patch proposto e fazem coisas simples como perguntar: tem timeout e retry nesse trecho de código de rede? O código novo tem interface segura, impossível de usar errado?</p>
+<p>Tenho certeza que todo mundo aqui já foi paginado por código de rede que falhou em produção causando outage que poderia ter sido remediado por um retry e um timeout. Sou culpado de colocar o retry e o timeout, mergear o bug fix e ignorar o resto. Não sou um revisor nem autor de código confiável quanto a esse requisito não-funcional. Mas dedicar tempo para escrever docs, escrever um lint próprio do meu codebase que olha cada chamada de fetch para garantir retry e timeout — isso resolve o problema durávelmente. E consigo fazer porque me apoio no axioma de que código é livre, que os agentes fazem um bom trabalho e que posso migrar a codebase inteira para resolver isso uma vez por todas.</p>
+<p>Para operar assim, precisamos olhar para classes duráveis de falha que agentes e humanos cometem repetidamente. Entender por que estamos gastando tempo nelas. Bolar uma solução para eliminar sistematicamente essa classe de mau comportamento. E continuar observando, refinando e fazendo escolhas adicionais sobre os requisitos não-funcionais.</p>
+</section>
+<section>
+<h2 id="s14">TESTES E LINTS COMO PROMPTS <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=805" target="_blank" rel="noopener" aria-label="Pular para 13:25 no vídeo">13:25</a></h2>
+<p>Um truque legal: você pode escrever testes sobre o próprio código-fonte, separados de lints. Sabendo que o contexto é limitado, podemos escrever um teste que limita arquivos a 350 linhas. Estamos adaptando a codebase ao harness, ao modelo, fazendo um pouquinho de engenharia para ser eficiente em contexto e espremer mais suco da capacidade que o modelo já tem hoje.</p>
+</section>
+<section>
+<h2 id="s15">MENSAGENS DE ERRO QUE INSTRUEM O MODELO <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=862" target="_blank" rel="noopener" aria-label="Pular para 14:22 no vídeo">14:22</a></h2>
+<p>Outra coisa: fornecer boas mensagens de erro com passos concretos de remediação para o modelo (e para humanos). Não basta dizer &ldquo;lint falhou porque você está fazendo await num loop&rdquo; ou &ldquo;tem um unknown nesta parte profunda da codebase, por que o modelo está escrevendo uma função chamada isRecord?&rdquo;. O que precisamos é entregar um prompt — via lint ou falha de teste — que diga: &ldquo;não, você não deveria ter um unknown aqui, porque a gente faz parse, não validate, na borda; e você certamente tem um tipo derivado de zod, infraestrutura load-bearing para nosso futuro de IA&rdquo;.</p>
+<p>Você pode simplesmente promptar coisas. Tudo o que falei aqui hoje é prompt. Dá para fazer isso sem tocar nos pesos do modelo.</p>
+</section>
+<section>
+<h2 id="s16">É TUDO PROMPT <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=919" target="_blank" rel="noopener" aria-label="Pular para 15:19 no vídeo">15:19</a></h2>
+<p>Uma divagação engraçada: parece que cada avanço na complexidade da forma como escrevemos código para interagir com esses modelos vem tanto de capacidade crescente quanto de formas cada vez mais nichadas de injetar prompts. Prompts que você conhece — prompts, AGENTS.md, regras-arquivo prompts, skills prompts, mensagens de erro de lint prompts, agentes de revisão que injetam comentários no PR que o agente precisa endereçar antes de propor merge — prompts.</p>
+<p>Você vai achar muitas formas de inserir prompts no seu código. Uma delas é embedar SDKs de agente em testes que vão revisar a codebase com prompts embutidos. Se eu me pego gastando muito tempo escrevendo prompts, posso terceirizar isso para o agente também. Apontei o Codex para todos os cookbooks de prompting do guia de desenvolvedor da OpenAI e pedi para sintetizar uma skill de como escrever prompts. Quando preciso escrever prompts para melhorar a performance do agente localmente no código, uso a skill de escrever prompts que escrevi com o agente — olhando para os prompts — para escrever os prompts.</p>
+</section>
+<section>
+<h2 id="s17">EFEITO COMPOSTO DE LEVERAGE <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=1005" target="_blank" rel="noopener" aria-label="Pular para 16:45 no vídeo">16:45</a></h2>
+<p>Toda alavancagem que você codifica no repositório, no time e nos agentes empilha incrivelmente bem. Voltando à ideia de que um único engenheiro com mentalidade de produto no meu time conseguiu nos dar um grande impulso. Eles sabem o que é um bom plano de QA. Mas para escrever um bom plano de QA, você precisa documentar todas as features, as jornadas críticas de usuário, e como os usuários engajam com sua aplicação, web app, APIs e serviços.</p>
+<p>Uma vez que você escreve isso — como fazer um bom plano de QA com a expectativa de que todo trabalho voltado a usuário tenha um — um agente revisor consegue afirmar expectativas sobre o que é provar que você efetivamente escreveu a feature. Um plano de QA indica que mídia deve ser anexada ao PR para humanos e agentes saberem que você fez um bom trabalho. Consequência: confio mais na saída do agente, preciso ficar menos olhando por cima do ombro, e me removo ainda mais do loop, delegando cada vez mais.</p>
+<p>Tudo isso é garantir que os agentes tenham as ferramentas, os tokens e o contexto para fazer o trabalho inteiro — para me remover da posição de motorista síncrono. Os modelos anseiam por tokens. Podemos operacionalizar nossa codebase para dar tokens, conduzi-los adiante usando subagentes e outras técnicas para refinar a saída.</p>
+</section>
+<section>
+<h2 id="s18">ENCERRAMENTO DA KEYNOTE <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=1100" target="_blank" rel="noopener" aria-label="Pular para 18:20 no vídeo">18:20</a></h2>
+<p>Estou animado em dizer hoje, do jeito que vocês todos fazem, que vocês podem simplesmente construir coisas. Não hesitem em se remover do loop fazendo os agentes fazerem o trabalho inteiro — porque eles conseguem. Obrigado.</p>
+</section>
+<section>
+<h2 id="s19">ABERTURA DA CONVERSA <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=1114" target="_blank" rel="noopener" aria-label="Pular para 18:34 no vídeo">18:34</a></h2>
+<p>Muito feliz de receber nosso convidado. Hoje temos Ryan Lopopolo, que acabou de dar a keynote — palestrante muito empolgante. Esse cara está em modo full-send em hyperengineering na OpenAI. Um pouco de contexto: gravamos um episódio do Latent Space com ele, lançamos outro dia. Ele escreveu um artigo ótimo chamado &ldquo;Harness Engineering&rdquo; e a gente pensou: isso é ouro puro, vamos chamar para o podcast. Ele é token bilionário, gastando mais de um bilhão de tokens de output por dia — mais de US$ 1.000. Esse cara vive isso. Vamos manter empolgante. Façam boas perguntas. Recebam o Ryan no palco.</p>
+<p>Oi pessoal, beleza? Empolgado de estar aqui. Londres tem sido fantástica.</p>
+</section>
+<section>
+<h2 id="s20">WORKFLOW: TICKETS, SKILLS E HARNESSES <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=1175" target="_blank" rel="noopener" aria-label="Pular para 19:35 no vídeo">19:35</a></h2>
+<p>Pode mostrar seu setup de trabalho real, sem laptop?</p>
+<p>— Aqui. Beach. Margarita. Linear, né?</p>
+<p>Sem mostrar de verdade: como é seu workflow? Como você ataca uma tarefa?</p>
+<p>— A forma como eu e meu time trabalhamos é começar com tickets. Temos pedaços de trabalho que queremos fazer, features para adicionar nos apps, trabalho de confiabilidade. Damos esse ticket para um agente junto com um conjunto de skills que permitem manipular nosso app. Queremos que o ponto de entrada do desenvolvimento seja o Codex, não um ambiente que construímos em volta dele. Fazemos as coisas de fora para dentro: o Codex é o ponto de entrada do mesmo jeito que você seria.</p>
+<p>Damos ferramentas e instruções de como cozinhar. Em vez de criar um shell onde nosso app e o Codex são spawnados, temos uma skill que ensina o Codex a subir o app, a subir o stack local de observabilidade para ter logs e telemetria. Damos uma skill que permite bootar o Chrome DevTools e anexar à aplicação via uma CLI local que conecta por um daemon.</p>
+<p>Todo o jeito como organizamos o repositório e as ferramentas locais de dev é para o Codex invocá-las primeiro. Isso significa que temos uma série de mini-harnesses dentro da codebase que facilitam encaixar guard-rails adicionais. Um pacote grande de regras ESLint customizadas conectadas em todo pacote PNPM do workspace. Um harness local de dev que permite adicionar testes de mais alto nível, &ldquo;wholesome&rdquo;, que afirmam a estrutura do próprio código — e não só sintaxe ou comportamento. Coisas como privacidade de pacote, arestas de dependência entre camadas do stack, garantir que entre vários arquivos os schemas zod sejam dedup, que exista uma única implementação canônica dos helpers async.</p>
+<p>Por que isso? Porque a gente vê os agentes às vezes otimizarem por coerência local de um pacote em vez de usar utilitários compartilhados. Tendo observado, construímos um monte de mini-linters e verificadores de código-fonte que arrancam esse comportamento ruim, para que humanos não percam atenção em review com isso. O setup otimiza para o agente fazer o trabalho e para humanos não terem que acompanhar a alta rotatividade do código.</p>
+<p>Centralizamos a alavancagem em umas 5 a 10 skills. Não vamos largo em skills — preferimos melhorar as existentes. A infraestrutura do repositório, todas as ferramentas locais de dev, mudam super frequentemente, e eu não tenho banda para acompanhar. Então escondemos toda essa complexidade atrás das skills que o humano invoca, e deixamos o agente descobrir.</p>
+<p>Uma coisa legal: quando trocamos de usar Chrome DevTools Protocol direto para usar essa coisa de daemon, eu nem sabia que tinha mudado por umas três semanas. Estava tudo bem, o Codex conseguia fazer o que precisava com a documentação que tínhamos no lugar.</p>
+</section>
+<section>
+<h2 id="s21">COMO EVITAR OVER-ENGINEERING DE HARNESSES <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=1415" target="_blank" rel="noopener" aria-label="Pular para 23:35 no vídeo">23:35</a></h2>
+<p>Você escreveu um artigo chamado &ldquo;Harness Engineering&rdquo; com uma seção sobre milhares de skills versus simplificar para poucas. Como você se impede de overengineerar harnesses? E você constrói ferramentas pequenas para si mesmo?</p>
+<p>— Acho que isso aponta na direção da bitter lesson: como garantir que o trabalho que faço não fique completamente obsoleto com aumento de capacidade do modelo? Penso fazendo o mínimo de gerenciamento de contexto necessário para puxar requisitos para o agente fazer um trabalho aceitável ao longo do percurso. Contexto é algo que não vai ficar obsoleto — os modelos precisam ser informados sobre os requisitos da tarefa, sobre quais guardrails prestar atenção.</p>
+<p>Um bom harness é operacionalizado para entregar texto ao modelo na hora certa, para que ele olhe o trabalho que fez e a informação sobre o que é um bom trabalho. Fundamentalmente os modelos são treinados para seguir instruções. Tudo o que o harness deveria fazer é fazer aflorar instruções no momento certo. Você quer minimizar isso também — não dá para frontload tudo, porque sobrecarrega o agente. Mas todos esses requisitos precisam ser atendidos durante todo o percurso de um PR. Adiar ou trazer just-in-time essas instruções é o que um bom harness deve fazer.</p>
+<p>Se você sabe que quer seus componentes React decompostos para gerar bons snapshot tests com peças mais sem-estado, não precisa carregar isso no início. Deixa o agente cozinhar e prototipar a UI; em tempo de lint ou teste, fala: &ldquo;agora que terminou, separa para os componentes ficarem pequenos, sem estado, com dependências locais em hooks em vez de prop drilling&rdquo;. O agente diz &ldquo;ok, instrução nova&rdquo;, pega o patch, adapta e sobe para o GitHub. Esse tipo de coisa não vai ficar obsoleto com aumento de capacidade. Trata-se de levar o texto certo, no contexto certo, na hora certa.</p>
+</section>
+<section>
+<h2 id="s22">APROVEITANDO O HARNESS NATIVO DOS LABS <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=1577" target="_blank" rel="noopener" aria-label="Pular para 26:17 no vídeo">26:17</a></h2>
+<p>Pode falar de exemplo de bom harness? Muita gente está perguntando do modelo Codex, do harness Codex. Como compara com Claude Code, OpenCode? Como vocês tomam essas decisões?</p>
+<p>— Uma coisa que acho super poderosa é que os labs não estão só fazendo post-training dos modelos — estão fazendo post-training no contexto do harness em que vão ser primariamente deployados. A tool apply_patch, a semântica específica de quoting de como invocar a tool bash, estão dentro do loop de post-training dos harnesses dos labs. Isso significa que há alavancagem em depender desses harnesses de primeira parte diretamente. É o que eu acredito.</p>
+<p>Conseguir guiar via SDK ou manipulando o servidor do app Codex direto significa surfar a onda de toda essa alavancagem do post-training. Em vez disso, focar nas partes que importam, que é como código correto se parece. Tenho alta confiança que coisas como Claude Code e Codex vão continuar melhorando — é responsabilidade dos times que tocam esses agentes de código. No meu papel, em que eu não quero focar no harness de código, é descobrir formas de plugar neles que conduzam o agente. Meu trabalho sobe um nível: penso em diferenças de comportamento entre releases do modelo, e não nos parafusos do harness. Penso no que significa conduzir o comportamento desejado com base no comportamento observado, não na mecânica interna.</p>
+</section>
+<section>
+<h2 id="s23">PLATAFORMA DE COLABORAÇÃO — MARKDOWN E PRS <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=1695" target="_blank" rel="noopener" aria-label="Pular para 28:15 no vídeo">28:15</a></h2>
+<p>Recomendação de plataforma de colaboração? No ciclo de desenvolvimento, tem uma plataforma que vocês usam para agentes, engenheiros e devs colaborarem juntos?</p>
+<p>— Tem sido majoritariamente arquivos markdown no repositório e o GitHub. Se você pensa em colaborar num documento — abre Google Docs, escreve, pede feedback, gente comenta, aplica sugestões — é meio um quartinho limpo só para o artefato sendo produzido. Um PR tem propósito parecido. A gente trata isso como um grande hub-and-spoke onde agentes e humanos colaboram juntos.</p>
+<p>Como otimizamos para throughput, não bloqueamos nenhuma contribuição. Pessoas podem revisar ou não. Agentes podem revisar ou não. O agente de implementação pode reconhecer, adiar ou rejeitar qualquer feedback. Cada participante na produção de diffs faz seu próprio julgamento sobre entregar, receber e responder feedback. Isso tem uma propriedade boa de não colocar o modelo numa caixa em vários lugares — queremos que ele use o bom raciocínio. Ser super prescritivo tipo &ldquo;todo feedback precisa ser endereçado&rdquo; pode ter falha catastrófica de o agente ser bullado pelos revisores. A gente quer enviesar para código aceito, não perfeito, sem se afogar em minúcias.</p>
+</section>
+<section>
+<h2 id="s24">POR ONDE COMEÇAR COM AGENTES DE CÓDIGO <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=1806" target="_blank" rel="noopener" aria-label="Pular para 30:06 no vídeo">30:06</a></h2>
+<p>Como pessoas que escrevem muito código manual deveriam transicionar? Eu ainda checo todo PR, copio e colo do Codex. Como o engenheiro médio começa a usar essas ferramentas?</p>
+<p>— Acho que tem dois jeitos. Um é começar usando os agentes de código para melhorar sua confiança no código existente. Acho que todo mundo concorda que mais testes provavelmente é coisa boa — afirmar que os programas estão bem especificados e se comportam corretamente conforme os usuários interagem é coisa boa. Os agentes são super bons em olhar o código existente com algum contexto de como ele deve ser usado e escrever testes que afirmam esse comportamento. Usar isso para melhorar sua confiança na qualidade do código também aumenta a capacidade dos agentes de navegá-lo, o que significa que você não precisa se preocupar tanto em revisar a saída deles em detalhe.</p>
+<p>O outro jeito é olhar como você está gastando seu tempo. É olhando para o editor escrevendo código? Esperando testes rodarem? Esperando feedback de review humano? CI lento? Talvez você tenha um monte de testes flaky. Use os agentes para automatizar incrementalmente as partes onde você está gastando tempo. As partes de maior alavancagem do nosso trabalho são definir o que precisa ser feito, priorizar e agendar, e empoderar os colegas a fazer. Quanto mais a gente delega e vai para esse papel de sequenciamento e orquestração — pensa em tocar times — mais execuções paralelas e profundas dessas delegações conseguimos. Se eu coloco primitivas que facilitam responder a eventos numa fila Kafka, não preciso ficar no detalhe com cada engenheiro implementando consumer corretamente. Esse mesmo estilo de building block aplica super bem aos agentes e empilha super bem.</p>
+</section>
+<section>
+<h2 id="s25">AGENTES NO CARRO E O AGENTE 24/7 <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=1949" target="_blank" rel="noopener" aria-label="Pular para 32:29 no vídeo">32:29</a></h2>
+<p>Como você trabalha com agentes no carro?</p>
+<p>— Não usei o novo modo de voz lançado no CarPlay, ainda não estou pronto para isso. Mas o que faço é disparar uma tarefa antes de sair do escritório, faço tether do laptop com o celular, prendo no banco de trás e deixo cozinhar nos 30 minutos até em casa. Na maioria das vezes, com as skills que invocamos — que dizem ao agente &ldquo;você está numa tarefa, vai até os testes ficarem verdes&rdquo; — não preciso esticar para clicar &ldquo;sim, continue&rdquo;. Consigo saturar o dia mais completamente com consumo de token.</p>
+<p>O sonho é ter 50 agentes rodando 24/7 sem precisar interagir com nenhum. O caminho é definir bem o trabalho, descobrir como agendar automaticamente, e me remover de ter que clicar no botão. Toda vez que preciso digitar &ldquo;continue&rdquo; para o agente, é uma falha do harness em prover contexto suficiente sobre o que é continuar até a conclusão.</p>
+</section>
+<section>
+<h2 id="s26">ESCALANDO ARQUITETURA — 750 PACOTES PNPM <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=2019" target="_blank" rel="noopener" aria-label="Pular para 33:39 no vídeo">33:39</a></h2>
+<p>Conforme seu mapa de conhecimento da org escala, que passos práticos você tem para divulgação progressiva? Como escalar agentes para trabalhar bem com codebase maior?</p>
+<p>— Quando comecei o projeto: repositório em branco, Electron app, V single package. E acabamos numa bagunça, porque não tinha privacidade de pacote para impor invariantes sobre quais APIs são públicas. O agente não tinha hooks concretos no sistema de arquivos para determinar quais domínios estavam separados. Acabamos indo de cara para &ldquo;organização de 10.000 engenheiros&rdquo;, pesado em arquitetura: 750 pacotes no workspace PNPM, isolados por domínio de regra de negócio ou camada do stack, pacotes pequenos individuais util que encapsulam funcionalidade reusável e que linta-se sobre o uso, codificando alavancagem.</p>
+<p>Mesmo que você não tenha microservices, estruturar repositórios para conseguir escopar o subree do diretório que está olhando para conseguir fazer a maior parte da mudança, ajuda. Código no sistema de arquivos também é texto — então é efetivamente prompt que você está dando para seu agente de código. Fazer o código ser o mais parecido possível faz com que, independente de onde no repositório seu agente esteja olhando, ele desenvolva muito contexto transferível. Você deveria ter um único jeito de fazer um helper de bounded concurrency. Um único jeito de construir um comando observável com efeito colateral instrumentado. Um único ORM. Uma única linguagem de programação. Um único jeito de escrever scripts de CI. Um único jeito de adicionar regras de lint. Isso significa que os tokens que você quer que o modelo produza são mais fáceis e mais consistentemente previstos, independente de onde ele olhe.</p>
+<p>Estruture o código para ser local a um subree na maioria das interações com aquele sistema. E descubra como usar agentes para migrar a codebase inteira para ser igual. Empodere alguém do time para ser ditador e dizer &ldquo;é assim que tem que ser feito&rdquo;. Escreve, evolui o código para refletir essa realidade.</p>
+</section>
+<section>
+<h2 id="s27">CODE REVIEW EM ALTA VELOCIDADE — GARBAGE COLLECTION DAY <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=2186" target="_blank" rel="noopener" aria-label="Pular para 36:26 no vídeo">36:26</a></h2>
+<p>Como você aborda code review agora que tem tanta velocidade? Você simplesmente não lê o código? Confia no test coverage? Como remove o bloqueio mental de &ldquo;preciso checar tudo manualmente antes de mergear&rdquo;?</p>
+<p>— Mesma ideia: olhe onde está gastando tempo, descubra como gastar menos. Quando começamos, o primeiro passo foi fazer o agente produzir código aceitável de forma confiável. E o desafio grande: cada engenheiro produzindo 3 a 5 PRs por dia, mesmo num time de 3, conflitos de merge ficaram terríveis. Os PRs eram grandes, trabalhávamos nas mesmas partes. Aí movemos em duas direções: arborizar mais o código para minimizar conflitos, e minimizar o tempo que PRs ficavam abertos. Os PRs ficavam muito tempo abertos porque precisavam de code review — humanos eram o gargalo.</p>
+<p>Para automatizar isso, pedi a cada engenheiro do time para tirar um dia por semana — sextas, chamamos de &ldquo;garbage collection day&rdquo; — em que o trabalho inteiro era pegar todo bit de slop observado durante a semana que estava dificultando merges e descobrir como eliminar categoricamente daquilo voltar a acontecer. Foi quando começamos a fechar o loop entre o feedback que humanos davam (que indica falha de contexto do agente), levar isso para o repositório e descobrir como prompt-injetar o agente automaticamente para que se autocurasse. Vai do tempo síncrono humano gasto dando feedback como comentário de review para documentação no repositório, surfada automaticamente via teste falhante ou agente revisor primado para revisar com base nos docs. Tudo isso acontece colocando esses docs num único lugar a que todos esses processos conseguem se acoplar.</p>
+<p>Pedimos para as pessoas categorizarem o tipo de feedback de review como persona — tipo arquiteto front-end, engenheiro de confiabilidade, escalabilidade. Para cada persona, subimos um agente revisor disparado em cada push, que pergunta &ldquo;esse código está bom? Aflorar P2 ou pior que bloqueariam o merge baseado nesta documentação que diz como é bom&rdquo;. Apendando continuamente nesses arquivos, vimos slop reduzir, reduzir, reduzir.</p>
+</section>
+<section>
+<h2 id="s28">DISTRIBUIÇÃO DOS BILHÕES DE TOKENS <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=2368" target="_blank" rel="noopener" aria-label="Pular para 39:28 no vídeo">39:28</a></h2>
+<p>Onde seus bilhões de tokens são gastos? Quanto vai em code review? Para quem está começando com um plano Pro de US$ 200, se tivesse que cortar pra um quinto do uso, como maximizar?</p>
+<p>— Probabilísticamente, é um terço, um terço, um terço: planejamento e curadoria de ticket; documentação e implementação; e coisas que rodam em CI.</p>
+<p>Você usa plan mode?</p>
+<p>— Usei &ldquo;exec plans&rdquo;, uma versão inicial publicada por nós, uma proto-skill que diz como estruturar um plano com marcos e critérios de aceite. Não usei plan mode no harness. Minha expectativa é que eu deveria conseguir largar um ticket e ele faz o trabalho de qualquer jeito, sem desviar para um plano — porque eu nunca vou ler de verdade. Se você usa um plano e aprova sem ler, está codificando um monte de instruções que não necessariamente quer seguidas. Se for usar planos, recomendo subir como PRs separados só com o plano, com humano revisando cada linha, bloqueando em aprovação humana antes de mergear e disparar o rollout. Caso contrário, está desperdiçando tempo num rollout com instruções ruins.</p>
+<p>Mas acho que gastar tokens em CI é parte necessária — porque escrever código não é mais a parte difícil. Conseguir o código aceito e avançar produto é o que torna o código escrito valioso. Vocês conhecem o aforismo de que engenheiros sêniores dão bons code reviews — esperamos que nossos engenheiros sêniores como agentes façam o mesmo.</p>
+</section>
+<section>
+<h2 id="s29">CÓDIGO COMO ARTEFATO DESCARTÁVEL — LLM COMO COMPILADOR FUZZY <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=2509" target="_blank" rel="noopener" aria-label="Pular para 41:49 no vídeo">41:49</a></h2>
+<p>Código é um artefato de build descartável?</p>
+<p>— Sim. Tocamos nisso com o Symfony, esse orquestrador de agentes que lançamos. A ideia de que dá para publicar uma biblioteca que é, na real, uma especificação muito bem definida, da qual o código é o artefato compilado. Usar LLM como compilador fuzzy é um modelo mental interessante. Todo o contexto que estamos pondo na codebase para harness engineering é, efetivamente, restrições e passos de otimização sobre qual código é aceitável construir em primeiro lugar. É bem similar às passadas de análise estática e otimização que algo como o LLVM faria compilando código Rust.</p>
+<p>Trocar um modelo por outro é como trocar o backend de geração de código de LLVM para Cranelift no compilador Rust — você espera que todas as regras sobre o que é Rust aceitável produzam código de máquina válido e sólido na saída, mesmo que o processo de geração mude e você acabe com instruções x86 diferentes. Mesma mentalidade para LLMs trocando modelos. Queremos que a estrutura ao redor do código limite o jeito como é escrito ao que seria aceitável para nós.</p>
+</section>
+<section>
+<h2 id="s30">O FUTURO — ORÇAMENTO DE TOKENS PARA UM TRIMESTRE <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=2601" target="_blank" rel="noopener" aria-label="Pular para 43:21 no vídeo">43:21</a></h2>
+<p>Em alto nível, qual futuro você está construindo? Contexto ainda importa? Como as pessoas fazem engenharia, harness engineering, context engineering?</p>
+<p>— A feature que quero construir é onde eu consigo pegar um orçamento de tokens e um trimestre, semestre ou ano de trabalho, pegar o input humano para ranquear o que é mais importante — métricas de sucesso, métricas de confiabilidade — entregar para as máquinas, e ter elas continuamente trabalhando e avançando o produto sem minhas mãos explicitamente no volante.</p>
+<p>Conforme passamos de prototipagem inicial para alpha interno, beta interno, alpha externo, sinto que partes novas do processo de engenharia de software começam do zero, e tivemos que construir capacidade tipo pentágono de personalidade — eu pico em uma direção e talvez seja fraco em outra. Quando chegamos em software deployado pela primeira vez, a capacidade dos agentes de fazer smoke testing de QA nos artefatos antes de promovê-los para distribuição era fraca. Não tínhamos investido tempo. Não tinha docs, não tinha ferramentas para os agentes baixarem o artefato, lançarem, cutucarem para verificar que jornadas críticas estavam validadas. Como eu não quero ficar tocando no computador, precisei descobrir como fazer os agentes construírem ferramentas para fazer essa parte.</p>
+<p>Tem um universo inteiro de engenharia de software fora de escrever código. Triagem de feedback de usuário. Triagem de páginas. Garantir que não tem PII vazando em logs de produção. Garantir que as vibes no Twitter estão boas e as pessoas estão curtindo o software. Garantir que o staff de operações de usuário está apoiado por runbooks bem escritos que permitem triar e mitigar problemas de alto volume — e depois mover isso para o próprio código para nem acontecer de novo. Como eu não preciso mais produzir código, minha mente pode mudar para essas atividades de mais alto nível ou mais &ldquo;molengas&rdquo;. Mas os agentes são bons o bastante para fazer essas coisas também, e descobrir como escrever os processos e os critérios de aceite vira a parte de meta-programação do trabalho usando esses agentes.</p>
+</section>
+<section>
+<h2 id="s31">ENCERRAMENTO <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=2757" target="_blank" rel="noopener" aria-label="Pular para 45:57 no vídeo">45:57</a></h2>
+<p>Que jeito ótimo de encerrar. Que futuro empolgante. Aplausos para Ryan, pessoal. Obrigado.</p>
+</section>
+</article>
+
+<div class="resume-banner" id="resumeBanner">
+  <span id="resumeText">Continuar de onde parou</span>
+  <div>
+    <button onclick="resumeReading()">Continuar</button>
+    <button class="dismiss" onclick="dismissResume()">✕</button>
+  </div>
+</div>
+<script src="../../js/reader.js"></script>
+<script src="../../js/lang.js"></script>
+</body>
+</html>

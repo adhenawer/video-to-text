@@ -1,7 +1,10 @@
 """Tests for HTML generation (build_html.py)."""
 import json
 import pytest
-from build_html import make_html, _match_slides_to_sections, _slide_html, _load_slides
+from build_html import (
+    make_html, _match_slides_to_sections, _slide_html, _load_slides,
+    _parse_section_heading, _timestamp_to_seconds,
+)
 
 
 # ============================================================
@@ -150,6 +153,106 @@ class TestTableOfContents:
         html = make_html("t", "T", "S", "https://example.com", sample_translated_txt)
         assert 'id="s1"' in html
         assert 'id="s2"' in html
+
+
+# ============================================================
+# Section heading timestamp parsing
+# ============================================================
+
+class TestParseSectionHeading:
+
+    def test_with_mmss_timestamp(self):
+        title, secs = _parse_section_heading("[12:34] INTRODUÇÃO")
+        assert title == "INTRODUÇÃO"
+        assert secs == 754  # 12*60 + 34
+
+    def test_with_hhmmss_timestamp(self):
+        title, secs = _parse_section_heading("[1:02:03] CAPÍTULO LONGO")
+        assert title == "CAPÍTULO LONGO"
+        assert secs == 3723  # 3600 + 120 + 3
+
+    def test_without_timestamp(self):
+        title, secs = _parse_section_heading("INTRODUÇÃO")
+        assert title == "INTRODUÇÃO"
+        assert secs is None
+
+    def test_zero_timestamp(self):
+        title, secs = _parse_section_heading("[0:00] ABERTURA")
+        assert title == "ABERTURA"
+        assert secs == 0
+
+    def test_extra_whitespace(self):
+        title, secs = _parse_section_heading("[5:00]   TÍTULO COM ESPAÇOS")
+        assert title == "TÍTULO COM ESPAÇOS"
+        assert secs == 300
+
+
+class TestTimestampToSeconds:
+
+    def test_mmss(self):
+        assert _timestamp_to_seconds("12:34") == 754
+
+    def test_hhmmss(self):
+        assert _timestamp_to_seconds("1:02:03") == 3723
+
+    def test_zero(self):
+        assert _timestamp_to_seconds("0:00") == 0
+
+    def test_single_digit_minutes(self):
+        assert _timestamp_to_seconds("5:30") == 330
+
+
+# ============================================================
+# Section timestamp rendering in HTML
+# ============================================================
+
+class TestSectionTimestampRendering:
+
+    @pytest.fixture
+    def timestamped_txt(self, tmp_path):
+        content = """================================================================================
+[0:00] INTRODUÇÃO
+
+Primeiro parágrafo da introdução.
+
+================================================================================
+[12:34] DESENVOLVIMENTO
+
+Segundo bloco com mais conteúdo do tema central.
+
+================================================================================
+[45:00] CONCLUSÃO
+
+Encerramento do artigo com pontos finais.
+"""
+        path = tmp_path / "ts.txt"
+        path.write_text(content)
+        return str(path)
+
+    def test_youtube_emits_timestamp_link(self, timestamped_txt):
+        html = make_html("vid", "T", "S", "https://youtu.be/abc123", timestamped_txt)
+        # Section heading should have a clickable timestamp link to the video
+        assert 'class="ts-link"' in html
+        assert 'href="https://youtu.be/abc123?t=754"' in html
+        assert '>12:34<' in html
+
+    def test_youtube_section_title_intact(self, timestamped_txt):
+        html = make_html("vid", "T", "S", "https://youtu.be/abc123", timestamped_txt)
+        assert ">DESENVOLVIMENTO" in html  # title preserved without [12:34] prefix
+        assert "[12:34]" not in html  # raw bracket form stripped from h2
+
+    def test_twitter_emits_plain_timestamp_no_link(self, timestamped_txt):
+        html = make_html("vid", "T", "S", "https://x.com/i/status/123", timestamped_txt)
+        assert 'class="ts-mark"' in html
+        assert '>12:34<' in html
+        # Twitter has no time deep-link, so no ts-link with ?t=
+        assert '?t=' not in html
+
+    def test_no_timestamp_no_extras(self, sample_translated_txt):
+        # Backward compat: posts without [mm:ss] should render normally, no ts elements
+        html = make_html("vid", "T", "S", "https://youtu.be/abc", sample_translated_txt)
+        assert 'class="ts-link"' not in html
+        assert 'class="ts-mark"' not in html
 
 
 # ============================================================

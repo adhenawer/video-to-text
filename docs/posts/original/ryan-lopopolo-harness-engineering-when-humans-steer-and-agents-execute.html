@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ryan Lopopolo — Harness Engineering: How to Build Software When Humans Steer and Agents Execute</title>
+<meta name="description" content="Our next speaker is here to speak about harness engineering — how to build software when humans steer and agents execute. Please join me in welcoming to the stage member of technical staff at OpenAI,...">
+<meta name="author" content="Ryan Lopopolo (Member of Technical Staff, OpenAI) · AI Engineer Summit London">
+<link rel="canonical" href="https://adhenawer.net/posts/original/ryan-lopopolo-harness-engineering-when-humans-steer-and-agents-execute.html">
+<link rel="alternate" hreflang="pt-BR" href="../pt_br/ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam.html">
+<link rel="alternate" hreflang="en" href="../original/ryan-lopopolo-harness-engineering-when-humans-steer-and-agents-execute.html">
+<link rel="alternate" hreflang="x-default" href="../pt_br/ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ryan Lopopolo — Harness Engineering: How to Build Software When Humans Steer and Agents Execute">
+<meta property="og:description" content="Our next speaker is here to speak about harness engineering — how to build software when humans steer and agents execute. Please join me in welcoming to the stage member of technical staff at OpenAI,...">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Leituras — Podcasts &amp; Vídeos Traduzidos">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ryan Lopopolo — Harness Engineering: How to Build Software When Humans Steer and Agents Execute">
+<meta name="twitter:description" content="Our next speaker is here to speak about harness engineering — how to build software when humans steer and agents execute. Please join me in welcoming to the stage member of technical staff at OpenAI,...">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Ryan Lopopolo — Harness Engineering: How to Build Software When Humans Steer and Agents Execute", "description": "Our next speaker is here to speak about harness engineering — how to build software when humans steer and agents execute. Please join me in welcoming to the stage member of technical staff at OpenAI,...", "author": {"@type": "Person", "name": "Ryan Lopopolo (Member of Technical Staff, OpenAI)"}, "publisher": {"@type": "Organization", "name": "Leituras — Podcasts & Vídeos Traduzidos"}, "inLanguage": "en", "isAccessibleForFree": true, "url": "https://www.youtube.com/watch?v=am_oeAoUhew", "articleSection": ["INTRODUCTION", "STARTING AS A TOKEN BILLIONAIRE", "THE WAY WE BUILD SOFTWARE HAS CHANGED", "SKILLS SHIFT TOWARD SYSTEMS AND DELEGATION", "CODE IS FREE", "EVERY ONE OF YOU IS A STAFF ENGINEER", "THE NEW SCARCE RESOURCES", "INTERNAL TOOLS WITH I18N FROM DAY ONE", "HUMANS NO LONGER NEED TO THINK ABOUT IMPLEMENTATION", "LARGE-SCALE REFACTORING IS NOW FREE", "WHAT IT MEANS TO DO A GOOD JOB", "EVERY ENGINEER AS A SPECIALIZED PERSONA", "PROMPTS, REVIEWERS AND AUTO-COMPACTION", "TESTS AND LINTS AS PROMPTS", "ERROR MESSAGES THAT INSTRUCT THE MODEL", "IT'S ALL PROMPTS", "LEVERAGE COMPOUNDS", "CLOSING THE KEYNOTE", "OPENING THE Q&A", "WORKFLOW: TICKETS, SKILLS AND HARNESSES", "AVOIDING OVER-ENGINEERED HARNESSES", "LEVERAGING THE LABS' NATIVE HARNESS", "COLLABORATION PLATFORM — MARKDOWN AND PRs", "HOW TO GET STARTED WITH CODING AGENTS", "AGENTS IN THE CAR AND THE 24/7 AGENT", "SCALING ARCHITECTURE — 750 PNPM PACKAGES", "HIGH-VELOCITY CODE REVIEW — GARBAGE COLLECTION DAY", "DISTRIBUTING THE BILLIONS OF TOKENS", "CODE AS A DISPOSABLE BUILD ARTIFACT — LLM AS A FUZZY COMPILER", "THE FUTURE — A QUARTER'S TOKEN BUDGET", "CLOSING"]}
+</script>
+<link rel="stylesheet" href="../../css/style.css">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="40c8ae3d-2e6b-4af4-a89b-f578dd3b2315"></script>
+</head>
+<body class="page-article" data-storage-key="reading_am_oeAoUhew_">
+<header class="site-header">
+  <a class="site-brand" href="../../index.html">Readings</a>
+  <div class="lang-bar">
+    <button class="lang-btn" data-lang="pt-BR" aria-label="Português">PT</button>
+    <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+  </div>
+</header>
+<div class="progress" id="progress"></div>
+<div class="reading-pct" id="readingPct"></div>
+<article class="container">
+  <a href="../../index.html" class="back-home">← Back</a>
+  <header>
+    <h1>Ryan Lopopolo — Harness Engineering: How to Build Software When Humans Steer and Agents Execute</h1>
+    <p class="meta"><cite>Ryan Lopopolo (Member of Technical Staff, OpenAI) · AI Engineer Summit London</cite></p>
+    <p class="meta"><a href="https://www.youtube.com/watch?v=am_oeAoUhew" target="_blank" rel="noopener">🎥 Watch on YouTube</a></p>
+  </header>
+  <nav aria-label="Article table of contents">
+    <h3>Contents</h3>
+    <ol>
+<li><a href="#s1">INTRODUCTION</a></li>
+<li><a href="#s2">STARTING AS A TOKEN BILLIONAIRE</a></li>
+<li><a href="#s3">THE WAY WE BUILD SOFTWARE HAS CHANGED</a></li>
+<li><a href="#s4">SKILLS SHIFT TOWARD SYSTEMS AND DELEGATION</a></li>
+<li><a href="#s5">CODE IS FREE</a></li>
+<li><a href="#s6">EVERY ONE OF YOU IS A STAFF ENGINEER</a></li>
+<li><a href="#s7">THE NEW SCARCE RESOURCES</a></li>
+<li><a href="#s8">INTERNAL TOOLS WITH I18N FROM DAY ONE</a></li>
+<li><a href="#s9">HUMANS NO LONGER NEED TO THINK ABOUT IMPLEMENTATION</a></li>
+<li><a href="#s10">LARGE-SCALE REFACTORING IS NOW FREE</a></li>
+<li><a href="#s11">WHAT IT MEANS TO DO A GOOD JOB</a></li>
+<li><a href="#s12">EVERY ENGINEER AS A SPECIALIZED PERSONA</a></li>
+<li><a href="#s13">PROMPTS, REVIEWERS AND AUTO-COMPACTION</a></li>
+<li><a href="#s14">TESTS AND LINTS AS PROMPTS</a></li>
+<li><a href="#s15">ERROR MESSAGES THAT INSTRUCT THE MODEL</a></li>
+<li><a href="#s16">IT'S ALL PROMPTS</a></li>
+<li><a href="#s17">LEVERAGE COMPOUNDS</a></li>
+<li><a href="#s18">CLOSING THE KEYNOTE</a></li>
+<li><a href="#s19">OPENING THE Q&A</a></li>
+<li><a href="#s20">WORKFLOW: TICKETS, SKILLS AND HARNESSES</a></li>
+<li><a href="#s21">AVOIDING OVER-ENGINEERED HARNESSES</a></li>
+<li><a href="#s22">LEVERAGING THE LABS' NATIVE HARNESS</a></li>
+<li><a href="#s23">COLLABORATION PLATFORM — MARKDOWN AND PRs</a></li>
+<li><a href="#s24">HOW TO GET STARTED WITH CODING AGENTS</a></li>
+<li><a href="#s25">AGENTS IN THE CAR AND THE 24/7 AGENT</a></li>
+<li><a href="#s26">SCALING ARCHITECTURE — 750 PNPM PACKAGES</a></li>
+<li><a href="#s27">HIGH-VELOCITY CODE REVIEW — GARBAGE COLLECTION DAY</a></li>
+<li><a href="#s28">DISTRIBUTING THE BILLIONS OF TOKENS</a></li>
+<li><a href="#s29">CODE AS A DISPOSABLE BUILD ARTIFACT — LLM AS A FUZZY COMPILER</a></li>
+<li><a href="#s30">THE FUTURE — A QUARTER'S TOKEN BUDGET</a></li>
+<li><a href="#s31">CLOSING</a></li>
+    </ol>
+  </nav>
+<section>
+<h2 id="s1">INTRODUCTION <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=0" target="_blank" rel="noopener" aria-label="Pular para 0:00 no vídeo">0:00</a></h2>
+<p>Our next speaker is here to speak about harness engineering — how to build software when humans steer and agents execute. Please join me in welcoming to the stage member of technical staff at OpenAI, Ryan Lopopolo.</p>
+</section>
+<section>
+<h2 id="s2">STARTING AS A TOKEN BILLIONAIRE <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=40" target="_blank" rel="noopener" aria-label="Pular para 0:40 no vídeo">0:40</a></h2>
+<p>Good morning, London. I'm super excited to be here today. I'm Ryan Lopopolo and for the last nine months I have had the privilege of building software exclusively with agents. I am a token billionaire and I believe that in order for us to get into our AGI future, we want everybody to be token billionaires — to use the models to do the full job.</p>
+<p>What that means is to lean into the idea that the models are capable of being a full software engineer. I've lived that experience by banning my team from even touching their editors — to have to work through the models in order to get the job done. Today I'm going to talk a little bit about what it means to lean into that and operationalize the way you work, the code spaces you live in, and the processes on your teams in order to get the agents to do the full job.</p>
+</section>
+<section>
+<h2 id="s3">THE WAY WE BUILD SOFTWARE HAS CHANGED <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=100" target="_blank" rel="noopener" aria-label="Pular para 1:40 no vídeo">1:40</a></h2>
+<p>I believe I'm preaching to the choir here when I say that the way we build software has changed. In the last six months, we have seen coding agents take over the world and capability has continually advanced at a super fast pace — these models and the harnesses they live in take more complex actions, do more complicated work with higher reliability over longer time horizons.</p>
+<p>The place we've gotten to is that implementation is no longer the scarce resource of software engineering. Code is free. We have an abundance of code to solve the problems we come across in our day-to-day as we run our teams, build software, and solve user problems.</p>
+<p>Hiring the hands on the keyboards as part of our teams is only constrained by GPU capacity and token budgets. Each engineer in this room has access to 5, 50, or 5,000 engineers worth of capacity 24/7, every day of the year. Our role is to figure out how to productively deploy these resources into our code and into our teams to make use of this new capacity.</p>
+</section>
+<section>
+<h2 id="s4">SKILLS SHIFT TOWARD SYSTEMS AND DELEGATION <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=179" target="_blank" rel="noopener" aria-label="Pular para 2:59 no vídeo">2:59</a></h2>
+<p>In this world, skill sets are shifting more toward systems thinking, system design, and delegation in order to make use of this abundant capacity to produce code and solve problems. There are three reasons this happened, all in late 2025.</p>
+<p>For me, the magic moment was GPT-5.2 — when it came out, it was able to do the full job of a software engineer. The models at this point are good enough that they're isomorphic to you and me in terms of the ability to produce code at high quality that solves real user problems in real codebases.</p>
+</section>
+<section>
+<h2 id="s5">CODE IS FREE <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=219" target="_blank" rel="noopener" aria-label="Pular para 3:39 no vídeo">3:39</a></h2>
+<p>Code is free. I know this is maybe a scary thing to hear because code carries maintenance burden, but it's free to produce, free to refactor, and it is not a thing to get hung up on anymore.</p>
+<p>We think of code as burden because it's a synchronous attention drain on the human engineers on our team. But the models are incredibly patient. They are infinitely parallel. So the ability to produce, maintain, refactor, and delete code is no longer a forcing function on figuring out how to allocate resources on your engineering teams.</p>
+<p>The AGI pill here is to believe the models are capable of producing every line of code we could ever possibly need, figuring out when to delete them, when to refactor them, when to make them more reliable. Your role as a software engineer is to figure out how to unblock your team of agents, and the humans driving those agents, from being able to drive long-horizon work and do the full job.</p>
+</section>
+<section>
+<h2 id="s6">EVERY ONE OF YOU IS A STAFF ENGINEER <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=284" target="_blank" rel="noopener" aria-label="Pular para 4:44 no vídeo">4:44</a></h2>
+<p>The idea is that every one of you is a staff engineer. You have as many team members as you can possibly drive concurrently and have tokens to support. You need to look one day, one week, six months into the future to figure out what structures you need to put in place to productively harness this infinite capacity to produce code.</p>
+</section>
+<section>
+<h2 id="s7">THE NEW SCARCE RESOURCES <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=310" target="_blank" rel="noopener" aria-label="Pular para 5:10 no vídeo">5:10</a></h2>
+<p>The scarce resources today are three things: human time, human and model attention, and model context window. In a world where human time and attention is scarce, the role is to think about where that time is going, find ways to productively automate it, and move that synchronous human time into higher-leverage activities.</p>
+<p>In a world where human time is scarce and human time is required to produce code, things are stack-ranked. Items are P0 or P2 — the P3s never get done. In a world where code is free and infinitely abundant, all those P3s get kicked off immediately, maybe 4x in parallel. Pick the one that solves the problem and in it goes.</p>
+</section>
+<section>
+<h2 id="s8">INTERNAL TOOLS WITH I18N FROM DAY ONE <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=366" target="_blank" rel="noopener" aria-label="Pular para 6:06 no vídeo">6:06</a></h2>
+<p>I've had the privilege of building a ton of internal agents at OpenAI to improve the productivity of my coworkers. When code is free, all these internal tools can have good localization and internationalization from day one. I can make tools that my colleagues in London, Dublin, Paris, Brussels, Zurich, and Munich can experience in their native languages without really having to trade against any other team's capacity to make high-quality tools.</p>
+<p>We should be working with the assumption that the best parts of software engineering — the things we know, live, and breathe — are available in any product we could ever build, all the time.</p>
+</section>
+<section>
+<h2 id="s9">HUMANS NO LONGER NEED TO THINK ABOUT IMPLEMENTATION <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=412" target="_blank" rel="noopener" aria-label="Pular para 6:52 no vídeo">6:52</a></h2>
+<p>Humans no longer need to concern themselves with implementation. The important thing is not the code but the prompt and the guardrails that got you there. This is why leaving breadcrumbs — documentation, ADRs, persona-oriented documentation around what a good job looks like, all the historical logs of tickets and code reviews — matters. This is the process that got you and your teams to the code and products you have today. This is what needs to happen to get your agents there as well.</p>
+<p>Your job is to build systems, software, and structures that enable your team to be successful. To do that, we need to make them legible to the agents that are driving the implementation. Structuring them in a way that's native to the agents. Writing them in a way that respects scarce context. Making the tokens that are required to do the job easy to predict — making things the same as much as possible to limit the amount of attention the model needs to activate.</p>
+</section>
+<section>
+<h2 id="s10">LARGE-SCALE REFACTORING IS NOW FREE <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=479" target="_blank" rel="noopener" aria-label="Pular para 7:59 no vídeo">7:59</a></h2>
+<p>Large-scale refactoring in this world is free. So making things the same is something you are all able to do. There's never going to be a migration that hangs open for six months because you can't get the last parts of the codebase to do it — you can just fire off 15 agents to drive that work to completion. This is what migration means now: we can finish them. Come on, that's good — clap.</p>
+</section>
+<section>
+<h2 id="s11">WHAT IT MEANS TO DO A GOOD JOB <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=508" target="_blank" rel="noopener" aria-label="Pular para 8:28 no vídeo">8:28</a></h2>
+<p>There's a meta-epistemological question here about what it means to do a good job. Doing a good job as a software engineer is hard. It requires us years in the industry to fully internalize what it means to write high-quality, maintainable, reliable code that our teammates can build on top of, that accrues leverage to the codebase.</p>
+<p>To do a single patch well, probably requires 500 little decisions along the way around the underspecified non-functional requirements that go into producing good code. The models, during their training, have seen trillions of lines of code that make every possible choice of those non-functional requirements you could ever imagine. So it's our job to specify those non-functional requirements — to write them down in a way that the agents can see what it is to do a good acceptable job that's going to produce a merged patch.</p>
+<p>If the agents aren't doing that, it's our job to refine and restrict their output such that the code they write is acceptable. You can simply say &ldquo;do not produce slop, don't accept slop&rdquo; and you won't get slop in your codebase. But to do that requires taking short-term velocity hits to back up or double-click into a task to figure out what the agents are struggling with in your environment. Put the guardrails in place so they stop making those mistakes, then step back and spend your time on higher-leverage activities once you solve some of the blockers in the short term.</p>
+</section>
+<section>
+<h2 id="s12">EVERY ENGINEER AS A SPECIALIZED PERSONA <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=609" target="_blank" rel="noopener" aria-label="Pular para 10:09 no vídeo">10:09</a></h2>
+<p>When I think about empowering my team this way, everyone is an expert in what they bring. I have a diverse full-stack team that's experts in front-end architecture, backend scalability, being product-minded. Each of those personas fleshes out the team's skill set by bringing a different understanding, a different set of solves for those non-functional requirements.</p>
+<p>Getting teammates to write those down means every engineer driving agents gets the best of every single person on my team. I don't need to block on low-signal code review to learn what it means to write a good QA plan. Having one engineer document that in a durable way means every agent trajectory gets a good QA plan. We do this once in a high-leverage way, and stack on top.</p>
+</section>
+<section>
+<h2 id="s13">PROMPTS, REVIEWERS AND AUTO-COMPACTION <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=665" target="_blank" rel="noopener" aria-label="Pular para 11:05 no vídeo">11:05</a></h2>
+<p>How can we get the agents to do a good job? What tools and techniques do we have to essentially prompt-inject our agents and continually remind them of what it means to make those specific choices around non-functional requirements? There are many ways. You can write good AGENTS.md files. With auto-compaction — which has continued to improve, and GPT-5.4 and Codex are fantastic at it — I essentially never have to run /new anymore.</p>
+<p>I've got pictures on my Twitter of me strapping my laptop into the back of my car so I can continue running inference while commuting. In this world, you build for the expectation that context will get paged out over time. We need to continually refresh context as the agent works. Ways to do that include having reviewer agents look at the code along the way through the lens of success. We have security and reliability review agents in our codebase, running on every push and CI, that look at documentation and the proposed patch and ask simple things: are there timeouts and retries on this network code? Does the new code have a secure interface that's impossible to misuse?</p>
+<p>I'm sure everyone here has been paged for network code that failed in production causing an outage that could have been remediated by a retry and a timeout. I'm guilty of putting the retry and timeout in, merging the bug fix, and otherwise ignoring it. I am not a reliable reviewer or author of code with respect to this non-functional requirement. But taking the time to write some docs, write a lint bespoke to my codebase that looks at every fetch call to make sure there's a retry and timeout wrapped around it, means I've durably solved this problem. I can do this because I lean on the axiom that code is free, that the agents do a good job, that I can completely migrate the codebase to solve this problem durably once and for all.</p>
+<p>To operate this way, we need to step back and look at the durable classes of failures that agents and humans in the codebase are making time after time. Figure out why we're spending time on it. Devise a solution to systematically eliminate this class of misbehavior. Then continue to observe, refine, and make additional choices on those non-functional requirements.</p>
+</section>
+<section>
+<h2 id="s14">TESTS AND LINTS AS PROMPTS <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=805" target="_blank" rel="noopener" aria-label="Pular para 13:25 no vídeo">13:25</a></h2>
+<p>A neat trick: you can write tests about the source code itself, separate from lints. If we know context is limited, we can write a test that limits files to no longer than 350 lines. We're adapting our codebase to the harness, to the models — doing a little bit of engineering to be context-efficient and squeeze more juice out of the model capability we have today.</p>
+</section>
+<section>
+<h2 id="s15">ERROR MESSAGES THAT INSTRUCT THE MODEL <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=862" target="_blank" rel="noopener" aria-label="Pular para 14:22 no vídeo">14:22</a></h2>
+<p>Other things we can think about: providing good error messages that give actual remediation steps to the model and to humans for how to proceed. It's not enough to say &ldquo;lint failure because we're awaiting in a loop&rdquo; or &ldquo;we have an unknown at this deep part of the codebase, why is the model writing a function called isRecord&rdquo;. What we need to do is provide a prompt — via a lint or a test failure — that says &ldquo;no no no, you shouldn't have an unknown here at all, because we parse-don't-validate at the edge, and you certainly have a type derived from zod, load-bearing infrastructure for our AI future&rdquo;.</p>
+<p>You can just prompt things. Everything I've talked about today is a prompt. You can do this without touching the model weights at all.</p>
+</section>
+<section>
+<h2 id="s16">IT'S ALL PROMPTS <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=919" target="_blank" rel="noopener" aria-label="Pular para 15:19 no vídeo">15:19</a></h2>
+<p>A funny digression: it seems like each advancement in the complexity of the way we write code to interact with these models comes from both increasing capability in the models and increasingly niche ways of injecting prompts. Prompts you're aware of — prompts, AGENTS.md, rules-files prompts, skills prompts, lint error messages prompts, review agents that inject comments onto the PR that the agent is required to address before it can propose for merge — prompts.</p>
+<p>You're going to find lots of ways to insert prompts into your code. One way is by embedding agent SDKs into your tests that are going to review the codebase for acceptability using prompts embedded into the code. If I find myself spending a ton of time writing prompts, I can shell out to the agent for that too. I've pointed Codex at all the prompting cookbooks we have on the OpenAI developer guide and told it to synthesize a skill out of them for how to write prompts. When I find a need to write prompts to improve agent performance locally in the code, I use the skill to write prompts that I wrote with the agent looking at the prompts to write the prompts.</p>
+</section>
+<section>
+<h2 id="s17">LEVERAGE COMPOUNDS <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=1005" target="_blank" rel="noopener" aria-label="Pular para 16:45 no vídeo">16:45</a></h2>
+<p>All the leverage you're encoding into your repository, your team, and the agents this way stacks incredibly well. To pull back to the idea that a single product-minded engineer on my team was able to give us a big lift: they know what it means to write a good QA plan. To write a good QA plan, you have to document all the features, the critical user journeys, and how users engage with your applications, web apps, APIs, and services.</p>
+<p>Once you write down how to write a good QA plan with the expectation that all user-facing work has a QA plan, a review agent can assert expectations around what it means to prove you have effectively written the feature. A QA plan indicates what media should be attached to the PR for humans and agents to know you've done a good job. The consequence: I trust the output more, need to shoulder-surf the agent less, and remove myself from the loop even more to delegate more and more work to agents.</p>
+<p>All of this is making sure the agents have the tools and tokens and context to do the full job — to remove myself from the need as a synchronous driver. The models crave tokens. We can operationalize our codebase to give them tokens to drive them forward, using sub-agents and other techniques to refine agent output.</p>
+</section>
+<section>
+<h2 id="s18">CLOSING THE KEYNOTE <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=1100" target="_blank" rel="noopener" aria-label="Pular para 18:20 no vídeo">18:20</a></h2>
+<p>I'm excited to let you all know today that, in the way you all do, you can just go build things. Do not hesitate to remove yourselves from the loop by getting the agents to do the full job — because they can. Thank you.</p>
+</section>
+<section>
+<h2 id="s19">OPENING THE Q&A <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=1114" target="_blank" rel="noopener" aria-label="Pular para 18:34 no vídeo">18:34</a></h2>
+<p>Very excited to bring on our guest. We have Ryan Lopopolo today — he just gave the keynote, very exciting speaker. The man is full-send on hyper-engineering at OpenAI. A little bit of background: we did a Latent Space episode with him, shipped it the other day. He wrote a great article called &ldquo;Harness Engineering&rdquo; and we said: this is pure gold, let's get him on the podcast. He's a token billionaire spending over a billion output tokens a day — that's over $1,000. The man is really living it. Let's keep this exciting — ask good questions, ask interesting stuff, ask things people can learn from. Welcome Ryan onto the stage.</p>
+<p>Hi folks, how's it going? Excited to be here. London has been fantastic.</p>
+</section>
+<section>
+<h2 id="s20">WORKFLOW: TICKETS, SKILLS AND HARNESSES <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=1175" target="_blank" rel="noopener" aria-label="Pular para 19:35 no vídeo">19:35</a></h2>
+<p>Can you show us your actual working setup with no laptop?</p>
+<p>— Here. Beach. Margarita. Linear, right?</p>
+<p>Without showing it, what's your workflow? What's your setup? How do you approach a task?</p>
+<p>— The way me and my team work is to start with tickets. We have chunks of work we want to do, features to add to our apps, reliability work. We give the ticket to an agent along with a couple of skills that enable it to manipulate our app. We want the entry point to development to be Codex, not an environment we build around it. We do things outside-in: Codex is the entry point the same way you would be.</p>
+<p>We give it tools and instructions on how to cook. Rather than creating a shell that our app and Codex get spawned into, we have a skill that teaches Codex how to launch the app, how to spin up the local observability stack to give it logging and telemetry. We give it a skill that enables it to boot up Chrome DevTools and attach to the application via a local CLI that connects via a daemon.</p>
+<p>The whole way we have set up the repository and all of the local dev tools is for Codex to invoke them first. That means we have a bunch of little mini-harnesses within the codebase that make it really easy to slot in additional guardrails. A big package of custom ESLint rules wired into every PNPM package in the workspace. Another local dev harness that allows us to add higher-level &ldquo;wholesome&rdquo; tests that assert the structure of the code itself rather than syntax or behavior. Things like package privacy, dependency edges between layers of our stack, making sure that across multiple files zod schemas are deduplicated, that there's a single canonical implementation of our async helpers.</p>
+<p>The reason: we have seen the agents sometimes optimize for local coherence of a package rather than using our shared utilities. Having observed that, we built a bunch of little pseudo-linter source-code verification things that shake out some of that bad behavior so the humans don't get distracted paying attention to that in reviews. The setup optimizes for the agent to do the job and for humans to not have to keep track of high churn in the codebase.</p>
+<p>We centralize our leverage around five to ten skills. We don't go super wide on skills, preferring to make existing skills better — because the infrastructure within the repository, all the local developer tools, change super frequently, and I don't really have the bandwidth to keep track of this. So we hide all that complexity beneath the skills the human has to invoke and let the agent figure it out.</p>
+<p>One neat thing: when we moved from using Chrome DevTools Protocol directly to having this daemon thing, I didn't know it had happened for like three weeks. It was totally fine because Codex was able to do the thing with the documentation we had in place.</p>
+</section>
+<section>
+<h2 id="s21">AVOIDING OVER-ENGINEERED HARNESSES <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=1415" target="_blank" rel="noopener" aria-label="Pular para 23:35 no vídeo">23:35</a></h2>
+<p>You wrote an article called &ldquo;Harness Engineering&rdquo; with a section on thousands of skills versus simplifying to a few. How do you stop yourself from over-engineering harnesses? Do you build small custom tools for yourself?</p>
+<p>— I think this is gesturing toward the bitter lesson: how do I make sure the work I do isn't completely obsoleted by an increase in model capability? The way I've thought about it is doing the bare minimum amount of context management to pull in requirements for the agent to do an acceptable job over the course of its work. Context is a thing I don't think will ever be obsoleted — the models must be told the requirements of the task, which guardrails to pay attention to.</p>
+<p>A good harness is operationalized around giving the model text at the right time so it can look at the work it has done and the information around what a good job looks like. Fundamentally, models are trained to follow instructions. All the harness should do is surface instructions to the model at the right time. We want to minimize that too — you don't want to frontload all those instructions because you overwhelm the agent. But all these requirements need to be paid attention to over the entire course of a PR. Figuring out ways to defer or just-in-time surface those instructions is what a good harness should do.</p>
+<p>If you know you want your React components decomposed so they make good snapshot tests for individual more-stateless pieces, you don't need to load that up front. Let the agent cook and prototype the UI you want to build, and then at lint or test time say &ldquo;okay, you've done the work; in order to finish it, you have to break this apart so your components are small and as stateless as possible and have local dependencies on hooks instead of prop drilling&rdquo;. The agent will say &ldquo;oh, this is a new instruction for me, let me take the patch as written, modify it to make sure it adheres&rdquo;, and up it goes to GitHub. This sort of thing is not going to be obsoleted by increases in model capability — it's about getting the right text, the right context, to the agent at the right time.</p>
+</section>
+<section>
+<h2 id="s22">LEVERAGING THE LABS' NATIVE HARNESS <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=1577" target="_blank" rel="noopener" aria-label="Pular para 26:17 no vídeo">26:17</a></h2>
+<p>Can we talk about an example of a good harness? A lot of people are asking about the Codex model, the Codex harness. How does it compare to other harnesses — Claude Code, OpenCode? How do you take these decisions into play?</p>
+<p>— One thing I think is super powerful is this notion that the labs are not just post-training the models, but post-training the models in the context of the harness in which they are primarily deployed. The apply_patch tool, the specific quoting semantics of how to invoke the bash tool, are in the loop for the post-training process for the harnesses from the labs — which means there is leverage to be had by depending on these first-party harnesses directly. At least this is what I believe.</p>
+<p>Being able to direct through them via things like the SDK or manipulating the Codex app server directly means you get to ride the wave of all that leverage in post-training. Instead, focus on the parts you care about, which is what correct code looks like. I have high confidence things like Claude Code and Codex will continue to get better — that's the responsibility of the teams working on those coding agents. So in my role, where I don't really want to focus on the coding harness at all, it's figuring out ways to plug into them in ways that steer the agent. My job moves up to thinking about differences in model behavior between releases rather than deeply understanding the nuts and bolts of the harness. I think about what it means to drive the behavior I want based on observed behavior, rather than the inner mechanics.</p>
+</section>
+<section>
+<h2 id="s23">COLLABORATION PLATFORM — MARKDOWN AND PRs <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=1695" target="_blank" rel="noopener" aria-label="Pular para 28:15 no vídeo">28:15</a></h2>
+<p>Any recommendation for a collaboration platform? Is there a platform you use for agents, engineers, and developers to all collaborate?</p>
+<p>— It has largely been just markdown files in the repository and GitHub. If you think about collaborating on a document — you open Google Docs, write something, ask for feedback, people comment, you apply suggestions — it's a little clean-room environment just for that work artifact. A PR has a similar purpose. We treat that as a big hub-and-spoke broadcast domain where all the agents and humans collaborate together.</p>
+<p>Because we optimize for throughput, we don't block on any contribution. Folks can either review or not. Agents can either review or not. The implementation agent can acknowledge, defer, or reject any feedback. This allows each participant in the production of diffs to make their own judgments around what it means to deliver, receive, and respond to feedback. This has a nice property of not putting the model in a box in a bunch of places — we want them to use their good reasoning. Being super prescriptive around &ldquo;every bit of feedback must be addressed&rdquo; can have a catastrophic failure mode of your coding agent being bullied by all of the reviewers, when really we want to bias toward code being accepted, not perfect, not drowning in minutiae.</p>
+</section>
+<section>
+<h2 id="s24">HOW TO GET STARTED WITH CODING AGENTS <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=1806" target="_blank" rel="noopener" aria-label="Pular para 30:06 no vídeo">30:06</a></h2>
+<p>How should people get started with using coding agents? People doing a lot of manually written code, how do they transition? What should they offload?</p>
+<p>— Two ways to approach it. One is to start using coding agents to improve your confidence in the code as it is written today. We'd all agree that more tests is probably a good thing — to assert programs are well-specified and behave correctly as users interact with them. Agents are super good at looking at existing code with some context around how it's meant to be used and writing tests that assert that behavior. Using this to improve your confidence in code quality also increases the agents' ability to successfully navigate it, which means you don't have to worry as much about doing super-detailed review of agent output.</p>
+<p>The other way is to look at how you're spending your time. Is it staring at your editor writing code? Waiting for tests to run? Waiting for human review feedback? Is CI slow? Maybe you have a ton of flaky tests — use the agents to incrementally automate the parts where you're spending your time. The high-leverage parts of our jobs are to define the work that must be done, prioritize and schedule it, and effectively empower folks on our team to do that work. The more we can delegate and move into a sequencing-and-orchestration role — like managing teams — the more parallel and deeper individual executions of those delegations we're able to do. If I put primitives in place that make it super easy to spin up ways to respond to events on my Kafka queue, I don't really need to be in the weeds with every engineer making sure they implement a consumer correctly. These same building-block techniques apply really well to the agents and stack really well too.</p>
+</section>
+<section>
+<h2 id="s25">AGENTS IN THE CAR AND THE 24/7 AGENT <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=1949" target="_blank" rel="noopener" aria-label="Pular para 32:29 no vídeo">32:29</a></h2>
+<p>How do you work with agents in your car?</p>
+<p>— I have not used the new voice mode that launched in CarPlay recently — not ready for that. But usually I'll kick off a task right before I leave the office, tether my laptop to my phone, buckle it into the back seat, and let it cook in the 30 minutes it takes me to get home. Most of the time, with the skills we invoke that tell the agent &ldquo;you're operating on a task, you go until the tests are green&rdquo;, I don't have to reach back there and poke &ldquo;yes, continue&rdquo;. I'm able to more fully saturate my day with token consumption.</p>
+<p>The dream is I actually have 50 agents running 24/7 and don't have to interact with them at all. The way to do that is to define the work well, find ways for it to automatically be scheduled, and remove myself from having to click the button. Every time I have to type &ldquo;continue&rdquo; to the agent is a failure of the harness to provide enough context around what it means to continue to completion.</p>
+</section>
+<section>
+<h2 id="s26">SCALING ARCHITECTURE — 750 PNPM PACKAGES <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=2019" target="_blank" rel="noopener" aria-label="Pular para 33:39 no vídeo">33:39</a></h2>
+<p>As your org knowledge map scales, what practical steps do you have to enable progressive disclosure? As you have a larger codebase, more people, how do you scale your agents to work better with this?</p>
+<p>— When I initially started this project — blank repository, create Electron app, V single package — and eventually ended up with a mess. There's no package privacy that allows me to enforce invariants around what APIs are public versus not. The agent didn't have concrete hooks in the file system to determine which domains were separate from the others. So we ended up going full 10,000-engineer organization heavy on the architecture: 750 packages in the PNPM workspace, isolated by business logic domain or layer of the stack, individual small util packages that encapsulate reusable functionality that we lint on being used, encoding leverage.</p>
+<p>Even if you don't actually have microservices, structuring your repositories so you can scope the directory subtree you're looking in to do most of the change helps. Code in the file system is also text — which means it's effectively prompts you're giving to your coding agent. So making the code as much the same as possible makes it so that regardless of where in the repository your agent is looking, it develops a ton of transferable context. You should have one way to do a bounded concurrency helper. You should have one way to construct an observable instrumented side-effectful command. You should have one ORM. You should have one programming language. You should have one way of writing CI scripts. One way of adding additional lint rules — because it means the tokens you want the model to produce are easier to predict and more consistently predicted regardless of where it looks.</p>
+<p>Figure out ways to structure the code so it is local to a subtree in the repository for most of the ways you would interact with that system. Then figure out a way to use these agents to completely migrate the codebase to be the same. Empower someone on your team to be a dictator to say &ldquo;this is the way it must be done&rdquo;. Write it down, evolve the code so it reflects that reality.</p>
+</section>
+<section>
+<h2 id="s27">HIGH-VELOCITY CODE REVIEW — GARBAGE COLLECTION DAY <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=2186" target="_blank" rel="noopener" aria-label="Pular para 36:26 no vídeo">36:26</a></h2>
+<p>How do you approach code review now that you have such high velocity? Do you just not read the code? Trust the test coverage? How do you offload the mental block of &ldquo;I need to manually check everything before I merge&rdquo;?</p>
+<p>— Same idea: look at where you're spending your time and find ways to spend less. When we started, the first thing was to figure out how to get the agent reliably producing code we would accept. A big challenge: with each engineer producing three to five PRs per day, even on a team of three, merge conflicts were super miserable. PRs tended to be pretty big. We were working on the same parts of the codebase. So we moved in two directions: tree out the code more to minimize merge conflicts, and minimize the amount of time PRs were open to reduce the likelihood of a merge conflict actually occurring. The reason PRs were staying open so long was because we needed code review — humans were the blocker.</p>
+<p>To do that piece automatically, I asked every engineer on the team to take one day a week — Fridays, we called it &ldquo;garbage collection day&rdquo; — where our entire job was to take every bit of slop we had observed over the course of the week that was making a PR difficult to merge, and figure out ways to categorically eliminate it from ever happening in the first place. That's where we started closing this loop: feedback from humans on the PR indicates a context failure on behalf of the agent, get that into the repository, then figure out ways to automatically prompt-inject the agent so it would self-heal when it produced this bad behavior. This is how you go from synchronous human time spent giving feedback as code review comments to documentation in the repository, to automatically surfacing this documentation either via a failing test or a reviewer agent primed to review the code in the context of these docs. All of that happens by putting those docs in a single place that all these processes are able to attach to.</p>
+<p>We asked folks to bucket the types of review feedback they were giving by persona — front-end architect, reliability engineer, scalability engineer. For each persona, we spun up a review agent triggered on every push that says &ldquo;is this code good? Surface any P2s or above that would block this PR from merging, based on this documentation that says what good looks like&rdquo;. With that and continuously appending to those files, we started to see slop reduce, reduce, reduce.</p>
+</section>
+<section>
+<h2 id="s28">DISTRIBUTING THE BILLIONS OF TOKENS <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=2368" target="_blank" rel="noopener" aria-label="Pular para 39:28 no vídeo">39:28</a></h2>
+<p>People have questions about your billion tokens. Where are those split? How much is on code review? Where is the majority of usage coming from? For people just getting started, say they jumped into a $200 Pro plan, if they had to cut their usage by a fifth, how should they maximize?</p>
+<p>— Probabilistically, it's a third, a third, a third: planning and ticket curation; documentation and implementation; and stuff that runs in CI.</p>
+<p>Do you use plan mode?</p>
+<p>— I've used &ldquo;exec plans&rdquo;, an early version we published — a proto-skill that says how you should structure a plan with milestones and acceptance criteria. I haven't really used plan mode as part of the harness. My expectation is that I should be able to drop a ticket in and have it do the job anyway without diverting through a plan, because most of the time I'm never going to read it anyway. If you use a plan and approve it without reading at all, you're encoding a bunch of instructions you don't necessarily want followed. If you are going to use plans, my recommendation is to push those up as single PRs with just the plan, where you actually have humans review every line of it and block on human approval before they get merged and then kicked off — because you're potentially wasting your time on a rollout with bad instructions.</p>
+<p>I do think getting tokens spent in CI is a necessary part — because writing code is no longer the hard part. Getting code accepted and advancing the code and product forward is what makes that written code valuable. You've all heard the aphorism that senior engineers give good code reviews — we expect our senior engineers as agents to do the same.</p>
+</section>
+<section>
+<h2 id="s29">CODE AS A DISPOSABLE BUILD ARTIFACT — LLM AS A FUZZY COMPILER <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=2509" target="_blank" rel="noopener" aria-label="Pular para 41:49 no vídeo">41:49</a></h2>
+<p>Is code a disposable build artifact?</p>
+<p>— Yes. We touch on this with Symfony, an agent orchestrator we released. The idea that we can publish a library that's actually a super well-defined spec, of which the code is a compiled artifact. Using the LLM as a fuzzy compiler is an interesting mental model. All the context we're putting in the codebase for harness engineering is effectively constraints and optimization passes on which code is acceptable to build in the first place. It's pretty similar to the static analysis and optimization passes that something like LLVM would do in the process of compiling Rust code.</p>
+<p>Swapping out one model for another is like changing your code-generation backend from LLVM to Cranelift in the Rust compiler — you would expect that all the rules around what acceptable Rust code looks like produce valid sound machine code out the back, even if the generation process is different and you end up with different x86 instructions. Same mindset for LLMs swapping models. We want the structure around the code to limit how it is written to things that would be acceptable to us.</p>
+</section>
+<section>
+<h2 id="s30">THE FUTURE — A QUARTER'S TOKEN BUDGET <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=2601" target="_blank" rel="noopener" aria-label="Pular para 43:21 no vídeo">43:21</a></h2>
+<p>At a high level, can you give us a picture of what future you're building for? Does context still matter? How do people do engineering, harness engineering, context engineering?</p>
+<p>— The feature I want to build toward is where I'm able to take a token budget and a quarter, half, or year's worth of work, take human input to rank what's most important — success metrics, reliability metrics — give it to the machines and have them continually work and advance my product forward without my hands explicitly on the wheels at all.</p>
+<p>As we have gone through very early prototyping to internal alpha, internal beta, external alpha, I've felt that new parts of the software engineering process started from zero, and we had to build up capability — like pentagonal personality charts where I spike in this direction, maybe I'm weak over here. When we got to deployed software for the first time, the agents' ability to do QA smoke testing on our built artifacts before they're promoted to distribution was weak. We hadn't invested any time in this. There were no docs. There were no tools the agents could use to download the built artifact, launch it, poke around to make sure our most critical user journeys were well validated and tested. Because I don't want to be touching the computer, we needed to figure out ways for the agents to build themselves tools to do that part.</p>
+<p>There's a whole universe of software engineering outside of writing code. I am triaging user feedback. Triaging pages. Making sure we don't have any PII leaking in the logs in production. Making sure the Twitter vibes are good and people are enjoying my software. Making sure our user-operations staff are supported with well-written runbooks that allow them to triage and mitigate high-volume user issues — and then moving that into the code itself so they don't happen in the first place. As I no longer have to produce code, my mind can shift to these other higher-level or more squishy activities. But the agents are good enough to do these things too, and figuring out how to write down the processes and the acceptance criteria becomes the meta-programming part of the job using these agents.</p>
+</section>
+<section>
+<h2 id="s31">CLOSING <a class="ts-link" href="https://www.youtube.com/watch?v=am_oeAoUhew&t=2757" target="_blank" rel="noopener" aria-label="Pular para 45:57 no vídeo">45:57</a></h2>
+<p>That's a great way to end it. What an exciting future. Give it up for Ryan. Thank you folks.</p>
+</section>
+</article>
+
+<div class="resume-banner" id="resumeBanner">
+  <span id="resumeText">Resume where you left off</span>
+  <div>
+    <button onclick="resumeReading()">Resume</button>
+    <button class="dismiss" onclick="dismissResume()">✕</button>
+  </div>
+</div>
+<script src="../../js/reader.js"></script>
+<script src="../../js/lang.js"></script>
+</body>
+</html>

@@ -8,6 +8,43 @@ CSS and JS are loaded from ../css/style.css and ../js/reader.js.
 import json, re, os, sys
 
 
+_SECTION_TS_RE = re.compile(r'^\[(\d{1,2}(?::\d{2}){1,2})\]\s+(.+)$')
+
+
+def _timestamp_to_seconds(ts):
+    """Convert "mm:ss" or "hh:mm:ss" → integer seconds."""
+    parts = [int(p) for p in ts.split(":")]
+    if len(parts) == 2:
+        m, s = parts
+        return m * 60 + s
+    h, m, s = parts
+    return h * 3600 + m * 60 + s
+
+
+def _parse_section_heading(line):
+    """Parse "[mm:ss] TITLE" or "TITLE". Returns (title, seconds_or_None)."""
+    m = _SECTION_TS_RE.match(line.strip())
+    if not m:
+        return line.strip(), None
+    return m.group(2).strip(), _timestamp_to_seconds(m.group(1))
+
+
+def _render_heading(section_id, title, seconds, video_url, provider_obj):
+    """Render an <h2> for a section, optionally with a timestamp link/mark."""
+    base = f'<h2 id="s{section_id}">{title}'
+    if seconds is None:
+        return base + '</h2>'
+    ts_fmt = f"{seconds // 60}:{seconds % 60:02d}" if seconds < 3600 \
+        else f"{seconds // 3600}:{(seconds % 3600) // 60:02d}:{seconds % 60:02d}"
+    deep_link = provider_obj.build_video_url(video_url, seconds) if provider_obj else None
+    if deep_link:
+        return (
+            f'{base} <a class="ts-link" href="{deep_link}" target="_blank" '
+            f'rel="noopener" aria-label="Pular para {ts_fmt} no vídeo">{ts_fmt}</a></h2>'
+        )
+    return f'{base} <span class="ts-mark" aria-label="Momento no vídeo">{ts_fmt}</span></h2>'
+
+
 def _load_slides(slides_json_path):
     """Load slides JSON manifest. Returns list of slide dicts or empty list."""
     if not slides_json_path or not os.path.exists(slides_json_path):
@@ -140,6 +177,15 @@ def make_html(vid_id, title, subtitle, url, txt_path,
     with open(txt_path, 'r') as f:
         raw = f.read()
 
+    # Resolve provider object (for video deep-link building); falls back to None
+    provider_obj = None
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from providers import detect_provider
+        provider_obj = detect_provider(url)
+    except Exception:
+        provider_obj = None
+
     slides = _load_slides(slides_json_path)
 
     # Strip line numbers if present
@@ -182,8 +228,9 @@ def make_html(vid_id, title, subtitle, url, txt_path,
             if is_short and not is_paragraph_start:
                 section_id += 1
                 section_slug = f"s{section_id}"
-                toc_parts.append(f'<li><a href="#{section_slug}">{stripped}</a></li>')
-                html_parts.append(f'<h2 id="{section_slug}">{stripped}</h2>')
+                title_clean, ts_seconds = _parse_section_heading(stripped)
+                toc_parts.append(f'<li><a href="#{section_slug}">{title_clean}</a></li>')
+                html_parts.append(_render_heading(section_id, title_clean, ts_seconds, url, provider_obj))
                 continue
             else:
                 formatted = re.sub(r'"([^"]+)"', r'&ldquo;\1&rdquo;', stripped)

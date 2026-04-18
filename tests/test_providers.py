@@ -68,6 +68,25 @@ class TestYouTubeProvider:
     def test_link_text(self):
         assert "YouTube" in self.provider.link_text
 
+    # --- build_video_url() ---
+
+    def test_build_video_url_short_form(self):
+        url = self.provider.build_video_url("https://youtu.be/abc123def45", 779)
+        assert url == "https://youtu.be/abc123def45?t=779"
+
+    def test_build_video_url_watch_form(self):
+        url = self.provider.build_video_url("https://www.youtube.com/watch?v=abc123def45", 779)
+        assert url == "https://www.youtube.com/watch?v=abc123def45&t=779"
+
+    def test_build_video_url_replaces_existing_t(self):
+        url = self.provider.build_video_url("https://www.youtube.com/watch?v=abc123def45&t=120", 779)
+        assert "t=779" in url
+        assert "t=120" not in url
+
+    def test_build_video_url_zero_seconds(self):
+        url = self.provider.build_video_url("https://youtu.be/abc", 0)
+        assert url == "https://youtu.be/abc?t=0"
+
 
 # ============================================================
 # Twitter Provider
@@ -120,6 +139,12 @@ class TestTwitterProvider:
 
     def test_link_text(self):
         assert "Twitter" in self.provider.link_text
+
+    # --- build_video_url() ---
+
+    def test_build_video_url_returns_none(self):
+        # Twitter/X has no documented timestamp deep-link support
+        assert self.provider.build_video_url("https://x.com/i/status/123", 779) is None
 
 
 # ============================================================

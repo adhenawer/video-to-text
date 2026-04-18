@@ -1,6 +1,7 @@
 """YouTube provider — fetches transcript via youtube-transcript-api."""
 
 import re
+from urllib.parse import urlparse, parse_qsl, urlencode, urlunparse
 
 
 def _format_timestamp(seconds: float) -> str:
@@ -36,6 +37,14 @@ class YouTubeProvider:
             if match:
                 return match.group(1)
         return url
+
+    def build_video_url(self, url: str, seconds: int):
+        """Return URL that opens the video at `seconds`. Sets/replaces the `t` query param."""
+        parsed = urlparse(url.strip())
+        params = [(k, v) for k, v in parse_qsl(parsed.query) if k != "t"]
+        params.append(("t", str(int(seconds))))
+        new_query = urlencode(params)
+        return urlunparse(parsed._replace(query=new_query))
 
     def fetch_transcript(self, url: str, timestamps: bool = True) -> str:
         from youtube_transcript_api import YouTubeTranscriptApi

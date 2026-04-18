@@ -1,5 +1,15 @@
 [
   {
+    "video_id": "am_oeAoUhew",
+    "provider": "youtube",
+    "title": "Ryan Lopopolo — Engenharia de Harness: Como Construir Software Quando Humanos Conduzem e Agentes Executam",
+    "subtitle": "Ryan Lopopolo (Member of Technical Staff, OpenAI) · AI Engineer Summit Londres",
+    "url": "https://www.youtube.com/watch?v=am_oeAoUhew",
+    "slug": "ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam",
+    "slug_en": "ryan-lopopolo-harness-engineering-when-humans-steer-and-agents-execute",
+    "date": "2026-04-17"
+  },
+  {
     "video_id": "We7BZVKbCVw",
     "provider": "youtube",
     "title": "Chefe do Claude Code: O Que Acontece Depois Que a Programação For Resolvida",
