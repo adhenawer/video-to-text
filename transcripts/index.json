@@ -7,7 +7,20 @@
     "url": "https://www.youtube.com/watch?v=am_oeAoUhew",
     "slug": "ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam",
     "slug_en": "ryan-lopopolo-harness-engineering-when-humans-steer-and-agents-execute",
-    "date": "2026-04-17"
+    "date": "2026-04-17",
+    "references": {
+      "path": "transcripts/youtube/am_oeAoUhew.references.json",
+      "counts": {
+        "books": 0,
+        "tools": 18,
+        "papers": 0,
+        "people": 1,
+        "concepts": 13,
+        "companies": 4,
+        "related_posts": 7
+      },
+      "total": 36
+    }
   },
   {
     "video_id": "We7BZVKbCVw",
@@ -512,7 +525,10 @@
         "related_posts": 7
       },
       "total": 50
-    }
+    },
+    "timestamps_backfilled": false,
+    "needs_full_regen": true,
+    "regen_reason": "YouTube API entregou só último 1h (3:58:45→4:56:04). Raw completo (4h44) re-capturado em PT."
   },
   {
     "video_id": "2043679971927896218",

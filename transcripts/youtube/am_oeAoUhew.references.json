@@ -1,0 +1,252 @@
+{
+  "video_id": "am_oeAoUhew",
+  "extracted_at": "2026-04-17",
+  "books": [],
+  "tools": [
+    {
+      "name": "Codex (OpenAI)",
+      "url": "https://github.com/openai/codex",
+      "context": "Harness de código primário do Ryan; ponto de entrada do desenvolvimento, em vez de IDE"
+    },
+    {
+      "name": "Claude Code",
+      "url": "https://www.anthropic.com/claude-code",
+      "context": "Citado como exemplo de harness de primeira parte de outro lab — Ryan acredita que vai continuar melhorando"
+    },
+    {
+      "name": "OpenCode",
+      "url": "https://github.com/sst/opencode",
+      "context": "Mencionado como alternativa de harness ao Codex e Claude Code"
+    },
+    {
+      "name": "Symfony (OpenAI agent orchestrator)",
+      "url": "https://github.com/openai/symfony",
+      "context": "Orquestrador de agentes lançado pela OpenAI; código como artefato compilado de uma spec"
+    },
+    {
+      "name": "Chrome DevTools Protocol",
+      "url": "https://chromedevtools.github.io/devtools-protocol/",
+      "context": "Conexão via daemon; Ryan não percebeu por 3 semanas que migraram do CDP direto para o daemon"
+    },
+    {
+      "name": "ESLint",
+      "url": "https://eslint.org/",
+      "context": "Pacote grande de regras customizadas em todo pacote PNPM do workspace"
+    },
+    {
+      "name": "PNPM",
+      "url": "https://pnpm.io/",
+      "context": "Workspace com 750 pacotes isolados por domínio"
+    },
+    {
+      "name": "Linear",
+      "url": "https://linear.app/",
+      "context": "Sistema de tickets — input do workflow do Ryan"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/",
+      "context": "PR como hub-and-spoke para colaboração entre humanos e agentes"
+    },
+    {
+      "name": "Zod",
+      "url": "https://zod.dev/",
+      "context": "Validação de schema citada como “load-bearing infrastructure for our AI future”"
+    },
+    {
+      "name": "React",
+      "url": "https://react.dev/",
+      "context": "Exemplo: componentes decompostos para snapshot tests stateless"
+    },
+    {
+      "name": "Apache Kafka",
+      "url": "https://kafka.apache.org/",
+      "context": "Exemplo de primitiva — eventos disparam consumers em vez de implementações ad-hoc"
+    },
+    {
+      "name": "Electron",
+      "url": "https://www.electronjs.org/",
+      "context": "Stack inicial do projeto (blank repo → app Electron)"
+    },
+    {
+      "name": "LLVM",
+      "url": "https://llvm.org/",
+      "context": "Análise estática + passos de otimização — analogia para o que harness engineering faz com LLMs"
+    },
+    {
+      "name": "Cranelift",
+      "url": "https://cranelift.dev/",
+      "context": "Backend alternativo de geração de código no compilador Rust — analogia para trocar de modelo LLM"
+    },
+    {
+      "name": "Latent Space (podcast)",
+      "url": "https://www.latent.space/",
+      "context": "Episódio com Ryan que precedeu a keynote; fonte de divulgação do ensaio Harness Engineering"
+    },
+    {
+      "name": "AGENTS.md",
+      "url": "https://agents.md/",
+      "context": "Convenção de arquivo lido por agentes (similar ao CLAUDE.md) — Ryan cita como uma das formas de prompt"
+    },
+    {
+      "name": "AI Engineer Summit (London)",
+      "url": "https://www.ai.engineer/",
+      "context": "Evento onde a keynote foi apresentada"
+    }
+  ],
+  "papers": [],
+  "people": [
+    {
+      "name": "Ryan Lopopolo",
+      "role": {
+        "pt": "Member of Technical Staff, OpenAI — autor do ensaio “Harness Engineering”",
+        "en": "Member of Technical Staff, OpenAI — author of the “Harness Engineering” essay"
+      },
+      "url": "",
+      "context": "Palestrante; token bilionário (>1B tokens output/dia, >$1.000/dia)"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Harness engineering",
+      "url": "",
+      "context": "Tese central da palestra: engenharia das estruturas que entregam contexto ao agente no momento certo"
+    },
+    {
+      "name": "AGI",
+      "url": "https://en.wikipedia.org/wiki/Artificial_general_intelligence",
+      "context": "Ryan: para chegar no futuro AGI, todos precisam ser “token bilionários”"
+    },
+    {
+      "name": "The Bitter Lesson",
+      "url": "http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
+      "context": "Ensaio de Rich Sutton — Ryan cita ao explicar como evita over-engineerar harnesses que ficariam obsoletos"
+    },
+    {
+      "name": "Auto-compaction",
+      "url": "https://docs.claude.com/en/docs/claude-code/memory",
+      "context": "Compactação automática de contexto; com ela, Ryan quase nunca precisa rodar /new"
+    },
+    {
+      "name": "Architecture Decision Records (ADRs)",
+      "url": "https://adr.github.io/",
+      "context": "Forma de deixar “rastros” de decisão para humanos e agentes consultarem depois"
+    },
+    {
+      "name": "Prompt injection (próprio)",
+      "url": "https://en.wikipedia.org/wiki/Prompt_injection",
+      "context": "Ryan ressignifica o termo: injetar prompts no próprio agente via lints, AGENTS.md, reviewer agents, etc."
+    },
+    {
+      "name": "Parse, don’t validate",
+      "url": "https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/",
+      "context": "Padrão citado nos prompts via lint failures — “we parse-don't-validate at the edge”"
+    },
+    {
+      "name": "Snapshot testing",
+      "url": "https://jestjs.io/docs/snapshot-testing",
+      "context": "Razão para decompor componentes React em peças menores, mais stateless"
+    },
+    {
+      "name": "Sub-agents",
+      "url": "https://docs.claude.com/en/docs/claude-code/sub-agents",
+      "context": "Técnica para refinar saída do agente principal e gastar tokens de forma estruturada"
+    },
+    {
+      "name": "Garbage Collection Day",
+      "url": "",
+      "context": "Sextas-feiras: time inteiro caça slop observado na semana e elimina categoricamente via lints/docs"
+    },
+    {
+      "name": "LLM as fuzzy compiler",
+      "url": "",
+      "context": "Modelo mental de Ryan: harness aplica restrições e otimizações sobre qual código é aceitável — análogo às passagens do LLVM"
+    },
+    {
+      "name": "Token billionaire",
+      "url": "",
+      "context": "Ryan gasta >1 bilhão de tokens output por dia — meta: que todo engenheiro chegue lá"
+    },
+    {
+      "name": "Apply patch tool (Codex)",
+      "url": "https://platform.openai.com/docs/guides/codex",
+      "context": "Tool específica que faz parte do post-training do Codex — exemplo de leverage do harness nativo do lab"
+    }
+  ],
+  "companies": [
+    {
+      "name": "OpenAI",
+      "url": "https://openai.com/"
+    },
+    {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com/"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/"
+    },
+    {
+      "name": "Google",
+      "url": "https://google.com/"
+    }
+  ],
+  "related_posts": [
+    {
+      "slug_pt": "boris-cherny-dicas-praticas-para-usar-claude-code",
+      "slug_en": "",
+      "reason": {
+        "pt": "Visão paralela do outro lab (Anthropic) sobre como operar agentes de código no dia a dia",
+        "en": "Parallel view from the other lab (Anthropic) on operating coding agents day-to-day"
+      }
+    },
+    {
+      "slug_pt": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
+      "slug_en": "engineering-practices-make-coding-agents-work",
+      "reason": {
+        "pt": "Outra abordagem prática para fazer agentes de código funcionarem em produção",
+        "en": "Another practical approach to making coding agents work in production"
+      }
+    },
+    {
+      "slug_pt": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills",
+      "slug_en": "why-we-stopped-building-agents-started-building-skills",
+      "reason": {
+        "pt": "Tese complementar da Anthropic — skills como leverage, próximo do que Ryan defende com 5-10 skills centralizadas",
+        "en": "Complementary Anthropic thesis — skills as leverage, close to Ryan's 5-10 centralized skills"
+      }
+    },
+    {
+      "slug_pt": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia",
+      "slug_en": "senior-engineer-demonstrates-spec-driven-ai-development-flow",
+      "reason": {
+        "pt": "Spec-driven flow alinha-se com a ideia de “código como artefato compilado de uma spec”",
+        "en": "Spec-driven flow aligns with the “code as compiled artifact of a spec” idea"
+      }
+    },
+    {
+      "slug_pt": "do-prompt-a-producao-o-que-e-engenharia-agentica",
+      "slug_en": "prompt-production-agentic-engineering",
+      "reason": {
+        "pt": "Outra introdução à engenharia agêntica em produção — bom complemento à keynote do Ryan",
+        "en": "Another intro to agentic engineering in production — good complement to Ryan's keynote"
+      }
+    },
+    {
+      "slug_pt": "engenharia-agentica-contexto-guardrails-e-criatividade",
+      "slug_en": "agentic-engineering-context-guardrails-creativity",
+      "reason": {
+        "pt": "Trio contexto + guardrails + criatividade — exatamente os pilares da Harness Engineering do Ryan",
+        "en": "Context + guardrails + creativity trio — exactly Ryan's Harness Engineering pillars"
+      }
+    },
+    {
+      "slug_pt": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
+      "slug_en": "one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code",
+      "reason": {
+        "pt": "Multi-agente em times — extensão natural do “50 agentes 24/7” que Ryan sonha",
+        "en": "Multi-agent teams — natural extension of Ryan's “50 agents 24/7” dream"
+      }
+    }
+  ]
+}

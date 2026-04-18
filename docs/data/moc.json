@@ -1,6 +1,14 @@
 {
   "nodes": [
     {
+      "id": "ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam",
+      "title": "Ryan Lopopolo — Engenharia de Harness",
+      "subtitle": "Ryan Lopopolo (Member of Technical Staff, OpenAI) · AI Engineer Summit Londres",
+      "url_pt": "posts/pt_br/ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam.html",
+      "url_en": "posts/original/ryan-lopopolo-harness-engineering-when-humans-steer-and-agents-execute.html",
+      "refs_total": 36
+    },
+    {
       "id": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
       "title": "Chefe do Claude Code",
       "subtitle": "Lenny's Podcast com Boris Cherny (Chefe do Claude Code, Anthropic)",
@@ -194,6 +202,34 @@
     }
   ],
   "edges": [
+    {
+      "source": "boris-cherny-dicas-praticas-para-usar-claude-code",
+      "target": "ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam"
+    },
+    {
+      "source": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
+      "target": "ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam"
+    },
+    {
+      "source": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills",
+      "target": "ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam"
+    },
+    {
+      "source": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia",
+      "target": "ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam"
+    },
+    {
+      "source": "do-prompt-a-producao-o-que-e-engenharia-agentica",
+      "target": "ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam"
+    },
+    {
+      "source": "engenharia-agentica-contexto-guardrails-e-criatividade",
+      "target": "ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam"
+    },
+    {
+      "source": "ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam",
+      "target": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code"
+    },
     {
       "source": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
       "target": "claude-code-leak-what-weve-learned-so-far"
