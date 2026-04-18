@@ -1,0 +1,33 @@
+================================================================================
+[0:00] TRADING COM ORDER FLOW — DO MERCADO GLOBAL AO MERCADO CHINÊS
+
+Nós fazemos trading em mercados globais: ouro, contratos grandes, e também alguns instrumentos no mercado americano, como futuros do S&P 500 e futuros do Nasdaq.
+
+O método que usamos talvez não seja muito conhecido por todos. É um método baseado em order flow — ou seja, opero através de dados de profundidade de mercado (deep order book) para fazer trading.
+
+Na verdade, dentro do trading existe muita incerteza. Se eu tentar prever a direção do mercado, estarei sempre usando dados históricos para prever a direção futura. Isso é probabilístico por natureza. Porém, dentro do trading também existem algumas certezas.
+
+================================================================================
+[0:32] UM EXEMPLO PRÁTICO NO NASDAQ
+
+Neste trade no Nasdaq, a lógica é bem simples. É baseado na microestrutura do mercado. Você pode ver aqui: um gain de 170 pontos, 170 dólares. Foi um trade de rompimento (breakout).
+
+Você pode observar que havia algumas ordens segurando nessa região, então ainda havia uma probabilidade de que a tendência continuasse. Ou então poderia haver um reteste desse nível. É isso que fazemos no dia a dia.
+
+================================================================================
+[1:04] ACESSIBILIDADE PARA TRADERS INDIVIDUAIS
+
+Talvez alguns traders individuais nunca tenham entrado em contato com essas técnicas, mas não é algo particularmente difícil de usar.
+
+Vamos abrir cursos presenciais aqui em Hangzhou — treinamentos de trading de curto prazo (day trading). Porque não quero que aconteça o que é típico da cultura chinesa: quando alguém domina essas técnicas, guarda para si e não compartilha com os outros.
+
+Na verdade, esse tipo de trading não é muito praticado na China, mas no exterior há muitíssimos traders que fazem trading de volatilidade e usam essas técnicas.
+
+================================================================================
+[1:36] VISÃO PARA O MERCADO CHINÊS
+
+Minha esperança é conseguir elevar o ambiente de trading na China. Quero compartilhar meu conhecimento.
+
+Na verdade, sou bastante otimista em relação aos mercados chineses. Num futuro próximo, a China terá cada vez mais traders profissionais em tempo integral. O mercado de ações chinês e os futuros de commodities terão mercados cada vez maiores, com cada vez mais participantes e uma capitalização total crescente.
+
+É isso que quero fazer.

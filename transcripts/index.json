@@ -30,7 +30,8 @@
         "related_posts": 6
       },
       "total": 35
-    }
+    },
+    "timestamps_backfilled": false
   },
   {
     "video_id": "2042206218752610343",
@@ -53,7 +54,8 @@
         "related_posts": 6
       },
       "total": 26
-    }
+    },
+    "timestamps_backfilled": false
   },
   {
     "video_id": "w7CWS4bmN2A",
@@ -76,7 +78,8 @@
         "related_posts": 4
       },
       "total": 16
-    }
+    },
+    "timestamps_backfilled": false
   },
   {
     "video_id": "fzrvx_1-9_o",
@@ -99,7 +102,8 @@
         "related_posts": 5
       },
       "total": 40
-    }
+    },
+    "timestamps_backfilled": false
   },
   {
     "video_id": "aFsAOu2bgFk",
@@ -122,7 +126,8 @@
         "related_posts": 11
       },
       "total": 59
-    }
+    },
+    "timestamps_backfilled": false
   },
   {
     "video_id": "eYqt8vqeSBw",
@@ -145,7 +150,8 @@
         "related_posts": 5
       },
       "total": 26
-    }
+    },
+    "timestamps_backfilled": false
   },
   {
     "video_id": "l5zgfjXs6gQ",
@@ -168,7 +174,8 @@
         "related_posts": 5
       },
       "total": 36
-    }
+    },
+    "timestamps_backfilled": false
   },
   {
     "video_id": "Ednpn1mjKiY",
@@ -191,7 +198,8 @@
         "related_posts": 5
       },
       "total": 50
-    }
+    },
+    "timestamps_backfilled": false
   },
   {
     "video_id": "wc8FBhQtdsA",
@@ -214,7 +222,8 @@
         "related_posts": 7
       },
       "total": 61
-    }
+    },
+    "timestamps_backfilled": false
   },
   {
     "video_id": "647pVgfV2yU",
@@ -237,7 +246,8 @@
         "related_posts": 7
       },
       "total": 30
-    }
+    },
+    "timestamps_backfilled": false
   },
   {
     "video_id": "6WaeGfLnRvc",
@@ -260,7 +270,8 @@
         "related_posts": 3
       },
       "total": 32
-    }
+    },
+    "timestamps_backfilled": false
   },
   {
     "video_id": "owmJyKVu5f8",
@@ -283,7 +294,8 @@
         "related_posts": 7
       },
       "total": 43
-    }
+    },
+    "timestamps_backfilled": false
   },
   {
     "video_id": "_kMaPZE05Yc",
@@ -306,7 +318,8 @@
         "related_posts": 5
       },
       "total": 46
-    }
+    },
+    "timestamps_backfilled": false
   },
   {
     "video_id": "M30gp1315Y4",
@@ -329,7 +342,8 @@
         "related_posts": 9
       },
       "total": 18
-    }
+    },
+    "timestamps_backfilled": false
   },
   {
     "video_id": "2042960939969102251",
@@ -352,7 +366,8 @@
         "related_posts": 6
       },
       "total": 28
-    }
+    },
+    "timestamps_backfilled": false
   },
   {
     "video_id": "2042024135568629797",
@@ -398,7 +413,8 @@
         "related_posts": 2
       },
       "total": 18
-    }
+    },
+    "timestamps_backfilled": false
   },
   {
     "video_id": "2042725242741588208",
@@ -421,7 +437,8 @@
         "related_posts": 0
       },
       "total": 55
-    }
+    },
+    "timestamps_backfilled": false
   },
   {
     "video_id": "2041884593087803841",
@@ -467,7 +484,8 @@
         "related_posts": 6
       },
       "total": 20
-    }
+    },
+    "timestamps_backfilled": false
   },
   {
     "video_id": "2042624568880197650",
@@ -512,7 +530,8 @@
         "related_posts": 7
       },
       "total": 50
-    }
+    },
+    "timestamps_backfilled": false
   },
   {
     "video_id": "2043679971927896218",
@@ -535,7 +554,8 @@
       "total": 45
     },
     "slug_en": "complete-claude-code-course-4-hours",
-    "slug": "curso-completo-claude-code-4-horas"
+    "slug": "curso-completo-claude-code-4-horas",
+    "timestamps_backfilled": false
   },
   {
     "video_id": "2044874677865357634",
@@ -557,6 +577,7 @@
         "related_posts": 6
       },
       "total": 30
-    }
+    },
+    "timestamps_backfilled": false
   }
 ]
