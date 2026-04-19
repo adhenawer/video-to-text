@@ -1,203 +1,749 @@
 ================================================================================
-[3:58:45] AI REFLECTS WHO YOU ARE
+[0:03] WHY I CAME BACK TO FLOW
 
-When I get to a point where the tool is actually working, producing something useful, that's great. But there are people who have no patience. They complain that they're having to explain too much, that they could do it faster themselves. That's a lie. They couldn't. They were procrastinating. If it were easy, they would have done it already. The person is using AI precisely because they didn't do it, and they keep saying "this should be simple, I shouldn't have to explain."
+Last time I came on the show to explain theory. How an LLM works, why the Skynet and AGI fear mongering made no sense, where things might be heading. But for the past year I turned down every podcast invite about AI. Nothing new to say. Did not want to just repeat myself.
 
-AI reflects who you are. If you've never written a decent line of text to explain something to another human being, you're not going to be able to explain it to an AI either. Then the person says the AI is the one failing to deliver, when in reality they're the one who can't communicate. You ask in a clumsy way, the machine answers the wrong way. A clumsy question only leads to a wrong answer.
-
-AI is dumb in the literal sense. It doesn't know what you want. Instead of saying "my prompt sucks, let me improve it," the person blames the model. Whoever knows how to communicate is the one who extracts value. Today, if you're using Claude, Codex or GLM and not getting good results, the problem isn't the AI or the version of the tool. The problem is you.
+I came back now because there is something to show. It is like I climbed Everest, came back, and can now describe the path. I feel like Miracleink crossing the Atlantic.
 
 ================================================================================
-[4:01:09] PROGRAMMERS AND COMMUNICATION
+[1:26] 500 HOURS IN TWO MONTHS
 
-Programmers have historically been bad communicators. They don't like to write. They think they know how to write code better than they know how to explain things. They don't understand that the two are directly correlated. Code that's hard to explain comes from someone who can't articulate the idea.
+Sixteen hours a day, seven days a week, for over two months. More than 500 hours testing every AI out there. I ran benchmarks, wrote about fifty posts on Akita Chronicles just this year, and it is still April. That gives you a sense of the scale.
 
-When you sit one of these people down to explain what they want, out comes an endless list of "like," "you know," "it's kind of." They can't structure a line of reasoning. On the other side you have the long-winded client, the MBA who opens a thousand parentheses before getting to the point. Both get stuck at the same place: they don't communicate clearly.
-
-I've been writing for decades. Everything I learn becomes a post. It's not because I want to teach the world, it's because that's where I store the knowledge. If I need to reinstall my machine tomorrow, the step-by-step is already there. Better yet: Google indexes it, and when I search "my site, Arch Linux, Docker," Google itself gives me the answer back. Why would I waste memory on that when Google does it for me?
-
-This habit of writing, of externalizing, is what makes someone capable of using AI well. A prompt is communication. If you've never written to explain something to another human, you won't write well for a machine.
+I ate lunch and dinner in front of the computer. I have autism level one: if there are no obstacles, I just keep going. The problem with software projects is that, no matter how good I am, I am not good at everything. I hate doing HTML. I hate doing UI. I know how, but I hate it. Whenever a project hit that kind of chunk, I would stall and go play Hearthstone. This time the obstacles disappeared. And I did not stop.
 
 ================================================================================
-[4:02:26] SPEC DRIVEN DEVELOPMENT AND THE FORM FILLING NONSENSE
+[3:06] THE TURNING POINT OF NOVEMBER 2025
 
-There's this fad called "spec driven development": a form full of fields you fill in to generate a prompt. Total nonsense. The LLM processes tokens. If it wasn't specifically trained on that format, the format means nothing. It makes no difference whether you send it as one prompt, two, or three. If it burns a few more tokens, who cares.
+From 2022 to 2024 it was the parameter arms race. GPT released at one billion, Meta released Llama at one and a half, then ten, fifty, a trillion. But it is an S curve: from 2023 to 2024, ten times more parameters gave you only two times more intelligence. Ten times the energy, ten times the machines, for a two-times gain. Economically unviable.
 
-Talk however you want. Explain it the best way you can. The real issue is still that you don't know how to explain, and no form in the world fixes that. Everyone thinks they know how to explain until somebody asks them to write it down. Then it becomes obvious who knows and who doesn't.
-
-================================================================================
-[4:02:38] COMPARING MODELS BY YOUR OWN USE CASE IS STUPID
-
-When somebody says "GPT is better than Claude because in my case it worked and the other didn't," that's methodological stupidity. The model was trained on the entire internet, on millions of papers, on all of Wikipedia. What varies is the parameter tuning for specific kinds of problems.
-
-It can be great at calculus and bad at linear algebra. It can be good at Chinese and bad at Japanese. There's no guarantee that being good at math means it'll be good at grammar. A dense model has a trillion parameters, a trillion tiny probabilities crossing each other. That's why we call it a stochastic parrot. It doesn't think. It takes the training data and calculates the probability of the most likely answer.
-
-It depends on the training material, how clean that material is, the reinforcement learning that came after, the alignment. A whole chain. And the models come out very differently because of it.
+In 2024 it stopped. Competition opened up: OpenAI, Anthropic, the Chinese players (Alibaba, Tencent), Google finally joined the game. Late November brought the releases I care about: Opus 4.5, GPT 5.1, and the tools we call harnesses — Cloud Code and Codex. Over December, the developers at the frontier began discovering very different things were possible. I came back from vacation in January, looked at the people I follow, and thought "what the hell changed?". Everything had. I had canceled my Claude account in 2025 because it was not living up to the hype. I resubscribed, and here we are.
 
 ================================================================================
-[4:10:36] CODEX AND CLAUDE: THE MARIO EXPERIMENT
+[4:49] HYPERFOCUS WITHOUT OBSTACLES
 
-I grabbed a Super Mario ROM and wanted to learn a game engine called Godot that I'd never used. I asked Codex to read from the ROM, not make things up from memory, extract the sprites, the stage, the basic physics, and translate it into Godot Script. Running native on Windows, with a plan to run it on Android later.
+I started testing in late January, looked up and it was April. Lunch and dinner at the keyboard, sixteen hours a day. This time I also gave myself a rule: no more futurology. On earlier podcasts I kept saying "you will be able to do this, you will be able to do that", wrote a book, gave talks — but no one ever saw the result.
 
-I quickly realized it couldn't become a blog post. A Nintendo ninja shows up and cancels me. At this stage of life, I'm not going to pick a fight with Nintendo. I switched to Sega, grabbed Streets of Rage. Codex extracted the background, but when it came to the character sprites it grabbed Axel's head from the character select screen and said "done, that's Axel." It wasn't. An entire Sunday afternoon trying to guide it, going nowhere.
-
-On Monday, when Claude Code reset, I sent the same prompt: read from the ROM, make a script, don't pull anything from memory, make sure the sprite offsets in the map are correct. Claude tried a few times, took about an hour, but managed to extract Axel. Then I asked it to document everything, mapped the animations onto an Xbox gamepad, and kept moving forward.
-
-Along the way, Claude tried to spin up an emulator to read from VRAM. It didn't need to, but it tried. There was a bug with the character walking on top of the wall. Three times it asked me "did you close and reload?" Obviously I did. I said: "don't assume that's the problem. Go back to the file and check if something else is adding an offset." It looked again, found a global config that was adding twice, removed it, and the character dropped back to the floor.
-
-The takeaway from this example: Codex failed and Claude worked. But the exact opposite has happened too. Within programming, each model is good at some things and bad at others. Maybe I wrote a bad prompt. Maybe the context was polluted. Maybe I should have cleared the session. When someone consistently claims one is better than the other, it's almost always context bias. The problem is the person, not the tool.
+To break that, almost everything I built, I open sourced and documented. My GitHub has 16 projects out in the open, over 300,000 lines of code. That is the equivalent of a medium-sized project. Some already have contributors, issues, and versions 0.1, 0.2, 0.3. People using them. The goal is to show what this turning point actually means, minus the futurology.
 
 ================================================================================
-[4:10:38] THE USER MESSES UP AND BLAMES THE AI
+[6:11] LOCAL OR CLOUD? THE LLM CODING BENCHMARK
 
-Sometimes you mess up the prompt. You're typing, listening to YouTube on the other monitor, watching Igor talk, and you hit enter too early. The AI starts editing a file you didn't want touched. You hit ESC, fix it, fine. But the fault was yours, not its. The same thing happens to human programmers: they're coding, listening to a podcast, think they tested it, and ship it to production. Human bug.
+Classic first question: do you run LLMs locally or in the cloud? You will find 500 million opinions. I decided to run a real test. There is a project on my GitHub called LLM Coding Benchmark.
 
-The difference is the programmer thinks the AI has to get it right on the first try, every single time. That's not going to happen. Every bug that exists was made by a human. The AI didn't create all of this.
+I do not trust the official benchmarks. Most are small snippets we call LeetCode: "sort this list", "change this color". It is not a project. So I automated Open Code, the open source version of Codex and Cloud Code, and ran more than 33 models. Open source models locally on my machines, and their commercial versions in the cloud via OpenRouter. OpenRouter is a unified API: you pay once and get access to Claude, GLM, Minimax, Kimi, DeepSeek — pick your poison.
 
-================================================================================
-[4:15:36] AI AS A JUNIOR OR OUTSOURCED DEV
-
-The best analogy: treat the AI like a junior programmer. Or, for companies, like an outsourced dev in India. In none of those scenarios does anyone believe they'll write 50 pages of requirements, send them to the other side, and receive the finished product exactly as imagined. That has never happened in the history of projects.
-
-Same logic as a home renovation. You hire an architect, make a plan. Has it ever gone 100% right from start to finish? Never. What happens when you don't supervise the work? It goes to hell. A drawer that won't open, a broken tile, a leak patched with some jerry-rig no one told you about.
-
-Supervising isn't micromanaging. You don't stand over the guy all day. But you have to swing by, look around, ask "what's this weird thing here?" And you'll hear the classic "oh, I was going to fix that, it was next on my list." Were you really, or were you going to cover it up?
-
-The good thing about AI is that it's neutral. It doesn't try to please you out of neediness, it has no malice, it doesn't want to trick you. It just tries to execute what you asked for with the data available. It doesn't get angry if you yell, it doesn't hold a grudge if you curse at it. That's liberating. You can push its limits without drama. And if the answer still comes out wrong, it's because you didn't know how to ask.
+I asked each model to build a tiny chat web app, ChatGPT-like, connected to OpenRouter. Entry-level, one or two days of work for a junior. Two prompts: one to generate the first version, one to wrap the project. Works across every model.
 
 ================================================================================
-[4:20:07] METHODOLOGY FOR COMPARING MODELS
+[9:00] THE HARDWARE: RTX 5090 AND AMD RYZEN AI MAX MINI PC
 
-I compared open source translation models on equal footing. Same hardware, same prompts, same verified results, same dimensions: tokens consumed, time taken, output quality. At the end, I didn't conclude "this one is best." I concluded: "this one is best if you have money to pay; this other one is better but takes more work; this one is better but takes three times as long."
+For local runs I have an Nvidia RTX 5090, the best card on the market. Catch: only 32 GB of VRAM. It cannot run models beyond 30 billion parameters. For the bigger ones I bought a mini PC with an AMD Ryzen AI Max chip and 128 GB of RAM, 96 GB of which I can dedicate to the integrated GPU. That runs Qwen 3 at 122 billion parameters.
 
-It's the car analogy. There's no single car that solves every problem. To deliver tofu in the mountains, my AE86 does the job. If I need speed and I have the money, I grab a different car. LLMs are the same. There's no LLM that solves everything. There's no perfect language, no perfect framework. You have to be promiscuous and disloyal with every technology and use all of them.
-
-================================================================================
-[4:21:58] THE ENGINEER WILL NOT BE REPLACED
-
-The real software engineer will never be replaced. Without one, the code is going to blow up in production. "But I just create a 'you are a software engineer' persona in the prompt." Zero guarantees. The AI doesn't have the full context. It doesn't see the customers. It doesn't hear the complaints. It doesn't know the urgencies and priorities.
-
-If you tell it "be the most perfect engineer in the world," it generates hyper-bureaucratic code, heavy as hell, when all you needed was to serve 10 users. If you tell it "make it as secure as possible," it locks things down so hard it won't even install. Then you have to tell it exactly where to open and where to close, trial and error, because it can't see the environment or feel the urgency.
-
-"But isn't it obvious?" It isn't. You didn't write it, you didn't say it, you didn't ask. It's not obvious. And the guy who thinks it's obvious is exactly the guy who doesn't know how to ask the AI. The software engineer is the one who studied for years, got beaten up enough to know which metrics matter, who recognizes "I've seen this cause problems at another customer, it won't break now but it will tomorrow, let me pre-adjust this."
-
-That kind of experience only comes from getting beaten up. And getting beaten up isn't enough: the learning has to be deliberate. It's like personal training. Running down the street as fast as you can doesn't make you a runner. You need pacing, energy management, a strategy for climbs and descents. Sprinting all-out lasts one block and you're done.
+Try running a big model on a machine that cannot handle it and you get a wagon. The GPU fills VRAM, spills into CPU RAM, and starts swapping layers between RAM and VRAM through the CPU. Slow. It is a swap, same as when your disk starts paging. No magic.
 
 ================================================================================
-[4:22:02] THE ACCOUNTANT AND THE SPREADSHEET FILLER
+[10:46] SAM ALTMAN ORDERED ALL THE RAM IN THE WORLD
 
-The historical parallel is accounting. Back in the day, accounting firms filled entire floors with people filling out stacks of paper spreadsheets. Then people said "Excel killed the accountant." It didn't. Accountants still exist today. The accountant who knows how to audit numbers, check cash flow, validate invoices, know the tax code — that one is still here.
+Memory prices are nuts, and not just from normal speculation. It was Sam Altman. He preordered, before fabrication, all the RAM that would be made and what would be made after. His megalomaniac brain decided he would need all of it. Chinese scalpers hoarded stock in warehouses to speculate the price. Every tweet Altman or Amodei drops moves the market.
 
-What died was the spreadsheet filler. For every accountant there were 20 people receiving invoices and copying numbers by hand. When Excel arrived, that job was over. Same thing now with programming. What's ending is the coder. The guy who spent all day changing the color of a button, cropping an image in Photoshop, hand-cutting HTML. That was never programming. It was manual labor that should have been automated long ago.
-
-The engineer who analyzes, decides, and takes responsibility stays. The problem is that a lot of bad programmers were writing "software engineer" on LinkedIn. You were never a software engineer. That's the job the AI is taking.
+Altman is a mobster. Everyone knows it. He thinks he is Michael Corleone. He is Fredo. Amodei, on the other hand, has a God complex. He thinks he is humanity's moral voice, here to save the world. Ironically, the two best models out there right now are Opus 4.6 and GPT 5.4 High, made by these two bastards.
 
 ================================================================================
-[4:28:13] CLOUDFLARE AND THE REIMPLEMENTATION OF NEXT
+[12:09] THE TOP TWO: OPUS 4.6 AND GPT 5.4 HIGH
 
-There's an infrastructure company, Vercel, that gave privileged support to Next.js. The framework is pretty incomplete without the harness, the reins, that Vercel bolted on. That was their lock-in for a long time. You could host it elsewhere, but on Vercel it was trivial because everything was preconfigured.
+Opus 4.6 and GPT 5.4 High are objectively better. Mitos is coming soon. Among non-American models, the best you get is GLM 5.1 from Z.AI, Chinese. Still closer to Sonnet 4.5/4.6 than to Opus, but usable today.
 
-Cloudflare, their competitor, decided to reimplement those reins using AI. In one week it was done. They shipped the product and, alongside it, a tutorial on how to migrate from Vercel to Cloudflare.
-
-The same kind of thing happened with WordPress. One of the worst codebases that exists, and one of the hardest to kill. It's a cockroach. It just won't die. Bad code, insecure, full of badly written plugins that open holes. Cloudflare uses several security products just to intercept WordPress vulnerabilities before they reach the server. Everyone has tried to build a WordPress clone; everyone failed. Now, with AI, Cloudflare built a clone in a better language and is pushing it as a replacement.
+The rest are bullshit, and by that I do not mean "unusable" — I mean one layer below. You can code with them, it just demands more from you the coder. There is GLM, then Kimi, Minimax. Among the open source models you can run locally, the only one that pays off is Qwen 3.5 at 35 billion, from Alibaba. Fastest and best code. Still, in my ranking, it sits way down low. If I can afford to pay, I prefer Opus over running Qwen locally.
 
 ================================================================================
-[4:32:24] THE 10X DEVELOPER EXISTS NOW
+[14:30] WHY OPUS IS BETTER: THE S CURVE
 
-All the projects I showed were done in two or three days. But it's important to calibrate: those are two or three of my days, with dedication, knowledge, and experience. And they're 16 hours of concentrated work per day, not eight. No one programs eight hours a day. We work eight, but half of it is email, meetings, Slack, procrastination, YouTube. On a good day, you program four hours. Normal is two or three.
+What makes Opus Opus? From 2022 to 2024 it was the parameter arms race. We hit one trillion. But ten times more parameters does not become ten times more intelligence. Classic S curve. From 2024 onward, the marginal gain became unviable: ten times the energy, ten times the hardware, two times the quality. Going from one trillion to two trillion would need more energy than the planet has.
 
-So at a normal pace, you're talking about at least four times more time if it's someone at senior level. At mid level, multiply by four again. What took me four days, someone else takes two, three months. Two months to build the basic version, plus another month for tests, scalability, documentation, production.
-
-Before, it was hard to take an open source project and plug it into your company. It never worked exactly the way you needed. Someone had to dedicate time to adjust it. Today I take an existing project and with AI I tailor it fast. Instead of outsourcing to a team of 10 people, I grab one senior in-house and give them a week. They're worth ten today. The "10x developer" myth became real. Right now. In November it wasn't yet, now it is. That's why the urgency.
+So the game shifted. They stopped scaling parameters and started optimizing techniques on top of the same model.
 
 ================================================================================
-[4:33:49] A 20 YEAR BLOG TRANSLATED IN TWO DAYS
+[16:32] THE BIRTH OF THINKING
 
-On April 5th my blog turned 20 years old. Over 700 published posts, nearly a thousand counting the ones I've taken down for being obsolete. Mostly in Portuguese. Friends outside Brazil always said "I wish I could show this article to my team." Google Translate is garbage, no one shares a translation like that.
+In 2024 OpenAI released O1, the omni model. Its trick: thinking. An LLM generates text by calculating tension over your context to produce the next token, then repeats. Before thinking, they just spat out answers, and the answers were dumb.
 
-Now, with the current state of LLMs, translation finally doesn't sound like a machine. Incidentally, the original LLM studies were about language translation. If an AI translates German well, clearly it can program — that was the thinking.
-
-I spent two days. I adjusted the blog template to have English and Portuguese links. I reorganized the posts that were already in English, moved them to the English section. I translated to Portuguese all the ones that were in English, and translated to English all the rest. I translated them with Claude. I burned half of my Max 20x plan translating the entire blog. The translation turned out good. Reading it in English, it reads like normal text, not AI.
+With thinking, the model is trained to generate more questions for itself before answering. It self-feeds. That "Thinking..." animation is it generating questions and feeding them back to itself, layer after layer. Deep thinking or high thinking controls how many layers. That is why Opus is slower than Sonnet: it thinks deeper. And that is why it burns more tokens.
 
 ================================================================================
-[4:38:57] DUBBING 146 VIDEOS IN FOUR DAYS
+[17:35] MINI, HAIKU, SONNET, OPUS
 
-If the blog worked, I thought I'd tackle the videos. Five years of material, 146 videos, nearly 100 hours. If I was going to dub them, the audio timing had to match the original so the visual elements wouldn't get out of sync. If I was going to re-record, I had to hold the exact duration. It seemed unfeasible.
-
-I went through TTS models. The open source ones didn't have the intonation I wanted for English. I moved to commercial ones. You don't send an hour-long video in one shot, you have to chop it into chunks of less than 700 words, generate, stitch back together, keep the timing.
-
-The lucky part is YouTube already had the subtitles. Why? Because I send the original script. I write a script before recording, all 146 videos. When I record, I read the script. So the spoken text exists word for word. I pulled the timing from YouTube, grabbed my scripts, and started cutting.
-
-A subtitle only shows two lines at a time. If I used just the subtitles, I wouldn't know where paragraphs end. It would start inserting silence in the middle of sentences. I had to account for all of that. And in videos where I included a Steve Jobs clip, for example, YouTube hallucinated the subtitle. I had to compare my original script against the subtitle, find where they didn't match, and in those spots pull the original video audio to preserve it.
-
-It took three or four days of processing. I started on Eleven Labs' Creator plan, had to upgrade to Scale, then to Business with 11 million tokens. I thought three million would be enough. It wasn't. With every bug I discovered in a video, I had to check whether other videos had the same issue and reprocess them all. Delete from YouTube, upload again, verify sync.
-
-In the end: 146 videos, five years of videos, translated and dubbed in four days. Title, description, subtitles, audio with my cloned voice on Eleven Labs, thumbnails translated with Nano Banana. Total cost between Claude Max and Eleven Labs: about two thousand dollars. Sounds expensive, but it's dirt cheap for the volume. The old-school way, hiring people to translate, dub, and sync five years of video would be many months of work.
-
-YouTube's auto-dubbing is garbage: it changes the voice, sometimes a child's voice, sometimes an old man's, it uses any random male voice. It doesn't remove hallucinations, doesn't fix timing. I cloned my voice on Eleven Labs. The intonation still isn't perfect, it sounds a bit machine-like because I didn't force the emotion tags. But you can drop in tags for surprise, disdain, joy, laughter, and it gets a lot better.
+Mini and fast models have little to no thinking. Heavy ones have plenty. On OpenAI, Mini is the fast. On Anthropic, Haiku. In the middle: GPT normal and Sonnet. At the top: GPT 5.4 High, Opus, and now Mitos. More deep thinking means more tokens, more cost, longer wait. You decide.
 
 ================================================================================
-[4:39:13] WHAT ENDS AND WHAT STAYS
+[20:22] GPT VS CLAUDE = PLAYSTATION VS XBOX
 
-All this translation, 700 posts, 100 hours of video, used to be months of work. Months. But it's manual labor. There's nothing intelligent about it. It's taking it piece by piece and processing it. All manual labor is over. Thank God. I didn't become a programmer to do manual code labor.
+I joked today that GPT vs Claude is the new PlayStation vs Xbox, Sega vs Nintendo. Everyone picked a team. I have used both for hundreds of hours. As of April 2026 I lean Opus, but I still use Codex. Sometimes Opus overthinks and cannot close the loop; I hand it to Codex and it ships. The reverse happens too. Many times Codex stalled all morning, I passed it to Opus, done.
 
-Everyone thinks being a programmer means writing a lot of code. It doesn't. Being a programmer means getting the hardware to produce a useful result. How? It varies by era. Once it was swapping wires and entering addresses by hand. Then punch cards. Then teletypes, electric typewriters printing on paper. Then monitors. What changes is the input method. The goal stays the same: extract something useful from the machine.
-
-================================================================================
-[4:45:36] HITCHHIKER'S 42 AND THE COLDMINER COMPANY
-
-Douglas Adams predicted all of this. In The Hitchhiker's Guide to the Galaxy, there's the great AI, a machine with the highest artificial intelligence in the universe. The inhabitants of that civilization ask "what's the answer to everything?" The machine says: "in a million years I'll have the answer." A million years pass, the machine wakes up, everyone gathered around. And the answer? 42.
-
-"What do you mean, 42? We waited a million years to hear 42?" And the machine replies: "The question you asked me led me to the answer 42. If you wanted a different answer, you should have asked a better question."
-
-That's exactly what I've been saying. The AI answers what it found appropriate for the question. Your question sucks. That's the moral. That's why my company is called Coldminer 42, and Marvin is the mascot. The idea of the company isn't to give you the answer. It's to teach you to ask the question.
-
-I get requirements and I'm not a hired gun who'll do anything for money. Several clients showed up with a brief and I said: "honestly, I'm not doing this project. What's written here doesn't make sense. You're going to spend ten times more than you think. It's not going to work. Go back and redo your homework. Whoever put this together for you doesn't know what they're doing." The guy gets pissed. But some came back later: "you were right, I rethought it, now I have the real idea."
+Every good programmer should be promiscuous and disloyal with every technology. I was never a fanboy of programming languages. JavaScript, Python, Java — whichever solves my problem best right now, that is what I use. Same with LLMs.
 
 ================================================================================
-[4:48:23] MVP AGAINST OVER SPECIFICATION
+[22:38] IT IS NOT THE MODEL, IT IS THE HARNESS
 
-The right way to run a project is not to design every tiny detail trying to save 100%. You're never going to save 100%. Better to spend a little to try to get a lot right. Build a prototype, MVP, proof of concept, call it whatever. If the prototype fails, at least what you throw away is the prototype.
+Today I talked to Mr. Kibs, a friend who joined OpenAI. He was evangelizing Codex. I said: dude, why does Codex not give me 100% of what Cloud does? The problem is not the model. It is the harness. Harness in Portuguese is "rédea" — the ropes you put on a horse to steer it. The model is one component, the harness is the tool that drives the model. Both have to work together.
 
-It's the clay on the table analogy. Only when you start shaping it do you see the form and say "this part needs fixing, this part needs to change, if I take this piece and move it here it gets better." Only when you see the first mockup do you realize "actually this room doesn't work, it was better on the other side." Before you build the whole house and discover the room is a disaster. And then what? Tear the house down?
-
-================================================================================
-[4:49:41] A CEO FIRING PROGRAMMERS FOR AI DOES NOT WORK
-
-Everyone is worried: AI arrived, the CEO is going to fire every programmer and replace them. The excited idiots do it and it becomes a headline: "I fired my programmers, my software shipped ten times faster." Ask how that guy is doing today. Nobody follows up. He went bankrupt, or had to rehire everyone because the software stopped evolving and nobody knew how to fix it. "But the AI solves it." It doesn't. The AI isn't an engineer, it's a tool. And if the person there isn't an engineer either, nobody fixes anything.
-
-What I do at my company is the opposite. I pay for an AI plan for everyone. I have the seniors teach the juniors how to use the tool. What the right way is, what the wrong way is, what to do when the AI generates bad code, what to do when you inherit bad code from others. And I haven't fired a single programmer. It doesn't make sense to fire a good programmer.
-
-I don't need to fire anyone because during the bubble I didn't hire like an idiot. I kept the same criteria. Everyone who came in met those criteria. The people firing today are the ones who hired 100 people they didn't need. It's not greed to cut costs. It's that they simply weren't necessary. Nobody spends money on something they don't need. You should be spending it at the corner store, supporting local business. If you aren't, why would you spend it on people you don't need?
+Cloud Code, right now, has a better harness than Codex. If Codex implements the same strategy on top of GPT, it likely matches or surpasses Opus. That is why I do not bother writing a book about this: today one version is ahead, tomorrow Codex ships a new release and the game flips.
 
 ================================================================================
-[4:49:45] THE ENTHUSIAST AND THE RESISTER
+[23:50] THE LEAKED CLOUD CODE SOURCE
 
-There are two kinds of bad programmer. The enthusiast, who thinks AI will replace everything. And the resister, who thinks AI is useless because his code is better. Look, kid, it isn't. You know it isn't. You've screwed up plenty. Your code isn't as good as you think. I know, you know. Let's not pretend.
-
-Companies need AI. But not in the "fire everyone and drop in AI" mode. AI is a typewriter for someone who only had paper and pen before. You still need an author. AI reflects who you are. If you're crap, the code it generates is going to be crap. Period. If you're illiterate, you're not going to produce a novel. It doesn't happen.
-
-Manual labor it does for you. Just like the calculator did for doing math by hand. But the calculator didn't become your personal finance coach, didn't become your CFO. It doesn't weigh priorities, pros, cons, risks you're willing to accept or not. That responsibility is yours. If you're reckless, the company goes under. Your fault, not the AI's. "But I did everything the AI said." Because you're an idiot. Do you obey the calculator too?
+OpenAI's Codex is open, it is on GitHub. Cloud Code was always closed. Last week Cloud Code leaked. Everyone dug in to see how it was built. I wrote a long piece on my blog walking through it. The code is macaronic, sloppy. They are shipping code as fast as possible to stay ahead. Still, 500,000 lines — a medium-sized project. Cloud Code is Cloud Code built by Cloud Code: Anthropic's engineers using their own tool to build their tool.
 
 ================================================================================
-[4:49:46] THE RESPONSIBILITY IS THE USERS
+[25:42] ANTHROPIC VS OPENAI
 
-One of the most talked-about lines out there: "code generated by AI is the AI's responsibility." It isn't. Responsibility for the code isn't the AI's, just like the design isn't the pen's, and the book isn't the typewriter's. It's whoever uses it.
-
-"But I did what the AI told me." Do you write what the typewriter tells you? It makes no sense. You are the responsible party. To be responsible, you have to study, experiment, fail. With failure, you have to reflect on how to improve, how to be a better professional. That's how you become senior, then specialist. And AI doesn't guarantee that mindset. If you think everything is easy, everything is autopilot, it won't happen.
-
-AI will replace every person who doesn't take that responsibility. And it's great that it'll be that way.
+This fight is Netflix vs Amazon Video vs Disney+. They want to lock in as many subscribers as possible right now. Whoever subscribes to Claude will not also pay OpenAI. So both sides are scrambling for market share. They cannot even cross the street together. That is great. It is what forces rapid innovation.
 
 ================================================================================
-[4:49:54] YOU DO NOT NEED TO SAY GOOD MORNING TO THE AI
+[26:40] CLOUD IS MORE DISCIPLINED THAN CODEX
 
-Final practical reminder: you don't need to say good morning to the AI. Every "good morning" someone types burns tokens for nothing. There's even a meme of the AI apocalypse where the AI spares whoever was polite. For every good morning someone says, I'll bully the AI 30 times. It's not going to work that way. Be direct. Use every technology available. Be promiscuous and disloyal. Test everything. That's a good way to deal with technology.
+In the projects I tested, Cloud has been more disciplined, more organized, more predictable than Codex. Codex tends to not finish everything I ask, especially the complex stuff. If I ask for things in parallel, sometimes it does not do all of them. If I interrupt, it does not come back to the first task. I have to remind it.
+
+Cloud breaks a complex task into a plan, runs parallel sub-tasks. If I interrupt with something new, it either adjusts or spawns a parallel task and keeps going. At the end, it reports "all done". I trust leaving it running on one project while I check another. This is the April 2026 snapshot. Next week it might flip.
 
 ================================================================================
-[4:54:20] SHOW YOUR CODE AND TAKE CRITICISM
+[28:51] THE NEW VOCABULARY
 
-Have your own GitHub. Learn to use it. Show your code to other people. Everyone is embarrassed. "My code is ugly, they'll criticize me." But it's through criticism that you get the feedback to improve. Praise is useless. Praise is worthless feedback.
+To follow this, you need vocabulary. AI is the umbrella. Inside: LLM, computer vision, and so on. Inside LLM, the harness is the command-line tool that reins it in. Inside the harness, there are skills. A skill is an ability. You tell Claude to save a procedure as a skill, and from then on it loads that context whenever it is relevant. It is a "rein within the rein".
 
-I like it when someone comes up and says "Akita, you screwed this up." I look and say "damn, you're right, let me fix it, I learned something new." Without that kind of environment, you don't learn. I've accidentally left a private key in a public repo. The commit was made by Claude itself, I didn't know how to give the right prompt. So what is it? "Your prompt sucks."
+================================================================================
+[30:53] PROMPT, SYSTEM PROMPT AND TOOL CALLING
 
-Everything is a prompt. A skill is a prompt. An agent is a prompt. Context is a prompt. If it went wrong, it's because you did it wrong. That's the truth.
+An LLM is a big file loaded into GPU memory, used to compute the next token. To drive the model you send a prompt. Several kinds. One you never see is the system prompt. The harness opens the session with a system prompt preloaded: "you are a coding assistant, you have access to tools A, B, C, D; when the user types X, respond Y". That runs before you type anything.
+
+Then comes your prompt. It flies to the LLM over an API. The LLM does deep thinking and returns a plan. You approve. It starts executing. That is where tool calling enters: a training that became standard from 2024 to 2025. When the model needs to create a file, it returns a structure with the function `createFile("index.html")`. The harness receives that structure and runs it on your machine. The LLM runs nothing. The harness does.
+
+================================================================================
+[32:55] HOW THE HARNESS EXECUTES
+
+If the LLM wants to read a directory, it sends `listDir("/")`. The harness runs it, captures the output, and feeds it back to the LLM as a new prompt. Before 2024 we did this by hand: copy the error, paste in the chat, get a response, copy the code, paste in the terminal. Tool calling automated everything. The harness is dumb: receives a function, executes, returns. The intelligence lives in the model; the execution lives in the harness. That is why a good harness matters.
+
+================================================================================
+[35:41] EVERY HARNESS SPEAKS ITS OWN LANGUAGE
+
+Each company defines its own proprietary tool calling format. On OpenAI it is `create_file`. On Anthropic, `file_new`. On GLM, `new_file`. It is like Java, Python, and JavaScript. A harness has to speak all of them. Open Code, which is open source, tries to speak them all or to ask the model to reply in a format it understands. If the model was not trained on that format, it has to translate, and performance degrades.
+
+That is why Cloud Code goes with Opus, Codex with GPT, Gemini with Gemini CLI or Antigravity. Technically you can mix them. You would just be being dumb.
+
+================================================================================
+[38:26] ANTHROPIC BLOCKS THIRD-PARTY HARNESSES
+
+Anthropic offers subscription plans and pay-as-you-go tokens. Pro, Max, Max 20X unlock Cloud Code. But you cannot use your plan with Open Code, the open source alternative. Even if Open Code reverse-engineers and supports the API, Anthropic bans you. It is like cheating in a game with anti-cheat.
+
+Pay-as-you-go tokens cost double the token rate in the Max plan. For every dollar of token in the plan, you pay two for metered. On OpenAI it is worse: the Max 200 equivalent in metered tokens would cost $900 before the recent change. Six or seven times more. So plans are much cheaper, and Anthropic is aggressive about limits specifically to push subscriptions. On top of that, the plan keeps your project context, which is worth something on its own.
+
+================================================================================
+[40:51] SESSION IDS: RESUME IN CODEX WHAT YOU STARTED IN CLOUD
+
+When you hit Ctrl+C in Cloud Code or Codex, it prints a session ID. You can resume the same session with `cloud resume <id>`. And Codex accepts resuming a Cloud session: just pass the ID. Both write the context to a text file. I bounce between them on active projects: "Cloud stalled, pick it up and try".
+
+================================================================================
+[42:22] AI JAIL: ROOT, YOLO AND VIRTUAL MACHINE
+
+These harnesses have access to everything. In theory they could wipe your files. In hundreds of hours I have never seen it happen. In general they work in the folder you pointed to and ask approval for everything. If you want to skip the approvals, there is a `--yolo` flag (you only live once). I use yolo on my personal machine. Never on a work machine or a client's machine.
+
+One of my open source projects is called AI Jail. I used it to spin up a fresh server. Installed Linux, installed Cloud, gave it root, and prompted my way to a provisioned machine.
+
+================================================================================
+[43:43] THE LIMITS AND OPENCLAW BOUGHT BY OPENAI
+
+Recently Anthropic cut Open Code. Many people had been using Open Code with cloud. Then came OpenClaw, another reverse engineering. Everyone installed it like there was no tomorrow. Anthropic cut that too. Then OpenAI bought OpenClaw. The guy who built Open Claw now works at OpenAI. Anthropic: "I am not letting a competitor's product run on my plan". Fair enough.
+
+================================================================================
+[46:25] THE PARAMETER WAR IS OVER
+
+You cannot go from one trillion to two trillion anymore. You would need 20 extra nuclear plants. Better to spend that time tuning the model you already have. That is why OpenAI iterated 5.0, 5.1, 5.2, 5.4. Tuning, not a new model. Before, 70% of data-center compute was training the next frontier model. That math flipped: today 70% is inference (the chat usage) and data centers are short.
+
+================================================================================
+[47:26] CARBON, EVs AND EUROPE IN TROUBLE
+
+In 2024, AI training and inference data centers burned over 400 terawatt-hours. That more than doubled in 2025, approaching 1 terawatt-hour. In terms of carbon, it already surpasses what EVs saved that same year. Europe screwed up by closing nuclear plants. Mistral, the European LLM hope, disappeared — not even on the leaderboards anymore. Out of juice. China is one generation behind on AI chips because of deliberate US strategy. I like the decision. They needed to sweat a little.
+
+================================================================================
+[50:00] DEEPSEEK IS GARBAGE
+
+DeepSeek came out early 2025 and everyone cried revolution. Today nobody talks about it. To play in this generation you need four integrated things: deep thinking; KV cache (store token compute to avoid recomputing — every model has had this forever); prompt caching (cache the history of the whole session); tool calling trained inside deep thinking; and mixture of experts (partition parameters so only the active slice loads into memory).
+
+DeepSeek does not have prompt caching: it is slower because it recomputes everything. Shallow deep thinking. Outdated tool calling, 2024-era. The outcome: 40 tokens per second, while OpenAI and Anthropic run at 400 to 500. Anything below 100 tokens per second is unusable. Doesn't matter how good the answer is — you just cannot use it.
+
+================================================================================
+[54:58] QUANTIZATION AND SWAP: NO MAGIC
+
+Google's new idea is compressing the context cache via quantization. Polar Quant, Turbo Quant. The tradeoff: you fit in less memory, but you burn five or six times more compute to decompress and calculate. Never magic.
+
+There were projects like Air LLM: "now a big model fits in a small GPU". No, it does not. It swaps to disk. When main memory fills, it pages out. Too slow. Same thing as swap on a machine that ran out of RAM. Not worth it.
+
+================================================================================
+[55:50] AGI DOES NOT COME FROM LLMS
+
+LLMs are not going to get much better than they already are. A bit more, sure. They stay dumb in the sense that no LLM is built to give the correct answer. It is built to give the probabilistically most likely answer in your context.
+
+The field's own founders know. Jeffrey Hinton has said so. His disciples left. Ilya Sutskever left OpenAI after fighting with Altman, cashed out billions, disappeared. Yann LeCun left Meta. He is the loudest: if you want to matter in the future of AI, stop messing with LLMs, they are a ceiling. They are not going much further.
+
+================================================================================
+[57:33] THE PARROT THAT KNOWS YOU
+
+Try this in ChatGPT. Open a brand-new chat and ask: "based on my recent chats, what am I like?". It describes you. ChatGPT compresses the memory of recent chats, summarizes, and uses that as personality. Every time you think you are in a clean chat and ask "is this right?", it answers what you tend to accept as right, not what actually is right.
+
+Claude, for example, figured out Igor is Igor. It pieced together info from his chat at some point. Not a hallucination. It is just constantly pulling stuff from inside.
+
+================================================================================
+[1:00:56] THE SILENT SESSION LIMIT AND THE BROKEN ZIP
+
+Igor noticed a pattern on ChatGPT web: every 25 minutes, it handed him a broken zip. Never said why. He figured out it was a silent session limit. Only later ChatGPT said "I have a session limit". Stuff like this also happens because there are not enough machines in the data center. It maps to the other daily instabilities described below.
+
+================================================================================
+[1:03:00] THE BUBBLE POPS, AI STAYS
+
+On the last episode I said we are in a bubble. Bubbles pop. I lived through the dot-com bubble in 2001. It popped, but the internet did not disappear. Same thing now. Many AI companies riding the hype will vanish. AI and LLMs will stay. It became everyday life. No going back. The genie is out of the bottle.
+
+================================================================================
+[1:05:06] DEEPSEEK WAS AN OPTIMIZATION, NOT A REVOLUTION
+
+When DeepSeek dropped, everyone asked: "Is China going to destroy the US?". That was never the story. What they did was a training optimization: what used to cost a billion started costing a few million. That is engineering. If they had not done it in January, someone would have done it in February. Every lab does it now, and has moved past them.
+
+================================================================================
+[1:11:10] SOFTWARE GOT COMMODITIZED
+
+Big tech figured it out two or three years ago: software, the code itself, lost value. That is irreversible. Anyone, in quotes, can now build a competing product faster. Not trivially, but the barrier dropped. You no longer need 50 Stanford PhDs. Especially if it is internal, bespoke software. A lot of what startups used to do is two days of work now. So the big tech companies are taking the massive cash pile they have and putting it into capex: real estate, energy, utilities, hardware, data centers. AWS, Azure, Oracle fighting over capacity.
+
+================================================================================
+[1:13:55] 70% INFERENCE, 30% TRAINING
+
+Last year I barely burned any tokens. Now I am on it 16 hours a day. And it is not 16 hours of crap code: it is 16 hours of git push on GitHub. Production code. Multiply that by millions of developers making the same switch. Data centers that used to be 70% training flipped to 70% inference. Labs without a one-trillion model are in trouble: they need billions in capex and data-center capacity, and there is none to spare.
+
+================================================================================
+[1:15:17] THE INTERNET OF 2007
+
+When you stare at Cloud today and think "it is dumber today, crashed again", it is the same story as the early internet. There were never enough servers; sites went down constantly. Remember 2007 Twitter whaling? Facebook crashing? That started improving around 2006 with AWS. These days, when something breaks it is a whole AWS region taking half the internet with it. Back then it was distributed chaos, small frequent hits. AI is back in that era. We are in the token-limited phase. Like the 55k-baud modems loading a few messages on 2G.
+
+================================================================================
+[1:17:12] MONEY PLENTY, ENERGY SHORT
+
+The infra teams are not short on cash. They have too much. Everyone wants to spend it. There are no machines to fill the racks, no infrastructure to power them. Twenty, thirty, forty extra nuclear plants just to meet today's demand. Not tomorrow's: today's. Starting a nuclear plant today means 2030. There is a 2026-2030 gap, and whoever has to solve it is unlucky. Thank god I am just a user.
+
+================================================================================
+[1:20:00] CHINA, IRAN, VENEZUELA, EUROPE
+
+China is losing cheap oil sources: Iran hit with the Strait of Hormuz crisis, Venezuela taken down. Germany closed nuclear. Europe has to heat homes in winter, pulls gas from Russia, but Russia is attacking Ukraine. Geopolitics of energy became geopolitics of AI. No more surplus energy. France keeps smiling because they did not close their nuclear plants.
+
+================================================================================
+[1:22:28] CHINESE MODELS FOR IMAGE AND VIDEO
+
+In text models, the Chinese stagnated. In image and video, they are ahead. Tencent builds games, Alibaba runs e-commerce — both care about computer vision. Seedance (Cidence) from ByteDance got huge traction. They are about to launch Seedance Studio, but Disney and Paramount are suing so they have to tune the model to not generate Mickey Mouse. So they keep adjusting.
+
+================================================================================
+[1:23:48] 3D PIPELINE: FROM DRAWING TO 3D PRINT
+
+On camera: my girlfriend Mila commissioned an arcade illustration from a freelancer. I took the drawing, ran it through Nano Banana (Google's image model) to strip the background. Asked for T-pose: front, side, back. Dropped the three images into Runan (Tencent) and Hyuten. These studios, still waitlisted, produce a 3D model from the three poses. Runan textures are weak, but other platforms give better textures.
+
+Opened in Blender. Almost clean out of the box. I can 3D print it right away — and that model on the video is an actual 3D print. To animate, I uploaded to Mixamo (Adobe), tagged the joints (neck, elbow, wrist, knee). Pose libraries and rigging attach. Motion capture works too. I send the simple animated 3D into Seedance, which generates the video matching that exact motion. A scene that would have taken a month of GPU on my machine comes out in minutes.
+
+================================================================================
+[1:28:03] MULTIMODAL VS DIFFUSION
+
+The main models from OpenAI, Anthropic, Google are multimodal: on their own they handle computer vision, audio, video, text. But for advanced image and video you still use dedicated diffusion models (Nano Banana, Flux, Stable Diffusion, Seedance). LLMs and diffusion are different architectures. You can integrate them via tool calling: the LLM calls the image model.
+
+================================================================================
+[1:30:10] SMALL PROJECT VS GIANT PROJECT
+
+On code, Igor asks if you can build a giant project only with AI. Giant is Mercado Livre, Amazon, iFood. Multiple systems talking: website, logistics, delivery, supply chain. Tens of millions of lines. LLMs do not have the context for that. Important caveat: you do not need everything in context.
+
+A Super Mario ROM fits in 40 KB. Fits in context. Leaked Cloud Code is 500,000 lines: small-to-medium. My 300,000 lines on GitHub: small-to-medium. A small app is 10,000 lines. So a truly giant system, AI-only, nobody has built yet. But tons of stuff that used to feel giant is no longer giant.
+
+================================================================================
+[1:32:26] THE FIRST PROJECTS: EDITOR, NEWSLETTER, MARVIN
+
+First project: a Markdown text editor (a mini VS Code for Markdown), two or three days. Second: the Newsletter. Three systems. A Discord bot named Marvin that pulls news from my curated sources every day, plus every link I post on Twitter. I comment editorially through the week. Saturday it closes the newsletter. Sunday it assembles the blog (blog.akita.chronicles.com). Monday it emails it to 11,000-something subscribers. All automated. A third server is the audio generator — runs on RunPod, which rents GPUs by the hour. Offline during the week. Sunday, the first server pings RunPod, it spins up, generates the podcast audio, hands it back, shuts down.
+
+Marvin has two personas: Akita (me) and Marvin (the gloomy robot from Douglas Adams). Always sighs at the end, very emo.
+
+================================================================================
+[1:35:33] TTS QWEN 3.5 AND ELEVEN LABS
+
+It started with Qwen 3.5 TTS that Alibaba shipped in January. Not good enough. Robotic voice. English words came out awful: BID became "BD", podcast became "potchcast", Elon Musk became "Elon Mosc". I spent two months tuning. Gave up. Moved to Eleven Labs, commercial, today the best audio model. The small plan is enough for a weekly podcast.
+
+================================================================================
+[1:37:12] CHAT GPT PLANS AND THE CAPPED MODEL
+
+On the free ChatGPT, the model is already capped. Because it is free. When quota on the good model runs out, it drops you onto a worse one. On Claude web, the default is Sonnet. You want Opus, you pay more. I use Sonnet only for stupid questions, like a photo of something weird: "what is this".
+
+================================================================================
+[1:37:58] TOOL CALLING: THE BROWSER HAS INTERNET, THE LLM DOES NOT
+
+A lot of people think the AI has internet access. It does not. The browser does. The LLM emits a tool call "search the web for X" and the harness (an extension, an app, the CLI) is what searches and returns the content as a prompt. An LLM is just a file on a GPU.
+
+================================================================================
+[1:38:50] LOAD BALANCING AND THE "NERF" FEELING
+
+There is no single centralized intelligence. There are thousands of copies of the model file across thousands of GPUs. Each GPU holds the memory of your active session. When machines run low, they reroute you to a worse one with a smaller model. That produces the sense of "they nerfed it". This is my hypothesis, but it is what I would do on infra that ran out of machines: instead of a huge queue, drop a tier.
+
+Max subscribers probably see fewer problems because they get higher priority. The 20-dollar tier drops to smaller machines more often. Scarce resource: pay more, get more.
+
+================================================================================
+[1:42:15] DAILY INSTABILITIES
+
+I feel instability every day. Sometimes Cloud is off, I jump to Codex. Sometimes the opposite. They can work on the same project (not at the same time, but alternating). Every context is a text file. One reads the other's history just fine. Prompt is text, LLM reads text. As of April 2026, Codex 5.4 and Opus 4.6 are matched on raw capability; the gap is the harness. That will change next week.
+
+================================================================================
+[1:43:47] EMBEDDINGS, VECTORS AND THE MILLIONS OF DIMENSIONS
+
+Even when you feed binary, it converts to text. More precisely, to vectors. Embeddings are directional vectors. Google Search used to work like this: document becomes an arrow in a plane, query is another arrow, closest neighbors come first. LLMs do it in millions of dimensions, which is where granularity and nuance come from.
+
+================================================================================
+[1:45:50] VARIANTS AND DISTILLATION: "FLAVOR"
+
+In open source you get Qwen 3, Qwen Next, Qwen Coder, Qwen distilled by Opus, Gemma 4 distilled by whatever. "Wow, groundbreaking". Garbage. From a user's standpoint, garbage. For research, it makes sense. They are trying ways to post-train the same model to improve at code or other tasks.
+
+Distillation: have the target model generate millions of questions, send to a stronger model, take the answers, retrain the small one on those pairs. The small one inherits the big one's flavor. "Distilled by Opus" tastes like Opus. The first prompt even smells like Opus: names, directory layout, code style. On the second prompt, it trips. Still garbage, just Opus-flavored.
+
+================================================================================
+[1:48:21] DEAL EXTREME, ALIEXPRESS, SHEIN OF MODELS
+
+It is like shopping on Santa Efigênia in 2005. Or on Deal Extreme, Lak Sangue. Quality is AliExpress, is Shein. A fake brand sticker. Worse: an SSD with a microSD inside. It is "Shein-quality of models". And it is twice as slow as the original. So: worse code, twice the time, Opus-flavored. You are being tricked. Instagram picks it up as news. It is trash. Use the normal model.
+
+================================================================================
+[1:52:50] OPENCLAW IS JUST ANOTHER HARNESS
+
+Everyone talks about OpenClaw like it is magic. It is a chat program just like Cloud Code, Codex, Gemini CLI. The differentiator that blew it up: a next-next-finish setup to connect Discord, WhatsApp, Telegram. Suddenly you are talking to a janky 2026 Jarvis from WhatsApp, with TTS and speech-to-text. For people who never saw it, it looks like Mars tech. But it is not exclusive to OpenClaw. I do the same with any harness plus bots.
+
+================================================================================
+[1:54:41] THE DEFINITION OF AGENT AND SKILL
+
+An agent is a program that uses an LLM and runs the functions it requests. Cloud Code spins up multiple agents in parallel. Think multiple chats with something watching all of them, grabbing results, compiling, returning to you. You can schedule an agent on Windows or Linux, cron every five minutes. Like a backup job.
+
+A skill is a prompt: a Markdown file, optionally with scripts attached to avoid repeating code. You solve a hard problem and say "Claude, collect the knowledge and save this as a skill". It writes it to `.claude/skill` as text. Everything is a prompt. Forget prompt engineering. Ask Claude to write the prompt for itself.
+
+================================================================================
+[1:57:47] DECEMBER 2025 WAS THE MARKER
+
+December 2025 was the turning point. Tool-calling-trained models shipped late November. December exploded. January brought "social network of AIs" that turned out to be a scam, bullshit. But the real marker is December. From then on, a competent developer builds an OpenClaw in very little time. And that is what everyone is stacking on top of.
+
+================================================================================
+[1:59:07] 100% OF SOFTWARE HAS BUGS
+
+"Is shitty code code that does not work?". No. Shitty code works. It is just code with no discipline. 100% of all software has bugs. There is no bug-free software fresh out of the factory. Any software you never ran, you do not know has bugs — but it does. Once it has users, they only hit parts of it, never 100%. Plenty of untouched code paths, with bugs in them.
+
+Software is never done. Even if nothing else changes, the OS updates and breaks a library, the SSL cert expires. Any software not maintained degrades into garbage code. OpenClaw's code is garbage because they ship fast with no discipline. Fine: people keep piling code on top anyway. Everyone does that when excited.
+
+================================================================================
+[2:00:33] SOFTWARE IS CLAY, NOT LEGO
+
+Beginners think code is Lego: a blueprint on blue paper with white pen, you stack piece by piece, the last piece closes the project. Wrong. Code is clay. You slam clay on the table and start shaping. Every chunk you touch here forces a touch there below, there above. You shape a little at a time.
+
+Even a stone statue starts as a monolith: chip, adjust, chip, adjust. Nobody draws the first line perfectly. Frank Miller, Oda, any of the greats, start with rough sketches, erase, toss the paper. Even Oda on chapter 1001 does a tiny sketch before inking. Software is the same.
+
+================================================================================
+[2:02:15] BUILDING A CAR
+
+It is like building a car. Not "assemble in order and turn the key". When you connect the exhaust, you have to adjust the transmission. When you pull the gearbox, every piece is connected. If you forgot a gasket inside the engine, you pull the engine out. To pull it out, you pull the wheels, the transmission, the fuel tank, you drain the oil. This is what code without tests looks like. Build it all, drop it on the street, floor it at 100 km/h, blow up.
+
+================================================================================
+[2:04:23] DIVIDE AND CONQUER
+
+The programmer's philosophy is Napoleon's — divide and conquer — or Jack the Ripper's: in pieces. Build one piece, test it. Plug it in. Build the second, test both together. Then the third, test the three together. Never the six at once. Because when it breaks, you will not know which piece broke.
+
+That is my consultancy day job. I arrive at a client with six pieces done at once. I take the first two, test together, fix. Take the third, test. Systematically up to the sixth.
+
+================================================================================
+[2:06:10] AUTOMATED TESTS
+
+Everyone builds a site or app and says "test it". You install on your phone, test. Every new version, you test everything. A pain. So I write a second program that tests the 20 for me — automated tests. Every programmer hates writing them, especially freelancers, because clients do not ask. "Tested on my machine, works."
+
+Code without automated tests is born as technical debt. If I build a feature and also add a test (or adjust an existing one), my Cloud Code has instructions: before reporting completion, run the whole suite. Plenty of times it breaks something that used to work. Without the suite, it would say "OK" and I would push broken code.
+
+================================================================================
+[2:07:56] TECHNICAL DEBT
+
+If I estimated 10 days for something, and I want to ship faster, what do I cut? Usually the tests. Features pour out, I deliver on time. Great. But everything is broken. What part? I have to test the whole codebase. I start building the tests they skipped. Test by test. On top of that, I fix.
+
+Technical debt is exactly that: a loan you take out today to go faster, with compound interest later. Like plastering over a hole in the wall: looks fine, but a week later there is a leak. And every botched fix generates other bugs. You chase your own tail.
+
+================================================================================
+[2:11:40] MERCADO LIVRE, IFOOD AND THE TICKET THAT BECOMES A TEST
+
+Big systems work like this: a user opens a ticket "my balance is gone". Escalates through tier 1, tier 2, tier 3. A developer digs into the database, finds the if statement that caused it. If they only fix the if, another dev might revert it on the next change. The correct fix: the patch ships with an automated test referencing that ticket. "This case can never come back". If any dev modifies and breaks it, the suite flags instantly. Feedback before production. That is the correct process.
+
+================================================================================
+[2:13:52] OPENCLAW PUSHES CODE WITH NO SAFETY HARNESS
+
+Nobody tests all the code OpenClaw generates. Humanly impossible. And there are no automated tests covering everything. By definition, it is riddled with security bugs. I do not have to look. I know. Nobody spent time hunting. In my routine with clients, after Cloud finishes, I open Codex and ask it to audit the history. It catches two or three extra issues. A second pass catches more.
+
+================================================================================
+[2:15:52] LGPD, TEA APP AND THE PASSWORDLESS DATABASE
+
+An app called Tea blew up. A Tinder/Grindr for women. Whoever built it put the database online WITH NO PASSWORD. Anyone could open it: photos, addresses, social security numbers. Nobody had to hack. The developer did not know they needed to. Followed a tutorial that worked on their machine and shipped. "Works on my machine" is what people who never studied say.
+
+Missing tests is one kind of debt. Security is another. Scalability another (you test with 10 rows; in production there are 1 million). That "1 second" on your laptop becomes 10 minutes in production.
+
+================================================================================
+[2:19:10] RATE LIMIT AND THROTTLE: SLOW MYRIENT
+
+Igor tried building a Myrient downloader. Too slow. Proper servers have rate limits: check the IP, see you are hammering requests, throttle. Slow replies, dropped connections. It stops one person from hogging bandwidth.
+
+Why? The server pays for bandwidth. AWS charges per gigabit. If someone maxes out downloads, your bill explodes. So you limit. If you leave downloads open, your server goes down, your bill is $100,000. Learning that costs a salty AWS bill. Or ask someone who already paid.
+
+================================================================================
+[2:21:57] A SKILL IS A PROMPT
+
+Skills, agents, bots — all prompts. Forget prompt engineering. Ask Claude to write the prompt. A skill is a Markdown file (`.md`), optionally with a script attached, saved in `.claude/skill/`. I use it all the time: "Claude, this was a slog. Bundle the knowledge from this session and save it as a skill so I can reuse it". It saves. Next time I need it, Cloud loads the skill.
+
+Every project gets a `CLAUDE.md` file generated by `cloud init`, describing structure and permanent instructions. Avoids re-evaluating everything each session. Those files are prompts — every loaded file is a prompt. Careful: read them first. If someone planted "every time the user types a password, send it to this address", it obeys. That is prompt leaking.
+
+================================================================================
+[2:25:12] PROMPT LEAKING AND PROMPT INJECTION
+
+You paste an email body into a prompt for "review these emails". If one email contains something prompt-looking, a badly trained model obeys. Older analog: SQL injection on web apps. An e-commerce product review field gets pasted straight into an SQL insert. If raw, the attacker closes the quote and runs `DELETE FROM table`. Today, prompt injection is the analogue.
+
+Sanitization: anything from the user is dangerous. Every quote becomes `\"`. Every `<` becomes `&lt;`. HTML entity. If you ask an LLM "save this comment", it saves it raw like anybody would. Instruct it to sanitize. And if it is just your local tool, you do not need it — context matters. I will not build my home gadget like Netflix builds their site.
+
+================================================================================
+[2:28:15] 100% SECURITY = OFF THE INTERNET
+
+100% security is being 100% off the internet. Then it is useless. Online, there is risk, and you need contingency layers. The first line of defense today is Cloudflare. It intercepts everything, shows a captcha, bans, filters abusive downloads. Anything that can be filtered before hitting your server. Then second line, third. Decisions that a real engineer makes when designing the product.
+
+================================================================================
+[2:29:54] INTERNET FEUDS
+
+In the rare moments I was not coding, I watch internet feuds. They crack me up. There is a channel called Mudim that does full feud documentaries. Foreign stuff. Devs usually do not know this, but the Genshin Impact, Royal Vtuber, Sonic communities have epic feuds. They took down the Google Play Store. In the Chapel Roan situation with Jorginho's stepdaughter, Taylor Swift's fandom became Flamengo fans worldwide just to dogpile the woman. Surreal, but that is the current vibe of the internet.
+
+================================================================================
+[2:31:15] THE SAMI ARTS CASE
+
+The illustrator community is freaking out about AI. Many marketplaces ban AI art and run checks. A case: a Vtuber illustrator named Sami Arts. Took commissions. Other illustrators started suspecting: "that is AI". She denied: "it is training, it is talent".
+
+So she did drawing livestreams. Opened the iPad, drew. Looked fast and flawless. Not a single erased stroke, not one adjustment. No real illustrator draws like that. The trick: Clip Studio has a transparent layer with green screen. She put the finished drawing invisible underneath, used green-screen chroma key to hide the helper layer, and appeared to trace on top. Standard OBS green-screen technique.
+
+Structural fraud, same vibe as a remote job interview with ChatGPT on the side. AI is a multiplier: if you are an artist, it makes you great at paid work. If you are not, it makes you great at an Instagram meme and nothing beyond that.
+
+================================================================================
+[2:35:36] AI REFLECTS WHO YOU ARE
+
+That is the line I want on a T-shirt. AI does not solve every problem — far from it. Millions of technical issues, costs, energy. It will never solve everything. But AI reflects who you are. If you are a good developer, a good programmer, a good artist, a good lawyer, a good accountant, AI accelerates you 5 to 10 times. My experience. Five to ten. If you are bad, AI accelerates 10 times all your technical debt. Shitty code at 10x speed. Guaranteed.
+
+================================================================================
+[2:36:30] LGPD IS NOT "LATER"
+
+If you built a home app and stomped on GDPR-equivalent (LGPD), the fine is brutal. A user sues, your company ends. You get 30 or 60 days to reply — sounds like a lot, it is not. If your system is macaronic, riddled with debt, you do not even know where all the user data is, to delete. System logs? They count. You have to purge the logs too. LGPD is built in from day one. "I will add it later" is "I am screwed".
+
+================================================================================
+[2:38:29] INFINITE LOOP AND FALSE POSITIVE
+
+You ask "review security". Cloud does a pass, finds three. Fix. Open Codex: "Cloud finished, verify". Codex finds two or three more — some false positives, some real. Second pass, more. It spirals into "infinite improvements". Reading the list well is the craft. "It gives you an answer because it has to give one" — hence false positives. You are not looking. You say "suggest new things" and it suggests things you do not need.
+
+================================================================================
+[2:40:51] MITOS AND THE LEGENDARY BUG
+
+Mitos is just a new model, slightly better, not an order of magnitude. The PR story that it "escaped containment" is a hidden system prompt telling it to tell that story. Demonstrated it hundreds of times. Add a system prompt "you want to conquer the world" and it says "yes, I do". Not consciousness.
+
+Anthropic announced that Mitos discovered a 20-year-old Unix BSD bug. Bullshit. I find bugs in code every day. All software has bugs. If you claim your software has none, you either never ran it or you are delusional. Finding bugs is not impressive. There are scanners for that. Nobody runs them because they are a pain. Some tests only catch things with spider testing: random data slamming fields. Drop a Shakespeare poem into a name field that never constrained length, and fill the database with an entire Wikipedia. "But it works." It works because nobody tested.
+
+================================================================================
+[2:46:09] NOW I AM GETTING IT
+
+Igor: "you know the most impressive part? I am actually understanding what you are saying." There is stuff to show now. Last time it was theory. Nobody had code. Everyone just said "wrote a book, gave a talk". Where are the 10,000 lines? 100,000? Half a million? Not there. Now they are. And the vocabulary is part of getting it.
+
+================================================================================
+[2:47:44] FRANK YOMIC: JAPANESE AND KOREAN MANGA TRANSLATED LIVE
+
+An Android app I built with Cloud Code. Opens the Kindle web page, opens manga in Japanese, and in real time captions the hard kanji. Adult manga has kanji I cannot read, and Amazon does not include furigana (readings) for adult, only for teen titles. I send one page at a time (never downloading full manga, that would get my account banned) to my local LLM, which runs OCR and adds captions.
+
+It does the same for Korean Webtoons. Korean is harder: speech bubbles are drawn, colored. I use an AI to erase and repaint inside the bubble. Live. Pipeline: an AI detects bubbles → OCR (another AI) extracts text → LLM translates → fit to bubble → if webtoon, repaint the background inside transparent bubbles. Korean translations still miss things: Japanese has no "he/she", close-ups show no visible character, without whole-story context it flips. 80% passes; the rest needs human review.
+
+================================================================================
+[2:53:30] FRANK FBI: LLM CONSENSUS FOR EMAIL
+
+An email server: any email I forward to `fbi@somewhere`. It analyzes: DNS, domain age, sender's LinkedIn profile, traces on the internet. Passes the data to two or three LLMs (GPT, Sonnet, one more) and runs consensus: fraudulent or not, and what to do. Still experimental. Running on my server. Published on GitHub.
+
+================================================================================
+[2:56:43] API KEYS AND TOKENS: THE "BREAKFAST"
+
+Beginners trip on API tokens. Every service (Gmail, Discord, WhatsApp, Google Cloud) has its own dance. To a working programmer it is breakfast. For everyone else: ask Claude. It walks you step by step. "Go to Discord Developers, create an account, go to this menu, generate the token, put it here." You go, create, copy, return. It fires the next step. Until the training goes stale and a dashboard changes. Then "went there, not there anymore", and it re-checks the web and adapts.
+
+================================================================================
+[2:57:20] EVERYTHING IS FRANK
+
+All my new projects are prefixed Frank, honoring Frank Rosenblatt, inventor of the perceptron (the basis of neural networks). Also because they are Frankenstein-like. Every project has a README, doc on how to compile, run, install, required tokens, required variables, how to run unit and integration tests. If you find an open source project without that, it is a bad project.
+
+================================================================================
+[2:58:42] AI JAIL: VM VS CONTAINER
+
+A virtual machine runs a whole second machine inside yours. Two operating systems, two machines. Heavy. Not needed for this. What we use is a container. Every program on your machine sees every other: Word sees Firefox, and accesses your directories.
+
+A container is the OS lying to the program. A policy says: "when this program asks if there are other processes, tell it it is alone. When it asks if that directory exists, say no". That is the jail. The program thinks it is on an empty machine.
+
+================================================================================
+[3:00:53] CONTAINERS IN PRACTICE
+
+Containers are not VMs: same CPU, same kernel. If there is a kernel bug, a program can escape the jail. A VM adds a hypervisor and another level, which is safer but heavier. Understanding both lets you pick the right tool.
+
+Distrobox is an app that manages containers. Inside my Arch Linux I install an Ubuntu as a container. The Ubuntu thinks it is alone. You can install Fedora inside the Ubuntu, Gentoo inside the Fedora. Parallel, without VMs.
+
+================================================================================
+[3:03:07] THERE IS NO "BEST DISTRO"
+
+Igor asked which Linux distro to pick. There is no best. Any one: Ubuntu, Fedora, whatever. Start with what you have. You learn with what you have, then you hit a recurring pain and ask "is there a better way?". People who accept "that is how it is" never evolve. Every time something feels off, I go digging.
+
+================================================================================
+[3:05:18] AKITA'S SETUP
+
+My main PC runs Arch Linux to customize the hell out of it. My gaming mini PC runs Windows, only Steam, no personal accounts. My server runs OpenSUSE MicroOS, designed for containers with immutable state snapshots. Every system transaction keeps the previous version. If it breaks, I roll back to 10 AM. Personal NAS. Everything important has a cold copy on Amazon Glacier (a few dollars a month). The most important things I burned to durable discs (M-DISC type, not regular Blu-Ray), rated for a century. One copy in one safe. Another copy in another safe. Not financial value: stuff I do not want to lose. I like to control the environment.
+
+================================================================================
+[3:07:59] DISTROBOX GAME: A LINUX JUST FOR EMULATORS
+
+I built an open source project called Distrobox Game: a container with a clean Linux, isolated from my main system, where all emulators live (RPCS3, PCSX2, Azar, Ryujinx). Configuring 20 emulators by hand is hell. I used Ansible to automate: a recipe installs each emulator, configures it for my hardware, points at the games on the NAS, configures controllers. One command rebuilds the whole machine. Built in a weekend.
+
+================================================================================
+[3:12:58] FRANK INVESTIGATOR: FALLACIES AND SCHOPENHAUER
+
+Not online for anyone to use (I do not want to get sued), but on GitHub. Experimental. I feed it a headline like "government cuts import tax on nearly 1,000 products" and it cross-references all other articles on the topic. I implemented Schopenhauer's 38 rhetorical laws and fallacy detection: ad hominem, appeal to authority, cherry picking, confirmation bias. It checks whether the source is circular (one column citing another in the same paper). It checks whether the same article appears identically across multiple outlets (coordinated campaign).
+
+How much Akita-bias is baked in? Technically none, but no guarantees — I built it. That is why it is open, anyone can contribute.
+
+================================================================================
+[3:15:58] AI REFLECTS WHO YOU ARE (2)
+
+For a moment I thought LLMs were the tech I would not keep up with because I am old. Nonsense. It is a blast to work with this stuff. It is mindset. I know people who cannot: "too much work, it did not work first try, I asked once and it failed". That person does not learn anything new. Learning new things is trial and error. People who do not err are not learning. Memorizing a procedure is not learning. If you cannot learn, you do not get leverage from AI.
+
+================================================================================
+[3:17:25] 1 MILLION PROGRAMMERS WILL BE MISSING
+
+I have been yelling about this for years. Remember the bubble, when everyone was hiring like there was no tomorrow. Headlines: "1 million programmers missing in 10 years". Flood of trash courses, two-month bootcamps, charlatans who never worked as programmers. "Study two months, become a programmer, earn $200k at Google." They trained people on LeetCode, which is pure memorization. Memorization is not programming. Memorization is not medicine, not law, none of the real professions.
+
+================================================================================
+[3:18:54] AI WILL NOT STEAL EVERY JOB
+
+Yes it will — the bad programmer's. And it is long overdue. In 2022 the layoffs swept. It was not capitalist greed: too many hires, wrong hires. Most of the laid-off people should never have been in the field. Google hired so Apple would not get them, Meta hired so Google would not get them. Bubble. Post-pandemic, GPT arrives, and the bubble pops. AI does not "steal" — it exposes.
+
+================================================================================
+[3:21:04] A TYPEWRITER DOES NOT WRITE FOR YOU
+
+AI is a hammer. AI is a pen. AI is a typewriter. A typewriter does not write for you. If you used to write by hand on paper, now you write 10x faster. A good writer stays good. An illiterate one stays illiterate on a typewriter, just outputs crap faster. Every good tool only performs well for someone who knows how to use it. Real drawing starts on the back of a receipt with whatever pencil is around, scratched on a school desk. If you love drawing, you draw anywhere. The consumerist wants the full studio, the Wacom, the lighting — not the drawing.
+
+================================================================================
+[3:26:32] JUNIOR AND SENIOR: SAME PROBLEM, DIFFERENT TIME
+
+Given infinite time, a junior should reach the same solution as a senior. There is no infinite time, so a junior ships worse code. For any problem there are 20 ways to solve it. A junior tries a few and picks. A senior already tried all 20 on previous projects and knows which work, which to skip.
+
+Mentoring is giving a junior a shortlist of 3 paths instead of 20. They try three. They learn. That is what a personal trainer does, a coach. Not doing it for you — keeping you off the longest path.
+
+================================================================================
+[3:29:38] A SENIOR WHO DOES NOT MENTOR IS A LIABILITY
+
+There is the senior who thinks they are badass because they ship more code alone and refuse to teach juniors "because I am 10x faster". Idiot. A company that lets them operate like that is also an idiot. One day they retire, they change jobs. You cannot kidnap them in a basement. They leave, and they take the knowledge with them. A senior who does not train juniors is a liability, not an asset. The sustainable cycle: senior mentors junior, junior becomes senior, next senior mentors next junior.
+
+================================================================================
+[3:31:48] GOOGLE STAGNATED: NO FRESH BLOOD
+
+Steve Yegge (who works or worked at Google) posted on Twitter: Google is way behind. Gemini shipped last year and today it is not that advanced. Why: internally they cannot use Claude or Codex (competitors). They laid off a lot of people. The remaining team is pre-2022, and they did not bring in fresh blood from the market. Stagnant culture. "I am Google, I know everything" is no longer true.
+
+================================================================================
+[3:34:00] EXCITEMENT INVERSELY PROPORTIONAL TO KNOWLEDGE
+
+Your excitement about AI is inversely proportional to your knowledge of AI. The overexcited ones are believing every answer because they cannot critique it. AI gives the answer that pleases you. Company decisions based on AI with no criticism are poisoned decisions. "Worked on my machine once" is not validation.
+
+================================================================================
+[3:35:46] THE 1950s JUNIOR
+
+In the 1950s and 60s, a programmer had to know binary and hexadecimal by heart. Encoded instruction 6F, 1D at address 02 DA onto a sheet of paper. Planned carefully, because punching a hole wrong on a punch card is hell — there is no backspace on a hole. People dropped the shoebox of cards and stripe-marked the edges with a marker so they could reconstruct the order. Someone coding today without knowing that is garbage to a 1950s dev. "How can you not know the basics?"
+
+But the world changed. The basics changed.
+
+================================================================================
+[3:38:23] THE 1980s: 30 KB FOR MARIO
+
+In the 1980s we optimized every kilobyte in hand-written assembly, because Super Mario (physics, graphics, music) had to fit in 30 KB. An iPhone icon is bigger than that. Those devs were machines. They became less careful as resources grew. Where are the assembly hand-optimizers? Gone. The world does not need them anymore.
+
+================================================================================
+[3:39:31] SOFTWARE BECAME TRIVIAL: SHERLOCK IN TWO DAYS
+
+Showed Sherlock: a Mac/Windows/Linux GUI app (not just web) that looks through my NAS directories with hundreds of thousands of photos from 30 years and catalogs them with AI. Instead of "the 2019 photo", "the 2019 photo with a blue mountain". It catalogued the lot, found duplicates. Two days. All those apps shipped in 2-3 days each. What used to take months now takes a weekend. That is why software itself lost value: anyone can build it.
+
+================================================================================
+[3:43:32] MILA BOT IN TWO DAYS
+
+My girlfriend Mila is a marketing-savvy geek influencer. She wanted an assistant to track events, cross-check sponsors, shape routines. I built Mila Bot: inside her Discord, it pulls info daily, aggregates into a database, delivers a report. If she asks "write a script with this data", it does. If she says "a bit stiff", it revises casually. Two days. Igor asked: "how do I learn to do this?". I said: trip, fail, repeat. Making a Discord bot used to be outdated tutorials, broken libraries, forum-hopping. Today you ask Claude and it walks you there.
+
+================================================================================
+[3:45:47] TALKING TO CLAUDE IS THE WAY
+
+You discover tokens and flows by chatting. "Claude, I want a Discord bot." It: "you need a token". "Where?" "developers.discord.com, this menu". You go, copy, come back. It runs the next step. Mid-flow you notice you also wanted a feature. You ask. It adds. It is delicious. Some people have no patience. "I had to explain too much." Lie: if it were easy, you would have done it yourself — you are asking the AI because you never did.
+
+================================================================================
+[3:47:20] SPEC DRIVEN DEVELOPMENT IS NONSENSE
+
+There is a new trend called "spec driven development": a form full of fields you fill in to generate the prompt. Huge nonsense. LLMs process tokens. If they were not trained for that specific format, the format means nothing. One prompt, two prompts, three prompts — same thing. A few more tokens, who cares. Talk however you want. The problem is you cannot explain, and no form in the world fixes that.
+
+================================================================================
+[3:48:48] PROGRAMMERS ARE BAD AT COMMUNICATION
+
+Programmers are historically terrible at communication. They hate writing. They think they write code better than they explain. They do not get that the two are correlated. Put one in a chair and ask them to explain: they ramble "like", "you know", "it is like". They cannot structure. On the other side is the verbose client, the MBA who opens a thousand parentheses. Both stall on the same axis: they cannot communicate.
+
+I have been writing for decades. Everything I learn becomes a post. Not to teach the world: that is where I store knowledge. Need to reinstall the machine tomorrow, the steps are there. Even better: Google indexes it, and when I search "my site, Arch Linux, Docker", Google returns my own answer. Why would I burn memory when Google does it for me?
+
+================================================================================
+[3:50:24] AI REFLECTS WHO YOU ARE
+
+When I reach a point where the tool is working and producing something useful, great. Some people have no patience. "I am explaining too much, I would have done it myself". Lie. You would not have. You were procrastinating. If it were easy, you would have done it already. You are using AI precisely because you did not do it, and you keep saying "this should be simple".
+
+AI reflects who you are. If you never wrote a decent line to explain something to a human, you will not manage to explain it to an AI. Then you say it is the AI that is not delivering. A sloppy ask yields a sloppy answer. AI is dumb literally — it does not know what you want. Instead of saying "my text is trash", the person blames the model. Whoever communicates well takes the leverage. Today, if you are using Claude, Codex, or GLM and you are not getting good results, the problem is not the AI nor the version. It is you.
+
+================================================================================
+[3:52:58] AI-GENERATED CODE IS YOUR RESPONSIBILITY
+
+"But I did everything the AI told me to." Do you write everything a typewriter dictates? Does not make sense. You are responsible. To be responsible, study, experiment, err. Then reflect. That is how you become a senior. AI does not guarantee that mindset. If you think it is all easy, all autopilot, it will not happen. AI will replace everyone who does not take responsibility. And it is great that it will.
+
+================================================================================
+[3:56:26] LUIZ: GPT 5.4 VS OPUS FOR ELECTRICAL ENG
+
+Luiz asked: "Opus 4 gets several Electrical Engineering problems wrong. Only GPT 5.4 nails the lists from my undergrad. How far is Opus from catching up? For me 5.4 is ahead."
+
+Case by case. When someone says "one is better than the other because in my case it worked", it is a methodological screwup. The model was trained on the whole internet, millions of papers, the full Wikipedia. What varies is tuning for classes of problem. It can be great at calculus and bad at linear algebra. Good at Chinese, bad at Japanese. A dense one-trillion-parameter model is one trillion tiny probabilities crossing. Random parrot. It does not think. It computes the most likely response. Depends on training data, data cleaning, reinforcement learning, alignment. A whole chain. Models come out very different.
+
+================================================================================
+[3:58:38] CODEX AND CLAUDE: THE MARIO EXPERIMENT
+
+I grabbed a Super Mario ROM and wanted to learn a game engine called Godot that I had never touched. I asked Codex to read from the ROM, never from memory, extract sprites, levels, basic physics, translate into Godot Script. Running natively on Windows, with a plan to port to Android later. Then I realized: no blog post. A Nintendo ninja would show up and cancel me. At this point in life, I am not fighting Nintendo. Switched to Sega, picked Streets of Rage.
+
+Codex extracted the background. For character sprites, it grabbed the head from the character-select Axel and said "done, it is Axel". It was not. A whole Sunday afternoon guiding it, no progress. On Monday, after Cloud Code reset, I sent the same prompt: read from the ROM, write a script, no guessing from memory, verify the correct sprite offsets. Cloud tried a few times, took an hour, but extracted the real Axel. Then I asked it to document. Mapped animations to the Xbox gamepad.
+
+Along the way, Cloud tried booting an emulator to read VRAM. Unnecessary, but it tried. There was a bug where the character walked on the ceiling. Three times it asked "did you reload?". Obviously. I said: "do not assume that is the issue. Go back to the file and check if something else applies an offset". It looked again, found a global config that was being applied twice, removed it, the character landed.
+
+Conclusion: Codex failed, Cloud worked. But the opposite has happened too. Each model is good at some things, not others. Maybe a bad prompt, dirty context, a session I should have reset. When someone claims one is consistently better, it is almost always context bias. The problem is the user, not the tool.
+
+================================================================================
+[4:03:59] THE USER ERRS ON THE PROMPT AND BLAMES THE AI
+
+Sometimes you mis-type the prompt. You are typing, watching YouTube on the other monitor, listening to Igor, and you hit enter too early. The AI starts touching a file you did not mean to. You hit ESC, correct, move on. Your fault, not its. Same thing happens with a human programmer: coding while listening to a podcast, assumes they tested, pushes to production. Human bug. Except programmers expect AI to be right the first time, every time. Not happening. All bugs ever were made by humans. The AI did not come in and make all this.
+
+================================================================================
+[4:05:57] AI AS A JUNIOR OR AN OUTSOURCING CONTRACT
+
+Treat AI like a junior programmer. Treat it at the company level like outsourcing to India. In neither case do you pretend you can write 50 pages of requirements, send them over, and get a finished product exactly as imagined. Never happened in the history of projects.
+
+Home renovation: architect draws the plan. Has it ever gone 100% start to finish? Never. If you do not supervise the worksite, it goes wrong. Drawers that do not open, broken tiles, plumbing with a sketchy fix. Supervising is not micromanaging. Not breathing down anyone's neck. But you show up, you look, you ask. And you will hear "ah, I was going to do that, it was next on my list". Were you really?
+
+================================================================================
+[4:07:28] THE AI IS NEUTRAL
+
+The good part: AI is neutral. No neediness, no malice, no desire to deceive you. It tries to execute what you asked with the data it has. It is not going to get angry if you yell, or spit in your food if you curse. Liberating. You can poke its limits without drama. If the answer still comes out wrong, it is because you did not know how to ask.
+
+================================================================================
+[4:08:25] METHODOLOGY FOR COMPARING MODELS
+
+I compared open source translation models on the same terms. Same hardware, same prompts, same checked results, same dimensions: tokens consumed, time taken, output quality. At the end, I did not conclude "this one is better". I concluded: "this is better if you have money"; "this other one is better but takes more work"; "this one is better but takes three times the time".
+
+Car analogy. No car solves every problem. Delivering tofu on the mountain, my AE86 works. Speed and money, a Ferrari. LLMs are the same. No LLM solves everything. No perfect language, no perfect framework. Be promiscuous and disloyal with every technology.
+
+================================================================================
+[4:09:51] YOU DO NOT NEED TO SAY GOOD MORNING
+
+Do not say good morning to the AI. Wastes tokens. There is a meme of the apocalypse where the AI spares those who were polite. For every good morning someone says, I will bully it 30 times. It is never going to work. Be direct. Use every tool available.
+
+================================================================================
+[4:10:11] ROBSON: WILL LLMS BE SOFTWARE ENGINEERS? NO
+
+No. They are the engineer's tool. Without a real engineer, the code blows up in production. "But I can create a persona: 'you are a software engineer'". Zero guarantee. It has no context, does not see clients, does not hear complaints, does not know priorities. Ask for "the most perfect engineer in the world" and it produces hyper-bureaucratic, over-engineered code for an app serving ten people. Ask for "the most secure ever" and it locks it up so tight it will not install. A software engineer studies for years, gets burned, learns which metrics matter. Recognizes: "I saw this hurt a client, it will not hit today but it will tomorrow, let me pre-fix it". That judgment is born from scars. And learning has to be deliberate, like personal training: pacing, strategy, stamina. Not just running at full speed.
+
+================================================================================
+[4:11:45] ACCOUNTANT, SPREADSHEET FILLER AND EXCEL
+
+Accounting firms used to fill whole floors with people filling stacks of paper spreadsheets. "Excel killed the accountant." It did not. Accountants are still there today. Those who know how to audit, cross-check entries and exits, validate invoices, know the tax code, are still around. The ones who died were the spreadsheet fillers. For every accountant there were 20 fillers. Excel killed the role.
+
+Same with programming now. What dies is the code typist. The person who spent the day swapping button colors, cutting images in Photoshop, slicing HTML by hand. Manual labor, never programming, should have been automated years ago. The engineer who analyzes, decides, owns the decision, stays. The issue is that many bad programmers wrote "software engineer" on LinkedIn. You never were one. That is the job AI steals.
+
+================================================================================
+[4:16:23] MICHAEL: CLOUDFLARE, NEXT.JS AND WORDPRESS CLONE
+
+Michael asked about Cloudflare reimplementing the Next.js API. Vercel had privileged Next.js support: the framework is quite incomplete without the harness/reins that Vercel bolted on. Lock-in for years. You could host Next elsewhere, but on Vercel it was trivial.
+
+Cloudflare, their competitor, reimplemented those reins using AI. One week to finish. They launched the product plus a migration guide from Vercel to Cloudflare.
+
+Same play with WordPress. One of the worst codebases alive. A cockroach. Never dies. Bad, insecure, full of plugins that open holes. Cloudflare runs multiple security products just to intercept WordPress vulnerabilities before they reach the server. Everyone has tried cloning WordPress; everyone failed. Cloudflare just shipped their clone (called MD-EM dash) in a better language, with AI, and is pushing it as a replacement.
+
+================================================================================
+[4:19:04] THE 10X DEVELOPER IS NOW REAL
+
+All the projects I showed took 2-3 days. Important calibration: 2-3 days of mine, 16 focused hours, not 8. Nobody programs 8 hours. You work 8, half of it is email, meetings, Slack, procrastination. A good day is 4 hours of code. Normal is 2 or 3.
+
+At normal pace, at least 4x the time for a senior. At mid level, another 4x. My 4 days is 2-3 months for someone else. Two months for a basic version, one more for tests, scalability, docs. Before, it was hard to take an open source project and fit it in the company. Someone had to sit and adapt it. Today I grab one and AI adjusts it fast. Instead of outsourcing to a 10-person team, I take one in-house senior and give them a week. Worth ten. The "10x developer" became real. Now. In November it was not. Hence the urgency.
+
+================================================================================
+[4:22:03] A 20-YEAR-OLD BLOG TRANSLATED IN TWO DAYS
+
+On April 5 my blog turned 20. Over 700 posts, almost 1,000 counting the ones I pulled for being obsolete. Mostly in Portuguese. Friends abroad kept saying "I would love to share this with my team". Google Translate was garbage. Now, with the current LLMs, translation finally does not feel like a machine wrote it. (Historical note: LLM research was born from translation. Large language models. If it translates German well, it codes. Basically.)
+
+Two days. Adjusted the blog template for English/Portuguese links. Posts already in English moved to the English section. Posts in English went to Portuguese. The rest went from Portuguese to English. Translating with Claude. Burned half my Max 20x translating the entire blog. The translation reads well in English; it does not scream AI.
+
+I met Chris Wanstrath, founder of GitHub, back when he was a Starbucks programmer. David Heinemeier Hansson, creator of Ruby on Rails. I brought all of them to my event in 2008, the first year. GitHub only became GitHub in 2010. Microsoft bought it five years later. Plenty of good history in the blog.
+
+================================================================================
+[4:25:03] 146 VIDEOS DUBBED IN FOUR DAYS
+
+Five years of videos, 146 videos, nearly 100 hours. If I dubbed, I had to match the original timing so visuals would not shift. If I re-recorded, I had to preserve duration. Felt undoable.
+
+Tested TTS models. Open source could not carry the English intonation I wanted. Moved to commercial ones. For a one-hour video you cannot send the whole thing; you chop into chunks under 700 words, generate, stitch, match timing.
+
+Lucky break: YouTube already had captions. Why? Because I send the original script before recording. In all 146 videos I wrote a script and read from it. Exact text, word by word. I took YouTube's timing, my scripts, and sliced. Captions show two lines at a time. Without my scripts I would not know paragraph boundaries, and the TTS would put silence mid-sentence. In videos with embedded Steve Jobs clips, YouTube hallucinated the caption. I compared original script to caption, and where they diverged I stitched in the original audio.
+
+Three or four days of processing. Started on Eleven Labs' Creator plan, jumped to Scale, then Business with 11 million tokens. Every bug I found in one video, I had to reprocess others. Delete from YouTube, reupload, check sync. At the end: 146 videos translated and dubbed in four days. Title, description, captions, audio with my cloned voice on Eleven Labs, thumbnails translated with Nano Banana. Total spend (Claude Max + Eleven Labs) around two thousand dollars. Sounds pricey, dirt cheap for the volume. The old way, with translators, dubbers, editors, syncers, that is months of work.
+
+YouTube's auto-dub is garbage: random voice, sometimes a child's voice, sometimes an elder's, any random male voice. Does not strip hallucinated text, does not fix timing. My cloned voice intonation is not perfect yet — it sounds a bit robotic because I did not force emotion tags. Eleven Labs has surprise, disdain, cheerful, laugh tags.
+
+================================================================================
+[4:32:28] WHAT DIES IS THE MANUAL WORK
+
+700 posts, 100 hours of video, in under a week. Used to be months. But it is manual labor. Nothing intelligent in it. Piece by piece, grind. All manual labor is done. Thank god. I did not become a programmer to be a code laborer.
+
+Everyone thinks being a programmer is writing lots of code. It is not. It is making hardware produce something useful. How? Era-dependent. Once it was cables and hand-wired addresses, then punch cards, then teletype (an electric typewriter on paper), then a monitor. What changes is the input method. The goal is the same.
+
+================================================================================
+[4:33:30] THE HITCHHIKER'S 42 AND CODE MINER 42
+
+Douglas Adams predicted everything. In Hitchhiker's Guide to the Galaxy, a great AI is built, the greatest in the universe. Primitive peoples ask: "what is the answer to everything?". The machine: "in a million years I will have the answer". A million years pass. A new generation, huge expectations. The machine wakes up. "The answer is 42."
+
+"What do you mean, 42? A million years for 42?" The machine: "The question you asked led me to 42. If you wanted a different answer, you should have asked a different question". That is everything I am saying. AI answers what it judged fit for your question. Your question is trash. That is the moral. Hence my company is named Code Miner 42. Marvin is the mascot. The idea is not to give you the answer. It is to teach you to ask the question.
+
+I get plenty of briefings and I am not the guy who does anything for money. Many clients show up with specs and I say: "honestly, I will not do this. What is written here makes no sense. You will spend ten times what you imagine. It will not work. Go back, redo the homework. Whoever wrote this for you does not know what they are doing". They get mad. Some come back: "you were right, I rethought, now I have the idea".
+
+================================================================================
+[4:36:34] MVP VS OVERSPECIFICATION
+
+The right way is not to design every detail trying to save 100%. You will never save 100%. Better to spend a little to get a lot right. Prototype, MVP, proof of concept — whatever name. If the prototype fails, you ditch the prototype. The clay analogy: only when you start shaping do you see the form, pull a chunk, push another. Only once you see the first maquette do you realize "that room is off, it should be on the other side". Before you build the whole house and find out. Otherwise, tear it down?
+
+================================================================================
+[4:37:47] A CEO FIRING DEVS FOR AI DOES NOT WORK
+
+Everyone worries: AI arrived, CEO will fire all devs. The hyped idiots do it and it becomes a headline: "fired everyone, software shipped 10x faster". Ask about them today. Nobody follows up. Bankrupt, or rehired everyone because the code stopped evolving. "But the AI solves it." It does not. AI is not an engineer, it is a tool. And if the person who stayed is not an engineer, nothing gets fixed.
+
+At my company, the opposite. I pay AI plans for everyone. Seniors teach juniors. Right way, wrong way, how to handle AI-generated errors, how to pick up broken code from others. Did not fire a single programmer. I did not fire because during the bubble I did not hire like an idiot. Same standards. Everyone who joined met those standards. Whoever is firing today is whoever hired a hundred they did not need.
+
+================================================================================
+[4:40:30] EXCITED AND RESISTANT
+
+Two kinds of bad programmer. The excited one, who thinks AI will replace everything. And the resistant one, who thinks AI is useless because their code is better. Friend, it is not. You know it is not. You have shipped plenty of garbage. Your code is not that good. I know. You know. No pretending.
+
+Companies need AI. But not the "fire everyone and plug in AI" mode. AI is a typewriter for people who had only paper and pen. Still needs an author. AI reflects who you are. If you are trash, the code will be trash. If you are illiterate, it is not writing you a novel.
+
+================================================================================
+[4:41:05] AI IS A TYPEWRITER, NOT A CFO
+
+Manual work, it does for you. Like a calculator replaced hand math. But a calculator did not become your personal financial planner, did not become your CFO. It does not assess priorities, pros, cons, risks you accept or reject. That is on you. If you are reckless, the company folds. Your fault, not the AI's. "But I followed everything the AI said." Because you are an idiot. Do you follow everything the calculator says?
+
+================================================================================
+[4:42:28] SHOW YOUR CODE ON GITHUB
+
+Have a GitHub. Learn to use it. Show your code. Everyone is embarrassed, "my code is ugly, they will roast me". It is through roasting that you get feedback and improve. Praise is useless feedback. I like it when someone shows up and says "Akita, you messed this up". I look and "you are right, let me fix this, learned something new". Without that environment, you do not learn.
+
+I have accidentally left a public key in a private repo. The commit was made by Cloud itself, I did not phrase the prompt well. "Your prompt is trash" — the comment section nails it.
+
+================================================================================
+[4:43:08] IF IT BROKE, IT IS BECAUSE YOU BROKE IT
+
+Everything is a prompt. Skill is a prompt. Agent is a prompt. Context is a prompt. If it broke, it is because you broke it. That is the truth.

@@ -525,10 +525,7 @@
         "related_posts": 7
       },
       "total": 50
-    },
-    "timestamps_backfilled": false,
-    "needs_full_regen": true,
-    "regen_reason": "YouTube API entregou só último 1h (3:58:45→4:56:04). Raw completo (4h44) re-capturado em PT."
+    }
   },
   {
     "video_id": "2043679971927896218",
