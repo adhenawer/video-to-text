@@ -29,6 +29,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/blog/claude-code-daily-workflow.html"/>
   </url>
   <url>
+    <loc>https://adhenawer.net/blog/claude-snapshot.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/blog/claude-snapshot.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/blog/en/claude-snapshot.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/blog/claude-snapshot.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/blog/en/claude-snapshot.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/blog/claude-snapshot.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/blog/en/claude-snapshot.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/blog/claude-snapshot.html"/>
+  </url>
+  <url>
     <loc>https://adhenawer.net/blog/en/claude-code-daily-workflow.html</loc>
     <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>

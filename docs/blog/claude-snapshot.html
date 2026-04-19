@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>claude-snapshot: levar sua config do Claude Code de uma máquina pra outra em 2 minutos · Blog</title>
+<meta name="description" content="Plugin open source do Claude Code que exporta settings, CLAUDE.md, hooks, plugins e MCP servers em um .tar.gz portátil. Cinco princípios: blast radius mínimo, allowlist, sem rede, diff antes de destruir, cross-platform de verdade.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="claude-snapshot: levar sua config do Claude Code de uma máquina pra outra em 2 minutos">
+<meta property="og:description" content="Plugin do Claude Code que exporta seu setup inteiro em um .tar.gz e aplica em outra máquina com um comando. Sem rede, sem telemetria, diff antes de destruir.">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Blog de Leituras">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" hreflang="pt-BR" href="claude-snapshot.html">
+<link rel="alternate" hreflang="en" href="en/claude-snapshot.html">
+<link rel="alternate" hreflang="x-default" href="claude-snapshot.html">
+<link rel="stylesheet" href="../css/style.css">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="40c8ae3d-2e6b-4af4-a89b-f578dd3b2315"></script>
+</head>
+<body class="page-article">
+<header class="site-header">
+  <a class="site-brand" href="../index.html">Leituras</a>
+  <div class="lang-bar">
+    <button class="lang-btn active" data-lang="pt-BR" aria-label="Português">PT</button>
+    <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+  </div>
+</header>
+<article class="container">
+  <a href="./" class="back-home">← Voltar ao blog</a>
+  <header>
+    <h1>claude-snapshot: levar sua config do Claude Code de uma máquina pra outra em 2 minutos</h1>
+    <p class="meta"><cite><a href="https://github.com/adhenawer" target="_blank" rel="noopener">Rodolfo Moraes</a> · 2026-04-19</cite></p>
+  </header>
+
+  <p style="text-align:center;margin:2em 0;"><img src="../img/claude-snapshot/demo.gif" alt="Demonstração do claude-snapshot exportando e aplicando um snapshot" style="max-width:100%;border-radius:8px;"></p>
+
+  <h2>O problema</h2>
+
+  <p>Se você usa Claude Code, sabe que <code>~/.claude/</code> vira um organismo vivo. Plugins, hooks, skills, <code>settings.json</code>, <code>CLAUDE.md</code> global, statusline custom, marketplaces registrados. Tudo isso é seu. E tudo isso, historicamente, morria no momento em que você precisava trocar de máquina, formatar o Mac, ou entrar num computador de trabalho.</p>
+
+  <p>O <strong><a href="https://github.com/adhenawer/claude-snapshot" target="_blank" rel="noopener">claude-snapshot</a></strong> é um plugin do próprio Claude Code que exporta seu setup inteiro em um <code>.tar.gz</code> portátil e aplica em outra máquina com um comando.</p>
+
+  <h2>Pra que serve</h2>
+
+  <p>Quatro casos que eu tinha de verdade:</p>
+
+  <ul>
+    <li><strong>Duas máquinas.</strong> Pessoal em casa, de trabalho no escritório. Exportar num, dropar no Drive, aplicar no outro.</li>
+    <li><strong>Backup antes de formatar.</strong> Tirar snapshot, wipe, reinstalar Claude Code, aplicar. Setup de volta.</li>
+    <li><strong>Rollback de experimento.</strong> Vou testar um plugin novo que pode quebrar tudo? Snapshot antes. Deu ruim, volto pro estado conhecido-bom.</li>
+    <li><strong>Onboarding.</strong> Entrou gente nova no time? Compartilha o snapshot, já vem com os mesmos plugins, hooks e convenções.</li>
+  </ul>
+
+  <h2>Como funciona</h2>
+
+  <p>Quatro comandos dentro do próprio Claude Code:</p>
+
+  <pre><code class="language-bash">/snapshot:export         # exporta pra ~/claude-snapshot-YYYY-MM-DD.tar.gz
+/snapshot:inspect &lt;path&gt; # lê o manifesto sem extrair
+/snapshot:diff &lt;path&gt;    # mostra o que vai mudar antes de aplicar
+/snapshot:apply &lt;path&gt;   # aplica (com confirmação + .bak de tudo que sobrescreve)</code></pre>
+
+  <p>Export normaliza caminhos absolutos (<code>/Users/seunome/</code>) pra <code>$HOME</code>, então o mesmo tarball funciona entre contas diferentes. Apply resolve de volta pro <code>$HOME</code> da máquina-destino e instala plugins faltantes via <code>/plugin install</code> do próprio Claude Code.</p>
+
+  <h2>Os cinco princípios</h2>
+
+  <p>A decisão de cada feature passa por isso:</p>
+
+  <p><strong>P1 — Blast radius mínimo.</strong> One-shot, sem daemon, sem watch, sem rede. Tudo é comando explícito, escopo fechado em <code>~/.claude/</code> mais o tarball.</p>
+
+  <p><strong>P2 — Allowlist, não denylist.</strong> Snapshot contém uma lista explícita do que é capturado. Arquivo novo que o Claude Code criar no futuro <em>não</em> entra automaticamente — atualização do plugin é que decide. Paga em manutenção manual, ganha em previsibilidade e auditabilidade. Tradeoff oposto ao "captura tudo que achar".</p>
+
+  <p><strong>P3 — Sem rede. Nunca.</strong> Zero requisição de saída. Instalação de plugin no apply é delegada pro mecanismo oficial do Claude Code, que cuida da rede ele mesmo.</p>
+
+  <p><strong>P4 — Diff antes de destruir.</strong> Todo apply mostra um resumo do que vai mudar, e você precisa confirmar. Todo arquivo sobrescrito vai pra <code>&lt;arquivo&gt;.bak</code> antes.</p>
+
+  <p><strong>P5 — Cross-platform de verdade.</strong> Node.js, não bash. Mesmo código roda em macOS e Linux sem polyfill nem <code>if $OSTYPE</code>. Windows via WSL funciona; Windows nativo é best-effort.</p>
+
+  <h2>O que migra e o que não</h2>
+
+  <table>
+    <thead><tr><th>Migra</th><th>Não migra</th></tr></thead>
+    <tbody>
+      <tr><td><code>settings.json</code> (plugins, hooks, permissions, env, statusLine)</td><td>Sessões e histórico</td></tr>
+      <tr><td><code>CLAUDE.md</code> global e outros <code>.md</code> de root</td><td>Telemetria</td></tr>
+      <tr><td>Manifests de plugin + marketplaces</td><td>Tokens OAuth de MCP</td></tr>
+      <tr><td>Scripts de hook</td><td>Plugins escopados por projeto</td></tr>
+      <tr><td>MCP servers (só a config, sem OAuth token)</td><td></td></tr>
+      <tr><td>Cache de plugin (com <code>--full</code>)</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <p>MCP merece uma nota: o <code>~/.claude.json</code> guarda tanto a config dos servers quanto tokens OAuth e estado de projetos. O plugin captura só a parte <code>mcpServers</code> e, no apply, <em>reporta</em> o que precisa ser instalado na máquina-destino em vez de sobrescrever o arquivo inteiro. Privacidade primeiro, automação segunda.</p>
+
+  <h2>Anatomia do snapshot</h2>
+
+  <pre><code>claude-snapshot-YYYY-MM-DD.tar.gz
+├── manifest.json           # schemaVersion, plugins, marketplaces, hooks, MDs, MCPs, checksums
+├── settings.json           # suas settings do Claude Code
+├── mcp-servers.json        # configs de MCP server (só se você tem algum; caminhos normalizados)
+├── global-md/              # CLAUDE.md e outros .md no root
+├── hooks/                  # seus scripts de hook
+├── plugins/
+│   ├── installed_plugins.json
+│   ├── known_marketplaces.json
+│   └── blocklist.json
+└── cache/                  # (só com --full)</code></pre>
+
+  <h2>Instalação</h2>
+
+  <pre><code class="language-bash">/plugin marketplace add adhenawer/claude-snapshot
+/plugin install snapshot@claude-snapshot
+/reload-plugins</code></pre>
+
+  <h2>Por que escrevi</h2>
+
+  <p>Ferramentas de dotfile-sync genéricas resolvem parte do problema. <code>stow</code>, <code>chezmoi</code>, <code>yadm</code> — todos funcionam. Mas <code>~/.claude/</code> tem particularidades: o <code>installed_plugins.json</code> referencia marketplaces que precisam estar registrados <em>antes</em>; o <code>settings.json</code> tem caminhos absolutos que quebram entre contas; os plugins têm sua própria lógica de install que não dá pra simular só copiando arquivo.</p>
+
+  <p>Então fiz específico, Node.js, MIT, sem telemetria, sem rede. Tarball auto-contido, inspecionável, com backup de tudo que toca.</p>
+
+  <h2>Links</h2>
+
+  <ul>
+    <li><strong>GitHub:</strong> <a href="https://github.com/adhenawer/claude-snapshot" target="_blank" rel="noopener">github.com/adhenawer/claude-snapshot</a></li>
+    <li><strong>Issues e PRs:</strong> <a href="https://github.com/adhenawer/claude-snapshot/issues" target="_blank" rel="noopener">github.com/adhenawer/claude-snapshot/issues</a></li>
+    <li><strong>Licença:</strong> MIT</li>
+  </ul>
+
+</article>
+<a href="#" class="back-top" id="backTop">↑</a>
+<script src="../js/reader.js"></script>
+<script src="../js/lang.js"></script>
+</body>
+</html>
