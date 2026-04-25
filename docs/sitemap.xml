@@ -101,6 +101,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/blog/transformando-podcasts-de-horas-em-artigos-que-da-pra-ler.html"/>
   </url>
   <url>
+    <loc>https://adhenawer.net/posts/pt_br/por-que-metade-dos-product-managers-esta-em-apuros.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/por-que-metade-dos-product-managers-esta-em-apuros.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/pt_br/por-que-metade-dos-product-managers-esta-em-apuros.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/why-half-of-product-managers-are-in-trouble.html"/>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/posts/original/why-half-of-product-managers-are-in-trouble.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://adhenawer.net/posts/pt_br/por-que-metade-dos-product-managers-esta-em-apuros.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/posts/original/why-half-of-product-managers-are-in-trouble.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://adhenawer.net/posts/original/why-half-of-product-managers-are-in-trouble.html"/>
+  </url>
+  <url>
     <loc>https://adhenawer.net/posts/pt_br/ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam.html</loc>
     <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>

@@ -1,0 +1,2493 @@
+0:00 The skills that used to be really valued
+0:01 in product managers are changing
+0:03 substantially.
+0:04 >> It's going to be chaos. Our industry is
+0:07 very much in stress. Nothing's constant.
+0:09 Everyone's in a state of alert. If you
+0:12 talk to product leaders 3 years ago,
+0:14 their day was largely moving
+0:17 information. The information mover is
+0:20 essentially going to become a dinosaur.
+0:22 >> I just did this report on the job
+0:24 market. Interestingly, we have the most
+0:26 open PM roles globally in three plus
+0:29 years.
+0:30 >> This is a complete renaissance for the
+0:33 product industry, but it comes with a
+0:35 lot of strings attached. In the next 12
+0:37 to 24 months, we're going to see massive
+0:40 shedding of staffs and then massive
+0:42 rehiring. You might see a company shed
+0:45 30,000 and hire 8,000, but the 8,000
+0:49 people are going to all be AI first. The
+0:51 builders are going to have the time of
+0:53 their lives, but if you don't love
+0:55 building stuff, you're in trouble.
+0:56 >> What are some things that people should
+0:58 do to thrive in this future that is
+1:00 emerging?
+1:01 >> You have to find ability to increase
+1:03 pace. You got to find that reserve. The
+1:05 next 2 years requires a lot of fire in
+1:09 the belly.
+1:11 >> Today my guest is Nikuel Singal. Nikuel
+1:13 is, in my opinion, right now the number
+1:17 one best source of career advice for
+1:20 product managers and for tech people in
+1:22 general. He was a longtime exec at Meta
+1:24 and at Google, CPO at Credit Karma. He's
+1:27 also four-time founder, and he leads the
+1:29 best community out there for heads of
+1:31 product and chief product officers
+1:33 called the Skip community. He also has a
+1:34 larger community for tech professionals
+1:36 called the Skip Coach. And through these
+1:38 communities and his 30 years of building
+1:40 consumer products at scale and also his
+1:42 podcast which I've recently partnered
+1:44 with, he is constantly gathering and
+1:47 meeting with and speaking with top
+1:49 product leaders around the world about
+1:51 what's happening and what's changing in
+1:53 the lives of product managers and tech
+1:55 workers in general. And the answer is a
+1:58 lot. This is an episode that every
+2:00 single product person needs to listen
+2:02 to. and you won't find a more real talk
+2:05 and actionable overview of what is going
+2:08 on and where things are heading in your
+2:10 career and also what you should be doing
+2:12 about it right now. Seriously, do not
+2:14 miss this conversation. Before we get
+2:17 into it, don't forget to check out
+2:18 lennisproduct.com for an incredible set
+2:20 of deals available exclusively to
+2:22 Lenny's newsletter subscribers. With
+2:24 that, I bring you Nuel Singal.
+2:29 Nikuel, thank you so much for being here
+2:31 and welcome back to the podcast.
+2:33 >> Yeah, thank you, Lenny. I appreciate uh
+2:36 version two. Uh and all my notes were
+2:38 like Lenny version two. So, I'm quite
+2:40 excited about uh being uh back on the
+2:43 show. You've done so well since the last
+2:45 time that I've visited and uh appreciate
+2:48 the opportunity to to to share with you
+2:50 uh my current thing.
+2:51 >> Yeah. So, you were actually one of the
+2:53 launch episodes, the first 2030 guests
+2:55 that I had on the podcast. This was two
+2:57 or three years ago, something like that.
+2:59 And a lot has changed in the world of
+3:01 product management since then. And we're
+3:04 going to be basically spending this
+3:05 entire episode talking about what is
+3:07 changing in the role and the career of a
+3:10 product manager. And what I especially
+3:13 love about you talking to you and
+3:14 hearing your insights is you don't
+3:16 sugarcoat what's going on. You're very
+3:18 real about like here's what you need to
+3:20 know about what is going on. So we're
+3:22 going to be talking about the good and
+3:23 the bad and just like a lot of advice
+3:25 for product managers in particular. to
+3:28 kick things off, give us just kind of
+3:29 the big picture view into what is
+3:32 changing for product managers, the good
+3:35 and then maybe the the scary stuff.
+3:37 >> Yeah, it' be a lot shorter of an episode
+3:39 if we just talked about what didn't
+3:41 change.
+3:43 >> Wow.
+3:44 >> I think that says a lot.
+3:45 >> Maybe I'll start with this. I think that
+3:47 when we first chat chatted, it was like
+3:49 in maybe the the end of COVID, I think
+3:52 the ZERP era, as we called it, zero
+3:54 interest, uh, you know, kind of, um,
+3:57 free money from from investors was just
+4:00 kind of cresting. Uh, we talked about
+4:03 how IC's are now more in demand. We
+4:07 talked about how these first round of
+4:09 layoffs are existing, that exgrowth
+4:12 companies are going to be a struggle.
+4:14 But if you really talk to product
+4:17 leaders that were kind of in that mode
+4:19 maybe three three years ago, they were
+4:22 they weren't very happy. And what I mean
+4:25 by that is their day was largely a day
+4:30 of moving information from one to
+4:32 another. Let me frame
+4:36 the way that my team is presenting the
+4:40 information to my boss so that that
+4:42 person can frame it to their boss's
+4:45 boss. And generally the function had
+4:49 become extremely focused on
+4:53 responsibility without authority. And so
+4:56 that is the greatest form of workplace
+4:58 stress. Now we don't talk about that. We
+5:01 talk about all the stresses that we have
+5:03 today. Boy, AI is going to replace our
+5:05 function, etc., etc. But, but the honest
+5:08 truth is, if you think back, if you've
+5:09 been in product for a handful of years,
+5:11 that was a tough time. Um, now people
+5:13 were being paid well. Layoffs were just
+5:16 starting. There were the industry was
+5:17 huge. It was the biggest it's ever been.
+5:19 There were more product managers, more
+5:20 CPOS than ever had existed in history.
+5:23 Um, what's changed is people are having
+5:28 fun again, particularly product folks,
+5:32 because they're able to build. They
+5:34 don't have to rely on as many people to
+5:37 have impact. There's much more of a
+5:40 direct connection to their ideas and
+5:43 their ability to test and and and
+5:46 connect their product instincts to their
+5:49 customers. And so in many ways, this is
+5:52 a a complete renaissance for the product
+5:55 industry. Uh for a lot of the strongest
+5:59 builders in the group that I'm
+6:01 associated with, compensation is an
+6:03 all-time high. They have more offers
+6:05 than they've ever seen. They see their
+6:07 next job maybe being a founder, maybe
+6:09 being a CEO, maybe being in another
+6:12 function other than product, but being
+6:14 in the sea level. They're feeling like
+6:16 there's more opportunities than ever
+6:18 before. So that's kind of the good. Uh I
+6:22 would say in all honesty it comes with a
+6:26 lot of strings attached. I think that it
+6:29 starts with just being exhausted.
+6:32 I have I've never seen a a industry
+6:35 that's more tired than they are now. Um
+6:38 I mean I think we were tired during co
+6:40 but for different reasons. Now I think
+6:43 uh nothing's constant. There's, you
+6:46 know, once you figure out how to do your
+6:48 job, in the past you would be fine for a
+6:52 decade until you became a manager and
+6:54 then you would be fine until you became
+6:56 an executive. Now, if you don't stay up
+6:59 and the next three months, they'll be
+7:01 like, "Oh, you're you're doing that
+7:02 thing that we we stopped doing that
+7:03 three months ago. We don't do that
+7:05 anymore. Oh, you know, PRDS, well, you
+7:07 know, that's not even a pro. You know,
+7:09 everything feels like everyone's in a
+7:11 state of alert." And I think that in
+7:14 addition now you're hearing right tens
+7:17 of thousands of people are being shed by
+7:19 larger employers that are also hiring
+7:23 and paying triple wages. So like that's
+7:26 like mindboggling. But you know
+7:28 depending on your perspective you might
+7:29 be on one side or the other. And I think
+7:32 that particularly a lot of the midcareer
+7:36 people, people that are like, let's call
+7:38 it in their 30s, you know, life plays
+7:42 this cruel trick on you where you end up
+7:46 having your best most energetic years of
+7:50 your career, your power years of career,
+7:52 because you finally have figured out
+7:53 what you're doing. But at the same time,
+7:56 you may be settling down. You may have
+7:58 kids. Your parents are aging and you for
+8:03 the first time have those aches and
+8:04 pains in your body. You have to think
+8:06 about diet. You can't eat cookies every
+8:08 day. You have to exercise. And so
+8:11 between your health, the family and
+8:14 friends that you hardly ever see, your
+8:15 parents which are now worrying uh
+8:17 because you have to build a different
+8:19 relationship with them. They're becoming
+8:20 dependent. your actual dependence which
+8:23 your kids and then oh by the way your
+8:25 work which is you know will take
+8:27 whatever time you have but it also
+8:29 changes all the time that generation is
+8:32 insanely stressed historically and now
+8:35 they're like hey stay up you know what's
+8:37 the latest in cloud code they changed it
+8:39 this morning I it's it's dizzying so I
+8:42 think there's joy but there's fatigue in
+8:44 a way that I haven't quite seen before
+8:47 >> wow what a what an incredible overview
+8:50 this episode is brought to you by our
+8:52 season's presenting sponsor, WorkOS.
+8:55 What do OpenAI, Anthropic, Cursor,
+8:57 Versell, Replet, Sierra, Clay, and
+9:00 hundreds of other winning companies all
+9:02 have in common? They are all powered by
+9:04 work OS. If you're building a product
+9:06 for the enterprise, you've felt the pain
+9:08 of integrating single signon, skim,
+9:10 arbback, audit, logs, and other features
+9:13 required by large companies. work OS
+9:15 turns those deal blockers into drop-in
+9:17 APIs with a modern developer platform
+9:19 built specifically for B2B SAS.
+9:22 Literally every startup that I'm an
+9:24 investor in that starts to expand up
+9:26 market ends up working with Work OS. And
+9:28 that's because they are the best.
+9:30 Whether you are a seedstage startup
+9:31 trying to land your first enterprise
+9:33 customer or a unicorn expanding
+9:35 globally, work OS is the fastest path to
+9:37 becoming enterprise ready and unblocking
+9:39 growth. It's essentially Stripe for
+9:42 enterprise features. Visit works.com to
+9:44 get started or just hit up their Slack
+9:46 where they have actual engineers waiting
+9:48 to answer your questions. Workos allows
+9:50 you to build faster with delightful
+9:52 APIs, comprehensive docs, and a smooth
+9:55 developer experience. Go to work os.com
+9:57 to make your app enterprise ready today.
+10:00 So you talk to I don't know hundreds of
+10:02 product leaders regularly run these
+10:05 communities for CPOS and senior product
+10:08 leaders. I guess on balance are people
+10:10 doing would you say better than the last
+10:13 than like two three years ago or is it
+10:15 just like oh man everyone's like like
+10:17 burning out and in big trouble. I think
+10:19 that how people would describe it and
+10:21 how I describe it is slightly different.
+10:24 I tend to be more around like when
+10:28 people are doing better I think they
+10:29 have more choice and they're longterm
+10:31 going to be happier from that
+10:33 perspective. I think people that are at
+10:35 the top of their game are doing much
+10:37 better for the reasons I mentioned.
+10:39 They're just more interested in their
+10:41 jobs. I think that they're more
+10:44 stressed,
+10:46 but I think they're stressed because
+10:48 they wish they had more time to feed the
+10:50 LLM at night, which is a different form
+10:53 of stress than the stress that they
+10:56 experienced in the past, which is I
+10:58 don't know if my point or my team is
+11:00 going to get through the the malaise of
+11:03 decisioning that exists here. So, I
+11:05 think that people are doing better.
+11:07 However, I think our industry is very
+11:11 much in stress. I think that on average,
+11:14 people even if they're doing well, they
+11:17 feel more stressed because they worry
+11:20 they're either not keeping up or they
+11:22 worry that this industry is going to
+11:23 change and it's going to essentially
+11:25 they'll be roadkill along that way. And
+11:28 so that has a lot to do with, you know,
+11:30 people are not, you know, generally that
+11:32 arrogant and they don't always believe
+11:34 that everything is going to work itself
+11:36 out. And there's a lot of evidence that
+11:37 things are changing. And so change is
+11:39 hard on humans. And so I think that
+11:41 there's a combination of both, but I
+11:42 think the best people tend to be feeling
+11:44 great right now.
+11:45 >> We're going to talk about of the people
+11:46 that are doing best, what are they doing
+11:48 differently, but before we get there,
+11:51 let's think about the future of where
+11:52 things are heading. You talked about a
+11:54 bunch of the things that are have
+11:55 already changed and how different the
+11:57 world of product management is. What do
+11:59 you think will change further in the
+12:01 next couple years to give people a sense
+12:02 of where things are heading? Yeah, I I
+12:05 had this uh this meetup uh last Thursday
+12:08 and it was a fun meetup. You know, I
+12:10 have a group of about 125 heads of
+12:13 products and we tend to gather once a
+12:15 month in San Francisco and during this
+12:18 meetup, you know, we took an approach
+12:20 where lots of people were building
+12:22 things for their own companies or on
+12:24 their own to help themselves with
+12:25 productivity. And so we said, hey, why
+12:27 don't we do a showand tell? why don't we
+12:29 just have you if you're ahead of product
+12:32 just show kind of things that are
+12:33 interesting that are worth worth uh
+12:36 explaining and so we had a startup go up
+12:38 and and show what they're doing and then
+12:40 we had some midsize companies and some
+12:42 late stage companies and you know what
+12:45 it was a few things that were really
+12:47 palpable
+12:49 um one was there was so much joy in the
+12:53 audience that people were like oh I've
+12:56 been building this thing and let me show
+12:58 you and everyone had their laptop and
+13:00 they were like oneupping each other and
+13:01 they were like your chief of staff does
+13:03 that, my chief of staff does this thing.
+13:05 So that would sort of builds on my point
+13:07 that people are having fun being
+13:09 hands-on. But the second thing is that
+13:12 the way they talk about how product
+13:14 decisions are made, the way they talked
+13:16 about how prioritization is determined,
+13:19 the way they talked about how
+13:20 information moves within the company
+13:23 looked like a completely foreign animal
+13:26 from anything that I had experienced
+13:28 when I was working, you know, a few
+13:30 years back. And I got up on stage and I
+13:34 said, you know, if you think about how
+13:36 we work right now and how you folks are
+13:39 all talking about, you know, using
+13:41 agents in your uh enterprise, how you're
+13:45 using uh chief of staff apps to
+13:47 essentially drive more productivity, how
+13:50 all of you are essentially spending all
+13:52 your time just focusing on judgment and
+13:54 you're spending all your time taking
+13:56 anything that can be obsoleted and
+13:58 writing software around it. like none of
+14:01 that was even in the language, even in
+14:03 the vernacular 12 months ago.
+14:06 So now what is it going to look like in
+14:09 12 months? And everyone kind of had a
+14:11 pause and they're like, "Yeah, this was
+14:13 sort of unossible
+14:16 to anticipate what this conversation
+14:17 would look like 12 months ago." It's
+14:19 pretty hard to understand where things
+14:21 are going. But but I would say I think
+14:25 maybe I'll answer your question around
+14:26 where things are going in the next
+14:28 couple years based on kind of how I
+14:31 think companies are going to change and
+14:32 how people are going to change. So I
+14:34 think on the company's side I think that
+14:37 and then maybe I'll slant it more
+14:39 towards product for a second. So product
+14:41 leaders will increasingly get paid and
+14:44 be asked to drive judgment and then be
+14:47 the tip of the spear on trying to
+14:51 essentially obsolete everything else
+14:53 through software, through AI, through
+14:56 agents. And this is partly why there's a
+14:59 lot of excitement because just to be
+15:02 very honest with you and you were a PM
+15:03 and I was a PM, most of the stuff that
+15:07 you didn't like doing are the things
+15:09 that AI is really taking a real uh crack
+15:13 at. And so, um, I think that's super
+15:17 interesting. Uh, I think that there's a
+15:19 ton of that change that's going to
+15:21 happen. Some companies are are doing it
+15:22 now. Some companies will do it but
+15:24 within two years I think most of these
+15:25 companies will obsolete all the
+15:27 mechanical parts of building product. I
+15:29 think that there will be 10 to 100 times
+15:33 more uh changes that will be presented
+15:38 to products than ever before because now
+15:41 there the cost of testing something the
+15:43 cost of changing is going to be much
+15:44 much lower. And so when things are
+15:48 changing that rapidly, that judgment
+15:50 piece becomes like pretty much
+15:52 paramount.
+15:52 >> Just to make sure we understand, when
+15:53 you say judgment, what do you what
+15:54 should people be thinking of when you
+15:56 when you talk about judgment?
+15:57 >> I think that it's sort of evaluating
+15:59 whether the thing that we're changing is
+16:01 a good or bad thing.
+16:03 >> I think that it's also evaluating
+16:05 whether, you know, we should change the
+16:07 product in one way versus another. You
+16:09 can't build a hundred custom versions of
+16:12 the same product. It doesn't it affects
+16:14 your brand. it affects the
+16:16 maintainability etc. So when customers
+16:18 are asking for things, when you're
+16:19 trying to think through how do you build
+16:21 something that's sustainable,
+16:22 differentiated, that's judgment and and
+16:25 evaluating whether it's successfully met
+16:28 that criteria, whether it's worth
+16:29 building and worth releasing. It's
+16:31 almost like the system skill that's
+16:33 existed from the beginning of the
+16:35 internet. It's, you know, hey, it's not
+16:37 about the feature, it's around the
+16:39 system that we're putting together, the
+16:41 platform if you will, that's, you know,
+16:44 kind of enabling capability, right? So
+16:46 that's the the judgment of boy, there's
+16:48 all these changes coming in. They're
+16:50 going to happen more frequently. You
+16:52 know, as an aside, because of all these
+16:54 changes, I think that in two years, I
+16:57 think there won't be any more bad
+16:58 software. I mean, this is maybe more of
+17:00 a wish and a dream than a prediction,
+17:03 but I think that if you count in the
+17:06 week in your given week, how much bad
+17:08 software you uh come back with, right?
+17:12 You know, I have a house and it has like
+17:14 15 different apps that run to control
+17:18 everything from the shades to the air
+17:21 conditioner to the, you know, garage
+17:23 door. And almost every one of those apps
+17:26 are a horrid. They don't work
+17:28 particularly well. They never get moni
+17:30 things break. No one ever checks it.
+17:31 Like all that stuff's going to get fixed
+17:33 because someone's going to basically sit
+17:35 down and tell Claude to fix it and it's
+17:38 just going to fix it. And it's going to
+17:40 fix it. it's going to be more secure,
+17:41 etc. So, I think that that's changing
+17:43 and so people will have a lot less
+17:45 tolerance for for bad software.
+17:47 >> Along those lines, just real quick at a
+17:48 quick aside to your side, uh the prompt
+17:51 I constantly find myself using with
+17:52 codeex and claude is just how can we
+17:54 make the product experience better? How
+17:57 can we make this better? And you just
+17:59 ask that and it's like here's 10 ways we
+18:00 can make it better. And so he's like,
+18:01 wow, these are really good ideas. And
+18:03 then cool, do do the first seven.
+18:05 >> Exactly. There's going to be like some
+18:07 super skill that's going to run against
+18:09 every piece of software that's in in the
+18:11 app store and it's going to basically go
+18:13 in and it's going to fix them all and
+18:15 then they're going to get released.
+18:16 They're going to be like, "Oh, that this
+18:17 is like just a significantly more
+18:19 consistent, better, less buggy
+18:21 experience and more maintainable." And
+18:23 so that's why there's a lot of optimism,
+18:25 right? Because there's these changes can
+18:27 be done pretty automatically.
+18:28 >> Yeah. Just like it's easy to just to
+18:30 kind of finish that loop real quick.
+18:31 Like so many of these apps are built by
+18:34 engineers that are not the best
+18:36 engineers. They're engineers that, you
+18:37 know, like uh companies hired that don't
+18:40 really care about their software.
+18:41 They're just like this is just like a
+18:42 side thing building this thing that we
+18:45 have just app. We just need to build an
+18:46 app. Let's find someone to build it.
+18:48 They're not like product first
+18:49 companies. And now all of these
+18:50 companies have access to the most
+18:52 skilled software engineer, cloud code, a
+18:55 codeex, and all these other tools. So I
+18:57 I I totally see what you're saying like
+18:59 everyone has the best engineers
+19:00 available now and it's just an English
+19:03 to ask them to build a better thing or
+19:05 build a better app. So that's a really
+19:06 interesting point. It still boggles my
+19:08 mind. You know, everyone's like, "Oh,
+19:10 what's the cutting edge and all that?" I
+19:11 think there's still, I don't know if
+19:13 this is true even today, but very
+19:15 recently there were more lines of cobalt
+19:18 than I think any other language uh out
+19:21 there. And mainframe sales continued to
+19:24 do pretty well. And they're unusually
+19:26 large line item for companies like IBM.
+19:29 And part of the reason why these
+19:32 systems, like, you know, I I think I
+19:34 spent an hour and a half trying to get
+19:37 my Mileage Plus account on United to
+19:40 work correctly with my daughter's phone
+19:43 and all this other stuff. Partly because
+19:45 these systems are so uh complicated, but
+19:48 they're built in mainframes, right? And
+19:50 a lot of the engineers, and this is
+19:52 going to sound kind of morbid, but you
+19:53 know, I think it's true, is a lot a lot
+19:55 of the engineers are are dead. like they
+19:58 literally are passed away. They were
+20:00 written, you know, 10 20 years ago and
+20:03 and like going in and touching that code
+20:07 is, you know, the probably the last
+20:09 thing anyone wants to do so nobody goes
+20:11 in there, you know, it's all downside.
+20:14 Now we can change that. So I'm like very
+20:17 excited about what it means to go in and
+20:19 improve things that people take for
+20:21 granted, right? That that's a big one
+20:23 that that's a bit of an aside. I think
+20:25 that um the other thing that I think
+20:27 it's worth kind of signaling is I think
+20:30 that the way we we the skills that you
+20:34 need to be effective in today's world is
+20:38 a uh is an acceleration of what we were
+20:40 talking about last episode. We were
+20:42 talking about IC's. We were talking
+20:44 about hands-on. We're talking about
+20:46 opinion. Even back then before you know
+20:48 Claude and Chapen GBT and others kind of
+20:50 came came out. Uh, I think what we're
+20:53 now seeing is companies are looking very
+20:58 very um carefully at their staffing and
+21:02 they're asking themselves one, do we
+21:04 need this many people? Did we overhire?
+21:07 And part of the reason is they're
+21:09 looking, hey, maybe we doubled our staff
+21:12 in the last five years. Lots of
+21:13 companies that are public have done
+21:14 that. Did we get twice as much for them?
+21:18 You know, it was funny when I was at
+21:19 Google, um, now over 10, 15 years ago.
+21:23 We used to ask ourselves, you know, I
+21:25 was on an ancillary team. I wasn't in
+21:27 the search or the ads team. We used to
+21:29 ask ourselves like, how many people are
+21:31 really needed for Google to hit their
+21:34 numbers and, you know, there were like
+21:36 at the time 20, 30, 40,000 people. And,
+21:39 you know, if you ask someone who wasn't
+21:41 in tech, you're like, ah, probably like
+21:43 90% of those folks obviously. And you
+21:47 know the answer is probably closer to
+21:48 like 9%. You know probably you need like
+21:52 500 people to keep the lights on and to
+21:54 build that business. You don't need 25
+21:57 30 40,000 people. So there's a huge
+22:00 amount of overhead where companies hire
+22:03 not just because they want to, you know,
+22:05 have bureaucrats because they want to
+22:06 expand, they want to try new things. But
+22:09 I think that there's a judgment day
+22:10 that's come back where companies are
+22:12 like, look, we aren't getting as much
+22:15 for the staff that we grew in the last 5
+22:18 years. And this AI thing requires a
+22:20 totally different skill set. The
+22:22 combination is going to mean this year,
+22:25 I predict in the next 12 to 24 months,
+22:28 we're going to see massive shedding of
+22:30 staffs and then massive rehiring. Um,
+22:34 but the re you might see a company shed
+22:37 30,000 and hire 8,000. But the 8,000
+22:41 people they're going to hire are going
+22:43 to all be AI first. and the 30,000
+22:46 they're going to let go of are going to
+22:48 be in combination of we didn't get as
+22:50 much for those folks that we needed and
+22:52 we wanted to sort of set the we want to
+22:54 set the uh the destination differently
+22:57 with a much lighter uh payload and
+23:00 that's that's dark that's going to make
+23:02 this uh year and the next two year you
+23:05 know year going to be pretty pretty
+23:07 challenging so I'll transition a little
+23:08 bit to my thoughts on people but I'll
+23:10 pause for a second to see if this
+23:11 resonates with you
+23:12 >> that's uh scary to
+23:15 We're going to talk about what folks
+23:16 listening can do to be in to do do their
+23:20 best to be in that second bucket of
+23:22 being rehired and and kept because
+23:24 there's a lot you can do and there's a
+23:26 lot of people that know they need to
+23:27 change and adjust and they're not doing
+23:29 anything and we want to talk about maybe
+23:31 some of the blockers there. One thing
+23:32 I'll note is I I should have mentioned
+23:34 this earlier. I just did this uh report
+23:36 on job the job market and interestingly
+23:39 as of today at least we have the most
+23:42 open PM roles globally at tech companies
+23:46 uh in three plus years. The last time it
+23:50 was this high was kind of during COVID
+23:53 basically. So there's some good news
+23:54 there at least for the PM world. I don't
+23:56 know.
+23:56 >> Did that surprise you Lenny?
+23:58 >> Yeah it did because there's always this
+23:59 sense that you know why do we need PMs?
+24:01 What's the point? We have AI just build
+24:03 stuff and like my sense I've always been
+24:05 saying this I feel like the PM skill is
+24:07 the most important valuable skill of all
+24:10 the skills and I know every role thinks
+24:11 this about their role. It's like no
+24:13 design we sign more than anything now
+24:15 like but but I feel like what you said
+24:18 where it's the deciding what to build
+24:21 deciding if this is good and great and
+24:22 ready and prioritizing I feel like
+24:24 that's what remains. So uh so to me it
+24:28 makes sense. report came out in a
+24:30 fortuitous time because it was right
+24:32 before I was preparing to kind of come
+24:34 on this show and the the three points I
+24:36 was going to make is, you know, builders
+24:38 are going to have the time of their
+24:39 lives. Comp's actually up and the Bay
+24:42 Area is, you know, essentially back in
+24:46 in uh in in favor and I think those
+24:50 three things came very much loud and
+24:52 clear in your report. Um and I think
+24:55 your the question around hey why are
+24:57 product managers doing so well? Why are
+24:59 there so many jobs when in reality a lot
+25:02 of product people that all of us know
+25:03 are struggling to find a role or we're
+25:05 hearing about these layoffs. I think it
+25:07 depends on how you define what a product
+25:09 manager is. And I think that for the
+25:11 first time I think that we did have a
+25:13 dramatic shift in what's defined. We
+25:16 three years ago talked about hey product
+25:18 managers there's lots of arc types. Some
+25:20 arc types are actually more in favor.
+25:22 This was the IC conversation, the
+25:25 builder conversation. Now what we're
+25:27 essentially saying is the the the
+25:30 information mover is essentially going
+25:33 to become a dinosaur. And I think about
+25:36 half of the product people that were
+25:40 kind of that grew into the industry, you
+25:42 know, have that skill and superpower.
+25:45 And then there were a set of people who
+25:47 got into product because they like to
+25:49 build stuff you know and you know folks
+25:51 like yourself who were founder who that
+25:54 was sort of the motivation into joining
+25:56 kind of the industry and then they found
+25:58 themselves into this thing called
+25:59 product management. Those folks are
+26:01 builders you know and those people are
+26:05 the ones that are being hired by your
+26:07 survey. I think those product managers,
+26:10 everybody wants a builder. And I think
+26:13 that interestingly, lots of engineers
+26:15 are builders, lots of designers are
+26:17 builders, lots of uh marketing folks are
+26:21 builders, and I think builders wanted is
+26:25 going to be the big tagline for the next
+26:27 couple of years. And it is so fun to
+26:31 build. I I I'll bet you and this is a
+26:34 prediction that if you had to choose
+26:36 between preparing a podcast and sitting
+26:39 in codeex or sitting in cloud code and
+26:42 like working on your laptop, you would
+26:44 prefer the ladder.
+26:46 >> It is so fun. Yeah. Just like progress.
+26:48 You just make so much fun. It's like
+26:49 look at this thing go. It's getting
+26:50 better. It's getting better.
+26:51 >> I mean when I was a PM I used to take a
+26:55 break and go ch and go change the light
+26:58 bulbs in the house. And the reason why I
+27:00 would change the light bulbs is that
+27:04 light bulb was broken, but then I
+27:07 replaced it and the light came on and
+27:10 man was that satisfying because in a
+27:13 product job there is very few days of
+27:16 satisfaction
+27:18 because you don't really have the
+27:20 ability to see something broken that
+27:22 gets fixed. It's just part of the
+27:25 challenge in having responsibility
+27:26 without authority. until now. Now you
+27:31 can participate in the joy. You can
+27:33 create a design. You don't have to wait
+27:34 for the designer and convince the
+27:36 designer to go and actually work through
+27:39 this or to put your stuff on a backlog.
+27:41 You don't have to do that. And so I
+27:43 think that the builders are going to
+27:44 have the time of their lives and I think
+27:48 they're going to be very focused on
+27:50 judgment. I think that they're going to
+27:52 invade other functions. I think there's
+27:56 going to be, you know, when when I
+27:57 started the group five years ago, we had
+28:01 for the first two to three years until
+28:03 we got to about 60 70 people in this
+28:05 community of of head of products, we had
+28:07 one founder.
+28:09 In the last 12 months, as we've gone to
+28:13 about 125, we have 14 founders.
+28:18 14 people essentially have decided that
+28:22 their next job was not to take another
+28:24 product executive role but to founding
+28:27 CEO is now open to us. I I have one
+28:31 person very senior person on uh in in my
+28:34 group who interviewed for a CHRO
+28:38 position
+28:39 because they wanted a product manager
+28:43 background for the CHRO position. What
+28:46 is the what is the HRO?
+28:47 >> That's the chief HR person in the
+28:50 company, right? So, you would never
+28:52 think that an HR person would be a
+28:55 former product manager, but now
+28:57 forward-leaning companies are starting
+28:59 to say, "Hey, we need someone who can
+29:02 bring this obsolescence skill, this
+29:04 judgment skill, this empowerment skill,
+29:07 this builder skill to the function." In
+29:09 fact, the function might be easier to
+29:11 learn than the other parts of the job.
+29:14 And you know we're seeing that trend
+29:16 that product builders are going to have
+29:19 you know both a broader range of
+29:21 opportunities up and down the stack and
+29:24 it won't be product managers and
+29:26 engineers can become product leaders and
+29:28 product builders and and all of this
+29:30 blurring of the lines is going to take
+29:32 place. I think that unfortunately the
+29:35 flip side has to be mentioned. I think
+29:37 that non-builders
+29:39 and I think that anyone who sort of sees
+29:41 themselves as not loving like sitting
+29:44 down and building something and there
+29:45 may be reasons why and we'll get into
+29:47 why you may not be in a position to to
+29:49 find the time let's say but if you're
+29:52 not a builder if you're like look my
+29:53 skill was never to I'm not really into
+29:55 tech like people say this all the time
+29:57 I'm not really into tech I I just really
+29:59 found it to be a lucrative job it's a
+30:02 you know it's a role where my ability to
+30:05 communicate my ability to move
+30:07 information was, you know, where I ended
+30:09 up enjoying it. I love team building,
+30:11 you know, those kinds of nodes, which by
+30:13 the way, I love all those things. Um,
+30:15 but if you don't love building stuff,
+30:17 you're in trouble. And, and I mentioned
+30:19 about half the people are in that camp.
+30:22 So, we're going to have that challenge
+30:25 where they're going to have to find
+30:28 perhaps leave the tech industry. they
+30:31 might have to, you know, it might be
+30:33 that they um, you know, want to go build
+30:37 a a new business outside of tech, but
+30:39 use some of these AI tools or maybe they
+30:41 they want to find a job completely
+30:43 foreign to tech. But I think that this
+30:45 non-builder piece is a is sort of a
+30:48 mirror image of the builder growth that
+30:51 story that we're seeing.
+30:52 >> There's so many directions we can go
+30:54 here. One thing I want to throw out,
+30:55 it's kind of a hot take and this came
+30:57 from a chat I just had with Amold the
+30:59 head of growth growth at Anthropic. So
+31:02 he's at a growth, he's a PM and he had
+31:04 this really interesting point that as
+31:06 engineers can do so much more, PMs are
+31:08 getting squeezed because they have to
+31:11 stay on top of so many things, so many
+31:12 features, so many ideas, so much doc, so
+31:14 many things being sent at them. And
+31:17 there's this push for PMs at companies
+31:20 to shipyards build stuff themselves. And
+31:25 what we took away from that chat is like
+31:27 the leverage that PMs often have is is a
+31:30 lot higher not spending time coding and
+31:33 shipping but instead just like staying
+31:35 on top of all this stuff. And he's like
+31:36 we need more PMs now. There's so much
+31:38 for PMs to do because engineers are so
+31:40 fast. So there's still need for like
+31:42 prototyping to explore ideas and
+31:45 ideulate and get feedback and align. But
+31:47 he had an interesting take that like I
+31:49 don't want to be like it's better I
+31:50 don't spend time shipping stuff. It's
+31:52 better I do higher leverage work as a
+31:55 PM. It depends what he means by shipping
+31:59 stuff because I think that if you have
+32:03 an engineering team of 50 people
+32:05 building things for your customers and
+32:08 you're like, "Hey, I want to be the 50
+32:10 first because that's how I get
+32:13 leverage." I'm like, "It's kind of a
+32:14 cheap knockoff of an engineer." If on
+32:17 the other hand, the thing that you're
+32:18 building is ways to stay on top of what
+32:22 the 50 people are are doing when in the
+32:24 past that was building tickets and
+32:28 backlogs and all of the things that we
+32:30 used to do to figure out organizations,
+32:32 manage standups, you know, that's the
+32:35 information overload that's happening.
+32:38 What we saw when the CPO's got together
+32:40 is all of the things they're building
+32:42 are ways to drive efficiency out of
+32:44 their product organizations. They're
+32:46 inside the building kind of development
+32:50 efforts. And I'm not sure that for the
+32:53 next five years we'll continue to build
+32:55 software that way, but I think in the
+32:58 next two years people are going to
+33:00 change the product operating system that
+33:02 they're working on. And we're already
+33:04 seeing companies that like stand up and
+33:07 they say, "Hey, we've fully automated
+33:09 the way we do product reviews. We fully
+33:11 automated the way we do product
+33:13 standup." So to his point, look, if
+33:16 there's 15 10 times the amount of stuff
+33:19 happening, we need judgment to determine
+33:21 whether it's good. These are good or bad
+33:24 changes. And right now, if it's manual,
+33:26 we're cooked. So it's a combination of
+33:29 hiring good product builders with
+33:31 judgment and then hiring increasingly
+33:34 folks whose entire job is to kind of
+33:38 build the internal tools necessary to
+33:41 improve the decisioning but it's not
+33:43 through hiring of humans and building
+33:46 management ethos which is what it used
+33:48 to be in Zerp. It's actually through
+33:50 technology, but it's a totally different
+33:52 way of building software. And that's
+33:54 what gets people excited because they're
+33:56 like, "Wow, if I do this, I don't have
+33:57 to ever do a status report." I mean,
+33:59 that was a comment that was made. I hate
+34:01 doing status reports. So now I just
+34:04 wrote something and my boss is happier
+34:06 because they get more in detail. And at
+34:08 that to me is incredibly exciting, but
+34:11 it is a different direction of what
+34:13 you're trying to deliver than something
+34:14 that goes out the door.
+34:16 >> That is such a good distinction and and
+34:18 makes all the sense. Basically, it's uh
+34:20 make yourself scale through software as
+34:23 much as possible. There's a big
+34:24 opportunity and it's fun. It's like
+34:25 you're building your own thing.
+34:26 >> That's right. That's right. I think a
+34:28 few other things that I would just note
+34:29 around how things are going to change
+34:31 the next couple years. I think that
+34:32 adults are still going to be needed. I
+34:34 think companies are going to grow.
+34:36 They're going to grow quickly. I think
+34:38 those that are driving some of these
+34:40 initiatives are are classic founders.
+34:43 And AI is great at supplementing a lot
+34:47 of things. But I think judgment comes in
+34:49 the form of uh a combination of
+34:52 expertise and wisdom. And so I think
+34:55 that increasingly I hear from mind
+34:57 groups that hey I'm attractive to this
+35:00 company because I have wisdom but I stay
+35:04 hands-on. I have credibility with the
+35:06 founder. So I can have a conversation
+35:09 with that individual in his or her
+35:11 language but I have weight to my
+35:15 thinking. I have seen the movie. I have
+35:17 experience that actually would help them
+35:20 as they take this turn. So adults are
+35:22 still going to be important. I think
+35:25 pace will continue to go up partly
+35:28 because people will want to feed the
+35:30 beast the the sort of LLMs that are
+35:32 running at night. And I think partly
+35:34 because there's just such an opportunity
+35:36 to keep moving so much faster. Uh and I
+35:39 think that's going to be dizzying and
+35:40 I'm not excited about what that causes
+35:43 for burnout. Um sadly I think that
+35:46 geography and and actually diversity is
+35:49 going to take a step back. I think that
+35:51 we were very good about driving more bre
+35:56 as we grew the industry. we started
+35:58 looking at people who were from
+36:00 different backgrounds to populate it
+36:03 including different locations. But I
+36:05 think that because the AI wave is so
+36:07 heavily and you know coming from the the
+36:09 the the Bay Area and because companies
+36:12 are hiring fewer folks, they're hiring
+36:15 people that look and act like
+36:16 themselves. So age, gender, I think uh
+36:22 you know ethnic uh backgrounds,
+36:25 all of those are taking a hit and I
+36:28 think that we will have stepped back
+36:31 quite a number of years in the diversity
+36:33 of what we do. And so I worry um I mean
+36:36 this is my personal worry but I worry
+36:38 about that um probably more now than I
+36:41 did in the last 5 years um because I
+36:44 think it's an underbelly of what we're
+36:45 we're seeing and I don't think that
+36:47 anyone's intentionally doing anything
+36:50 but I think when pace is so high the
+36:52 fact is that you know women are having
+36:56 kids and in those power years and and
+36:58 they just don't have the time uh to a
+37:01 lot to spending their nights and
+37:03 weekends and cloud code. And so that's
+37:06 an impact and you know we don't talk
+37:08 about it as an industry but it's
+37:09 absolutely true. Um and then the last
+37:12 thing I would just say and maybe this is
+37:14 this goes into some of the the advice as
+37:16 well is I think that the one of the most
+37:19 surprising shifts we're seeing is you
+37:22 know your brands don't matter as much as
+37:25 how modern you are in your ability to
+37:28 deliver product.
+37:30 In in the past, I think for the last 10
+37:33 years, it's like, have you seen the
+37:34 movie before? I remember even in this
+37:37 last podcast episode we did, Lenny, we
+37:39 talked about, hey, brands matter. You
+37:41 really need to make sure that
+37:43 >> they're personal brands.
+37:44 >> Yeah, personal brands. Hey, I've worked
+37:45 for this company. They've delivered
+37:47 products. They've been at scale. So then
+37:50 people are like, "Oh, that person
+37:52 certainly knows what they're doing,
+37:54 right?" and and you know it's like well
+37:57 tell me about all the different
+37:58 experiences you've had but now if every
+38:02 way of building software and how we
+38:05 deliver product is completely alien to
+38:08 how it was in the last you know 10 years
+38:12 how you delivered in that sort of
+38:14 version one is going to be less and less
+38:17 relevant so lots and lots of feedback
+38:20 from that I'm hearing from interviews is
+38:22 like put you in a scenario what tool
+38:24 tools do you use? What's your judgment?
+38:26 How do you think? It's not about five
+38:29 years ago you shipped this thing. What
+38:31 was your thinking that went into it? And
+38:34 so how modern you are now becomes the
+38:37 career advice. Not did you pick up the
+38:41 established brands? Because what if the
+38:42 established brands is very much
+38:46 working in a way that's not current? You
+38:48 worked there for six years, you come out
+38:50 and it feels like you're in a totally
+38:52 different world, right? That's why I
+38:54 think the next two years and these
+38:55 changes are so profound and and quite
+38:58 frank frankly confusing to people.
+39:00 >> That is such an interesting insight that
+39:02 the logo like it used to be fancy to
+39:03 have all these logos on your resume and
+39:06 now you're saying sometimes that may
+39:07 hurt you because that company's not seen
+39:09 as a very AI forward company. And second
+39:11 of all, people are looking for just like
+39:13 what have you actually done? Are you
+39:14 actually aware what's going on?
+39:16 >> Well, I was just going to say some of
+39:17 those biggest brands, it's hard to even
+39:19 talk about what you've done. You know,
+39:21 it's like, you know, if you're working
+39:22 at Meta and you spent two years and I
+39:24 managed to make this, you know, piece of
+39:26 this algorithm, you know, go a little
+39:28 faster and by the way, it had a huge
+39:29 impact. And, you know, frankly, it was
+39:31 incredibly hard to navigate the hallways
+39:33 and to make that decision and to find
+39:35 incrementality. I mean, as someone who
+39:37 has worked there, I understand and
+39:38 respect that and that is a promotable,
+39:40 you know, achievement, but it just falls
+39:43 very flat on a conversation where
+39:46 someone's like living in the future and
+39:48 product is now totally different, right?
+39:50 That distinction is the is the thing
+39:52 that I want to just call out that hey
+39:53 that's happening every day right now.
+39:56 >> So what you're saying there which is a
+39:58 really powerful point is that the skills
+39:59 that used to be really valued in product
+40:01 managers are changing pretty
+40:03 substantially.
+40:04 >> Yeah. And in fact maybe almost flipped
+40:07 upside down in terms of importance. You
+40:10 know, in some ways, we start our careers
+40:12 as builders, many of us, and then we get
+40:15 taught that leverage, scale, organizing,
+40:20 streamline, empowering, enabling. Don't
+40:24 do the build yourself. Get others to do
+40:26 it. Stop working on the car, work on the
+40:28 factory. Right? That's that's the that
+40:30 is the maturation of our industry. And
+40:34 then you find out that well what if it
+40:37 turns out the scale can be done very
+40:40 differently and all we care about is
+40:42 your opinion and what you build. That's
+40:46 very jarring and that's what we're
+40:48 living through right now.
+40:50 >> So let's follow the thread of specific
+40:52 advice to PMs right now whether they're
+40:56 mid-career senior getting started. What
+40:59 are some specific things that you think
+41:01 people should do to do well in this
+41:04 emerging future?
+41:06 >> Change is really hard for us. And I
+41:09 think as humans, we're not really
+41:12 designed to change very easily. Like if
+41:16 you think about it, you know, I was
+41:18 thinking you, you know, about why is it
+41:20 hard for us to change when in some ways
+41:22 change can lead us to much better
+41:25 outcomes. You know, we're almost like
+41:27 told to change less as we grow older.
+41:31 You know, when you're a kid, you fall
+41:33 down a ton. But like, Lenny, when was
+41:35 the last time you fell down?
+41:38 >> Not Not often, except my my son loves to
+41:40 pretend like we're falling. There's a
+41:41 lot of pretendful.
+41:43 >> And when you pretend fall, it's probably
+41:44 pretty jarring. It's probably relatively
+41:47 new.
+41:47 >> Yeah. For him, it's so fun. He loves it.
+41:49 But yeah, for me, like such a long ways
+41:51 down.
+41:52 >> Yeah. And I think that it's funny
+41:54 because you watch kids and it's like
+41:56 normal for them to reinvent everything
+41:58 they do. Oh, I'm learning to crawl. Oh,
+42:01 now this walking thing, you know,
+42:02 crawling is like that's not for me. You
+42:05 know, it's why kids learn languages so
+42:07 quickly because they are not afraid to
+42:09 make mistakes and they go through things
+42:11 much more rapidly. It's why you teach
+42:14 your kids to learn how to ski early
+42:16 because boy, I you know, I've just made
+42:19 a decision. Hey, I've never been a skier
+42:21 and I'm just like too old to do it. I
+42:24 think that we are trained to find a
+42:28 happy medium and then make as few
+42:30 changes as possible. Find a partner, get
+42:32 settled down. You know, find a job, try
+42:35 to stay. It's a failure to transition to
+42:38 a new job if you can avoid it. You know,
+42:41 that's our entire ma model. And so we
+42:44 create also in some ways a mental block
+42:48 around this idea of reinventing oneself.
+42:51 You know you when you are told to
+42:54 reinvent to when you are told to change
+42:57 your first thing you think about is it
+42:58 really necessary? Boy it seems
+43:00 exhausting. I worked so hard to get
+43:04 here. Why would I need to? And I think
+43:09 in the most inner psyche of some of us,
+43:12 it's that just wasn't the deal. The deal
+43:16 was I did what I was supposed to. Went
+43:19 to school. I worked hard. I got a job. I
+43:21 built the brand. I got to be a manager.
+43:24 I'm making the income. I have the, you
+43:26 know, whatever it might be, the partner,
+43:28 the the the family, you know, all this
+43:30 stuff. You're telling me after all this
+43:34 time I gotta start over?
+43:38 Like it sounds fun. You read Twitter and
+43:41 you're like, "Wow, all these people are
+43:43 doing all this crazy stuff, but in the
+43:45 back of your mind it's like I I just
+43:46 don't know why. Why did we get here? I I
+43:49 don't I don't want to do it. I want to
+43:51 go back to the world where I can just
+43:53 keep doing things." So I think that this
+43:55 block is actually at the heart of the
+43:58 matter today and and it's a skill
+44:01 reinvention and it requires time but
+44:06 time is so hard to find in your power
+44:08 years you know for the reasons we
+44:10 mentioned with so many you know your
+44:12 goal when you're in your power years is
+44:14 to equally disappoint everyone in your
+44:16 life which sounds like a horrible
+44:18 statement but it's true. You have to you
+44:21 you have 6 hours to give, 8 hours to
+44:24 give, 12 hours to give and you have 20
+44:26 hours of demand. What is your
+44:29 prioritization mechanism? I am going to
+44:32 equally disappoint everyone. Not
+44:34 disappoint group. My parents will not be
+44:36 more disappointed than my kids, than my
+44:38 health, than my family, than my friends,
+44:40 than my partner, than my work, than you
+44:42 know my retirement account. Like that's
+44:44 essentially what your mindset is. It's I
+44:47 need to equally disappoint everyone. Now
+44:49 you're telling me that the number one
+44:52 thing is to reinvent
+44:54 when I'm barely able to manage this this
+44:57 disappointment algorithm. It's quite
+44:59 dark that I think that you know that
+45:02 there's the setup. And then the worst
+45:04 part is these two other psychological
+45:07 factors. One is okay fine. I'll put the
+45:11 week I'll take a week off and I'll go
+45:14 figure out what people are doing and
+45:16 what the latest is and then it turns out
+45:18 three months later that week off was is
+45:22 now antiquated. You got to keep doing it
+45:24 because the target keeps changing. It's
+45:26 not like I went from not having a job to
+45:29 having a new job and then I kind of
+45:32 grinned and bear and got through it and
+45:34 now I'm back in flow. It's like I'm
+45:36 never in flow because I gotta keep doing
+45:38 this over and over and over again. And
+45:40 the the most surprising observation I
+45:43 made is that the the ones that were the
+45:45 best at working in the past, the the
+45:49 ones that mastered the old game find it
+45:52 the hardest to go through this
+45:53 reinvention stage. It's this sort of
+45:55 shadow superpower thing that I talk
+45:58 about. you know, you've the better you
+46:01 are at mastering one system, the less
+46:04 likely you are to sort of recognize the
+46:06 new one because your entire world is
+46:10 like, "This is working to me." And so,
+46:13 the weaker you are, the more excited you
+46:16 are about changing. Hey, what I'm doing
+46:18 isn't working. Might as well change it.
+46:19 But if you're really good, you have no
+46:22 incentive to change. And perhaps even
+46:24 your employer sees you're doing great
+46:26 and the company itself is in this
+46:27 moment. So all of these things, whether
+46:30 it's the shadow, whether it's the
+46:32 exhaustion, whether it's the time,
+46:35 whether it's the fact that the target's
+46:36 moving creates this reluctance to
+46:39 reinvent. But the number one piece of
+46:42 advice to answer your question is you
+46:44 have to have the courage, you have to
+46:46 believe, you have to have the power to
+46:48 essentially say, look, I know the way we
+46:50 work is changing and I need to stay
+46:51 moderate. I need to stay current. I am
+46:54 going to cross that mental threshold and
+46:57 I'm going to prioritize that above all
+47:00 else. That crossing the threshold is the
+47:04 key. And I'll talk a little bit about
+47:05 how one does that. But I think that I
+47:07 mean if there was one thing to get away
+47:09 from today's discussion is every person
+47:11 listening to this podcast needs to find
+47:14 it in themselves to cross the threshold
+47:16 around embracing reinvention. That is
+47:19 the world that we live in now. Damn,
+47:21 Nicole, this hits hard. Uh, I told
+47:24 people you uh you don't sugarcoat stuff
+47:27 and this is this is what we're
+47:28 experiencing now. I am so excited to
+47:32 tell you about this season's supporting
+47:33 sponsor, Vanta. Vanta helps over 15,000
+47:37 companies like Cursor, Ramp, Dualingo,
+47:40 Snowflake, and Atlassian earn and prove
+47:43 trust with their customers. Teams are
+47:45 building and shipping products faster
+47:47 than ever thanks to AI. But as a result,
+47:49 the amount of risk being introduced into
+47:51 your product and your business is higher
+47:53 than it's ever been. Every security
+47:56 leader that I talk to is feeling the
+47:58 increasing weight of protecting their
+48:00 organization, their business, and not to
+48:02 mention their customer data. Because
+48:04 things are moving so fast, they are
+48:06 constantly reacting, having to guess at
+48:08 priorities, and having to make do with
+48:10 outdated solutions. Vanta automates
+48:13 compliance and risk management with over
+48:15 35 security and privacy frameworks
+48:17 including SOCK 2, ISO 27,0001 and HIPPA.
+48:21 This helps companies get compliant fast
+48:24 and stay compliant. More than ever
+48:26 before, Trust has the power to make or
+48:28 break your business. Learn more at
+48:30 vanta.com/lenny.
+48:32 And as a listener of this podcast, you
+48:34 get $1,000 off Vanta. That's
+48:36 vanta.com/lenny.
+48:39 What I think about as you talk about
+48:40 this is um I don't know if you saw this,
+48:43 they asked all the heads of the AI labs
+48:45 like Demis and Sam Alman and Daria just
+48:48 like, "Okay, if everybody agreed to slow
+48:51 down and stop this stuff, okay, would
+48:53 you would you do it?" And they all said,
+48:55 "Yep."
+48:58 Which says a lot about just like they're
+48:59 all like freaked out a bit about how
+49:02 fast everything's going, how much is
+49:04 changing. And then there's the reality
+49:06 of but that is not going to happen
+49:07 because the the game theory of it all is
+49:10 it doesn't work. You can't slow down
+49:12 because no no one will actually slow
+49:14 down. Whoever doesn't has a huge
+49:15 advantage. And so I think a just a big
+49:18 part of this insight is just like this
+49:20 is happening and there's nothing you can
+49:23 do to slow it down or stop it. And you
+49:25 could either try to pretend like it's no
+49:27 big deal and it's going to be all right.
+49:29 Or you could, as you said, get over this
+49:32 hump of just like, okay, I need to lean
+49:34 into this and see see what I can do.
+49:36 >> Well, and and maybe there's a baby
+49:38 version of this that perhaps provides a
+49:41 bit more kind of soloulless and
+49:43 optimism. A baby version of this is that
+49:46 you know the way that people did let's
+49:48 call it product management back in the
+49:51 day when HP and Cisco and AMD and these
+49:55 other companies built products that were
+49:57 you know physical hardware they had long
+49:59 engineering cycles. There is a
+50:01 discipline called product management
+50:03 that was birthed and that discipline had
+50:06 a very very specific uh very structured
+50:10 way of working that was essentially
+50:14 imploded when the internet companies
+50:18 came along and Google for one built the
+50:20 APM program because they felt like hey
+50:23 this product thing that exists in the
+50:25 market isn't really what we need and
+50:28 we're not seeing success and In fact,
+50:31 we're going to just train from the
+50:32 beginning this new breed. And you know,
+50:35 that then birthed a lot of the current
+50:38 product managers. Microsoft and Meta and
+50:40 other big employers started to kind of
+50:42 create a new new version. And for the
+50:44 first few years, there was it was very
+50:47 jarring because everything that they did
+50:49 that they call product management
+50:51 resembled old product management pretty
+50:53 much in name only. And there wasn't like
+50:56 you go to become a business school uh
+50:59 you know you get a business school
+51:00 degree and all of a sudden you're a
+51:01 product manager. You would have to work
+51:03 you have to build some expertise then
+51:04 you'd have to come in and help organize
+51:06 and collaborate and all this other good
+51:08 stuff. The next couple years are going
+51:10 to be like that where you know every
+51:14 three months we're going to have more
+51:15 agents different forms of judgment.
+51:18 They're blurring the lines on what the
+51:20 the role and responsibility people from
+51:22 different backgrounds coming in. people
+51:24 leaving the it's going to be chaos. But
+51:27 as a couple of years go by, things will
+51:30 settle.
+51:31 Companies will be built a certain way.
+51:33 And it won't be that you'll continue to
+51:36 change the way you're working. You'll
+51:38 have reached some form of optimization.
+51:40 We're just not in that optimization in
+51:42 any way, shape, or form right now. And
+51:44 so the speed of iteration and how you
+51:47 think about look, my job is not to move
+51:49 information. My job is to evaluate. you
+51:52 know, I have to think through what is
+51:54 success look like, whether this makes
+51:56 sense for the system. It's a totally
+51:57 different skill. But after a couple
+51:59 years, there's going to be some
+52:01 routinness to it. There's going to be
+52:02 some training. There's going to be
+52:03 consistency. The job you had next is
+52:06 going to look like the previous job.
+52:07 Lots of this is so all I'm making a
+52:09 point is that you need to cross the
+52:11 threshold to stay modern because things
+52:13 are changing. But I I don't want to send
+52:15 the point that for the next 30 years
+52:17 you're going to be on this merit round
+52:19 that's going to spin faster and faster
+52:20 and faster and then you're just going to
+52:22 have to run off the mer round and go
+52:24 vomit in the corner. That's not at all
+52:26 what I'm suggesting. I'm just saying
+52:28 that right now is the moment when if you
+52:32 love building, you have to stay current
+52:35 because you will be happier and you'll
+52:37 be more relevant. And if you don't love
+52:38 building, you have to recognize the
+52:41 industry is moving away from you. That
+52:43 is the key point and and I don't think
+52:45 there's a person that's looking at the
+52:48 current way of building product. I don't
+52:49 think there's a person that's been on
+52:50 this podcast that would disagree with
+52:52 that statement.
+52:53 >> That is a really empowering point to
+52:56 make there that this is not forever that
+52:58 it's a couple years potentially maybe I
+53:00 don't know could be a little bit longer
+53:01 but it's not a forever thing where you
+53:03 have to do this you have to lock in and
+53:05 and sacrifice forever. It's a this is
+53:07 the moment to to get on the rocket to
+53:10 get on the ship. I don't know synonymous
+53:12 the boat whatever metaphor you want to
+53:14 use
+53:15 >> whatever transportation
+53:17 >> so I think that makes that would make me
+53:19 feel better I think the other like I
+53:21 don't know the the good again just to
+53:23 remind people like this you know there's
+53:25 it sucks to have to change the good as
+53:29 you shared earlier comp has never been
+53:31 higher there's a lot of open roles uh
+53:34 people that are embracing this are
+53:35 having a lot of fun like you're like
+53:38 most PMs are sitting there all day
+53:40 waiting waiting for stuff to happen,
+53:41 waiting for meetings and approvals and
+53:43 all this alignment and all this PR
+53:44 reviews and now it's like you can ship
+53:46 stuff so often like there's so much
+53:48 >> good that is happening. Maybe just
+53:50 remind us again of anything else there
+53:51 just to inspire people to like okay this
+53:53 is working. I think let's go to the
+53:55 individual you're describing. There's
+53:57 someone who's sitting who's uh really
+53:59 afraid who's a builder who's like, man,
+54:02 my job is changing so rapidly and I'm so
+54:06 nervous and I have to think through
+54:08 what's my career going to look like? But
+54:10 I tend to ask the question like, do you
+54:12 really love your day? Like if you put
+54:16 green, yellow, and red next to the
+54:18 meetings you had and did that for a week
+54:20 and then we looked at the color chart,
+54:24 I'll bet you the vast majority of of PMs
+54:28 that are in a product organization, they
+54:30 show mostly yellow and red. And I'm
+54:33 telling you, the ones that are moving
+54:35 into more of this build mode, it's
+54:37 mostly green and yellow.
+54:40 and and and and that yet
+54:43 most of them are sitting very very
+54:46 afraid feeling stuck. So what I'm
+54:48 suggesting is how do you then transition
+54:53 mentally and then physically into a
+54:55 moment of going from this moment of fear
+54:58 and being on the sidelines to being in
+55:00 the game. What I have noticed, and this
+55:03 is sort of a big kind of surprise to me,
+55:05 is there is a moment where they
+55:07 experience the first joy in using the
+55:11 new tools. Everyone has a story and it's
+55:15 always different, but it's super
+55:17 personal. It's going to be like, "Oh, I
+55:19 was doing it a certain way and then all
+55:21 of a sudden I built this thing." And
+55:24 oftentimes it's like my partner and I
+55:26 use this app that I built or I built a
+55:30 chief of staff app to keep track of my
+55:32 inbox or I now manage, you know, the
+55:37 lights in my house using this thing. and
+55:40 it's some silly thing and usually
+55:43 accompanies with the story like and I
+55:44 stayed up all night or I spent a bunch
+55:48 of time talking to my friends or or or
+55:51 or hacking away or I just spent time
+55:54 talking to Claude about it. You know,
+55:56 even my wife has a story about how she
+56:00 has this business that she's thinking
+56:02 through and she went from using the AIS
+56:04 to, you know, do business plan to
+56:07 actually do test market and everyone has
+56:10 this moment of joy and then they're like
+56:12 hooked. It's like a they're they caught
+56:14 a bug and at that moment is when they
+56:18 cross the threshold between fear to joy.
+56:22 And joy is the biggest antidote to
+56:25 burnout. And it creates opportunity
+56:27 because the moment you have joy, the
+56:29 moment it doesn't feel like work. And I
+56:32 think most product management feels like
+56:35 work if you're not building.
+56:38 And we are now moving into a world where
+56:40 product management will be building and
+56:43 joy, not work. So you just need to find
+56:47 a path to get there. And the moment you
+56:49 do your the rest of your human psyche
+56:52 creates time, doesn't feel like you're
+56:55 disappointing others and builds energy
+56:57 because people have more energy than
+56:59 they realize. They're just so exhausted
+57:01 by the monotony of what was defined as
+57:04 product management. And so that is the
+57:07 number one piece of advice is have you
+57:09 found joy? Now there's a class of person
+57:11 who's like none of this is joyful. Like
+57:13 I find the whole thing to be kind of
+57:16 boring, nauseating. I don't really like
+57:18 it. I'm like, well then you're probably
+57:19 not in for the next version of our
+57:21 industry, you know, and and you should
+57:23 be respectful of that and you should be
+57:25 honest with yourself. But there's a lot
+57:28 of product people that are right now
+57:29 very anxious that actually are going to
+57:32 be happier once they cross the chasm and
+57:34 all they need to do is find a way to
+57:38 create that moment of joy. you know,
+57:40 whether that's an app on their side or
+57:42 app your work. And if you're a leader
+57:44 listening to this, you should find those
+57:46 moments of joy in your staff because
+57:48 that's contagious and it gets people
+57:50 excited. And that's what, you know,
+57:52 that's why I like doing what I do. It's
+57:53 like I like building stuff and I caught
+57:55 the bug and, you know, I'm all there all
+57:57 the time. And, you know, I I I try to
+57:59 find TV shows that I can vibe code in
+58:02 parallel to because I want to watch TV,
+58:05 but I want to be vibe coding at the same
+58:06 time.
+58:06 >> What's a good What's a good show for
+58:08 vibe coding? I think well I I a lot of
+58:11 the Amazon Prime shows are good. That's
+58:14 not a knock on Amazon Prime but they're
+58:16 built on books. You know these books are
+58:18 like they're like structured and all
+58:20 that. So you know Alex Cross or you know
+58:23 Jack Ryan uh you know what's hilarious
+58:26 is uh and you know when you get older
+58:29 you stop you you remember shows that you
+58:31 love but you don't remember the plot. So
+58:34 one time I just binge watch a season of
+58:37 24. the show that I loved when back in
+58:40 the day, but frankly, I watched it and I
+58:42 kind of knew what was going on, but I
+58:45 vibe coded the whole time because it was
+58:48 like, hey, I'm paying attention here,
+58:49 but I'm staying engaged.
+58:51 >> Wait, let's actually follow this thread
+58:52 just like what's what's it what's your
+58:54 AI stack? What are you using to build?
+58:55 And what what are something what's
+58:57 what's something you built and something
+58:58 you vip coded?
+58:59 >> I kind of am pretty allin on Claude
+59:01 these last three months. I was uh for a
+59:05 month pretty aggressive on codecs um
+59:08 because I found some of their newer
+59:10 stuff to be uh especially the with with
+59:13 sort of the highest level of reasoning
+59:14 to be to be quite advanced. I find it
+59:17 hard to switch between tools I try to
+59:18 standardize to be to be direct like the
+59:20 things that I build. I build a bunch of
+59:23 web properties for my community. So you
+59:26 know anytime I see something that I can
+59:29 obsolete in code I try to build code
+59:32 around it. So if you had 100 people, one
+59:35 natural thing you want people to do is
+59:38 to meet each other. And you know, 100
+59:40 people can't meet 99 others. So it's
+59:43 it's you have to be thoughtful around
+59:45 who's the best person to meet and how do
+59:47 you match people up? How do you make
+59:49 sure that you match people with people
+59:50 they haven't met before? You know, what
+59:52 are their halves or their wants? That
+59:54 entire thing used to be me sitting down
+59:57 and thinking like, "Oh, you know, Jay-Z
+59:59 would really appreciate meeting Annie,
+1:00:01 but I don't know if they've met before."
+1:00:03 Now, I write software to do that. I
+1:00:04 write an agent that goes in and actually
+1:00:07 does matching. I write an agent to
+1:00:09 figure out, hey, what are all the jobs
+1:00:11 that my head of products are hiring? How
+1:00:14 do we make sure that we uh make those
+1:00:16 available but then build a mailing list
+1:00:19 of folks who I think when they're
+1:00:21 interested in work can get matched up
+1:00:23 automatically. So like the next
+1:00:24 generation of recruiting. Um I I think a
+1:00:27 lot about using AI for content. So when
+1:00:30 I sit down, um, I have an AI that takes
+1:00:34 questions from people and then it's
+1:00:36 trained on my content like yours and it
+1:00:39 gives answers. But then I read those
+1:00:41 questions, evaluate the answers and I'm
+1:00:44 like, hey, this is a theme I'm hearing
+1:00:46 and then I sit down and I write down
+1:00:48 when do the LLM and I disagree. I go
+1:00:51 through and so all of these things are
+1:00:53 are anything that I'm doing that I think
+1:00:56 I can you know replicate I try to
+1:00:59 obsolete myself. You know when I f
+1:01:01 started my first job I asked the best
+1:01:04 engineer that I worked with who still is
+1:01:07 one of the best engineers I've ever met.
+1:01:09 What what's the what's the definition of
+1:01:11 a great engineer?
+1:01:13 And you know I thought it would be like
+1:01:15 oh someone who's got this degree or is
+1:01:17 wellversed in this technology stack.
+1:01:18 He's like, "Well, the best engineer I
+1:01:20 know is my dad." And of course, this was
+1:01:24 before tech in that case. And he's like,
+1:01:26 "And my dad's definition is still with
+1:01:29 my favorite, which is an engineer is
+1:01:31 someone who obsoletes themselves from
+1:01:33 everything they do."
+1:01:36 That's the definition of a great
+1:01:37 engineer. And I've taken that to every
+1:01:41 job that I've worked at. And it's funny
+1:01:43 because you'll run into people that are
+1:01:45 like, "No, no, I don't want to obsolete
+1:01:46 myself. That's my job." And I was like,
+1:01:48 ah, I think if I obsolete, there'll be a
+1:01:50 better job for me. What AI has done is
+1:01:54 turn that, you know, has basically put
+1:01:57 an A-pop on that. It's like if you can
+1:01:59 if you can obsolete by just asking the
+1:02:01 AIs to do this for you. So why I'm
+1:02:04 saying that is I'm my stack is what can
+1:02:06 I do to obsolete anything and everything
+1:02:08 I do on a daily basis.
+1:02:10 >> That is super cool. I love I love
+1:02:12 hearing these stories. Like what I find
+1:02:14 is the best uh tactic here is just solve
+1:02:17 your own problem. Think about something
+1:02:19 that's not great in your day-to-day or
+1:02:22 something you just want to uh improve
+1:02:24 and just like and it's like it sounds so
+1:02:27 easy. All you do is go to I don't know
+1:02:29 lovable or install cloud code, download
+1:02:31 codeex and just tell it I want to uh
+1:02:36 build the dashboard to control my sonus
+1:02:39 and then it just tells you like walks
+1:02:41 you through everything you need to
+1:02:42 explore. And that's that's a pretty
+1:02:43 advanced thing to try, but it's just
+1:02:44 like English. Like it sounds like I have
+1:02:47 no idea how to do this. Like you just
+1:02:49 tell it here's what I want to do just
+1:02:50 like a person and it helps you figure it
+1:02:52 out.
+1:02:53 >> Well, and I I agree with you. And then I
+1:02:55 think the question is like what skill do
+1:02:56 you have to have? Like for a while I was
+1:02:58 like oh that's a systems engineering
+1:03:00 skill because you need to be able to
+1:03:01 like train you know the AIs to go after
+1:03:04 things. But in watching my wife and how
+1:03:06 she works and she's not an engineer by
+1:03:08 any means and she's getting tons of
+1:03:10 value. You don't even need to be an
+1:03:12 engineer. You just have to be
+1:03:13 opinionated on what you want to see
+1:03:15 >> and know what you want. Yeah. Know what
+1:03:16 know what good looks like.
+1:03:18 >> And then the moment that you get it,
+1:03:20 it's when the light bulb turns on when
+1:03:22 it wasn't working before. And now you
+1:03:24 sit down and there's this moment where
+1:03:25 it's like, hey, I used to have to go and
+1:03:27 work to do this, but now my agent's
+1:03:30 doing this. And then what's the next
+1:03:32 agent I could do to make my life a
+1:03:34 little bit better? And that's where you
+1:03:36 catch the bug. It's such a powerful
+1:03:38 thought that your job can be much more
+1:03:42 joyful as a product manager as any
+1:03:45 function but you know we're focusing on
+1:03:46 PMs just like if you look at your pie
+1:03:48 chart today of how much hap how happy
+1:03:50 you are during the day you can actually
+1:03:52 be much happier in this future and I
+1:03:55 think that's hard for people to like
+1:03:56 really think just realize oh wow okay I
+1:03:59 can actually love this job so much more
+1:04:01 I did not imagine that
+1:04:03 >> yeah and I think that it's because
+1:04:06 you're staring staring at change.
+1:04:09 And I think change is such an alarm
+1:04:11 bell. It's hard to hear the voice that
+1:04:15 says the thing that you are changing are
+1:04:17 the things you don't love because change
+1:04:20 is so hard for us that it's so scary,
+1:04:24 you know, and I I respect that. So I
+1:04:26 think that if your listeners are able to
+1:04:28 sort of understand that, hey, there is a
+1:04:30 world which is better, but I have to go
+1:04:31 through the tunnel and the tunnel sucks
+1:04:33 and the tunnel may mean that I'm going
+1:04:35 to have to change jobs. I mean my
+1:04:36 prediction is the vast majority of
+1:04:39 people that are listening to this will
+1:04:41 be in a different job in the next 5
+1:04:43 years because they will either choose to
+1:04:46 move to something because they will that
+1:04:50 company will struggle to stay modern
+1:04:52 just like we're describing people need
+1:04:54 to stay modern companies need to stay
+1:04:55 modern or their companies are going to
+1:04:57 be shedding and re and re returning off
+1:04:59 staff and so because change is apparent
+1:05:02 I think it's just so deafening people
+1:05:04 are very much gunshy to be uh excited
+1:05:07 about something that's forced on them
+1:05:09 and you know let's be honest it's been
+1:05:11 forced on everyone you know it's not
+1:05:13 something that they chose so that that's
+1:05:14 why I have a lot of empathy but when I
+1:05:16 talk to people I try to dig through
+1:05:19 forget what's happened and you know why
+1:05:22 how do we make the best out of it and
+1:05:24 the best is pretty good
+1:05:25 >> so say we've convinced a listener okay I
+1:05:28 need to make a change I need to lean
+1:05:30 into this I need to take this seriously
+1:05:32 I can't just sit back and hope it all
+1:05:34 works out Okay. And then they maybe
+1:05:37 found a moment of joy. They built
+1:05:38 something that's super cool and just
+1:05:40 like, "Hey, check this out." What other
+1:05:42 advice do you have for folks listening
+1:05:43 to help them be to survive,
+1:05:47 but just like thrive in this future that
+1:05:49 is emerging for product?
+1:05:50 >> Yeah, I like thrive. I I definitely
+1:05:51 think that you, you know, you find that
+1:05:53 moment of joy. You have the engineering
+1:05:55 mindset, which is, hey, I want to
+1:05:57 obsolete myself on something that I do
+1:05:59 today. again reduce my the the the less
+1:06:03 joyful parts of my job is a good
+1:06:05 starting point. I think that you know
+1:06:08 you have to find ability to increase
+1:06:10 pace. You know this is not a job. This
+1:06:13 is the next two years requires a lot of
+1:06:18 um fire in the belly, a lot of agency
+1:06:21 that I know everyone talks about. So,
+1:06:24 for example, if you were to leave a job
+1:06:26 and start a new job, you probably don't
+1:06:28 view the new job year one at the same
+1:06:31 pace that you, you know, viewed your
+1:06:33 year five and your last job, you need to
+1:06:35 kind of bring it. If you have a new
+1:06:38 relationship, you know, and if you've
+1:06:40 come off of a long-term relationship, my
+1:06:42 suspicion is your first year of that
+1:06:44 relationship, you put your best foot on.
+1:06:47 This is what I'm asking. You got to find
+1:06:49 that reserve. You've got to make time.
+1:06:50 You've got to maybe disappoint others in
+1:06:53 a way that you haven't in the past in
+1:06:55 order to create time for you to stay
+1:06:58 current, find that joy, obsolate
+1:07:00 yourself from the things that are are
+1:07:02 not worth it. I think the other thing
+1:07:04 you have to do is you have to swallow
+1:07:06 your ego. You know, I don't want a
+1:07:09 single person saying, "Hey, I was a XYZ
+1:07:12 leader. I would only consider roles at
+1:07:16 that same level." I I want people, this
+1:07:19 is an extension of our last
+1:07:21 conversation, is not only is it invogue
+1:07:23 to be hands-on and I see it's kind of a
+1:07:25 necessity. I need everyone to sort of
+1:07:28 say, look, if everything's changing, it
+1:07:30 doesn't matter what we've done in the
+1:07:31 past, that brand doesn't matter. As we
+1:07:34 discussed, you have to have an egoless
+1:07:36 perspective of how to stay current and
+1:07:40 be not only willing but actually look
+1:07:42 for ways to even take something smaller
+1:07:46 in order to make sure that you're kind
+1:07:48 of going through the tunnel correctly.
+1:07:50 And then ultimately part of the way we
+1:07:53 we we swallow that ego is you stay
+1:07:55 long-term focused. You say, "Look, if
+1:07:57 the way we build product is changing so
+1:07:59 aggressively,
+1:08:01 my job is to spend the next couple years
+1:08:05 being on the boat that's, you know,
+1:08:07 leaving the station and going to the new
+1:08:09 world. Once I get to the new world, the
+1:08:12 cream rises to the top. I'll take my
+1:08:14 skills, my leadership, and I'll go
+1:08:16 through it. But in the next few years,
+1:08:18 if everything's changing, I definitely
+1:08:21 want to be, you know, current. And that
+1:08:23 means you have to have a long-term
+1:08:25 focus." You know, my property is called
+1:08:27 the skip. The community and everything,
+1:08:29 they all kind of come down to this word
+1:08:31 called the skip. And I chose that word
+1:08:34 because the best career advice is always
+1:08:36 not thinking about the next move, but
+1:08:37 the move after. What's the skip job?
+1:08:40 What's the skip opportunity? Well, in
+1:08:42 this world, it's not about what's the
+1:08:44 opportunity now and what's the journey.
+1:08:46 It's about making sure that your skip
+1:08:48 opportunity is saved and you are able to
+1:08:51 get that high salary. you're able to get
+1:08:53 one of those premier builder drops and
+1:08:55 that's the world that you have to have
+1:08:57 and the mindset you have to have.
+1:08:59 >> Something you mentioned earlier was
+1:09:01 really interesting that in the next five
+1:09:02 years you predict that most people's
+1:09:04 jobs will be very different. What are
+1:09:07 you imagining there? Like will there
+1:09:09 still be this product manager role? Will
+1:09:11 PMs need to move closer to engineering?
+1:09:13 What's kind of like the ven diagrams or
+1:09:15 spectrum you're seeing of where current
+1:09:19 PMs may go? Yeah, I I definitely think
+1:09:22 that there's a world where PMS
+1:09:26 go to every industry as the what I would
+1:09:31 call the agents of change because the
+1:09:34 PMs are the ones that can talk. They're
+1:09:37 the ones that have the broadest view of
+1:09:41 the organization, but they look at it
+1:09:43 through the technical lens. And my hope
+1:09:46 is that most of our PMs are the first to
+1:09:48 the tools and hence they're the change
+1:09:51 agents within their company. So let's
+1:09:53 just play this out. In the next year, we
+1:09:57 start to see all these product
+1:09:58 organizations changing the way they
+1:10:00 build product. And all of a sudden, the
+1:10:03 way we build product is identified and
+1:10:06 really really thoughtful and really far
+1:10:07 along. And then 12 months later, the
+1:10:11 marketing, the sales organization,
+1:10:14 the HVAC company that was bought by the
+1:10:17 PR private equity firm, the school down
+1:10:21 the road, you know, everything's like,
+1:10:23 boy, we are just not up. We're not
+1:10:26 current. We're going to get obsolete.
+1:10:28 Who do we bring in to be in charge of
+1:10:31 this change? Well, you know, this person
+1:10:34 works in the future. We need to get to
+1:10:36 future. So, I'm like really bullish that
+1:10:39 product leaders are going to be like,
+1:10:42 you know, like those like dandelion,
+1:10:45 whatever you call it, seeds when you
+1:10:46 blow it and they just go everywhere. I I
+1:10:48 have that vision. Meanwhile, I think a
+1:10:51 lot of people going into product might
+1:10:53 be coming from design, might be coming
+1:10:54 from data science, might be coming from
+1:10:56 engineering because the ones that have
+1:10:59 judgment, the ones that can talk, the
+1:11:02 ones that want to stay current, they
+1:11:04 might be like, well, what I don't
+1:11:05 necessarily want to just stay in my
+1:11:06 lane. I want I have point of view as to
+1:11:08 how this should work. You know, as you
+1:11:10 said, from a designer point of view,
+1:11:12 designers may have a lot of those skills
+1:11:14 and opinions on what it should look
+1:11:15 like. Maybe their uh platform won't be
+1:11:19 the pixels or the visuals. They will be
+1:11:21 the product itself and they can
+1:11:23 adjacently move into product. So, I
+1:11:25 think you're going to see this crazy
+1:11:26 influx and then this amazing ex, you
+1:11:30 know, kind of exodus and then you'll
+1:11:32 also see folks that are like, I don't
+1:11:34 know if I can get in. I know that's a
+1:11:36 confusing uh kind of set of three
+1:11:39 changes, but that's explains why so many
+1:11:41 people have anxiety is all three of
+1:11:43 these are happening instantaneously.
+1:11:46 >> There's a a line, they thought they
+1:11:48 buried us. They didn't know that we were
+1:11:50 seeds that I think about.
+1:11:54 >> I love that. We're into a lot of the
+1:11:56 darker.
+1:11:59 Speaking of that, there's this hilarious
+1:12:01 tweet that just came out the other day
+1:12:02 that I have here where this guy
+1:12:04 describes the only four jobs that will
+1:12:06 remain in the future. Uh, so the only
+1:12:08 four jobs that exist in the future, one
+1:12:10 is product engineer, vibe coder, PM slop
+1:12:12 cannon.
+1:12:14 Number two is security s infra person.
+1:12:18 Uh, number three is hot people,
+1:12:21 which is like you know like getting
+1:12:23 people to buy your stuff. customer
+1:12:25 service kind of and like people the way
+1:12:27 they describe remember there are many
+1:12:28 ways to be no here's how they put it
+1:12:30 present a easy UX to the world is is
+1:12:33 that category and then grown-ups which
+1:12:35 is your
+1:12:36 >> point of just like adults yeah so
+1:12:39 >> yeah I think there's I I read that and I
+1:12:41 I agree with that I mean I think the
+1:12:42 adults ex exist and I think anyone
+1:12:44 that's the top of their field that can
+1:12:45 talk and that's that essentially is
+1:12:48 opinionated and can go broad that's kind
+1:12:49 of the third point of hot people
+1:12:51 >> so that's actually that reminds me so am
+1:12:53 a mole the head of growth at Enthropic
+1:12:55 made this really interesting point that
+1:12:56 so much of his time now more and more is
+1:12:58 alignment
+1:13:00 as a product manager and we were joking
+1:13:02 what's the harder alignment problem
+1:13:03 aligning people in in a company or like
+1:13:05 AI's AGI and and I and it feels like
+1:13:09 that's like a remaining and it's part of
+1:13:11 what you described somebody that can get
+1:13:13  done a change agent and a big part
+1:13:16 of that is like what a PM often is doing
+1:13:19 a lot of their time is align creating
+1:13:20 alignment internally around what we will
+1:13:22 be doing what we're prioritizing that
+1:13:24 kind of thing.
+1:13:25 >> Yeah. And I think that if you dissect
+1:13:27 what alignment looks like, a lot of
+1:13:29 alignment was getting people the right
+1:13:31 information, the ground level truth.
+1:13:34 That problem is dramatically better.
+1:13:38 That part of the job, frankly, just
+1:13:40 absolutely sucked. Whether it was the
+1:13:43 status report or put, you know, I I was
+1:13:46 on projects where there was like docs
+1:13:49 that were sent to me and then I would
+1:13:51 change the dock to then send it to my
+1:13:53 boss and then that boss would send it
+1:13:54 to, you know, and it was just like this
+1:13:56 movement of information where the ground
+1:13:59 truth was buried in some part of the
+1:14:00 organization and then there were like
+1:14:02 all these people that were putting on
+1:14:03 their spin. That I think is changing.
+1:14:07 But to your point, now someone has to
+1:14:10 decide and someone has to have an
+1:14:12 opinion and what to fight for. And that
+1:14:15 conversation is now much clearer to have
+1:14:18 because you know the ground truth.
+1:14:20 There's less spin. You know, the CEO can
+1:14:23 literally ask their agent, well, what is
+1:14:24 the situation? What how is this
+1:14:26 performing? What does this customer
+1:14:27 really want? You know, how does this
+1:14:29 affect the system? You know, is this
+1:14:31 really something that we want to change
+1:14:32 the product to enable? So that
+1:14:34 conversation can happen, but now people
+1:14:36 can like fight it out, you know, with
+1:14:39 with with real with real credence,
+1:14:41 right? And and if you're a product
+1:14:43 person that that really does have an
+1:14:44 opinion and wants to make a point, you
+1:14:46 you have a forum. So alignment won't go
+1:14:49 away. It's just it's not going to have
+1:14:51 as much theatrics. And I think a lot of
+1:14:54 companies that are larger do have
+1:14:56 theatrics that I think AI are going to
+1:14:59 remove. And I don't know many PMs,
+1:15:01 there's some that lived for the
+1:15:02 theatrics, but frankly most of them are
+1:15:04 like this just seems like a freaking
+1:15:06 waste of time. I mean it's so telling
+1:15:08 that 80% I bet you this is a statement
+1:15:11 80% if you truly asked their you know
+1:15:14 your PM do you really want that boss's
+1:15:17 boss job? Do you want their day? Not the
+1:15:20 pay, not the credibility, not the
+1:15:23 stature, but do you want their
+1:15:26 backtoback meetings? I bet you most of
+1:15:29 them would say no. And what I'm
+1:15:32 suggesting to you is that answer is
+1:15:33 going to change in the next two years.
+1:15:35 >> What's really also interesting is as
+1:15:38 much as this role is changing,
+1:15:40 engineering is changing even more. And
+1:15:43 in my what I feel like is that the
+1:15:46 engineers that will continue to thrive
+1:15:48 are just are basically going to become
+1:15:49 more PME because the coding part is now
+1:15:52 going to be solved and now it's just
+1:15:54 what should we build? Is this great? Is
+1:15:56 this the direction we want to go? Is
+1:15:57 this going to what does success look
+1:15:58 like? So if you're like, "Oh my
+1:16:00 job is changing." Just imagine being an
+1:16:02 engineer right now and how crazy that
+1:16:03 must feel.
+1:16:05 >> Yeah. And I think that the one advantage
+1:16:06 that engineers have is they think in
+1:16:08 systems and they think they think about
+1:16:10 obsolescence more effectively. So I
+1:16:13 think that you know when you make a
+1:16:15 change you have to decide is this change
+1:16:17 going to be sustainable in the product
+1:16:19 that you're offering. I think an
+1:16:21 engineer has an edge there. I think an
+1:16:23 ed the other edge they have is like I
+1:16:25 bet you we can build this to be more
+1:16:26 automated to be some blur. I think those
+1:16:28 >> mine already goes there. Yeah.
+1:16:30 >> Yeah. So I think that every one of us
+1:16:32 like the product person probably has a
+1:16:34 little bit of an edge in judgment and
+1:16:35 communication. The engineer is going to
+1:16:37 have a little bit of edge in the system
+1:16:39 scaling and how does this change affect
+1:16:43 folks? The designer is going to have a
+1:16:44 little bit of an edge with taste and all
+1:16:47 of these things will still remain
+1:16:48 important. And you know, obviously
+1:16:50 people that have all of these will do
+1:16:52 better than those that have one or two,
+1:16:53 but the the industry is more than safe
+1:16:56 as evidenced by the report that there's
+1:16:58 more hiring and I think going to grow.
+1:17:01 It's just different class of individual
+1:17:03 is what we're trying to communicate.
+1:17:05 >> Uh the design piece is really surprising
+1:17:07 to me. The fact that this data show that
+1:17:09 the number of design roles is plateauing
+1:17:12 and just how teams are just not uh
+1:17:16 valuing design as much as you think.
+1:17:17 Like you would think that design becomes
+1:17:19 much more important as the number of
+1:17:22 products grows exponentially that it's
+1:17:25 like a a way to stand out to build
+1:17:27 something really beautiful and and and
+1:17:30 have a really thought through experience
+1:17:33 and it's interesting that that's not
+1:17:35 happening right now. Also just I've been
+1:17:37 thinking about like like there's no
+1:17:39 world where I'm a great designer. I
+1:17:40 can't just like use AI and become a
+1:17:42 great designer unlike an engineer like
+1:17:45 maybe a PM. I could become a much better
+1:17:47 PM with AI. AI is knocking like it will,
+1:17:50 you know, do some cool stuff, but I'm
+1:17:51 never going to feel like I am a great
+1:17:53 designer now. So, it's really
+1:17:54 interesting that design isn't more
+1:17:57 successful right now with the rise of
+1:17:58 AI.
+1:17:59 >> And it might be that we just don't know
+1:18:01 what to make of design in this era. You
+1:18:04 know, that might be a piece of it. The
+1:18:06 other piece might be just like there's
+1:18:08 product builders and then, you know,
+1:18:11 product, you know, information movers
+1:18:14 and they split up. I think that there
+1:18:16 are pixel generators and then there are
+1:18:20 taste makers. And I worry that in design
+1:18:24 maybe the industry itself conflates
+1:18:27 design with more production and not with
+1:18:31 taste. And so I think there's a lot of
+1:18:33 companies that you would talk to and
+1:18:35 even when they were hiring head of
+1:18:36 design, they were thinking more around
+1:18:38 we need more production and great
+1:18:41 designers are much more casemakers. I
+1:18:43 think that is probably that bias is
+1:18:46 entering into the hiring plans in this
+1:18:48 era that we have today.
+1:18:50 >> What a wild time we are living through,
+1:18:51 Nicole. Holy, holy moly.
+1:18:54 >> Yeah. Isn't it funny that neither of us
+1:18:56 are operational? There are days when I'm
+1:18:58 like, man, am I so happy I have the time
+1:19:00 to work on this and then other days that
+1:19:03 I think this is some of the most
+1:19:05 interesting like being operational right
+1:19:08 now is quite a ride. And so there's good
+1:19:11 good and bad and you know co wasn't
+1:19:13 easy. I mean there was a lot of
+1:19:15 challenges around you know working and
+1:19:16 and seeing so much change. So there's
+1:19:18 always something but this one this one's
+1:19:21 you know everything's being questioned
+1:19:23 and you know including how you how you
+1:19:25 define joy which I I think is just
+1:19:27 absolutely fascinating.
+1:19:28 >> Chaos is a latter as as the uh little
+1:19:31 finger famously said. Um NL is there
+1:19:35 anything that we haven't covered?
+1:19:36 Anything else that you think is
+1:19:37 important for people to hear? Any other
+1:19:39 advice? anything you want to double down
+1:19:41 on before we wrap up and get to our very
+1:19:44 exciting lightning round?
+1:19:45 >> I would just say that
+1:19:48 there's a lot of room to be optimistic
+1:19:50 right now, but you have to find it
+1:19:53 within yourself to recognize that there
+1:19:56 is a small period of change and
+1:20:00 exhaustion that's required to find that
+1:20:02 moment of joy. And I just urge everyone
+1:20:06 to find those reserves to get there
+1:20:08 because once you do, it's infectious.
+1:20:11 But the longer you wait, the harder it
+1:20:14 is to cross that chasm. And so I really
+1:20:17 want people to feel optimistic and find
+1:20:20 that moment of joy. But I also recognize
+1:20:23 that there is a lot of activation energy
+1:20:25 that it takes to get there. And so my
+1:20:28 hope is that, you know, you you and
+1:20:29 there's a lot of people going through
+1:20:31 it. And so, you know, there's some
+1:20:32 safety and numbers here, but definitely
+1:20:34 I urge everyone to try their hand at at
+1:20:37 rethinking their craft.
+1:20:39 >> And just to be clear, you're seeing many
+1:20:41 people in the community doing well,
+1:20:44 enjoying this, thriving. This is
+1:20:46 possible.
+1:20:48 >> Yeah, it's smiling exhaustion.
+1:20:51 I see in my community, everyone. And
+1:20:54 before it was just exhaustion.
+1:20:58 So, I take smiling exhaustion over
+1:21:00 exhaustion. Um, but the pace is
+1:21:03 relentless. I I don't have any uh
+1:21:06 there's nothing I can say to sugarcoat
+1:21:08 that point.
+1:21:09 >> What a time to be alive. Well, Nicole,
+1:21:12 with that, we've reached our very
+1:21:13 exciting lightning round. I've got five
+1:21:15 questions for you. Are you ready?
+1:21:17 >> Go. Go for it.
+1:21:18 >> What are two or three books that you
+1:21:20 find yourself recommending most to other
+1:21:22 people? You know, Lenny, I'm not a
+1:21:24 reader, so I don't, you know, I don't I
+1:21:28 I I I hate to admit this, but I kind of
+1:21:32 vibe code instead of most consumption of
+1:21:34 code right now of content right now. You
+1:21:37 know, all of the reading I do is like
+1:21:40 trying to stay up to date and that was a
+1:21:42 casualty, you know. So, I don't listen
+1:21:44 to as many podcasts I want to. I don't
+1:21:46 read as much as I want to um because I
+1:21:49 have so much information coming from the
+1:21:51 agents that I have deployed and all the
+1:21:53 stuff that's going on with, you know, on
+1:21:56 on Reddit and X and all that. So, I I
+1:21:59 don't have a great set of book
+1:22:00 suggestions, not unlike, you know, all
+1:22:02 your other um all your other guests that
+1:22:05 are great at this. you know, they they
+1:22:06 read prolifically and, you know, I I I
+1:22:09 just don't I mean, I'll tell you, I I I
+1:22:12 read um I I don't know how much I loved
+1:22:15 it, and I'll just leave it in here in
+1:22:17 case people are interested, but I read
+1:22:20 this book called James, which James is
+1:22:24 um the story of Huckleberry Finn told
+1:22:27 from uh Jim's point of view. I thought
+1:22:30 that was absolutely fascinating because
+1:22:34 anytime you take a classic and then you
+1:22:37 look at it through the eyes of someone
+1:22:38 else and what you realize is that story
+1:22:41 is quite powerful but you know very
+1:22:43 haunting and when you read Huckleberry
+1:22:46 Finn you're a kid so the distinction
+1:22:50 between seeing the innocence as not only
+1:22:53 the book was written from Twain's
+1:22:55 perspective who was quite forward
+1:22:56 thinking by the way but you remember you
+1:23:00 were a kid at the time and now as an
+1:23:01 adult you see the the book from another
+1:23:03 angle. I thought that was interesting. I
+1:23:05 don't know if I'd recommend it to your
+1:23:07 viewer readers but I I thought I always
+1:23:10 look for things that I'm you know uh
+1:23:12 unnatural um stories that exist, you
+1:23:15 know, right in plain sight. So that was
+1:23:17 an example of that.
+1:23:18 >> I think somebody else has actually
+1:23:19 recommended that book.
+1:23:20 >> So that's a second mention.
+1:23:22 >> Uh next question. Do you have a favorite
+1:23:24 recent movie or TV show? You've already
+1:23:26 shared some VIP coding favorites to be
+1:23:28 in the background. Anything else?
+1:23:29 >> Yeah, I mean I think everyone's talking
+1:23:31 about Paradise. I I mean, if you haven't
+1:23:33 watched the season 1 and season two,
+1:23:35 it's
+1:23:35 >> Oh, season two out. I didn't realize
+1:23:37 that.
+1:23:37 >> Season two just is almost wrapping up
+1:23:39 and I haven't watched season two yet,
+1:23:41 but
+1:23:42 >> you know, it's a little apocalyptic in
+1:23:43 nature, but it's absolute fascinating
+1:23:47 character drama about how um you know,
+1:23:51 how people deal with you know, very very
+1:23:52 challenging times uh and what motivates
+1:23:55 individuals. The other one that I really
+1:23:56 like is Lionus, which is on Paramount
+1:23:59 Plus. Um, Lionus is a story uh really
+1:24:05 about uh sort of a covert CIA group and
+1:24:09 how they deal with, you know, protecting
+1:24:11 security for America and the importance
+1:24:13 and what it means to commit to a bigger
+1:24:15 cause. I thought that was a really
+1:24:16 wellwritten show. So, both of those I
+1:24:19 recommend. I do watch a return of
+1:24:20 television in uh and and as I mentioned
+1:24:23 I I vibe codes to certain shows and
+1:24:26 these two I don't vibe code to because I
+1:24:27 have to pay attention.
+1:24:29 >> That's the ultimate that's the new bar
+1:24:32 if something's great.
+1:24:33 >> Exactly.
+1:24:34 >> Okay. Do you have a favorite product you
+1:24:36 recently discovered that you really
+1:24:38 love? Could be an app, could be a
+1:24:39 gadget, could be some something else. My
+1:24:42 favorite product that I've discovered of
+1:24:44 late might be um kind of obvious to a
+1:24:46 lot of folks, but I um you know, I'm not
+1:24:51 a car guy. So, I'll just start by saying
+1:24:53 that though I've um enjoyed kind of
+1:24:56 riding like the newer electric cars, I
+1:24:58 just I'm not there's a large large
+1:25:00 number of people that love cars. They
+1:25:02 love driving cars and you know, talking
+1:25:04 about cars and repairing cars. That's
+1:25:06 like the opposite of me. I just want my
+1:25:08 car to be super reliable. Um, and uh,
+1:25:11 I've had a Tesla for a really long time,
+1:25:13 a Model S for just a long time. And then
+1:25:15 I've had it since pretty much they came
+1:25:16 out with them. And they uh, my daughter
+1:25:20 recently passed her driving exam. And
+1:25:23 because she passed her driving exam, uh,
+1:25:26 one day my wife said, "Hey, you know, we
+1:25:28 got to get her a car." And I was like,
+1:25:29 "We do?" I never actually connected the
+1:25:32 dots that she's going to need to drive a
+1:25:34 car. And I was like, "Well, when's she
+1:25:35 going to go?" And eventually I'm like,
+1:25:36 "Okay, maybe we should buy her a car
+1:25:38 when she's not going to drive that much.
+1:25:39 maybe I should use this as an
+1:25:41 opportunity to upgrade my car. And so I
+1:25:45 drove the latest Teslas that are out
+1:25:48 there and the ones with the the
+1:25:50 self-driving.
+1:25:51 And the self-driving works quite well,
+1:25:54 just to be clear. I mean, I I've have it
+1:25:56 now for the last month and about 95% of
+1:25:58 the time I self-drive. But the most
+1:26:00 interesting thing is I had no idea that
+1:26:04 I actually have mild anxiety when I
+1:26:08 drive. That goes away when I self-drive.
+1:26:11 And I had no idea. And I my my wife
+1:26:14 noticed it when we were driving up to
+1:26:15 the mountains one day and it was crazy
+1:26:17 snowing. And I'm like, "We're going to
+1:26:18 do it." And she's like, "You are so
+1:26:19 anxious when you drive." And I'm like,
+1:26:21 "I am?" Because Lenny, I've been driving
+1:26:23 since I was 14 years old because I grew
+1:26:25 up in Kansas. And so I passed the test
+1:26:27 when you I was 14. So, I've been driving
+1:26:29 literally for nearly 40 years and I had
+1:26:34 no idea as I've gotten older that this
+1:26:35 pressing a button and going places and
+1:26:38 psycho is just so awesome. So, anyway,
+1:26:40 the reason why that experience is
+1:26:41 interesting, yeah, there's the tech and
+1:26:43 all that. It's just like I look for ways
+1:26:45 to reduce my anxiety. Anything that
+1:26:47 causes anxiety, I try to eliminate at
+1:26:49 this point in my life, and this is one
+1:26:51 of them. So, that's a cool product for
+1:26:52 me.
+1:26:52 >> I love that as a rule. I've also become
+1:26:55 all in on self-driving. I've had a Tesla
+1:26:57 for a long time from the beginnings of
+1:26:59 their explorations into self-driving and
+1:27:01 it was always just like I don't know
+1:27:03 this scary and now it's the opposite.
+1:27:05 Like my wife prefers I selfdrive even
+1:27:07 though I drive well she just like feels
+1:27:09 safer when the self-driving is on there
+1:27:12 and there's and there's this like uh in
+1:27:14 the actual settings they give you a stat
+1:27:17 of what percentage you're driving is
+1:27:18 self-driving and they noted it's since
+1:27:21 uh 14.2 I think was the release
+1:27:22 something like that. So that was like
+1:27:24 the release that everyone started being
+1:27:25 like, "Wow, it's actually very good
+1:27:28 now." And I don't think a lot of people
+1:27:30 realize that it's actually incredibly
+1:27:31 good. Like I haven't had a single
+1:27:34 concerning moment.
+1:27:35 >> This is one of those examples in product
+1:27:37 where so many people try the previous
+1:27:39 versions that when you then tell your
+1:27:42 friend, a lot of people have Teslas
+1:27:43 obviously in California, but across the
+1:27:45 world. When you tell your friends, a lot
+1:27:47 of people are like, "Oh yeah, I tried
+1:27:48 it. I turned it off." So, I think
+1:27:49 Tesla's got this unusual challenge of
+1:27:51 getting people to turn it back on. And
+1:27:54 obviously, the newer hardware is better
+1:27:55 than the older one running the newer
+1:27:56 software. But once you go through one
+1:27:59 experience, it can be hard to convince
+1:28:01 someone to try it again. And that's an
+1:28:03 addage in product and certainly applies
+1:28:05 here.
+1:28:06 >> It's a downside of releasing early and
+1:28:07 often sometimes people just have this
+1:28:09 memory of what it might be. I feel like
+1:28:11 I feel like this like Uber where you
+1:28:12 most have to just start hearing about it
+1:28:14 from your friends
+1:28:15 >> telling you, "Hey, I'm doing this
+1:28:16 thing." You're like, "Wait, really? I
+1:28:18 guess I should try it. Yeah.
+1:28:20 >> Yeah. I figured Yeah. They ought to just
+1:28:22 like So, here's a Tesla suggestion for
+1:28:24 anyone that's listening is Lenny and I
+1:28:27 should be able to gift 30 days free to
+1:28:29 our friends of self-driving people that
+1:28:33 have turned it off because the referral
+1:28:36 of that
+1:28:37 plus the endorsement allows people to
+1:28:40 experience it for free and then they can
+1:28:41 get their monthly subscription. Great
+1:28:43 idea. that that uh that viral plus
+1:28:46 enablement I think is a is is a growth
+1:28:48 technique that you know they can have
+1:28:49 for free from us.
+1:28:50 >> Such such a good idea. By the way, I
+1:28:52 love Mad Max mode where I love that just
+1:28:54 the personality of the stuff just
+1:28:57 Are you a hurry mode guy or are you a
+1:28:59 standard mode guy?
+1:29:00 >> I flip between them, but I do feel like
+1:29:02 I'm hoping that the new release of the
+1:29:03 software keeps us in lane. Like I don't
+1:29:06 love it changing lanes, but it's
+1:29:07 >> Oh, like we're trying to hurry a little
+1:29:08 bit. I'm
+1:29:09 >> Yeah, I wish I could just get it to go
+1:29:11 at a normal speed, but also don't change
+1:29:13 lanes because I just don't like
+1:29:16 >> Okay. Uh, next question. Do you have a
+1:29:18 favorite life motto that you find
+1:29:20 yourself coming back to in worker in
+1:29:22 life?
+1:29:22 >> Uh, my high school quote in my yearbook
+1:29:25 still is my motto, which is uh, genius
+1:29:30 is 1% inspiration, 99% perspiration
+1:29:33 u by Albert Einstein. It's a it's
+1:29:35 something that um even an early age and
+1:29:38 you know it's not about genius being
+1:29:40 capital G you know it wasn't a new year
+1:29:42 comment it was more like hard work is
+1:29:45 really what matters in life what's
+1:29:48 interesting is if you read that quote
+1:29:51 genius is 1% inspiration 99%
+1:29:54 perspiration through the lens of AI
+1:29:56 right
+1:29:57 >> it's absolutely fascinating because it
+1:29:59 turns out the AI will do the
+1:30:01 perspiration
+1:30:02 >> unlimited
+1:30:04 So I think what we're leaning towards is
+1:30:07 we all need to we're moving to a world
+1:30:10 where we're all going to be inspired and
+1:30:12 it's the inspired individuals and all of
+1:30:14 us that will that will you know
+1:30:16 essentially continue to proliferate and
+1:30:18 don't worry about the perspiration but
+1:30:21 recognize that it it is the perspiration
+1:30:23 that that is that is a necessity to make
+1:30:26 things go. So um anyway I I I think it's
+1:30:28 an interesting quote especially in
+1:30:30 today's era.
+1:30:31 >> Final question. People may have noticed
+1:30:33 that we've started collaborating on your
+1:30:35 podcast and your newsletter. It's this
+1:30:38 it's such an underappreciated under I
+1:30:41 don't know seen uh thing that you do.
+1:30:43 This podcast, this newsletter, it fills
+1:30:46 such a gap in in the content out there
+1:30:49 around product building of just like
+1:30:51 very tactical important non-sugar-coated
+1:30:54 career advice for people in product. Um,
+1:30:57 and it what I love about it is it's not
+1:30:59 AI most of the time in spite of this
+1:31:01 conversation we just had. It's like very
+1:31:03 much like here's stuff you need to know
+1:31:05 uh that is not flashy and shiny AI AI AI
+1:31:08 all the time. So I want to give you a
+1:31:10 chance just to tell people about this
+1:31:12 the podcast the newsletter just what
+1:31:14 what the ideas where they where they can
+1:31:16 find it. I started this property called
+1:31:18 Skip because I really felt that there
+1:31:21 was a a der of content from operators
+1:31:25 sharing best practices with uh with
+1:31:28 emerging operators and the idea was look
+1:31:31 I had been a founder before. I had been
+1:31:33 an executive before and I wanted to be
+1:31:36 in a position where I can say hey this
+1:31:38 is exactly what I experienced and this
+1:31:40 might apply to you. And I noticed that
+1:31:42 most of the podcasts and the content out
+1:31:44 there were from folks that hadn't spent
+1:31:46 as much time and operating more time in
+1:31:48 content. And and I was kind of the
+1:31:50 opposite. Then I started building this
+1:31:52 community that I spoke about last time,
+1:31:54 which was, you know, about 2030 at the
+1:31:56 time. Now it's over 125 head of products
+1:31:59 who are all kind of these builders top
+1:32:01 of their game and kind of reinventing
+1:32:03 what product management looked like. And
+1:32:06 our goal is to collectively share our
+1:32:09 wisdom as operators to help people
+1:32:12 advance in career. And that probably
+1:32:15 that calling is probably more important
+1:32:16 now than ever is everything's changing.
+1:32:19 Um and so one of the things that we're
+1:32:21 launching next month by the time that
+1:32:23 you know we end up launching this
+1:32:25 episode is something called skip.help
+1:32:27 where we have agents that have been
+1:32:29 trained on about 50 of our community
+1:32:32 leaders. And so you can go and ask a
+1:32:35 question. It might be preparing for an
+1:32:37 interview. It might be a question around
+1:32:39 navigating your current environment. It
+1:32:41 might even be, you know, how do I build
+1:32:43 a chief of staff app? And 50 of us, not
+1:32:46 just me, will respond. Uh, and this is
+1:32:50 powered by our friends over at Superme,
+1:32:52 which is a great startup that um that
+1:32:55 actually by having these agents, you get
+1:32:56 the sort of wisdom of the crowds. And so
+1:32:59 th those are the things that I I love.
+1:33:01 and and obviously there the community
+1:33:03 itself is a very um curated group and
+1:33:06 it's you know there's an infinite weight
+1:33:08 list. A lot of people want to be in it
+1:33:09 and I'm only growing it slowly because I
+1:33:11 want to maintain trust but I do have
+1:33:13 this mailing list called skip.coach
+1:33:15 where we share our wisdom to a broader
+1:33:17 audience. So, um I know I've kind of
+1:33:20 gotten every single domain name that
+1:33:22 starts with Skip, Skip Community, Skip
+1:33:25 Shows, my podcast, Skip Coach, Skip Hel,
+1:33:27 but anyway, go to any of them and you
+1:33:28 can triangulate all of them. I always
+1:33:30 appreciate Lenny, your your support and
+1:33:32 your help and and in and building this
+1:33:34 property with me. So, it's been it's
+1:33:36 been great. You know, when I came on, I
+1:33:38 don't think I had done my podcast yet.
+1:33:40 And now I'm about ready to hit my 50th
+1:33:41 episode and you're a big inspiration.
+1:33:43 And you're you're past 300, obviously.
+1:33:45 And so, um, you know, it's fun to see,
+1:33:48 uh, how things change and then some
+1:33:50 somehow have how things happen. So, it's
+1:33:52 been great.
+1:33:53 >> So fun. Uh, I was going to ask you to
+1:33:55 show the domains, which you did. So,
+1:33:56 it's skip.coach, skip community,
+1:33:58 skip.show, and then there's skip
+1:34:00 >> skippel is their new one.
+1:34:01 >> Skip.help, which is launching around the
+1:34:03 time this goes out. And then you also
+1:34:04 have your Substack. I don't know if one
+1:34:06 of those takes you there, but it's
+1:34:07 theskipped.substackag.com.
+1:34:09 >> Yeah. Yeah, exactly. The skip is the
+1:34:10 name of the podcast and newsletter and
+1:34:12 skip show takes us to both.
+1:34:14 >> Nail, thank you so much for being here.
+1:34:16 This was exactly what I was hoping. I
+1:34:18 feel like people are going to leave this
+1:34:19 being like, "Okay, I get it now. I
+1:34:21 understand what I need to be doing."
+1:34:23 >> I appreciate that. And, you know, thanks
+1:34:24 for all you do for the community and for
+1:34:26 uh all the guests that um that you know,
+1:34:29 you you still have now probably two
+1:34:31 dozen of the folks on Skip that have
+1:34:33 been on the show or that will be on the
+1:34:34 show. So, thanks for supporting uh all
+1:34:36 of our efforts. We're trying to help as
+1:34:38 many product builders as possible and
+1:34:40 that's a great journey to be on
+1:34:41 together.
+1:34:42 >> It is. Nel, thank you so much for being
+1:34:44 here.
+1:34:45 >> Thanks, Lenny. Thanks, everyone.
+1:34:46 >> Bye, everyone. Thank you so much for
+1:34:48 listening. If you found this valuable,
+1:34:50 you can subscribe to the show on Apple
+1:34:52 Podcasts, Spotify, or your favorite
+1:34:54 podcast app. Also, please consider
+1:34:56 giving us a rating or leaving a review
+1:34:58 as that really helps other listeners
+1:35:00 find the podcast. You can find all past
+1:35:02 episodes or learn more about the show at
+1:35:05 lennispodcast.com.
+1:35:07 See you in the next episode.

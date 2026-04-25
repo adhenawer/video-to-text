@@ -1,5 +1,28 @@
 [
   {
+    "video_id": "yUohoaC8_Hs",
+    "provider": "youtube",
+    "title": "Por que metade dos product managers está em apuros",
+    "subtitle": "Nikhyl Singhal (ex-Meta, Google, CPO Credit Karma) · Lenny's Podcast",
+    "url": "https://www.youtube.com/watch?v=yUohoaC8_Hs",
+    "slug": "por-que-metade-dos-product-managers-esta-em-apuros",
+    "slug_en": "why-half-of-product-managers-are-in-trouble",
+    "date": "2026-04-25",
+    "references": {
+      "path": "transcripts/youtube/yUohoaC8_Hs.references.json",
+      "counts": {
+        "books": 2,
+        "tools": 13,
+        "papers": 0,
+        "people": 9,
+        "concepts": 14,
+        "companies": 16,
+        "related_posts": 6
+      },
+      "total": 54
+    }
+  },
+  {
     "video_id": "am_oeAoUhew",
     "provider": "youtube",
     "title": "Ryan Lopopolo — Engenharia de Harness: Como Construir Software Quando Humanos Conduzem e Agentes Executam",

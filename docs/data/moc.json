@@ -1,6 +1,14 @@
 {
   "nodes": [
     {
+      "id": "por-que-metade-dos-product-managers-esta-em-apuros",
+      "title": "Por que metade dos product managers está em ap…",
+      "subtitle": "Nikhyl Singhal (ex-Meta, Google, CPO Credit Karma) · Lenny's Podcast",
+      "url_pt": "posts/pt_br/por-que-metade-dos-product-managers-esta-em-apuros.html",
+      "url_en": "posts/original/why-half-of-product-managers-are-in-trouble.html",
+      "refs_total": 54
+    },
+    {
       "id": "ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam",
       "title": "Ryan Lopopolo — Engenharia de Harness",
       "subtitle": "Ryan Lopopolo (Member of Technical Staff, OpenAI) · AI Engineer Summit Londres",
@@ -202,6 +210,30 @@
     }
   ],
   "edges": [
+    {
+      "source": "politica-corporativa-tech-tudo-que-ninguem-te-conta",
+      "target": "por-que-metade-dos-product-managers-esta-em-apuros"
+    },
+    {
+      "source": "conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford",
+      "target": "por-que-metade-dos-product-managers-esta-em-apuros"
+    },
+    {
+      "source": "por-que-metade-dos-product-managers-esta-em-apuros",
+      "target": "roteiro-engenheiro-ia-para-desenvolvedores-de-software"
+    },
+    {
+      "source": "por-que-metade-dos-product-managers-esta-em-apuros",
+      "target": "ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam"
+    },
+    {
+      "source": "estado-da-ia-2026-ponto-de-inflexao-simon-willison",
+      "target": "por-que-metade-dos-product-managers-esta-em-apuros"
+    },
+    {
+      "source": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
+      "target": "por-que-metade-dos-product-managers-esta-em-apuros"
+    },
     {
       "source": "boris-cherny-dicas-praticas-para-usar-claude-code",
       "target": "ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam"

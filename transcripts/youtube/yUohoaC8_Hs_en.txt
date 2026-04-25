@@ -1,0 +1,378 @@
+================================================================================
+[0:00] THE SKILLS THAT WERE VALUED IN PMS ARE CHANGING
+
+The skills that used to be really valued in product managers are changing substantially. It's going to be chaos. Our industry is very much in stress. Nothing's constant. Everyone's in a state of alert.
+
+If you talked to product leaders three years ago, their day was largely moving information. The information mover is essentially going to become a dinosaur.
+
+I just did this report on the job market — and interestingly, we have the most open PM roles globally in three plus years.
+
+This is a complete renaissance for the product industry, but it comes with a lot of strings attached. In the next 12 to 24 months, we're going to see massive shedding of staffs and then massive rehiring. You might see a company shed 30,000 and hire 8,000, but the 8,000 people are going to all be AI-first. The builders are going to have the time of their lives, but if you don't love building stuff, you're in trouble.
+
+What should people do to thrive in this future that's emerging? You have to find the ability to increase pace. You've got to find that reserve. The next two years require a lot of fire in the belly.
+
+================================================================================
+[1:11] INTRODUCING NIKHYL SINGHAL
+
+Today my guest is Nikhyl Singhal. In my opinion, Nikhyl is right now the number one best source of career advice for product managers and for tech people in general. He was a longtime exec at Meta and at Google, CPO at Credit Karma. He's also a four-time founder, and he leads the best community out there for heads of product and chief product officers, called the Skip community. He also has a larger community for tech professionals called the Skip Coach.
+
+Through these communities, his 30 years of building consumer products at scale, and his podcast (which I've recently partnered with), he is constantly gathering and meeting with top product leaders around the world about what's happening and what's changing in the lives of product managers and tech workers in general. And the answer is: a lot.
+
+This is an episode that every single product person needs to listen to. You won't find a more real-talk and actionable overview of what's going on, where things are heading in your career, and what you should be doing about it right now. Seriously, do not miss this conversation.
+
+================================================================================
+[3:45] PM LIFE THREE YEARS AGO — RESPONSIBILITY WITHOUT AUTHORITY
+
+When we first chatted, it was around the end of the ZERP era — zero interest, free money from investors was cresting. We talked about how ICs were now more in demand. We talked about how that first round of layoffs was starting, about ex-growth companies being a struggle.
+
+But if you really talked to product leaders in that mode three years ago, they weren't very happy. Their day was largely moving information from one place to another. "Let me frame the way that my team is presenting the information to my boss so that that person can frame it to their boss's boss."
+
+The function had become extremely focused on responsibility without authority. That is the greatest form of workplace stress. We didn't talk about it then. We talk about all the stresses we have today — "AI's going to replace our function" etc. But the honest truth is, if you've been in product for a handful of years, that was a tough time. People were paid well. Layoffs were just starting. The industry was the biggest it's ever been. There were more product managers and CPOs than ever in history.
+
+================================================================================
+[5:23] WHAT'S CHANGED — PEOPLE ARE HAVING FUN AGAIN
+
+What's changed is people are having fun again, particularly product folks, because they're able to build. They don't have to rely on as many people to have impact. There's much more of a direct connection to their ideas, their ability to test, and their ability to connect their product instincts to their customers.
+
+In many ways, this is a complete renaissance for the product industry. For a lot of the strongest builders in the group I'm associated with, compensation is at an all-time high. They have more offers than they've ever seen. They see their next job maybe being a founder, maybe a CEO, maybe in another function other than product but at the C-level. They're feeling like there's more opportunities than ever before. That's the good.
+
+In all honesty, it comes with a lot of strings attached. It starts with just being exhausted. I've never seen an industry that's more tired than they are now. We were tired during covid, but for different reasons. Now nothing's constant. In the past, once you figured out how to do your job, you would be fine for a decade until you became a manager, then fine until you became an executive. Now, if you don't stay current, in three months they'll say, "Oh, you're doing that thing we stopped doing three months ago. PRDs? Well, that's not even a product…" Everyone's in a state of alert.
+
+================================================================================
+[7:32] THE MID-CAREER GENERATION'S BURDEN
+
+Particularly mid-career people — let's call it people in their thirties — life plays this cruel trick on you. You end up having your best, most energetic years of your career — your power years — because you finally figured out what you're doing. But at the same time, you may be settling down. You may have kids. Your parents are aging, and for the first time you have those aches and pains. You have to think about diet. You can't eat cookies every day. You have to exercise.
+
+Between your health, the family and friends you hardly ever see, your parents who you have to build a different relationship with because they're becoming dependent, your actual dependents — your kids — and oh by the way your work, which will take whatever time you have but also changes all the time — that generation is insanely stressed historically. And now they're like, "Hey, stay up — what's the latest in Cloud Code? They changed it this morning." It's dizzying. There's joy, but there's a fatigue I haven't quite seen before.
+
+================================================================================
+[10:00] ON BALANCE PEOPLE ARE BETTER — BUT THE INDUSTRY IS UNDER STRESS
+
+When people are doing better, they have more choice and they're going to be longer-term happier. People at the top of their game are doing much better for the reasons I mentioned. They're more interested in their jobs. They're more stressed, but stressed because they wish they had more time to feed the LLM at night — a different form of stress than what they had in the past, which was "I don't know if my point or my team is going to get through the malaise of decisioning."
+
+People are doing better. However, our industry is very much in stress. On average, even if they're doing well, people feel more stressed because they worry they're not keeping up, or they worry the industry is going to change and they'll be roadkill along the way. Change is hard on humans. The best people tend to be feeling great right now.
+
+================================================================================
+[11:50] WHERE THINGS ARE HEADING — A FOREIGN ANIMAL
+
+I had this meetup last Thursday. I have a group of about 125 heads of product who tend to gather once a month in San Francisco. We did a show-and-tell — people building things for their own companies or for themselves to help with productivity.
+
+A few things were really palpable. First, there was so much joy in the audience. People were like "I built this thing, let me show you," and everyone had their laptop one-upping each other. "Your chief of staff does that? Mine does this." That builds on the point that people are having fun being hands-on.
+
+Second, the way they talked about how product decisions are made, how prioritization is determined, how information moves within the company — looked like a completely foreign animal from anything I'd experienced a few years back. I got up on stage and said: "If you think about how you folks are using agents in your enterprise, using chief-of-staff apps to drive productivity, spending all your time focused on judgment and writing software around anything that can be obsoleted — none of that was even in the language, even in the vernacular, 12 months ago."
+
+What's it going to look like in 12 months? Everyone paused: "Yeah, this was unanticipatable 12 months ago." It's pretty hard to understand where things are going.
+
+================================================================================
+[14:34] PRODUCT LEADERS WILL BE PAID FOR JUDGMENT
+
+Product leaders will increasingly get paid and be asked to drive judgment, and to be the tip of the spear on essentially obsoleting everything else through software, AI, and agents. This is partly why there's a lot of excitement: most of the stuff you didn't like doing as a PM is exactly what AI is taking a real crack at.
+
+Some companies are doing it now. But within two years I think most companies will obsolete all the mechanical parts of building product. There will be 10 to 100 times more changes presented to products than ever before, because the cost of testing something and the cost of changing is going to be much lower. When things are changing that rapidly, that judgment piece becomes pretty much paramount.
+
+When I say judgment, I mean evaluating whether the thing we're changing is good or bad. Evaluating whether we should change the product one way versus another. You can't build a hundred custom versions of the same product — it affects your brand, affects maintainability. When customers are asking for things, when you're trying to think through how to build something sustainable and differentiated — that's judgment. It's almost like the system skill that's existed since the beginning of the internet: it's not about the feature, it's about the system, the platform that's enabling capability.
+
+================================================================================
+[16:46] IN TWO YEARS THERE WON'T BE ANY BAD SOFTWARE
+
+As an aside: because of all these changes, in two years I think there won't be any more bad software. This is more a wish and a dream than a prediction, but if you count in a given week how much bad software you come back with — I have a house with 15 different apps to control everything from the shades to the air conditioner to the garage door. Almost every one of those apps is horrid. They don't work particularly well. Things break. No one ever checks. None of it gets monitored.
+
+All that stuff is going to get fixed because someone's going to sit down and tell Claude to fix it, and it's going to fix it. It's going to be more secure, etc. People will have a lot less tolerance for bad software.
+
+(Lenny:) The prompt I find myself constantly using with Codex and Claude is "how can we make the product experience better?" You just ask that and it's like, here's 10 ways. "Wow, these are really good ideas. Cool, do the first seven."
+
+There's going to be some super-skill that runs against every piece of software in the app store, goes in and fixes them all. They're going to be a significantly more consistent, better, less buggy, more maintainable experience. That's why there's so much optimism: these changes can be done pretty automatically.
+
+So many of these apps are built by engineers who aren't the best engineers — companies that don't really care about their software, "this is just a side thing, let's find someone to build it." They're not product-first companies. Now all those companies have access to the most skilled software engineer — Claude Code, Codex, and other tools. Everyone has the best engineers available now, and it's just English to ask them to build a better thing or build a better app.
+
+================================================================================
+[19:10] STILL MORE LINES OF COBOL THAN ANY OTHER LANGUAGE
+
+It still boggles my mind: very recently there were more lines of COBOL than I think any other language out there. Mainframe sales continue to do well. They're an unusually large line item for companies like IBM. Part of why these systems are so complicated is that they're built on mainframes — and (this is going to sound morbid, but I think it's true) a lot of the engineers are dead. They literally are passed away. The code was written 10, 20 years ago, and going in and touching it is the last thing anyone wants to do. It's all downside. Now we can change that. I'm very excited about what it means to go in and improve things people take for granted.
+
+================================================================================
+[20:25] COMPANIES WILL DRAMATICALLY REVISIT HEADCOUNT
+
+The skills you need to be effective in today's world is an acceleration of what we talked about last episode. We were talking about ICs, hands-on, opinion — even back then before Claude and ChatGPT.
+
+Now companies are looking very, very carefully at staffing and asking themselves: "Do we need this many people? Did we overhire?" Many public companies have doubled their staff in the last five years. Did we get twice as much for them?
+
+When I was at Google, over 10–15 years ago, we used to ask ourselves: how many people are really needed for Google to hit their numbers? There were 20, 30, 40,000 people at the time. If you asked someone outside tech: "Probably 90% of those folks, obviously." The actual answer is probably closer to 9%. Maybe you need 500 people to keep the lights on and build that business. Not 25, 30, 40,000. There's a huge amount of overhead — companies hire not because they want bureaucrats but because they want to expand and try new things.
+
+But there's a judgment day coming back. Companies are saying, "We aren't getting as much for the staff we grew in the last 5 years. And this AI thing requires a totally different skill set." The combination is going to mean that in the next 12 to 24 months we're going to see massive shedding of staffs and then massive rehiring.
+
+You might see a company shed 30,000 and hire 8,000. But the 8,000 people they're going to hire are going to be all AI-first. The 30,000 they let go are going to be a combination of "we didn't get as much for those folks" and "we want to set the destination differently with a much lighter payload." That's dark. It's going to make this and the next two years pretty challenging.
+
+================================================================================
+[23:34] JOB MARKET — MOST OPEN PM ROLES IN 3+ YEARS
+
+(Lenny:) I should have mentioned this earlier — I just did a report on the job market. As of today, we have the most open PM roles globally at tech companies in three-plus years. The last time it was this high was during covid. There's some good news for the PM world.
+
+There's always this sense: "Why do we need PMs? AI just builds stuff." My sense — and every role thinks this about their role — is the PM skill is the most valuable of all skills. But it's like you said: deciding what to build, deciding if this is good and great and ready, and prioritizing — that's what remains.
+
+================================================================================
+[25:07] HALF OF PMS ARE INFORMATION MOVERS HEADED FOR EXTINCTION
+
+Why are so many product managers doing so well, with so many open jobs, when in reality a lot of product people we know are struggling to find a role or hearing about layoffs? It depends on how you define what a product manager is.
+
+For the first time, we did have a dramatic shift in what's defined. Three years ago we talked about archetypes of PMs — some more in favor. That was the IC conversation, the builder conversation. Now we're essentially saying: the information mover is going to become a dinosaur.
+
+About half the product people who grew into the industry have that skill as a superpower. Then there were the people who got into product because they like to build things — folks like yourself, founders who had that motivation and ended up in this thing called product management. Those folks are builders, and those are the people being hired in your survey. Everyone wants a builder.
+
+Interestingly, lots of engineers are builders, lots of designers are builders, lots of marketing folks are builders. "Builders wanted" is going to be the big tagline for the next couple of years. And it is so fun to build.
+
+================================================================================
+[26:51] FEW DAYS OF SATISFACTION IN A PRODUCT JOB
+
+When I was a PM, I'd take a break and go change the light bulbs in the house. The reason: that light bulb was broken, then I replaced it, and the light came on, and man, was that satisfying — because in a product job there are very few days of satisfaction. You don't really have the ability to see something broken get fixed. It's part of the challenge of having responsibility without authority.
+
+Until now. Now you can participate in the joy. You can create a design. You don't have to wait for the designer or convince the designer to actually work through it or put it on a backlog. The builders are going to have the time of their lives. They're going to be very focused on judgment. And they're going to invade other functions.
+
+================================================================================
+[27:55] BUILDERS INVADING OTHER FUNCTIONS — EVEN A PM CHRO
+
+When I started the group five years ago, for the first two to three years until we got to about 60–70 people in this community of heads of product, we had one founder. In the last 12 months, as we've gone to about 125, we have 14 founders. 14 people decided their next job wasn't another product executive role but founding CEO. That's now open to us.
+
+I have a very senior person in my group who interviewed for a CHRO position — Chief HR Officer — because they wanted a product manager background for the CHRO position. You'd never think an HR person would be a former PM. But forward-leaning companies are saying: "We need someone who can bring this obsolescence skill, this judgment skill, this empowerment skill, this builder skill to the function." The function might be easier to learn than the other parts of the job.
+
+Product builders are going to have a broader range of opportunities up and down the stack. It won't just be PMs — engineers can become product leaders and product builders. The lines are going to blur.
+
+================================================================================
+[29:35] THE FLIPSIDE — NON-BUILDERS IN TROUBLE
+
+Unfortunately, the flipside has to be mentioned. Non-builders — anyone who doesn't love sitting down and building. There may be reasons why, and we'll get into them, but if you're "look, my skill was never to build, I'm not really into tech, I just found it to be a lucrative job, where my ability to communicate, my ability to move information was where I ended up enjoying it" — I love all those things. But if you don't love building stuff, you're in trouble.
+
+About half the people are in that camp. They're going to have to perhaps leave the tech industry. They might want to build a new business outside of tech using AI tools, or find a job completely foreign to tech. The non-builder piece is a mirror image of the builder growth story.
+
+================================================================================
+[30:52] PMS ARE NOT CHEAP KNOCKOFFS OF ENGINEERS
+
+There's an interesting point from Aman Mole, head of growth at Anthropic: as engineers can do so much more, PMs are getting squeezed because they have to stay on top of so many things, so many features, so many ideas, so much doc. There's a push for PMs at companies to ship and build things themselves. But the leverage PMs have is often a lot higher not spending time coding and shipping but staying on top of all this stuff. He thinks we need more PMs now — there's so much for PMs to do because engineers are so fast. There's still a need for prototyping to explore ideas and align.
+
+It depends what he means by "shipping stuff." If you have an engineering team of 50 building things for customers and you're like "I want to be the 51st because that's how I get leverage" — it's kind of a cheap knockoff of an engineer.
+
+If on the other hand, the thing you're building is ways to stay on top of what those 50 are doing — when in the past that was building tickets and backlogs and all the things we used to do to figure out organizations, manage standups — that's the information overload happening.
+
+When the CPOs got together, all the things they were building were ways to drive efficiency out of their product organizations. They're inside-the-building development efforts. If there's 10–15 times the amount of stuff happening, we need judgment to determine whether it's good or bad changes. If it's manual, we're cooked.
+
+It's a combination of hiring good product builders with judgment and increasingly hiring folks whose entire job is to build internal tools to improve decisioning — not through hiring humans and management ethos (the ZERP playbook), but through technology. It's a totally different way of building software. That's what gets people excited: "Wow, if I do this, I never have to do a status report again. I hate status reports. Now I just wrote something and my boss is happier because they get more detail."
+
+================================================================================
+[34:27] ADULTS ARE STILL NEEDED — JUDGMENT = EXPERTISE + WISDOM
+
+Other things that are going to change in the next couple years: adults are still going to be needed. Companies will grow, and grow quickly. Those driving these initiatives are classic founders. AI is great at supplementing many things. But judgment comes in the form of a combination of expertise and wisdom.
+
+Increasingly I hear from my groups: "I'm attractive to this company because I have wisdom but I stay hands-on. I have credibility with the founder. I can have a conversation with that individual in their language but with weight in my thinking. I've seen the movie. I have experience that would help them as they take this turn."
+
+================================================================================
+[35:21] PACE, BURNOUT AND DIVERSITY GOING BACKWARDS
+
+Pace will continue to go up, partly because people will want to feed the beast (the LLMs running at night), partly because there's such an opportunity to keep moving so much faster. It's going to be dizzying, and I'm not excited about what that causes for burnout.
+
+Sadly, geography and diversity are going to take a step back. We were getting good about driving more breadth as we grew the industry — looking at people from different backgrounds, different locations. But because the AI wave is so heavily Bay Area, and because companies are hiring fewer folks, they're hiring people that look and act like themselves. Age, gender, ethnic backgrounds — all of those are taking a hit. We will have stepped back quite a number of years in diversity.
+
+This is my personal worry — probably more now than in the last 5 years — because it's an underbelly of what we're seeing. I don't think anyone's intentionally doing anything, but when pace is so high, women in their power years having kids just don't have the time to spend their nights and weekends in Cloud Code. That's an impact, and we don't talk about it as an industry, but it's absolutely true.
+
+================================================================================
+[37:12] MODERNITY > BRAND — LOGOS ON YOUR RESUME CAN HURT YOU
+
+One of the most surprising shifts we're seeing: your brands don't matter as much as how modern you are in your ability to deliver product.
+
+For the last 10 years it was "have you seen the movie before?" — personal brands, "I worked for this company, they delivered products at scale." Then people thought "oh, that person certainly knows what they're doing."
+
+But now, if every way of building software and how we deliver product is completely alien to how it was 10 years ago, how you delivered in that "version 1" is going to be less and less relevant. Lots of feedback I'm hearing from interviews: "Put you in a scenario, what tools do you use? What's your judgment? How do you think?" It's not "five years ago you shipped this thing — what was your thinking?" How modern you are now becomes the career advice. Not "did you pick up the established brands?" Because what if the established brand is working in a way that's not current? You worked there for six years, come out, and feel like you're in a totally different world.
+
+(Lenny:) That's such an interesting insight: the logo on your resume that used to be fancy can sometimes hurt you because that company isn't seen as AI-forward. And people are looking at: what have you actually done? Are you actually aware of what's going on?
+
+In some of the biggest brands, it's hard to even talk about what you've done. If you've been at Meta for two years and "I made this piece of this algorithm a little faster, and it had huge impact" — it was incredibly hard to navigate the hallways and find incrementality. As someone who has worked there, I respect that and it's a promotable achievement. But it falls flat in a conversation where someone's living in the future and product is now totally different.
+
+================================================================================
+[39:56] THE SKILLS HAVE FLIPPED UPSIDE DOWN
+
+The skills that used to be valued in product managers are changing pretty substantially. Almost flipped upside down in importance.
+
+In some ways, many of us start our careers as builders. Then we get taught: leverage, scale, organize, streamline, empower, enable. Don't do the build yourself. Get others to do it. Stop working on the car, work on the factory. That was the maturation of our industry.
+
+Then you find out: what if it turns out scale can be done very differently and all we care about is your opinion and what you build? That's very jarring, and that's what we're living through right now.
+
+================================================================================
+[40:50] ADVICE #1 — CROSS THE THRESHOLD OF REINVENTION
+
+Change is really hard for us. As humans, we're not designed to change easily. When you're a kid, you fall down a ton. Lenny, when was the last time you fell down? — Not often. — When you fall, it's probably pretty jarring. It's funny: you watch kids and it's normal for them to reinvent everything they do. "Oh, I'm learning to crawl. Now this walking thing, crawling is not for me." It's why kids learn languages so quickly — they're not afraid to make mistakes.
+
+We're trained to find a happy medium and make as few changes as possible. Find a partner, settle down, find a job, try to stay. Transitioning to a new job, if you can avoid it, is considered a failure. That's our entire model. We create a mental block around reinventing oneself. When you're told to reinvent, the first thing you think is: "Is it really necessary? I worked so hard to get here. Why would I need to?"
+
+In the most inner psyche of some of us: "That just wasn't the deal. The deal was I did what I was supposed to. Went to school. Worked hard. Got a job. Built the brand. Got to be a manager. I'm making the income. I have the partner, the family. You're telling me after all this time I gotta start over?"
+
+It sounds fun — you read Twitter and "wow, all these people are doing crazy stuff" — but in the back of your mind: "I just don't know why we got here. I don't want to. I want to go back to the world where I can keep doing things." This block is at the heart of the matter today, and it's a skill reinvention that requires time. Time is so hard to find in your power years.
+
+================================================================================
+[44:09] THE DISAPPOINTMENT ALGORITHM
+
+Your goal in your power years is to equally disappoint everyone in your life — sounds horrible, but it's true. You have 6 hours to give, or 8, or 12. You have 20 hours of demand. What's your prioritization mechanism? I am going to equally disappoint everyone. My parents will not be more disappointed than my kids, than my health, than my family, than my friends, than my partner, than my work, than my retirement account. That's essentially your mindset — I need to equally disappoint everyone.
+
+Now you're telling me the number-one thing is to reinvent, when I'm barely able to manage this disappointment algorithm?
+
+And worse: two psychological factors. One: "Fine, I'll take a week off and go figure out the latest." Three months later, that week off is antiquated. You've got to keep doing it because the target keeps changing. It's not "I went from no job to a new job, ground through it, and got back into flow." It's "I'm never in flow because I have to keep doing this over and over."
+
+================================================================================
+[45:40] SHADOW SUPERPOWER — MASTERS OF THE OLD GAME ARE THE MOST RESISTANT
+
+The most surprising observation: the ones who were best at working in the past — the ones who mastered the old game — find it the hardest to go through this reinvention stage. It's the "shadow superpower." The better you are at mastering one system, the less likely you are to recognize the new one, because your entire world is "this is working for me."
+
+The weaker you are, the more excited you are about changing. "Hey, what I'm doing isn't working. Might as well change it." But if you're really good, you have no incentive to change. Maybe even your employer sees you're doing great and the company is in this moment too.
+
+The number-one piece of advice: you have to have the courage, the belief, the power to essentially say "I know the way we work is changing and I need to stay current. I'm going to cross that mental threshold and prioritize it above all else." Crossing the threshold is the key. If there was one thing to take away from today's discussion, every person listening to this podcast needs to find it in themselves to cross the threshold around embracing reinvention. That is the world we live in now.
+
+================================================================================
+[48:39] THE GAME THEORY — THERE'S NO WAY TO STOP IT
+
+(Lenny:) They asked all the heads of the AI labs — Demis, Sam Altman, Dario — "If everybody agreed to slow down and stop this stuff, would you do it?" They all said yes. That says a lot about how they're freaked out a bit by how fast everything's going. But the reality is that's not going to happen because the game theory of it doesn't work. You can't slow down because no one will. Whoever doesn't slow down has a huge advantage. So a big part of the insight is: this is happening, and there's nothing you can do to slow it or stop it. You can either pretend it's no big deal, or get over the hump and lean into it.
+
+================================================================================
+[49:36] BUT IT'S NOT FOREVER — A NEW NORMAL WILL EMERGE
+
+There's a baby version that provides more soulfulness and optimism. Back in the day, when HP, Cisco, AMD, and other companies built physical hardware products with long engineering cycles, there was a discipline called product management with a very specific, structured way of working. It was essentially imploded when internet companies came along. Google built the APM program because "this product thing in the market isn't what we need, we'll train this new breed from the beginning." Microsoft, Meta, and others created a new version. For the first few years it was very jarring because everything called product management resembled old product management in name only. It wasn't "go to business school and become a PM." You'd have to build expertise, then come in to organize and collaborate.
+
+The next couple years are going to be like that. Every three months we'll have more agents, different forms of judgment. Lines blurring on roles, people from different backgrounds entering. It's going to be chaos. But as a couple years go by, things will settle. Companies will be built a certain way. You won't keep changing how you work. You'll have reached some form of optimization. We're not in that optimization right now in any way, shape, or form.
+
+You need to cross the threshold to stay modern because things are changing. But I don't want to send the message that for the next 30 years you'll be on a merry-go-round spinning faster and faster until you have to run off and vomit in the corner. That's not at all what I'm suggesting. Right now is the moment when, if you love building, you have to stay current because you'll be happier and more relevant. And if you don't love building, you have to recognize the industry is moving away from you.
+
+================================================================================
+[53:53] THE MOMENT OF JOY — THE ONLY EXIT FROM FEAR
+
+Let's go to the individual. There's someone who's afraid, who's a builder, who thinks "my job is changing so rapidly, I'm so nervous." I tend to ask: do you really love your day? If you put green, yellow, and red next to the meetings you had for a week and looked at the chart, I'll bet the vast majority of PMs in a product organization show mostly yellow and red. The ones moving more into build mode show mostly green and yellow. Most are sitting very afraid, feeling stuck.
+
+How do you transition mentally and physically from fear on the sidelines to being in the game? There's a moment where they experience the first joy in using the new tools. Everyone has a story, always different, but super personal. "I was doing it a certain way and all of a sudden I built this thing." Often: "My partner and I use this app I built." Or "I built a chief-of-staff app to keep track of my inbox." Or "I now manage the lights in my house using this thing." Some silly thing, usually accompanied by "I stayed up all night" or "I spent time talking to Claude about it."
+
+My wife has a story about a business she's thinking through — went from using AIs to build a business plan to actually doing test-marketing. Everyone has this moment of joy and then they're hooked. Like catching a bug. That's the moment they cross the threshold from fear to joy. Joy is the biggest antidote to burnout. It creates opportunity, because once you have joy, it doesn't feel like work. Most product management feels like work if you're not building. We are now moving into a world where product management will be building and joy, not work.
+
+If you're a leader listening, find those moments of joy in your staff because it's contagious. That's why I like doing what I do — I caught the bug. I look for TV shows I can vibe-code in parallel to, because I want to watch TV but vibe code at the same time.
+
+================================================================================
+[58:06] NIKHYL'S STACK — CLAUDE, AGENTS, OBSOLETING YOURSELF
+
+Good shows for vibe coding? A lot of Amazon Prime shows are good — not a knock on Amazon Prime, but they're built on books, so they're structured. Alex Cross, Jack Ryan. Funny: as you get older, you remember shows you loved but not the plot. I once binge-watched a season of 24 — I kind of knew what was happening, but I vibe coded the whole time: "I'm paying attention here, but staying engaged."
+
+I'm pretty all-in on Claude these last three months. For a month I was aggressive on Codex — found some of their newer stuff with the highest level of reasoning to be quite advanced. I find it hard to switch between tools. I try to standardize.
+
+I build a bunch of web properties for my community. Anytime I see something I can obsolete in code, I write it. If you have 100 people, one natural thing is to want them to meet each other, but 100 can't meet 99. You have to be thoughtful about who's the best person to meet and how to match people who haven't met before. What do they have or want? That entire thing used to be me sitting and thinking "Jay-Z would appreciate meeting Annie, but I don't know if they've met." Now I write software for it. I write an agent that does matching. Another agent figures out which jobs my heads of product are hiring for, makes them available, and builds a mailing list of folks who can get matched up automatically — the next generation of recruiting.
+
+I think a lot about using AI for content. I have an AI trained on my content (and yours) that takes questions from people and gives answers. Then I read the questions, evaluate the answers, and identify themes. "This is a theme I'm hearing — let me sit down and write where the LLM and I disagree."
+
+Anything I do that I think I can replicate, I try to obsolete myself. When I started my first job, I asked the best engineer I worked with — still one of the best engineers I've ever met — what's the definition of a great engineer? I thought it'd be "someone with this degree, well-versed in this stack." He said: "The best engineer I know is my dad." This was before tech. "My dad's definition is still my favorite: an engineer is someone who obsoletes themselves from everything they do."
+
+I've taken that to every job. It's funny: you run into people who say "no, I don't want to obsolete myself, that's my job." I think: if I obsolete, there'll be a better job for me. AI has put an exclamation point on that. You can obsolete just by asking the AIs. My stack is: what can I do to obsolete anything and everything I do daily?
+
+================================================================================
+[1:02:53] YOU DON'T NEED TO BE AN ENGINEER — YOU NEED OPINION
+
+The best tactic: solve your own problem. Think about something not great in your day-to-day or something you want to improve. Sounds easy — go to Lovable, install Claude Code, download Codex, and tell it "I want to build a dashboard to control my Sonos." It walks you through everything. For a while I thought it was a systems-engineering skill. But watching my wife — she's not an engineer by any means and she's getting tons of value — you don't even need to be an engineer. You just have to be opinionated about what you want to see. Know what good looks like.
+
+The moment it works, the lightbulb turns on. Before, you'd go and work to do it; now your agent does it. What's the next agent that could make my life a little better? That's where you catch the bug.
+
+================================================================================
+[1:04:03] CHANGE IS AN ALARM BELL — BUT JOY IS ON THE OTHER SIDE
+
+It's hard to hear the voice that says "the things you are changing are the things you don't love" because change is so scary. My prediction: the vast majority of people listening to this will be in a different job in the next 5 years — either because they choose to move, because their company struggles to stay modern, or because the company is shedding and rehiring.
+
+Because change is so apparent, it's deafening, and people are gunshy to be excited about something forced on them. Let's be honest: it's been forced on everyone. I have a lot of empathy. But when I talk to people, I try to dig through "forget what's happened, how do we make the best out of it?" And the best is pretty good.
+
+================================================================================
+[1:05:25] ADVICE FOR THRIVING — PACE, EGO, LONG-TERM, SKIP
+
+You find the moment of joy. You have the engineering mindset: "I want to obsolete myself on something I do today" — reduce the less joyful parts of my job. Good starting point.
+
+You have to find the ability to increase pace. The next two years require a lot of fire in the belly, a lot of agency. If you leave a job and start a new one, you don't view year one of the new job at the same pace as year five at your last. You bring it. If you're in a new relationship after a long-term one, your first year you put your best foot forward. That's what I'm asking. You've got to find that reserve. Make time. Maybe disappoint others in a way you haven't before, to create time to stay current, find that joy, obsolete yourself from the things that aren't worth it.
+
+You also have to swallow your ego. I don't want anyone saying "I was a XYZ leader, I'd only consider roles at that same level." Since everything is changing, it doesn't matter what we've done in the past — that brand doesn't matter. You have to have an egoless perspective on staying current and be not only willing but actively looking for ways to take something smaller to make sure you're going through the tunnel correctly.
+
+Part of swallowing the ego is staying long-term focused. "If the way we build product is changing so aggressively, my job is to spend the next couple years on the boat that's leaving the station and going to the new world. Once I get to the new world, the cream rises to the top. I'll take my skills and leadership through it." But in the next few years, with everything changing, you definitely want to be current. That requires a long-term focus.
+
+My property is called the Skip. The community and everything come from this word. I chose it because the best career advice is not thinking about the next move, but the move after. What's the skip job? What's the skip opportunity? In this world, it's not about the opportunity now and the journey — it's about making sure your skip opportunity is saved, that you can land one of those premier builder drops.
+
+================================================================================
+[1:08:59] PMS AS CHANGE AGENTS IN EVERY INDUSTRY
+
+There's a world where PMs go to every industry as change agents, because PMs are the ones who can talk, have the broadest view of the organization, and look through a technical lens. My hope is that most PMs are first to the tools and hence become change agents within their company.
+
+Let's play this out. In the next year, all these product organizations start changing how they build product. Suddenly, the way to build product is identified and quite mature. 12 months later, marketing, sales, the HVAC company that was bought by private equity, the school down the road — everybody: "We're not current. We're going to get obsolete. Who do we bring in to lead this change?" "This person works in the future. We need to get to the future." I'm bullish that product leaders are going to be like dandelion seeds — go everywhere.
+
+Meanwhile, lots of people coming into product might be from design, data science, or engineering. The ones with judgment, who can talk, who want to stay current may say "I don't necessarily want to stay in my lane. I have a point of view on how this should work." Designers may have many of those skills and opinions — maybe their platform won't be pixels and visuals, it'll be the product itself, and they move adjacently into product.
+
+You're going to see a crazy influx, an exodus, and folks unsure if they can get in. Three changes happening simultaneously — that's why so many people have anxiety.
+
+(Lenny:) "They thought they buried us. They didn't know we were seeds."
+
+================================================================================
+[1:11:54] THE FOUR JOBS OF THE FUTURE
+
+There's a hilarious tweet about the only four jobs that will remain:
+1. Product engineer / vibe coder / "PM slop cannon"
+2. Security & infra
+3. "Hot people" — getting people to buy your stuff, customer service, "presenting an easy UX to the world"
+4. Grown-ups (adults)
+
+I agree. Adults exist — anyone at the top of their field who can talk, is opinionated, can go broad — that's the third point plus the fourth.
+
+================================================================================
+[1:12:51] ALIGNMENT DOESN'T GO AWAY — BUT THEATRICS DO
+
+There's still alignment, but the part that was getting people the right information, the ground-level truth, is dramatically better. That part of the job absolutely sucked — status reports, docs sent to me, I'd change the doc and send it to my boss, my boss to theirs, and the ground truth was buried in some part of the organization with everyone putting their spin on it.
+
+Now someone has to decide and have an opinion on what to fight for. That conversation is much clearer because you know the ground truth. There's less spin. The CEO can literally ask their agent "what's the situation? How is this performing? What does this customer really want? How does this affect the system?" The conversation can happen and people can fight it out with real credence. If you're a product person who really has an opinion and wants to make a point, you have a forum.
+
+Alignment won't go away. It just won't have as many theatrics. Bigger companies have a lot of theatrics that AI is going to remove. I don't know many PMs who lived for the theatrics — most of them think "this just seems like a freaking waste of time." It's telling: I bet 80% — if you truly asked PMs "do you really want your boss's boss's job? Their day? Not the pay, the credibility, the stature, but their back-to-back meetings?" — most would say no. That answer is going to change in the next two years.
+
+================================================================================
+[1:15:35] ENGINEERS WILL BECOME MORE PM-LIKE — BUT WITH SYSTEMS EDGE
+
+As much as this role is changing, engineering is changing even more. The engineers who continue to thrive are basically going to become more PM-like, because the coding part is now solved. What's left is "what should we build? Is this great? Is this the direction? What does success look like?"
+
+The advantage engineers have is they think in systems and think about obsolescence more effectively. When you make a change, you have to decide if it's sustainable in the product. Engineers have an edge there. And "I bet we can build this to be more automated" — engineers go there naturally.
+
+Each role has its edge. Product person has an edge in judgment and communication. Engineer in system scaling. Designer in taste. People with all these will do better than those with one or two. But the industry is more than safe — as the report shows, there's more hiring. It's just a different class of individual.
+
+================================================================================
+[1:17:05] DESIGN PLATEAUING IS SURPRISING
+
+The design piece is surprising. The data shows the number of design roles is plateauing, and teams are not valuing design as much as you'd expect. As the number of products grows exponentially, you'd think design would become more important to stand out — to build something beautiful, with a thought-through experience. And that's not happening.
+
+Also: there's no world where I become a great designer. I can't just use AI and become a great designer, unlike an engineer or maybe a PM. As a PM, AI can knock it out of the park.
+
+It might be the industry doesn't yet know what to make of design in this era. Another piece: there are pixel generators and there are taste-makers. The industry may conflate design with production rather than taste. A lot of companies, when hiring head of design, are thinking "we need more production," but great designers are case-makers — taste-makers. That bias is entering hiring plans.
+
+================================================================================
+[1:18:50] CHAOS IS A LADDER — THE ONLY RECIPE IS FINDING JOY
+
+Chaos is a ladder, as Littlefinger famously said.
+
+There's a lot of room to be optimistic right now, but you have to find it within yourself to recognize there's a small period of change and exhaustion required to find that moment of joy. I urge everyone to find those reserves, because once you do, it's infectious. The longer you wait, the harder it is to cross that chasm. I want people to feel optimistic and find that moment of joy. But I recognize there's a lot of activation energy required.
+
+There's a lot of people going through it. Some safety in numbers. I urge everyone to try their hand at rethinking their craft.
+
+Is it possible? Yes — I see it in my community. It's smiling exhaustion. Before it was just exhaustion. I take smiling exhaustion over exhaustion. But the pace is relentless. There's nothing I can say to sugarcoat that.
+
+================================================================================
+[1:21:09] LIGHTNING ROUND — BOOK, MOVIE, PRODUCT, MOTTO, SKIP
+
+BOOKS. I'm not a reader — I vibe-code instead of consuming content. The reading I do is to stay up to date, which has been a casualty. Recently I read James — the story of Huckleberry Finn told from Jim's point of view. Anytime you take a classic and look at it through someone else's eyes, you see the story from another angle. When you read Huckleberry Finn, you're a kid. As an adult, you see it differently. Not sure I'd recommend it, but I always look for unnatural stories existing in plain sight.
+
+MOVIES/SHOWS. Everyone's talking about Paradise — seasons 1 and 2. A bit apocalyptic, but absolutely fascinating character drama about how people deal with very challenging times. The other is Lioness on Paramount Plus — a story about a covert CIA group, security for America, what it means to commit to a bigger cause. I don't vibe-code during these two — I have to pay attention. (Lenny: that's the new bar.)
+
+PRODUCT. Maybe obvious to a lot of folks, but: the Tesla with self-driving. I'm not a car guy — I just want my car to be reliable. I've had a Model S since pretty much they came out. My daughter recently passed her driving exam. My wife: "We've got to get her a car." I never connected the dots. Eventually: "Maybe I should use this as an opportunity to upgrade my car." So I drove the latest Teslas with self-driving. The self-driving works quite well. I've had it for the last month and self-drive about 95% of the time. The most interesting thing is I had no idea I have mild anxiety when I drive. That goes away when I self-drive. My wife noticed driving up to the mountains in crazy snow — "you're so anxious when you drive." I am? I've been driving since I was 14, I grew up in Kansas. Almost 40 years. I had no idea. Pressing a button and going places is awesome. I look for ways to reduce anxiety at this point in my life.
+
+(Lenny: I've also gone all in on self-driving. Since version 14.2 it's gotten really good. Tesla product suggestion: let users gift 30 days free of self-driving to friends who turned it off, because the referral plus endorsement allows people to experience it for free and convert to subscription.)
+
+MOTTO. My high school yearbook quote is still my motto: "Genius is 1% inspiration, 99% perspiration" — Einstein. Hard work is what matters in life. Interesting through the AI lens: AI will do the perspiration — unlimited. We're moving to a world where we all need to be inspired. The inspired individuals will proliferate. But recognize that perspiration is necessary to make things go.
+
+SKIP. I started Skip because I felt there was a dearth of content from operators sharing best practices with emerging operators. I had been a founder, an executive, and wanted to be in a position to say "this is exactly what I experienced and might apply to you." Most podcasts and content were from folks who had spent less time operating and more time in content. I was the opposite. I started the community I mentioned last time, then around 20–30 heads of product. Now over 125, all builders at the top of their game, reinventing product management. Our goal is to collectively share our wisdom as operators to help people advance in their careers.
+
+We're launching skip.help — agents trained on about 50 of our community leaders. You can ask a question — preparing for an interview, navigating your environment, "how do I build a chief-of-staff app?" — and 50 of us respond. Powered by Supermaven. You get the wisdom of the (curated) crowds.
+
+The community itself is curated, with a long waitlist. I grow it slowly to maintain trust. I have a mailing list called skip.coach where we share wisdom with a broader audience. Domains: skip.community, skip.show (podcast), skip.coach (mailing list), skip.help (agents), and the newsletter theskip.substack.com.
+
+================================================================================
+[1:34:42] CLOSING
+
+Thank you, Nikhyl. This was exactly what I was hoping for. People are going to leave this thinking "OK, I get it now. I understand what I need to be doing." Thanks, Lenny.

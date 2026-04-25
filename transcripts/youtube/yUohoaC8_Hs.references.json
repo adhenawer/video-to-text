@@ -1,0 +1,312 @@
+{
+  "video_id": "yUohoaC8_Hs",
+  "extracted_at": "2026-04-25",
+  "books": [
+    {
+      "title": "James",
+      "author": "Percival Everett",
+      "url": "https://www.amazon.com/s?k=James+Percival+Everett",
+      "context": "Recontagem de Huckleberry Finn da perspectiva de Jim — recente leitura de Nikhyl no lightning round"
+    },
+    {
+      "title": "Adventures of Huckleberry Finn",
+      "author": "Mark Twain",
+      "url": "https://www.amazon.com/s?k=Huckleberry+Finn+Mark+Twain",
+      "context": "Clássico mencionado como base para James, agora visto pelos olhos adultos"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Claude (Anthropic)",
+      "url": "https://www.anthropic.com/claude",
+      "context": "Stack principal do Nikhyl nos últimos três meses para vibe coding e construir agentes/web properties"
+    },
+    {
+      "name": "Claude Code",
+      "url": "https://www.anthropic.com/claude-code",
+      "context": "Ferramenta default citada como substituta dos engenheiros medianos para corrigir software ruim"
+    },
+    {
+      "name": "Codex (OpenAI)",
+      "url": "https://github.com/openai/codex",
+      "context": "Nikhyl foi agressivo nele por um mês; níveis altos de raciocínio considerados avançados"
+    },
+    {
+      "name": "ChatGPT",
+      "url": "https://chat.openai.com/",
+      "context": "Citado como ponto de inflexão da era anterior junto com Claude"
+    },
+    {
+      "name": "Lovable",
+      "url": "https://lovable.dev/",
+      "context": "Sugerido como entrada fácil para construir um app sem ser engenheiro"
+    },
+    {
+      "name": "Tesla Full Self-Driving",
+      "url": "https://www.tesla.com/support/autopilot",
+      "context": "Produto favorito recente do Nikhyl; usa 95% do tempo, reduz ansiedade ao dirigir"
+    },
+    {
+      "name": "Skip.help",
+      "url": "https://skip.help/",
+      "context": "Lançamento da Skip — agentes treinados em ~50 community leaders respondem perguntas, powered by Supermaven"
+    },
+    {
+      "name": "Skip.coach",
+      "url": "https://skip.coach/",
+      "context": "Mailing list aberta da comunidade Skip de Nikhyl para audiência ampla"
+    },
+    {
+      "name": "Skip Community",
+      "url": "https://skip.community/",
+      "context": "Comunidade curada de ~125 heads of product reinventando product management"
+    },
+    {
+      "name": "The Skip Podcast & Newsletter",
+      "url": "https://theskip.substack.com/",
+      "context": "Newsletter e podcast do Nikhyl (skip.show) sobre conselho de carreira de operadores"
+    },
+    {
+      "name": "Lenny's Newsletter / Podcast",
+      "url": "https://www.lennysnewsletter.com/",
+      "context": "Canal do entrevistador; relatório recente sobre vagas globais de PM em 3+ anos"
+    },
+    {
+      "name": "Sonos",
+      "url": "https://www.sonos.com/",
+      "context": "Exemplo de produto para se construir um dashboard de controle como projeto de aprendizado"
+    },
+    {
+      "name": "Tesla Model S",
+      "url": "https://www.tesla.com/models",
+      "context": "Carro do Nikhyl há muitos anos; trocou pelo modelo novo com self-driving"
+    }
+  ],
+  "papers": [],
+  "people": [
+    {
+      "name": "Nikhyl Singhal",
+      "role": "Ex-CPO Credit Karma; ex-executivo Meta e Google; founder da Skip; four-time founder",
+      "url": "https://twitter.com/nikhyl",
+      "context": "Convidado principal — argumenta que metade dos PMs (information movers) está em apuros e builders vão prosperar"
+    },
+    {
+      "name": "Lenny Rachitsky",
+      "role": "Criador da Lenny's Newsletter e Lenny's Podcast",
+      "url": "https://twitter.com/lennysan",
+      "context": "Apresentador; trouxe relatório sobre o mercado de trabalho de PM"
+    },
+    {
+      "name": "Aman Mole",
+      "role": "Head of Growth na Anthropic",
+      "url": "https://twitter.com/amanrsanger",
+      "context": "Citado pelo argumento de que PMs estão sendo espremidos e que alavancagem está em alinhamento, não em codar"
+    },
+    {
+      "name": "Demis Hassabis",
+      "role": "CEO Google DeepMind",
+      "url": "https://twitter.com/demishassabis",
+      "context": "Citado entre os heads de AI labs que disseram que desacelerariam se todos concordassem"
+    },
+    {
+      "name": "Sam Altman",
+      "role": "CEO OpenAI",
+      "url": "https://twitter.com/sama",
+      "context": "Citado entre os heads de AI labs sobre desacelerar a corrida"
+    },
+    {
+      "name": "Dario Amodei",
+      "role": "CEO Anthropic",
+      "url": "https://twitter.com/darioamodei",
+      "context": "Citado entre os heads de AI labs sobre desacelerar a corrida"
+    },
+    {
+      "name": "Albert Einstein",
+      "role": "Físico (1879–1955)",
+      "url": "https://en.wikipedia.org/wiki/Albert_Einstein",
+      "context": "Citação 'gênio é 1% inspiração, 99% transpiração' — motto de Nikhyl reinterpretado pela lente de AI"
+    },
+    {
+      "name": "Mark Twain",
+      "role": "Autor de Huckleberry Finn",
+      "url": "https://en.wikipedia.org/wiki/Mark_Twain",
+      "context": "Autor do clássico do qual deriva James, livro mencionado por Nikhyl"
+    },
+    {
+      "name": "Percival Everett",
+      "role": "Autor de James",
+      "url": "https://en.wikipedia.org/wiki/Percival_Everett",
+      "context": "Autor do livro James lido por Nikhyl"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Product Management",
+      "url": "https://en.wikipedia.org/wiki/Product_management",
+      "context": "Foco do episódio — disciplina em transformação radical com a chegada da AI"
+    },
+    {
+      "name": "ZIRP / ZERP era",
+      "url": "https://en.wikipedia.org/wiki/Zero_interest-rate_policy",
+      "context": "Era de juros zero do início dos 2020 — mencionada como o momento da entrevista anterior"
+    },
+    {
+      "name": "Information mover",
+      "url": "https://en.wikipedia.org/wiki/Product_manager",
+      "context": "Arquétipo de PM que vai virar dinossauro — metade da indústria está nesse perfil"
+    },
+    {
+      "name": "Builder (PM archetype)",
+      "url": "https://en.wikipedia.org/wiki/Product_manager",
+      "context": "Arquétipo que vai prosperar — quem ama construir está em vantagem clara"
+    },
+    {
+      "name": "Vibe coding",
+      "url": "https://en.wikipedia.org/wiki/Vibe_coding",
+      "context": "Construir software fluindo com AI; Nikhyl vibe-coda enquanto assiste TV"
+    },
+    {
+      "name": "Individual Contributor (IC)",
+      "url": "https://en.wikipedia.org/wiki/Individual_contributor",
+      "context": "Arquétipo IC mais valorizado já no episódio anterior — agora aceleração disso"
+    },
+    {
+      "name": "APM Program (Google)",
+      "url": "https://en.wikipedia.org/wiki/Associate_product_manager",
+      "context": "Programa criado por Google para reinventar PM quando internet companies emergiram"
+    },
+    {
+      "name": "COBOL",
+      "url": "https://en.wikipedia.org/wiki/COBOL",
+      "context": "Mais linhas de COBOL no mundo do que de qualquer outra linguagem; mainframes ainda dominam"
+    },
+    {
+      "name": "Mainframe",
+      "url": "https://en.wikipedia.org/wiki/Mainframe_computer",
+      "context": "Vendas continuam fortes para IBM; código antigo onde 'os engenheiros estão mortos'"
+    },
+    {
+      "name": "Burnout",
+      "url": "https://en.wikipedia.org/wiki/Occupational_burnout",
+      "context": "Risco crescente devido ao ritmo implacável; alegria é o maior antídoto"
+    },
+    {
+      "name": "Game theory",
+      "url": "https://en.wikipedia.org/wiki/Game_theory",
+      "context": "Por que AI labs não conseguem desacelerar — quem não desacelera tem vantagem enorme"
+    },
+    {
+      "name": "Chief of Staff (role)",
+      "url": "https://en.wikipedia.org/wiki/Chief_of_staff",
+      "context": "Apps de chief of staff como exemplo de software que PMs estão construindo para si"
+    },
+    {
+      "name": "CHRO (Chief Human Resources Officer)",
+      "url": "https://en.wikipedia.org/wiki/Chief_human_resources_officer",
+      "context": "Empresa quer um background de PM para a vaga — exemplo de invasão de outras funções"
+    },
+    {
+      "name": "Self-driving / FSD (Tesla)",
+      "url": "https://en.wikipedia.org/wiki/Tesla_Autopilot",
+      "context": "Produto favorito de Nikhyl — versão 14.2 marca o ponto em que ficou realmente bom"
+    }
+  ],
+  "companies": [
+    {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com/"
+    },
+    {
+      "name": "OpenAI",
+      "url": "https://openai.com/"
+    },
+    {
+      "name": "Google",
+      "url": "https://www.google.com/"
+    },
+    {
+      "name": "Meta",
+      "url": "https://about.meta.com/"
+    },
+    {
+      "name": "Microsoft",
+      "url": "https://www.microsoft.com/"
+    },
+    {
+      "name": "Credit Karma",
+      "url": "https://www.creditkarma.com/"
+    },
+    {
+      "name": "Tesla",
+      "url": "https://www.tesla.com/"
+    },
+    {
+      "name": "IBM",
+      "url": "https://www.ibm.com/"
+    },
+    {
+      "name": "HP",
+      "url": "https://www.hp.com/"
+    },
+    {
+      "name": "Cisco",
+      "url": "https://www.cisco.com/"
+    },
+    {
+      "name": "AMD",
+      "url": "https://www.amd.com/"
+    },
+    {
+      "name": "WorkOS",
+      "url": "https://workos.com/"
+    },
+    {
+      "name": "Vanta",
+      "url": "https://vanta.com/"
+    },
+    {
+      "name": "Supermaven",
+      "url": "https://supermaven.com/"
+    },
+    {
+      "name": "Amazon Prime Video",
+      "url": "https://www.amazon.com/Prime-Video/"
+    },
+    {
+      "name": "Paramount+",
+      "url": "https://www.paramountplus.com/"
+    }
+  ],
+  "related_posts": [
+    {
+      "slug_pt": "politica-corporativa-tech-tudo-que-ninguem-te-conta",
+      "slug_en": "corporate-politics-tech-everything-nobody-tells",
+      "reason": "Conselho honesto de carreira em tech — complementa a discussão sobre marca/política e como navegar empresas"
+    },
+    {
+      "slug_pt": "conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford",
+      "slug_en": "ai-career-advice-andrew-ng-lawrence-moroney-stanford",
+      "reason": "Outro guia direto sobre como se posicionar de carreira na era da AI"
+    },
+    {
+      "slug_pt": "roteiro-engenheiro-ia-para-desenvolvedores-de-software",
+      "slug_en": "ai-engineer-roadmap-software-developers",
+      "reason": "Caminho prático para engenheiros que querem se reinventar como AI-first"
+    },
+    {
+      "slug_pt": "ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam",
+      "slug_en": "ryan-lopopolo-harness-engineering-when-humans-steer-and-agents-execute",
+      "reason": "Visão complementar de como times reorganizam o trabalho para deixar agentes executarem"
+    },
+    {
+      "slug_pt": "estado-da-ia-2026-ponto-de-inflexao-simon-willison",
+      "slug_en": "state-ai-2026",
+      "reason": "Snapshot do estado da AI em 2026 — fundo para entender o ritmo descrito por Nikhyl"
+    },
+    {
+      "slug_pt": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
+      "slug_en": "head-claude-code-happens-after-coding-solved",
+      "reason": "Mesma tese que aparece no episódio: programação está sendo resolvida, julgamento e gosto sobem"
+    }
+  ]
+}
