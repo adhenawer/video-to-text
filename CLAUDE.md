@@ -201,7 +201,49 @@ Inserir novo `<a class="card">` em `docs/index.html` (PT) **e** `docs/en/index.h
 - `<div class="progress-info" id="p-VIDEOID"></div>`
 - No `<script>` de cada index, adicionar: `showProgress('reading_VIDEO_ID_', 'p-VIDEOID');`
 
-### 6. Commit
+> **Não** adicionar `<div class="tags">` manualmente. As pílulas `#tag` são
+> injetadas em runtime por `docs/js/tags.js`, que lê `tags`/`category` de
+> `data/moc.json`.
+
+### 6. Atribuir tags e regenerar grafo + JSON-LD
+
+Toda nova entrada em `transcripts/index.json` precisa de **tags** (array) e
+**category** (`"core"` ou `"lateral"`). O mapeamento é versionado em
+`scripts/apply_tags.py` (single source of truth). Fluxo:
+
+```bash
+# 1. Editar TAG_MAP em scripts/apply_tags.py — incluir o novo slug
+# 2. Aplicar mapping ao index.json
+python3 scripts/apply_tags.py
+# 3. Regenerar moc.json + injetar JSON-LD inline em moc.html e índices
+python3 scripts/build_moc.py
+```
+
+**Tags disponíveis:** `claude-code`, `agentic-engineering`, `carreira`,
+`soft-skills`, `produto`, `tutoriais`, `ia-2026`, `financas`. Use 1–4 por post.
+
+**Categorias:**
+- `core` — espinha dorsal do site (AI, produto, carreira, agentes)
+- `lateral` — outliers (finanças, trading, mercado, lateral pessoal). Cards
+  `lateral` são movidos pelo `tags.js` para a seção **"Curiosidades"** no fim
+  do índice, separadas do fluxo principal.
+
+**Como funciona:**
+- `docs/js/tags.js` lê `data/moc.json` no client; injeta `<div class="tags">`
+  em cada card, monta a `tag-bar` no topo e move `lateral` pro fim. Suporta
+  deep-link via `?#tag-claude-code`.
+- `scripts/build_moc.py` injeta automaticamente um bloco
+  `<script type="application/ld+json">` (Dataset + Articles + Action edges)
+  em `docs/moc.html`, `docs/index.html` e `docs/en/index.html` para que
+  crawlers de IA leiam o grafo sem JS. O bloco é delimitado por
+  `<!-- MOC-LD:BEGIN ... -->` / `<!-- MOC-LD:END -->` e re-escrito a cada run.
+
+**Posts órfãos** (HTML existe mas não há entrada em `index.json`, ex.
+`ronycoder-video.html`, `dario-amodei-...`): adicionar fallback no dict
+`ORPHAN_TAGS` dentro de `docs/js/tags.js`. Ideal é regularizar criando
+entrada no `index.json`.
+
+### 7. Commit
 
 ```bash
 git add docs/posts/pt_br/slug-do-titulo.html \
@@ -221,13 +263,21 @@ git commit -m 'feat: adiciona artigo — Título do Vídeo'
 | `src/fetch_transcript.py` | CLI standalone: captura transcrição do YouTube via `youtube-transcript-api` |
 | `src/translate_local.py` | Traduz transcrição para PT-BR via LLM local (`mlx-vlm`). Usado com `--local` |
 | `src/build_html.py` | Gera HTML referenciando `../css/style.css` e `../js/reader.js` |
+| `scripts/apply_tags.py` | Aplica `tags`+`category` em `transcripts/index.json` (TAG_MAP é source of truth) |
+| `scripts/build_moc.py` | Gera `docs/data/moc.json` + injeta JSON-LD inline em `moc.html` e índices |
+| `scripts/regen_en_htmls.py` | Regenera todos os HTMLs EN com sidebar de referências |
+| `scripts/patch_ptbr_references.py` | Injeta sidebar de referências nos HTMLs PT-BR existentes |
+| `scripts/update_index_references.py` | Atualiza contagens de refs em `transcripts/index.json` |
 
 ## Arquivos compartilhados
 
 | Arquivo | Papel |
 |---------|-------|
-| `css/style.css` | CSS centralizado: temas (sépia/claro/escuro), classes `.page-index` e `.page-article` |
+| `css/style.css` | CSS centralizado: temas (sépia/claro/escuro), classes `.page-index` e `.page-article`, `.tag` e `.tag-bar` |
 | `js/reader.js` | JS de leitura: tema, barra de progresso, salvar posição, resume banner. Lê `data-storage-key` do `<body>` |
+| `js/tags.js` | Injeta pílulas `#tag` clicáveis em cada card do índice, monta a barra de filtros e move `category=lateral` para a seção "Curiosidades" no fim |
+| `js/lang.js` | Seletor de idioma PT/EN, redireciona usando `slug`/`slug_en` |
+| `data/moc.json` | Grafo dos artigos: `nodes` (com `tags`+`category`) e `edges` (related_posts). Consumido por `moc.html` e `tags.js` |
 
 Artigos usam `<body class="page-article" data-storage-key="reading_VIDEO_ID_">`.
 Index usa `<body class="page-index">`.
@@ -375,7 +425,9 @@ python3 scripts/patch_ptbr_references.py
 # Atualiza contagens no index.json
 python3 scripts/update_index_references.py
 
-# Regenera o mapa de conteúdo (docs/data/moc.json consumido por docs/moc.html)
+# Regenera o mapa de conteúdo + JSON-LD inline em moc.html, index PT/EN
+# (consome tags/category do transcripts/index.json — rode apply_tags.py antes
+# se acabou de adicionar entrada nova)
 python3 scripts/build_moc.py
 ```
 
