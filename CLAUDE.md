@@ -229,14 +229,19 @@ python3 scripts/build_moc.py
   do índice, separadas do fluxo principal.
 
 **Como funciona:**
-- `docs/js/tags.js` lê `data/moc.json` no client; injeta `<div class="tags">`
-  em cada card, monta a `tag-bar` no topo e move `lateral` pro fim. Suporta
-  deep-link via `?#tag-claude-code`.
-- `scripts/build_moc.py` injeta automaticamente um bloco
-  `<script type="application/ld+json">` (Dataset + Articles + Action edges)
-  em `docs/moc.html`, `docs/index.html` e `docs/en/index.html` para que
-  crawlers de IA leiam o grafo sem JS. O bloco é delimitado por
-  `<!-- MOC-LD:BEGIN ... -->` / `<!-- MOC-LD:END -->` e re-escrito a cada run.
+- `scripts/build_moc.py` faz três coisas:
+  1. Gera `docs/data/moc.json` (consumido pelo `moc.html` e `tags.js`).
+  2. Injeta `<script type="application/ld+json">` (Dataset + Articles com
+     **headline completo** + Action edges) em `docs/moc.html`, `docs/index.html`
+     e `docs/en/index.html`. Bloco delimitado por
+     `<!-- MOC-LD:BEGIN ... -->` / `<!-- MOC-LD:END -->`.
+  3. **Patcha cada `<a class="card">`** dos índices PT/EN com
+     `data-tags="..." data-category="..."` no HTML estático — assim crawlers
+     SEO e fetchers sem JS já enxergam tags + categoria diretamente no DOM.
+- `docs/js/tags.js` lê primeiro o `data-tags` do DOM (degradação graceful);
+  só faz fetch de `data/moc.json` como fallback. Injeta as pílulas `#tag`
+  visuais, monta a `tag-bar` no topo, move `category=lateral` pro fim.
+  Suporta deep-link via `#tag-claude-code`.
 
 **Posts órfãos** (HTML existe mas não há entrada em `index.json`, ex.
 `ronycoder-video.html`, `dario-amodei-...`): adicionar fallback no dict

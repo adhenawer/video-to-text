@@ -147,9 +147,20 @@
           const href = card.getAttribute('href') || '';
           const slug = slugFromHref(href);
           if (!slug) continue;
-          let node = lookup[slug];
-          if (!node && ORPHAN_TAGS[slug]) {
-            node = { tags: ORPHAN_TAGS[slug].tags, category: ORPHAN_TAGS[slug].category };
+          // Static data-tags emitted by build_moc.py wins over the JSON
+          // (visible to crawlers without JS, also makes filtering work
+          // even if the fetch fails).
+          let node = null;
+          if (card.dataset.tags) {
+            node = {
+              tags: card.dataset.tags.split(/\s+/).filter(Boolean),
+              category: card.dataset.category || 'core',
+            };
+          } else {
+            node = lookup[slug];
+            if (!node && ORPHAN_TAGS[slug]) {
+              node = { tags: ORPHAN_TAGS[slug].tags, category: ORPHAN_TAGS[slug].category };
+            }
           }
           if (!node) continue;
           injectTagPillsIntoCard(card, node);

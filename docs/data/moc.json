@@ -3,6 +3,7 @@
     {
       "id": "por-que-metade-dos-product-managers-esta-em-apuros",
       "title": "Por que metade dos product managers está em ap…",
+      "title_full": "Por que metade dos product managers está em apuros",
       "subtitle": "Nikhyl Singhal (ex-Meta, Google, CPO Credit Karma) · Lenny's Podcast",
       "url_pt": "posts/pt_br/por-que-metade-dos-product-managers-esta-em-apuros.html",
       "url_en": "posts/original/why-half-of-product-managers-are-in-trouble.html",
@@ -18,6 +19,7 @@
     {
       "id": "ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam",
       "title": "Ryan Lopopolo — Engenharia de Harness",
+      "title_full": "Ryan Lopopolo — Engenharia de Harness: Como Construir Software Quando Humanos Conduzem e Agentes Executam",
       "subtitle": "Ryan Lopopolo (Member of Technical Staff, OpenAI) · AI Engineer Summit Londres",
       "url_pt": "posts/pt_br/ryan-lopopolo-engenharia-de-harness-quando-humanos-conduzem-e-agentes-executam.html",
       "url_en": "posts/original/ryan-lopopolo-harness-engineering-when-humans-steer-and-agents-execute.html",
@@ -31,6 +33,7 @@
     {
       "id": "chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida",
       "title": "Chefe do Claude Code",
+      "title_full": "Chefe do Claude Code: O Que Acontece Depois Que a Programação For Resolvida",
       "subtitle": "Lenny's Podcast com Boris Cherny (Chefe do Claude Code, Anthropic)",
       "url_pt": "posts/pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html",
       "url_en": "posts/original/head-claude-code-happens-after-coding-solved.html",
@@ -45,6 +48,7 @@
     {
       "id": "guia-completo-claude-iniciante-sistema-operacional-ia",
       "title": "Guia Completo do Claude",
+      "title_full": "Guia Completo do Claude — De Iniciante a Sistema Operacional de IA",
       "subtitle": "51bodila · Twitter/X",
       "url_pt": "posts/pt_br/guia-completo-claude-iniciante-sistema-operacional-ia.html",
       "url_en": "posts/original/complete-claude-guide-beginner-ai-operating-system.html",
@@ -58,6 +62,7 @@
     {
       "id": "claude-code-leak-what-weve-learned-so-far",
       "title": "Claude Code Leak",
+      "title_full": "Claude Code Leak: What We've Learned So Far",
       "subtitle": "Goju Tech Talk",
       "url_pt": "posts/pt_br/claude-code-leak-what-weve-learned-so-far.html",
       "url_en": "posts/original/claude-code-leak-we-have-learned-so-far.html",
@@ -70,6 +75,7 @@
     {
       "id": "como-construi-sistema-suporte-cliente-ia-nivel-producao",
       "title": "Como Construí um Sistema de Suporte ao Cliente…",
+      "title_full": "Como Construí um Sistema de Suporte ao Cliente com IA de Nível Produção",
       "subtitle": "Usando Claude Code — Tutorial prático",
       "url_pt": "posts/pt_br/como-construi-sistema-suporte-cliente-ia-nivel-producao.html",
       "url_en": "posts/original/how-i-built-production-grade-ai-customer-support-system.html",
@@ -84,6 +90,7 @@
     {
       "id": "de-ides-para-agentes-de-ia-steve-yegge",
       "title": "De IDEs para Agentes de IA",
+      "title_full": "De IDEs para Agentes de IA",
       "subtitle": "Steve Yegge — Sourcegraph Podcast",
       "url_pt": "posts/pt_br/de-ides-para-agentes-de-ia-steve-yegge.html",
       "url_en": "posts/original/ides-ai-agents.html",
@@ -96,6 +103,7 @@
     {
       "id": "do-prompt-a-producao-o-que-e-engenharia-agentica",
       "title": "Do Prompt à Produção",
+      "title_full": "Do Prompt à Produção: O Que É Engenharia Agêntica?",
       "subtitle": "Live — Engenharia Agêntica na Prática",
       "url_pt": "posts/pt_br/do-prompt-a-producao-o-que-e-engenharia-agentica.html",
       "url_en": "posts/original/prompt-production-agentic-engineering.html",
@@ -108,6 +116,7 @@
     {
       "id": "engenharia-agentica-contexto-guardrails-e-criatividade",
       "title": "Engenharia Agêntica",
+      "title_full": "Engenharia Agêntica: Contexto, Guardrails e Criatividade",
       "subtitle": "Palestra técnica sobre Engenharia Agêntica",
       "url_pt": "posts/pt_br/engenharia-agentica-contexto-guardrails-e-criatividade.html",
       "url_en": "posts/original/agentic-engineering-context-guardrails-creativity.html",
@@ -120,6 +129,7 @@
     {
       "id": "engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia",
       "title": "Engenheiro Sênior Demonstra Fluxo de Desenvolv…",
+      "title_full": "Engenheiro Sênior Demonstra Fluxo de Desenvolvimento com Especificações de IA",
       "subtitle": "Live — Desenvolvimento Guiado por Especificação com IA",
       "url_pt": "posts/pt_br/engenheiro-senior-fluxo-desenvolvimento-especificacoes-ia.html",
       "url_en": "posts/original/senior-engineer-demonstrates-spec-driven-ai-development-flow.html",
@@ -133,6 +143,7 @@
     {
       "id": "estado-da-ia-2026-ponto-de-inflexao-simon-willison",
       "title": "O Estado da Arte da IA em 2026",
+      "title_full": "O Estado da Arte da IA em 2026",
       "subtitle": "Passamos o Ponto de Inflexão e as &ldquo;Fábricas Escuras&rdquo; Estão Chegando",
       "url_pt": "posts/pt_br/estado-da-ia-2026-ponto-de-inflexao-simon-willison.html",
       "url_en": "posts/original/state-ai-2026.html",
@@ -146,6 +157,7 @@
     {
       "id": "fluxos-de-trabalho-agenticos-don-syme",
       "title": "Fluxos de Trabalho Agênticos com Don Syme",
+      "title_full": "Fluxos de Trabalho Agênticos com Don Syme",
       "subtitle": "Don Syme — Criador do F# sobre Agentes de IA",
       "url_pt": "posts/pt_br/fluxos-de-trabalho-agenticos-don-syme.html",
       "url_en": "posts/original/agentic-workflows-don-syme.html",
@@ -158,6 +170,7 @@
     {
       "id": "politica-corporativa-tech-tudo-que-ninguem-te-conta",
       "title": "Política Corporativa em Tech",
+      "title_full": "Política Corporativa em Tech — Tudo Que Ninguém Te Conta",
       "subtitle": "Ethan Evans (ex-VP Amazon) · Ryan Peterman",
       "url_pt": "posts/pt_br/politica-corporativa-tech-tudo-que-ninguem-te-conta.html",
       "url_en": "posts/original/corporate-politics-tech-everything-nobody-tells.html",
@@ -171,6 +184,7 @@
     {
       "id": "praticas-de-engenharia-para-agentes-de-codigo-simon-willison",
       "title": "Práticas de Engenharia que Fazem os Agentes de…",
+      "title_full": "Práticas de Engenharia que Fazem os Agentes de Código Funcionar",
       "subtitle": "Simon Willison — The Pragmatic Engineer Podcast",
       "url_pt": "posts/pt_br/praticas-de-engenharia-para-agentes-de-codigo-simon-willison.html",
       "url_en": "posts/original/engineering-practices-make-coding-agents-work.html",
@@ -183,6 +197,7 @@
     {
       "id": "roteiro-engenheiro-ia-para-desenvolvedores-de-software",
       "title": "Roteiro do Engenheiro de IA para Desenvolvedor…",
+      "title_full": "Roteiro do Engenheiro de IA para Desenvolvedores de Software",
       "subtitle": "Guia de carreira — AI Engineering Roadmap",
       "url_pt": "posts/pt_br/roteiro-engenheiro-ia-para-desenvolvedores-de-software.html",
       "url_en": "posts/original/ai-engineer-roadmap-software-developers.html",
@@ -196,6 +211,7 @@
     {
       "id": "um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code",
       "title": "Um Agente Não É Suficiente",
+      "title_full": "Um Agente Não É Suficiente: Programação Agêntica Além do Claude Code",
       "subtitle": "Vídeo técnico — Multi-agent Coding",
       "url_pt": "posts/pt_br/um-agente-nao-e-suficiente-programacao-agentica-alem-do-claude-code.html",
       "url_en": "posts/original/one-agent-not-enough-multi-team-agentic-coding-beyond-claude-code.html",
@@ -209,6 +225,7 @@
     {
       "id": "obsidian-claude-code-pensamento",
       "title": "Obsidian + Claude Code",
+      "title_full": "Obsidian + Claude Code: Pensamento Amplificado",
       "subtitle": "@heyamit_ (com Vin)",
       "url_pt": "posts/pt_br/obsidian-claude-code-pensamento.html",
       "url_en": "posts/original/obsidian-claude-code-second-brain-amplified.html",
@@ -222,6 +239,7 @@
     {
       "id": "conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford",
       "title": "Conselhos de Carreira em IA",
+      "title_full": "Conselhos de Carreira em IA — Andrew Ng e Lawrence Moroney na Stanford",
       "subtitle": "Andrew Ng & Lawrence Moroney · Stanford CS230",
       "url_pt": "posts/pt_br/conselhos-de-carreira-em-ia-andrew-ng-lawrence-moroney-stanford.html",
       "url_en": "posts/original/ai-career-advice-andrew-ng-lawrence-moroney-stanford.html",
@@ -235,6 +253,7 @@
     {
       "id": "entendendo-rony-coder",
       "title": "Entendendo Rony Coder",
+      "title_full": "Entendendo Rony Coder",
       "subtitle": "@ronycoder",
       "url_pt": "posts/pt_br/entendendo-rony-coder.html",
       "url_en": "posts/original/how-speak-patrick-winston-giving-talks-matter.html",
@@ -248,6 +267,7 @@
     {
       "id": "financas-comportamentais-robert-shiller-yale",
       "title": "Finanças Comportamentais",
+      "title_full": "Finanças Comportamentais — Robert Shiller na Yale",
       "subtitle": "Robert Shiller · Yale Open Courses",
       "url_pt": "posts/pt_br/financas-comportamentais-robert-shiller-yale.html",
       "url_en": "posts/original/behavioral-finance-psychology-manipulation-integrity-markets.html",
@@ -261,6 +281,7 @@
     {
       "id": "ia-agentica-progressao-uso-modelos-linguagem-stanford",
       "title": "IA Agêntica",
+      "title_full": "IA Agêntica: Progressão do Uso de Modelos de Linguagem",
       "subtitle": "Inseo Bong · Stanford Online",
       "url_pt": "posts/pt_br/ia-agentica-progressao-uso-modelos-linguagem-stanford.html",
       "url_en": "posts/original/agentic-ai-progression-language-model-usage.html",
@@ -274,6 +295,7 @@
     {
       "id": "por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills",
       "title": "Por Que Paramos de Construir Agentes e Começam…",
+      "title_full": "Por Que Paramos de Construir Agentes e Começamos a Construir Skills",
       "subtitle": "Barry Zhang & Mahesh Sathiamoorthy · Anthropic",
       "url_pt": "posts/pt_br/por-que-paramos-de-construir-agentes-e-comecamos-a-construir-skills.html",
       "url_en": "posts/original/why-we-stopped-building-agents-started-building-skills.html",
@@ -287,6 +309,7 @@
     {
       "id": "trading-com-order-flow-mercado-global-ao-chines",
       "title": "Trading com Order Flow",
+      "title_full": "Trading com Order Flow — Do Mercado Global ao Chinês",
       "subtitle": "Trader Chinês · Twitter/X",
       "url_pt": "posts/pt_br/trading-com-order-flow-mercado-global-ao-chines.html",
       "url_en": "posts/original/trading-com-order-flow-mercado-global-ao-chines.html",
@@ -299,6 +322,7 @@
     {
       "id": "fabio-akita-flow-588",
       "title": "FABIO AKITA - Flow #588",
+      "title_full": "FABIO AKITA - Flow #588",
       "subtitle": "Fabio Akita · Flow Podcast #588",
       "url_pt": "posts/pt_br/fabio-akita-flow-588.html",
       "url_en": "posts/original/fabio-akita-flow-588.html",
@@ -313,6 +337,7 @@
     {
       "id": "curso-completo-claude-code-4-horas",
       "title": "Curso Completo de Claude Code — 4 Horas",
+      "title_full": "Curso Completo de Claude Code — 4 Horas",
       "subtitle": "Marco Fernández / X",
       "url_pt": "posts/pt_br/curso-completo-claude-code-4-horas.html",
       "url_en": "posts/original/complete-claude-code-course-4-hours.html",
@@ -326,6 +351,7 @@
     {
       "id": "boris-cherny-dicas-praticas-para-usar-claude-code",
       "title": "Boris Cherny",
+      "title_full": "Boris Cherny — Dicas Práticas para Usar Claude Code",
       "subtitle": "Boris Cherny (Anthropic, criador do Claude Code)",
       "url_pt": "posts/pt_br/boris-cherny-dicas-praticas-para-usar-claude-code.html",
       "url_en": "posts/original/boris-cherny-dicas-praticas-para-usar-claude-code.html",
