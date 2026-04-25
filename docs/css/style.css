@@ -353,3 +353,341 @@ pre code { background: transparent; padding: 0; }
   .page-article h1 { font-size: 1.4rem; }
   .progress { top: 48px; }
 }
+
+/* ============================================================
+   READING AIDS (sprints 1–4)
+   - Reading time pill in article header
+   - "% · X min restantes" enhanced badge
+   - TOC sidebar fixed on the left at >=1200px (built by reader.js)
+   - Section numbering §01, §02 … via CSS counter
+   - Focus mode (F key) — dim everything except the current section
+   - TL;DR collapsible at top
+   - Per-section keypoint banner
+   - Pull-quote (.pull)
+   - Next article footer
+   ============================================================ */
+
+/* Reading time chip in the article header */
+.reading-time {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  vertical-align: 0.1em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Reading-pct badge already exists; just add a thinner mode for "X min restantes" */
+.reading-pct.with-min {
+  font-size: 0.72rem;
+  padding: 4px 10px;
+  letter-spacing: 0.02em;
+}
+
+/* TOC sidebar — built by JS at runtime, fixed on the left for wide viewports */
+.toc-sidebar {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .toc-sidebar {
+    display: block;
+    position: fixed;
+    top: 70px;
+    left: 20px;
+    width: 220px;
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 4px 8px 4px 4px;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    z-index: 30;
+    scrollbar-width: thin;
+  }
+  .toc-sidebar::-webkit-scrollbar { width: 4px; }
+  .toc-sidebar::-webkit-scrollbar-thumb { background: var(--border); }
+
+  .toc-sidebar .toc-head {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin: 0 0 12px;
+    padding-left: 8px;
+  }
+  .toc-sidebar ol {
+    list-style: none;
+    padding: 0; margin: 0;
+    counter-reset: toc;
+  }
+  .toc-sidebar li {
+    counter-increment: toc;
+    margin: 0;
+    padding: 0;
+  }
+  .toc-sidebar a {
+    display: block;
+    padding: 6px 10px 6px 14px;
+    color: var(--text-muted);
+    border-left: 2px solid var(--border);
+    text-decoration: none;
+    transition: color .15s, border-color .15s;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  .toc-sidebar a::before {
+    content: "§" counter(toc, decimal-leading-zero) " ";
+    color: var(--text-muted);
+    opacity: 0.55;
+    margin-right: 4px;
+    font-feature-settings: "tnum";
+  }
+  .toc-sidebar a:hover {
+    color: var(--text);
+    border-left-color: var(--text-muted);
+  }
+  .toc-sidebar a.is-active {
+    color: var(--accent);
+    border-left-color: var(--accent);
+    font-weight: 600;
+  }
+  .toc-sidebar a.is-active::before { color: var(--accent); opacity: 1; }
+
+  /* Inline TOC inside the article hidden when sidebar is shown */
+  .page-article nav[aria-label="Índice do artigo"],
+  .page-article nav[aria-label="Article table of contents"] {
+    display: none;
+  }
+}
+
+/* Section numbering — §01, §02 … via CSS counter on <section> tags */
+.page-article article.container,
+.page-article .container {
+  counter-reset: sec;
+}
+.page-article section { counter-increment: sec; }
+.page-article section > h2::before {
+  content: "§" counter(sec, decimal-leading-zero) " · ";
+  color: var(--text-muted);
+  font-weight: 600;
+  font-feature-settings: "tnum";
+  margin-right: 2px;
+}
+
+/* Focus mode (toggle: F key) — dim sections that aren't in view */
+body.focus-mode .page-article section { opacity: 0.18; transition: opacity .35s ease; }
+body.focus-mode .page-article section.in-view { opacity: 1; }
+body.focus-mode .page-article nav[aria-label],
+body.focus-mode .page-article header,
+body.focus-mode .references-sidebar,
+body.focus-mode .toc-sidebar {
+  opacity: 0.35; transition: opacity .35s ease;
+}
+body.focus-mode .page-article section.in-view ~ * { /* no-op, kept for symmetry */ }
+body.focus-mode .focus-hint { opacity: 1; }
+.focus-hint {
+  position: fixed; bottom: 60px; right: 16px;
+  background: var(--text); color: var(--bg);
+  padding: 6px 12px; border-radius: 3px;
+  font-size: 0.72rem; letter-spacing: 0.03em;
+  opacity: 0; pointer-events: none;
+  transition: opacity .25s;
+  z-index: 40;
+}
+
+/* TL;DR collapsible at top of post */
+.tldr-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin: 0 0 32px;
+  font-size: 0.92rem;
+}
+.tldr-block summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.tldr-block summary::-webkit-details-marker { display: none; }
+.tldr-block summary::after { content: "−"; color: var(--text-muted); font-weight: 400; }
+.tldr-block:not([open]) summary::after { content: "+"; }
+.tldr-block ol,
+.tldr-block ul {
+  margin: 12px 0 0;
+  padding-left: 22px;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+.tldr-block li { margin-bottom: 6px; }
+
+/* Per-section keypoint banner — short italic line right after <h2> */
+.page-article .keypoint {
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+  padding: 10px 14px;
+  margin: 8px 0 18px;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text);
+  font-style: italic;
+  border-radius: 0 4px 4px 0;
+}
+.page-article .keypoint .keypoint-label {
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+/* Pull-quote (.pull) inside articles — visually heavier than callout */
+.page-article blockquote.pull {
+  border-left: 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+  font-size: 1.18rem;
+  line-height: 1.45;
+  font-weight: 500;
+  color: var(--text);
+  font-style: italic;
+  padding: 18px 0;
+  margin: 28px 0;
+  border-radius: 0;
+  letter-spacing: -0.005em;
+}
+
+/* Video card — sits above the references sidebar (≥1200px). Mirrors its
+   layout/positioning so the two cards stack cleanly on the right. */
+.video-card {
+  display: none; /* off by default — only shows up where the references sidebar shows */
+}
+@media (min-width: 1200px) {
+  .video-card {
+    display: block;
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    width: 280px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 16px 12px;
+    z-index: 31; /* above references-sidebar, which is z-index auto */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  /* Push the references sidebar down to make room for the video card.
+     Approximate height: label 18 + frame (16/9 of 248px ≈ 140) + button 30 + paddings ≈ 230. */
+  .video-card + .references-sidebar {
+    top: 320px;
+    max-height: calc(100vh - 340px);
+  }
+}
+.video-card .video-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.video-card .video-frame {
+  position: relative;
+  aspect-ratio: 16/9;
+  background: var(--surface);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.video-card .video-frame > div,
+.video-card .video-frame iframe {
+  position: absolute; top: 0; left: 0;
+  width: 100% !important; height: 100% !important;
+  max-width: 100%;
+  border: 0;
+  display: block;
+}
+.video-card .video-frame { contain: layout paint; }
+.video-card .video-sync {
+  display: block;
+  width: 100%;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  border-radius: 3px;
+  padding: 8px 10px;
+  cursor: pointer;
+  text-align: left;
+  transition: background .15s;
+}
+.video-card .video-sync:hover { background: var(--accent-hover); }
+.video-card .video-sync::before { content: "▸ "; opacity: 0.85; margin-right: 2px; }
+.video-card .video-sync.playing { background: var(--text-muted); }
+.video-card .video-sync.playing::before { content: "↻ "; }
+.video-card .video-link {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 8px 0;
+  border-top: 1px solid var(--border);
+}
+.video-card .video-link:hover { text-decoration: underline; }
+.video-card .video-caption {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+  line-height: 1.45;
+}
+
+/* "Próximo artigo" footer */
+.next-up {
+  margin: 56px 0 0;
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+}
+.next-up h3 {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin: 0 0 8px;
+}
+.next-up a {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  margin-top: 4px;
+}
+.next-up a:hover { color: var(--accent); }
+.next-up small {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+  font-weight: 400;
+}

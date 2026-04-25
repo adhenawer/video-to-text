@@ -21,7 +21,7 @@
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "Article", "headline": "Um Agente Não É Suficiente: Programação Agêntica Além do Claude Code", "description": "Se você já trabalhou com agentes de código e foi empurrando os limites do que eles conseguem fazer, chegou a uma conclusão: um agente não é suficiente. Este vídeo apresenta uma arquitetura de...", "author": {"@type": "Person", "name": "Vídeo técnico — Multi-agent Coding"}, "publisher": {"@type": "Organization", "name": "Leituras — Podcasts & Vídeos Traduzidos"}, "inLanguage": "pt-BR", "isAccessibleForFree": true, "url": "https://youtu.be/M30gp1315Y4", "articleSection": ["INTRODUÇÃO", "ARQUITETURA DE TRÊS CAMADAS", "AGENTES COM MEMÓRIA E ESPECIALIZAÇÃO ACUMULADA", "PERSPECTIVAS MÚLTIPLAS: O VALOR DO CONSENSO", "CONFIGURAÇÃO E CUSTOMIZAÇÃO", "ESCALABILIDADE E CUSTO", "PRÓXIMOS PASSOS: META-AGENTES E EXPERTISE BLOQUEADA"]}
 </script>
-<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/style.css?v=6">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="40c8ae3d-2e6b-4af4-a89b-f578dd3b2315"></script>
 </head>
 <body class="page-article" data-storage-key="reading_M30gp1315Y4_">
@@ -53,6 +53,9 @@
 <li><a href="#s7">PRÓXIMOS PASSOS: META-AGENTES E EXPERTISE BLOQUEADA</a></li>
     </ol>
   </nav>
+<details class="tldr-block" open><summary><span>TL;DR · principais pontos</span></summary><ol><li>Se você já trabalhou com agentes de código e foi empurrando os limites do que eles conseguem fazer, chegou a uma conclusão: um agente não é suficiente.</li>
+<li>O sistema demonstrado aqui usa três camadas: um orquestrador, líderes de equipe e trabalhadores — cada um com memória persistente, domínio restrito e especialização acumulada ao longo das sessões.</li>
+<li>O caso de uso demonstrado é um classificador de complexidade de prompts — um problema real em aplicações LLM de produção.</li></ol></details>
 <section>
 <h2 id="s1">INTRODUÇÃO <a class="ts-link" href="https://youtu.be/M30gp1315Y4?t=0" target="_blank" rel="noopener" aria-label="Pular para 0:00 no vídeo">0:00</a></h2>
 <p>Se você já trabalhou com agentes de código e foi empurrando os limites do que eles conseguem fazer, chegou a uma conclusão: um agente não é suficiente. Este vídeo apresenta uma arquitetura de codificação com múltiplas equipes de agentes especializados — uma evolução significativa em relação ao uso de um único agente no terminal.</p>
@@ -98,7 +101,9 @@
 <p>Para casos de uso com conhecimento muito específico e crítico — um agente de billing, um agente de migrações de banco de dados, um agente de DevOps — você pode criar arquivos de expertise somente leitura que são carregados no contexto do agente mas nunca atualizados por ele. Isso garante que conhecimento crítico (como as regras de uma integração de pagamento específica) nunca seja corrompido ou esquecido pela atualização do modelo mental.</p>
 <p>O princípio final: agentes especialistas sempre vão superar agentes genéricos. Assim como você confia mais num engenheiro que fez aquele tipo de trabalho 50 vezes do que num generalista que fez uma vez, agentes com expertise acumulada específica entregam resultados consistentemente melhores.</p>
 </section>
+<nav class="next-up" aria-label="Próximo artigo"><h3>Próximo artigo →</h3><a href="../pt_br/chefe-do-claude-code-o-que-acontece-depois-que-a-programacao-for-resolvida.html">Chefe do claude code o que acontece depois que a programacao for resolvida</a><small>Discute o futuro do coding com agentes, contexto direto para multi-team agentic coding.</small></nav>
 </article>
+<aside class="video-card" data-provider="youtube" data-vid="M30gp1315Y4"><div class="video-label">Vídeo original</div><div class="video-frame"><div id="ytplayer-mount"></div></div><button type="button" class="video-sync" data-default="Toque para iniciar do trecho atual" data-template="Saltar para §{n} · {ts}">Toque para iniciar do trecho atual</button></aside>
 <aside class="references-sidebar" aria-label="Referências">
 <h3>Referências</h3>
 <details open><summary>Ferramentas <span class="ref-count">(7)</span></summary>
@@ -143,7 +148,6 @@
 <li><a href="../pt_br/praticas-de-engenharia-para-agentes-de-codigo-simon-willison.html">Práticas de engenharia para fazer agentes funcionarem em produção.</a></li>
 </ul></details>
 </aside>
-
 <div class="resume-banner" id="resumeBanner">
   <span id="resumeText">Continuar de onde parou</span>
   <div>
@@ -151,7 +155,7 @@
     <button class="dismiss" onclick="dismissResume()">✕</button>
   </div>
 </div>
-<script src="../../js/reader.js"></script>
-<script src="../../js/lang.js"></script>
+<script src="../../js/reader.js?v=6"></script>
+<script src="../../js/lang.js?v=6"></script>
 </body>
 </html>

@@ -169,6 +169,142 @@ def _load_references(vid_id, provider):
         return json.load(f)
 
 
+def _format_paragraph(stripped):
+    """Apply text formatting (smart quotes, pull-quotes, keypoints)."""
+    # Pull-quote: line that starts with `> ` becomes <blockquote class="pull">
+    if stripped.startswith('> '):
+        body = stripped[2:].strip()
+        # Drop optional surrounding quotes for cleaner rendering
+        if (body.startswith('"') and body.endswith('"')) or (body.startswith('"') and body.endswith('"')):
+            body = body[1:-1]
+        body = re.sub(r'"([^"]+)"', r'&ldquo;\1&rdquo;', body)
+        return f'<blockquote class="pull">&ldquo;{body}&rdquo;</blockquote>'
+    # Section keypoint: line that starts with `★ ` becomes a keypoint banner
+    if stripped.startswith('★ '):
+        body = stripped[2:].strip()
+        body = re.sub(r'"([^"]+)"', r'&ldquo;\1&rdquo;', body)
+        return f'<div class="keypoint"><span class="keypoint-label">Ponto-chave</span>{body}</div>'
+    formatted = re.sub(r'"([^"]+)"', r'&ldquo;\1&rdquo;', stripped)
+    return f'<p>{formatted}</p>'
+
+
+def _build_tldr(html_parts, max_bullets=3, is_ptbr=True):
+    """Auto-generate a TL;DR from the first N section-1 paragraphs.
+    Returns the rendered <details class="tldr-block"> HTML or empty string."""
+    # Collect paragraphs that belong to section 1 (between first <h2> and second <h2>)
+    section_1_paras = []
+    seen_first_h2 = False
+    for part in html_parts:
+        if part.startswith('<h2 '):
+            if seen_first_h2:
+                break
+            seen_first_h2 = True
+            continue
+        if seen_first_h2 and part.startswith('<p>') and not part.startswith('<p>&ldquo;'):
+            text = re.sub(r'<[^>]+>', '', part).strip()
+            text = text.replace('&ldquo;', '"').replace('&rdquo;', '"').replace('&amp;', '&')
+            # Skip very short / dialog cues
+            if len(text) < 80:
+                continue
+            section_1_paras.append(text)
+            if len(section_1_paras) >= max_bullets * 2:
+                break
+    if not section_1_paras:
+        return ""
+    # Pick the first sentence of each para as a bullet
+    bullets = []
+    for para in section_1_paras[:max_bullets]:
+        # Split on sentence-ending punctuation
+        sentences = re.split(r'(?<=[.!?])\s+', para)
+        first = sentences[0].strip() if sentences else para
+        # Truncate very long
+        if len(first) > 220:
+            first = first[:217].rsplit(' ', 1)[0] + '…'
+        bullets.append(first)
+    label_head = "TL;DR" if is_ptbr else "TL;DR"
+    label_caption = "principais pontos" if is_ptbr else "key points"
+    items = "\n".join(f"<li>{b}</li>" for b in bullets)
+    return (
+        f'<details class="tldr-block" open>'
+        f'<summary><span>{label_head} · {label_caption}</span></summary>'
+        f'<ol>{items}</ol>'
+        f'</details>'
+    )
+
+
+def _build_video_card(vid_id, url, provider, is_ptbr):
+    """Render the sticky video player card that lives above the references sidebar.
+
+    YouTube → iframe via IFrame Player API (reader.js takes over: seek to current
+    section's timestamp on click, caption auto-updates with scrollspy).
+    Twitter/X → static card with a deep-link to the original tweet (no embed).
+    """
+    if not vid_id or not provider:
+        return ""
+    label = "Vídeo original" if is_ptbr else "Original video"
+    if provider == "youtube":
+        sync_default = (
+            "Toque para iniciar do trecho atual" if is_ptbr
+            else "Tap to start at current section"
+        )
+        sync_template = "Saltar para §{n} · {ts}" if is_ptbr else "Jump to §{n} · {ts}"
+        return (
+            f'<aside class="video-card" data-provider="youtube" data-vid="{vid_id}">'
+            f'<div class="video-label">{label}</div>'
+            f'<div class="video-frame"><div id="ytplayer-mount"></div></div>'
+            f'<button type="button" class="video-sync" '
+            f'data-default="{sync_default}" data-template="{sync_template}">{sync_default}</button>'
+            f'</aside>'
+        )
+    # Twitter/X (or any non-YouTube provider): no embed, just a clean deep-link
+    open_label = "Abrir vídeo original ↗" if is_ptbr else "Open original video ↗"
+    caption = "Sem embed para esta fonte — abre em nova aba." if is_ptbr else "No embed available — opens in a new tab."
+    return (
+        f'<aside class="video-card" data-provider="{provider}">'
+        f'<div class="video-label">{label}</div>'
+        f'<a class="video-link" href="{url}" target="_blank" rel="noopener">{open_label}</a>'
+        f'<div class="video-caption">{caption}</div>'
+        f'</aside>'
+    )
+
+
+def _build_next_up(references, is_ptbr):
+    """Render the 'Próximo artigo' / 'Next article' footer from related_posts."""
+    if not references:
+        return ""
+    related = references.get("related_posts", [])
+    if not related:
+        return ""
+    # Pick first related with a slug for the current language
+    target = None
+    for r in related:
+        slug = r.get("slug_pt") if is_ptbr else r.get("slug_en")
+        if slug:
+            target = (slug, r.get("reason"))
+            break
+    if not target:
+        return ""
+    slug, reason = target
+    folder = "pt_br" if is_ptbr else "original"
+    href = f"../{folder}/{slug}.html"
+    label = "Próximo artigo" if is_ptbr else "Next article"
+    arrow = "→"
+    if isinstance(reason, dict):
+        reason_text = reason.get("pt") if is_ptbr else reason.get("en")
+        reason_text = reason_text or ""
+    else:
+        reason_text = reason or ""
+    title_text = slug.replace('-', ' ').capitalize()
+    extra = f"<small>{reason_text}</small>" if reason_text else ""
+    return (
+        f'<nav class="next-up" aria-label="{label}">'
+        f'<h3>{label} {arrow}</h3>'
+        f'<a href="{href}">{title_text}</a>'
+        f'{extra}'
+        f'</nav>'
+    )
+
+
 def make_html(vid_id, title, subtitle, url, txt_path,
               link_text="🎥 Assistir no YouTube", slides_json_path=None,
               lang="pt_br", slug=None, pt_slug=None, en_slug=None,
@@ -225,7 +361,7 @@ def make_html(vid_id, title, subtitle, url, txt_path,
                     'Isso ', 'Ao ', 'Os ', 'As ', 'Se ', 'Com ', 'Por ', 'Quando ',
                     'Durante ', 'Após ', 'Antes ', 'Nessa ', 'Nesse '
                 ])
-            if is_short and not is_paragraph_start:
+            if is_short and not is_paragraph_start and not stripped.startswith('> ') and not stripped.startswith('★ '):
                 section_id += 1
                 section_slug = f"s{section_id}"
                 title_clean, ts_seconds = _parse_section_heading(stripped)
@@ -233,14 +369,12 @@ def make_html(vid_id, title, subtitle, url, txt_path,
                 html_parts.append(_render_heading(section_id, title_clean, ts_seconds, url, provider_obj))
                 continue
             else:
-                formatted = re.sub(r'"([^"]+)"', r'&ldquo;\1&rdquo;', stripped)
-                html_parts.append(f'<p>{formatted}</p>')
+                html_parts.append(_format_paragraph(stripped))
                 continue
         prev_was_sep = False
         if not stripped:
             continue
-        formatted = re.sub(r'"([^"]+)"', r'&ldquo;\1&rdquo;', stripped)
-        html_parts.append(f'<p>{formatted}</p>')
+        html_parts.append(_format_paragraph(stripped))
 
     # Inject slides into HTML at section boundaries
     if slides and section_id > 0:
@@ -351,6 +485,11 @@ def make_html(vid_id, title, subtitle, url, txt_path,
         references = _load_references(vid_id, provider)
     references_sidebar = _render_references_sidebar(references, is_ptbr)
 
+    # Reading aids — TL;DR (auto, before sections) and next-up (after)
+    tldr_html = _build_tldr(html_parts, max_bullets=3, is_ptbr=is_ptbr)
+    next_up_html = _build_next_up(references, is_ptbr)
+    video_card_html = _build_video_card(vid_id, url, provider, is_ptbr)
+
     return f'''<!DOCTYPE html>
 <html lang="{html_lang}">
 <head>
@@ -398,8 +537,11 @@ def make_html(vid_id, title, subtitle, url, txt_path,
 {toc_html}
     </ol>
   </nav>
+{tldr_html}
 {body_html}
+{next_up_html}
 </article>
+{video_card_html}
 {references_sidebar}
 <div class="resume-banner" id="resumeBanner">
   <span id="resumeText">{resume_text}</span>
