@@ -210,6 +210,47 @@ pre code { background: transparent; padding: 0; }
 .page-index .card .progress-info {
   font-size: 0.75rem; color: var(--accent); margin-top: 6px;
 }
+
+/* ---------- Tag pills + filter bar ---------- */
+.tag-bar {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  margin: 18px 0 4px;
+}
+.tag-bar .tag-bar-label {
+  font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--text-muted); margin-right: 4px; align-self: center;
+}
+.tag {
+  display: inline-block;
+  font-size: 0.72rem; line-height: 1; letter-spacing: 0.01em;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-muted);
+  background: var(--surface);
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+.tag:hover { color: var(--accent); border-color: var(--accent); }
+.tag.is-active {
+  color: var(--bg); background: var(--accent); border-color: var(--accent);
+}
+.page-index .card .tags {
+  margin-top: 8px;
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.page-index .card .tags .tag { font-size: 0.68rem; padding: 3px 7px; }
+.page-index .card[hidden] { display: none !important; }
+.section-title.lateral {
+  color: var(--text-muted);
+  border-bottom-style: dashed;
+  margin-top: 56px;
+}
+.section-title.lateral .lateral-hint {
+  text-transform: none; font-weight: 400; letter-spacing: 0;
+  color: var(--text-muted); margin-left: 8px;
+}
 .github-link {
   color: var(--text-muted); text-decoration: none; margin-left: 8px;
   vertical-align: middle;

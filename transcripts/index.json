@@ -20,7 +20,14 @@
         "related_posts": 6
       },
       "total": 54
-    }
+    },
+    "tags": [
+      "produto",
+      "carreira",
+      "soft-skills",
+      "agentic-engineering"
+    ],
+    "category": "core"
   },
   {
     "video_id": "am_oeAoUhew",
@@ -43,7 +50,12 @@
         "related_posts": 7
       },
       "total": 36
-    }
+    },
+    "tags": [
+      "agentic-engineering",
+      "claude-code"
+    ],
+    "category": "core"
   },
   {
     "video_id": "We7BZVKbCVw",
@@ -66,7 +78,13 @@
         "related_posts": 6
       },
       "total": 35
-    }
+    },
+    "tags": [
+      "claude-code",
+      "agentic-engineering",
+      "carreira"
+    ],
+    "category": "core"
   },
   {
     "video_id": "2042206218752610343",
@@ -89,7 +107,12 @@
         "related_posts": 6
       },
       "total": 26
-    }
+    },
+    "tags": [
+      "claude-code",
+      "tutoriais"
+    ],
+    "category": "core"
   },
   {
     "video_id": "w7CWS4bmN2A",
@@ -112,7 +135,11 @@
         "related_posts": 4
       },
       "total": 16
-    }
+    },
+    "tags": [
+      "claude-code"
+    ],
+    "category": "core"
   },
   {
     "video_id": "fzrvx_1-9_o",
@@ -135,7 +162,13 @@
         "related_posts": 5
       },
       "total": 40
-    }
+    },
+    "tags": [
+      "claude-code",
+      "tutoriais",
+      "agentic-engineering"
+    ],
+    "category": "core"
   },
   {
     "video_id": "aFsAOu2bgFk",
@@ -158,7 +191,11 @@
         "related_posts": 11
       },
       "total": 59
-    }
+    },
+    "tags": [
+      "agentic-engineering"
+    ],
+    "category": "core"
   },
   {
     "video_id": "eYqt8vqeSBw",
@@ -181,7 +218,11 @@
         "related_posts": 5
       },
       "total": 26
-    }
+    },
+    "tags": [
+      "agentic-engineering"
+    ],
+    "category": "core"
   },
   {
     "video_id": "l5zgfjXs6gQ",
@@ -204,7 +245,11 @@
         "related_posts": 5
       },
       "total": 36
-    }
+    },
+    "tags": [
+      "agentic-engineering"
+    ],
+    "category": "core"
   },
   {
     "video_id": "Ednpn1mjKiY",
@@ -227,7 +272,12 @@
         "related_posts": 5
       },
       "total": 50
-    }
+    },
+    "tags": [
+      "agentic-engineering",
+      "tutoriais"
+    ],
+    "category": "core"
   },
   {
     "video_id": "wc8FBhQtdsA",
@@ -250,7 +300,12 @@
         "related_posts": 7
       },
       "total": 61
-    }
+    },
+    "tags": [
+      "ia-2026",
+      "agentic-engineering"
+    ],
+    "category": "core"
   },
   {
     "video_id": "647pVgfV2yU",
@@ -273,7 +328,11 @@
         "related_posts": 7
       },
       "total": 30
-    }
+    },
+    "tags": [
+      "agentic-engineering"
+    ],
+    "category": "core"
   },
   {
     "video_id": "6WaeGfLnRvc",
@@ -296,7 +355,12 @@
         "related_posts": 3
       },
       "total": 32
-    }
+    },
+    "tags": [
+      "carreira",
+      "soft-skills"
+    ],
+    "category": "core"
   },
   {
     "video_id": "owmJyKVu5f8",
@@ -319,7 +383,11 @@
         "related_posts": 7
       },
       "total": 43
-    }
+    },
+    "tags": [
+      "agentic-engineering"
+    ],
+    "category": "core"
   },
   {
     "video_id": "_kMaPZE05Yc",
@@ -342,7 +410,12 @@
         "related_posts": 5
       },
       "total": 46
-    }
+    },
+    "tags": [
+      "carreira",
+      "agentic-engineering"
+    ],
+    "category": "core"
   },
   {
     "video_id": "M30gp1315Y4",
@@ -365,7 +438,12 @@
         "related_posts": 9
       },
       "total": 18
-    }
+    },
+    "tags": [
+      "agentic-engineering",
+      "claude-code"
+    ],
+    "category": "core"
   },
   {
     "video_id": "2042960939969102251",
@@ -388,7 +466,12 @@
         "related_posts": 6
       },
       "total": 28
-    }
+    },
+    "tags": [
+      "claude-code",
+      "soft-skills"
+    ],
+    "category": "core"
   },
   {
     "video_id": "2042024135568629797",
@@ -411,7 +494,12 @@
         "related_posts": 5
       },
       "total": 43
-    }
+    },
+    "tags": [
+      "carreira",
+      "agentic-engineering"
+    ],
+    "category": "core"
   },
   {
     "video_id": "2042489154966339811",
@@ -434,7 +522,12 @@
         "related_posts": 2
       },
       "total": 18
-    }
+    },
+    "tags": [
+      "soft-skills",
+      "carreira"
+    ],
+    "category": "core"
   },
   {
     "video_id": "2042725242741588208",
@@ -457,7 +550,12 @@
         "related_posts": 0
       },
       "total": 55
-    }
+    },
+    "tags": [
+      "financas",
+      "soft-skills"
+    ],
+    "category": "lateral"
   },
   {
     "video_id": "2041884593087803841",
@@ -480,7 +578,12 @@
         "related_posts": 7
       },
       "total": 27
-    }
+    },
+    "tags": [
+      "agentic-engineering",
+      "ia-2026"
+    ],
+    "category": "core"
   },
   {
     "video_id": "2042172428127002906",
@@ -503,7 +606,12 @@
         "related_posts": 6
       },
       "total": 20
-    }
+    },
+    "tags": [
+      "claude-code",
+      "agentic-engineering"
+    ],
+    "category": "core"
   },
   {
     "video_id": "2042624568880197650",
@@ -525,7 +633,11 @@
         "related_posts": 1
       },
       "total": 5
-    }
+    },
+    "tags": [
+      "financas"
+    ],
+    "category": "lateral"
   },
   {
     "video_id": "4c7pbOxYn_A",
@@ -548,7 +660,13 @@
         "related_posts": 7
       },
       "total": 50
-    }
+    },
+    "tags": [
+      "claude-code",
+      "carreira",
+      "agentic-engineering"
+    ],
+    "category": "core"
   },
   {
     "video_id": "2043679971927896218",
@@ -571,7 +689,12 @@
       "total": 45
     },
     "slug_en": "complete-claude-code-course-4-hours",
-    "slug": "curso-completo-claude-code-4-horas"
+    "slug": "curso-completo-claude-code-4-horas",
+    "tags": [
+      "claude-code",
+      "tutoriais"
+    ],
+    "category": "core"
   },
   {
     "video_id": "2044874677865357634",
@@ -593,6 +716,11 @@
         "related_posts": 6
       },
       "total": 30
-    }
+    },
+    "tags": [
+      "claude-code",
+      "tutoriais"
+    ],
+    "category": "core"
   }
 ]
