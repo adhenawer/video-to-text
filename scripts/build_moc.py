@@ -56,10 +56,12 @@ def _build_payload(index):
             continue
         slug_set.add(slug)
         full_title = entry.get("title", slug)
+        title_en = entry.get("title_en") or full_title
         nodes.append({
             "id": slug,
             "title": _short_title(full_title, entry.get("subtitle", "")),
             "title_full": full_title,
+            "title_en": title_en,
             "subtitle": entry.get("subtitle", ""),
             "url_pt": f"posts/pt_br/{slug}.html",
             "url_en": f"posts/original/{entry.get('slug_en', slug)}.html",
@@ -94,43 +96,80 @@ def _build_payload(index):
     return {"nodes": nodes, "edges": edges}
 
 
-def _build_jsonld_graph(payload):
-    """Schema.org Dataset wrapping the MOC graph for crawlers."""
-    nodes = payload["nodes"]
-    edges = payload["edges"]
-    parts = []
-    parts.append({
-        "@type": "Dataset",
-        "@id": f"{SITE_BASE}/moc.html#dataset",
+_DATASET_META = {
+    "pt": {
         "name": "Mapa de Conteúdo — adhenawer.net",
         "description": (
             "Grafo de artigos sobre Claude Code, engenharia agêntica, carreira "
             "em IA e produto. Cada nó é um post; arestas são related_posts."
         ),
+        "inLanguage": "pt-BR",
+    },
+    "en": {
+        "name": "Map of Content — adhenawer.net",
+        "description": (
+            "Graph of articles on Claude Code, agentic engineering, AI careers "
+            "and product. Each node is a post; edges are related_posts."
+        ),
+        "inLanguage": "en",
+    },
+}
+
+
+def _node_url_for(n, lang):
+    return n["url_en"] if lang == "en" else n["url_pt"]
+
+
+def _node_title_for(n, lang):
+    if lang == "en":
+        return n.get("title_en") or n.get("title_full") or n["title"]
+    return n.get("title_full") or n["title"]
+
+
+def _build_jsonld_graph(payload, lang="pt"):
+    """Schema.org Dataset wrapping the MOC graph, localized per language."""
+    nodes = payload["nodes"]
+    edges = payload["edges"]
+    meta = _DATASET_META[lang]
+    parts = []
+    parts.append({
+        "@type": "Dataset",
+        "@id": f"{SITE_BASE}/moc.html#dataset-{lang}",
+        "name": meta["name"],
+        "description": meta["description"],
         "url": f"{SITE_BASE}/moc.html",
+        "inLanguage": meta["inLanguage"],
         "creator": {"@type": "Person", "name": "adhenawer"},
         "keywords": sorted({t for n in nodes for t in n.get("tags") or []}),
         "size": f"{len(nodes)} posts, {len(edges)} edges",
     })
     for n in nodes:
+        url = _node_url_for(n, lang)
         parts.append({
             "@type": "Article",
-            "@id": f"{SITE_BASE}/{n['url_pt']}#node",
-            "headline": n.get("title_full") or n["title"],
-            "url": f"{SITE_BASE}/{n['url_pt']}",
-            "inLanguage": "pt-BR",
+            "@id": f"{SITE_BASE}/{url}#node",
+            "headline": _node_title_for(n, lang),
+            "url": f"{SITE_BASE}/{url}",
+            "inLanguage": meta["inLanguage"],
             "keywords": n.get("tags") or [],
-            "isPartOf": {"@id": f"{SITE_BASE}/moc.html#dataset"},
+            "isPartOf": {"@id": f"{SITE_BASE}/moc.html#dataset-{lang}"},
             "additionalType": "MapOfContentNode",
             "identifier": n["id"],
         })
+    by_id = {n["id"]: n for n in nodes}
     for e in edges:
+        src = by_id.get(e["source"])
+        tgt = by_id.get(e["target"])
+        if not (src and tgt):
+            continue
+        src_url = _node_url_for(src, lang)
+        tgt_url = _node_url_for(tgt, lang)
         parts.append({
             "@type": "Action",
             "actionStatus": "https://schema.org/CompletedActionStatus",
             "additionalType": "MapOfContentEdge",
-            "object": {"@id": f"{SITE_BASE}/posts/pt_br/{e['source']}.html#node"},
-            "target": {"@id": f"{SITE_BASE}/posts/pt_br/{e['target']}.html#node"},
+            "object": {"@id": f"{SITE_BASE}/{src_url}#node"},
+            "target": {"@id": f"{SITE_BASE}/{tgt_url}#node"},
         })
     return {
         "@context": "https://schema.org",
@@ -200,14 +239,14 @@ def _slug_from_href(href: str) -> str:
     return m.group(1) if m else ""
 
 
-def _inject_jsonld(html_path, payload):
+def _inject_jsonld(html_path, payload, lang="pt"):
     if not os.path.exists(html_path):
         return False
     with open(html_path) as f:
         html = f.read()
 
     jsonld = json.dumps(
-        _build_jsonld_graph(payload),
+        _build_jsonld_graph(payload, lang=lang),
         ensure_ascii=False,
         separators=(",", ":"),
     )
@@ -244,9 +283,14 @@ def main() -> None:
     n_edges = len(payload["edges"])
     print(f"moc.json: {n_nodes} nodes, {n_edges} edges → {OUT_PATH}")
 
-    for path in (MOC_HTML, INDEX_HTML_PT, INDEX_HTML_EN):
-        if _inject_jsonld(path, payload):
-            print(f"injected JSON-LD → {os.path.relpath(path, PROJECT_DIR)}")
+    targets = [
+        (MOC_HTML, "pt"),
+        (INDEX_HTML_PT, "pt"),
+        (INDEX_HTML_EN, "en"),
+    ]
+    for path, lang in targets:
+        if _inject_jsonld(path, payload, lang=lang):
+            print(f"injected JSON-LD ({lang}) → {os.path.relpath(path, PROJECT_DIR)}")
 
     for path in (INDEX_HTML_PT, INDEX_HTML_EN):
         n_changed = _annotate_cards(path, payload)

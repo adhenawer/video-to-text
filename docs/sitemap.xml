@@ -20,6 +20,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://adhenawer.net/"/>
   </url>
   <url>
+    <loc>https://adhenawer.net/moc.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://adhenawer.net/data/moc.json</loc>
+    <lastmod>2026-04-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://adhenawer.net/blog/claude-code-daily-workflow.html</loc>
     <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>

@@ -27,7 +27,8 @@
       "soft-skills",
       "agentic-engineering"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "Why Half of Product Managers Are in Trouble"
   },
   {
     "video_id": "am_oeAoUhew",
@@ -55,7 +56,8 @@
       "agentic-engineering",
       "claude-code"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "Ryan Lopopolo — Harness Engineering: How to Build Software When Humans Steer and Agents Execute"
   },
   {
     "video_id": "We7BZVKbCVw",
@@ -84,7 +86,8 @@
       "agentic-engineering",
       "carreira"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "The Head of Claude Code on What Happens After Coding Is Solved"
   },
   {
     "video_id": "2042206218752610343",
@@ -112,7 +115,8 @@
       "claude-code",
       "tutoriais"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "The Complete Claude Guide — From Beginner to AI Operating System"
   },
   {
     "video_id": "w7CWS4bmN2A",
@@ -139,7 +143,8 @@
     "tags": [
       "claude-code"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "Claude Code Leak: What We Have Learned So Far"
   },
   {
     "video_id": "fzrvx_1-9_o",
@@ -168,7 +173,8 @@
       "tutoriais",
       "agentic-engineering"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "How I Built a Production-Grade AI Customer Support System"
   },
   {
     "video_id": "aFsAOu2bgFk",
@@ -195,7 +201,8 @@
     "tags": [
       "agentic-engineering"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "From IDEs to AI Agents"
   },
   {
     "video_id": "eYqt8vqeSBw",
@@ -222,7 +229,8 @@
     "tags": [
       "agentic-engineering"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "From Prompt to Production: What Is Agentic Engineering?"
   },
   {
     "video_id": "l5zgfjXs6gQ",
@@ -249,7 +257,8 @@
     "tags": [
       "agentic-engineering"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "Agentic Engineering: Context, Guardrails, and Creativity"
   },
   {
     "video_id": "Ednpn1mjKiY",
@@ -277,7 +286,8 @@
       "agentic-engineering",
       "tutoriais"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "A Senior Engineer Demonstrates a Spec-Driven AI Development Flow"
   },
   {
     "video_id": "wc8FBhQtdsA",
@@ -305,7 +315,8 @@
       "ia-2026",
       "agentic-engineering"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "The State of AI in 2026"
   },
   {
     "video_id": "647pVgfV2yU",
@@ -332,7 +343,8 @@
     "tags": [
       "agentic-engineering"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "Agentic Workflows with Don Syme"
   },
   {
     "video_id": "6WaeGfLnRvc",
@@ -360,7 +372,8 @@
       "carreira",
       "soft-skills"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "Corporate Politics in Tech: Everything Nobody Tells You"
   },
   {
     "video_id": "owmJyKVu5f8",
@@ -387,7 +400,8 @@
     "tags": [
       "agentic-engineering"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "Engineering Practices That Make Coding Agents Work"
   },
   {
     "video_id": "_kMaPZE05Yc",
@@ -415,7 +429,8 @@
       "carreira",
       "agentic-engineering"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "The AI Engineer Roadmap for Software Developers"
   },
   {
     "video_id": "M30gp1315Y4",
@@ -443,7 +458,8 @@
       "agentic-engineering",
       "claude-code"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "One Agent Is Not Enough: Multi-Team Agentic Coding Beyond Claude Code"
   },
   {
     "video_id": "2042960939969102251",
@@ -471,7 +487,8 @@
       "claude-code",
       "soft-skills"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "Obsidian + Claude Code: Your Second Brain, Amplified"
   },
   {
     "video_id": "2042024135568629797",
@@ -499,7 +516,8 @@
       "carreira",
       "agentic-engineering"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "AI Career Advice — Andrew Ng and Lawrence Moroney at Stanford"
   },
   {
     "video_id": "2042489154966339811",
@@ -527,7 +545,8 @@
       "soft-skills",
       "carreira"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "How to Speak: Patrick Winston on Giving Talks That Matter"
   },
   {
     "video_id": "2042725242741588208",
@@ -555,7 +574,8 @@
       "financas",
       "soft-skills"
     ],
-    "category": "lateral"
+    "category": "lateral",
+    "title_en": "Behavioral Finance: Psychology, Manipulation, and Integrity in Markets"
   },
   {
     "video_id": "2041884593087803841",
@@ -583,7 +603,8 @@
       "agentic-engineering",
       "ia-2026"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "Agentic AI: Progression of Language Model Usage"
   },
   {
     "video_id": "2042172428127002906",
@@ -611,7 +632,8 @@
       "claude-code",
       "agentic-engineering"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "Why We Stopped Building Agents and Started Building Skills"
   },
   {
     "video_id": "2042624568880197650",
@@ -666,7 +688,8 @@
       "carreira",
       "agentic-engineering"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "FABIO AKITA - Flow #588"
   },
   {
     "video_id": "2043679971927896218",
@@ -694,7 +717,8 @@
       "claude-code",
       "tutoriais"
     ],
-    "category": "core"
+    "category": "core",
+    "title_en": "Complete Claude Code Course — 4 Hours"
   },
   {
     "video_id": "2044874677865357634",

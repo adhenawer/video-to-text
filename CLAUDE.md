@@ -233,11 +233,18 @@ python3 scripts/build_moc.py
   1. Gera `docs/data/moc.json` (consumido pelo `moc.html` e `tags.js`).
   2. Injeta `<script type="application/ld+json">` (Dataset + Articles com
      **headline completo** + Action edges) em `docs/moc.html`, `docs/index.html`
-     e `docs/en/index.html`. Bloco delimitado por
-     `<!-- MOC-LD:BEGIN ... -->` / `<!-- MOC-LD:END -->`.
+     e `docs/en/index.html`. **Localizado por idioma** — `/en/index.html` recebe
+     URLs `/posts/original/`, `inLanguage: en` e `headline` em inglês (de
+     `title_en`). Bloco delimitado por `<!-- MOC-LD:BEGIN ... -->` /
+     `<!-- MOC-LD:END -->`.
   3. **Patcha cada `<a class="card">`** dos índices PT/EN com
      `data-tags="..." data-category="..."` no HTML estático — assim crawlers
      SEO e fetchers sem JS já enxergam tags + categoria diretamente no DOM.
+
+> **`title_en` é obrigatório** em cada entrada de `transcripts/index.json`
+> para que o JSON-LD da `/en/` saia em inglês. Posts antigos foram
+> backfillados com `python3 scripts/backfill_title_en.py` (extrai do `og:title`
+> do HTML EN). Posts novos: adicionar `title_en` direto na entrada.
 - `docs/js/tags.js` lê primeiro o `data-tags` do DOM (degradação graceful);
   só faz fetch de `data/moc.json` como fallback. Injeta as pílulas `#tag`
   visuais, monta a `tag-bar` no topo, move `category=lateral` pro fim.
